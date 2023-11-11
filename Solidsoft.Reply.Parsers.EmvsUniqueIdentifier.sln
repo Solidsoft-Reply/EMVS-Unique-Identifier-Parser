@@ -1,0 +1,121 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.Parsers.EmvsUniqueIdentifier", "Solidsoft.Reply.Parsers.EmvsUniqueIdentifier\Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.csproj", "{046DCC80-E19A-4807-8796-A3E6C45CB8C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.Parsers.HighCapacityAidc.PreProcessors", "..\Solidsoft.Reply.Parsers.HighCapacityAidc.PreProcessors\Solidsoft.Reply.Parsers.HighCapacityAidc.PreProcessors\Solidsoft.Reply.Parsers.HighCapacityAidc.PreProcessors.csproj", "{95FD3A53-7704-4C6B-9096-3A826802898A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.Parsers.AnsiMhDi", "..\Solidsoft.Reply.Parsers.AnsiMhDi\Solidsoft.Reply.Parsers.AnsiMhDi\Solidsoft.Reply.Parsers.AnsiMhDi.csproj", "{FD46D83A-CED5-4351-8D93-11E15D0F9475}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.BarcodeScanner.Calibration", "..\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration.csproj", "{920EC6D3-A682-4851-A047-7FD2E27CEB20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.Parsers.Gs1Ai", "..\Solidsoft.Reply.Parsers.Gs1Ai\Solidsoft.Reply.Parsers.Gs1Ai\Solidsoft.Reply.Parsers.Gs1Ai.csproj", "{DAB637BE-D559-4C5A-80EE-66641C898933}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.Parsers.Common", "..\Solidsoft.Reply.Parsers.Common\Solidsoft.Reply.Parsers.Common\Solidsoft.Reply.Parsers.Common.csproj", "{3A3602CE-D18A-4907-8866-6EB953998A65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.BarcodeScanner.Symbology", "..\Solidsoft.Reply.BarcodeScanner.Symbology\Solidsoft.Reply.BarcodeScanner.Symbology\Solidsoft.Reply.BarcodeScanner.Symbology.csproj", "{EFB002A9-6729-404E-A567-A0402FAE030A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{21643D96-70A6-418C-92B0-88285BEDF951}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base Parsers", "Base Parsers", "{FB386258-7C06-48A5-9E6A-6B54A48617DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "High Capacity AIDC", "High Capacity AIDC", "{816D89D4-6D54-4B12-9327-ED846C15CD00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Barcode Scanners", "Barcode Scanners", "{37027F6F-7E40-4071-A433-93133224BF12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tester", "Tester", "{D463A905-D572-4267-A5EB-FBC5D3ECC1CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.Parsers.HighCapacityAidc", "..\Solidsoft.Reply.Parsers.HighCapacityAidc\Solidsoft.Reply.Parsers.HighCapacityAidc\Solidsoft.Reply.Parsers.HighCapacityAidc.csproj", "{67D3465C-6993-4D3E-A7E5-D7270FCDFF6C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.Parsers.Gs1Ai.Tests", "..\Solidsoft.Reply.Parsers.Gs1Ai\Solidsoft.Reply.Parsers.Gs1Ai.Tests\Solidsoft.Reply.Parsers.Gs1Ai.Tests.csproj", "{131C9E62-0660-49DE-A1E9-66669C1F2E74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Tests", "Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Tests\Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Tests.csproj", "{EF83C04C-D4E2-4753-9F72-12CDBF3AE5E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.ConsoleMvc", "Solidsoft.Reply.ConsoleMvc\Solidsoft.Reply.ConsoleMvc.csproj", "{7755A517-7D38-46C6-BC85-8B083E82DAF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.EmvsUniqueIdentifierTester", "Solidsoft.Reply.EmvsUniqueIdentifierTester\Solidsoft.Reply.EmvsUniqueIdentifierTester.csproj", "{96D65A3C-7CB4-4FBD-BDF3-8186ECE08FB9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.BarcodeScanner.Calibration.Tests", "..\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration.Tests\Solidsoft.Reply.BarcodeScanner.Calibration.Tests.csproj", "{47C62492-AD68-4E69-931C-FFD73D9548BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{046DCC80-E19A-4807-8796-A3E6C45CB8C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{046DCC80-E19A-4807-8796-A3E6C45CB8C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{046DCC80-E19A-4807-8796-A3E6C45CB8C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{046DCC80-E19A-4807-8796-A3E6C45CB8C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95FD3A53-7704-4C6B-9096-3A826802898A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95FD3A53-7704-4C6B-9096-3A826802898A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95FD3A53-7704-4C6B-9096-3A826802898A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95FD3A53-7704-4C6B-9096-3A826802898A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD46D83A-CED5-4351-8D93-11E15D0F9475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD46D83A-CED5-4351-8D93-11E15D0F9475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD46D83A-CED5-4351-8D93-11E15D0F9475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD46D83A-CED5-4351-8D93-11E15D0F9475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{920EC6D3-A682-4851-A047-7FD2E27CEB20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{920EC6D3-A682-4851-A047-7FD2E27CEB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{920EC6D3-A682-4851-A047-7FD2E27CEB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{920EC6D3-A682-4851-A047-7FD2E27CEB20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAB637BE-D559-4C5A-80EE-66641C898933}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB637BE-D559-4C5A-80EE-66641C898933}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB637BE-D559-4C5A-80EE-66641C898933}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB637BE-D559-4C5A-80EE-66641C898933}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A3602CE-D18A-4907-8866-6EB953998A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A3602CE-D18A-4907-8866-6EB953998A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A3602CE-D18A-4907-8866-6EB953998A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A3602CE-D18A-4907-8866-6EB953998A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB002A9-6729-404E-A567-A0402FAE030A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB002A9-6729-404E-A567-A0402FAE030A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB002A9-6729-404E-A567-A0402FAE030A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB002A9-6729-404E-A567-A0402FAE030A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D3465C-6993-4D3E-A7E5-D7270FCDFF6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D3465C-6993-4D3E-A7E5-D7270FCDFF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D3465C-6993-4D3E-A7E5-D7270FCDFF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67D3465C-6993-4D3E-A7E5-D7270FCDFF6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{131C9E62-0660-49DE-A1E9-66669C1F2E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131C9E62-0660-49DE-A1E9-66669C1F2E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131C9E62-0660-49DE-A1E9-66669C1F2E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131C9E62-0660-49DE-A1E9-66669C1F2E74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF83C04C-D4E2-4753-9F72-12CDBF3AE5E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF83C04C-D4E2-4753-9F72-12CDBF3AE5E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF83C04C-D4E2-4753-9F72-12CDBF3AE5E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF83C04C-D4E2-4753-9F72-12CDBF3AE5E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7755A517-7D38-46C6-BC85-8B083E82DAF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7755A517-7D38-46C6-BC85-8B083E82DAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7755A517-7D38-46C6-BC85-8B083E82DAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7755A517-7D38-46C6-BC85-8B083E82DAF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D65A3C-7CB4-4FBD-BDF3-8186ECE08FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D65A3C-7CB4-4FBD-BDF3-8186ECE08FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D65A3C-7CB4-4FBD-BDF3-8186ECE08FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D65A3C-7CB4-4FBD-BDF3-8186ECE08FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47C62492-AD68-4E69-931C-FFD73D9548BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C62492-AD68-4E69-931C-FFD73D9548BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C62492-AD68-4E69-931C-FFD73D9548BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C62492-AD68-4E69-931C-FFD73D9548BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{95FD3A53-7704-4C6B-9096-3A826802898A} = {816D89D4-6D54-4B12-9327-ED846C15CD00}
+		{FD46D83A-CED5-4351-8D93-11E15D0F9475} = {FB386258-7C06-48A5-9E6A-6B54A48617DB}
+		{920EC6D3-A682-4851-A047-7FD2E27CEB20} = {37027F6F-7E40-4071-A433-93133224BF12}
+		{DAB637BE-D559-4C5A-80EE-66641C898933} = {FB386258-7C06-48A5-9E6A-6B54A48617DB}
+		{3A3602CE-D18A-4907-8866-6EB953998A65} = {FB386258-7C06-48A5-9E6A-6B54A48617DB}
+		{EFB002A9-6729-404E-A567-A0402FAE030A} = {37027F6F-7E40-4071-A433-93133224BF12}
+		{67D3465C-6993-4D3E-A7E5-D7270FCDFF6C} = {816D89D4-6D54-4B12-9327-ED846C15CD00}
+		{131C9E62-0660-49DE-A1E9-66669C1F2E74} = {21643D96-70A6-418C-92B0-88285BEDF951}
+		{EF83C04C-D4E2-4753-9F72-12CDBF3AE5E4} = {21643D96-70A6-418C-92B0-88285BEDF951}
+		{7755A517-7D38-46C6-BC85-8B083E82DAF9} = {D463A905-D572-4267-A5EB-FBC5D3ECC1CC}
+		{96D65A3C-7CB4-4FBD-BDF3-8186ECE08FB9} = {D463A905-D572-4267-A5EB-FBC5D3ECC1CC}
+		{47C62492-AD68-4E69-931C-FFD73D9548BD} = {21643D96-70A6-418C-92B0-88285BEDF951}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {620F3E78-3211-4980-8C1D-1AE6303F0F43}
+	EndGlobalSection
+EndGlobal

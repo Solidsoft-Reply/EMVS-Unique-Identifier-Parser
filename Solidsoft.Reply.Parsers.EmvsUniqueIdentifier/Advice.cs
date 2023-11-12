@@ -729,7 +729,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
     /// <summary>
     /// Factory method for creating new Advice.
     /// </summary>
-    /// <param name="systemCapabilities"></param>
+    /// <param name="systemCapabilities">The system capabilities.</param>
     /// <param name="adviceTerritory">Territory for which advice will be provided.</param>
     /// <returns>An ordered sequence of advice items.</returns>
     public static Advice CreateAdvice(

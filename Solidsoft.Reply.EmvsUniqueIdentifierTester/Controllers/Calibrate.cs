@@ -261,7 +261,7 @@ public class Calibrate : IController
 #else
         if (this.calibrationTokens != null)
         {
-            var token = this.parser.Calibrator.Calibrate(input, this.calibrationTokens.Current);
+            var token = _parser.Calibrator.Calibrate(input, this.calibrationTokens.Current);
 #endif
 
 #if SHORTCIRCUIT_CALIBRATION
@@ -405,8 +405,8 @@ public class Calibrate : IController
         _currentCalibrationToken = default;
         _calibrationView.SetValue("CurrentCalibrationToken", default(CalibrationToken));
 #else
-        this.calibrationTokens = null;
-        this.calibrationView.SetValue("CalibrationTokens", null);
+        calibrationTokens = null;
+        _calibrationView.SetValue("CalibrationTokens", null);
 #endif
         _remainingCalibrationTokens = -1;
 
@@ -446,10 +446,10 @@ public class Calibrate : IController
 #if SMALL_BARCODES
             this.calibrationTokens = this.parser.Calibrator.CalibrationTokens(18F, DataMatrixSize.Dm24X24).GetEnumerator();
 #else
-            this.calibrationTokens = this.parser.Calibrator.CalibrationTokens(18F).GetEnumerator();
+            this.calibrationTokens = _parser.Calibrator.CalibrationTokens(18F).GetEnumerator();
 #endif
 
-            this.calibrationView.SetValue("CalibrationTokens", this.calibrationTokens);
+            _calibrationView.SetValue("CalibrationTokens", this.calibrationTokens);
             this.calibrationTokens.MoveNext();
 #endif
         }
@@ -482,7 +482,7 @@ public class Calibrate : IController
             if (this.calibrationTokens is not null)
 #pragma warning restore S2589
             {
-                this.remainingCalibrationTokens = this.calibrationTokens.Current.Remaining;
+                _remainingCalibrationTokens = this.calibrationTokens.Current.Remaining;
             }
 #endif
         }

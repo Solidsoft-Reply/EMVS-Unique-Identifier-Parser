@@ -116,7 +116,7 @@ public class CalibrationView : IView {
 #if STATELESS_MODEL
                 _keepScanningMessage.RemainingBarcodeCount = CurrentCalibrationToken.Remaining;
 #else
-                this.keepScanningMessage.RemainingBarcodeCount = CalibrationTokens.Current.Remaining;
+                _keepScanningMessage.RemainingBarcodeCount = CalibrationTokens.Current.Remaining;
 #endif
                 _keepScanningMessage.Render();
                 break;

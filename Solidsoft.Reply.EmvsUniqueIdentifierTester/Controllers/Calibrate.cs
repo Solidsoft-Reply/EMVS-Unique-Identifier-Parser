@@ -33,7 +33,6 @@ using Model;
 using Views;
 using Components;
 using BarcodeScanner.Calibration;
-using BarcodeScanner.Calibration.DataMatrix;
 using Parsers.EmvsUniqueIdentifier;
 using ConsoleMvc;
 using System.Threading;

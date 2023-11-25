@@ -37,7 +37,7 @@ public enum AdviceType
     /// <p>The test failed.</p>
     /// <p>You may have scanned a wrong barcode. Try again, making sure you scan the correct barcode(s).</p>
     /// </summary>
-    TestsFailed = 300,
+    TestFailed = 300,
 
     /// <summary>
     /// <p>No data was reported for the barcode.</p>
@@ -116,7 +116,7 @@ public enum AdviceType
 
     /// <summary>
     /// <p>Hidden characters in barcodes are not reported correctly.</p>
-    /// <p>YYour software may be able to compensate, but cannot read German PPN barcodes reliably.
+    /// <p>Your software may be able to compensate, but cannot read German PPN barcodes reliably.
     ///   If necessary, configure your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
     HiddenCharactersNotRepresentedCorrectlyNoPpn = 316,
@@ -344,6 +344,30 @@ public enum AdviceType
     ///   to emulate a numeric keypad.</p>
     /// </summary>
     CannotReadAdditionalData = 265,
+
+    /// <summary>
+    /// <p>Your system cannot read EDI data reliably.</p>
+    /// <p>Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably.</p>
+    /// <p>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to
+    ///   emulate a numeric keypad.</p>
+    /// </summary>
+    MayNotReadEdiCharactersReliably = 270,
+
+    /// <summary>
+    /// <p>Your system may not read EDI characters reliably.</p>
+    /// <p>Some barcodes may contain EDI characters.</p>
+    /// <p>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner
+    ///   to emulate a numeric keypad.</p>
+    /// </summary>
+    MayNotReadEdiCharactersNoCalibration = 271,
+
+    /// <summary>
+    /// <p>Your system cannot read EDI characters reliably.</p>
+    /// <p>Some barcodes may contain EDI data.</p>
+    /// <p>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to
+    /// emulate a numeric keypad.</p>
+    /// </summary>
+    CannotReadEdiCharacters = 275,
 
     /// <summary>
     /// <p>Your system reads unique identifiers reliably.</p>

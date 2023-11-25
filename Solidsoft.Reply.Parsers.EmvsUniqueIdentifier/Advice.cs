@@ -59,8 +59,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         AddAdviceItemToList(
             systemCapabilities.ScannerKeyboardPerformance switch
             {
-                ScannerKeyboardPerformance.Low    => new AdviceItem(AdviceType.VerySlowScannerPerformance),
-                ScannerKeyboardPerformance.Medium => new AdviceItem(AdviceType.SlowScannerPerformance),
+                ScannerKeyboardPerformance.Low    => ReportThatTheDataInputPerformanceIsVeryPoor(),
+                ScannerKeyboardPerformance.Medium => ReportThatTheDataInputPerformanceIsSlowerThanExpected(),
                 _                                 => null
             });
 
@@ -70,16 +70,17 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         var dataReported = systemCapabilities.DataReported;
         var correctSequenceReported = systemCapabilities.CorrectSequenceReported;
         var completeDataReported = systemCapabilities.CompleteDataReported;
-        var keyboardLayoutsCorrespondForCharacterSet82 = systemCapabilities.KeyboardLayoutsCorrespondForInvariants;
-        var keyboardLayoutsCorrespondForAdditionalAsciiCharacters = systemCapabilities.KeyboardLayoutsCorrespondForNonInvariantCharacters;
+        var keyboardLayoutsCorrespondForInvariantCharacters = systemCapabilities.KeyboardLayoutsCorrespondForInvariants;
+        var keyboardLayoutsCorrespondForNonInvariantCharacters = systemCapabilities.KeyboardLayoutsCorrespondForNonInvariantCharacters;
         var keyboardLayoutsCanRepresentGroupSeparator = systemCapabilities.KeyboardLayoutsCanRepresentGroupSeparator;
         var keyboardLayoutsCanRepresentRecordSeparator = systemCapabilities.KeyboardLayoutsCanRepresentRecordSeparator;
-        var keyboardLayoutsCanRepresentEdiSeparator = systemCapabilities.KeyboardLayoutsCanRepresentEdiSeparator;
+        var keyboardLayoutsCanRepresentEdiSeparators = systemCapabilities.KeyboardLayoutsCanRepresentEdiSeparators;
         var keyboardLayoutsCorrespondForAimIdentifier = systemCapabilities.KeyboardLayoutsCorrespondForAimIdentifier;
-        var canReadUniqueIdentifiersReliably = systemCapabilities.CanReadInvariantsReliably;
+        var canReadInvariantCharactersReliably = systemCapabilities.CanReadInvariantsReliably;
         var canReadFormat05AndFormat06Reliably = systemCapabilities.CanReadFormat05AndFormat06Reliably;
+        var canReadEdiReliably = systemCapabilities.CanReadEdiReliably;
         var canReadAimIdentifiersReliably = systemCapabilities.CanReadAimIdentifiersReliably;
-        var canReadAdditionalAsciiCharactersReliably = systemCapabilities.CanReadAdditionalAsciiCharactersReliably;
+        var canReadNonInvariantCharactersReliably = systemCapabilities.CanReadAdditionalAsciiCharactersReliably;
         var scannerTransmitsAimIdentifiers = systemCapabilities.ScannerTransmitsAimIdentifiers;
         var scannerTransmitsEndOfLineSequence = systemCapabilities.ScannerTransmitsEndOfLineSequence;
         var scannerTransmitsAdditionalPrefix = systemCapabilities.ScannerTransmitsAdditionalPrefix;
@@ -95,262 +96,317 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         var platform = systemCapabilities.Platform;
 #pragma warning restore CA1062 // Validate arguments of public methods
 
-        // AdviceType: 300
-        AddAdviceItemToList(!testsSucceeded && dataReported ? new AdviceItem(AdviceType.TestsFailed) : null);
+        /* To facilitate reasoning over this code, I've used verbosely named methods to represent boolean expressions and
+           I have nested ternary operators quite deeply in some places. "The code is the documentation".
+        */
 
-        // AdviceType: 301, 304
-        AddAdviceItemToList(!dataReported ? deadKeys ? new AdviceItem(AdviceType.NoDataReportedDeadKeys) : new AdviceItem(AdviceType.NoDataReported) : null);
-
-        // AdviceType: 305
-        AddAdviceItemToList(!correctSequenceReported ? new AdviceItem(AdviceType.IncorrectSequenceDeadKeys) : null);
-
-        // AdviceType: 303, 306
-        AddAdviceItemToList(!completeDataReported ? deadKeys ? new AdviceItem(AdviceType.PartialDataReportedDeadKeys) : new AdviceItem(AdviceType.PartialDataReported) : null);
-
-        // AdviceTypes: 307, 308
+        // AdviceTypes: 100, 105, 155 (Calibration)
         AddAdviceItemToList(
-            keyboardLayoutsCorrespondForCharacterSet82.Map(inv => !inv) ?? false
-                ? TestLayoutsDoNotMatch()
-                : null);
-
-        // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
-        switch (adviceTerritory)
-        {
-            case Territory.Germany:
-
-                // AdviceTypes: 311, 312
-                AddAdviceItemToList(
-                    keyboardLayoutsCorrespondForCharacterSet82.Map(cs82 => cs82) ?? false
-                        ? TestTestHiddenCharactersGermany()
-                        : null);
-
-                break;
-
-                AdviceItem? TestTestHiddenCharactersGermany() =>
-                    (keyboardLayoutsCanRepresentGroupSeparator.Map(repGs => !repGs) ?? false) ||
-                    (keyboardLayoutsCanRepresentRecordSeparator.Map(repRs => !repRs) ?? false)
-                            ? TestHiddenCharactersNotRepresentedCorrectlyGermany()
-                            : null;
-
-                AdviceItem? TestHiddenCharactersNotRepresentedCorrectlyGermany() =>
-                    calibrationAssumption == CalibrationAssumption.Agnostic
-                        ? canReadUniqueIdentifiersReliably is null && canReadFormat05AndFormat06Reliably is null
-                            ? null
-                            : (canReadUniqueIdentifiersReliably ?? false) &&
-                              (canReadFormat05AndFormat06Reliably ?? false)
-                                ? new AdviceItem(AdviceType.HiddenCharactersNotRepresentedCorrectlyGermany)
-                                : TestHiddenCharactersNotRepresentedCorrectlyNoCalibrationGermany()
-                        : TestHiddenCharactersNotRepresentedCorrectlyNoCalibrationGermany();
-
-                AdviceItem? TestHiddenCharactersNotRepresentedCorrectlyNoCalibrationGermany() => 
-                    calibrationAssumption == CalibrationAssumption.NoCalibration
-                        ? new AdviceItem(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibrationGermany)
-                        : null;
-            default:
-
-                // AdviceTypes: 309, 310
-                AddAdviceItemToList(
-                    keyboardLayoutsCorrespondForCharacterSet82.Map(inv => inv) ?? false
-                        ? keyboardLayoutsCanRepresentGroupSeparator.Map(inv => !inv) ?? false
-                            ? TestHiddenCharactersNotRepresentedCorrectly()
+            IfTheTestSucceeded()
+            && IfWeCanReadUniqueIdentifiersReliably()
+            && IfWeAssumeCalibration()
+                ? IfAdviceIsNotProvidedSpecificallyForGermany()
+                    ? IfWeOmittedThePpnTest()
+                        ? ReportThatUniqueIdentifiersAreReadReliablyButThePpnTestWasOmitted()                               // 105
+                        : IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
+                            ? IfWeCanReadFormat05AndFormat06Reliably()
+                                ? ReportThatInvariantCharactersAreReadReliably()                                            // 100
+                                : ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesAreNotReadReliably()              // 115
                             : null
-                        : null);
-                break;
-
-                AdviceItem? TestHiddenCharactersNotRepresentedCorrectly() =>
-                    calibrationAssumption == CalibrationAssumption.Agnostic
-                        ? canReadUniqueIdentifiersReliably is null && canReadFormat05AndFormat06Reliably is null
-                            ? null
-                            : (canReadUniqueIdentifiersReliably ?? false) &&
-                              (canReadFormat05AndFormat06Reliably ?? false)
-                                ? new AdviceItem(AdviceType.HiddenCharactersNotRepresentedCorrectly)
-                                : TestHiddenCharactersNotRepresentedCorrectlyNoCalibration()
-                        : TestHiddenCharactersNotRepresentedCorrectlyNoCalibration();
-
-                AdviceItem? TestHiddenCharactersNotRepresentedCorrectlyNoCalibration() =>
-                    calibrationAssumption == CalibrationAssumption.NoCalibration
-                        ? new AdviceItem(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibration)
-                        : null;
-        }
-
-        // AdviceType: 315, 316
-        AddAdviceItemToList(
-            calibrationAssumption == CalibrationAssumption.Agnostic
-                ? canReadUniqueIdentifiersReliably.Map(canRead => canRead) ?? false
-                    ? canReadFormat05AndFormat06Reliably.Map(readRead => !readRead) ?? false
-                        ? TestLayoutsDoNotMatchNoPpn()
+                    : IfWeCanReadFormat05AndFormat06Reliably()
+                        ? ReportThatInvariantCharactersAreReadReliably()                                                    // 100
                         : null
-                    : null
                 : null);
 
-        // Advice Type: 320
+        // AdviceTypes: 100, 105, 110, 115 (Not Calibration)
         AddAdviceItemToList(
-            !(canReadUniqueIdentifiersReliably.Map(canRead => canRead) ?? false)
-                ? new AdviceItem(AdviceType.CannotReadUniqueIdentifiersReliably)
-                : null);
-
-        // Advice Type 335
-        AddAdviceItemToList(
-            canReadUniqueIdentifiersReliably.Map(canRead => !canRead) ?? false
-                ? keyboardScriptDoesNotSupportCase.Map(@case => @case) ?? false
-                    ? new AdviceItem(AdviceType.NoSupportForCase, systemCapabilities.KeyboardScript)
-                    : null
-                : null);
-
-        if (systemCapabilities.CapsLock)
-        {
-            AdviceItem? TestCapsLockCompensation() =>
-                scannerMayCompensateForCapsLock
-                    ? new AdviceItem(AdviceType.CapsLockCompensation)
-                    : null;
-
-            AdviceItem? TestCapsLockOnPreservationMacintosh() =>
-                platform == SupportedPlatform.Macintosh
-                    ? new AdviceItem(AdviceType.CapsLockOnPreservationMacintosh)
-                    : TestCapsLockCompensation();
-
-            // AdviceType: 205, 206
-            AddAdviceItemToList(
-                !(keyboardScriptDoesNotSupportCase.Map(@case => @case) ?? false)
-                    ? TestCapsLockOnPreservationMacintosh()
-                    : null);
-
-            // AdviceType: 210
-            AddAdviceItemToList(
-                keyboardScriptDoesNotSupportCase.Map(@case => @case) ?? false
-                    ? new AdviceItem(AdviceType.CapsLockOnNoCase)
-                    : null);
-
-            AdviceItem TestCapsLockOnMacintosh() =>
-                platform == SupportedPlatform.Macintosh
-                    ? new AdviceItem(AdviceType.CapsLockOnMacintosh)
-                    : new AdviceItem(AdviceType.CapsLockOn);
-
-            AdviceItem TestCapsLockOnConvertsToLowerCase() =>
-                scannerMayConvertToLowerCase
-                    ? new AdviceItem(AdviceType.CapsLockOnConvertsToLowerCase)
-                    : TestCapsLockOnMacintosh();
-
-            AdviceItem TestCapsLockOnConvertsToUpperCase() =>
-                scannerMayConvertToUpperCase
-                    ? new AdviceItem(AdviceType.CapsLockOnConvertsToUpperCase)
-                    : TestCapsLockOnConvertsToLowerCase();
-
-            // AdviceType: 325, 326, 327, 328
-            AddAdviceItemToList(
-                !(keyboardScriptDoesNotSupportCase.Map(@case => @case) ?? false)
-                    ? TestCapsLockOnConvertsToUpperCase()
-                    : null);
-        }
-        else
-        {
-            AdviceItem? TestConvertsToLowerCase() =>
-                scannerMayConvertToLowerCase
-                    ? new AdviceItem(AdviceType.ConvertsToLowerCase)
-                    : null;
-
-            AdviceItem? TestConvertsToUpperCase() =>
-                scannerMayConvertToUpperCase
-                    ? new AdviceItem(AdviceType.ConvertsToUpperCase)
-                    : TestConvertsToLowerCase();
-
-            AdviceItem? TestCaseIsSwitched() =>
-                scannerMayInvertCase
-                    ? new AdviceItem(AdviceType.CaseIsSwitched)
-                    : TestConvertsToUpperCase();
-
-            // AdviceType: 330, 331, 332
-            AddAdviceItemToList(
-                !(keyboardScriptDoesNotSupportCase.Map(@case => @case) ?? false)
-                    ? TestCaseIsSwitched()
-                    : null);
-        }
-
-        // AdviceType: 350, 351, 355
-        AddAdviceItemToList(
-            adviceTerritory == Territory.Germany
-                ? TestCannotReadPpnReliablyGermany()
+            IfTheTestSucceeded()
+            && IfWeCanReadUniqueIdentifiersReliably()
+            && IfTheKeyboardLayoutsCorrespondForUniqueIdentifiers()
+            && IfTheKeyboardLayoutsCanRepresentGroupSeparators()
+            && IfWeDoNotAssumeCalibration()
+                ? IfAdviceIsNotProvidedSpecificallyForGermany()
+                  && IfWeOmittedThePpnTest()
+                    ? ReportThatUniqueIdentifiersAreReadReliablyButThePpnTestWasOmitted()                                   // 105
+                    : IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
+                        ? IfWeCanReadFormat05AndFormat06Reliably()
+                            ? IfWeAssumeAgnosticism()
+                                ? IfTheKeyboardLayoutsCanRepresentRecordSeparators()
+                                    ? ReportThatInvariantCharactersAreReadReliably()                                        // 100
+                                    : IfAdviceIsNotProvidedSpecificallyForGermany()
+                                        ? ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesMayNotBeReadReliably()    // 110
+                                        : null
+                                : IfWeAssumeNoCalibration()
+                                  && IfTheKeyboardLayoutsCannotRepresentRecordSeparators()
+                                  && IfAdviceIsNotProvidedSpecificallyForGermany()
+                                  && IfWeIncludedThePpnTest()
+                                    ? ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesAreNotReadReliably()          // 105
+                                    : null
+                            : IfAdviceIsNotProvidedSpecificallyForGermany()
+                              && IfWeIncludedThePpnTest()
+                                ? ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesAreNotReadReliably()              // 115
+                                : null
+                        : null
                 : null);
 
         // AdviceType: 200
         AddAdviceItemToList(
-            !(scannerTransmitsAimIdentifiers ?? false)
-                ? new AdviceItem(AdviceType.NotTransmittingAim)
+            IfWeDoNotAscertainThatTheScannerTransmitsAimIdentifiers()
+                ? ReportThatTheBarcodeScannerDoesNotTransmitAimIdentifiers()                                                // 200
+                : null);
+
+        // AdviceType: 205, 206
+        AddAdviceItemToList(
+            IfCapsLockIsOn()
+            && IfWeDoNotAscertainThatTheKeyboardScriptDoesNotSupportCase()
+                ? IfTheCurrentPlatformIsMacintosh()
+                    ? ReportThatCapsLockIsSwitchedOnOnMacOsButCaseIsPreserved()                                             // 206
+                    : IfScannerMayCompensateForCapsLock()
+                        ? ReportThatCapsLockIsSwitchedOnButCaseIsReportedCorrectly()                                        // 205
+                        : null
+                : null);
+
+        // AdviceType: 210
+        AddAdviceItemToList(
+            IfCapsLockIsOn()
+            && IfTheKeyboardScriptDoesNotSupportCase()
+                ? ReportThatCapsLockIsSwitchedOnButScriptDoesNotSupportCase()                                               // 210
                 : null);
 
         // AdviceType: 215
         AddAdviceItemToList(
-            !(scannerTransmitsEndOfLineSequence ?? false)
-                ? new AdviceItem(AdviceType.NotTransmittingEndOfLine)
+            IfWeDoNotAscertainThatTheScannerTransmitsAnEndOfLineSequence()
+                ? ReportThatTheScannerDoesNotTransmitAnEndOfLineSequence()                                                  // 215
                 : null);
 
         // AdviceType: 220
         AddAdviceItemToList(
-            scannerTransmitsAdditionalPrefix
-                ? new AdviceItem(AdviceType.TransmittingPrefix)
+            IfScannerTransmitsAnAdditionalPrefix()
+                ? ReportThatTheScannerTransmitsAPrefix()                                                                    // 220
                 : null);
 
         // AdviceType: 225
         AddAdviceItemToList(
-            scannerTransmitsAdditionalSuffix
-                ? new AdviceItem(AdviceType.TransmittingSuffix)
-                : null);
-
-        // AdviceType: 260, 261, 265
-        AddAdviceItemToList(
-            !(keyboardLayoutsCorrespondForAdditionalAsciiCharacters.Map(ascii => ascii) ?? false)
-                ? canReadAdditionalAsciiCharactersReliably.Map(readRead => !readRead) ?? false
-                    ? new AdviceItem(AdviceType.CannotReadAdditionalData)
-                    : TestMayNotReadAdditionalData()
+            IfScannerTransmitsAnAdditionalSuffix()
+                ? ReportThatTheScannerTransmitsASuffix()                                                                    // 225
                 : null);
 
         // AdviceTypes: 230, 231, 235
         AddAdviceItemToList(
-            !(keyboardLayoutsCorrespondForAimIdentifier.Map(aim => aim) ?? false)
-                ? canReadAimIdentifiersReliably.Map(readAim => !readAim) ?? false
-                    ? new AdviceItem(AdviceType.CannotReadAim)
-                    : calibrationAssumption switch {
-                        CalibrationAssumption.Agnostic => new AdviceItem(AdviceType.MayNotReadAim),
-                        CalibrationAssumption.NoCalibration => new AdviceItem(AdviceType.MayNotReadAimNoCalibration),
-                        _ => null
-                    }
+            IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondForAimIdentifierFlagCharacter()
+                ? IfWeCannotReadAimIdentifiersReliably()
+                    ? ReportThatWeCannotReadAimIdentifiers()                                                                // 235
+                    : IfWeAssumeAgnosticism()
+                            ? ReportThatWeMayNotReadAimIdentifiersAssumingAgnosticism()                                     // 230
+                            : IfWeAssumeNoCalibration()
+                                ? ReportThatWeMayNotReadAimIdentifiersAssumingNoCalibration()                               // 231
+                                : null
                 : null);
 
         // AdviceTypes: 232
         AddAdviceItemToList(
-            !(keyboardLayoutsCorrespondForAimIdentifier.Map(aim => aim) ?? false)
-                ? !aimIdentifierUncertain
-                    ? null
-                    : new AdviceItem(AdviceType.MayNotTransmitAim)
+            IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondForAimIdentifierFlagCharacter()
+            && IfThereIsUncertaintyAboutTheDetectedAimIdentifier()
+                ? ReportThatTheBarcodeScannerMayNotTransmitAimIdentifiers()                                                 // 232
                 : null);
-
-        if (testGs1Only)
-        {
-            // AdviceType: 250
-            AddAdviceItemToList(new AdviceItem(AdviceType.NoPpnTest));
-        }
 
         // AdviceTypes: 240, 241, 245
-        AddAdviceItemToList(TestCannotReadPpnReliably());
-
-        // AdviceTypes: 100, 105, 110, 115 (Not Calibration)
         AddAdviceItemToList(
-            canReadUniqueIdentifiersReliably.Map(read => read) ?? false
-                ? keyboardLayoutsCorrespondForCharacterSet82.Map(inv => inv) ?? false
-                    ? (keyboardLayoutsCanRepresentGroupSeparator.Map(repGs => repGs) ?? false) &&
-                      testsSucceeded &&
-                      calibrationAssumption != CalibrationAssumption.Calibration
-                        ? TestReadsUniqueIdentifiersReliablyNoPpnTest()
+            IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
+                ? IfWeCanReadFormat05AndFormat06Reliably()
+                    ? (IfWeKnowIfTheKeyboardLayoutsCanRepresentRecordSeparators() || IfWeKnowIfWeCanReadUniqueIdentifiersReliably())
+                      && IfTheKeyboardLayoutsCannotRepresentRecordSeparators()
+                      && IfWeCanReadUniqueIdentifiersReliably()
+                        ? IfWeAssumeAgnosticism()
+                            ? ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingAgnosticism()                         // 240
+                            : IfWeAssumeNoCalibration()
+                                ? ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingNoCalibration()                   // 241
+                                : null
                         : null
-                    : null
+                    : ReportThatFormat05OrFormat06AreNotReadReliably()                                                      // 245
                 : null);
 
-        // AdviceTypes: 100, 105, 155 (Calibration)
+        // AdviceType: 250
         AddAdviceItemToList(
-            (canReadUniqueIdentifiersReliably.Map(read => !read) ?? false) &&
-            testsSucceeded &&
-            calibrationAssumption == CalibrationAssumption.Calibration
-                ? TestAdviceTerritory()
+            IfWeOmittedThePpnTest()
+                ? ReportThatWeDidNotTestForIsoIec15434()                                                                    // 250
+                : null);
+
+        // AdviceType: 260, 261, 265
+        AddAdviceItemToList(
+            IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondsForAdditionalAsciiCharacters()
+                ? IfWeCannotReadAdditionalAsciiCharactersReliably()
+                    ? ReportThatTheSystemCannotReadAdditionalDataReliably()                                                 // 265
+                    : IfWeAssumeAgnosticism()
+                        ? ReportThatNonAdditionalDataMayNotBeReadReliablyAssumingAgnosticism()                              // 260
+                        : IfWeAssumeNoCalibration()
+                            ? ReportThatNonAdditionalDataMayNotBeReadReliablyAssumingNoCalibration()                        // 261
+                            : null
+                : null);
+
+        // AdviceType: 270, 271, 275
+        AddAdviceItemToList(
+            IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparators()                                             // 275
+                ? IfWeCannotReadEdiCharactersReliably()
+                    ? ReportThatTheSystemCannotReadEdiCharactersReliably()
+                    : IfWeAssumeAgnosticism()
+                        ? ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism()                                  // 270
+                        : IfWeAssumeNoCalibration()
+                            ? ReportThatEdiCharactersMayNotBeReadReliablyAssumingNoCalibration()                            // 271
+                            : null
+                : null);
+
+        // AdviceType: 300
+        AddAdviceItemToList(
+            IfTestDidNotSucceed()
+            && IfDataWasReported()
+                ? ReportThatTheTestFailed()                                                                                 // 300
+                : null);
+
+        // AdviceType: 301, 304
+        AddAdviceItemToList(
+            IfNoDataWasReported()
+                ? IfDeadKeyBarcodesWereGeneratedDuringCalibration()
+                    ? ReportThatNoScannedDataWasReportedForDeadKeyBarcodes()                                                // 304
+                    : ReportThatNoScannedDataWasReportedForBaseLineBarcode()                                                // 301
+                : null);
+
+        // AdviceType: 303, 306
+        AddAdviceItemToList(
+            IfDataWasOnlyPartiallyReported()
+                ? IfDeadKeyBarcodesWereGeneratedDuringCalibration()
+                    ? ReportThatScannedDataWasPartiallyReportedForDeadKeyBarcodes()                                         // 306
+                    : ReportThatScannedDataWasPartiallyReportedForBaselineBarcode()                                         // 303
+                : null);
+
+        // AdviceType: 305
+        AddAdviceItemToList(
+            IfBarcodesWereScannedInAnIncorrectSequence()
+                ? ReportThatUserScannedADeadKeyBarcodeOutOfSequence()                                                       // 305
+                : null);
+
+        // AdviceTypes: 307, 308
+        AddAdviceItemToList(
+            IfTheKeyboardLayoutsDoNotCorrespondForUniqueIdentifiers()
+                ? IfWeAssumeAgnosticism()
+                    ? IfWeKnowIfWeCanReadUniqueIdentifiersReliably()
+                      || IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
+                        ? IfWeCanReadUniqueIdentifiersReliably()
+                          && IfWeCanReadFormat05AndFormat06Reliably()
+                            ? ReportThatLayoutsDoNotMatch()                                                                 // 307
+                            : IfWeAssumeNoCalibration()
+                                ? ReportThatLayoutsDoNotMatchForNoCalibrationAssumption()                                   // 308
+                                : null
+                        : null
+                    : IfWeAssumeNoCalibration()
+                        ? ReportThatLayoutsDoNotMatchForNoCalibrationAssumption()                                           // 308
+                        : null
+                : null);
+
+        // AdviceTypes: 309, 310
+        AddAdviceItemToList(
+            IfAdviceIsNotProvidedSpecificallyForGermany()
+            && IfTheKeyboardLayoutsCorrespondForUniqueIdentifiers()
+            && IfTheKeyboardLayoutsCannotRepresentGroupSeparators()
+                ? IfWeAssumeAgnosticism()
+                    ? IfWeKnowIfWeCanReadUniqueIdentifiersReliably()
+                      || IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
+                        ? IfWeCanReadUniqueIdentifiersReliably()
+                          && IfWeCanReadFormat05AndFormat06Reliably()
+                            ? ReportThatHiddenCharactersAreNotRepresentedCorrectly()                                        // 309  // CHECK!
+                            : null
+                        : null
+                    : IfWeAssumeNoCalibration()
+                        ? ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibration()                       // 310
+                        : null
+                : null);
+
+        // AdviceTypes: 311, 312
+        AddAdviceItemToList(
+            IfAdviceIsProvidedSpecificallyForGermany()
+            && IfTheKeyboardLayoutsCorrespondForUniqueIdentifiers()
+            && (IfTheKeyboardLayoutsCannotRepresentGroupSeparators() || IfTheKeyboardLayoutsCannotRepresentRecordSeparators())
+                ? IfWeAssumeAgnosticism()
+                    ? IfWeKnowIfWeCanReadUniqueIdentifiersReliably() || IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
+                        ? IfWeCanReadUniqueIdentifiersReliably()
+                          && IfWeCanReadFormat05AndFormat06Reliably()
+                            ? ReportThatHiddenCharactersAreNotRepresentedCorrectlyForGermany()                              // 311
+                            : null
+                        : null
+                    : IfWeAssumeNoCalibration()
+                        ? ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibrationForGermany()             // 312
+                        : null
+                : null);
+
+        // AdviceType: 315, 316
+        AddAdviceItemToList(
+            IfWeAssumeAgnosticism()
+            && IfWeCanReadUniqueIdentifiersReliably()
+            && IfWeCannotReadFormat05AndFormat06Reliably()
+                ? IfWeKnowIfKeyboardLayoutsCorrespondForUniqueIdentifiers()
+                    ? IfTheKeyboardLayoutsCorrespondForUniqueIdentifiers()
+                        ? IfTheKeyboardLayoutsCannotRepresentGroupSeparators()
+                            ? ReportThatHiddenCharactersAreNotReportedCorrectlyAndPpnBarcodesCannotBeReadReliably()         // 316
+                            : null
+                        : ReportThatLayoutsDoNotMatchAndPpnBarcodesCannotBeReadReliably()                                   // 315
+                    : IfTheKeyboardLayoutsCannotRepresentGroupSeparators()
+                        ? ReportThatHiddenCharactersAreNotReportedCorrectlyAndPpnBarcodesCannotBeReadReliably()             // 316
+                        : null
+                : null);
+
+        // Advice Type: 320
+        AddAdviceItemToList(
+            IfWeDoNotAscertainThatWeCanReadUniqueIdentifiersReliably()
+                ? ReportThatSystemCannotReadUniqueIdentifiersReliably()                                                     // 320
+                : null);
+
+        // AdviceType: 325, 326, 327, 328
+        AddAdviceItemToList(
+            IfCapsLockIsOn()
+            && IfWeDoNotAscertainThatTheKeyboardScriptDoesNotSupportCase()
+                ? IfScannerMayConvertToUpperCase()
+                    ? ReportThatCapsLockIsOnAndSystemConvertsToUpperCases()                                                 // 327
+                    : IfScannerMayConvertToLowerCase()
+                        ? ReportThatCapsLockIsOnAndSystemConvertsToLowerCases()                                             // 328
+                        : IfTheCurrentPlatformIsMacintosh()
+                            ? ReportThatCapsLockIsSwitchedOnForMacintosh()                                                  // 326
+                            : ReportThatCapsLockIsSwitchedOn()                                                              // 325
+                : null);
+
+        // AdviceType: 330, 331, 332
+        AddAdviceItemToList(
+            IfCapsLockIsOff()
+            && IfWeDoNotAscertainThatTheKeyboardScriptDoesNotSupportCase()
+                ? IfScannerMayInvertCase()
+                    ? ReportThatSystemConvertsUpperAndLowerCases()                                                          // 330
+                    : IfScannerMayConvertToUpperCase()
+                        ? ReportThatSystemConvertsToUpperCase()                                                             // 331
+                        : IfScannerMayConvertToLowerCase()
+                            ? ReportThatSystemConvertsToLowerCase()                                                         // 332
+                            : null
+                : null);
+
+        // Advice Type 335
+        AddAdviceItemToList(
+            IfWeCannotReadUniqueIdentifiersReliably()
+            && IfTheKeyboardScriptDoesNotSupportCase()
+                ? ReportBarcodesCannotBeReadReliablyForKeyboardScriptThatDoesNotSupportCase()                               // 335
+                : null);
+
+        // AdviceType: 350, 351, 355
+        AddAdviceItemToList(
+            IfAdviceIsProvidedSpecificallyForGermany()
+            && IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
+                ? IfWeCanReadFormat05AndFormat06Reliably()
+                    ? IfTheKeyboardLayoutsCannotRepresentRecordSeparators() &&
+                      IfWeCanReadUniqueIdentifiersReliably()
+                        ? IfWeAssumeAgnosticism()
+                            ? ReportIncorrectRepresentationOfPpnRecordSeparators()                                          // 350
+                            : IfWeAssumeNoCalibration()
+                                ? ReportIncorrectRepresentationOfPpnRecordSeparatorsAssumingNoCalibration()                 // 351
+                                : null
+                        : null
+                    : ReportThatPpnBarcodesCannotBeReadReliably()                                                           // 355
                 : null);
 
         // General fix-up for other issues
@@ -516,7 +572,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
             highSeverity.Find(a => a.AdviceType == AdviceType.IncorrectSequenceDeadKeys) is not null ||
             highSeverity.Find(a => a.AdviceType == AdviceType.PartialDataReportedDeadKeys) is not null)
         {
-            var testsFailed = highSeverity.Find(a => a.AdviceType == AdviceType.TestsFailed);
+            var testsFailed = highSeverity.Find(a => a.AdviceType == AdviceType.TestFailed);
 
             if (testsFailed is not null)
             {
@@ -569,138 +625,6 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         return;
 
-        AdviceItem? TestReadsUniqueIdentifiersReliablyNoPpnTest() =>
-            adviceTerritory != Territory.Germany && testGs1Only
-                ? new AdviceItem(AdviceType.ReadsUniqueIdentifiersReliablyNoPpnTest)
-                : TestCanReadFormat05AndFormat06Reliably();
-
-        AdviceItem? TestAdviceTerritory() =>
-            adviceTerritory != Territory.Germany
-                ? TestSupportForFormat06()
-                : TestCalibrationCanReadFormat05AndFormat06Reliably();
-
-        AdviceItem? TestCanReadFormat05AndFormat06Reliably() =>
-            canReadFormat05AndFormat06Reliably is null
-                ? null
-                : (bool)canReadFormat05AndFormat06Reliably
-                    ? TestNotCalibrationIsAgnostic()
-                    : Test006UnreliableReadsUniqueIdentifiersReliablyExceptPpn();
-
-        AdviceItem? TestNotCalibrationIsAgnostic() =>
-            calibrationAssumption == CalibrationAssumption.Agnostic
-                ? TestReadsUniqueIdentifiersReliably()
-                : TestReadsUniqueIdentifiersReliablyExceptPpn();
-
-        AdviceItem? TestSupportForFormat06() =>
-            testGs1Only
-                ? new AdviceItem(AdviceType.ReadsUniqueIdentifiersReliablyNoPpnTest)
-                : TestFormat06CanReadFormat05AndFormat06Reliably();
-
-        AdviceItem? TestCalibrationCanReadFormat05AndFormat06Reliably() =>
-            canReadFormat05AndFormat06Reliably ?? false
-                ? new AdviceItem(AdviceType.ReadsUniqueIdentifiersReliably)
-                : null;
-
-        AdviceItem? TestFormat06CanReadFormat05AndFormat06Reliably() =>
-            canReadFormat05AndFormat06Reliably is null
-                ? null
-                : (bool)canReadFormat05AndFormat06Reliably
-                    ? new AdviceItem(AdviceType.ReadsUniqueIdentifiersReliably)
-                    : new AdviceItem(AdviceType.ReadsUniqueIdentifiersReliablyExceptPpn);
-
-        AdviceItem? Test006UnreliableReadsUniqueIdentifiersReliablyExceptPpn() =>
-            adviceTerritory != Territory.Germany && 
-            !testGs1Only
-                ? new AdviceItem(AdviceType.ReadsUniqueIdentifiersReliablyExceptPpn)
-                : null;
-
-        AdviceItem? TestReadsUniqueIdentifiersReliably() =>
-            keyboardLayoutsCanRepresentRecordSeparator ?? false
-                ? new AdviceItem(AdviceType.ReadsUniqueIdentifiersReliably)
-                : TestReadsUniqueIdentifiersReliablyMayNotReadPpn();
-
-        AdviceItem? TestReadsUniqueIdentifiersReliablyExceptPpn() =>
-            calibrationAssumption == CalibrationAssumption.NoCalibration &&
-            (keyboardLayoutsCanRepresentRecordSeparator.Map(repRs => !repRs) ?? false) &&
-            adviceTerritory != Territory.Germany &&
-            !testGs1Only
-                ? new AdviceItem(AdviceType.ReadsUniqueIdentifiersReliablyExceptPpn)
-                : null;
-
-        AdviceItem? TestMayNotReadAdditionalData() =>
-            calibrationAssumption switch
-            {
-                CalibrationAssumption.Agnostic => new AdviceItem(AdviceType.MayNotReadAdditionalDataReliably),
-                CalibrationAssumption.NoCalibration => new AdviceItem(AdviceType.MayNotReadAdditionalDataNoCalibration),
-                _ => null
-            };
-
-        AdviceItem? TestReadsUniqueIdentifiersReliablyMayNotReadPpn() =>
-            adviceTerritory != Territory.Germany && !testGs1Only
-                ? new AdviceItem(AdviceType.ReadsUniqueIdentifiersReliablyMayNotReadPpn)
-                : null;
-
-        AdviceItem? TestCannotReadPpnReliablyGermany() =>
-            canReadFormat05AndFormat06Reliably is null
-                ? null
-                : (bool)canReadFormat05AndFormat06Reliably
-                    ? TestRecordSeparatorIncorrectlyRepresentedGermany()
-                    : new AdviceItem(AdviceType.CannotReadPpnReliablyGermany);
-
-        AdviceItem? TestCannotReadPpnReliably() =>
-            canReadFormat05AndFormat06Reliably is null
-                ? null
-                : (bool)canReadFormat05AndFormat06Reliably
-                    ? TestMayNotReadPpn()
-                    : new AdviceItem(AdviceType.CannotReadPpnReliably);
-
-        AdviceItem? TestMayNotReadPpn() =>
-            (keyboardLayoutsCanRepresentRecordSeparator.Map(repRs => !repRs) ?? false) &&
-            (canReadUniqueIdentifiersReliably ?? false)
-                ? calibrationAssumption switch {
-                    CalibrationAssumption.Agnostic => new AdviceItem(AdviceType.MayNotReadPpn),
-                    CalibrationAssumption.NoCalibration => new AdviceItem(AdviceType.MayNotReadPpnNoCalibration),
-                    _ => null
-                }
-                : null;
-
-        AdviceItem? TestRecordSeparatorIncorrectlyRepresentedGermany() =>
-            (keyboardLayoutsCanRepresentRecordSeparator.Map(repRs => !repRs) ?? false) &&
-            (canReadUniqueIdentifiersReliably ?? false)
-                ? calibrationAssumption switch
-                {
-                    CalibrationAssumption.Agnostic => new AdviceItem(AdviceType.RecordSeparatorIncorrectlyRepresentedGermany),
-                    CalibrationAssumption.NoCalibration => new AdviceItem(AdviceType.RecordSeparatorIncorrectlyRepresentedNoCalibrationGermany),
-                    _ => null
-                }
-                : null;
-
-        AdviceItem? TestLayoutsDoNotMatchNoPpn() =>
-            keyboardLayoutsCorrespondForCharacterSet82 is null
-                ? TestHiddenCharactersNotRepresentedCorrectlyNoPpn()
-                : !(bool)keyboardLayoutsCorrespondForCharacterSet82
-                    ? new AdviceItem(AdviceType.LayoutsDoNotMatchNoPpn)
-                    : TestHiddenCharactersNotRepresentedCorrectlyNoPpn();
-
-        AdviceItem? TestHiddenCharactersNotRepresentedCorrectlyNoPpn() =>
-            keyboardLayoutsCanRepresentGroupSeparator.Map(repGs => !repGs) ?? false
-                ? new AdviceItem(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoPpn)
-                : null;
-
-        AdviceItem? TestLayoutsDoNotMatch() =>
-            calibrationAssumption == CalibrationAssumption.Agnostic
-                ? canReadUniqueIdentifiersReliably is null && canReadFormat05AndFormat06Reliably is null
-                    ? null
-                    : (canReadUniqueIdentifiersReliably ?? false) && (canReadFormat05AndFormat06Reliably ?? false)
-                        ? new AdviceItem(AdviceType.LayoutsDoNotMatch)
-                        : TestLayoutsDoNotMatchNoCalibration()
-                : TestLayoutsDoNotMatchNoCalibration();
-
-        AdviceItem? TestLayoutsDoNotMatchNoCalibration()
-            => calibrationAssumption == CalibrationAssumption.NoCalibration
-                ? new AdviceItem(AdviceType.LayoutsDoNotMatchNoCalibration)
-                : null;
-
         void AddAdviceItemToList(AdviceItem? adviceItem)
         {
             switch (adviceItem?.Severity)
@@ -724,6 +648,269 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
                         Resources.CalibrationInvalidAdviceItem);
             }
         }
+
+        bool IfTheTestSucceeded() => testsSucceeded;
+        bool IfTestDidNotSucceed() => !testsSucceeded;
+        bool IfWeOmittedThePpnTest() => testGs1Only;
+        bool IfWeIncludedThePpnTest() => !testGs1Only;
+        bool IfWeKnowIfWeCanReadFormat05AndFormat06Reliably() => canReadFormat05AndFormat06Reliably is not null;
+        bool IfWeCanReadFormat05AndFormat06Reliably() => canReadFormat05AndFormat06Reliably ?? false;
+        bool IfWeCannotReadFormat05AndFormat06Reliably() => !canReadFormat05AndFormat06Reliably ?? false;
+        bool IfWeKnowIfWeCanReadUniqueIdentifiersReliably() => canReadInvariantCharactersReliably is not null;
+        bool IfWeCanReadUniqueIdentifiersReliably() => canReadInvariantCharactersReliably ?? false;
+        bool IfWeCannotReadUniqueIdentifiersReliably() => !canReadInvariantCharactersReliably ?? false;
+        bool IfWeDoNotAscertainThatWeCanReadUniqueIdentifiersReliably() => !(canReadInvariantCharactersReliably ?? false);
+        bool IfTheKeyboardLayoutsCorrespondForUniqueIdentifiers() => keyboardLayoutsCorrespondForInvariantCharacters ?? false;
+        bool IfTheKeyboardLayoutsDoNotCorrespondForUniqueIdentifiers() => !keyboardLayoutsCorrespondForInvariantCharacters ?? false;
+        bool IfWeKnowIfKeyboardLayoutsCorrespondForUniqueIdentifiers() => keyboardLayoutsCorrespondForInvariantCharacters is not null;
+        bool IfWeAssumeAgnosticism() => calibrationAssumption == CalibrationAssumption.Agnostic;
+        bool IfWeAssumeCalibration() => calibrationAssumption == CalibrationAssumption.Calibration;
+        bool IfWeDoNotAssumeCalibration() => calibrationAssumption != CalibrationAssumption.Calibration;
+        bool IfWeAssumeNoCalibration() => calibrationAssumption == CalibrationAssumption.NoCalibration;
+        bool IfTheCurrentPlatformIsMacintosh() => platform == SupportedPlatform.Macintosh;
+        bool IfTheKeyboardLayoutsCanRepresentRecordSeparators() => keyboardLayoutsCanRepresentRecordSeparator ?? false;
+        bool IfTheKeyboardLayoutsCannotRepresentRecordSeparators() => !keyboardLayoutsCanRepresentRecordSeparator ?? false;
+        bool IfWeKnowIfTheKeyboardLayoutsCanRepresentRecordSeparators() => keyboardLayoutsCanRepresentRecordSeparator is not null;
+        bool IfTheKeyboardLayoutsCanRepresentGroupSeparators() => keyboardLayoutsCanRepresentGroupSeparator ?? false;
+        bool IfTheKeyboardLayoutsCannotRepresentGroupSeparators() => !keyboardLayoutsCanRepresentGroupSeparator ?? false;
+        bool IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparators() => !(keyboardLayoutsCanRepresentEdiSeparators ?? false);
+        bool IfCapsLockIsOn() => systemCapabilities.CapsLock;
+        bool IfCapsLockIsOff() => !systemCapabilities.CapsLock;
+        bool IfWeDoNotAscertainThatTheKeyboardScriptDoesNotSupportCase() => !(keyboardScriptDoesNotSupportCase ?? false);
+        bool IfTheKeyboardScriptDoesNotSupportCase() => keyboardScriptDoesNotSupportCase ?? false;
+        bool IfScannerMayCompensateForCapsLock() => scannerMayCompensateForCapsLock;
+        bool IfWeDoNotAscertainThatTheScannerTransmitsAimIdentifiers() => !(scannerTransmitsAimIdentifiers ?? false);
+        bool IfWeDoNotAscertainThatTheScannerTransmitsAnEndOfLineSequence() => !(scannerTransmitsEndOfLineSequence ?? false);
+        bool IfScannerTransmitsAnAdditionalPrefix() => scannerTransmitsAdditionalPrefix;
+        bool IfScannerTransmitsAnAdditionalSuffix() => scannerTransmitsAdditionalSuffix;
+        bool IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondForAimIdentifierFlagCharacter() => !(keyboardLayoutsCorrespondForAimIdentifier ?? false);
+        bool IfWeCannotReadAimIdentifiersReliably() => !canReadAimIdentifiersReliably ?? false;
+        bool IfThereIsUncertaintyAboutTheDetectedAimIdentifier() => aimIdentifierUncertain;
+        bool IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondsForAdditionalAsciiCharacters() => !(keyboardLayoutsCorrespondForNonInvariantCharacters ?? false);
+        bool IfWeCannotReadAdditionalAsciiCharactersReliably() => !canReadNonInvariantCharactersReliably ?? false;
+        bool IfWeCannotReadEdiCharactersReliably() => !canReadEdiReliably ?? false;
+        bool IfDataWasReported() => dataReported;
+        bool IfNoDataWasReported() => !dataReported;
+        bool IfDataWasOnlyPartiallyReported() => !completeDataReported;
+        bool IfDeadKeyBarcodesWereGeneratedDuringCalibration() => deadKeys;
+        bool IfBarcodesWereScannedInAnIncorrectSequence() => !correctSequenceReported;
+        bool IfScannerMayConvertToUpperCase() => scannerMayConvertToUpperCase;
+        bool IfScannerMayConvertToLowerCase() => scannerMayConvertToLowerCase;
+        bool IfScannerMayInvertCase() => scannerMayInvertCase;
+        bool IfAdviceIsProvidedSpecificallyForGermany() => adviceTerritory == Territory.Germany;
+        bool IfAdviceIsNotProvidedSpecificallyForGermany() => adviceTerritory != Territory.Germany;
+
+        // 100
+        AdviceItem ReportThatInvariantCharactersAreReadReliably() => 
+            new(AdviceType.ReadsUniqueIdentifiersReliably);
+
+        // 105
+        AdviceItem ReportThatUniqueIdentifiersAreReadReliablyButThePpnTestWasOmitted() =>
+            new(AdviceType.ReadsUniqueIdentifiersReliablyNoPpnTest);
+
+        // 110
+        AdviceItem ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesMayNotBeReadReliably() =>
+            new(AdviceType.ReadsUniqueIdentifiersReliablyMayNotReadPpn);
+
+        // 115
+        AdviceItem ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesAreNotReadReliably() =>
+            new(AdviceType.ReadsUniqueIdentifiersReliablyExceptPpn);
+
+        // 200
+        AdviceItem ReportThatTheBarcodeScannerDoesNotTransmitAimIdentifiers() =>
+            new(AdviceType.NotTransmittingAim);
+
+        // 205
+        AdviceItem ReportThatCapsLockIsSwitchedOnButCaseIsReportedCorrectly() =>
+            new(AdviceType.CapsLockCompensation);
+
+        // 206
+        AdviceItem ReportThatCapsLockIsSwitchedOnOnMacOsButCaseIsPreserved() =>
+            new(AdviceType.CapsLockOnPreservationMacintosh);
+
+        // 210
+        AdviceItem ReportThatCapsLockIsSwitchedOnButScriptDoesNotSupportCase() =>
+            new(AdviceType.CapsLockOnNoCase);
+
+        // 215
+        AdviceItem ReportThatTheScannerDoesNotTransmitAnEndOfLineSequence() =>
+            new(AdviceType.NotTransmittingEndOfLine);
+
+        // 220
+        AdviceItem ReportThatTheScannerTransmitsAPrefix() =>
+            new(AdviceType.TransmittingPrefix);
+
+        // 225
+        AdviceItem ReportThatTheScannerTransmitsASuffix() =>
+            new(AdviceType.TransmittingSuffix);
+
+        // 230
+        AdviceItem ReportThatWeMayNotReadAimIdentifiersAssumingAgnosticism() =>
+            new(AdviceType.MayNotReadAim);
+
+        // 231
+        AdviceItem ReportThatWeMayNotReadAimIdentifiersAssumingNoCalibration() =>
+            new(AdviceType.MayNotReadAimNoCalibration);
+
+        // 232
+        AdviceItem ReportThatTheBarcodeScannerMayNotTransmitAimIdentifiers() =>
+            new(AdviceType.MayNotTransmitAim);
+
+        // 235
+        AdviceItem ReportThatWeCannotReadAimIdentifiers() =>
+            new(AdviceType.CannotReadAim);
+
+        // 240
+        AdviceItem ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingAgnosticism() =>
+            new(AdviceType.MayNotReadPpn);
+
+        // 241
+        AdviceItem ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingNoCalibration() =>
+            new(AdviceType.MayNotReadPpnNoCalibration);
+
+        // 245
+        AdviceItem ReportThatFormat05OrFormat06AreNotReadReliably() =>
+            new(AdviceType.CannotReadPpnReliably);
+
+        // 250
+        AdviceItem ReportThatWeDidNotTestForIsoIec15434() =>
+            new(AdviceType.NoPpnTest);
+
+        // 255
+        AdviceItem ReportThatTheDataInputPerformanceIsSlowerThanExpected() =>
+            new(AdviceType.SlowScannerPerformance);
+
+        // 256
+        AdviceItem ReportThatTheDataInputPerformanceIsVeryPoor() =>
+            new(AdviceType.VerySlowScannerPerformance);
+
+        // 260
+        AdviceItem ReportThatNonAdditionalDataMayNotBeReadReliablyAssumingAgnosticism() =>
+            new(AdviceType.MayNotReadAdditionalDataReliably);
+
+        // 261
+        AdviceItem ReportThatNonAdditionalDataMayNotBeReadReliablyAssumingNoCalibration() =>
+            new(AdviceType.MayNotReadAdditionalDataNoCalibration);
+
+        // 265
+        AdviceItem ReportThatTheSystemCannotReadAdditionalDataReliably() =>
+            new(AdviceType.CannotReadAdditionalData);
+
+        // 270
+        AdviceItem ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism() =>
+            new(AdviceType.MayNotReadEdiCharactersReliably);
+
+        // 271
+        AdviceItem ReportThatEdiCharactersMayNotBeReadReliablyAssumingNoCalibration() =>
+            new(AdviceType.MayNotReadEdiCharactersNoCalibration);
+
+        // 275
+        AdviceItem ReportThatTheSystemCannotReadEdiCharactersReliably() =>
+            new(AdviceType.CannotReadEdiCharacters);
+
+        // 300
+        AdviceItem ReportThatTheTestFailed() =>
+            new(AdviceType.TestFailed);
+
+        // 301
+        AdviceItem ReportThatNoScannedDataWasReportedForBaseLineBarcode() =>
+            new(AdviceType.NoDataReported);
+
+        // 303
+        AdviceItem ReportThatScannedDataWasPartiallyReportedForBaselineBarcode() =>
+            new(AdviceType.PartialDataReported);
+
+        // 304
+        AdviceItem ReportThatNoScannedDataWasReportedForDeadKeyBarcodes() =>
+            new(AdviceType.NoDataReportedDeadKeys);
+
+        // 305
+        AdviceItem ReportThatUserScannedADeadKeyBarcodeOutOfSequence() =>
+            new(AdviceType.IncorrectSequenceDeadKeys);
+
+        // 306
+        AdviceItem ReportThatScannedDataWasPartiallyReportedForDeadKeyBarcodes() =>
+            new(AdviceType.PartialDataReportedDeadKeys);
+
+        // 307
+        AdviceItem ReportThatLayoutsDoNotMatch() =>
+            new(AdviceType.LayoutsDoNotMatch);
+
+        // 308
+        AdviceItem ReportThatLayoutsDoNotMatchForNoCalibrationAssumption() =>
+            new(AdviceType.LayoutsDoNotMatchNoCalibration);
+
+        // 309
+        AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectly() =>
+            new(AdviceType.HiddenCharactersNotRepresentedCorrectly);
+
+        // 310
+        AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibration() =>
+            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibration);
+
+        // 311
+        AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectlyForGermany() =>
+            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyGermany);
+
+        // 312
+        AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibrationForGermany() =>
+            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibrationGermany);
+
+        // 315
+        AdviceItem ReportThatLayoutsDoNotMatchAndPpnBarcodesCannotBeReadReliably() =>
+            new(AdviceType.LayoutsDoNotMatchNoPpn);
+
+        // 316
+        AdviceItem ReportThatHiddenCharactersAreNotReportedCorrectlyAndPpnBarcodesCannotBeReadReliably() =>
+            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoPpn);
+
+        // 320
+        AdviceItem ReportThatSystemCannotReadUniqueIdentifiersReliably() =>
+            new(AdviceType.CannotReadUniqueIdentifiersReliably);
+
+        // 325
+        AdviceItem ReportThatCapsLockIsSwitchedOn() =>
+            new(AdviceType.CapsLockOn);
+
+        // 326
+        AdviceItem ReportThatCapsLockIsSwitchedOnForMacintosh() =>
+            new(AdviceType.CapsLockOnMacintosh);
+
+        // 327
+        AdviceItem ReportThatCapsLockIsOnAndSystemConvertsToUpperCases() =>
+            new(AdviceType.CapsLockOnConvertsToUpperCase);
+
+        // 328
+        AdviceItem ReportThatCapsLockIsOnAndSystemConvertsToLowerCases() =>
+            new(AdviceType.CapsLockOnConvertsToLowerCase);
+
+        // 330
+        AdviceItem ReportThatSystemConvertsUpperAndLowerCases() =>
+            new(AdviceType.CaseIsSwitched);
+
+        // 331
+        AdviceItem ReportThatSystemConvertsToUpperCase() =>
+            new(AdviceType.ConvertsToUpperCase);
+
+        // 332
+        AdviceItem ReportThatSystemConvertsToLowerCase() =>
+            new(AdviceType.ConvertsToLowerCase);
+
+        // 335
+        AdviceItem ReportBarcodesCannotBeReadReliablyForKeyboardScriptThatDoesNotSupportCase() =>
+            new(AdviceType.NoSupportForCase, systemCapabilities.KeyboardScript);
+
+        // 350
+        AdviceItem ReportIncorrectRepresentationOfPpnRecordSeparators() =>
+            new(AdviceType.RecordSeparatorIncorrectlyRepresentedGermany);
+
+        // 351
+        AdviceItem ReportIncorrectRepresentationOfPpnRecordSeparatorsAssumingNoCalibration() =>
+            new(AdviceType.RecordSeparatorIncorrectlyRepresentedNoCalibrationGermany);
+
+        // 355
+        AdviceItem ReportThatPpnBarcodesCannotBeReadReliably() =>
+            new(AdviceType.CannotReadPpnReliablyGermany);
     }
 
     /// <summary>

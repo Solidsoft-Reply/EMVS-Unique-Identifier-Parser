@@ -5,8 +5,6 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.Parsers.EmvsUniqueIdentifier", "Solidsoft.Reply.Parsers.EmvsUniqueIdentifier\Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.csproj", "{046DCC80-E19A-4807-8796-A3E6C45CB8C7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.Parsers.HighCapacityAidc.PreProcessors", "..\Solidsoft.Reply.Parsers.HighCapacityAidc.PreProcessors\Solidsoft.Reply.Parsers.HighCapacityAidc.PreProcessors\Solidsoft.Reply.Parsers.HighCapacityAidc.PreProcessors.csproj", "{95FD3A53-7704-4C6B-9096-3A826802898A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.Parsers.AnsiMhDi", "..\Solidsoft.Reply.Parsers.AnsiMhDi\Solidsoft.Reply.Parsers.AnsiMhDi\Solidsoft.Reply.Parsers.AnsiMhDi.csproj", "{FD46D83A-CED5-4351-8D93-11E15D0F9475}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.BarcodeScanner.Calibration", "..\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration.csproj", "{920EC6D3-A682-4851-A047-7FD2E27CEB20}"
@@ -49,10 +47,6 @@ Global
 		{046DCC80-E19A-4807-8796-A3E6C45CB8C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{046DCC80-E19A-4807-8796-A3E6C45CB8C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{046DCC80-E19A-4807-8796-A3E6C45CB8C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95FD3A53-7704-4C6B-9096-3A826802898A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95FD3A53-7704-4C6B-9096-3A826802898A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95FD3A53-7704-4C6B-9096-3A826802898A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95FD3A53-7704-4C6B-9096-3A826802898A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FD46D83A-CED5-4351-8D93-11E15D0F9475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FD46D83A-CED5-4351-8D93-11E15D0F9475}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD46D83A-CED5-4351-8D93-11E15D0F9475}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -102,7 +96,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{95FD3A53-7704-4C6B-9096-3A826802898A} = {816D89D4-6D54-4B12-9327-ED846C15CD00}
 		{FD46D83A-CED5-4351-8D93-11E15D0F9475} = {FB386258-7C06-48A5-9E6A-6B54A48617DB}
 		{920EC6D3-A682-4851-A047-7FD2E27CEB20} = {37027F6F-7E40-4071-A433-93133224BF12}
 		{DAB637BE-D559-4C5A-80EE-66641C898933} = {FB386258-7C06-48A5-9E6A-6B54A48617DB}

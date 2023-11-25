@@ -75,20 +75,4 @@ public static class Extensions
 
         throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, Resources.Parser_Error_100, character));
     }
-
-    /// <summary>
-    ///   Maps from one Nullable&lt;T&gt; to another. This operation creates a functor over nullable structs.
-    /// </summary>
-    /// <typeparam name="TSource">The non-nullable source type.</typeparam>
-    /// <typeparam name="TResult">The non-nullable resulting type.</typeparam>
-    /// <param name="value">The nullable source value.</param>
-    /// <param name="func">The function to be lifted into the functor.</param>
-    /// <returns>The nullable resulting value.</returns>
-    public static TResult? Map<TSource, TResult>(this TSource? value, Func<TSource, TResult> func)
-        where TSource : struct
-        where TResult : struct
-        => value switch {
-            null => null,
-            _ => func(value.Value)
-        };
 }

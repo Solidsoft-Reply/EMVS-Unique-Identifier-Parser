@@ -432,7 +432,7 @@ public class Calibrate : IController
         if (this.calibrationTokens == null)
 #endif
         {
-            _parser.Calibrator.AssessFormat06Support = IncludeFormatnnTests;
+            _parser.Calibrator.AssessFormatnnSupport = IncludeFormatnnTests;
 
 #if STATELESS_MODEL
 #if SMALL_BARCODES

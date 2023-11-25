@@ -277,6 +277,33 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        internal static string Advice_270 {
+            get {
+                return ResourceManager.GetString("Advice_270", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        internal static string Advice_271 {
+            get {
+                return ResourceManager.GetString("Advice_271", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        internal static string Advice_275 {
+            get {
+                return ResourceManager.GetString("Advice_275", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Try again, making sure you scan the correct barcode(s)..
         /// </summary>
         internal static string Advice_300 {
@@ -727,6 +754,33 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain EDI data..
+        /// </summary>
+        internal static string Condition_270 {
+            get {
+                return ResourceManager.GetString("Condition_270", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain EDI data..
+        /// </summary>
+        internal static string Condition_271 {
+            get {
+                return ResourceManager.GetString("Condition_271", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain EDI data..
+        /// </summary>
+        internal static string Condition_275 {
+            get {
+                return ResourceManager.GetString("Condition_275", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The test failed..
         /// </summary>
         internal static string Condition_300 {
@@ -1146,6 +1200,33 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         internal static string Description_265 {
             get {
                 return ResourceManager.GetString("Description_265", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably..
+        /// </summary>
+        internal static string Description_270 {
+            get {
+                return ResourceManager.GetString("Description_270", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some barcodes may contain EDI data..
+        /// </summary>
+        internal static string Description_271 {
+            get {
+                return ResourceManager.GetString("Description_271", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some barcodes may contain EDI data..
+        /// </summary>
+        internal static string Description_275 {
+            get {
+                return ResourceManager.GetString("Description_275", resourceCulture);
             }
         }
         

@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-	  <value />
-	  <comment>Low</comment>
+    <value />
+    <comment>Low</comment>
   </data>
   <data name="Advice_105" xml:space="preserve">
     <value>You may need to enter data manually into your verification software to verify PPN unique identifiers.</value>
@@ -211,6 +211,18 @@
   </data>
   <data name="Advice_265" xml:space="preserve">
     <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_270" xml:space="preserve">
+    <value>If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_271" xml:space="preserve">
+    <value>If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_275" xml:space="preserve">
+    <value>If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
     <comment>High</comment>
   </data>
   <data name="Advice_300" xml:space="preserve">
@@ -413,6 +425,18 @@
     <value>Your system may not read additional data reliably.</value>
     <comment>High</comment>
   </data>
+  <data name="Condition_270" xml:space="preserve">
+    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_271" xml:space="preserve">
+    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_275" xml:space="preserve">
+    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
+    <comment>High</comment>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>The test failed.</value>
     <comment>Low</comment>
@@ -599,6 +623,18 @@
   </data>
   <data name="Description_265" xml:space="preserve">
     <value>Some barcodes may contain additional characters that never appear in unique identifiers.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_270" xml:space="preserve">
+    <value>Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_271" xml:space="preserve">
+    <value>Some barcodes may contain EDI data.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_275" xml:space="preserve">
+    <value>Some barcodes may contain EDI data.</value>
     <comment>High</comment>
   </data>
   <data name="Description_300" xml:space="preserve">

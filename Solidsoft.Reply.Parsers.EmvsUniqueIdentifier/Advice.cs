@@ -20,6 +20,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
 
 using BarcodeScanner.Calibration;
@@ -499,10 +501,10 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
                 mediumSeverity.Remove(mayNotReadAim);
             }
 
-            var mayNotReadAimNoCalibration = mediumSeverity.Find(a => a.AdviceType == AdviceType.MayNotReadAimNoCalibration);
-            if (mayNotReadAimNoCalibration is not null)
+            var cannotReadAimNoCalibration = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAimNoCalibration);
+            if (cannotReadAimNoCalibration is not null)
             {
-                mediumSeverity.Remove(mayNotReadAimNoCalibration);
+                mediumSeverity.Remove(cannotReadAimNoCalibration);
             }
 
             var cannotReadAim = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAim);
@@ -588,6 +590,18 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
             {
                 // Remove any report about AIM identifiers, additional characters or control characters.
             }
+        }
+
+        // If the calibrator determines that your system cannot read AIM identifier characters, then it
+        // should not report that your barcode scanner does not transmit AIM identifiers, as it cannot
+        // determine this for certain.
+        var mayNotReadAim2 = highSeverity.Find(a => a.AdviceType == AdviceType.MayNotReadAim);
+        var cannotReadAimNoCalibration2 = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAimNoCalibration);
+        var notTransmittingAim = highSeverity.Find(a => a.AdviceType == AdviceType.NotTransmittingAim);
+
+        if ((mayNotReadAim2 is not null || cannotReadAimNoCalibration2 is not null) && 
+            notTransmittingAim is not null) {
+            highSeverity.Remove(notTransmittingAim);
         }
 
         if (highSeverity.Any())
@@ -750,7 +764,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // 231
         AdviceItem ReportThatWeMayNotReadAimIdentifiersAssumingNoCalibration() =>
-            new(AdviceType.MayNotReadAimNoCalibration);
+            new(AdviceType.CannotReadAimNoCalibration);
 
         // 232
         AdviceItem ReportThatTheBarcodeScannerMayNotTransmitAimIdentifiers() =>

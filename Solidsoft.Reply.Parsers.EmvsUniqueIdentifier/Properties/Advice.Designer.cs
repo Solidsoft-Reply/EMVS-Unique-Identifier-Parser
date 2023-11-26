@@ -637,7 +637,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read AIM identifier characters..
+        ///   Looks up a localized string similar to Your system may not read AIM identifier characters..
         /// </summary>
         internal static string Condition_230 {
             get {

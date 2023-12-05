@@ -20,8 +20,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.ComponentModel.DataAnnotations;
-
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
 
 using BarcodeScanner.Calibration;

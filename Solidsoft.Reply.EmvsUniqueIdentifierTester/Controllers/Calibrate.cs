@@ -20,6 +20,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using Solidsoft.Reply.BarcodeScanner.Calibration.DataMatrix;
+
 namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Controllers;
 
 using System;
@@ -438,12 +440,12 @@ public class Calibrate : IController
 #if SMALL_BARCODES
             _currentCalibrationToken = _parser.Calibrator.NextCalibrationToken(_currentCalibrationToken, 18F, DataMatrixSize.Dm24X24);
 #else
-            this.currentCalibrationToken = this.parser.Calibrator.NextCalibrationToken(this.currentCalibrationToken, 18F);
+            this.currentCalibrationToken = _parser.Calibrator.NextCalibrationToken(this.currentCalibrationToken, 18F);
 #endif
             _calibrationView.SetValue("CurrentCalibrationToken", _currentCalibrationToken);
 #else
 #if SMALL_BARCODES
-            this.calibrationTokens = this.parser.Calibrator.CalibrationTokens(18F, DataMatrixSize.Dm24X24).GetEnumerator();
+            this.calibrationTokens = _parser.Calibrator.CalibrationTokens(18F, DataMatrixSize.Dm24X24).GetEnumerator();
 #else
             this.calibrationTokens = _parser.Calibrator.CalibrationTokens(18F).GetEnumerator();
 #endif

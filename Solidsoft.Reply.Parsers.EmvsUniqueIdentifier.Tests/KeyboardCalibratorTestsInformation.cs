@@ -110,19 +110,18 @@ public class KeyboardCalibratorTestsInformation
     private const string NoCalibrationDataReportedB = "";
     private const string NoCalibrationDataReportedC = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ \0`{ ~ } ¬    \0    \0    \0    \0    \x000D";
     private const string NoCalibrationDataReportedCDeadKey1 = "";
-    private const string NoCalibrationDataReportedD1 = "]d2  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 \x000D";
-    private const string NoCalibrationDataReportedD2 = "]d27 8 9 : ; < = > ? A B C D E F G H I J K L \x000D";
-    private const string NoCalibrationDataReportedD3 = "]d2M N O P Q R S T U V W X Y Z _ a b c d e f \x000D";
-    private const string NoCalibrationDataReportedD4 = "]d2g h i j k l m n o p q r s t u v w x y z   \x000D";
-    private const string NoCalibrationDataReportedD5 = "]d2£ $ \" [ # ] ^ \0`{ ~ } ¬    \x000D";
-    private const string NoCalibrationDataReportedD6 = "]d2\0    \0    \0    \0";
-    private const string NoCalibrationDataReportedD7 = "]d2    \x000D";
-    private const string NoCalibrationDataReportedDeadKey11 = "]d2";
-    private const string NoCalibrationDataReportedDeadKey12 = "]d2";
-    private const string NoCalibrationDataReportedDeadKey13 = "]d2";
-    private const string NoCalibrationDataReportedDeadKey14 = "]d2";
-    private const string NoCalibrationDataReportedDeadKey15 = "]d2";
-    private const string NoCalibrationDataReportedDeadKey16 = "]d2";
+    private const string NoCalibrationDataReportedD1 = "]d1  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6\r";
+    private const string NoCalibrationDataReportedD2 = "]d1 7 8 9 : ; < = > ? A B C D E F G H I J K L\r";
+    private const string NoCalibrationDataReportedD3 = "]d1 M N O P Q R S T U V W X Y Z _ a b c d e f\r";
+    private const string NoCalibrationDataReportedD4 = "]d1 g h i j k l m n o p q r s t u v w x y z\r";
+    private const string NoCalibrationDataReportedD5 = "]d1   £ $ \" [ # ] ^ \0`{ ~ }\r";
+    private const string NoCalibrationDataReportedD6 = "]d1 ¬    \0    \0    \0       \r";
+    private const string NoCalibrationDataReportedDeadKey11 = "]d1";
+    private const string NoCalibrationDataReportedDeadKey12 = "]d1";
+    private const string NoCalibrationDataReportedDeadKey13 = "]d1";
+    private const string NoCalibrationDataReportedDeadKey14 = "]d1";
+    private const string NoCalibrationDataReportedDeadKey15 = "]d1";
+
     private const string UnrecognisedDataD1 = "]d2  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 \x000D";
     private const string UnrecognisedDataD2 = "]d27 8 9 : ; < = > ? A B C D E F G H I J K L \x000D";
     private const string UnrecognisedDataD3 = "]d2M N O P Q R S T U V W X Y Z _ a b c d e f \x000D";
@@ -1834,8 +1833,7 @@ public class KeyboardCalibratorTestsInformation
                                 NoCalibrationDataReportedD3,
                                 NoCalibrationDataReportedD4,
                                 NoCalibrationDataReportedD5,
-                                NoCalibrationDataReportedD6,
-                                NoCalibrationDataReportedD7
+                                NoCalibrationDataReportedD6
                             },
                             new Dictionary<string, IList<string>>
                             {
@@ -1847,8 +1845,7 @@ public class KeyboardCalibratorTestsInformation
                                         NoCalibrationDataReportedDeadKey12,
                                         NoCalibrationDataReportedDeadKey13,
                                         NoCalibrationDataReportedDeadKey14,
-                                        NoCalibrationDataReportedDeadKey15,
-                                        NoCalibrationDataReportedDeadKey16
+                                        NoCalibrationDataReportedDeadKey15
                                     }
                                 }
                             }

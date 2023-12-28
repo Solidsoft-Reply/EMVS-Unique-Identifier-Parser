@@ -137,7 +137,7 @@ public class PackIdentifier : IPackIdentifier
                         string.Format(
                             CultureInfo.CurrentCulture,
                             Resources.Packs_Error_001,
-                            multipleProductCodes ? " unique" : string.Empty),
+                            multipleProductCodes ? Resources.SubstituteUnique : string.Empty),
                         Scheme == Scheme.Gs1 ? "01" : GetIfaProductCodeElementId(),
                         Scheme == Scheme.Gs1 ? "GTIN" : GetIfaProductCodeElementTitle(),
                         0));
@@ -161,7 +161,7 @@ public class PackIdentifier : IPackIdentifier
                         string.Format(
                             CultureInfo.CurrentCulture,
                             Resources.Packs_Error_002,
-                            multipleBatchIdentifiers ? " unique" : string.Empty),
+                            multipleBatchIdentifiers ? Resources.SubstituteUnique : string.Empty),
                         Scheme == Scheme.Gs1 ? "10" : GetIfaBatchElementId(),
                         Scheme == Scheme.Gs1 ? "BATCH/LOT" : GetIfaBatchElementTitle(),
                         0));
@@ -182,7 +182,7 @@ public class PackIdentifier : IPackIdentifier
                         string.Format(
                             CultureInfo.CurrentCulture,
                             Resources.Packs_Error_003,
-                            multipleExpiryDate ? " unique" : "n"),
+                            multipleExpiryDate ? Resources.SubstituteUnique : "n"),
                         Scheme == Scheme.Gs1 ? "17" : GetIfaExpiryElementId(),
                         Scheme == Scheme.Gs1 ? "USE BY OR EXPIRY" : GetIfaExpiryElementTitle(),
                         0));
@@ -207,7 +207,7 @@ public class PackIdentifier : IPackIdentifier
                     string.Format(
                         CultureInfo.CurrentCulture,
                         Resources.Packs_Error_004,
-                        multipleSerialNumber ? " unique" : string.Empty),
+                        multipleSerialNumber ? Resources.SubstituteUnique : string.Empty),
                     Scheme == Scheme.Gs1 ? "21" : GetIfaSerialElementId(),
                     Scheme == Scheme.Gs1 ? "SERIAL" : GetIfaSerialElementTitle(),
                     0));

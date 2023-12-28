@@ -39,6 +39,7 @@ using Parsers.EmvsUniqueIdentifier;
 using ConsoleMvc;
 using System.Threading;
 using static System.Console;
+using System.Globalization;
 
 /// <summary>
 /// Controls calibration mode.
@@ -166,6 +167,8 @@ public class Calibrate : IController
 #if STATELESS_MODEL
         _parser = new StatelessParser();
 #else
+        ////Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr-FR");
+        //Thread.CurrentThread.CurrentUICulture = new CultureInfo("fr-FR");
         _parser = new Parser();
 #endif
 
@@ -440,14 +443,14 @@ public class Calibrate : IController
 #if SMALL_BARCODES
             _currentCalibrationToken = _parser.Calibrator.NextCalibrationToken(_currentCalibrationToken, 18F, DataMatrixSize.Dm24X24);
 #else
-            this.currentCalibrationToken = _parser.Calibrator.NextCalibrationToken(this.currentCalibrationToken, 18F);
+            _currentCalibrationToken = _parser.Calibrator.NextCalibrationToken(this.currentCalibrationToken, 18F);
 #endif
             _calibrationView.SetValue("CurrentCalibrationToken", _currentCalibrationToken);
 #else
 #if SMALL_BARCODES
             _calibrationTokens = _parser.Calibrator.CalibrationTokens(18F, DataMatrixSize.Dm24X24).GetEnumerator();
 #else
-            this.calibrationTokens = _parser.Calibrator.CalibrationTokens(18F).GetEnumerator();
+            _calibrationTokens = _parser.Calibrator.CalibrationTokens(18F).GetEnumerator();
 #endif
 
             _calibrationView.SetValue("CalibrationTokens", _calibrationTokens);

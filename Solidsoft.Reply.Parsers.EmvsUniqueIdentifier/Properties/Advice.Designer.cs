@@ -22,7 +22,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Advice {
+    public class Advice {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties.Advice", typeof(Advice).Assembly);
@@ -51,7 +51,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string Advice_100 {
+        public static string Advice_100 {
             get {
                 return ResourceManager.GetString("Advice_100", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to You may need to enter data manually into your verification software to verify PPN unique identifiers..
         /// </summary>
-        internal static string Advice_105 {
+        public static string Advice_105 {
             get {
                 return ResourceManager.GetString("Advice_105", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If you experience problems when scanning German PPN barcodes, enter data manually into your verification software.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_110 {
+        public static string Advice_110 {
             get {
                 return ResourceManager.GetString("Advice_110", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter data manually into your verification software to verify German PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_115 {
+        public static string Advice_115 {
             get {
                 return ResourceManager.GetString("Advice_115", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Configure your barcode scanner to transmit AIM identifiers. If you have problems when transmitting AIM identifiers, revert to the current configuration..
         /// </summary>
-        internal static string Advice_200 {
+        public static string Advice_200 {
             get {
                 return ResourceManager.GetString("Advice_200", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to You may want to switch off Caps Lock and test again..
         /// </summary>
-        internal static string Advice_205 {
+        public static string Advice_205 {
             get {
                 return ResourceManager.GetString("Advice_205", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Check your barcode scanner, keyboard and computer configurations and reconfigure them if necessary.;;You may want to switch off Caps Lock and test again..
         /// </summary>
-        internal static string Advice_206 {
+        public static string Advice_206 {
             get {
                 return ResourceManager.GetString("Advice_206", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to You may want to switch Caps Lock off..
         /// </summary>
-        internal static string Advice_210 {
+        public static string Advice_210 {
             get {
                 return ResourceManager.GetString("Advice_210", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Configure your barcode scanner to transmit end-of-line sequences and test again. If you have problems when transmitting end-of-line sequences, revert to the current configuration..
         /// </summary>
-        internal static string Advice_215 {
+        public static string Advice_215 {
             get {
                 return ResourceManager.GetString("Advice_215", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If you have problems verifying medicine packs, configure your barcode scanner so that it does not transmit a prefix..
         /// </summary>
-        internal static string Advice_220 {
+        public static string Advice_220 {
             get {
                 return ResourceManager.GetString("Advice_220", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If you have problems verifying medicine packs, configure your barcode scanner so that it does not transmit any suffix..
         /// </summary>
-        internal static string Advice_225 {
+        public static string Advice_225 {
             get {
                 return ResourceManager.GetString("Advice_225", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_230 {
+        public static string Advice_230 {
             get {
                 return ResourceManager.GetString("Advice_230", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_231 {
+        public static string Advice_231 {
             get {
                 return ResourceManager.GetString("Advice_231", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Check that your barcode scanner is configured to transmit AIM identifiers..
         /// </summary>
-        internal static string Advice_232 {
+        public static string Advice_232 {
             get {
                 return ResourceManager.GetString("Advice_232", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad and transmit AIM identifiers..
         /// </summary>
-        internal static string Advice_235 {
+        public static string Advice_235 {
             get {
                 return ResourceManager.GetString("Advice_235", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If you experience problems when scanning German PPN barcodes, enter data manually into your verification software.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_240 {
+        public static string Advice_240 {
             get {
                 return ResourceManager.GetString("Advice_240", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter data manually into your verification software to verify PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_241 {
+        public static string Advice_241 {
             get {
                 return ResourceManager.GetString("Advice_241", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter data manually into your verification software to verify PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_245 {
+        public static string Advice_245 {
             get {
                 return ResourceManager.GetString("Advice_245", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If you expect to verify PPN barcodes, run the test again, this time including the German PPN compatibility test..
         /// </summary>
-        internal static string Advice_250 {
+        public static string Advice_250 {
             get {
                 return ResourceManager.GetString("Advice_250", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance..
         /// </summary>
-        internal static string Advice_255 {
+        public static string Advice_255 {
             get {
                 return ResourceManager.GetString("Advice_255", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance..
         /// </summary>
-        internal static string Advice_256 {
+        public static string Advice_256 {
             get {
                 return ResourceManager.GetString("Advice_256", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_260 {
+        public static string Advice_260 {
             get {
                 return ResourceManager.GetString("Advice_260", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_261 {
+        public static string Advice_261 {
             get {
                 return ResourceManager.GetString("Advice_261", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_265 {
+        public static string Advice_265 {
             get {
                 return ResourceManager.GetString("Advice_265", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_270 {
+        public static string Advice_270 {
             get {
                 return ResourceManager.GetString("Advice_270", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_271 {
+        public static string Advice_271 {
             get {
                 return ResourceManager.GetString("Advice_271", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_275 {
+        public static string Advice_275 {
             get {
                 return ResourceManager.GetString("Advice_275", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Try again, making sure you scan the correct barcode(s)..
         /// </summary>
-        internal static string Advice_300 {
+        public static string Advice_300 {
             get {
                 return ResourceManager.GetString("Advice_300", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Try again, making sure you scan the correct barcode..
         /// </summary>
-        internal static string Advice_301 {
+        public static string Advice_301 {
             get {
                 return ResourceManager.GetString("Advice_301", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Try again.;;Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_303 {
+        public static string Advice_303 {
             get {
                 return ResourceManager.GetString("Advice_303", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Try again, making sure you scan the correct barcode(s)..
         /// </summary>
-        internal static string Advice_304 {
+        public static string Advice_304 {
             get {
                 return ResourceManager.GetString("Advice_304", resourceCulture);
             }
@@ -342,7 +342,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Try again, making sure you scan the correct barcode.;;If you are asked to scan multiple barcodes, make sure you scan them in the correct order..
         /// </summary>
-        internal static string Advice_305 {
+        public static string Advice_305 {
             get {
                 return ResourceManager.GetString("Advice_305", resourceCulture);
             }
@@ -351,7 +351,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Try again..
         /// </summary>
-        internal static string Advice_306 {
+        public static string Advice_306 {
             get {
                 return ResourceManager.GetString("Advice_306", resourceCulture);
             }
@@ -360,7 +360,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If your verification software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_307 {
+        public static string Advice_307 {
             get {
                 return ResourceManager.GetString("Advice_307", resourceCulture);
             }
@@ -369,7 +369,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_308 {
+        public static string Advice_308 {
             get {
                 return ResourceManager.GetString("Advice_308", resourceCulture);
             }
@@ -378,7 +378,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If your verification software cannot compensate, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_309 {
+        public static string Advice_309 {
             get {
                 return ResourceManager.GetString("Advice_309", resourceCulture);
             }
@@ -387,7 +387,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_310 {
+        public static string Advice_310 {
             get {
                 return ResourceManager.GetString("Advice_310", resourceCulture);
             }
@@ -396,7 +396,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If your verification software cannot compensate, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_311 {
+        public static string Advice_311 {
             get {
                 return ResourceManager.GetString("Advice_311", resourceCulture);
             }
@@ -405,7 +405,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_312 {
+        public static string Advice_312 {
             get {
                 return ResourceManager.GetString("Advice_312", resourceCulture);
             }
@@ -414,7 +414,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_315 {
+        public static string Advice_315 {
             get {
                 return ResourceManager.GetString("Advice_315", resourceCulture);
             }
@@ -423,7 +423,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_316 {
+        public static string Advice_316 {
             get {
                 return ResourceManager.GetString("Advice_316", resourceCulture);
             }
@@ -432,7 +432,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If your verification software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_320 {
+        public static string Advice_320 {
             get {
                 return ResourceManager.GetString("Advice_320", resourceCulture);
             }
@@ -441,7 +441,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Switch Caps Lock off and test again.;;If you must keep Caps Lock switched on while verifying unique identifiers, you may be able to configure your barcode scanner to compensate..
         /// </summary>
-        internal static string Advice_325 {
+        public static string Advice_325 {
             get {
                 return ResourceManager.GetString("Advice_325", resourceCulture);
             }
@@ -450,7 +450,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Switch Caps Lock off and test again..
         /// </summary>
-        internal static string Advice_326 {
+        public static string Advice_326 {
             get {
                 return ResourceManager.GetString("Advice_326", resourceCulture);
             }
@@ -459,7 +459,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again..
         /// </summary>
-        internal static string Advice_327 {
+        public static string Advice_327 {
             get {
                 return ResourceManager.GetString("Advice_327", resourceCulture);
             }
@@ -468,7 +468,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again..
         /// </summary>
-        internal static string Advice_328 {
+        public static string Advice_328 {
             get {
                 return ResourceManager.GetString("Advice_328", resourceCulture);
             }
@@ -477,7 +477,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Check your scanner, keyboard and computer configuration and reconfigure them if necessary. .
         /// </summary>
-        internal static string Advice_330 {
+        public static string Advice_330 {
             get {
                 return ResourceManager.GetString("Advice_330", resourceCulture);
             }
@@ -486,7 +486,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary..
         /// </summary>
-        internal static string Advice_331 {
+        public static string Advice_331 {
             get {
                 return ResourceManager.GetString("Advice_331", resourceCulture);
             }
@@ -495,7 +495,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary..
         /// </summary>
-        internal static string Advice_332 {
+        public static string Advice_332 {
             get {
                 return ResourceManager.GetString("Advice_332", resourceCulture);
             }
@@ -504,7 +504,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to If possible, configure your computer to use a different keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_335 {
+        public static string Advice_335 {
             get {
                 return ResourceManager.GetString("Advice_335", resourceCulture);
             }
@@ -513,7 +513,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter data manually into your verification software to verify PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_350 {
+        public static string Advice_350 {
             get {
                 return ResourceManager.GetString("Advice_350", resourceCulture);
             }
@@ -522,7 +522,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter data manually into your verification software to verify PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_351 {
+        public static string Advice_351 {
             get {
                 return ResourceManager.GetString("Advice_351", resourceCulture);
             }
@@ -531,7 +531,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter data manually into your verification software to verify PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_355 {
+        public static string Advice_355 {
             get {
                 return ResourceManager.GetString("Advice_355", resourceCulture);
             }
@@ -540,7 +540,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system reads unique identifiers reliably..
         /// </summary>
-        internal static string Condition_100 {
+        public static string Condition_100 {
             get {
                 return ResourceManager.GetString("Condition_100", resourceCulture);
             }
@@ -549,7 +549,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system reads unique identifiers reliably..
         /// </summary>
-        internal static string Condition_105 {
+        public static string Condition_105 {
             get {
                 return ResourceManager.GetString("Condition_105", resourceCulture);
             }
@@ -558,7 +558,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system reads unique identifiers reliably..
         /// </summary>
-        internal static string Condition_110 {
+        public static string Condition_110 {
             get {
                 return ResourceManager.GetString("Condition_110", resourceCulture);
             }
@@ -567,7 +567,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system reads most unique identifiers reliably..
         /// </summary>
-        internal static string Condition_115 {
+        public static string Condition_115 {
             get {
                 return ResourceManager.GetString("Condition_115", resourceCulture);
             }
@@ -576,7 +576,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner does not transmit AIM identifiers..
         /// </summary>
-        internal static string Condition_200 {
+        public static string Condition_200 {
             get {
                 return ResourceManager.GetString("Condition_200", resourceCulture);
             }
@@ -585,7 +585,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Caps Lock is on, but the letter casing is reported correctly..
         /// </summary>
-        internal static string Condition_205 {
+        public static string Condition_205 {
             get {
                 return ResourceManager.GetString("Condition_205", resourceCulture);
             }
@@ -594,7 +594,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Caps Lock is on, but the letter casing is preserved..
         /// </summary>
-        internal static string Condition_206 {
+        public static string Condition_206 {
             get {
                 return ResourceManager.GetString("Condition_206", resourceCulture);
             }
@@ -603,7 +603,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Caps Lock is switched on..
         /// </summary>
-        internal static string Condition_210 {
+        public static string Condition_210 {
             get {
                 return ResourceManager.GetString("Condition_210", resourceCulture);
             }
@@ -612,7 +612,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner does not transmit an end-of-line sequence..
         /// </summary>
-        internal static string Condition_215 {
+        public static string Condition_215 {
             get {
                 return ResourceManager.GetString("Condition_215", resourceCulture);
             }
@@ -621,7 +621,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner transmits a prefix..
         /// </summary>
-        internal static string Condition_220 {
+        public static string Condition_220 {
             get {
                 return ResourceManager.GetString("Condition_220", resourceCulture);
             }
@@ -630,7 +630,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner transmits a suffix..
         /// </summary>
-        internal static string Condition_225 {
+        public static string Condition_225 {
             get {
                 return ResourceManager.GetString("Condition_225", resourceCulture);
             }
@@ -639,7 +639,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system may not read AIM identifier characters..
         /// </summary>
-        internal static string Condition_230 {
+        public static string Condition_230 {
             get {
                 return ResourceManager.GetString("Condition_230", resourceCulture);
             }
@@ -648,7 +648,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read AIM identifier characters..
         /// </summary>
-        internal static string Condition_231 {
+        public static string Condition_231 {
             get {
                 return ResourceManager.GetString("Condition_231", resourceCulture);
             }
@@ -657,7 +657,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner may not transmit AIM identifiers..
         /// </summary>
-        internal static string Condition_232 {
+        public static string Condition_232 {
             get {
                 return ResourceManager.GetString("Condition_232", resourceCulture);
             }
@@ -666,7 +666,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read AIM identifier characters reliably..
         /// </summary>
-        internal static string Condition_235 {
+        public static string Condition_235 {
             get {
                 return ResourceManager.GetString("Condition_235", resourceCulture);
             }
@@ -675,7 +675,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read German PPN barcode characters reliably..
         /// </summary>
-        internal static string Condition_240 {
+        public static string Condition_240 {
             get {
                 return ResourceManager.GetString("Condition_240", resourceCulture);
             }
@@ -684,7 +684,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read German PPN barcode characters..
         /// </summary>
-        internal static string Condition_241 {
+        public static string Condition_241 {
             get {
                 return ResourceManager.GetString("Condition_241", resourceCulture);
             }
@@ -693,7 +693,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read German PPN barcode characters..
         /// </summary>
-        internal static string Condition_245 {
+        public static string Condition_245 {
             get {
                 return ResourceManager.GetString("Condition_245", resourceCulture);
             }
@@ -702,7 +702,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to You did not test compatibility for German PPN barcodes..
         /// </summary>
-        internal static string Condition_250 {
+        public static string Condition_250 {
             get {
                 return ResourceManager.GetString("Condition_250", resourceCulture);
             }
@@ -711,7 +711,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Data input performance is slower than expected..
         /// </summary>
-        internal static string Condition_255 {
+        public static string Condition_255 {
             get {
                 return ResourceManager.GetString("Condition_255", resourceCulture);
             }
@@ -720,7 +720,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Data input performance is very poor..
         /// </summary>
-        internal static string Condition_256 {
+        public static string Condition_256 {
             get {
                 return ResourceManager.GetString("Condition_256", resourceCulture);
             }
@@ -729,7 +729,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read additional characters reliably..
         /// </summary>
-        internal static string Condition_260 {
+        public static string Condition_260 {
             get {
                 return ResourceManager.GetString("Condition_260", resourceCulture);
             }
@@ -738,7 +738,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read additional characters..
         /// </summary>
-        internal static string Condition_261 {
+        public static string Condition_261 {
             get {
                 return ResourceManager.GetString("Condition_261", resourceCulture);
             }
@@ -747,7 +747,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system may not read additional data reliably..
         /// </summary>
-        internal static string Condition_265 {
+        public static string Condition_265 {
             get {
                 return ResourceManager.GetString("Condition_265", resourceCulture);
             }
@@ -756,7 +756,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain EDI data..
         /// </summary>
-        internal static string Condition_270 {
+        public static string Condition_270 {
             get {
                 return ResourceManager.GetString("Condition_270", resourceCulture);
             }
@@ -765,7 +765,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain EDI data..
         /// </summary>
-        internal static string Condition_271 {
+        public static string Condition_271 {
             get {
                 return ResourceManager.GetString("Condition_271", resourceCulture);
             }
@@ -774,7 +774,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain EDI data..
         /// </summary>
-        internal static string Condition_275 {
+        public static string Condition_275 {
             get {
                 return ResourceManager.GetString("Condition_275", resourceCulture);
             }
@@ -783,7 +783,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to The test failed..
         /// </summary>
-        internal static string Condition_300 {
+        public static string Condition_300 {
             get {
                 return ResourceManager.GetString("Condition_300", resourceCulture);
             }
@@ -792,7 +792,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to No data was reported for the barcode..
         /// </summary>
-        internal static string Condition_301 {
+        public static string Condition_301 {
             get {
                 return ResourceManager.GetString("Condition_301", resourceCulture);
             }
@@ -801,7 +801,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Some data was not reported when you scanned the barcode..
         /// </summary>
-        internal static string Condition_303 {
+        public static string Condition_303 {
             get {
                 return ResourceManager.GetString("Condition_303", resourceCulture);
             }
@@ -810,7 +810,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to No data was reported for one or more barcodes..
         /// </summary>
-        internal static string Condition_304 {
+        public static string Condition_304 {
             get {
                 return ResourceManager.GetString("Condition_304", resourceCulture);
             }
@@ -819,7 +819,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to You scanned a barcode out of sequence..
         /// </summary>
-        internal static string Condition_305 {
+        public static string Condition_305 {
             get {
                 return ResourceManager.GetString("Condition_305", resourceCulture);
             }
@@ -828,7 +828,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Some data was not reported when you scanned one or more barcodes..
         /// </summary>
-        internal static string Condition_306 {
+        public static string Condition_306 {
             get {
                 return ResourceManager.GetString("Condition_306", resourceCulture);
             }
@@ -837,7 +837,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner and computer have different keyboard layouts..
         /// </summary>
-        internal static string Condition_307 {
+        public static string Condition_307 {
             get {
                 return ResourceManager.GetString("Condition_307", resourceCulture);
             }
@@ -846,7 +846,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner and computer have different keyboard layouts..
         /// </summary>
-        internal static string Condition_308 {
+        public static string Condition_308 {
             get {
                 return ResourceManager.GetString("Condition_308", resourceCulture);
             }
@@ -855,7 +855,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Hidden characters in barcodes are not reported correctly..
         /// </summary>
-        internal static string Condition_309 {
+        public static string Condition_309 {
             get {
                 return ResourceManager.GetString("Condition_309", resourceCulture);
             }
@@ -864,7 +864,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Hidden characters in barcodes are not reported correctly..
         /// </summary>
-        internal static string Condition_310 {
+        public static string Condition_310 {
             get {
                 return ResourceManager.GetString("Condition_310", resourceCulture);
             }
@@ -873,7 +873,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Hidden characters in barcodes are not reported correctly..
         /// </summary>
-        internal static string Condition_311 {
+        public static string Condition_311 {
             get {
                 return ResourceManager.GetString("Condition_311", resourceCulture);
             }
@@ -882,7 +882,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Hidden characters in barcodes are not reported correctly..
         /// </summary>
-        internal static string Condition_312 {
+        public static string Condition_312 {
             get {
                 return ResourceManager.GetString("Condition_312", resourceCulture);
             }
@@ -891,7 +891,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner and computer have different keyboard layouts..
         /// </summary>
-        internal static string Condition_315 {
+        public static string Condition_315 {
             get {
                 return ResourceManager.GetString("Condition_315", resourceCulture);
             }
@@ -900,7 +900,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Hidden characters in barcodes are not reported correctly..
         /// </summary>
-        internal static string Condition_316 {
+        public static string Condition_316 {
             get {
                 return ResourceManager.GetString("Condition_316", resourceCulture);
             }
@@ -909,7 +909,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read unique identifier characters reliably..
         /// </summary>
-        internal static string Condition_320 {
+        public static string Condition_320 {
             get {
                 return ResourceManager.GetString("Condition_320", resourceCulture);
             }
@@ -918,7 +918,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Caps Lock is switched on..
         /// </summary>
-        internal static string Condition_325 {
+        public static string Condition_325 {
             get {
                 return ResourceManager.GetString("Condition_325", resourceCulture);
             }
@@ -927,7 +927,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Caps Lock is switched on..
         /// </summary>
-        internal static string Condition_326 {
+        public static string Condition_326 {
             get {
                 return ResourceManager.GetString("Condition_326", resourceCulture);
             }
@@ -936,7 +936,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner may be configured to convert characters to upper case..
         /// </summary>
-        internal static string Condition_327 {
+        public static string Condition_327 {
             get {
                 return ResourceManager.GetString("Condition_327", resourceCulture);
             }
@@ -945,7 +945,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner may be configured to convert characters to lower case..
         /// </summary>
-        internal static string Condition_328 {
+        public static string Condition_328 {
             get {
                 return ResourceManager.GetString("Condition_328", resourceCulture);
             }
@@ -954,7 +954,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner may be configured to simulate Caps Lock..
         /// </summary>
-        internal static string Condition_330 {
+        public static string Condition_330 {
             get {
                 return ResourceManager.GetString("Condition_330", resourceCulture);
             }
@@ -963,7 +963,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner may be configured to convert characters to upper case..
         /// </summary>
-        internal static string Condition_331 {
+        public static string Condition_331 {
             get {
                 return ResourceManager.GetString("Condition_331", resourceCulture);
             }
@@ -972,7 +972,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner may be configured to convert characters to lower case..
         /// </summary>
-        internal static string Condition_332 {
+        public static string Condition_332 {
             get {
                 return ResourceManager.GetString("Condition_332", resourceCulture);
             }
@@ -981,7 +981,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your keyboard layout supports {0} characters and cannot read unique identifiers reliably..
         /// </summary>
-        internal static string Condition_335 {
+        public static string Condition_335 {
             get {
                 return ResourceManager.GetString("Condition_335", resourceCulture);
             }
@@ -990,7 +990,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read PPN barcode characters reliably..
         /// </summary>
-        internal static string Condition_350 {
+        public static string Condition_350 {
             get {
                 return ResourceManager.GetString("Condition_350", resourceCulture);
             }
@@ -999,7 +999,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read PPN barcode characters..
         /// </summary>
-        internal static string Condition_351 {
+        public static string Condition_351 {
             get {
                 return ResourceManager.GetString("Condition_351", resourceCulture);
             }
@@ -1008,7 +1008,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read PPN barcode characters..
         /// </summary>
-        internal static string Condition_355 {
+        public static string Condition_355 {
             get {
                 return ResourceManager.GetString("Condition_355", resourceCulture);
             }
@@ -1017,7 +1017,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to However, you did not test compatibility for German PPN barcodes. Your system may not be able to read German PPN barcodes reliably. .
         /// </summary>
-        internal static string Description_105 {
+        public static string Description_105 {
             get {
                 return ResourceManager.GetString("Description_105", resourceCulture);
             }
@@ -1026,7 +1026,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to However, your verification software may not read German PPN barcodes correctly..
         /// </summary>
-        internal static string Description_110 {
+        public static string Description_110 {
             get {
                 return ResourceManager.GetString("Description_110", resourceCulture);
             }
@@ -1035,7 +1035,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to However, it cannot read German PPN barcodes reliably..
         /// </summary>
-        internal static string Description_115 {
+        public static string Description_115 {
             get {
                 return ResourceManager.GetString("Description_115", resourceCulture);
             }
@@ -1044,7 +1044,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to AIM identifiers represent the barcode type. Your verification software may use them to eliminate unnecessary alerts..
         /// </summary>
-        internal static string Description_200 {
+        public static string Description_200 {
             get {
                 return ResourceManager.GetString("Description_200", resourceCulture);
             }
@@ -1053,7 +1053,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner is probably configured to compensate automatically for Caps Lock..
         /// </summary>
-        internal static string Description_205 {
+        public static string Description_205 {
             get {
                 return ResourceManager.GetString("Description_205", resourceCulture);
             }
@@ -1062,7 +1062,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your Caps Lock key may be disabled or remapped. .
         /// </summary>
-        internal static string Description_206 {
+        public static string Description_206 {
             get {
                 return ResourceManager.GetString("Description_206", resourceCulture);
             }
@@ -1071,7 +1071,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to However, your computer keyboard layout is for a script that does not support upper- and lower-case letters..
         /// </summary>
-        internal static string Description_210 {
+        public static string Description_210 {
             get {
                 return ResourceManager.GetString("Description_210", resourceCulture);
             }
@@ -1080,7 +1080,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to This may slow your scanning performance. However, your verification software may not support end-of-line sequences.
         /// </summary>
-        internal static string Description_215 {
+        public static string Description_215 {
             get {
                 return ResourceManager.GetString("Description_215", resourceCulture);
             }
@@ -1089,7 +1089,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your verification software may not recognise the prefix. .
         /// </summary>
-        internal static string Description_220 {
+        public static string Description_220 {
             get {
                 return ResourceManager.GetString("Description_220", resourceCulture);
             }
@@ -1098,7 +1098,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your verification software may not recognise the suffix. .
         /// </summary>
-        internal static string Description_225 {
+        public static string Description_225 {
             get {
                 return ResourceManager.GetString("Description_225", resourceCulture);
             }
@@ -1107,7 +1107,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to AIM identifiers represent the barcode type. Your verification software may use them to eliminate unnecessary alerts. However, the software must implement character mapping to read AIM identifiers reliably..
         /// </summary>
-        internal static string Description_230 {
+        public static string Description_230 {
             get {
                 return ResourceManager.GetString("Description_230", resourceCulture);
             }
@@ -1116,7 +1116,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to AIM identifiers represent the barcode type. Your verification software may use them to eliminate unnecessary alerts..
         /// </summary>
-        internal static string Description_231 {
+        public static string Description_231 {
             get {
                 return ResourceManager.GetString("Description_231", resourceCulture);
             }
@@ -1125,7 +1125,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your barcode scanner may transmit AIM identifiers, but this is not certain.  AIM identifiers represent the barcode type. Your verification software may use them to eliminate unnecessary alerts..
         /// </summary>
-        internal static string Description_232 {
+        public static string Description_232 {
             get {
                 return ResourceManager.GetString("Description_232", resourceCulture);
             }
@@ -1134,7 +1134,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to AIM identifiers represent the barcode type. Your verification software may use them to eliminate unnecessary alerts..
         /// </summary>
-        internal static string Description_235 {
+        public static string Description_235 {
             get {
                 return ResourceManager.GetString("Description_235", resourceCulture);
             }
@@ -1143,7 +1143,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your software must implement character mapping to read PPN barcodes reliably..
         /// </summary>
-        internal static string Description_240 {
+        public static string Description_240 {
             get {
                 return ResourceManager.GetString("Description_240", resourceCulture);
             }
@@ -1152,7 +1152,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Some verification software may be able to compensate for this by analysing key codes rather than characters..
         /// </summary>
-        internal static string Description_245 {
+        public static string Description_245 {
             get {
                 return ResourceManager.GetString("Description_245", resourceCulture);
             }
@@ -1161,7 +1161,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service..
         /// </summary>
-        internal static string Description_255 {
+        public static string Description_255 {
             get {
                 return ResourceManager.GetString("Description_255", resourceCulture);
             }
@@ -1170,7 +1170,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service..
         /// </summary>
-        internal static string Description_256 {
+        public static string Description_256 {
             get {
                 return ResourceManager.GetString("Description_256", resourceCulture);
             }
@@ -1179,7 +1179,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Some barcodes may contain additional characters that never appear in unique identifiers. Your software must implement character mapping to read these barcodes reliably..
         /// </summary>
-        internal static string Description_260 {
+        public static string Description_260 {
             get {
                 return ResourceManager.GetString("Description_260", resourceCulture);
             }
@@ -1188,7 +1188,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Some barcodes may contain additional characters that never appear in unique identifiers..
         /// </summary>
-        internal static string Description_261 {
+        public static string Description_261 {
             get {
                 return ResourceManager.GetString("Description_261", resourceCulture);
             }
@@ -1197,7 +1197,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Some barcodes may contain additional characters that never appear in unique identifiers..
         /// </summary>
-        internal static string Description_265 {
+        public static string Description_265 {
             get {
                 return ResourceManager.GetString("Description_265", resourceCulture);
             }
@@ -1206,7 +1206,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably..
         /// </summary>
-        internal static string Description_270 {
+        public static string Description_270 {
             get {
                 return ResourceManager.GetString("Description_270", resourceCulture);
             }
@@ -1215,7 +1215,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Some barcodes may contain EDI data..
         /// </summary>
-        internal static string Description_271 {
+        public static string Description_271 {
             get {
                 return ResourceManager.GetString("Description_271", resourceCulture);
             }
@@ -1224,7 +1224,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Some barcodes may contain EDI data..
         /// </summary>
-        internal static string Description_275 {
+        public static string Description_275 {
             get {
                 return ResourceManager.GetString("Description_275", resourceCulture);
             }
@@ -1233,7 +1233,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred..
         /// </summary>
-        internal static string Description_300 {
+        public static string Description_300 {
             get {
                 return ResourceManager.GetString("Description_300", resourceCulture);
             }
@@ -1242,7 +1242,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts may not correspond. You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred..
         /// </summary>
-        internal static string Description_303 {
+        public static string Description_303 {
             get {
                 return ResourceManager.GetString("Description_303", resourceCulture);
             }
@@ -1251,7 +1251,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred..
         /// </summary>
-        internal static string Description_306 {
+        public static string Description_306 {
             get {
                 return ResourceManager.GetString("Description_306", resourceCulture);
             }
@@ -1260,7 +1260,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your verification software must implement character mapping to read unique identifiers reliably..
         /// </summary>
-        internal static string Description_307 {
+        public static string Description_307 {
             get {
                 return ResourceManager.GetString("Description_307", resourceCulture);
             }
@@ -1269,7 +1269,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your verification software may be able to compensate..
         /// </summary>
-        internal static string Description_309 {
+        public static string Description_309 {
             get {
                 return ResourceManager.GetString("Description_309", resourceCulture);
             }
@@ -1278,7 +1278,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your verification software may be able to compensate..
         /// </summary>
-        internal static string Description_311 {
+        public static string Description_311 {
             get {
                 return ResourceManager.GetString("Description_311", resourceCulture);
             }
@@ -1287,7 +1287,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your verification software may be able to compensate. However, your system cannot read German PPN barcode characters correctly. Some verification software may be able to compensate for this by analysing key codes rather than characters..
         /// </summary>
-        internal static string Description_315 {
+        public static string Description_315 {
             get {
                 return ResourceManager.GetString("Description_315", resourceCulture);
             }
@@ -1296,7 +1296,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your verification software may be able to compensate. However, your system cannot read German PPN barcode characters correctly. Some verification software may be able to compensate for this by analysing key codes rather than characters..
         /// </summary>
-        internal static string Description_316 {
+        public static string Description_316 {
             get {
                 return ResourceManager.GetString("Description_316", resourceCulture);
             }
@@ -1305,7 +1305,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Some verification software may be able to compensate for this by analysing key codes rather than characters..
         /// </summary>
-        internal static string Description_320 {
+        public static string Description_320 {
             get {
                 return ResourceManager.GetString("Description_320", resourceCulture);
             }
@@ -1314,7 +1314,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to When Caps Lock is on, the default behaviour is to report all characters in upper-case..
         /// </summary>
-        internal static string Description_326 {
+        public static string Description_326 {
             get {
                 return ResourceManager.GetString("Description_326", resourceCulture);
             }
@@ -1323,7 +1323,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read unique identifier characters reliably..
         /// </summary>
-        internal static string Description_327 {
+        public static string Description_327 {
             get {
                 return ResourceManager.GetString("Description_327", resourceCulture);
             }
@@ -1332,7 +1332,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read unique identifier characters reliably..
         /// </summary>
-        internal static string Description_328 {
+        public static string Description_328 {
             get {
                 return ResourceManager.GetString("Description_328", resourceCulture);
             }
@@ -1341,7 +1341,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read unique identifier characters reliably..
         /// </summary>
-        internal static string Description_331 {
+        public static string Description_331 {
             get {
                 return ResourceManager.GetString("Description_331", resourceCulture);
             }
@@ -1350,7 +1350,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your system cannot read unique identifier characters reliably..
         /// </summary>
-        internal static string Description_332 {
+        public static string Description_332 {
             get {
                 return ResourceManager.GetString("Description_332", resourceCulture);
             }
@@ -1359,7 +1359,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Your software must implement character mapping to read PPN barcodes reliably..
         /// </summary>
-        internal static string Description_350 {
+        public static string Description_350 {
             get {
                 return ResourceManager.GetString("Description_350", resourceCulture);
             }
@@ -1368,7 +1368,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Some verification software may be able to compensate for this by analysing key codes rather than characters..
         /// </summary>
-        internal static string Description_355 {
+        public static string Description_355 {
             get {
                 return ResourceManager.GetString("Description_355", resourceCulture);
             }

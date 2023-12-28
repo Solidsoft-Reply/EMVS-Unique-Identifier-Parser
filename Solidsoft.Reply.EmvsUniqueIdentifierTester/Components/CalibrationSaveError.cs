@@ -47,7 +47,7 @@ internal class CalibrationSaveError : IComponent {
         WriteLine();
         WriteLine();
         var saveErrorMessage = string.IsNullOrWhiteSpace(SaveErrorMessage) ? "." : ": " + SaveErrorMessage;
-        WriteLine($@" The calibration was not saved{saveErrorMessage}");
+        WriteLine(Resources.SaveError, saveErrorMessage);
         ForegroundColor = ConsoleColor.Cyan;
         WriteLine();
         WriteLine(Resources.DisplayCalibrationSaveError_1);

@@ -38,7 +38,7 @@ internal class CalibrationOptions : IComponent {
     /// </summary>
     public void Render() {
         ForegroundColor = ConsoleColor.DarkBlue;
-        WriteLine(@" OPTIONS" + new string(' ', BufferWidth - 9));
+        WriteLine(@$" {Resources.Options}" + new string(' ', BufferWidth - 9));
         ForegroundColor = ConsoleColor.DarkRed;
         WriteLine(Resources.DisplayCalibrationOptions_1);
         WriteLine(Resources.DisplayCalibrationOptions_2);

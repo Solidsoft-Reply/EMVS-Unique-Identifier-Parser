@@ -41,6 +41,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <EmbeddedResource Remove="Properties\_archive\Advice.de.resx" />
+	  <EmbeddedResource Remove="Properties\_archive\Advice.fr.resx" />
+	  <EmbeddedResource Remove="Properties\_archive\Resources.de.resx" />
+	  <EmbeddedResource Remove="Properties\_archive\Resources.fr.resx" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <ProjectReference Include="..\..\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration.csproj" />
 	  <ProjectReference Include="..\..\Solidsoft.Reply.Parsers.HighCapacityAidc\Solidsoft.Reply.Parsers.HighCapacityAidc\Solidsoft.Reply.Parsers.HighCapacityAidc.csproj" />
 	</ItemGroup>
@@ -57,6 +64,22 @@
 	  </Compile>
 	</ItemGroup>
 	<ItemGroup>
+		<EmbeddedResource Update="Properties\Advice.de.resx">
+		  <DependentUpon>Advice.resx</DependentUpon>
+		  <Generator></Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Advice.fr.resx">
+		  <DependentUpon>Advice.resx</DependentUpon>
+		  <Generator></Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Resources.de.resx">
+		  <DependentUpon>Resources.resx</DependentUpon>
+		  <Generator></Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Resources.fr.resx">
+		  <DependentUpon>Resources.resx</DependentUpon>
+		  <Generator></Generator>
+		</EmbeddedResource>
 		<EmbeddedResource Update="Properties\Resources.resx">
 			<Generator>ResXFileCodeGenerator</Generator>
 			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -64,7 +87,7 @@
 	</ItemGroup>
 	<ItemGroup>
 		<EmbeddedResource Update="Properties\Advice.resx">
-			<Generator>ResXFileCodeGenerator</Generator>
+			<Generator>PublicResXFileCodeGenerator</Generator>
 			<LastGenOutput>Advice.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
 	</ItemGroup>
@@ -82,5 +105,9 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Properties\_archive\" />
 	</ItemGroup>
 </Project>

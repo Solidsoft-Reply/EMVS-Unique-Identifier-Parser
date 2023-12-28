@@ -29,6 +29,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using BarcodeScanner.Calibration;
+using System.Resources;
 
 
 /// <summary>
@@ -43,17 +44,18 @@ public sealed class AdviceItem : IEquatable<AdviceItem>, IAdviceItem<AdviceType>
     /// <param name="substitutions">Substituted text items for formatted strings.</param>
     public AdviceItem(AdviceType adviceType, params object[] substitutions)
     {
+
         Condition = adviceType switch
         {
             AdviceType.NoSupportForCase => string.Format(
                 CultureInfo.InvariantCulture, 
                 Properties.Advice.ResourceManager.GetString(
                     $"Condition_{(int)adviceType}",
-                    CultureInfo.CurrentCulture) ?? string.Empty,
+                    Thread.CurrentThread.CurrentUICulture) ?? string.Empty,
                 substitutions),
             _ => Properties.Advice.ResourceManager.GetString(
                 $"Condition_{(int)adviceType}",
-                CultureInfo.CurrentCulture) ?? string.Empty
+                Thread.CurrentThread.CurrentUICulture) ?? string.Empty
         };
 
         Description = adviceType switch
@@ -62,16 +64,16 @@ public sealed class AdviceItem : IEquatable<AdviceItem>, IAdviceItem<AdviceType>
                 CultureInfo.InvariantCulture,
                 Properties.Advice.ResourceManager.GetString(
                     $"Description_{(int)adviceType}",
-                    CultureInfo.CurrentCulture) ?? string.Empty,
+                    Thread.CurrentThread.CurrentUICulture) ?? string.Empty,
                 substitutions),
             _ => Properties.Advice.ResourceManager.GetString(
                 $"Description_{(int)adviceType}",
-                CultureInfo.CurrentCulture) ?? string.Empty
+                Thread.CurrentThread.CurrentUICulture) ?? string.Empty
         };
 
         Advice = Properties.Advice.ResourceManager.GetString(
                 $"Advice_{(int)adviceType}",
-                CultureInfo.CurrentCulture)
+                Thread.CurrentThread.CurrentUICulture)
                 ?.Split(";;", StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
                 .ToList() ?? new List<string>();
 

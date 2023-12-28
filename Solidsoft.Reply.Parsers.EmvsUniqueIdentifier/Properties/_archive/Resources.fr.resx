@@ -117,115 +117,112 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Parser_Error_014" xml:space="preserve">
-    <value>No batch identifier (lot).</value>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Élément de conseil invalide.</value>
     <comment>Error</comment>
   </data>
   <data name="Packs_Error_001" xml:space="preserve">
-    <value>The barcode does not contain a{0} product code.</value>
+    <value>Le code-barres ne contient pas de code produit {0}.</value>
     <comment>Error</comment>
   </data>
   <data name="Packs_Error_002" xml:space="preserve">
-    <value>The barcode does not contain a{0} batch identifier.</value>
+    <value>Le code-barres ne contient pas d'identifiant de lot {0}.</value>
     <comment>Error</comment>
   </data>
   <data name="Packs_Error_003" xml:space="preserve">
-    <value>The barcode does not contain a{0} expiry date.</value>
+    <value>Le code-barres ne contient pas de date d'expiration {0}.</value>
     <comment>Error</comment>
   </data>
   <data name="Packs_Error_004" xml:space="preserve">
-    <value>The barcode does not contain a{0} serial number.</value>
+    <value>Le code-barres ne contient pas de numéro de série {0}.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_001" xml:space="preserve">
-    <value>No data provided.</value>
+    <value>Aucune donnée fournie.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_002" xml:space="preserve">
-    <value>The barcode symbology is not supported for pack identifiers.</value>
+    <value>La symbologie du code-barres n'est pas prise en charge pour les identifiants de paquets.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_003" xml:space="preserve">
-    <value>The barcode does not contain a unique pack identifier.</value>
+    <value>Le code-barres ne contient pas d'identifiant unique de paquet.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_004" xml:space="preserve">
-    <value>The pack identifier contains invalid or unrecognised data.</value>
+    <value>L'identifiant du paquet contient des données invalides ou non reconnues.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_005" xml:space="preserve">
-    <value>The pack identifier contains multiple national numbers for {0}.</value>
+    <value>L'identifiant du paquet contient plusieurs numéros nationaux pour {0}.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_006" xml:space="preserve">
-    <value>No product code.</value>
+    <value>Pas de code produit.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_007" xml:space="preserve">
-    <value>The product code is invalid.</value>
+    <value>Le code produit est invalide.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_008" xml:space="preserve">
-    <value>Must be 14 characters in length.</value>
+    <value>Doit comporter 14 caractères.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_009" xml:space="preserve">
-    <value>The value contains non-digit characters.</value>
+    <value>La valeur contient des caractères non numériques.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_010" xml:space="preserve">
-    <value>The checksum value is incorrect.</value>
+    <value>La valeur de la somme de contrôle est incorrecte.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_011" xml:space="preserve">
-    <value>Must be 12 characters in length.</value>
+    <value>Doit comporter 12 caractères.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_012" xml:space="preserve">
-    <value>The PPN PRAC (Product Registration Agency Code) is invalid.</value>
+    <value>Le code PRAC PPN (Code de l'Agence de Registre du Produit) est invalide.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_013" xml:space="preserve">
-    <value>The PZN checksum is invalid, and therefore the PPN is invalid.</value>
+    <value>La somme de contrôle du PZN est invalide, donc le PPN est invalide.</value>
     <comment>Error</comment>
   </data>
-  <data name="Parser_Error_100" xml:space="preserve">
-    <value>Character {0} does not represent a digit.</value>
+  <data name="Parser_Error_014" xml:space="preserve">
+    <value>Pas d'identifiant de lot.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_015" xml:space="preserve">
-    <value>The batch identifier is invalid.</value>
+    <value>L'identifiant de lot est invalide.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_016" xml:space="preserve">
-    <value>Must be between 1 and 20 characters in length.</value>
+    <value>Doit être d'une longueur comprise entre 1 et 20 caractères.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_017" xml:space="preserve">
-    <value>The value contains disallowed characters.</value>
+    <value>La valeur contient des caractères non autorisés.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_018" xml:space="preserve">
-    <value>No expiry date provided.</value>
+    <value>Aucune date d'expiration fournie.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_019" xml:space="preserve">
-    <value>The expiry date is invalid.</value>
+    <value>La date d'expiration est invalide.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_020" xml:space="preserve">
-    <value>No serial number provided.</value>
+    <value>Aucun numéro de série fourni.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_021" xml:space="preserve">
-    <value>The serial number is invalid.</value>
+    <value>Le numéro de série est invalide.</value>
     <comment>Error</comment>
   </data>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
+  <data name="Parser_Error_100" xml:space="preserve">
+    <value>Caractère {0} ne représente pas un chiffre.</value>
     <comment>Error</comment>
-  </data>
-  <data name="SubstituteUnique" xml:space="preserve">
-    <value> unique</value>
   </data>
 </root>

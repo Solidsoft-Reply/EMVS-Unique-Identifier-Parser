@@ -58,8 +58,8 @@ internal class KeepScanningMessage : IComponent {
         }
 
         var remaining = ++RemainingBarcodeCount;
-        var barcodeText = remaining == 1 ? "barcode" : "barcodes";
+        var barcodeText = remaining == 1 ? Resources.BarcodeStillToScan : Resources.BarcodesStillToScan;
 
-        WriteLine($@" {remaining} {barcodeText} still to scan....");
+        WriteLine($@" {remaining} {barcodeText}");
     }
 }

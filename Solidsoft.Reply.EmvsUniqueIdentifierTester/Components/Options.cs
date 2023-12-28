@@ -44,7 +44,7 @@ public class Options : IComponent
         ResetColor();
         ForegroundColor = ConsoleColor.Yellow;
 
-        WriteLine(@" OPTIONS" + new string(' ', BufferWidth - 9));
+        WriteLine($@" {Resources.Options}" + new string(' ', BufferWidth - 9));
         ForegroundColor = ConsoleColor.Cyan;
         WriteLine(Resources.DisplayMainOptions_1);
         WriteLine(Resources.DisplayMainOptions_2);

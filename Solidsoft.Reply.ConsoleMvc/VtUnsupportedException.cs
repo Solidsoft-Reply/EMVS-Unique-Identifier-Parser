@@ -31,7 +31,7 @@ public class VtUnsupportedException : SystemException
     /// <summary>
     /// Initializes a new instance of the <see cref="VtUnsupportedException"/> class.
     /// </summary>
-    public VtUnsupportedException() : base("VT sequence codes are not supported ont his platform.")
+    public VtUnsupportedException() : base("VT sequence codes are not supported on this platform.")
     {
     }
 }

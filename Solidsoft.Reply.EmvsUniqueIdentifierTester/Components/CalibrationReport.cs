@@ -65,12 +65,19 @@ internal class CalibrationReport : IComponent {
                                   _                                       => ForegroundColor
                               };
 
-            WriteLine($@" {information.Level}: {information.Description}");
+            var levelName = information.Level switch
+            {
+                CalibrationInformationLevel.Warning => Resources.Warning,
+                CalibrationInformationLevel.Error => Resources.Error,
+                _ => Resources.Information,
+            };
+            
+            WriteLine($@" {levelName}: {information.Description}");
         }
 
-        var testInformation = IncludeFormat06 ? "included" : "did not include";
+        var testInformation = IncludeFormat06 ? Resources.IncludePpn : Resources.DidNotIncludePpn;
         ForegroundColor = ConsoleColor.Green;
-        WriteLine($@" Information: Calibration {testInformation} tests for Format 05 and Format 06 (German PPN) barcodes.");
+        WriteLine(Resources.InformationForPpn, Resources.Information, testInformation);
         ForegroundColor = ConsoleColor.Cyan;
         WriteLine();
     }

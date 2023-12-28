@@ -61,6 +61,51 @@ namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data will be submitted automatically..
+        /// </summary>
+        internal static string AutomaticEntryInstructions1 {
+            get {
+                return ResourceManager.GetString("AutomaticEntryInstructions1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data will not be submitted automatically..
+        /// </summary>
+        internal static string AutomaticEntryInstructions1Not {
+            get {
+                return ResourceManager.GetString("AutomaticEntryInstructions1Not", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Press RETURN to submit data. Configure the scanner to transmit carriage returns..
+        /// </summary>
+        internal static string AutomaticEntryInstructions2 {
+            get {
+                return ResourceManager.GetString("AutomaticEntryInstructions2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to barcodes still to scan....
+        /// </summary>
+        internal static string BarcodesStillToScan {
+            get {
+                return ResourceManager.GetString("BarcodesStillToScan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to barcode still to scan....
+        /// </summary>
+        internal static string BarcodeStillToScan {
+            get {
+                return ResourceManager.GetString("BarcodeStillToScan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CalibrationView - do not call Render.
         /// </summary>
         internal static string CalibrationViewDoNotCallRender {
@@ -120,6 +165,15 @@ namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties {
         internal static string ConsoleTitle {
             get {
                 return ResourceManager.GetString("ConsoleTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to did not include.
+        /// </summary>
+        internal static string DidNotIncludePpn {
+            get {
+                return ResourceManager.GetString("DidNotIncludePpn", resourceCulture);
             }
         }
         
@@ -313,6 +367,42 @@ namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        internal static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to included.
+        /// </summary>
+        internal static string IncludePpn {
+            get {
+                return ResourceManager.GetString("IncludePpn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        internal static string Information {
+            get {
+                return ResourceManager.GetString("Information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}: Calibration {1} tests for Format 05 and Format 06 (German PPN) barcodes..
+        /// </summary>
+        internal static string InformationForPpn {
+            get {
+                return ResourceManager.GetString("InformationForPpn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Press any key to continue....
         /// </summary>
         internal static string Initialise_1 {
@@ -340,11 +430,83 @@ namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Auto-submit.
+        /// </summary>
+        internal static string MenuAutoSubmit {
+            get {
+                return ResourceManager.GetString("MenuAutoSubmit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calibrate (full).
+        /// </summary>
+        internal static string MenuCalibrateFull {
+            get {
+                return ResourceManager.GetString("MenuCalibrateFull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calibrate (GS1).
+        /// </summary>
+        internal static string MenuCalibrateGS1 {
+            get {
+                return ResourceManager.GetString("MenuCalibrateGS1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear Screen.
+        /// </summary>
+        internal static string MenuClearScreen {
+            get {
+                return ResourceManager.GetString("MenuClearScreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        internal static string MenuExit {
+            get {
+                return ResourceManager.GetString("MenuExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OPTIONS.
+        /// </summary>
+        internal static string Options {
+            get {
+                return ResourceManager.GetString("Options", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The calibration was not saved{0}.
+        /// </summary>
+        internal static string SaveError {
+            get {
+                return ResourceManager.GetString("SaveError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The application requires VT sequences which are not supported on this platform..
         /// </summary>
         internal static string VtSequencesNotSupported {
             get {
                 return ResourceManager.GetString("VtSequencesNotSupported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        internal static string Warning {
+            get {
+                return ResourceManager.GetString("Warning", resourceCulture);
             }
         }
     }

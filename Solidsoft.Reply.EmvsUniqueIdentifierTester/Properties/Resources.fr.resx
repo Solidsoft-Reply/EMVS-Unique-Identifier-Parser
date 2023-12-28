@@ -6,7 +6,7 @@
     Version 2.0
     
     The primary goals of this format is to allow a simple XML format 
-    that is mostly human-readable. The generation and parsing of the 
+    that is mostly human readable. The generation and parsing of the 
     various data types are done through the TypeConverter classes 
     associated with the data types.
     
@@ -117,100 +117,154 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ClearConsoleBuffer" xml:space="preserve">
-    <value>--- Clear console buffer ----</value>
+  <data name="AutomaticEntryInstructions1" xml:space="preserve">
+    <value>Les données seront soumises automatiquement.</value>
   </data>
-  <data name="ConsoleTitle" xml:space="preserve">
-    <value>EMVS Unique Identifier Tester</value>
+  <data name="AutomaticEntryInstructions1Not" xml:space="preserve">
+    <value>Les données ne seront pas soumises automatiquement.</value>
   </data>
-  <data name="DisplayCalibrationFailedMessage_1" xml:space="preserve">
-    <value>The current combination of barcode and Operating System keyboard layouts cannot be calibrated.</value>
+  <data name="AutomaticEntryInstructions2" xml:space="preserve">
+    <value> Appuyez sur RETOUR pour soumettre les données. Configurez le scanner pour transmettre des retours chariot.</value>
   </data>
-  <data name="DisplayCalibrationFailedMessage_2" xml:space="preserve">
-    <value>Check that you have scanned the correct barcode for calibration. If you have, reconfigure the</value>
+  <data name="BarcodesStillToScan" xml:space="preserve">
+    <value>codes-barres encore à scanner...</value>
   </data>
-  <data name="DisplayCalibrationFailedMessage_3" xml:space="preserve">
-    <value>scanner to emulate a different keyboard layout or a numeric keypad.</value>
-  </data>
-  <data name="DisplayCalibrationInformation_1" xml:space="preserve">
-    <value>Press any key to continue...</value>
-  </data>
-  <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Scan the barcode to calibrate the tester application.</value>
-  </data>
-  <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Press Ctrl-O to exit the calibration mode.</value>
-  </data>
-  <data name="DisplayCalibrationReport_1" xml:space="preserve">
-    <value>CALIBRATION REPORT</value>
-  </data>
-  <data name="DisplayCalibrationSaveError_1" xml:space="preserve">
-    <value>Press any key to continue...</value>
-  </data>
-  <data name="DisplayKeepScanning_1" xml:space="preserve">
-    <value>Keep scanning...</value>
-  </data>
-  <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value> * Scan a barcode.</value>
-  </data>
-  <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value> * Type in or paste data and press Enter.</value>
-  </data>
-  <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value> * Press Ctrl-R to toggle between automatic and manual (carriage return) submission of data.</value>
-  </data>
-  <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value> * Press Ctrl-K to calibrate the tester for the current scanner and keyboard layout.</value>
-  </data>
-  <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value> * Press Shift Ctrl-K to calibrate the tester for the current scanner and keyboard layout for GS1 FNC barcodes, only.</value>
-  </data>
-  <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value> * Press Ctrl-S to clear the screen.</value>
-  </data>
-  <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value> * Press Ctrl-T to exit the program.</value>
-  </data>
-  <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value> * Press Up and Down Arrows to select and retry cached entries.</value>
-  </data>
-  <data name="DisplayParserResults_1" xml:space="preserve">
-    <value>Input contains one or more characters that cannot be encoded.</value>
-  </data>
-  <data name="DisplayParserResults_2" xml:space="preserve">
-    <value>PARSER ERROR:</value>
-  </data>
-  <data name="Initialise_1" xml:space="preserve">
-    <value>Press any key to continue...</value>
-  </data>
-  <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value> □ represents an invalid character </value>
-  </data>
-  <data name="ListIntPtrCastError" xml:space="preserve">
-    <value>GCHandle Target could not be cast as List&lt;IntPtr&gt;</value>
-  </data>
-  <data name="VtSequencesNotSupported" xml:space="preserve">
-    <value>The application requires VT sequences which are not supported on this platform.</value>
-  </data>
-  <data name="CommandPrompt" xml:space="preserve">
-    <value>Scan barcode&gt;</value>
+  <data name="BarcodeStillToScan" xml:space="preserve">
+    <value>code-barres encore à scanner...</value>
   </data>
   <data name="CalibrationViewDoNotCallRender" xml:space="preserve">
-    <value>CalibrationView - do not call Render</value>
+    <value>CalibrationView - ne pas appeler Render</value>
+  </data>
+  <data name="ClearConsoleBuffer" xml:space="preserve">
+    <value>--- Effacer le tampon de la console ----</value>
   </data>
   <data name="CodePageInitialiseError" xml:space="preserve">
-    <value>Could not initialise code page {0}</value>
+    <value>Impossible d'initialiser la page de code {0}</value>
   </data>
   <data name="CodePageInitialiseErrorRecovery" xml:space="preserve">
-    <value>Press any key to continue, using default code page...</value>
+    <value>Appuyez sur une touche pour continuer, en utilisant la page de code par défaut...</value>
   </data>
   <data name="CodePageInitialiseFakeCommandLine" xml:space="preserve">
     <value>CodePage = {0}</value>
   </data>
-  <data name="DisplayParserResults_3" xml:space="preserve">
-    <value>ERROR:</value>
+  <data name="CommandPrompt" xml:space="preserve">
+    <value>Scanner le code-barres&gt;</value>
+  </data>
+  <data name="ConsoleTitle" xml:space="preserve">
+    <value>Testeur d'Identifiant Unique EMVS</value>
+  </data>
+  <data name="DidNotIncludePpn" xml:space="preserve">
+    <value>n'a pas inclus</value>
   </data>
   <data name="DisplayAdvice_1" xml:space="preserve">
-    <value>ADVICE</value>
+    <value>CONSEIL</value>
+  </data>
+  <data name="DisplayCalibrationFailedMessage_1" xml:space="preserve">
+    <value>La combinaison actuelle des dispositions de clavier du code-barres et du système d'exploitation ne peut pas être calibrée.</value>
+  </data>
+  <data name="DisplayCalibrationFailedMessage_2" xml:space="preserve">
+    <value>Vérifiez que vous avez scanné le bon code-barres pour la calibration. Si c'est le cas, reconfigurez le scanner pour émuler </value>
+  </data>
+  <data name="DisplayCalibrationFailedMessage_3" xml:space="preserve">
+    <value>une disposition de clavier différente ou un pavé numérique.</value>
+  </data>
+  <data name="DisplayCalibrationInformation_1" xml:space="preserve">
+    <value>Appuyez sur une touche pour continuer...</value>
+  </data>
+  <data name="DisplayCalibrationOptions_1" xml:space="preserve">
+    <value> * Scannez le code-barres pour calibrer l'application de test.</value>
+  </data>
+  <data name="DisplayCalibrationOptions_2" xml:space="preserve">
+    <value> * Appuyez sur Ctrl-O pour sortir du mode de calibration.</value>
+  </data>
+  <data name="DisplayCalibrationReport_1" xml:space="preserve">
+    <value>RAPPORT DE CALIBRATION</value>
+  </data>
+  <data name="DisplayCalibrationSaveError_1" xml:space="preserve">
+    <value>Appuyez sur une touche pour continuer...</value>
+  </data>
+  <data name="DisplayKeepScanning_1" xml:space="preserve">
+    <value>Continuez à scanner...</value>
+  </data>
+  <data name="DisplayMainOptions_1" xml:space="preserve">
+    <value> * Scannez un code-barres.</value>
+  </data>
+  <data name="DisplayMainOptions_2" xml:space="preserve">
+    <value> * Tapez ou collez des données et appuyez sur Entrée.</value>
+  </data>
+  <data name="DisplayMainOptions_3" xml:space="preserve">
+    <value> * Appuyez sur Ctrl-R pour basculer entre la soumission automatique et manuelle (retour chariot) des données.</value>
+  </data>
+  <data name="DisplayMainOptions_4" xml:space="preserve">
+    <value> * Appuyez sur Ctrl-K pour calibrer le testeur pour le scanner et la disposition de clavier actuels.</value>
+  </data>
+  <data name="DisplayMainOptions_5" xml:space="preserve">
+    <value> * Appuyez sur Maj Ctrl-K pour calibrer le testeur uniquement pour les codes-barres GS1 FNC avec le scanner et la disposition de clavier actuels.</value>
+  </data>
+  <data name="DisplayMainOptions_6" xml:space="preserve">
+    <value> * Appuyez sur Ctrl-S pour effacer l'écran.</value>
+  </data>
+  <data name="DisplayMainOptions_7" xml:space="preserve">
+    <value> * Appuyez sur Ctrl-T pour quitter le programme.</value>
+  </data>
+  <data name="DisplayMainOptions_8" xml:space="preserve">
+    <value> * Utilisez les flèches Haut et Bas pour sélectionner et réessayer les entrées en cache.</value>
+  </data>
+  <data name="DisplayParserResults_1" xml:space="preserve">
+    <value>L'entrée contient un ou plusieurs caractères qui ne peuvent pas être encodés.</value>
+  </data>
+  <data name="DisplayParserResults_2" xml:space="preserve">
+    <value>ERREUR DE L'ANALYSEUR :</value>
+  </data>
+  <data name="DisplayParserResults_3" xml:space="preserve">
+    <value>ERREUR :</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="IncludePpn" xml:space="preserve">
+    <value>inclus</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="InformationForPpn" xml:space="preserve">
+    <value>{0} : Tests de calibration {1} pour les codes-barres Format 05 et Format 06 (PPN allemand).</value>
+  </data>
+  <data name="Initialise_1" xml:space="preserve">
+    <value>Appuyez sur une touche pour continuer...</value>
+  </data>
+  <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
+    <value> □ représente un caractère invalide</value>
+  </data>
+  <data name="ListIntPtrCastError" xml:space="preserve">
+    <value>La cible GCHandle ne peut pas être convertie en List&lt;IntPtr&gt;</value>
+  </data>
+  <data name="MenuAutoSubmit" xml:space="preserve">
+    <value>Soumission automatique</value>
+  </data>
+  <data name="MenuCalibrateFull" xml:space="preserve">
+    <value>Calibrer (complet)</value>
+  </data>
+  <data name="MenuCalibrateGS1" xml:space="preserve">
+    <value>Calibrer (GS1)</value>
+  </data>
+  <data name="MenuClearScreen" xml:space="preserve">
+    <value>Effacer l'écran</value>
+  </data>
+  <data name="MenuExit" xml:space="preserve">
+    <value>Quitter</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>OPTIONS</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>La calibration n'a pas été sauvegardée{0}</value>
+  </data>
+  <data name="VtSequencesNotSupported" xml:space="preserve">
+    <value>L'application nécessite des séquences VT qui ne sont pas prises en charge sur cette plateforme.</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Avertissement</value>
   </data>
 </root>

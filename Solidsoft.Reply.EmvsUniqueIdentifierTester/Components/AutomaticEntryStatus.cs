@@ -20,6 +20,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties;
+
 namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Components;
 
 using ConsoleMvc;
@@ -42,9 +44,9 @@ internal class AutomaticEntryStatus : IComponent {
     /// </summary>
     public void Render() {
         WriteLine();
-        var text1 = AutomaticEntry ? string.Empty : "not ";
-        var text2 = AutomaticEntry ? string.Empty : " Press RETURN to submit data. Configure the scanner to transmit carriage returns.";
+        var text1 = AutomaticEntry ? Resources.AutomaticEntryInstructions1 : Resources.AutomaticEntryInstructions1Not;
+        var text2 = AutomaticEntry ? string.Empty : Resources.AutomaticEntryInstructions2;
         ResetColor();
-        WriteLine($@"Data will {text1}be submitted automatically.{text2}");
+        WriteLine($@"{text1}{text2}");
     }
 }

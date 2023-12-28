@@ -29,6 +29,8 @@ using System.Diagnostics.CodeAnalysis;
 using Properties;
 
 using static System.Console;
+using System.Globalization;
+using System.Threading;
 
 /// <summary>
 /// The program.  Contains the application entry point and initialisation code.
@@ -44,6 +46,7 @@ public static class Program
     // ReSharper disable once UnusedParameter.Local
     private static void Main(string[] args)
     {
+        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr-FR");
         Title = Resources.ConsoleTitle;
         CommandLineArguments.Initialise(args);
         Initialise();

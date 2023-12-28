@@ -294,7 +294,7 @@ internal static partial class BaseParser
                                     packIdentifier.AddOrReplaceException(
                                         new PackIdentifierException(
                                             10,
-                                            string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_001, " unique")));
+                                            string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_001, Resources.SubstituteUnique)));
                                     break;
                                 case 1:
                                     packIdentifier.ProductCode = distinctProductCodes[0];
@@ -307,7 +307,7 @@ internal static partial class BaseParser
                                     packIdentifier.AddOrReplaceException(
                                         new PackIdentifierException(
                                             9,
-                                            string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_004, " unique")));
+                                            string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_004, Resources.SubstituteUnique)));
                                     break;
                                 case 1:
                                     packIdentifier.SerialNumber = distinctSerialNumbers[0];
@@ -320,7 +320,7 @@ internal static partial class BaseParser
                                     packIdentifier.AddOrReplaceException(
                                         new PackIdentifierException(
                                             7,
-                                            string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_002, " unique")));
+                                            string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_002, Resources.SubstituteUnique)));
                                     break;
                                 case 1:
                                     packIdentifier.BatchIdentifier = distinctBatchIdentifiers[0];
@@ -333,7 +333,7 @@ internal static partial class BaseParser
                                     packIdentifier.AddOrReplaceException(
                                         new PackIdentifierException(
                                             8,
-                                            string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_003, " unique")));
+                                            string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_003, Resources.SubstituteUnique)));
                                     break;
                                 case 1:
                                     packIdentifier.Expiry = distinctExpiryDates[0];
@@ -388,7 +388,7 @@ internal static partial class BaseParser
                                 packIdentifier.AddOrReplaceException(
                                     new PackIdentifierException(
                                         10,
-                                        string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_001, " unique")));
+                                        string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_001, Resources.SubstituteUnique)));
                                 break;
                             case 1:
                                 packIdentifier.ProductCode = productCodeValues[0];
@@ -402,7 +402,7 @@ internal static partial class BaseParser
                                 packIdentifier.AddOrReplaceException(
                                     new PackIdentifierException(
                                         9,
-                                        string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_004, " unique")));
+                                        string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_004, Resources.SubstituteUnique)));
                                 break;
                             case 1:
                                 packIdentifier.SerialNumber = serialNumberValues[0];
@@ -414,7 +414,7 @@ internal static partial class BaseParser
                                 packIdentifier.AddOrReplaceException(
                                     new PackIdentifierException(
                                         7,
-                                        string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_002, " unique")));
+                                        string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_002, Resources.SubstituteUnique)));
                                 break;
                             case 1:
                                 packIdentifier.BatchIdentifier = batchIdentifierValues[0];
@@ -426,7 +426,7 @@ internal static partial class BaseParser
                                 packIdentifier.AddOrReplaceException(
                                     new PackIdentifierException(
                                         8,
-                                        string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_003, " unique")));
+                                        string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_003, Resources.SubstituteUnique)));
                                 break;
                             case 1:
                                 packIdentifier.Expiry = expiryValues[0];
@@ -537,7 +537,7 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     10,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_001, " unique"),
+                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_001, Resources.SubstituteUnique),
                                     "01",
                                     "GTIN",
                                     0));
@@ -576,7 +576,7 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 7 : 30,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_002, " unique"),
+                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_002, Resources.SubstituteUnique),
                                     scheme == Scheme.Gs1 ? "10" : string.Empty,
                                     scheme == Scheme.Gs1 ? "BATCH/LOT" : string.Empty,
                                     0));
@@ -611,7 +611,7 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 8 : 40,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_003, " unique"),
+                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_003, Resources.SubstituteUnique),
                                     scheme == Scheme.Gs1 ? "17" : string.Empty,
                                     scheme == Scheme.Gs1 ? "USE BY OR EXPIRY" : string.Empty,
                                     0));
@@ -650,7 +650,7 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 9 : 50,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_004, " unique"),
+                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_004, Resources.SubstituteUnique),
                                     scheme == Scheme.Gs1 ? "21" : string.Empty,
                                     scheme == Scheme.Gs1 ? "SERIAL" : string.Empty,
                                     0));
@@ -873,7 +873,7 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     20,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_001, " unique"),
+                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_001, Resources.SubstituteUnique),
                                     "9N",
                                     "PPN",
                                     0));
@@ -913,7 +913,7 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 7 : 30,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_002, " unique"),
+                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_002, Resources.SubstituteUnique),
                                     scheme == Scheme.Ifa ? "1T" : string.Empty,
                                     scheme == Scheme.Ifa
                                         ? "TRACEABILITY NUMBER ASSIGNED BY THE SUPPLIER"
@@ -951,7 +951,7 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 8 : 40,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_003, " unique"),
+                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_003, Resources.SubstituteUnique),
                                     scheme == Scheme.Ifa ? "D" : string.Empty,
                                     scheme == Scheme.Ifa ? "DATE" : string.Empty,
                                     0));
@@ -990,7 +990,7 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 9 : 50,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_004, " unique"),
+                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_004, Resources.SubstituteUnique),
                                     scheme == Scheme.Ifa ? "S" : string.Empty,
                                     scheme == Scheme.Ifa ? "SERIAL NUMBER" : string.Empty,
                                     0));
@@ -1181,7 +1181,7 @@ internal static partial class BaseParser
     {
         // SecurPharm and IFA define a batch identifier (lot number) for medicinal packs of prescription
         // medicine in the same way as the GS1 General Specifications. It is a string of between 1 and 20
-        // characters containing the invariant characters defined in ISO 646. GS1 calls this 'Character Set 82".
+        // characters containing the invariant characters defined in ISO 646. GS1 calls this 'Character Set 82'.
         // NB. These rules conflict with the MH10.8.2 standard for DI 1T (Traceability Number Assigned By The
         // Supplier) which effectively constrains this field to upper case Latin letters and digits.
         var isValid = true;

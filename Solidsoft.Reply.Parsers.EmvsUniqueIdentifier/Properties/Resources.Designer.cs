@@ -302,5 +302,14 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
                 return ResourceManager.GetString("Parser_Error_100", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  unique.
+        /// </summary>
+        internal static string SubstituteUnique {
+            get {
+                return ResourceManager.GetString("SubstituteUnique", resourceCulture);
+            }
+        }
     }
 }

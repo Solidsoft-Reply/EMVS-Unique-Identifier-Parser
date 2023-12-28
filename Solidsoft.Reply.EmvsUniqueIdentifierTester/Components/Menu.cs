@@ -20,6 +20,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties;
+
 #pragma warning disable CA1416
 namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Components;
 
@@ -46,15 +48,15 @@ public class Menu : IComponent
         ForegroundColor = ConsoleColor.DarkBlue;
 
         var menuTextLength = 0;
-        const string menuItemAutoSubmit = "\u001b[106m\u001b[35m[^F6]\u001b[34m\u001b[107m Auto-submit |";
+        var menuItemAutoSubmit = $"\u001b[106m\u001b[35m[^F6]\u001b[34m\u001b[107m {Resources.MenuAutoSubmit} |";
         menuTextLength += 20;
-        const string menuItemCalibrateGs1Only = "\u001b[106m\u001b[35m[^F11]\u001b[34m\u001b[107m Calibrate (GS1) |";
+        var menuItemCalibrateGs1Only = $"\u001b[106m\u001b[35m[^F11]\u001b[34m\u001b[107m {Resources.MenuCalibrateGS1} |";
         menuTextLength += 25;
-        const string menuItemCalibrate = "\u001b[106m\u001b[35m[Shift+^F11]\u001b[34m\u001b[107m Calibrate (full) |";
+        var menuItemCalibrate = $"\u001b[106m\u001b[35m[Shift+^F11]\u001b[34m\u001b[107m {Resources.MenuCalibrateFull} |";
         menuTextLength += 32;
-        const string menuItemClearScreen = "\u001b[106m\u001b[35m[^F12]\u001b[34m\u001b[107m Clear Screen |";
+        var menuItemClearScreen = $"\u001b[106m\u001b[35m[^F12]\u001b[34m\u001b[107m {Resources.MenuClearScreen} |";
         menuTextLength += 22;
-        const string menuItemExit = "\u001b[106m\u001b[35m[^X]\u001b[34m\u001b[107m Exit";
+        var menuItemExit = $"\u001b[106m\u001b[35m[^X]\u001b[34m\u001b[107m {Resources.MenuExit}";
         menuTextLength += 12;
 
         if (menuTextLength >= BufferWidth)

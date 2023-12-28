@@ -44,7 +44,7 @@ public enum ClassStyles : uint
     // ReSharper disable once InconsistentNaming
     ClassDC = 0x40,
 
-    /// <summary>Sends a double-click message to the window procedure when the user double-clicks the mouse while the cursor is within a window belonging to the class.</summary>  
+    /// <summary>Sends a double click message to the window procedure when the user double-clicks the mouse while the cursor is within a window belonging to the class.</summary>  
     DoubleClicks = 0x8,
 
     /// <summary>  

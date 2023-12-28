@@ -32,7 +32,7 @@ public class ConsoleLineEntryArgs : EventArgs
     /// Initializes a new instance of the <see cref="ConsoleLineEntryArgs"/> class.
     /// </summary>
     /// <param name="mode">The mode name.</param>
-    /// <param name="line">The line of text entered in the terminal.</param>
+    /// <param name="line">The line of text entered into the terminal.</param>
     public ConsoleLineEntryArgs(string mode, string line)
     {
         Mode = mode;
@@ -40,12 +40,12 @@ public class ConsoleLineEntryArgs : EventArgs
     }
 
     /// <summary>
-    /// Gets the line of text entered in the terminal.
+    /// Gets the line of text entered into the terminal.
     /// </summary>
     public string Mode { get; }
 
     /// <summary>
-    /// Gets the line of text entered in the terminal.
+    /// Gets the line of text entered into the terminal.
     /// </summary>
     public string Line { get; }
 }

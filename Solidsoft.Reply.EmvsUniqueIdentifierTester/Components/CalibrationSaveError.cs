@@ -35,7 +35,7 @@ using static System.Console;
 internal class CalibrationSaveError : IComponent {
 
     /// <summary>
-    /// Gets or sets the error message when an error is encountered while saving calibration data..
+    /// Gets or sets the error message when an error is encountered while saving calibration data.
     /// </summary>
     public string SaveErrorMessage { get; set; }
 

@@ -1168,7 +1168,7 @@ public class KeyboardCalibratorTestsStateless
         DutchBarcodeData());
 
     /// <summary>
-    /// Test calibration for a Estonian computer keyboard layout.
+    /// Test calibration for an Estonian computer keyboard layout.
     /// </summary>
     [Fact]
     public void ToEstonian() => PerformParserTest(
@@ -1240,7 +1240,7 @@ public class KeyboardCalibratorTestsStateless
         Hungarian101KeyBarcodeData());
 
     /// <summary>
-    /// Test calibration for a Icelandic computer keyboard layout.
+    /// Test calibration for an Icelandic computer keyboard layout.
     /// </summary>
     [Fact]
     public void ToIcelandic() => PerformParserTest(
@@ -1248,7 +1248,7 @@ public class KeyboardCalibratorTestsStateless
         IcelandicBarcodeData());
 
     /// <summary>
-    /// Test calibration for a Irish computer keyboard layout.
+    /// Test calibration for an Irish computer keyboard layout.
     /// </summary>
     [Fact]
     public void ToIrish() => PerformParserTest(
@@ -1256,7 +1256,7 @@ public class KeyboardCalibratorTestsStateless
         IrishBarcodeData());
 
     /// <summary>
-    /// Test calibration for a Italian computer keyboard layout.
+    /// Test calibration for an Italian computer keyboard layout.
     /// </summary>
     [Fact]
     public void ToItalian() => PerformParserTest(
@@ -1264,7 +1264,7 @@ public class KeyboardCalibratorTestsStateless
         ItalianBarcodeData());
 
     /// <summary>
-    /// Test calibration for a Italian (142) computer keyboard layout.
+    /// Test calibration for an Italian (142) computer keyboard layout.
     /// </summary>
     [Fact]
     public void ToItalian142() => PerformParserTest(
@@ -3019,7 +3019,7 @@ public class KeyboardCalibratorTestsStateless
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Estonian computer keyboard layout
+    /// Returns the expected barcode data for an Estonian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> EstonianBarcodeData()
@@ -3226,7 +3226,7 @@ public class KeyboardCalibratorTestsStateless
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Icelandic computer keyboard layout
+    /// Returns the expected barcode data for an Icelandic computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> IcelandicBarcodeData()
@@ -3249,7 +3249,7 @@ public class KeyboardCalibratorTestsStateless
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Irish computer keyboard layout
+    /// Returns the expected barcode data for an Irish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> IrishBarcodeData()
@@ -3272,7 +3272,7 @@ public class KeyboardCalibratorTestsStateless
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Italian computer keyboard layout
+    /// Returns the expected barcode data for an Italian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> ItalianBarcodeData()
@@ -3295,7 +3295,7 @@ public class KeyboardCalibratorTestsStateless
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Italian (142) computer keyboard layout
+    /// Returns the expected barcode data for an Italian (142) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> Italian142BarcodeData()

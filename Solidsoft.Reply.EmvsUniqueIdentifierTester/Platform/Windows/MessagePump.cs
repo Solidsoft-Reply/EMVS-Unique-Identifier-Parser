@@ -168,7 +168,7 @@ public class MessagePump : IDisposable
     /// <param name="bitmapStream">The stream holding the calibration barcode bitmap to be displayed.</param>
     /// <param name="registerPostMessage">
     ///     An action that, when invoked, registers a local action used to post messages to the pop-up window.
-    ///     This is used to post user-defined messages to tell the window to destroy itself..
+    ///     This is used to post user-defined messages to tell the window to destroy itself.
     /// </param>
     /// <param name="sendKey">An action used to simulate keyboard input to the input handler.</param>
     public void CreateMessagePump(

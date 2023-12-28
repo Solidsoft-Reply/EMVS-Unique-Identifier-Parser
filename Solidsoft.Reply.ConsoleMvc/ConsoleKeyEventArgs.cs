@@ -43,7 +43,7 @@ public class ConsoleKeyEventArgs : EventArgs
     }
 
     /// <summary>
-    /// Gets the line of text entered in the terminal.
+    /// Gets the line of text entered into the terminal.
     /// </summary>
     public string Mode { get; }
 

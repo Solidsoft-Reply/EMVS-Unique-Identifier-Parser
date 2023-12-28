@@ -41,7 +41,7 @@ public interface IInputHandler : IDisposable
 
     /// <summary>
     /// Gets or sets a value indicating whether lines of text that are not terminated by a
-    /// carriage return should entered automatically.
+    /// carriage return should be entered automatically.
     /// </summary>
     public bool AutomaticEntry { get; set; }
 

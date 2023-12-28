@@ -954,7 +954,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     private const string UnitedKingdomVariant1Barcode11 = "[)>\x001E06\x001D9N111003592770\x001D1T&ZJMaz/\x001DD231126\x001DS@j:AugCzJt\x001E\x0004\x000D";
     private const string UnitedKingdomVariant1Barcode12 = "[)>\x001E06\x001D9N111003592770\x001D1T2;5wEY-\x001DD230404\x001DSHIrQ9QeTyQ\x001E\x0004\x000D";
 
-    // Test in the case that the ASCII 30 as an variant ASCII character.
+    // Test in the case that the ASCII 30 as a variant ASCII character.
     private const string UnitedKingdomVariant2Baseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    \x001D    \0    \"    \0    \x000D";
     private const string UnitedKingdomVariant2Barcode1 = "[)>\"06\x001D9N111003592770\x001D1TDdVcX<t\x001DD230207\x001DSyCH*4'h1Ab\"\x0004\x000D";
     private const string UnitedKingdomVariant2Barcode2 = "[)>\"06\x001D9N111003592770\x001D1T.GRs!qO\x001DD230729\x001DSTgIv?,6BmK\"\x0004\x000D";
@@ -1278,7 +1278,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     }
 
     /// <summary>
-    /// Test calibration for a Estonian computer keyboard layout
+    /// Test calibration for an Estonian computer keyboard layout
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -1386,7 +1386,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     }
 
     /// <summary>
-    /// Test calibration for a Icelandic computer keyboard layout
+    /// Test calibration for an Icelandic computer keyboard layout
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -1398,7 +1398,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     }
 
     /// <summary>
-    /// Test calibration for a Irish computer keyboard layout
+    /// Test calibration for an Irish computer keyboard layout
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -1410,7 +1410,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     }
 
     /// <summary>
-    /// Test calibration for a Italian computer keyboard layout
+    /// Test calibration for an Italian computer keyboard layout
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -1422,7 +1422,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     }
 
     /// <summary>
-    /// Test calibration for a Italian (142) computer keyboard layout
+    /// Test calibration for an Italian (142) computer keyboard layout
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -3292,7 +3292,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Estonian computer keyboard layout
+    /// Returns the expected barcode data for an Estonian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> EstonianBarcodeData()
@@ -3499,7 +3499,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Icelandic computer keyboard layout
+    /// Returns the expected barcode data for an Icelandic computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> IcelandicBarcodeData()
@@ -3522,7 +3522,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Irish computer keyboard layout
+    /// Returns the expected barcode data for an Irish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> IrishBarcodeData()
@@ -3545,7 +3545,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Italian computer keyboard layout
+    /// Returns the expected barcode data for an Italian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> ItalianBarcodeData()
@@ -3568,7 +3568,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Italian (142) computer keyboard layout
+    /// Returns the expected barcode data for an Italian (142) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> Italian142BarcodeData()

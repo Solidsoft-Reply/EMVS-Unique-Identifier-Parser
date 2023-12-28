@@ -523,7 +523,7 @@ public class KeyboardCalibratorTestsInformation
     }
 
     /// <summary>
-    /// Test that the Caps Lock button was probably on (or off) during the test..
+    /// Test that the Caps Lock button was probably on (or off) during the test.
     /// </summary>
     [Fact]
     public void WarningCapsLockProbablyOn()

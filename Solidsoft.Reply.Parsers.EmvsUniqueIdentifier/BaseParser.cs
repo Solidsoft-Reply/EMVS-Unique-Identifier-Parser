@@ -180,7 +180,7 @@ internal static partial class BaseParser
                           where firstOrDefault is not null
                           select new Record(firstOrDefault.Format, rec.ToList());
 
-            // Add each record to the records collection.
+            // Add each record to the record collection.
             var enumerable = records as IRecord[] ?? records.ToArray();
 
             foreach (var record in enumerable) {
@@ -1316,7 +1316,7 @@ internal static partial class BaseParser
     {
         // GS1 defines a GTIN 14 or NTIN-14 for medicinal packs of prescription medicine as a fixed
         // sequence of 14 digits. The initial digits represent the country of the assigning GS1 office
-        // and, for GTINs, a company or organisations (fr NTINs, this is a nationally-assigned set of digits)
+        // and, for GTINs, a company or organisations (for NTINs, this is a nationally-assigned set of digits)
         // The last digit represents a checksum calculated according to a GS1-mandated algorithm.
         var isValid = true;
 
@@ -1388,7 +1388,7 @@ internal static partial class BaseParser
          * the ASCII value and multiplied with the incrementing weight factor beginning with the most
          * significant character to the left and with weight factor 2. The results of each multiplication
          * are summed and divided by 97 and the remainder is the check number. If the remainder is only one
-         * digit then a leading zero is added. This 2 character string is appended to the PPN string as the
+         * digit then a leading zero is added. This 2-character string is appended to the PPN string as the
          * check sum.
          * */
 
@@ -1431,7 +1431,7 @@ internal static partial class BaseParser
     {
         // IFA and SecurPharm define a PPN for medicinal packs of prescription medicine as a fixed
         // sequence of 12 digits. The first two digits represent the Product Registration Agency Code
-        // (PRA Code or PRAC) abd are always '11' for PZNs. the next eight digits represent a PZN8.
+        // (PRA Code or PRAC) abd are always "11" for PZNs. the next eight digits represent a PZN8.
         // The last two digits represent a checksum calculated according to an IFA-mandated algorithm.
         var isValid = true;
 
@@ -1470,7 +1470,7 @@ internal static partial class BaseParser
             isValid = false;
         }
 
-        // Rule 4: The first two characters of the PPN are '11', representing PZN.
+        // Rule 4: The first two characters of the PPN are "11", representing PZN.
         if (ppn is { Length: > 2 } && ppn[..2] != "11")
         {
             packIdentifier.AddException(
@@ -1639,7 +1639,7 @@ internal static partial class BaseParser
         /* Remove any parser exceptions that specify the use of an invalid data set
          * according to MH10.8.2 standard for serial numbers and batch identifiers.
          * The IFA specification does not adhere to the standard in this respect, but
-         * but effectively overrides the standard. Hence, including these parser
+         * effectively overrides the standard. Hence, including these parser
          * exceptions simply highlights potential confusion based on this discrepency
          * between the two specifications.
          */

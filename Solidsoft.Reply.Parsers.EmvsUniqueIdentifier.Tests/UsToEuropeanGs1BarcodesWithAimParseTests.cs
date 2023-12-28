@@ -228,7 +228,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     }
 
     /// <summary>
-    /// Test calibration for a Estonian computer keyboard layout
+    /// Test calibration for an Estonian computer keyboard layout
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -384,7 +384,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     }
 
     /// <summary>
-    /// Test calibration for a Icelandic computer keyboard layout
+    /// Test calibration for an Icelandic computer keyboard layout
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -396,7 +396,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     }
 
     /// <summary>
-    /// Test calibration for a Irish computer keyboard layout
+    /// Test calibration for an Irish computer keyboard layout
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -408,7 +408,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     }
 
     /// <summary>
-    /// Test calibration for a Italian computer keyboard layout
+    /// Test calibration for an Italian computer keyboard layout
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -420,7 +420,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     }
 
     /// <summary>
-    /// Test calibration for a Italian (142) computer keyboard layout
+    /// Test calibration for an Italian (142) computer keyboard layout
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -1152,7 +1152,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Estonian computer keyboard layout
+    /// Returns the expected barcode data for an Estonian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> EstonianBarcodeData()
@@ -1451,7 +1451,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Icelandic computer keyboard layout
+    /// Returns the expected barcode data for an Icelandic computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> IcelandicBarcodeData()
@@ -1474,7 +1474,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Irish computer keyboard layout
+    /// Returns the expected barcode data for an Irish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> IrishBarcodeData()
@@ -1497,7 +1497,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Italian (142) computer keyboard layout
+    /// Returns the expected barcode data for an Italian (142) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> Italian142BarcodeData()
@@ -1520,7 +1520,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     }
 
     /// <summary>
-    /// Returns the expected barcode data for a Italian computer keyboard layout
+    /// Returns the expected barcode data for an Italian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
     private static Dictionary<string, string> ItalianBarcodeData()

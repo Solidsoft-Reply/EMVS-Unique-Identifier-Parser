@@ -326,7 +326,7 @@ public class PackIdentifier : IPackIdentifier
     }
 
     /// <summary>
-    ///   Adds a GS1-recognised NHRN national number the the national number collection.
+    ///   Adds a GS1-recognised NHRN national number to the national number collection.
     /// </summary>
     /// <remarks>Any other national numbers will be found in the Elements collection of a record.</remarks>
     /// <param name="market">The market that assigned the NHRN.</param>
@@ -384,7 +384,7 @@ public class PackIdentifier : IPackIdentifier
     }
 
     /// <summary>
-    ///   Adds a barcode record to the records collection.
+    ///   Adds a barcode record to the record collection.
     /// </summary>
     /// <param name="record">The barcode record to be added.</param>
     public void AddRecord(IRecord record)

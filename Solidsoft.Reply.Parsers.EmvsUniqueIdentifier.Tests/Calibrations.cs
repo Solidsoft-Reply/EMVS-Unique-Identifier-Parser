@@ -572,5 +572,5 @@ public static class Calibrations
 
     public const string UnitedKingdomVariant2Calibration = """{"aimFlagCharacterSequence":"]","characterMap":{"@":"\"","\u00a3":"#","\"":"\u001e","#":"\\","~":"|","\u00ac":"~"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^`{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","keyboardScript":"Latin"}""";
 
-    public const string UnitedKingdomVariant3Calibration = """{"aimFlagCharacterSequence":"]","characterMap":{"@":"\"","\u00a3":"#","\"":"@","#":"\\","~":"|","\u00ac":"~","\u0000":"\u001c"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^`{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","keyboardScript":"Latin"}""";
+    public const string UnitedKingdomVariant3Calibration = """{"aimFlagCharacterSequence":"]","characterMap":{"@":"\"","\u00a3":"#","\"":"@","#":"\\","~":"|","\u00ac":"~"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^`{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","keyboardScript":"Latin"}""";
 }

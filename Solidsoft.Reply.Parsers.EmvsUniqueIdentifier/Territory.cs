@@ -38,7 +38,7 @@ public enum Territory
     /// <remarks>
     ///   The German market accepts packs encoded using either of two schemes - GS1 (FNC1, only - Format 05 is not allowed)
     ///   and PPN (Format 06 - the IFA specification is based on the ANSI ASC 10.8.2 materials handling standard, although it
-    ///   no longer fully complies with that standard - specifically with regards to the character set and letter casing
+    ///   no longer fully complies with that standard - specifically with regard to the character set and letter casing
     ///   allows in serial numbers and batch identifiers).
     /// </remarks>
     Germany

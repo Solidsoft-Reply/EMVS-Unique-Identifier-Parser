@@ -52,7 +52,7 @@ public static class WinApi
         uint wMsgFilterMin, 
         uint wMsgFilterMax);
 
-    // Create a window, but accept a atom value.  
+    // Create a window, but accept an atom value.  
     [DllImport("user32.dll", SetLastError = true, EntryPoint = "CreateWindowExW")]
     internal static extern IntPtr CreateWindowEx(
         WindowStylesEx dwExStyle,

@@ -99,7 +99,7 @@ public class Calibrate : IController
     /// <summary>
     /// The current calibration token enumerator.
     /// </summary>
-    private IEnumerator<CalibrationToken> calibrationTokens;
+    private IEnumerator<CalibrationToken> _calibrationTokens;
 #endif
 
     /// <summary>
@@ -260,9 +260,9 @@ public class Calibrate : IController
             var token = _parser.Calibrator.Calibrate(input, _currentCalibrationToken);
             _currentCalibrationToken = token;
 #else
-        if (this.calibrationTokens != null)
+        if (_calibrationTokens != null)
         {
-            var token = _parser.Calibrator.Calibrate(input, this.calibrationTokens.Current);
+            var token = _parser.Calibrator.Calibrate(input, _calibrationTokens.Current);
 #endif
 
 #if SHORTCIRCUIT_CALIBRATION
@@ -309,7 +309,7 @@ public class Calibrate : IController
         {
             _calibrationView.SetValue("CurrentCalibrationToken", _currentCalibrationToken);
 #else
-        if (this.calibrationTokens?.MoveNext() ?? false)
+        if (_calibrationTokens?.MoveNext() ?? false)
         {
 #endif
         // Destroy the popup calibration barcode window
@@ -406,7 +406,7 @@ public class Calibrate : IController
         _currentCalibrationToken = default;
         _calibrationView.SetValue("CurrentCalibrationToken", default(CalibrationToken));
 #else
-        calibrationTokens = null;
+        _calibrationTokens = null;
         _calibrationView.SetValue("CalibrationTokens", null);
 #endif
         _remainingCalibrationTokens = -1;
@@ -431,7 +431,7 @@ public class Calibrate : IController
 #if STATELESS_MODEL
         if (_currentCalibrationToken == default)
 #else
-        if (this.calibrationTokens == null)
+        if (_calibrationTokens == null)
 #endif
         {
             _parser.Calibrator.AssessFormatnnSupport = IncludeFormatnnTests;
@@ -445,20 +445,20 @@ public class Calibrate : IController
             _calibrationView.SetValue("CurrentCalibrationToken", _currentCalibrationToken);
 #else
 #if SMALL_BARCODES
-            this.calibrationTokens = _parser.Calibrator.CalibrationTokens(18F, DataMatrixSize.Dm24X24).GetEnumerator();
+            _calibrationTokens = _parser.Calibrator.CalibrationTokens(18F, DataMatrixSize.Dm24X24).GetEnumerator();
 #else
             this.calibrationTokens = _parser.Calibrator.CalibrationTokens(18F).GetEnumerator();
 #endif
 
-            _calibrationView.SetValue("CalibrationTokens", this.calibrationTokens);
-            this.calibrationTokens.MoveNext();
+            _calibrationView.SetValue("CalibrationTokens", _calibrationTokens);
+            _calibrationTokens.MoveNext();
 #endif
         }
 
 #if STATELESS_MODEL
         if (_currentCalibrationToken.BitmapStream is { CanRead: true })
 #else
-        if (this.calibrationTokens.Current.BitmapStream is { CanRead: true })
+        if (_calibrationTokens.Current.BitmapStream is { CanRead: true })
 #endif
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -467,7 +467,7 @@ public class Calibrate : IController
 #if STATELESS_MODEL
                     _currentCalibrationToken.BitmapStream,
 #else
-                    this.calibrationTokens.Current.BitmapStream,
+                    _calibrationTokens.Current.BitmapStream,
 #endif
                     pm => _postMessage = pm,
                     _inputHandler.SendKey);
@@ -480,10 +480,10 @@ public class Calibrate : IController
             }
 #else
 #pragma warning disable S2589
-            if (this.calibrationTokens is not null)
+            if (_calibrationTokens is not null)
 #pragma warning restore S2589
             {
-                _remainingCalibrationTokens = this.calibrationTokens.Current.Remaining;
+                _remainingCalibrationTokens = _calibrationTokens.Current.Remaining;
             }
 #endif
         }
@@ -492,7 +492,7 @@ public class Calibrate : IController
         if (_currentCalibrationToken.BitmapStream == default)
 #else
 #pragma warning disable S2589
-        if (this.calibrationTokens?.Current.BitmapStream == null)
+        if (_calibrationTokens?.Current.BitmapStream == null)
 #pragma warning restore S2589
 #endif
         {

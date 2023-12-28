@@ -76,17 +76,17 @@ public class PackIdentifier : IPackIdentifier
     ///   or national identifier was assigned by an issuing agency, not necessarily the country of origin
     ///   of the pharmaceutical product.
     /// </summary>
-    public CompanyPrefix IssuingAgencyCompanyPrefix 
+    public CountryCode IssuingAgencyCountryCode 
     {
         get
         {
             return Scheme == Scheme.Ifa
-                       ? CompanyPrefix.Germany
+                       ? CountryCode.Germany
                        : ResolveGs1Country();
 
-            CompanyPrefix ResolveGs1Country() =>
+            CountryCode ResolveGs1Country() =>
                 string.IsNullOrWhiteSpace(ProductCode)
-                    ? CompanyPrefix.Unknown
+                    ? CountryCode.Unknown
                     : ProductCode.ResolveGtinNtinToGs1Country();
         }
     }
@@ -161,7 +161,7 @@ public class PackIdentifier : IPackIdentifier
                         string.Format(
                             CultureInfo.CurrentCulture,
                             Resources.Packs_Error_002,
-                            multipleBatchIdentifiers ? Resources.SubstituteUnique : string.Empty),
+                            multipleBatchIdentifiers ? string.Empty : Resources.SubstituteUnique),
                         Scheme == Scheme.Gs1 ? "10" : GetIfaBatchElementId(),
                         Scheme == Scheme.Gs1 ? "BATCH/LOT" : GetIfaBatchElementTitle(),
                         0));
@@ -182,7 +182,7 @@ public class PackIdentifier : IPackIdentifier
                         string.Format(
                             CultureInfo.CurrentCulture,
                             Resources.Packs_Error_003,
-                            multipleExpiryDate ? Resources.SubstituteUnique : "n"),
+                            multipleExpiryDate ? string.Empty : Resources.SubstituteUnique),
                         Scheme == Scheme.Gs1 ? "17" : GetIfaExpiryElementId(),
                         Scheme == Scheme.Gs1 ? "USE BY OR EXPIRY" : GetIfaExpiryElementTitle(),
                         0));
@@ -207,7 +207,7 @@ public class PackIdentifier : IPackIdentifier
                     string.Format(
                         CultureInfo.CurrentCulture,
                         Resources.Packs_Error_004,
-                        multipleSerialNumber ? Resources.SubstituteUnique : string.Empty),
+                        multipleSerialNumber ? string.Empty : Resources.SubstituteUnique),
                     Scheme == Scheme.Gs1 ? "21" : GetIfaSerialElementId(),
                     Scheme == Scheme.Gs1 ? "SERIAL" : GetIfaSerialElementTitle(),
                     0));

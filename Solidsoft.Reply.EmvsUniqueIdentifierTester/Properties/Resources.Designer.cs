@@ -367,6 +367,15 @@ namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to do not submit to national system.
+        /// </summary>
+        internal static string DoNotSubmitToNationalSystem {
+            get {
+                return ResourceManager.GetString("DoNotSubmitToNationalSystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         internal static string Error {
@@ -412,11 +421,29 @@ namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to invalid.
+        /// </summary>
+        internal static string Invalid {
+            get {
+                return ResourceManager.GetString("Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  □ represents an invalid character .
         /// </summary>
         internal static string InvalidCharacterPlaceHolderMessage {
             get {
                 return ResourceManager.GetString("InvalidCharacterPlaceHolderMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Company or national identifier assigned by issuing agency in {0}..
+        /// </summary>
+        internal static string IssuingAgencyCountry {
+            get {
+                return ResourceManager.GetString("IssuingAgencyCountry", resourceCulture);
             }
         }
         
@@ -475,6 +502,15 @@ namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to nothing.
+        /// </summary>
+        internal static string Nothing {
+            get {
+                return ResourceManager.GetString("Nothing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OPTIONS.
         /// </summary>
         internal static string Options {
@@ -489,6 +525,33 @@ namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties {
         internal static string SaveError {
             get {
                 return ResourceManager.GetString("SaveError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to submit to national system.
+        /// </summary>
+        internal static string SubmitToNationalSystem {
+            get {
+                return ResourceManager.GetString("SubmitToNationalSystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to unknown.
+        /// </summary>
+        internal static string Unknown {
+            get {
+                return ResourceManager.GetString("Unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to valid.
+        /// </summary>
+        internal static string Valid {
+            get {
+                return ResourceManager.GetString("Valid", resourceCulture);
             }
         }
         

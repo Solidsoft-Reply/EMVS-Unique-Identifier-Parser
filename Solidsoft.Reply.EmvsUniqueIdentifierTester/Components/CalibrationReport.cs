@@ -77,7 +77,7 @@ internal class CalibrationReport : IComponent {
 
         var testInformation = IncludeFormat06 ? Resources.IncludePpn : Resources.DidNotIncludePpn;
         ForegroundColor = ConsoleColor.Green;
-        WriteLine(Resources.InformationForPpn, Resources.Information, testInformation);
+        WriteLine(" " + Resources.InformationForPpn, Resources.Information, testInformation);
         ForegroundColor = ConsoleColor.Cyan;
         WriteLine();
     }

@@ -219,6 +219,9 @@
   <data name="DisplayParserResults_3" xml:space="preserve">
     <value>ERROR:</value>
   </data>
+  <data name="DoNotSubmitToNationalSystem" xml:space="preserve">
+    <value>do not submit to national system</value>
+  </data>
   <data name="Error" xml:space="preserve">
     <value>Error</value>
   </data>
@@ -234,8 +237,14 @@
   <data name="Initialise_1" xml:space="preserve">
     <value>Press any key to continue...</value>
   </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>invalid</value>
+  </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
     <value> □ represents an invalid character </value>
+  </data>
+  <data name="IssuingAgencyCountry" xml:space="preserve">
+    <value>Company or national identifier assigned by issuing agency in {0}.</value>
   </data>
   <data name="ListIntPtrCastError" xml:space="preserve">
     <value>GCHandle Target could not be cast as List&lt;IntPtr&gt;</value>
@@ -255,11 +264,23 @@
   <data name="MenuExit" xml:space="preserve">
     <value>Exit</value>
   </data>
+  <data name="Nothing" xml:space="preserve">
+    <value>nothing</value>
+  </data>
   <data name="Options" xml:space="preserve">
     <value>OPTIONS</value>
   </data>
   <data name="SaveError" xml:space="preserve">
     <value>The calibration was not saved{0}</value>
+  </data>
+  <data name="SubmitToNationalSystem" xml:space="preserve">
+    <value>submit to national system</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>unknown</value>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>valid</value>
   </data>
   <data name="VtSequencesNotSupported" xml:space="preserve">
     <value>The application requires VT sequences which are not supported on this platform.</value>

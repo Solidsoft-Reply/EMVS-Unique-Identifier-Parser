@@ -1010,16 +1010,16 @@ internal static partial class BaseParser
                     // ReSharper disable once SwitchStatementMissingSomeCases
                     switch (country)
                     {
-                        case CompanyPrefix.Germany:
+                        case CountryCode.Germany:
                             nhrnMarket = NhrnMarket.Germany;
-                            goto case CompanyPrefix.Portugal;
-                        case CompanyPrefix.FranceAndMonaco:
+                            goto case CountryCode.Portugal;
+                        case CountryCode.FranceAndMonaco:
                             nhrnMarket = NhrnMarket.France;
-                            goto case CompanyPrefix.Portugal;
-                        case CompanyPrefix.SpainAndAndorra:
+                            goto case CountryCode.Portugal;
+                        case CountryCode.SpainAndAndorra:
                             nhrnMarket = NhrnMarket.Spain;
-                            goto case CompanyPrefix.Portugal;
-                        case CompanyPrefix.Portugal:
+                            goto case CountryCode.Portugal;
+                        case CountryCode.Portugal:
                             if (packIdentifier.NationalNumbers.ContainsKey(nhrnMarket) && 
                                 packIdentifier.ParseExceptions.All(ex => ex.ErrorNumber != 2))
                             {

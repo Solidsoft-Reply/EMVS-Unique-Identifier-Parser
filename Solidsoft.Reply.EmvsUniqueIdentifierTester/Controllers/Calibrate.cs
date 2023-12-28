@@ -167,8 +167,6 @@ public class Calibrate : IController
 #if STATELESS_MODEL
         _parser = new StatelessParser();
 #else
-        ////Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr-FR");
-        //Thread.CurrentThread.CurrentUICulture = new CultureInfo("fr-FR");
         _parser = new Parser();
 #endif
 

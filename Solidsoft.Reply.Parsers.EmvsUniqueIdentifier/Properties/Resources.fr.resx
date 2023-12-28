@@ -122,19 +122,19 @@
     <comment>Error</comment>
   </data>
   <data name="Packs_Error_001" xml:space="preserve">
-    <value>Le code-barres ne contient pas de code produit {0}.</value>
+    <value>Le code-barres ne contient pas de code produit{0}.</value>
     <comment>Error</comment>
   </data>
   <data name="Packs_Error_002" xml:space="preserve">
-    <value>Le code-barres ne contient pas d'identifiant de lot {0}.</value>
+    <value>Le code-barres ne contient pas d'identifiant de lot{0}.</value>
     <comment>Error</comment>
   </data>
   <data name="Packs_Error_003" xml:space="preserve">
-    <value>Le code-barres ne contient pas de date d'expiration {0}.</value>
+    <value>Le code-barres ne contient pas de date d'expiration{0}.</value>
     <comment>Error</comment>
   </data>
   <data name="Packs_Error_004" xml:space="preserve">
-    <value>Le code-barres ne contient pas de numéro de série {0}.</value>
+    <value>Le code-barres ne contient pas de numéro de série{0}.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_001" xml:space="preserve">
@@ -226,6 +226,6 @@
     <comment>Error</comment>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value>unique</value>
+    <value> unique</value>
   </data>
 </root>

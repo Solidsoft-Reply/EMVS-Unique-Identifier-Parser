@@ -122,19 +122,19 @@
     <comment>Error</comment>
   </data>
   <data name="Packs_Error_001" xml:space="preserve">
-    <value>Der Barcode enthält keinen {0} Produktcode.</value>
+    <value>Der Barcode enthält keinen{0} Produktcode.</value>
     <comment>Error</comment>
   </data>
   <data name="Packs_Error_002" xml:space="preserve">
-    <value>Der Barcode enthält keinen {0} Chargenidentifikator.</value>
+    <value>Der Barcode enthält keinen{0} Chargenidentifikator.</value>
     <comment>Error</comment>
   </data>
   <data name="Packs_Error_003" xml:space="preserve">
-    <value>Der Barcode enthält kein {0} Verfallsdatum.</value>
+    <value>Der Barcode enthält kein{0} Verfallsdatum.</value>
     <comment>Error</comment>
   </data>
   <data name="Packs_Error_004" xml:space="preserve">
-    <value>Der Barcode enthält keine {0} Seriennummer.</value>
+    <value>Der Barcode enthält keine{0} Seriennummer.</value>
     <comment>Error</comment>
   </data>
   <data name="Parser_Error_001" xml:space="preserve">

@@ -219,6 +219,9 @@
   <data name="DisplayParserResults_3" xml:space="preserve">
     <value>ERREUR :</value>
   </data>
+  <data name="DoNotSubmitToNationalSystem" xml:space="preserve">
+    <value>ne pas soumettre au système national</value>
+  </data>
   <data name="Error" xml:space="preserve">
     <value>Erreur</value>
   </data>
@@ -229,13 +232,19 @@
     <value>Information</value>
   </data>
   <data name="InformationForPpn" xml:space="preserve">
-    <value>{0} : Tests de calibration {1} pour les codes-barres Format 05 et Format 06 (PPN allemand).</value>
+    <value>{0}: Tests de calibration {1} pour les codes-barres Format 05 et Format 06 (PPN allemand).</value>
   </data>
   <data name="Initialise_1" xml:space="preserve">
     <value>Appuyez sur une touche pour continuer...</value>
   </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>invalide</value>
+  </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
     <value> □ représente un caractère invalide</value>
+  </data>
+  <data name="IssuingAgencyCountry" xml:space="preserve">
+    <value>Identifiant national ou de société attribué par l'organisme émetteur dans {0}.</value>
   </data>
   <data name="ListIntPtrCastError" xml:space="preserve">
     <value>La cible GCHandle ne peut pas être convertie en List&lt;IntPtr&gt;</value>
@@ -255,11 +264,23 @@
   <data name="MenuExit" xml:space="preserve">
     <value>Quitter</value>
   </data>
+  <data name="Nothing" xml:space="preserve">
+    <value>rien</value>
+  </data>
   <data name="Options" xml:space="preserve">
     <value>OPTIONS</value>
   </data>
   <data name="SaveError" xml:space="preserve">
     <value>La calibration n'a pas été sauvegardée{0}</value>
+  </data>
+  <data name="SubmitToNationalSystem" xml:space="preserve">
+    <value>soumettre au système national</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>inconnu</value>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>valide</value>
   </data>
   <data name="VtSequencesNotSupported" xml:space="preserve">
     <value>L'application nécessite des séquences VT qui ne sont pas prises en charge sur cette plateforme.</value>

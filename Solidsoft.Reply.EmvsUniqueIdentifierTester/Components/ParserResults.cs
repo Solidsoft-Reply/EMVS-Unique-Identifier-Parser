@@ -342,13 +342,13 @@ internal class ParserResults : IComponent {
         var isValid = PackIdentifier.IsValid;
         BackgroundColor = isValid ? ConsoleColor.DarkGreen : ConsoleColor.Red;
         ForegroundColor = ConsoleColor.White;
-        Write(isValid ? " valid " : " invalid ");
+        Write(isValid ? $" {Resources.Valid} " : $" {Resources.Invalid} ");
         ResetColor();
         Write(@"  ");
         BackgroundColor = PackIdentifier.Submit ? ConsoleColor.DarkGreen : ConsoleColor.Red;
         ForegroundColor = ConsoleColor.White;
         Write(
-            PackIdentifier.Submit ? " submit to national system " : " do not submit to national system ");
+            PackIdentifier.Submit ? $" {Resources.SubmitToNationalSystem} " : $" {Resources.DoNotSubmitToNationalSystem} ");
         ResetColor();
         WriteLine();
 
@@ -370,31 +370,33 @@ internal class ParserResults : IComponent {
         if (PackIdentifierFound) {
             if (identifier != null) {
                 // ReSharper disable once SwitchStatementMissingSomeCases
-                switch (identifier.IssuingAgencyCompanyPrefix) {
-                    case CompanyPrefix.UpcACompatibleGtin8:
-                    case CompanyPrefix.UpcACompatibleUnitedStatesAndCanada:
-                    case CompanyPrefix.UpcACompatibleRestrictedCirculation:
-                    case CompanyPrefix.UpcACompatibleUnitedStatesDrugs:
-                    case CompanyPrefix.UpcACompatibleUnitedStatesReserved:
-                    case CompanyPrefix.RestrictedCirculation:
-                    case CompanyPrefix.GlobalOffice:
-                    case CompanyPrefix.GeneralManagerNumber:
-                    case CompanyPrefix.UnitedKingdomOfficeGtin8Allocation:
-                    case CompanyPrefix.GlobalOfficeGtin8Allocation:
-                    case CompanyPrefix.SerialPublicationIssn:
-                    case CompanyPrefix.RefundReceipt:
-                    case CompanyPrefix.CouponIdentificationForCommonCurrencyArea:
-                    case CompanyPrefix.CouponIdentification:
-                    case CompanyPrefix.BooklandIsbn:
-                    case CompanyPrefix.BooklandIsbnIsmn:
-                    case CompanyPrefix.Unknown:
+                switch (identifier.IssuingAgencyCountryCode) {
+                    case CountryCode.UpcACompatibleGtin8:
+                    case CountryCode.UpcACompatibleUnitedStatesAndCanada:
+                    case CountryCode.UpcACompatibleRestrictedCirculation:
+                    case CountryCode.UpcACompatibleUnitedStatesDrugs:
+                    case CountryCode.UpcACompatibleUnitedStatesReserved:
+                    case CountryCode.RestrictedCirculation:
+                    case CountryCode.GlobalOffice:
+                    case CountryCode.GeneralManagerNumber:
+                    case CountryCode.UnitedKingdomOfficeGtin8Allocation:
+                    case CountryCode.GlobalOfficeGtin8Allocation:
+                    case CountryCode.SerialPublicationIssn:
+                    case CountryCode.RefundReceipt:
+                    case CountryCode.CouponIdentificationForCommonCurrencyArea:
+                    case CountryCode.CouponIdentification:
+                    case CountryCode.BooklandIsbn:
+                    case CountryCode.BooklandIsbnIsmn:
+                    case CountryCode.Unknown:
                         WriteLine(
-                            $@" {identifier.IssuingAgencyCompanyPrefix.GetCompanyPrefixDescription()}.");
+                            $@" {identifier.IssuingAgencyCountryCode.GetCompanyPrefixDescription()}.");
 
                         break;
                     default:
+                        var issuingAgencyMessage = string.Format(" " + Resources.IssuingAgencyCountry,
+                            identifier.IssuingAgencyCountryCode.GetCompanyPrefixDescription());
                         WriteLine(
-                            $@" Company or national identifier assigned by issuing agency in {identifier.IssuingAgencyCompanyPrefix.GetCompanyPrefixDescription()}.");
+                            $@" {issuingAgencyMessage}");
                         break;
                 }
             }
@@ -413,8 +415,8 @@ internal class ParserResults : IComponent {
                     var elementIdentifier = string.IsNullOrWhiteSpace(element.Identifier)
                         ? string.Empty
                         : $" ({element.Identifier})";
-                    var title = string.IsNullOrEmpty(element.Title) ? "<unknown>" : element.Title;
-                    var data = string.IsNullOrEmpty(element.Data) ? "<nothing>" : element.Data;
+                    var title = string.IsNullOrEmpty(element.Title) ? $"<{Resources.Unknown}>" : element.Title;
+                    var data = string.IsNullOrEmpty(element.Data) ? $"<{Resources.Nothing}>" : element.Data;
                     Write($@"{elementIdentifier} {title} = {data}");
                     WriteLine();
                 }

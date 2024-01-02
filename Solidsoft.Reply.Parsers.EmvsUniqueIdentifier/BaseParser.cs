@@ -22,6 +22,9 @@
 
 // ReSharper disable CommentTypo
 
+using System.Collections.Immutable;
+using System.Collections.ObjectModel;
+
 #pragma warning disable S907
 [assembly: CLSCompliant(true)]
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
@@ -190,7 +193,7 @@ internal static partial class BaseParser
             // Collect identifier information accross multiple records to check for 
             // ambiguities both within and between records.
             var candidateIdentifiers =
-                new List<(Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry)>();
+                new List<(Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers)>();
 
             // Process the pack identifier fields in each record, building a unique pack
             // identifier if possible.
@@ -226,11 +229,15 @@ internal static partial class BaseParser
                 }
 
                 // If the record level only contains unique identifier elements, continue processing.
-                if (isUnique) {
+                if (isUnique)
+                {
                     candidateIdentifiers.Add(
-                        (scheme: packIdentifier.Scheme, productCode: packIdentifier.ProductCode,
+                        (scheme: packIdentifier.Scheme, 
+                         productCode: packIdentifier.ProductCode,
                          serialNumber: packIdentifier.SerialNumber,
-                         batchIdentifier: packIdentifier.BatchIdentifier, expiry: packIdentifier.Expiry));
+                         batchIdentifier: packIdentifier.BatchIdentifier, 
+                         expiry: packIdentifier.Expiry,
+                         nationalNumbers: new ReadOnlyDictionary<NhrnMarket, string>(packIdentifier.NationalNumbers.ToImmutableDictionary())));
 
                     packIdentifier.ResetIdentifier();
                     continue;
@@ -250,8 +257,14 @@ internal static partial class BaseParser
 
                         // If a single distinct candidate exists, we will return it.
                         var valueTuples =
-                            distinctCandidates as (Scheme scheme, string productCode, string serialNumber, string
-                                batchIdentifier, string expiry)[] ?? distinctCandidates.ToArray();
+                            distinctCandidates as (
+                                Scheme scheme,
+                                string productCode, 
+                                string serialNumber, 
+                                string
+                                batchIdentifier, 
+                                string expiry,
+                                IReadOnlyDictionary<NhrnMarket, string> nationalNumbers)[] ?? distinctCandidates.ToArray();
 
                         if (valueTuples.Length == 1)
                         {
@@ -461,8 +474,7 @@ internal static partial class BaseParser
             return PostProcessIdentifier(packIdentifier);
 
             void SetIdentifier(
-                (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry)
-                    candidate)
+                (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers) candidate)
             {
                 packIdentifier.ResetIdentifier();
                 packIdentifier.Scheme = candidate.scheme;
@@ -470,6 +482,10 @@ internal static partial class BaseParser
                 packIdentifier.SerialNumber = candidate.serialNumber;
                 packIdentifier.BatchIdentifier = candidate.batchIdentifier;
                 packIdentifier.Expiry = candidate.expiry;
+                foreach (var nationalNumber in candidate.nationalNumbers)
+                {
+                    packIdentifier.AddNationalNumber(nationalNumber.Key, nationalNumber.Value);
+                }
             }
         }
 
@@ -1702,17 +1718,17 @@ internal static partial class BaseParser
 
 
     // Comparer class for distint records used only in this contect
-    private sealed class DistinctRecordComparer : IEqualityComparer<(Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry)>
+    private sealed class DistinctRecordComparer : IEqualityComparer<(Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers)>
     {
         public bool Equals(
-            (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry) x,
-            (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry) y)
+            (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers) x,
+            (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers) y)
         {
             return x.productCode == y.productCode && x.serialNumber == y.serialNumber;
         }
 
         public int GetHashCode(
-            (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry) obj)
+            (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers) obj)
         {
             return obj.productCode.GetHashCode(StringComparison.Ordinal)
                  ^ obj.serialNumber.GetHashCode(StringComparison.Ordinal);

@@ -20,6 +20,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+// ReSharper disable UnusedMemberInSuper.Global
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Packs;
 
 using System.Collections.Generic;

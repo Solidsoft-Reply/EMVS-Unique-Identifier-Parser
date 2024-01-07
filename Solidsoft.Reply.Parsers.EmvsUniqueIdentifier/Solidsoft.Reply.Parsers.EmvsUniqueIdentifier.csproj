@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
     <LangVersion>11.0</LangVersion>
 	<ImplicitUsings>enable</ImplicitUsings>
 	<Nullable>enable</Nullable>
@@ -26,6 +26,7 @@
 		$(PackageReleaseNotes)
 	</Description>
 	<Version>1.0.3</Version>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
@@ -48,9 +49,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration.csproj" />
-	  <ProjectReference Include="..\..\Solidsoft.Reply.Parsers.HighCapacityAidc\Solidsoft.Reply.Parsers.HighCapacityAidc\Solidsoft.Reply.Parsers.HighCapacityAidc.csproj" />
+		<ProjectReference Include="C:\Users\ch.young\source\repos\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration.csproj" />
+		<ProjectReference Include="..\..\Solidsoft.Reply.Parsers.HighCapacityAidc\Solidsoft.Reply.Parsers.HighCapacityAidc\Solidsoft.Reply.Parsers.HighCapacityAidc.csproj" />
 	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+	</ItemGroup>
+
 	<ItemGroup>
 	  <Compile Update="Properties\Advice.Designer.cs">
 	    <DesignTime>True</DesignTime>
@@ -113,7 +119,4 @@
 		</None>
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Properties\_archive\" />
-	</ItemGroup>
 </Project>

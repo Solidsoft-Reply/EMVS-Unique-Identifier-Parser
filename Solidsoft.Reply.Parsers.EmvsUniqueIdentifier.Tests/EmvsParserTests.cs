@@ -1081,14 +1081,14 @@ public class EmvsParserTests
                                            "United Kingdom",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               {new[] {UnitedKingdomBaseline}, new List<string>()}
+                                               { [UnitedKingdomBaseline], new List<string>()}
                                            }
                                        },
                                        {
                                            "United Kingdom Partial",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               {new[] {UnitedKingdomBaselinePartial}, new List<string>()}
+                                               { [UnitedKingdomBaselinePartial], new List<string>()}
                                            }
                                        },
                                        {
@@ -1096,7 +1096,7 @@ public class EmvsParserTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] {BelgianFrenchBaseline},
+                                                   [BelgianFrenchBaseline],
                                                    new List<string>
                                                    {
                                                        BelgianFrenchDeadKey1, BelgianFrenchDeadKey2
@@ -1109,7 +1109,7 @@ public class EmvsParserTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] {BelgianFrenchBaselineNoNull},
+                                                   [BelgianFrenchBaselineNoNull],
                                                    new List<string>
                                                    {
                                                        BelgianFrenchDeadKey1NoNull, BelgianFrenchDeadKey2NoNull
@@ -1122,7 +1122,7 @@ public class EmvsParserTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] {GermanToGermanBaseline},
+                                                   [GermanToGermanBaseline],
                                                    new List<string>()
                                                }
                                            }
@@ -1132,7 +1132,7 @@ public class EmvsParserTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] {GermanToUkWithAimBaseline},
+                                                   [GermanToUkWithAimBaseline],
                                                    new List<string>()
                                                }
                                            }
@@ -1142,7 +1142,7 @@ public class EmvsParserTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] {SwissFrenchBaselineNoNull},
+                                                   [SwissFrenchBaselineNoNull],
                                                    new List<string>
                                                    {
                                                        SwissFrenchDeadKey1NoNull,
@@ -1158,8 +1158,7 @@ public class EmvsParserTests
                                            {
                                                {
                                                    // ReSharper disable once RedundantExplicitArrayCreation
-                                                   new string[]
-                                                   {
+                                                   [
                                                        SwissFrench2424BaselineA,
                                                        SwissFrench2424BaselineB,
                                                        SwissFrench2424BaselineC,
@@ -1167,7 +1166,7 @@ public class EmvsParserTests
                                                        SwissFrench2424BaselineE,
                                                        SwissFrench2424BaselineF,
                                                        SwissFrench2424BaselineG
-                                                   },
+                                                   ],
                                                    new List<string>
                                                    {
                                                        SwissFrench2424DeadKey1A,
@@ -1198,10 +1197,9 @@ public class EmvsParserTests
                                            {
                                                {
                                                    // ReSharper disable once RedundantExplicitArrayCreation
-                                                   new string[]
-                                                   {
+                                                   [
                                                        NotABaseline
-                                                   },
+                                                   ],
                                                    new List<string>
                                                    {
                                                        BelgianFrenchDeadKey1,
@@ -1216,10 +1214,9 @@ public class EmvsParserTests
                                            {
                                                {
                                                    // ReSharper disable once RedundantExplicitArrayCreation
-                                                   new string[]
-                                                   {
+                                                   [
                                                        BelgianFrenchBaseline
-                                                   },
+                                                   ],
                                                    new List<string>
                                                    {
                                                        NotADeadKey,
@@ -1234,10 +1231,9 @@ public class EmvsParserTests
                                            {
                                                {
                                                    // ReSharper disable once RedundantExplicitArrayCreation
-                                                   new string[]
-                                                   {
+                                                   [
                                                        EmptyBaseline
-                                                   },
+                                                   ],
                                                    new List<string>
                                                    {
                                                        BelgianFrenchDeadKey1,
@@ -1252,10 +1248,9 @@ public class EmvsParserTests
                                            {
                                                {
                                                    // ReSharper disable once RedundantExplicitArrayCreation
-                                                   new string[]
-                                                   {
+                                                   [
                                                        BelgianFrenchBaseline
-                                                   },
+                                                   ],
                                                    new List<string>
                                                    {
                                                        EmptyDeadKey,
@@ -1270,10 +1265,9 @@ public class EmvsParserTests
                                            {
                                                {
                                                    // ReSharper disable once RedundantExplicitArrayCreation
-                                                   new string[]
-                                                   {
+                                                   [
                                                        PartialBaseline
-                                                   },
+                                                   ],
                                                    new List<string>
                                                    {
                                                        BelgianFrenchDeadKey1,
@@ -1288,10 +1282,9 @@ public class EmvsParserTests
                                            {
                                                {
                                                    // ReSharper disable once RedundantExplicitArrayCreation
-                                                   new string[]
-                                                   {
+                                                   [
                                                        BelgianFrenchBaseline
-                                                   },
+                                                   ],
                                                    new List<string>
                                                    {
                                                        PartialDeadkey,
@@ -1306,10 +1299,9 @@ public class EmvsParserTests
                                            {
                                                {
                                                    // ReSharper disable once RedundantExplicitArrayCreation
-                                                   new string[]
-                                                   {
+                                                   [
                                                        BelgianFrenchDeadKey1
-                                                   },
+                                                   ],
                                                    new List<string>
                                                    {
                                                        BelgianFrenchDeadKey1,
@@ -1324,10 +1316,9 @@ public class EmvsParserTests
                                            {
                                                {
                                                    // ReSharper disable once RedundantExplicitArrayCreation
-                                                   new string[]
-                                                   {
+                                                   [
                                                        BelgianFrenchBaseline
-                                                   },
+                                                   ],
                                                    new List<string>
                                                    {
                                                        BelgianFrenchBaseline,

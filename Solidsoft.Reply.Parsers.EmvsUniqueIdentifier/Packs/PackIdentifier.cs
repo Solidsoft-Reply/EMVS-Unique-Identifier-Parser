@@ -76,6 +76,7 @@ public class PackIdentifier : IPackIdentifier
     ///   or national identifier was assigned by an issuing agency, not necessarily the country of origin
     ///   of the pharmaceutical product.
     /// </summary>
+    // ReSharper disable once UnusedMember.Global
     public CountryCode IssuingAgencyCountryCode 
     {
         get

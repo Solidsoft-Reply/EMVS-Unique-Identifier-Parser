@@ -29,8 +29,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using BarcodeScanner.Calibration;
-using System.Resources;
-
 
 /// <summary>
 ///   Represents an individual item of advice for a given condition.

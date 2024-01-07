@@ -20,15 +20,12 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using Solidsoft.Reply.BarcodeScanner.Calibration.DataMatrix;
-
 namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Controllers;
 
 using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using System.Runtime.InteropServices;
 using Platform.Windows;
 using Model;
@@ -39,7 +36,6 @@ using Parsers.EmvsUniqueIdentifier;
 using ConsoleMvc;
 using System.Threading;
 using static System.Console;
-using System.Globalization;
 
 /// <summary>
 /// Controls calibration mode.

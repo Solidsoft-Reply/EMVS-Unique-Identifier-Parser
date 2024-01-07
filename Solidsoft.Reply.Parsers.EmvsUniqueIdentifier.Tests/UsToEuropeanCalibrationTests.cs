@@ -832,7 +832,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.BelgianCommaBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.BelgianCommaBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.BelgianCommaDeadkeyBarcode1, UsToEuropeanGs1BarcodesWithAim.BelgianCommaDeadkeyBarcode2
@@ -845,7 +845,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.BelgianFrenchBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.BelgianFrenchBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.BelgianFrenchDeadkeyBarcode1,
@@ -859,7 +859,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.BelgianPeriodBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.BelgianPeriodBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.BelgianPeriodDeadkeyBarcode1, UsToEuropeanGs1BarcodesWithAim.BelgianPeriodDeadkeyBarcode2
@@ -871,21 +871,21 @@ public class UsToEuropeanCalibrationTests
                                            "Bulgarian",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.BulgarianBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.BulgarianBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Bulgarian (Latin)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.BulgarianLatinBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.BulgarianLatinBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Bulgarian (Phonetic)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.BulgarianPhoneticBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.BulgarianPhoneticBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -893,7 +893,8 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.BulgarianPhoneticTraditionalBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.BulgarianPhoneticTraditionalBaseline
+                                                   ],
                                                    new List<string>()
                                                }
                                            }
@@ -902,7 +903,7 @@ public class UsToEuropeanCalibrationTests
                                            "Bulgarian (Typewriter)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.BulgarianTypewriterBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.BulgarianTypewriterBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -910,7 +911,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.CzechBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.CzechBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.CzechDeadkeyBarcode1,
@@ -925,7 +926,7 @@ public class UsToEuropeanCalibrationTests
                                            "Czech Programmers",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.CzechProgrammersBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.CzechProgrammersBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -933,7 +934,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.CzechQwertyBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.CzechQwertyBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.CzechQwertyDeadkeyBarcode1,
@@ -949,7 +950,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.DanishBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.DanishBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.DanishDeadkeyBarcode1,
@@ -965,7 +966,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.DutchBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.DutchBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.DutchDeadkeyBarcode1,
@@ -982,7 +983,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.EstonianBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.EstonianBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.EstonianDeadkeyBarcode1,
@@ -998,7 +999,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.FinnishBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.FinnishBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.FinnishDeadkeyBarcode1,
@@ -1014,7 +1015,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.FinnishWithSamiBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.FinnishWithSamiBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.FinnishWithSamiDeadkeyBarcode1,
@@ -1030,7 +1031,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.FrenchBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.FrenchBaseline],
                                                    new List<string> { UsToEuropeanGs1BarcodesWithAim.FrenchDeadkeyBarcode1, UsToEuropeanGs1BarcodesWithAim.FrenchDeadkeyBarcode2 }
                                                }
                                            }
@@ -1040,7 +1041,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.GaelicBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.GaelicBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.GaelicDeadkeyBarcode1,
@@ -1054,7 +1055,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.GermanBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.GermanBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.GermanDeadkeyBarcode1,
@@ -1069,7 +1070,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.GermanIbmBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.GermanIbmBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.GermanIbmDeadkeyBarcode1,
@@ -1083,14 +1084,14 @@ public class UsToEuropeanCalibrationTests
                                            "Greek (220)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.Greek220Baseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.Greek220Baseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Greek (220) Latin",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.Greek220LatinBaseline }, new List<string>()}
+                                               { [UsToEuropeanGs1BarcodesWithAim.Greek220LatinBaseline], new List<string>()}
                                            }
                                        },
                                        {
@@ -1098,7 +1099,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.Greek319Baseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.Greek319Baseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.Greek319DeadkeyBarcode1,
@@ -1112,7 +1113,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.Greek319LatinBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.Greek319LatinBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.Greek319LatinDeadkeyBarcode1,
@@ -1129,7 +1130,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.GreekBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.GreekBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.GreekDeadkeyBarcode1,
@@ -1144,7 +1145,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.GreekLatinBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.GreekLatinBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.GreekLatinDeadkeyBarcode1,
@@ -1159,7 +1160,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.GreekPolytonicBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.GreekPolytonicBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.GreekPolytonicDeadkeyBarcode1,
@@ -1177,14 +1178,14 @@ public class UsToEuropeanCalibrationTests
                                            "Hungarian 101-key",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.Hungarian101KeyBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.Hungarian101KeyBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Hungarian",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.HungarianBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.HungarianBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1192,7 +1193,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.IcelandicBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.IcelandicBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.IcelandicDeadkeyBarcode1,
@@ -1207,7 +1208,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.IrishBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.IrishBaseline],
                                                    new List<string> { UsToEuropeanGs1BarcodesWithAim.IrishDeadkeyBarcode1 }
                                                }
                                            }
@@ -1216,14 +1217,14 @@ public class UsToEuropeanCalibrationTests
                                            "Italian (142)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.Italian142Baseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.Italian142Baseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Italian",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.ItalianBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.ItalianBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1231,7 +1232,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.LatvianBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.LatvianBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.LatvianDeadkeyBarcode1,
@@ -1245,7 +1246,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.LatvianQwertyBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.LatvianQwertyBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.LatvianQwertyDeadkeyBarcode1,
@@ -1259,7 +1260,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.LatvianStandardBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.LatvianStandardBaseline],
                                                    new List<string> { UsToEuropeanGs1BarcodesWithAim.LatvianStandardDeadkeyBarcode1 }
                                                }
                                            }
@@ -1268,21 +1269,21 @@ public class UsToEuropeanCalibrationTests
                                            "Lithuanian",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.LithuanianBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.LithuanianBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Lithuanian (IBM)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.LithuanianIbmBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.LithuanianIbmBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Lithuanian (Standard)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.LithuanianStandardBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.LithuanianStandardBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1290,7 +1291,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.LuxembourgishBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.LuxembourgishBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.LuxembourgishDeadkeyBarcode1,
@@ -1304,14 +1305,14 @@ public class UsToEuropeanCalibrationTests
                                            "Maltese 47-key",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.Maltese47KeyBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.Maltese47KeyBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Maltese 48-key",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.Maltese48KeyBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.Maltese48KeyBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1319,7 +1320,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.NorwegianBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.NorwegianBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.NorwegianDeadkeyBarcode1,
@@ -1334,7 +1335,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.NorwegianWithSamiBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.NorwegianWithSamiBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.NorwegianWithSamiDeadkeyBarcode1,
@@ -1349,7 +1350,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.Polish214Baseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.Polish214Baseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.Polish214DeadkeyBarcode1,
@@ -1363,7 +1364,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.PolishProgrammersBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.PolishProgrammersBaseline],
                                                    new List<string> { UsToEuropeanGs1BarcodesWithAim.PolishProgrammersDeadkeyBarcode1 }
                                                }
                                            }
@@ -1373,7 +1374,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.PortugueseBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.PortugueseBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.PortugueseDeadkeyBarcode1,
@@ -1388,28 +1389,29 @@ public class UsToEuropeanCalibrationTests
                                            "Romanian (Legacy)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.RomanianLegacyBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.RomanianLegacyBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Romanian (Programmers)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.RomanianProgrammersBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.RomanianProgrammersBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Romanian (Standard)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.RomanianStandardBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.RomanianStandardBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Sami Extended Finland-Sweden",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.SamiExtendedFinlandSwedenBaseline }, new List<string>
+                                               {
+                                                   [UsToEuropeanGs1BarcodesWithAim.SamiExtendedFinlandSwedenBaseline], new List<string>
                                                        {
                                                            UsToEuropeanGs1BarcodesWithAim.SamiExtendedFinlandSwedenDeadkeyBarcode1,
                                                            UsToEuropeanGs1BarcodesWithAim.SamiExtendedFinlandSwedenDeadkeyBarcode2
@@ -1421,7 +1423,8 @@ public class UsToEuropeanCalibrationTests
                                            "Sami Extended Norway",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.SamiExtendedNorwayBaseline },
+                                               {
+                                                   [UsToEuropeanGs1BarcodesWithAim.SamiExtendedNorwayBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.SamiExtendedNorwayDeadkeyBarcode1
@@ -1435,7 +1438,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.SlovakBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.SlovakBaseline],
                                                    new List<string> { UsToEuropeanGs1BarcodesWithAim.SlovakDeadkeyBarcode1 }
                                                }
                                            }
@@ -1445,7 +1448,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.SlovakQwertyBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.SlovakQwertyBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.SlovakQwertyDeadkeyBarcode1,
@@ -1460,7 +1463,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.SlovenianBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.SlovenianBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.SlovenianDeadkeyBarcode1,
@@ -1474,7 +1477,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.SorbianExtendedBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.SorbianExtendedBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.SorbianExtendedDeadkeyBarcode1,
@@ -1490,7 +1493,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.SorbianStandardBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.SorbianStandardBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.SorbianStandardDeadkeyBarcode1,
@@ -1505,7 +1508,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.SorbianStandardLegacyBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.SorbianStandardLegacyBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.SorbianStandardLegacyDeadkeyBarcode1,
@@ -1521,7 +1524,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.SpanishBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.SpanishBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.SpanishDeadkeyBarcode1,
@@ -1536,7 +1539,7 @@ public class UsToEuropeanCalibrationTests
                                            "Spanish Variation",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.SpanishVariationBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.SpanishVariationBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1544,7 +1547,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.StandardBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.StandardBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.StandardDeadkeyBarcode1,
@@ -1558,7 +1561,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.SwedishBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.SwedishBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.SwedishDeadkeyBarcode1,
@@ -1574,7 +1577,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.SwedishWithSamiBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.SwedishWithSamiBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.SwedishWithSamiDeadkeyBarcode1,
@@ -1590,7 +1593,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.SwissFrenchBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.SwissFrenchBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.SwissFrenchDeadkeyBarcode1,
@@ -1605,7 +1608,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.SwissGermanBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.SwissGermanBaseline],
                                                    new List<string>
                                                    {
                                                        UsToEuropeanGs1BarcodesWithAim.SwissGermanDeadkeyBarcode1,
@@ -1619,7 +1622,7 @@ public class UsToEuropeanCalibrationTests
                                            "United Kingdom",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UsToEuropeanGs1BarcodesWithAim.UnitedKingdomBaseline }, new List<string>() }
+                                               { [UsToEuropeanGs1BarcodesWithAim.UnitedKingdomBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1627,7 +1630,7 @@ public class UsToEuropeanCalibrationTests
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UsToEuropeanGs1BarcodesWithAim.UnitedKingdomExtendedBaseline },
+                                                   [UsToEuropeanGs1BarcodesWithAim.UnitedKingdomExtendedBaseline],
                                                    new List<string> { UsToEuropeanGs1BarcodesWithAim.UnitedKingdomExtendedDeadkeyBarcode1 }
                                                }
                                            }

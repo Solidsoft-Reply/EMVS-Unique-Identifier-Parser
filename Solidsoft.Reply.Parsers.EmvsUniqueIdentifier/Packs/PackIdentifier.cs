@@ -26,6 +26,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
+using System.Text;
 
 using Gs1Ai;
 
@@ -36,6 +37,28 @@ using Properties;
 /// </summary>
 public class PackIdentifier : IPackIdentifier
 {
+#if NET8_0_OR_GREATER
+    /// <summary>
+    /// Composite format for Packs_Error_001.
+    /// </summary>
+    private static readonly CompositeFormat PacksError001 = CompositeFormat.Parse(Resources.Packs_Error_001);
+
+    /// <summary>
+    /// Composite format for Packs_Error_002.
+    /// </summary>
+    private static readonly CompositeFormat PacksError002 = CompositeFormat.Parse(Resources.Packs_Error_002);
+
+    /// <summary>
+    /// Composite format for Packs_Error_003.
+    /// </summary>
+    private static readonly CompositeFormat PacksError003 = CompositeFormat.Parse(Resources.Packs_Error_003);
+
+    /// <summary>
+    /// Composite format for Packs_Error_004.
+    /// </summary>
+    private static readonly CompositeFormat PacksError004 = CompositeFormat.Parse(Resources.Packs_Error_004);
+#endif
+    
     /// <summary>
     ///   Initializes a new instance of the <see cref="PackIdentifier" /> class.
     /// </summary>
@@ -45,6 +68,7 @@ public class PackIdentifier : IPackIdentifier
         ParseExceptions = new List<ParseException>();
         NationalNumbers = new Dictionary<NhrnMarket, string>();
         Records = new List<IRecord>();
+        RawData = string.Empty;
     }
 
     /// <summary>
@@ -137,9 +161,12 @@ public class PackIdentifier : IPackIdentifier
                         Scheme == Scheme.Gs1 ? 10 : GetIfaProductCodeErrorNumber(),
                         string.Format(
                             CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                            PacksError001,
+#else
                             Resources.Packs_Error_001,
-                            multipleProductCodes ? Resources.SubstituteUnique : string.Empty),
-                        Scheme == Scheme.Gs1 ? "01" : GetIfaProductCodeElementId(),
+#endif
+                            multipleProductCodes ? Resources.SubstituteUnique : string.Empty), Scheme == Scheme.Gs1 ? "01" : GetIfaProductCodeElementId(),
                         Scheme == Scheme.Gs1 ? "GTIN" : GetIfaProductCodeElementTitle(),
                         0));
             }
@@ -161,7 +188,11 @@ public class PackIdentifier : IPackIdentifier
                         Scheme == Scheme.Unknown ? 7 : 30,
                         string.Format(
                             CultureInfo.CurrentCulture,
-                            Resources.Packs_Error_002,
+#if NET8_0_OR_GREATER
+                            PacksError002,
+#else
+                            Resources.Packs_Error_002, 
+#endif
                             multipleBatchIdentifiers ? string.Empty : Resources.SubstituteUnique),
                         Scheme == Scheme.Gs1 ? "10" : GetIfaBatchElementId(),
                         Scheme == Scheme.Gs1 ? "BATCH/LOT" : GetIfaBatchElementTitle(),
@@ -182,7 +213,11 @@ public class PackIdentifier : IPackIdentifier
                         Scheme == Scheme.Unknown ? 8 : 40,
                         string.Format(
                             CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                            PacksError003,
+#else
                             Resources.Packs_Error_003,
+#endif
                             multipleExpiryDate ? string.Empty : Resources.SubstituteUnique),
                         Scheme == Scheme.Gs1 ? "17" : GetIfaExpiryElementId(),
                         Scheme == Scheme.Gs1 ? "USE BY OR EXPIRY" : GetIfaExpiryElementTitle(),
@@ -207,7 +242,11 @@ public class PackIdentifier : IPackIdentifier
                     Scheme == Scheme.Unknown ? 9 : 50,
                     string.Format(
                         CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                        PacksError004,
+#else
                         Resources.Packs_Error_004,
+#endif
                         multipleSerialNumber ? string.Empty : Resources.SubstituteUnique),
                     Scheme == Scheme.Gs1 ? "21" : GetIfaSerialElementId(),
                     Scheme == Scheme.Gs1 ? "SERIAL" : GetIfaSerialElementTitle(),
@@ -308,6 +347,15 @@ public class PackIdentifier : IPackIdentifier
     public SymbologyValidity ValidSymbology { get; set; }
 
     /// <summary>
+    ///   Gets or set the raw data containing the pack identifier.
+    /// </summary>
+    /// <remarks>
+    ///   The raw data is provided, even if the parser cannot
+    ///   resolve the data into a pack identifier.
+    /// </remarks>
+    public string RawData { get; set; }
+
+    /// <summary>
     ///   Adds a pack identifier exception to the exception collection.
     /// </summary>
     /// <param name="exception">The exception to be added.</param>
@@ -353,7 +401,7 @@ public class PackIdentifier : IPackIdentifier
 
             var numberExceptions = sameNumberExceptions as ParseException[] ?? sameNumberExceptions.ToArray();
 
-            if (numberExceptions.Any())
+            if (numberExceptions.Length > 0)
             {
                 foreach (var sameNumberException in numberExceptions.ToList())
                 {
@@ -372,7 +420,7 @@ public class PackIdentifier : IPackIdentifier
             var packIdentifierExceptions =
                 sameNumberExceptions as PackIdentifierException[] ?? sameNumberExceptions.ToArray();
 
-            if (packIdentifierExceptions.Any())
+            if (packIdentifierExceptions.Length > 0)
             {
                 foreach (var sameNumberException in packIdentifierExceptions.ToList())
                 {

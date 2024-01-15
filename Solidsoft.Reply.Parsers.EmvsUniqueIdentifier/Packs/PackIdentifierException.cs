@@ -81,6 +81,7 @@ public class PackIdentifierException : Exception
     /// </summary>
     /// <param name="info">The serialization information.</param>
     /// <param name="context">The streaming context.</param>
+    [Obsolete("Formatter serialisation has been deprecated in .NET.", DiagnosticId = "SYSLIB0051")]
     protected PackIdentifierException(SerializationInfo info, StreamingContext context) : base(info, context)
     {
     }

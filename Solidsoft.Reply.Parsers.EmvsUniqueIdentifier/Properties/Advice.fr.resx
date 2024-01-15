@@ -329,6 +329,9 @@
     <value>Entrez manuellement les données dans votre logiciel de vérification pour vérifier les identifiants uniques PPN.;;Si nécessaire, configurez votre scanner de code-barres pour émuler un pavé numérique.</value>
     <comment>High</comment>
   </data>
+  <data name="Advice_390" xml:space="preserve">
+    <value>Essayez à nouveau.</value>
+  </data>
   <data name="Condition_100" xml:space="preserve">
     <value>Votre système lit les identifiants uniques de manière fiable.</value>
     <comment>Low</comment>
@@ -541,6 +544,9 @@
     <value>Votre système ne peut pas lire les caractères des codes-barres PPN.</value>
     <comment>High</comment>
   </data>
+  <data name="Condition_390" xml:space="preserve">
+    <value>Le test a échoué de manière inattendue.</value>
+  </data>
   <data name="Description_105" xml:space="preserve">
     <value>Cependant, vous n'avez pas testé la compatibilité pour les codes-barres PPN allemands. Votre système peut ne pas être en mesure de lire de manière fiable les codes-barres PPN allemands.</value>
     <comment>Low</comment>
@@ -700,5 +706,8 @@
   <data name="Description_355" xml:space="preserve">
     <value>Certains logiciels de vérification peuvent compenser cela en analysant les codes clés plutôt que les caractères.</value>
     <comment>High</comment>
+  </data>
+  <data name="Description_390" xml:space="preserve">
+    <value>Votre scanner de codes-barres ou votre système peut être lent ou il peut être affecté par un logiciel antivirus ou par un autre problème inattendu ou intermittent.</value>
   </data>
 </root>

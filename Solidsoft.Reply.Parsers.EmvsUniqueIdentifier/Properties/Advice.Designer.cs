@@ -538,6 +538,15 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Try again..
+        /// </summary>
+        public static string Advice_390 {
+            get {
+                return ResourceManager.GetString("Advice_390", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your system reads unique identifiers reliably..
         /// </summary>
         public static string Condition_100 {
@@ -1015,6 +1024,15 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The test failed unexpectedly..
+        /// </summary>
+        public static string Condition_390 {
+            get {
+                return ResourceManager.GetString("Condition_390", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to However, you did not test compatibility for German PPN barcodes. Your system may not be able to read German PPN barcodes reliably. .
         /// </summary>
         public static string Description_105 {
@@ -1371,6 +1389,15 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         public static string Description_355 {
             get {
                 return ResourceManager.GetString("Description_355", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your barcode scanner or system may be slow or it may be affected by anti-virus software or some other unexpected or intermittent issue..
+        /// </summary>
+        public static string Description_390 {
+            get {
+                return ResourceManager.GetString("Description_390", resourceCulture);
             }
         }
     }

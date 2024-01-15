@@ -36,6 +36,7 @@ using Parsers.EmvsUniqueIdentifier;
 using ConsoleMvc;
 using System.Threading;
 using static System.Console;
+using System.Linq;
 
 /// <summary>
 /// Controls calibration mode.

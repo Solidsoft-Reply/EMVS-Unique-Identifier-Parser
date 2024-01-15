@@ -6,7 +6,7 @@
     Version 2.0
     
     The primary goals of this format is to allow a simple XML format 
-    that is mostly human-readable. The generation and parsing of the 
+    that is mostly human readable. The generation and parsing of the 
     various data types are done through the TypeConverter classes 
     associated with the data types.
     
@@ -329,6 +329,10 @@
     <value>Enter data manually into your verification software to verify PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
     <comment>High</comment>
   </data>
+  <data name="Advice_390" xml:space="preserve">
+    <value>Try again.</value>
+    <comment>High</comment>
+  </data>
   <data name="Condition_100" xml:space="preserve">
     <value>Your system reads unique identifiers reliably.</value>
     <comment>Low</comment>
@@ -541,6 +545,10 @@
     <value>Your system cannot read PPN barcode characters.</value>
     <comment>High</comment>
   </data>
+  <data name="Condition_390" xml:space="preserve">
+    <value>The test failed unexpectedly.</value>
+    <comment>High</comment>
+  </data>
   <data name="Description_105" xml:space="preserve">
     <value>However, you did not test compatibility for German PPN barcodes. Your system may not be able to read German PPN barcodes reliably. </value>
     <comment>Low</comment>
@@ -699,6 +707,10 @@
   </data>
   <data name="Description_355" xml:space="preserve">
     <value>Some verification software may be able to compensate for this by analysing key codes rather than characters.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_390" xml:space="preserve">
+    <value>Your barcode scanner or system may be slow or it may be affected by anti-virus software or some other unexpected or intermittent issue.</value>
     <comment>High</comment>
   </data>
 </root>

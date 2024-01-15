@@ -276,6 +276,9 @@
   <data name="Advice_355" xml:space="preserve">
     <value>Ingrese datos manualmente en su software de verificación para verificar identificadores únicos PPN.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
   </data>
+  <data name="Advice_390" xml:space="preserve">
+    <value>Intente de nuevo.</value>
+  </data>
   <data name="Condition_100" xml:space="preserve">
     <value>Su sistema lee identificadores únicos de manera confiable.</value>
   </data>
@@ -435,6 +438,9 @@
   <data name="Condition_355" xml:space="preserve">
     <value>Su sistema no puede leer caracteres de códigos de barras PPN.</value>
   </data>
+  <data name="Condition_390" xml:space="preserve">
+    <value>La prueba falló inesperadamente.</value>
+  </data>
   <data name="Description_105" xml:space="preserve">
     <value>Sin embargo, no probó la compatibilidad con códigos de barras PPN alemanes. Su sistema puede no ser capaz de leer códigos de barras PPN alemanes de manera confiable.</value>
   </data>
@@ -554,5 +560,8 @@
   </data>
   <data name="Description_355" xml:space="preserve">
     <value>Algunos softwares de verificación pueden compensar esto analizando códigos de teclas en lugar de caracteres.</value>
+  </data>
+  <data name="Description_390" xml:space="preserve">
+    <value>Su escáner de códigos de barras o sistema puede ser lento o puede verse afectado por software antivirus o algún otro problema inesperado o intermitente.</value>
   </data>
 </root>

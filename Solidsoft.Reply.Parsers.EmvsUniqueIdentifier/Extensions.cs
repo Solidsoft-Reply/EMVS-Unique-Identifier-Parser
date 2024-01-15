@@ -26,12 +26,20 @@ using Properties;
 
 using System;
 using System.Globalization;
+using System.Text;
 
 /// <summary>
 ///   Extension methods.
 /// </summary>
 public static class Extensions
 {
+#if NET8_0_OR_GREATER
+    /// <summary>
+    /// Composite format for Parser_Error_100.
+    /// </summary>
+    private static readonly CompositeFormat ParserError100 = CompositeFormat.Parse(Resources.Parser_Error_100);
+#endif
+
     /// <summary>
     ///   Converts the value of this instance to its equivalent string representation using culture-invariant format
     ///   information.
@@ -72,7 +80,13 @@ public static class Extensions
         if (int.TryParse(character.ToInvariantString(), out var integer)) {
             return integer;
         }
-
-        throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, Resources.Parser_Error_100, character));
+        throw new ArgumentException(
+            string.Format(CultureInfo.InvariantCulture, 
+#if NET8_0_OR_GREATER
+            ParserError100,
+#else
+            Resources.Parser_Error_100,
+#endif
+            character));
     }
 }

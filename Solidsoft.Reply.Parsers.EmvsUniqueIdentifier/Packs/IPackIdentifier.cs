@@ -118,6 +118,15 @@ public interface IPackIdentifier
     // ReSharper disable once UnusedMemberInSuper.Global
     // ReSharper disable once UnusedMember.Global
     SymbologyValidity ValidSymbology { get; }
+    
+    /// <summary>
+    ///   The raw data containing the pack identifier.
+    /// </summary>
+    /// <remarks>
+    ///   The raw data is provided, even if the parser cannot
+    ///   resolve the data into a pack identifier.
+    /// </remarks>
+    string RawData { get; }
 
     /// <summary>
     ///   Adds a pack identifier exception to the exception collection.

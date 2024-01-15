@@ -329,6 +329,9 @@
     <value>Geben Sie Daten manuell in Ihre Verifizierungssoftware ein, um PPN-eindeutige Kennungen zu überprüfen.;;Falls notwendig, konfigurieren Sie Ihren Barcode-Scanner so, dass er ein numerisches Keypad emuliert.</value>
     <comment>High</comment>
   </data>
+  <data name="Advice_390" xml:space="preserve">
+    <value>Versuchen Sie es erneut.</value>
+  </data>
   <data name="Condition_100" xml:space="preserve">
     <value>Ihr System liest eindeutige Kennungen zuverlässig.</value>
     <comment>Low</comment>
@@ -541,6 +544,9 @@
     <value>Ihr System kann PPN-Barcodezeichen nicht lesen.</value>
     <comment>High</comment>
   </data>
+  <data name="Condition_390" xml:space="preserve">
+    <value>Der Test ist unerwartet fehlgeschlagen.</value>
+  </data>
   <data name="Description_105" xml:space="preserve">
     <value>Allerdings haben Sie die Kompatibilität für deutsche PPN-Barcodes nicht getestet. Ihr System kann deutsche PPN-Barcodes möglicherweise nicht zuverlässig lesen.</value>
     <comment>Low</comment>
@@ -700,5 +706,8 @@
   <data name="Description_355" xml:space="preserve">
     <value>Einige Verifizierungssoftware kann dies kompensieren, indem sie statt Zeichen Schlüsselcodes analysiert.</value>
     <comment>High</comment>
+  </data>
+  <data name="Description_390" xml:space="preserve">
+    <value>Ihr Barcode-Scanner oder System kann langsam sein, oder es kann von Antivirensoftware oder einem anderen unerwarteten oder intermittierenden Problem beeinträchtigt werden.</value>
   </data>
 </root>

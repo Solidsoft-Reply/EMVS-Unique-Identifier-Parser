@@ -24,6 +24,7 @@
 
 using System.Collections.Immutable;
 using System.Collections.ObjectModel;
+using System.Text;
 
 #pragma warning disable S907
 [assembly: CLSCompliant(true)]
@@ -51,6 +52,34 @@ using Properties;
 /// </summary>
 internal static partial class BaseParser
 {
+    
+#if NET8_0_OR_GREATER
+    /// <summary>
+    /// Composite format for Packs_Error_001.
+    /// </summary>
+    private static readonly CompositeFormat PacksError001 = CompositeFormat.Parse(Resources.Packs_Error_001);
+
+    /// <summary>
+    /// Composite format for Packs_Error_002.
+    /// </summary>
+    private static readonly CompositeFormat PacksError002 = CompositeFormat.Parse(Resources.Packs_Error_002);
+
+    /// <summary>
+    /// Composite format for Packs_Error_003.
+    /// </summary>
+    private static readonly CompositeFormat PacksError003 = CompositeFormat.Parse(Resources.Packs_Error_003);
+
+    /// <summary>
+    /// Composite format for Packs_Error_004.
+    /// </summary>
+    private static readonly CompositeFormat PacksError004 = CompositeFormat.Parse(Resources.Packs_Error_004);
+
+    /// <summary>
+    /// Composite format for Parser_Error_005.
+    /// </summary>
+    private static readonly CompositeFormat ParserError005 = CompositeFormat.Parse(Resources.Parser_Error_005);
+#endif
+    
     /// <summary>
     ///   Returns a regular expression to test that an IFA product code is composed of digits only.
     /// </summary>
@@ -94,7 +123,7 @@ internal static partial class BaseParser
         while (true)
         {
             if (!string.IsNullOrEmpty(data) && 
-                (data.EndsWith("\r", StringComparison.Ordinal) || data.EndsWith("\n", StringComparison.Ordinal)))
+                (data.EndsWith('\r') || data.EndsWith('\n')))
             {
                 data = data[..^1];
                 continue;
@@ -149,6 +178,7 @@ internal static partial class BaseParser
         var barcode = Parsers.HighCapacityAidc.Parser.Parse(data, out var preProcessedDataOut, preProcessors);
 
         preProcessedData = preProcessedDataOut;
+        packIdentifier.RawData = preProcessedDataOut;  
 
         packIdentifier.ValidSymbology = ValidSymbology(barcode);
 
@@ -307,7 +337,14 @@ internal static partial class BaseParser
                                     packIdentifier.AddOrReplaceException(
                                         new PackIdentifierException(
                                             10,
-                                            string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_001, Resources.SubstituteUnique)));
+                                            string.Format(
+                                                CultureInfo.CurrentCulture, 
+#if NET8_0_OR_GREATER
+                                                PacksError001,
+#else
+                                                Resources.Packs_Error_001, 
+#endif
+                                                Resources.SubstituteUnique)));
                                     break;
                                 case 1:
                                     packIdentifier.ProductCode = distinctProductCodes[0];
@@ -320,7 +357,14 @@ internal static partial class BaseParser
                                     packIdentifier.AddOrReplaceException(
                                         new PackIdentifierException(
                                             9,
-                                            string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_004, Resources.SubstituteUnique)));
+                                            string.Format(
+                                                CultureInfo.CurrentCulture, 
+#if NET8_0_OR_GREATER
+                                                PacksError004, 
+#else
+                                                Resources.Packs_Error_004,
+#endif
+                                                Resources.SubstituteUnique)));
                                     break;
                                 case 1:
                                     packIdentifier.SerialNumber = distinctSerialNumbers[0];
@@ -333,7 +377,14 @@ internal static partial class BaseParser
                                     packIdentifier.AddOrReplaceException(
                                         new PackIdentifierException(
                                             7,
-                                            string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_002, Resources.SubstituteUnique)));
+                                            string.Format(
+                                                CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                                PacksError002,
+#else
+                                                Resources.Packs_Error_002, 
+#endif
+                                                Resources.SubstituteUnique)));
                                     break;
                                 case 1:
                                     packIdentifier.BatchIdentifier = distinctBatchIdentifiers[0];
@@ -346,7 +397,14 @@ internal static partial class BaseParser
                                     packIdentifier.AddOrReplaceException(
                                         new PackIdentifierException(
                                             8,
-                                            string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_003, Resources.SubstituteUnique)));
+                                            string.Format(
+                                                CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                                PacksError003,
+#else
+                                                Resources.Packs_Error_003,
+#endif
+                                                Resources.SubstituteUnique)));
                                     break;
                                 case 1:
                                     packIdentifier.Expiry = distinctExpiryDates[0];
@@ -401,7 +459,14 @@ internal static partial class BaseParser
                                 packIdentifier.AddOrReplaceException(
                                     new PackIdentifierException(
                                         10,
-                                        string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_001, Resources.SubstituteUnique)));
+                                        string.Format(
+                                            CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                            PacksError001,
+#else
+                                            Resources.Packs_Error_001,
+#endif
+                                            Resources.SubstituteUnique)));
                                 break;
                             case 1:
                                 packIdentifier.ProductCode = productCodeValues[0];
@@ -415,7 +480,14 @@ internal static partial class BaseParser
                                 packIdentifier.AddOrReplaceException(
                                     new PackIdentifierException(
                                         9,
-                                        string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_004, Resources.SubstituteUnique)));
+                                        string.Format(
+                                            CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                            PacksError004,
+#else
+                                            Resources.Packs_Error_004,
+#endif
+                                            Resources.SubstituteUnique)));
                                 break;
                             case 1:
                                 packIdentifier.SerialNumber = serialNumberValues[0];
@@ -427,7 +499,14 @@ internal static partial class BaseParser
                                 packIdentifier.AddOrReplaceException(
                                     new PackIdentifierException(
                                         7,
-                                        string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_002, Resources.SubstituteUnique)));
+                                        string.Format(
+                                            CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                            PacksError002,
+#else
+                                            Resources.Packs_Error_002,
+#endif
+                                            Resources.SubstituteUnique)));
                                 break;
                             case 1:
                                 packIdentifier.BatchIdentifier = batchIdentifierValues[0];
@@ -439,7 +518,14 @@ internal static partial class BaseParser
                                 packIdentifier.AddOrReplaceException(
                                     new PackIdentifierException(
                                         8,
-                                        string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_003, Resources.SubstituteUnique)));
+                                        string.Format(
+                                            CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                            PacksError003,
+#else
+                                            Resources.Packs_Error_003,
+#endif
+                                            Resources.SubstituteUnique)));
                                 break;
                             case 1:
                                 packIdentifier.Expiry = expiryValues[0];
@@ -553,7 +639,14 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     10,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_001, Resources.SubstituteUnique),
+                                    string.Format(
+                                        CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                        PacksError001,
+#else
+                                        Resources.Packs_Error_001,
+#endif
+                                        Resources.SubstituteUnique),
                                     "01",
                                     "GTIN",
                                     0));
@@ -592,7 +685,14 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 7 : 30,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_002, Resources.SubstituteUnique),
+                                    string.Format(
+                                        CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                        PacksError002,
+#else
+                                        Resources.Packs_Error_002,
+#endif
+                                        Resources.SubstituteUnique),
                                     scheme == Scheme.Gs1 ? "10" : string.Empty,
                                     scheme == Scheme.Gs1 ? "BATCH/LOT" : string.Empty,
                                     0));
@@ -627,7 +727,14 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 8 : 40,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_003, Resources.SubstituteUnique),
+                                    string.Format(
+                                        CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                        PacksError003,
+#else
+                                        Resources.Packs_Error_003,
+#endif
+                                        Resources.SubstituteUnique),
                                     scheme == Scheme.Gs1 ? "17" : string.Empty,
                                     scheme == Scheme.Gs1 ? "USE BY OR EXPIRY" : string.Empty,
                                     0));
@@ -666,7 +773,14 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 9 : 50,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_004, Resources.SubstituteUnique),
+                                    string.Format(
+                                        CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                        PacksError004,
+#else
+                                        Resources.Packs_Error_004,
+#endif
+                                        Resources.SubstituteUnique),
                                     scheme == Scheme.Gs1 ? "21" : string.Empty,
                                     scheme == Scheme.Gs1 ? "SERIAL" : string.Empty,
                                     0));
@@ -699,7 +813,11 @@ internal static partial class BaseParser
                                     2,
                                     string.Format(
                                         CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                        ParserError005,
+#else
                                         Resources.Parser_Error_005,
+#endif
                                         nhrnMarket)));
                         }
 
@@ -715,7 +833,11 @@ internal static partial class BaseParser
                                     2,
                                     string.Format(
                                         CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                        ParserError005,
+#else
                                         Resources.Parser_Error_005,
+#endif
                                         nhrnMarket)));
                         }
 
@@ -889,7 +1011,14 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     20,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_001, Resources.SubstituteUnique),
+                                    string.Format(
+                                        CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                        PacksError001,
+#else
+                                        Resources.Packs_Error_001,
+#endif
+                                        Resources.SubstituteUnique),
                                     "9N",
                                     "PPN",
                                     0));
@@ -929,7 +1058,14 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 7 : 30,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_002, Resources.SubstituteUnique),
+                                    string.Format(
+                                        CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                        PacksError002,
+#else
+                                        Resources.Packs_Error_002,
+#endif
+                                        Resources.SubstituteUnique),
                                     scheme == Scheme.Ifa ? "1T" : string.Empty,
                                     scheme == Scheme.Ifa
                                         ? "TRACEABILITY NUMBER ASSIGNED BY THE SUPPLIER"
@@ -967,7 +1103,14 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 8 : 40,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_003, Resources.SubstituteUnique),
+                                    string.Format(
+                                        CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                        PacksError003,
+#else
+                                        Resources.Packs_Error_003,
+#endif
+                                        Resources.SubstituteUnique),
                                     scheme == Scheme.Ifa ? "D" : string.Empty,
                                     scheme == Scheme.Ifa ? "DATE" : string.Empty,
                                     0));
@@ -1006,7 +1149,14 @@ internal static partial class BaseParser
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 9 : 50,
-                                    string.Format(CultureInfo.CurrentCulture, Resources.Packs_Error_004, Resources.SubstituteUnique),
+                                    string.Format(
+                                        CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                        PacksError004,
+#else
+                                        Resources.Packs_Error_004,
+#endif
+                                        Resources.SubstituteUnique),
                                     scheme == Scheme.Ifa ? "S" : string.Empty,
                                     scheme == Scheme.Ifa ? "SERIAL NUMBER" : string.Empty,
                                     0));
@@ -1044,7 +1194,11 @@ internal static partial class BaseParser
                                         2,
                                         string.Format(
                                             CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                            ParserError005,
+#else
                                             Resources.Parser_Error_005,
+#endif
                                             nhrnMarket)));
                                 break;
                             }
@@ -1058,7 +1212,11 @@ internal static partial class BaseParser
                                             2,
                                             string.Format(
                                                 CultureInfo.CurrentCulture,
+#if NET8_0_OR_GREATER
+                                                ParserError005,
+#else
                                                 Resources.Parser_Error_005,
+#endif
                                                 nhrnMarket)));
                                 }
 

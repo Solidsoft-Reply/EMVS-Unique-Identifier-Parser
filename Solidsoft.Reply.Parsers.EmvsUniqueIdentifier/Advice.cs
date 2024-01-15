@@ -42,7 +42,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
     /// <param name="adviceTerritory">Territory for which advice will be provided.</param>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Major Code Smell", "S3358:Ternary operators should not be nested", Justification = "<Pending>")]
     private Advice(
-        SystemCapabilities systemCapabilities,
+        SystemCapabilities? systemCapabilities,
         Territory adviceTerritory = Territory.Europe)
     {
         var lowSeverity = new List<AdviceItem>();
@@ -51,7 +51,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         if (systemCapabilities is null)
         {
-            throw new ArgumentNullException(nameof(systemCapabilities));
+            ArgumentNullException.ThrowIfNull(systemCapabilities);
         }
 
         var testGs1Only = !systemCapabilities.FormatnnSupportAssessed;
@@ -66,6 +66,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // Get boolean values
 #pragma warning disable CA1062 // Validate arguments of public methods
+        var unexpectedError = systemCapabilities.UnexpectedError;
         var testsSucceeded = systemCapabilities.TestsSucceeded;
         var dataReported = systemCapabilities.DataReported;
         var correctSequenceReported = systemCapabilities.CorrectSequenceReported;
@@ -212,7 +213,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceTypes: 240, 241, 245
         AddAdviceItemToList(
-            IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
+            IfDataWasFullyReported()
+            && IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
                 ? IfWeCanReadFormat05AndFormat06Reliably()
                     ? (IfWeKnowIfTheKeyboardLayoutsCanRepresentRecordSeparators() || IfWeKnowIfWeCanReadUniqueIdentifiersReliably())
                       && IfTheKeyboardLayoutsCannotRepresentRecordSeparators()
@@ -234,7 +236,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceType: 260, 261, 265
         AddAdviceItemToList(
-            IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondsForAdditionalAsciiCharacters()
+            IfDataWasFullyReported()
+            && IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondsForAdditionalAsciiCharacters()
                 ? IfWeCannotReadAdditionalAsciiCharactersReliably()
                     ? ReportThatTheSystemCannotReadAdditionalDataReliably()                                                 // 265
                     : IfWeAssumeAgnosticism()
@@ -246,7 +249,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceType: 270, 271, 275
         AddAdviceItemToList(
-            IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparators()                                             // 275
+            IfDataWasFullyReported()
+            && IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparators()                                             // 275
                 ? IfWeCannotReadEdiCharactersReliably()
                     ? ReportThatTheSystemCannotReadEdiCharactersReliably()
                     : IfWeAssumeAgnosticism()
@@ -258,7 +262,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceType: 300
         AddAdviceItemToList(
-            IfTestDidNotSucceed()
+            IfNoUnexpectedErrorOccurred()
+            && IfTestDidNotSucceed()
             && IfDataWasReported()
                 ? ReportThatTheTestFailed()                                                                                 // 300
                 : null);
@@ -273,7 +278,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceType: 303, 306
         AddAdviceItemToList(
-            IfDataWasOnlyPartiallyReported()
+            IfNoUnexpectedErrorOccurred()
+            && IfDataWasOnlyPartiallyReported()
                 ? IfDeadKeyBarcodesWereGeneratedDuringCalibration()
                     ? ReportThatScannedDataWasPartiallyReportedForDeadKeyBarcodes()                                         // 306
                     : ReportThatScannedDataWasPartiallyReportedForBaselineBarcode()                                         // 303
@@ -287,7 +293,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceTypes: 307, 308
         AddAdviceItemToList(
-            IfTheKeyboardLayoutsDoNotCorrespondForUniqueIdentifiers()
+            IfDataWasFullyReported()
+            && IfTheKeyboardLayoutsDoNotCorrespondForUniqueIdentifiers()
                 ? IfWeAssumeAgnosticism()
                     ? IfWeKnowIfWeCanReadUniqueIdentifiersReliably()
                       || IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
@@ -305,7 +312,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceTypes: 309, 310
         AddAdviceItemToList(
-            IfAdviceIsNotProvidedSpecificallyForGermany()
+            IfDataWasFullyReported()
+            && IfAdviceIsNotProvidedSpecificallyForGermany()
             && IfTheKeyboardLayoutsCorrespondForUniqueIdentifiers()
             && IfTheKeyboardLayoutsCannotRepresentGroupSeparators()
                 ? IfWeAssumeAgnosticism()
@@ -323,7 +331,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceTypes: 311, 312
         AddAdviceItemToList(
-            IfAdviceIsProvidedSpecificallyForGermany()
+            IfDataWasFullyReported()
+            && IfAdviceIsProvidedSpecificallyForGermany()
             && IfTheKeyboardLayoutsCorrespondForUniqueIdentifiers()
             && (IfTheKeyboardLayoutsCannotRepresentGroupSeparators() || IfTheKeyboardLayoutsCannotRepresentRecordSeparators())
                 ? IfWeAssumeAgnosticism()
@@ -340,7 +349,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceType: 315, 316
         AddAdviceItemToList(
-            IfWeAssumeAgnosticism()
+            IfDataWasFullyReported()
+            && IfWeAssumeAgnosticism()
             && IfWeCanReadUniqueIdentifiersReliably()
             && IfWeCannotReadFormat05AndFormat06Reliably()
                 ? IfWeKnowIfKeyboardLayoutsCorrespondForUniqueIdentifiers()
@@ -356,7 +366,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // Advice Type: 320
         AddAdviceItemToList(
-            IfWeDoNotAscertainThatWeCanReadUniqueIdentifiersReliably()
+            IfDataWasFullyReported()
+            && IfWeDoNotAscertainThatWeCanReadUniqueIdentifiersReliably()
                 ? ReportThatSystemCannotReadUniqueIdentifiersReliably()                                                     // 320
                 : null);
 
@@ -388,14 +399,16 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // Advice Type 335
         AddAdviceItemToList(
-            IfWeCannotReadUniqueIdentifiersReliably()
+            IfDataWasFullyReported()
+            && IfWeCannotReadUniqueIdentifiersReliably()
             && IfTheKeyboardScriptDoesNotSupportCase()
                 ? ReportBarcodesCannotBeReadReliablyForKeyboardScriptThatDoesNotSupportCase()                               // 335
                 : null);
 
         // AdviceType: 350, 351, 355
         AddAdviceItemToList(
-            IfAdviceIsProvidedSpecificallyForGermany()
+            IfDataWasFullyReported()
+            && IfAdviceIsProvidedSpecificallyForGermany()
             && IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
                 ? IfWeCanReadFormat05AndFormat06Reliably()
                     ? IfTheKeyboardLayoutsCannotRepresentRecordSeparators() &&
@@ -407,6 +420,12 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
                                 : null
                         : null
                     : ReportThatPpnBarcodesCannotBeReadReliably()                                                           // 355
+                : null);
+
+        // AdviceType: 390
+        AddAdviceItemToList(
+            IfUnexpectedErrorOccurred()
+                ? ReportThatAnUnexpectedErrorWasReported()
                 : null);
 
         // General fix-up for other issues
@@ -602,7 +621,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
             highSeverity.Remove(notTransmittingAim);
         }
 
-        if (highSeverity.Any())
+        if (highSeverity.Count > 0)
         {
             // Do not report low-severity, as these are used to represent 'green' conditions. 
             // Given that there are high-severity problems, it can be very confusing if the 
@@ -613,7 +632,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         else
         {
             // Fix-up for 'green' messages.
-            if (mediumSeverity.Any())
+            if (mediumSeverity.Count > 0)
             {
                 // Add a hint that there are other issues to 'green' messages. If a UI shows one
                 // advice message at a time, this will improve the UX.
@@ -701,8 +720,11 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         bool IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondsForAdditionalAsciiCharacters() => !(keyboardLayoutsCorrespondForNonInvariantCharacters ?? false);
         bool IfWeCannotReadAdditionalAsciiCharactersReliably() => !canReadNonInvariantCharactersReliably ?? false;
         bool IfWeCannotReadEdiCharactersReliably() => !canReadEdiReliably ?? false;
+        bool IfUnexpectedErrorOccurred() => unexpectedError;
+        bool IfNoUnexpectedErrorOccurred() => !unexpectedError;
         bool IfDataWasReported() => dataReported;
         bool IfNoDataWasReported() => !dataReported;
+        bool IfDataWasFullyReported() => completeDataReported;
         bool IfDataWasOnlyPartiallyReported() => !completeDataReported;
         bool IfDeadKeyBarcodesWereGeneratedDuringCalibration() => deadKeys;
         bool IfBarcodesWereScannedInAnIncorrectSequence() => !correctSequenceReported;
@@ -923,6 +945,10 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         // 355
         AdviceItem ReportThatPpnBarcodesCannotBeReadReliably() =>
             new(AdviceType.CannotReadPpnReliablyGermany);
+
+        // 390
+        AdviceItem ReportThatAnUnexpectedErrorWasReported() =>
+            new(AdviceType.UnexpectedErrorReported);
     }
 
     /// <summary>

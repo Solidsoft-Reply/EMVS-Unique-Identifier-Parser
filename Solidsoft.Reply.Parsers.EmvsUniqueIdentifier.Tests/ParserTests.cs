@@ -1897,11 +1897,11 @@ public class ParserTests
     // ReSharper disable once IdentifierTypo
     private static void Gs1Vmti6DecimalPlaces(string identifier)
     {
-        var gs1TestData1 = identifier + "2123456";
+        var gs1TestData1 = identifier + "2124456";
 
         var expectedResults1 = new Dictionary<string, string>
                                {
-                                   { identifier + "2", "123456" }
+                                   { identifier + "2", "124456" }
                                };
 
         DoTestGs1WithNoErrors(gs1TestData1, expectedResults1);

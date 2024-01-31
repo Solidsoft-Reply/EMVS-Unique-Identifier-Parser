@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="Encoding.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2023 Solidsoft Reply Ltd. All rights reserved.
+//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // </copyright>
 // <summary>
 // <license>

@@ -29,8 +29,6 @@ using System.Diagnostics.CodeAnalysis;
 using Properties;
 
 using static System.Console;
-using System.Globalization;
-using System.Threading;
 
 /// <summary>
 /// The program.  Contains the application entry point and initialisation code.

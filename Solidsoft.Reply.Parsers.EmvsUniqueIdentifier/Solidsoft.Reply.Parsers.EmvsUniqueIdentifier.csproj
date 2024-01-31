@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net7.0</TargetFrameworks>
     <LangVersion>11.0</LangVersion>
 	<ImplicitUsings>enable</ImplicitUsings>
 	<Nullable>enable</Nullable>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<Title>EMVS Validating Parser for Unique Identifiers</Title>
-	<Copyright>© 2023 Solidsoft Reply</Copyright>
+	<Copyright>© 2018-2024 Solidsoft Reply</Copyright>
 	<Company>Solidsoft Reply Ltd.</Company>
 	<Authors>cnayoung</Authors>
 	<RepositoryUrl>https://github.com/Solidsoft-Reply/Solidsoft.Reply.Parsers.EmvsUniqueIdentifier</RepositoryUrl>
@@ -32,7 +32,7 @@
 
 	<PropertyGroup>
 		<AnalysisMode>AllEnabledByDefault</AnalysisMode>
-		<Copyright>© 2018-2023 Solidsoft Reply Limited</Copyright>
+		<Copyright>© 2018-2024 Solidsoft Reply Limited</Copyright>
 		<Company>Solidoft Reply</Company>
 		<Authors>Charles Young</Authors>
 		<Product>EMVS Validating Parser for Unique Identifiers</Product>

@@ -16,7 +16,7 @@
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>emvs;medicine;verification;parser;gs1;ppn;</PackageTags>
 	<PackageReleaseNotes>
-		1) Added localisation support for French, German and Spanish.
+		1) Minor changes and code quality improvements.
 	</PackageReleaseNotes>
 	<Description>
 		A reliable and validating barcode data parser for the European Medicines Verification System (EMVS).
@@ -25,7 +25,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>1.0.3</Version>
+	<Version>1.0.4</Version>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>

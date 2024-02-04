@@ -118,87 +118,87 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Elemento de consejo inválido.</value>
+    <value>Consiglio non valido.</value>
   </data>
   <data name="Packs_Error_001" xml:space="preserve">
-    <value>El código de barras no contiene un código de producto{0}.</value>
+    <value>Il codice a barre non contiene un codice prodotto {0}.</value>
   </data>
   <data name="Packs_Error_002" xml:space="preserve">
-    <value>El código de barras no contiene un identificador de lote{0}.</value>
+    <value>Il codice a barre non contiene un identificativo di lotto {0}.</value>
   </data>
   <data name="Packs_Error_003" xml:space="preserve">
-    <value>El código de barras no contiene una fecha de caducidad{0}.</value>
+    <value>Il codice a barre non contiene una data di scadenza {0}.</value>
   </data>
   <data name="Packs_Error_004" xml:space="preserve">
-    <value>El código de barras no contiene un número de serie{0}.</value>
+    <value>Il codice a barre non contiene un numero di serie {0}.</value>
   </data>
   <data name="Parser_Error_001" xml:space="preserve">
-    <value>No se proporcionaron datos.</value>
+    <value>Nessun dato fornito.</value>
   </data>
   <data name="Parser_Error_002" xml:space="preserve">
-    <value>La simbología del código de barras no es compatible con identificadores de paquete.</value>
+    <value>La simbologia del codice a barre non è supportata per gli identificatori di confezione.</value>
   </data>
   <data name="Parser_Error_003" xml:space="preserve">
-    <value>El código de barras no contiene un identificador único de paquete.</value>
+    <value>Il codice a barre non contiene un identificatore unico di confezione.</value>
   </data>
   <data name="Parser_Error_004" xml:space="preserve">
-    <value>El identificador de paquete contiene datos inválidos o no reconocidos.</value>
+    <value>L'identificatore di confezione contiene dati non validi o non riconosciuti.</value>
   </data>
   <data name="Parser_Error_005" xml:space="preserve">
-    <value>El identificador de paquete contiene múltiples números nacionales para {0}.</value>
+    <value>L'identificatore di confezione contiene più numeri nazionali per {0}.</value>
   </data>
   <data name="Parser_Error_006" xml:space="preserve">
-    <value>No hay código de producto.</value>
+    <value>Nessun codice prodotto.</value>
   </data>
   <data name="Parser_Error_007" xml:space="preserve">
-    <value>El código de producto es inválido.</value>
+    <value>Il codice prodotto non è valido.</value>
   </data>
   <data name="Parser_Error_008" xml:space="preserve">
-    <value>Debe tener 14 caracteres de longitud.</value>
+    <value>Deve essere lungo 14 caratteri.</value>
   </data>
   <data name="Parser_Error_009" xml:space="preserve">
-    <value>El valor contiene caracteres que no son dígitos.</value>
+    <value>Il valore contiene caratteri non numerici.</value>
   </data>
   <data name="Parser_Error_010" xml:space="preserve">
-    <value>El valor de la suma de comprobación es incorrecto.</value>
+    <value>Il valore del checksum è errato.</value>
   </data>
   <data name="Parser_Error_011" xml:space="preserve">
-    <value>Debe tener 12 caracteres de longitud.</value>
+    <value>Deve essere lungo 12 caratteri.</value>
   </data>
   <data name="Parser_Error_012" xml:space="preserve">
-    <value>El PRAC de PPN (Código de Agencia de Registro de Producto) es inválido.</value>
+    <value>Il codice PRAC PPN (Product Registration Agency Code) non è valido.</value>
   </data>
   <data name="Parser_Error_013" xml:space="preserve">
-    <value>La suma de comprobación de PZN es inválida, y por lo tanto el PPN es inválido.</value>
+    <value>Il checksum PZN non è valido, quindi il PPN non è valido.</value>
   </data>
   <data name="Parser_Error_014" xml:space="preserve">
-    <value>No hay identificador de lote.</value>
+    <value>Nessun identificativo di lotto.</value>
   </data>
   <data name="Parser_Error_015" xml:space="preserve">
-    <value>El identificador de lote es inválido.</value>
+    <value>L'identificativo di lotto non è valido.</value>
   </data>
   <data name="Parser_Error_016" xml:space="preserve">
-    <value>Debe tener entre 1 y 20 caracteres de longitud.</value>
+    <value>Deve essere tra 1 e 20 caratteri di lunghezza.</value>
   </data>
   <data name="Parser_Error_017" xml:space="preserve">
-    <value>El valor contiene caracteres no permitidos.</value>
+    <value>Il valore contiene caratteri non consentiti.</value>
   </data>
   <data name="Parser_Error_018" xml:space="preserve">
-    <value>No se proporcionó fecha de caducidad.</value>
+    <value>Nessuna data di scadenza fornita.</value>
   </data>
   <data name="Parser_Error_019" xml:space="preserve">
-    <value>La fecha de caducidad es inválida.</value>
+    <value>La data di scadenza non è valida.</value>
   </data>
   <data name="Parser_Error_020" xml:space="preserve">
-    <value>No se proporcionó número de serie.</value>
+    <value>Nessun numero di serie fornito.</value>
   </data>
   <data name="Parser_Error_021" xml:space="preserve">
-    <value>El número de serie es inválido.</value>
+    <value>Il numero di serie non è valido.</value>
   </data>
   <data name="Parser_Error_100" xml:space="preserve">
-    <value>El carácter {0} no representa un dígito.</value>
+    <value>Il carattere {0} non rappresenta una cifra.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value>único</value>
+    <value>unico</value>
   </data>
 </root>

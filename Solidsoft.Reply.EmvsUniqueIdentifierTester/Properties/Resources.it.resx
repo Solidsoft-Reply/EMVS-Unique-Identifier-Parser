@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AutomaticEntryInstructions1" xml:space="preserve">
+    <value>I dati verranno inviati automaticamente.</value>
+  </data>
+  <data name="AutomaticEntryInstructions1Not" xml:space="preserve">
+    <value>I dati non verranno inviati automaticamente.</value>
+  </data>
+  <data name="AutomaticEntryInstructions2" xml:space="preserve">
+    <value>Premi INVIO per inviare i dati. Configura lo scanner per trasmettere ritorni carrello.</value>
+  </data>
+  <data name="BarcodesStillToScan" xml:space="preserve">
+    <value>codici a barre ancora da scansionare...</value>
+  </data>
+  <data name="BarcodeStillToScan" xml:space="preserve">
+    <value>codice a barre ancora da scansionare...</value>
+  </data>
+  <data name="CalibrationViewDoNotCallRender" xml:space="preserve">
+    <value>CalibrationView - non chiamare Render</value>
+  </data>
+  <data name="ClearConsoleBuffer" xml:space="preserve">
+    <value>--- Pulire il buffer della console ----</value>
+  </data>
+  <data name="CodePageInitialiseError" xml:space="preserve">
+    <value>Impossibile inizializzare la pagina codici {0}</value>
+  </data>
+  <data name="CodePageInitialiseErrorRecovery" xml:space="preserve">
+    <value>Premi un tasto qualsiasi per continuare, utilizzando la pagina codici predefinita...</value>
+  </data>
+  <data name="CodePageInitialiseFakeCommandLine" xml:space="preserve">
+    <value>CodePage = {0}</value>
+  </data>
+  <data name="CommandPrompt" xml:space="preserve">
+    <value>Scansiona il codice a barre&gt;</value>
+  </data>
+  <data name="ConsoleTitle" xml:space="preserve">
+    <value>Tester Identificatore Unico EMVS</value>
+  </data>
+  <data name="DidNotIncludePpn" xml:space="preserve">
+    <value>non incluso</value>
+  </data>
+  <data name="DisplayAdvice_1" xml:space="preserve">
+    <value>CONSIGLI</value>
+  </data>
+  <data name="DisplayCalibrationFailedMessage_1" xml:space="preserve">
+    <value>La combinazione attuale di layout di tastiera del sistema operativo e codice a barre non può essere calibrata.</value>
+  </data>
+  <data name="DisplayCalibrationFailedMessage_2" xml:space="preserve">
+    <value>Verifica di aver scansionato il codice a barre corretto per la calibrazione. Se lo hai fatto, riconfigura</value>
+  </data>
+  <data name="DisplayCalibrationFailedMessage_3" xml:space="preserve">
+    <value>lo scanner per emulare un diverso layout di tastiera o un tastierino numerico.</value>
+  </data>
+  <data name="DisplayCalibrationInformation_1" xml:space="preserve">
+    <value>Premi un tasto qualsiasi per continuare...</value>
+  </data>
+  <data name="DisplayCalibrationOptions_1" xml:space="preserve">
+    <value>Scansiona il codice a barre per calibrare l'applicazione tester.</value>
+  </data>
+  <data name="DisplayCalibrationOptions_2" xml:space="preserve">
+    <value>Premi Ctrl-O per uscire dalla modalità di calibrazione.</value>
+  </data>
+  <data name="DisplayCalibrationReport_1" xml:space="preserve">
+    <value>RAPPORTO DI CALIBRAZIONE</value>
+  </data>
+  <data name="DisplayCalibrationSaveError_1" xml:space="preserve">
+    <value>Premi un tasto qualsiasi per continuare...</value>
+  </data>
+  <data name="DisplayKeepScanning_1" xml:space="preserve">
+    <value>Continua a scansionare...</value>
+  </data>
+  <data name="DisplayMainOptions_1" xml:space="preserve">
+    <value>Scansiona un codice a barre.</value>
+  </data>
+  <data name="DisplayMainOptions_2" xml:space="preserve">
+    <value>Inserisci o incolla i dati e premi Invio.</value>
+  </data>
+  <data name="DisplayMainOptions_3" xml:space="preserve">
+    <value>Premi Ctrl-R per alternare tra invio automatico e manuale (ritorno carrello) dei dati.</value>
+  </data>
+  <data name="DisplayMainOptions_4" xml:space="preserve">
+    <value>Premi Ctrl-K per calibrare il tester per l'attuale scanner e layout di tastiera.</value>
+  </data>
+  <data name="DisplayMainOptions_5" xml:space="preserve">
+    <value>Premi Shift Ctrl-K per calibrare il tester solo per l'attuale scanner e layout di tastiera per codici a barre GS1 FNC.</value>
+  </data>
+  <data name="DisplayMainOptions_6" xml:space="preserve">
+    <value>Premi Ctrl-S per pulire lo schermo.</value>
+  </data>
+  <data name="DisplayMainOptions_7" xml:space="preserve">
+    <value>Premi Ctrl-T per uscire dal programma.</value>
+  </data>
+  <data name="DisplayMainOptions_8" xml:space="preserve">
+    <value>Premi i tasti Freccia Su e Giù per selezionare e riprovare le voci memorizzate nella cache.</value>
+  </data>
+  <data name="DisplayParserResults_1" xml:space="preserve">
+    <value>L'input contiene uno o più caratteri che non possono essere codificati.</value>
+  </data>
+  <data name="DisplayParserResults_2" xml:space="preserve">
+    <value>ERRORE DEL PARSER:</value>
+  </data>
+  <data name="DisplayParserResults_3" xml:space="preserve">
+    <value>ERRORE:</value>
+  </data>
+  <data name="DoNotSubmitToNationalSystem" xml:space="preserve">
+    <value>non inviare al sistema nazionale</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Errore</value>
+  </data>
+  <data name="IncludePpn" xml:space="preserve">
+    <value>incluso</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Informazione</value>
+  </data>
+  <data name="InformationForPpn" xml:space="preserve">
+    <value>{0}: Calibrazione {1} test per codici a barre Formato 05 e Formato 06 (PPN spagnolo).</value>
+  </data>
+  <data name="Initialise_1" xml:space="preserve">
+    <value>Premi un tasto qualsiasi per continuare...</value>
+  </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>non valido</value>
+  </data>
+  <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
+    <value>□ rappresenta un carattere non valido</value>
+  </data>
+  <data name="IssuingAgencyCountry" xml:space="preserve">
+    <value>Identificatore nazionale o aziendale assegnato dall'agenzia emittente in {0}.</value>
+  </data>
+  <data name="ListIntPtrCastError" xml:space="preserve">
+    <value>L'obiettivo di GCHandle non può essere convertito in List&lt;IntPtr&gt;</value>
+  </data>
+  <data name="MenuAutoSubmit" xml:space="preserve">
+    <value>Invio automatico</value>
+  </data>
+  <data name="MenuCalibrateFull" xml:space="preserve">
+    <value>Calibrazione (completa)</value>
+  </data>
+  <data name="MenuCalibrateGS1" xml:space="preserve">
+    <value>Calibrazione (GS1)</value>
+  </data>
+  <data name="MenuClearScreen" xml:space="preserve">
+    <value>Pulire lo schermo</value>
+  </data>
+  <data name="MenuExit" xml:space="preserve">
+    <value>Uscita</value>
+  </data>
+  <data name="Nothing" xml:space="preserve">
+    <value>nulla</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>La calibrazione non è stata salvata{0}</value>
+  </data>
+  <data name="SubmitToNationalSystem" xml:space="preserve">
+    <value>invia al sistema nazionale</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>sconosciuto</value>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>valido</value>
+  </data>
+  <data name="VtSequencesNotSupported" xml:space="preserve">
+    <value>L'applicazione richiede sequenze VT che non sono supportate su questa piattaforma.</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Avviso</value>
+  </data>
+</root>

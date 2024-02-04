@@ -580,8 +580,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
             }
         }
 
-        // Fix up test failures. If a 301, 303, 304, 305 0r 306 error occurs, remove the 300 error, as this is
-        // redundant.
+        // Fix up test failures. If a 301, 303, 304, 305, 306, 320, 327, 328, 331 or 332 error occurs,
+        // remove the 300 error, as this is redundant.
         var noDataReported = highSeverity.Find(a => a.AdviceType == AdviceType.NoDataReported);
         var partialDataReported = highSeverity.Find(a => a.AdviceType == AdviceType.PartialDataReported);
 
@@ -589,7 +589,12 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
             partialDataReported is not null ||
             highSeverity.Find(a => a.AdviceType == AdviceType.NoDataReportedDeadKeys) is not null ||
             highSeverity.Find(a => a.AdviceType == AdviceType.IncorrectSequenceDeadKeys) is not null ||
-            highSeverity.Find(a => a.AdviceType == AdviceType.PartialDataReportedDeadKeys) is not null)
+            highSeverity.Find(a => a.AdviceType == AdviceType.PartialDataReportedDeadKeys) is not null ||
+            highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadUniqueIdentifiersReliably) is not null ||
+            highSeverity.Find(a => a.AdviceType == AdviceType.CapsLockOnConvertsToUpperCase) is not null ||
+            highSeverity.Find(a => a.AdviceType == AdviceType.CapsLockOnConvertsToLowerCase) is not null ||
+            highSeverity.Find(a => a.AdviceType == AdviceType.ConvertsToUpperCase) is not null ||
+            highSeverity.Find(a => a.AdviceType == AdviceType.ConvertsToLowerCase) is not null)
         {
             var testsFailed = highSeverity.Find(a => a.AdviceType == AdviceType.TestFailed);
 

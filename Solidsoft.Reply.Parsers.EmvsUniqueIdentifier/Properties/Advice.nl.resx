@@ -119,598 +119,449 @@
   </resheader>
   <data name="Advice_100" xml:space="preserve">
     <value />
-    <comment>Low</comment>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>You may need to enter data manually into your verification software to verify PPN unique identifiers.</value>
-    <comment>Low</comment>
+    <value>U moet mogelijk handmatig gegevens invoeren in uw verificatiesoftware om PPN unieke identificatoren te verifiëren.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>If you experience problems when scanning German PPN barcodes, enter data manually into your verification software.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Als u problemen ondervindt bij het scannen van Duitse PPN barcodes, voer dan handmatig gegevens in uw verificatiesoftware in.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Enter data manually into your verification software to verify German PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Voer handmatig gegevens in uw verificatiesoftware in voor barcodes die Format 05 of Format 06 data bevatten.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
-    <value>Configure your barcode scanner to transmit AIM identifiers. If you have problems when transmitting AIM identifiers, revert to the current configuration.</value>
-    <comment>Medium</comment>
+    <value>Configureer uw barcodescanner om AIM-identificatoren te verzenden. Als u problemen ondervindt bij het verzenden van AIM-identificatoren, ga dan terug naar de huidige configuratie.</value>
   </data>
   <data name="Advice_205" xml:space="preserve">
-    <value>You may want to switch off Caps Lock and test again.</value>
-    <comment>Medium</comment>
+    <value>U wilt mogelijk Caps Lock uitschakelen en opnieuw testen.</value>
   </data>
   <data name="Advice_206" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configurations and reconfigure them if necessary.;;You may want to switch off Caps Lock and test again.</value>
-    <comment>Medium</comment>
+    <value>Controleer uw barcodescanner, toetsenbord en computerconfiguraties en configureer ze indien nodig opnieuw.;;U wilt misschien Caps Lock uitschakelen en opnieuw testen.</value>
   </data>
   <data name="Advice_210" xml:space="preserve">
-    <value>You may want to switch Caps Lock off.</value>
-    <comment>Medium</comment>
+    <value>U wilt mogelijk Caps Lock uitschakelen.</value>
   </data>
   <data name="Advice_215" xml:space="preserve">
-    <value>Configure your barcode scanner to transmit end-of-line sequences and test again. If you have problems when transmitting end-of-line sequences, revert to the current configuration.</value>
-    <comment>Medium</comment>
+    <value>Configureer uw barcodescanner om eind-van-regel sequenties te verzenden en test opnieuw. Als u problemen ondervindt bij het verzenden van eind-van-regel sequenties, ga dan terug naar de huidige configuratie.</value>
   </data>
   <data name="Advice_220" xml:space="preserve">
-    <value>If you have problems verifying medicine packs, configure your barcode scanner so that it does not transmit a prefix.</value>
-    <comment>Medium</comment>
+    <value>Als u problemen ondervindt bij het verifiëren van medicijnverpakkingen, configureer dan uw barcodescanner zodat deze geen prefix verzendt.</value>
   </data>
   <data name="Advice_225" xml:space="preserve">
-    <value>If you have problems verifying medicine packs, configure your barcode scanner so that it does not transmit any suffix.</value>
-    <comment>Medium</comment>
+    <value>Als u problemen ondervindt bij het verifiëren van medicijnverpakkingen, configureer dan uw barcodescanner zodat deze geen suffix verzendt.</value>
   </data>
   <data name="Advice_230" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Zorg ervoor dat uw toetsenbordindelingen overeenkomen.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_231" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Zorg ervoor dat uw toetsenbordindelingen overeenkomen.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_232" xml:space="preserve">
-    <value>Check that your barcode scanner is configured to transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Controleer of uw barcodescanner is geconfigureerd om AIM-identificatoren te verzenden.</value>
   </data>
   <data name="Advice_235" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad and transmit AIM identifiers.</value>
-    <comment>High</comment>
+    <value>Zorg ervoor dat uw toetsenbordindelingen overeenkomen.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen en AIM-identificatoren te verzenden.</value>
   </data>
   <data name="Advice_240" xml:space="preserve">
-    <value>If you experience problems when scanning German PPN barcodes, enter data manually into your verification software.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Als u problemen ondervindt bij het scannen van Duitse PPN barcodes, voer dan handmatig gegevens in uw verificatiesoftware in.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_241" xml:space="preserve">
-    <value>Enter data manually into your verification software to verify PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Voer handmatig gegevens in uw verificatiesoftware in voor barcodes die Format 05 of Format 06 data bevatten.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_245" xml:space="preserve">
-    <value>Enter data manually into your verification software to verify PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Voer handmatig gegevens in uw verificatiesoftware in voor barcodes die Format 05 of Format 06 data bevatten.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_250" xml:space="preserve">
-    <value>If you expect to verify PPN barcodes, run the test again, this time including the German PPN compatibility test.</value>
-    <comment>High</comment>
+    <value>Als u verwacht PPN barcodes te verifiëren, voer dan de test opnieuw uit, ditmaal inclusief de Duitse PPN compatibiliteitstest.</value>
   </data>
   <data name="Advice_255" xml:space="preserve">
-    <value>If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance.</value>
-    <comment>High</comment>
+    <value>Als het probleem aanhoudt, controleer dan de configuratie van uw barcodescanner. Zoek naar instellingen die de prestaties van toetsenbordinvoer kunnen verbeteren.</value>
   </data>
   <data name="Advice_256" xml:space="preserve">
-    <value>If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance.</value>
-    <comment>High</comment>
+    <value>Als het probleem aanhoudt, controleer dan de configuratie van uw barcodescanner. Zoek naar instellingen die de prestaties van toetsenbordinvoer kunnen verbeteren.</value>
   </data>
   <data name="Advice_260" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Als u andere barcodes scant en problemen ondervindt, probeer dan uw barcodescanner te configureren om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_261" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Als u andere barcodes scant en problemen ondervindt, probeer dan uw barcodescanner te configureren om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_265" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Als u andere barcodes scant en problemen ondervindt, probeer dan uw barcodescanner te configureren om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_270" xml:space="preserve">
-    <value>If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Als u barcodes scant die EDI-gegevens bevatten en problemen ondervindt, probeer dan uw barcodescanner te configureren om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_271" xml:space="preserve">
-    <value>If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Als u barcodes scant die EDI-gegevens bevatten en problemen ondervindt, probeer dan uw barcodescanner te configureren om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_275" xml:space="preserve">
-    <value>If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Als u barcodes scant die EDI-gegevens bevatten en problemen ondervindt, probeer dan uw barcodescanner te configureren om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode(s).</value>
-    <comment>Low</comment>
+    <value>Probeer opnieuw, zorg ervoor dat u de juiste barcode(s) scant.</value>
   </data>
   <data name="Advice_301" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode.</value>
-    <comment>Low</comment>
+    <value>Probeer opnieuw, zorg ervoor dat u de juiste barcode scant.</value>
   </data>
   <data name="Advice_303" xml:space="preserve">
-    <value>Try again.;;Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Probeer opnieuw.;;Zorg ervoor dat uw toetsenbordindelingen overeenkomen.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_304" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode(s).</value>
-    <comment>Low</comment>
+    <value>Probeer opnieuw, zorg ervoor dat u de juiste barcode(s) scant.</value>
   </data>
   <data name="Advice_305" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode.;;If you are asked to scan multiple barcodes, make sure you scan them in the correct order.</value>
-    <comment>Medium</comment>
+    <value>Probeer opnieuw, zorg ervoor dat u de juiste barcode scant.;;Als u wordt gevraagd meerdere barcodes te scannen, zorg er dan voor dat u ze in de juiste volgorde scant.</value>
   </data>
   <data name="Advice_306" xml:space="preserve">
-    <value>Try again.</value>
-    <comment>Medium</comment>
+    <value>Probeer opnieuw.</value>
   </data>
   <data name="Advice_307" xml:space="preserve">
-    <value>If your verification software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Als uw verificatiesoftware niet kan compenseren, configureer dan uw barcodescanner om overeen te komen met uw computer toetsenbordindeling.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_308" xml:space="preserve">
-    <value>Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Configureer uw barcodescanner om overeen te komen met uw computer toetsenbordindeling.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_309" xml:space="preserve">
-    <value>If your verification software cannot compensate, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Als uw verificatiesoftware niet kan compenseren, configureer dan uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_310" xml:space="preserve">
-    <value>Configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_311" xml:space="preserve">
-    <value>If your verification software cannot compensate, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Als uw verificatiesoftware niet kan compenseren, configureer dan uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_312" xml:space="preserve">
-    <value>Configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_315" xml:space="preserve">
-    <value>Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Configureer uw barcodescanner om overeen te komen met uw computer toetsenbordindeling.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_316" xml:space="preserve">
-    <value>If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_320" xml:space="preserve">
-    <value>If your verification software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Als uw verificatiesoftware niet kan compenseren, configureer dan uw barcodescanner om overeen te komen met uw computer toetsenbordindeling.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_325" xml:space="preserve">
-    <value>Switch Caps Lock off and test again.;;If you must keep Caps Lock switched on while verifying unique identifiers, you may be able to configure your barcode scanner to compensate.</value>
-    <comment>High</comment>
+    <value>Zet Caps Lock uit en test opnieuw.;;Als u Caps Lock aan moet laten staan tijdens het verifiëren van unieke identificatoren, kunt u uw barcodescanner mogelijk zo configureren dat deze compenseert.</value>
   </data>
   <data name="Advice_326" xml:space="preserve">
-    <value>Switch Caps Lock off and test again.</value>
-    <comment>High</comment>
+    <value>Zet Caps Lock uit en test opnieuw.</value>
   </data>
   <data name="Advice_327" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again.</value>
-    <comment>High</comment>
+    <value>Controleer uw barcodescanner, toetsenbord en computerconfiguratie en configureer ze indien nodig opnieuw.;;Schakel Caps Lock uit en test opnieuw.</value>
   </data>
   <data name="Advice_328" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again.</value>
-    <comment>High</comment>
+    <value>Controleer uw barcodescanner, toetsenbord en computerconfiguratie en configureer ze indien nodig opnieuw.;;Schakel Caps Lock uit en test opnieuw.</value>
   </data>
   <data name="Advice_330" xml:space="preserve">
-    <value>Check your scanner, keyboard and computer configuration and reconfigure them if necessary. </value>
-    <comment>High</comment>
+    <value>Controleer uw scanner, toetsenbord en computerconfiguratie en configureer ze indien nodig opnieuw.</value>
   </data>
   <data name="Advice_331" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
-    <comment>High</comment>
+    <value>Controleer uw barcodescanner, toetsenbord en computerconfiguratie en configureer ze indien nodig opnieuw.</value>
   </data>
   <data name="Advice_332" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
-    <comment>High</comment>
+    <value>Controleer uw barcodescanner, toetsenbord en computerconfiguratie en configureer ze indien nodig opnieuw.</value>
   </data>
   <data name="Advice_335" xml:space="preserve">
-    <value>If possible, configure your computer to use a different keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Als het mogelijk is, configureer uw computer om een andere toetsenbordindeling te gebruiken.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_350" xml:space="preserve">
-    <value>Enter data manually into your verification software to verify PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Voer handmatig gegevens in uw verificatiesoftware in voor barcodes die Format 05 of Format 06 data bevatten.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_351" xml:space="preserve">
-    <value>Enter data manually into your verification software to verify PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Voer handmatig gegevens in uw verificatiesoftware in voor barcodes die Format 05 of Format 06 data bevatten.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_355" xml:space="preserve">
-    <value>Enter data manually into your verification software to verify PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Voer handmatig gegevens in uw verificatiesoftware in voor barcodes die Format 05 of Format 06 data bevatten.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
   </data>
   <data name="Advice_390" xml:space="preserve">
-    <value>Try again.</value>
-    <comment>High</comment>
+    <value>Probeer opnieuw.</value>
   </data>
   <data name="Condition_100" xml:space="preserve">
-    <value>Your system reads unique identifiers reliably.</value>
-    <comment>Low</comment>
+    <value>Uw systeem leest unieke identificatoren betrouwbaar.</value>
   </data>
   <data name="Condition_105" xml:space="preserve">
-    <value>Your system reads unique identifiers reliably.</value>
-    <comment>Low</comment>
+    <value>Uw systeem leest unieke identificatoren betrouwbaar.</value>
   </data>
   <data name="Condition_110" xml:space="preserve">
-    <value>Your system reads unique identifiers reliably.</value>
-    <comment>Medium</comment>
+    <value>Uw systeem leest unieke identificatoren betrouwbaar.</value>
   </data>
   <data name="Condition_115" xml:space="preserve">
-    <value>Your system reads most unique identifiers reliably.</value>
-    <comment>Medium</comment>
+    <value>Uw systeem leest de meeste unieke identificatoren betrouwbaar.</value>
   </data>
   <data name="Condition_200" xml:space="preserve">
-    <value>Your barcode scanner does not transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Uw barcodescanner verzendt geen AIM-identificatoren.</value>
   </data>
   <data name="Condition_205" xml:space="preserve">
-    <value>Caps Lock is on, but the letter casing is reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock staat aan, maar de lettergrootte wordt correct gerapporteerd.</value>
   </data>
   <data name="Condition_206" xml:space="preserve">
-    <value>Caps Lock is on, but the letter casing is preserved.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock staat aan, maar de lettergrootte wordt behouden.</value>
   </data>
   <data name="Condition_210" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock is ingeschakeld.</value>
   </data>
   <data name="Condition_215" xml:space="preserve">
-    <value>Your barcode scanner does not transmit an end-of-line sequence.</value>
-    <comment>Medium</comment>
+    <value>Uw barcodescanner verzendt geen einde-van-regel sequentie.</value>
   </data>
   <data name="Condition_220" xml:space="preserve">
-    <value>Your barcode scanner transmits a prefix.</value>
-    <comment>Medium</comment>
+    <value>Uw barcodescanner verzendt een voorvoegsel.</value>
   </data>
   <data name="Condition_225" xml:space="preserve">
-    <value>Your barcode scanner transmits a suffix.</value>
-    <comment>Medium</comment>
+    <value>Uw barcodescanner verzendt een achtervoegsel.</value>
   </data>
   <data name="Condition_230" xml:space="preserve">
-    <value>Your system may not read AIM identifier characters.</value>
-    <comment>High</comment>
+    <value>Uw systeem leest mogelijk niet betrouwbaar AIM-identificator karakters.</value>
   </data>
   <data name="Condition_231" xml:space="preserve">
-    <value>Your system cannot read AIM identifier characters.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan AIM-identificator karakters niet lezen.</value>
   </data>
   <data name="Condition_232" xml:space="preserve">
-    <value>Your barcode scanner may not transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Uw barcodescanner verzendt mogelijk geen AIM-identificatoren.</value>
   </data>
   <data name="Condition_235" xml:space="preserve">
-    <value>Your system cannot read AIM identifier characters reliably.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan AIM-identificator karakters niet betrouwbaar lezen.</value>
   </data>
   <data name="Condition_240" xml:space="preserve">
-    <value>Your system cannot read German PPN barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan Duitse PPN barcodekarakters niet betrouwbaar lezen.</value>
   </data>
   <data name="Condition_241" xml:space="preserve">
-    <value>Your system cannot read German PPN barcode characters.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan Duitse PPN barcodekarakters niet lezen.</value>
   </data>
   <data name="Condition_245" xml:space="preserve">
-    <value>Your system cannot read German PPN barcode characters.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan Duitse PPN barcodekarakters niet lezen.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>You did not test compatibility for German PPN barcodes.</value>
-    <comment>High</comment>
+    <value>U hebt niet getest op compatibiliteit met Duitse PPN barcodes.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
-    <value>Data input performance is slower than expected.</value>
-    <comment>High</comment>
+    <value>De prestaties van gegevensinvoer zijn langzamer dan verwacht.</value>
   </data>
   <data name="Condition_256" xml:space="preserve">
-    <value>Data input performance is very poor.</value>
-    <comment>High</comment>
+    <value>De prestaties van gegevensinvoer zijn zeer slecht.</value>
   </data>
   <data name="Condition_260" xml:space="preserve">
-    <value>Your system cannot read additional characters reliably.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan aanvullende karakters niet betrouwbaar lezen.</value>
   </data>
   <data name="Condition_261" xml:space="preserve">
-    <value>Your system cannot read additional characters.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan aanvullende karakters niet lezen.</value>
   </data>
   <data name="Condition_265" xml:space="preserve">
-    <value>Your system may not read additional data reliably.</value>
-    <comment>High</comment>
+    <value>Uw systeem leest mogelijk niet betrouwbaar aanvullende data.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze EDI-gegevens bevatten.</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze EDI-gegevens bevatten.</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze EDI-gegevens bevatten.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
-    <value>The test failed.</value>
-    <comment>Low</comment>
+    <value>De test is mislukt.</value>
   </data>
   <data name="Condition_301" xml:space="preserve">
-    <value>No data was reported for the barcode.</value>
-    <comment>Low</comment>
+    <value>Er is geen data gerapporteerd voor de barcode.</value>
   </data>
   <data name="Condition_303" xml:space="preserve">
-    <value>Some data was not reported when you scanned the barcode.</value>
-    <comment>Medium</comment>
+    <value>Er is geen data gerapporteerd toen u de barcode scande.</value>
   </data>
   <data name="Condition_304" xml:space="preserve">
-    <value>No data was reported for one or more barcodes.</value>
-    <comment>Low</comment>
+    <value>Er is geen data gerapporteerd voor een of meer barcodes.</value>
   </data>
   <data name="Condition_305" xml:space="preserve">
-    <value>You scanned a barcode out of sequence.</value>
-    <comment>Medium</comment>
+    <value>U hebt een barcode buiten volgorde gescand.</value>
   </data>
   <data name="Condition_306" xml:space="preserve">
-    <value>Some data was not reported when you scanned one or more barcodes.</value>
-    <comment>Medium</comment>
+    <value>Er is geen data gerapporteerd toen u een of meer barcodes scande.</value>
   </data>
   <data name="Condition_307" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>Medium</comment>
+    <value>Uw barcodescanner en computer hebben verschillende toetsenbordindelingen.</value>
   </data>
   <data name="Condition_308" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>Medium</comment>
+    <value>Uw barcodescanner en computer hebben verschillende toetsenbordindelingen.</value>
   </data>
   <data name="Condition_309" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Verborgen karakters in barcodes worden niet correct gerapporteerd.</value>
   </data>
   <data name="Condition_310" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Verborgen karakters in barcodes worden niet correct gerapporteerd.</value>
   </data>
   <data name="Condition_311" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Verborgen karakters in barcodes worden niet correct gerapporteerd.</value>
   </data>
   <data name="Condition_312" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>High</comment>
+    <value>Verborgen karakters in barcodes worden niet correct gerapporteerd.</value>
   </data>
   <data name="Condition_315" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>High</comment>
+    <value>Uw barcodescanner en computer hebben verschillende toetsenbordindelingen.</value>
   </data>
   <data name="Condition_316" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>High</comment>
+    <value>Verborgen karakters in barcodes worden niet correct gerapporteerd.</value>
   </data>
   <data name="Condition_320" xml:space="preserve">
-    <value>Your system cannot read unique identifier characters reliably.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan unieke identificatorkarakters niet betrouwbaar lezen.</value>
   </data>
   <data name="Condition_325" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>High</comment>
+    <value>Caps Lock is ingeschakeld.</value>
   </data>
   <data name="Condition_326" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>High</comment>
+    <value>Caps Lock is ingeschakeld.</value>
   </data>
   <data name="Condition_327" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to upper case.</value>
-    <comment>High</comment>
+    <value>Uw barcodescanner kan geconfigureerd zijn om karakters naar hoofdletters om te zetten.</value>
   </data>
   <data name="Condition_328" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to lower case.</value>
-    <comment>High</comment>
+    <value>Uw barcodescanner kan geconfigureerd zijn om karakters naar kleine letters om te zetten.</value>
   </data>
   <data name="Condition_330" xml:space="preserve">
-    <value>Your barcode scanner may be configured to simulate Caps Lock.</value>
-    <comment>High</comment>
+    <value>Uw barcodescanner kan geconfigureerd zijn om Caps Lock te simuleren.</value>
   </data>
   <data name="Condition_331" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to upper case.</value>
-    <comment>High</comment>
+    <value>Uw barcodescanner kan geconfigureerd zijn om karakters naar hoofdletters om te zetten.</value>
   </data>
   <data name="Condition_332" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to lower case.</value>
-    <comment>High</comment>
+    <value>Uw barcodescanner kan geconfigureerd zijn om karakters naar kleine letters om te zetten.</value>
   </data>
   <data name="Condition_335" xml:space="preserve">
-    <value>Your keyboard layout supports {0} characters and cannot read unique identifiers reliably.</value>
-    <comment>High</comment>
+    <value>Uw toetsenbordindeling ondersteunt {0} karakters en kan unieke identificatoren niet betrouwbaar lezen.</value>
   </data>
   <data name="Condition_350" xml:space="preserve">
-    <value>Your system cannot read PPN barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan PPN barcodekarakters niet betrouwbaar lezen.</value>
   </data>
   <data name="Condition_351" xml:space="preserve">
-    <value>Your system cannot read PPN barcode characters.</value>
-    <comment>Medium</comment>
+    <value>Uw systeem kan PPN barcodekarakters niet lezen.</value>
   </data>
   <data name="Condition_355" xml:space="preserve">
-    <value>Your system cannot read PPN barcode characters.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan PPN barcodekarakters niet lezen.</value>
   </data>
   <data name="Condition_390" xml:space="preserve">
-    <value>The test failed unexpectedly.</value>
-    <comment>High</comment>
+    <value>De test is onverwacht mislukt.</value>
   </data>
   <data name="Description_105" xml:space="preserve">
-    <value>However, you did not test compatibility for German PPN barcodes. Your system may not be able to read German PPN barcodes reliably. </value>
-    <comment>Low</comment>
+    <value>Echter, u hebt niet getest op compatibiliteit met Duitse PPN barcodes. Uw systeem is mogelijk niet in staat om Duitse PPN barcodes betrouwbaar te lezen.</value>
   </data>
   <data name="Description_110" xml:space="preserve">
-    <value>However, your verification software may not read German PPN barcodes correctly.</value>
-    <comment>Medium</comment>
+    <value>Echter, uw verificatiesoftware kan mogelijk geen Duitse PPN barcodes correct lezen.</value>
   </data>
   <data name="Description_115" xml:space="preserve">
-    <value>However, it cannot read German PPN barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Echter, het kan Duitse PPN barcodes niet betrouwbaar lezen.</value>
   </data>
   <data name="Description_200" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your verification software may use them to eliminate unnecessary alerts.</value>
-    <comment>Medium</comment>
+    <value>AIM-identificatoren vertegenwoordigen het type barcode. Uw verificatiesoftware kan ze gebruiken om onnodige meldingen te elimineren.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Your barcode scanner is probably configured to compensate automatically for Caps Lock.</value>
-    <comment>Medium</comment>
+    <value>Uw barcodescanner is waarschijnlijk geconfigureerd om automatisch te compenseren voor Caps Lock.</value>
   </data>
   <data name="Description_206" xml:space="preserve">
-    <value>Your Caps Lock key may be disabled or remapped. </value>
-    <comment>Medium</comment>
+    <value>Uw Caps Lock-toets kan zijn uitgeschakeld of opnieuw toegewezen.</value>
   </data>
   <data name="Description_210" xml:space="preserve">
-    <value>However, your computer keyboard layout is for a script that does not support upper- and lower-case letters.</value>
-    <comment>Medium</comment>
+    <value>Echter, uw computer toetsenbordindeling is voor een script dat geen onder- en bovenkast letters ondersteunt.</value>
   </data>
   <data name="Description_215" xml:space="preserve">
-    <value>This may slow your scanning performance. However, your verification software may not support end-of-line sequences.</value>
-    <comment>Medium</comment>
+    <value>Dit kan uw scansnelheid vertragen. Echter, uw verificatiesoftware ondersteunt mogelijk geen einde-van-regel sequenties.</value>
   </data>
   <data name="Description_220" xml:space="preserve">
-    <value>Your verification software may not recognise the prefix. </value>
-    <comment>Medium</comment>
+    <value>Uw verificatiesoftware herkent het voorvoegsel mogelijk niet.</value>
   </data>
   <data name="Description_225" xml:space="preserve">
-    <value>Your verification software may not recognise the suffix. </value>
-    <comment>Medium</comment>
+    <value>Uw verificatiesoftware herkent het achtervoegsel mogelijk niet.</value>
   </data>
   <data name="Description_230" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your verification software may use them to eliminate unnecessary alerts. However, the software must implement character mapping to read AIM identifiers reliably.</value>
-    <comment>High</comment>
+    <value>AIM-identificatoren vertegenwoordigen het type barcode. Uw verificatiesoftware kan ze gebruiken om onnodige meldingen te elimineren. Echter, de software moet karaktertoewijzing implementeren om AIM-identificatoren betrouwbaar te kunnen lezen.</value>
   </data>
   <data name="Description_231" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your verification software may use them to eliminate unnecessary alerts.</value>
-    <comment>High</comment>
+    <value>AIM-identificatoren vertegenwoordigen het type barcode. Uw verificatiesoftware kan ze gebruiken om onnodige meldingen te elimineren.</value>
   </data>
   <data name="Description_232" xml:space="preserve">
-    <value>Your barcode scanner may transmit AIM identifiers, but this is not certain.  AIM identifiers represent the barcode type. Your verification software may use them to eliminate unnecessary alerts.</value>
-    <comment>Medium</comment>
+    <value>Uw barcodescanner verzendt mogelijk AIM-identificatoren, maar dit is niet zeker. AIM-identificatoren vertegenwoordigen het barcodetype. Uw verificatiesoftware kan ze gebruiken om onnodige waarschuwingen te elimineren.</value>
   </data>
   <data name="Description_235" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your verification software may use them to eliminate unnecessary alerts.</value>
-    <comment>High</comment>
+    <value>AIM-identificatoren vertegenwoordigen het type barcode. Uw verificatiesoftware kan ze gebruiken om onnodige meldingen te elimineren.</value>
   </data>
   <data name="Description_240" xml:space="preserve">
-    <value>Your software must implement character mapping to read PPN barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Uw software moet karaktertoewijzing implementeren om PPN barcodes betrouwbaar te kunnen lezen.</value>
   </data>
   <data name="Description_245" xml:space="preserve">
-    <value>Some verification software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Sommige verificatiesoftware kan dit compenseren door sleutelcodes te analyseren in plaats van karakters.</value>
   </data>
   <data name="Description_255" xml:space="preserve">
-    <value>This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Dit kan een tijdelijk of intermitterend probleem zijn. Uw computer kan bezig zijn met het uitvoeren van een virusscanner of een voorspellende tekstdienst.</value>
   </data>
   <data name="Description_256" xml:space="preserve">
-    <value>This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Dit kan een tijdelijk of intermitterend probleem zijn. Uw computer kan bezig zijn met het uitvoeren van een virusscanner of een voorspellende tekstdienst.</value>
   </data>
   <data name="Description_260" xml:space="preserve">
-    <value>Some barcodes may contain additional characters that never appear in unique identifiers. Your software must implement character mapping to read these barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Sommige barcodes kunnen extra karakters bevatten die nooit voorkomen in unieke identificatoren. Uw software moet karaktertoewijzing implementeren om deze barcodes betrouwbaar te kunnen lezen.</value>
   </data>
   <data name="Description_261" xml:space="preserve">
-    <value>Some barcodes may contain additional characters that never appear in unique identifiers.</value>
-    <comment>High</comment>
+    <value>Sommige barcodes kunnen extra karakters bevatten die nooit voorkomen in unieke identificatoren.</value>
   </data>
   <data name="Description_265" xml:space="preserve">
-    <value>Some barcodes may contain additional characters that never appear in unique identifiers.</value>
-    <comment>High</comment>
+    <value>Sommige barcodes kunnen extra karakters bevatten die nooit voorkomen in unieke identificatoren.</value>
   </data>
   <data name="Description_270" xml:space="preserve">
-    <value>Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Sommige barcodes kunnen EDI-gegevens bevatten. Uw software moet karaktertoewijzing implementeren om deze barcodes betrouwbaar te kunnen lezen.</value>
   </data>
   <data name="Description_271" xml:space="preserve">
-    <value>Some barcodes may contain EDI data.</value>
-    <comment>High</comment>
+    <value>Sommige barcodes kunnen EDI-gegevens bevatten.</value>
   </data>
   <data name="Description_275" xml:space="preserve">
-    <value>Some barcodes may contain EDI data.</value>
-    <comment>High</comment>
+    <value>Sommige barcodes kunnen EDI-gegevens bevatten.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
-    <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Low</comment>
+    <value>U hebt mogelijk een verkeerde barcode gescand of onjuiste gegevens ingevoerd met het toetsenbord. Uw barcodescanner of systeem kan traag zijn, of er kan een onverwachte of intermitterende storing zijn opgetreden.</value>
   </data>
   <data name="Description_303" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts may not correspond. You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Medium</comment>
+    <value>De indelingen van de barcodescanner en het computertoetsenbord komen mogelijk niet overeen. U hebt mogelijk een verkeerde barcode gescand of onjuiste gegevens ingevoerd met het toetsenbord. Uw barcodescanner of systeem kan traag zijn, of er kan een onverwachte of intermitterende storing zijn opgetreden.</value>
   </data>
   <data name="Description_306" xml:space="preserve">
-    <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Medium</comment>
+    <value>U hebt mogelijk een verkeerde barcode gescand of onjuiste gegevens ingevoerd met het toetsenbord. Uw barcodescanner of systeem kan traag zijn, of er kan een onverwachte of intermitterende storing zijn opgetreden.</value>
   </data>
   <data name="Description_307" xml:space="preserve">
-    <value>Your verification software must implement character mapping to read unique identifiers reliably.</value>
-    <comment>Medium</comment>
+    <value>Uw verificatiesoftware moet karaktertoewijzing implementeren om unieke identificatoren betrouwbaar te kunnen lezen.</value>
   </data>
   <data name="Description_309" xml:space="preserve">
-    <value>Your verification software may be able to compensate.</value>
-    <comment>Medium</comment>
+    <value>Uw verificatiesoftware kan mogelijk compenseren.</value>
   </data>
   <data name="Description_311" xml:space="preserve">
-    <value>Your verification software may be able to compensate.</value>
-    <comment>Medium</comment>
+    <value>Uw verificatiesoftware kan mogelijk compenseren.</value>
   </data>
   <data name="Description_315" xml:space="preserve">
-    <value>Your verification software may be able to compensate. However, your system cannot read German PPN barcode characters correctly. Some verification software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Uw verificatiesoftware kan mogelijk compenseren. Echter, uw systeem leest Duitse PPN barcodekarakters niet correct. Sommige verificatiesoftware kan hiervoor compenseren door sleutelcodes te analyseren in plaats van karakters.</value>
   </data>
   <data name="Description_316" xml:space="preserve">
-    <value>Your verification software may be able to compensate. However, your system cannot read German PPN barcode characters correctly. Some verification software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Uw verificatiesoftware kan mogelijk compenseren. Echter, uw systeem leest Duitse PPN barcodekarakters niet correct. Sommige verificatiesoftware kan hiervoor compenseren door sleutelcodes te analyseren in plaats van karakters.</value>
   </data>
   <data name="Description_320" xml:space="preserve">
-    <value>Some verification software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Sommige verificatiesoftware kan dit compenseren door sleutelcodes te analyseren in plaats van karakters.</value>
   </data>
   <data name="Description_326" xml:space="preserve">
-    <value>When Caps Lock is on, the default behaviour is to report all characters in upper-case.</value>
-    <comment>High</comment>
+    <value>Wanneer Caps Lock is ingeschakeld, is het standaardgedrag om alle karakters in hoofdletters te rapporteren.</value>
   </data>
   <data name="Description_327" xml:space="preserve">
-    <value>Your system cannot read unique identifier characters reliably.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan unieke identificatorkarakters niet betrouwbaar lezen.</value>
   </data>
   <data name="Description_328" xml:space="preserve">
-    <value>Your system cannot read unique identifier characters reliably.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan unieke identificatorkarakters niet betrouwbaar lezen.</value>
   </data>
   <data name="Description_331" xml:space="preserve">
-    <value>Your system cannot read unique identifier characters reliably.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan unieke identificatorkarakters niet betrouwbaar lezen.</value>
   </data>
   <data name="Description_332" xml:space="preserve">
-    <value>Your system cannot read unique identifier characters reliably.</value>
-    <comment>High</comment>
+    <value>Uw systeem kan unieke identificatorkarakters niet betrouwbaar lezen.</value>
   </data>
   <data name="Description_350" xml:space="preserve">
-    <value>Your software must implement character mapping to read PPN barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Uw software moet karaktertoewijzing implementeren om PPN barcodes betrouwbaar te kunnen lezen.</value>
   </data>
   <data name="Description_355" xml:space="preserve">
-    <value>Some verification software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Sommige verificatiesoftware kan dit compenseren door sleutelcodes te analyseren in plaats van karakters.</value>
   </data>
   <data name="Description_390" xml:space="preserve">
-    <value>Your barcode scanner or system may be slow or it may be affected by anti-virus software or some other unexpected or intermittent issue.</value>
-    <comment>High</comment>
+    <value>Uw barcodescanner of systeem kan traag zijn of beïnvloed worden door antivirussoftware of een andere onverwachte of intermitterende storing.</value>
   </data>
 </root>

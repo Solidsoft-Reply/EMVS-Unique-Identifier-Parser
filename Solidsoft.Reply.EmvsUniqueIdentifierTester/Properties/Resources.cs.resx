@@ -117,232 +117,175 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="String" xml:space="preserve">
-    <value>AutomaticEntryInstructions1</value>
-    <comment>Data will be submitted automatically.</comment>
+  <data name="AutomaticEntryInstructions1" xml:space="preserve">
+    <value>Data budou odesílána automaticky.</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value>AutomaticEntryInstructions1Not</value>
-    <comment>Data will not be submitted automatically.</comment>
+  <data name="AutomaticEntryInstructions1Not" xml:space="preserve">
+    <value>Data nebudou odesílána automaticky.</value>
   </data>
-  <data name="String10" xml:space="preserve">
-    <value>CommandPrompt</value>
-    <comment>Scan barcode&gt;</comment>
+  <data name="AutomaticEntryInstructions2" xml:space="preserve">
+    <value>Stiskněte RETURN pro odeslání dat. Nastavte skener tak, aby odesílal návraty vozíku.</value>
   </data>
-  <data name="String11" xml:space="preserve">
-    <value>ConsoleTitle</value>
-    <comment>EMVS Unique Identifier Tester</comment>
+  <data name="BarcodesStillToScan" xml:space="preserve">
+    <value>čárové kódy ještě ke skenování...</value>
   </data>
-  <data name="String12" xml:space="preserve">
-    <value>DidNotIncludePpn</value>
-    <comment>did not include</comment>
+  <data name="BarcodeStillToScan" xml:space="preserve">
+    <value>čárový kód ještě ke skenování...</value>
   </data>
-  <data name="String13" xml:space="preserve">
-    <value>DisplayAdvice_1</value>
-    <comment>ADVICE</comment>
+  <data name="CalibrationViewDoNotCallRender" xml:space="preserve">
+    <value>CalibrationView - nevolejte Render</value>
   </data>
-  <data name="String14" xml:space="preserve">
-    <value>DisplayCalibrationFailedMessage_1</value>
-    <comment>The current combination of barcode and Operating System keyboard layouts cannot be calibrated.</comment>
+  <data name="ClearConsoleBuffer" xml:space="preserve">
+    <value>--- Vymažte vyrovnávací paměť konzole ----</value>
   </data>
-  <data name="String15" xml:space="preserve">
-    <value>DisplayCalibrationFailedMessage_2</value>
-    <comment>Check that you have scanned the correct barcode for calibration. If you have, reconfigure the</comment>
+  <data name="CodePageInitialiseError" xml:space="preserve">
+    <value>Nepodařilo se inicializovat stránku kódu {0}</value>
   </data>
-  <data name="String16" xml:space="preserve">
-    <value>DisplayCalibrationFailedMessage_3</value>
-    <comment>scanner to emulate a different keyboard layout or a numeric keypad.</comment>
+  <data name="CodePageInitialiseErrorRecovery" xml:space="preserve">
+    <value>Stiskněte libovolnou klávesu pro pokračování, použije se výchozí stránka kódu...</value>
   </data>
-  <data name="String17" xml:space="preserve">
-    <value>DisplayCalibrationInformation_1</value>
-    <comment>Press any key to continue...</comment>
+  <data name="CodePageInitialiseFakeCommandLine" xml:space="preserve">
+    <value>CodePage = {0}</value>
   </data>
-  <data name="String18" xml:space="preserve">
-    <value>DisplayCalibrationOptions_1</value>
-    <comment>* Scan the barcode to calibrate the tester application.</comment>
+  <data name="CommandPrompt" xml:space="preserve">
+    <value>Skenovat čárový kód&gt;</value>
   </data>
-  <data name="String19" xml:space="preserve">
-    <value>DisplayCalibrationOptions_2</value>
-    <comment>* Press Ctrl-O to exit the calibration mode.</comment>
+  <data name="ConsoleTitle" xml:space="preserve">
+    <value>Tester jedinečného identifikátoru EMVS</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>AutomaticEntryInstructions2</value>
-    <comment> Press RETURN to submit data. Configure the scanner to transmit carriage returns.</comment>
+  <data name="DidNotIncludePpn" xml:space="preserve">
+    <value>nebylo zahrnuto</value>
   </data>
-  <data name="String20" xml:space="preserve">
-    <value>DisplayCalibrationReport_1</value>
-    <comment>CALIBRATION REPORT</comment>
+  <data name="DisplayAdvice_1" xml:space="preserve">
+    <value>RADY</value>
   </data>
-  <data name="String21" xml:space="preserve">
-    <value>DisplayCalibrationSaveError_1</value>
-    <comment>Press any key to continue...</comment>
+  <data name="DisplayCalibrationFailedMessage_1" xml:space="preserve">
+    <value>Současná kombinace čárového kódu a rozložení klávesnice operačního systému nelze kalibrovat.</value>
   </data>
-  <data name="String22" xml:space="preserve">
-    <value>DisplayKeepScanning_1</value>
-    <comment>Keep scanning...</comment>
+  <data name="DisplayCalibrationFailedMessage_2" xml:space="preserve">
+    <value>Zkontrolujte, zda jste naskenovali správný čárový kód pro kalibraci. Pokud ano, překonfigurujte</value>
   </data>
-  <data name="String23" xml:space="preserve">
-    <value>DisplayMainOptions_1</value>
-    <comment> * Scan a barcode.</comment>
+  <data name="DisplayCalibrationFailedMessage_3" xml:space="preserve">
+    <value>skener tak, aby emuloval jiné rozložení klávesnice nebo numerickou klávesnici.</value>
   </data>
-  <data name="String24" xml:space="preserve">
-    <value>DisplayMainOptions_2</value>
-    <comment> * Type in or paste data and press Enter.</comment>
+  <data name="DisplayCalibrationInformation_1" xml:space="preserve">
+    <value>Stiskněte libovolnou klávesu pro pokračování...</value>
   </data>
-  <data name="String25" xml:space="preserve">
-    <value>DisplayMainOptions_3</value>
-    <comment> * Press Ctrl-R to toggle between automatic and manual (carriage return) submission of data.</comment>
+  <data name="DisplayCalibrationOptions_1" xml:space="preserve">
+    <value>* Naskenujte čárový kód pro kalibraci aplikace testeru.</value>
   </data>
-  <data name="String26" xml:space="preserve">
-    <value>DisplayMainOptions_4</value>
-    <comment> * Press Ctrl-K to calibrate the tester for the current scanner and keyboard layout.</comment>
+  <data name="DisplayCalibrationOptions_2" xml:space="preserve">
+    <value>* Stiskněte Ctrl-O pro ukončení režimu kalibrace.</value>
   </data>
-  <data name="String27" xml:space="preserve">
-    <value>DisplayMainOptions_5</value>
-    <comment> * Press Shift Ctrl-K to calibrate the tester for the current scanner and keyboard layout for GS1 FNC barcodes, only.</comment>
+  <data name="DisplayCalibrationReport_1" xml:space="preserve">
+    <value>ZPRÁVA O KALIBRACI</value>
   </data>
-  <data name="String28" xml:space="preserve">
-    <value>DisplayMainOptions_6</value>
-    <comment> * Press Ctrl-S to clear the screen.</comment>
+  <data name="DisplayCalibrationSaveError_1" xml:space="preserve">
+    <value>Stiskněte libovolnou klávesu pro pokračování...</value>
   </data>
-  <data name="String29" xml:space="preserve">
-    <value>DisplayMainOptions_7</value>
-    <comment> * Press Ctrl-T to exit the program.</comment>
+  <data name="DisplayKeepScanning_1" xml:space="preserve">
+    <value>Pokračujte ve skenování...</value>
   </data>
-  <data name="String3" xml:space="preserve">
-    <value>BarcodesStillToScan</value>
-    <comment>barcodes still to scan...</comment>
+  <data name="DisplayMainOptions_1" xml:space="preserve">
+    <value>* Naskenujte čárový kód.</value>
   </data>
-  <data name="String30" xml:space="preserve">
-    <value>DisplayMainOptions_8</value>
-    <comment> * Press Up and Down Arrows to select and retry cached entries.</comment>
+  <data name="DisplayMainOptions_2" xml:space="preserve">
+    <value>* Zadejte nebo vložte data a stiskněte Enter.</value>
   </data>
-  <data name="String31" xml:space="preserve">
-    <value>DisplayParserResults_1</value>
-    <comment>Input contains one or more characters that cannot be encoded.</comment>
+  <data name="DisplayMainOptions_3" xml:space="preserve">
+    <value>* Stiskněte Ctrl-R pro přepínání mezi automatickým a ručním (s návratem vozu) odesíláním dat.</value>
   </data>
-  <data name="String32" xml:space="preserve">
-    <value>DisplayParserResults_2</value>
-    <comment>PARSER ERROR:</comment>
+  <data name="DisplayMainOptions_4" xml:space="preserve">
+    <value>* Stiskněte Ctrl-K pro kalibraci testeru pro aktuální skener a rozložení klávesnice.</value>
   </data>
-  <data name="String33" xml:space="preserve">
-    <value>DisplayParserResults_3</value>
-    <comment>ERROR:</comment>
+  <data name="DisplayMainOptions_5" xml:space="preserve">
+    <value>* Stiskněte Shift Ctrl-K pro kalibraci testeru pouze pro čárové kódy GS1 FNC.</value>
   </data>
-  <data name="String34" xml:space="preserve">
-    <value>DoNotSubmitToNationalSystem</value>
-    <comment>do not submit to national system</comment>
+  <data name="DisplayMainOptions_6" xml:space="preserve">
+    <value>* Stiskněte Ctrl-S pro vyčištění obrazovky.</value>
   </data>
-  <data name="String35" xml:space="preserve">
-    <value>Error</value>
-    <comment>Error</comment>
+  <data name="DisplayMainOptions_7" xml:space="preserve">
+    <value>* Stiskněte Ctrl-T pro ukončení programu.</value>
   </data>
-  <data name="String36" xml:space="preserve">
-    <value>IncludePpn</value>
-    <comment>included</comment>
+  <data name="DisplayMainOptions_8" xml:space="preserve">
+    <value>* Stiskněte šipky nahoru a dolů pro výběr a opakování uložených záznamů.</value>
   </data>
-  <data name="String37" xml:space="preserve">
-    <value>Information</value>
-    <comment>Information</comment>
+  <data name="DisplayParserResults_1" xml:space="preserve">
+    <value>Vstup obsahuje jeden nebo více znaků, které nelze zakódovat.</value>
   </data>
-  <data name="String38" xml:space="preserve">
-    <value>InformationForPpn</value>
-    <comment>{0}: Calibration {1} tests for Format 05 and Format 06 (German PPN) barcodes.</comment>
+  <data name="DisplayParserResults_2" xml:space="preserve">
+    <value>CHYBA PARSERU:</value>
   </data>
-  <data name="String39" xml:space="preserve">
-    <value>Initialise_1</value>
-    <comment>Press any key to continue...</comment>
+  <data name="DisplayParserResults_3" xml:space="preserve">
+    <value>CHYBA:</value>
   </data>
-  <data name="String4" xml:space="preserve">
-    <value>BarcodeStillToScan</value>
-    <comment>barcode still to scan...</comment>
+  <data name="DoNotSubmitToNationalSystem" xml:space="preserve">
+    <value>neodesílat do národního systému</value>
   </data>
-  <data name="String40" xml:space="preserve">
-    <value>Invalid</value>
-    <comment>invalid</comment>
+  <data name="Error" xml:space="preserve">
+    <value>Chyba</value>
   </data>
-  <data name="String41" xml:space="preserve">
-    <value>InvalidCharacterPlaceHolderMessage</value>
-    <comment> □ represents an invalid character </comment>
+  <data name="IncludePpn" xml:space="preserve">
+    <value>zahrnuto</value>
   </data>
-  <data name="String42" xml:space="preserve">
-    <value>IssuingAgencyCountry</value>
-    <comment>Company or national identifier assigned by issuing agency in {0}.</comment>
+  <data name="Information" xml:space="preserve">
+    <value>Informace</value>
   </data>
-  <data name="String43" xml:space="preserve">
-    <value>ListIntPtrCastError</value>
-    <comment>GCHandle Target could not be cast as List&lt;IntPtr&gt;</comment>
+  <data name="InformationForPpn" xml:space="preserve">
+    <value>{0}: Kalibrační {1} testy pro čárové kódy ve formátu 05 a 06 (španělské PPN).</value>
   </data>
-  <data name="String44" xml:space="preserve">
-    <value>MenuAutoSubmit</value>
-    <comment>Auto-submit</comment>
+  <data name="Initialise_1" xml:space="preserve">
+    <value>Stiskněte libovolnou klávesu pro pokračování...</value>
   </data>
-  <data name="String45" xml:space="preserve">
-    <value>MenuCalibrateFull</value>
-    <comment>Calibrate (full)</comment>
+  <data name="Invalid" xml:space="preserve">
+    <value>neplatné</value>
   </data>
-  <data name="String46" xml:space="preserve">
-    <value>MenuCalibrateGS1</value>
-    <comment>Calibrate (GS1)</comment>
+  <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
+    <value>□ představuje neplatný znak</value>
   </data>
-  <data name="String47" xml:space="preserve">
-    <value>MenuClearScreen</value>
-    <comment>Clear Screen</comment>
+  <data name="IssuingAgencyCountry" xml:space="preserve">
+    <value>Společnost nebo národní identifikátor přidělený vydávající agenturou v {0}.</value>
   </data>
-  <data name="String48" xml:space="preserve">
-    <value>MenuExit</value>
-    <comment>Exit</comment>
+  <data name="ListIntPtrCastError" xml:space="preserve">
+    <value>Cíl GCHandle nemohl být přetypován na List&lt;IntPtr&gt;</value>
   </data>
-  <data name="String49" xml:space="preserve">
-    <value>Nothing</value>
-    <comment>nothing</comment>
+  <data name="MenuAutoSubmit" xml:space="preserve">
+    <value>Automatické odesílání</value>
   </data>
-  <data name="String5" xml:space="preserve">
-    <value>CalibrationViewDoNotCallRender</value>
-    <comment>CalibrationView - do not call Render</comment>
+  <data name="MenuCalibrateFull" xml:space="preserve">
+    <value>Plná kalibrace</value>
   </data>
-  <data name="String50" xml:space="preserve">
-    <value>Options</value>
-    <comment>OPTIONS</comment>
+  <data name="MenuCalibrateGS1" xml:space="preserve">
+    <value>Kalibrovat (GS1)</value>
   </data>
-  <data name="String51" xml:space="preserve">
-    <value>SaveError</value>
-    <comment>The calibration was not saved{0}</comment>
+  <data name="MenuClearScreen" xml:space="preserve">
+    <value>Vyčistit obrazovku</value>
   </data>
-  <data name="String52" xml:space="preserve">
-    <value>SubmitToNationalSystem</value>
-    <comment>submit to national system</comment>
+  <data name="MenuExit" xml:space="preserve">
+    <value>Ukončit</value>
   </data>
-  <data name="String53" xml:space="preserve">
-    <value>Unknown</value>
-    <comment>unknown</comment>
+  <data name="Nothing" xml:space="preserve">
+    <value>nic</value>
   </data>
-  <data name="String54" xml:space="preserve">
-    <value>Valid</value>
-    <comment>valid</comment>
+  <data name="Options" xml:space="preserve">
+    <value>MOŽNOSTI</value>
   </data>
-  <data name="String55" xml:space="preserve">
-    <value>VtSequencesNotSupported</value>
-    <comment>The application requires VT sequences which are not supported on this platform.</comment>
+  <data name="SaveError" xml:space="preserve">
+    <value>Kalibrace nebyla uložena{0}</value>
   </data>
-  <data name="String56" xml:space="preserve">
-    <value>Warning</value>
-    <comment>Warning</comment>
+  <data name="SubmitToNationalSystem" xml:space="preserve">
+    <value>odeslat do národního systému</value>
   </data>
-  <data name="String6" xml:space="preserve">
-    <value>ClearConsoleBuffer</value>
-    <comment>--- Clear console buffer ----</comment>
+  <data name="Unknown" xml:space="preserve">
+    <value>neznámé</value>
   </data>
-  <data name="String7" xml:space="preserve">
-    <value>CodePageInitialiseError</value>
-    <comment>Could not initialise code page {0}</comment>
+  <data name="Valid" xml:space="preserve">
+    <value>platné</value>
   </data>
-  <data name="String8" xml:space="preserve">
-    <value>CodePageInitialiseErrorRecovery</value>
-    <comment>Press any key to continue, using default code page...</comment>
+  <data name="VtSequencesNotSupported" xml:space="preserve">
+    <value>Aplikace vyžaduje VT sekvence, které nejsou na této platformě podporovány.</value>
   </data>
-  <data name="String9" xml:space="preserve">
-    <value>CodePageInitialiseFakeCommandLine</value>
-    <comment>CodePage = {0}</comment>
+  <data name="Warning" xml:space="preserve">
+    <value>Varování</value>
   </data>
 </root>

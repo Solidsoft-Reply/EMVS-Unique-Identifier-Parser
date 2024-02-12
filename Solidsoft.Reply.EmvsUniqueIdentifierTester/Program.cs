@@ -44,7 +44,7 @@ public static class Program
     // ReSharper disable once UnusedParameter.Local
     private static void Main(string[] args)
     {
-        System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("el-EL");
+        //System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("el-EL");
         Title = Resources.ConsoleTitle;
         CommandLineArguments.Initialise(args);
         Initialise();

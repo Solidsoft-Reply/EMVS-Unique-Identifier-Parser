@@ -118,114 +118,87 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
-    <comment>Error</comment>
+    <value>Mír chomhairle neamhbhailí.</value>
   </data>
   <data name="Packs_Error_001" xml:space="preserve">
-    <value>The barcode does not contain a{0} product code.</value>
-    <comment>Error</comment>
+    <value>Níl cód táirge{0} sa bharachód.</value>
   </data>
   <data name="Packs_Error_002" xml:space="preserve">
-    <value>The barcode does not contain a{0} batch identifier.</value>
-    <comment>Error</comment>
+    <value>Níl aitheantóir baisc{0} sa bharachód.</value>
   </data>
   <data name="Packs_Error_003" xml:space="preserve">
-    <value>The barcode does not contain a{0} expiry date.</value>
-    <comment>Error</comment>
+    <value>Níl dáta éaga{0} sa bharachód.</value>
   </data>
   <data name="Packs_Error_004" xml:space="preserve">
-    <value>The barcode does not contain a{0} serial number.</value>
-    <comment>Error</comment>
+    <value>Níl uimhir shraithuimhir{0} sa bharachód.</value>
   </data>
   <data name="Parser_Error_001" xml:space="preserve">
-    <value>No data provided.</value>
-    <comment>Error</comment>
+    <value>Níor soláthraíodh aon sonraí.</value>
   </data>
   <data name="Parser_Error_002" xml:space="preserve">
-    <value>The barcode symbology is not supported for pack identifiers.</value>
-    <comment>Error</comment>
+    <value>Ní thacaítear le siombalachas an bharachóid do aitheantóirí pacáiste.</value>
   </data>
   <data name="Parser_Error_003" xml:space="preserve">
-    <value>The barcode does not contain a unique pack identifier.</value>
-    <comment>Error</comment>
+    <value>Níl aitheantóir pacáiste uathúil sa bharachód.</value>
   </data>
   <data name="Parser_Error_004" xml:space="preserve">
-    <value>The pack identifier contains invalid or unrecognised data.</value>
-    <comment>Error</comment>
+    <value>Tá sonraí neamhbhailí nó neamhaitheanta sa t-aitheantóir pacáiste.</value>
   </data>
   <data name="Parser_Error_005" xml:space="preserve">
-    <value>The pack identifier contains multiple national numbers for {0}.</value>
-    <comment>Error</comment>
+    <value>Tá uimhreacha náisiúnta iolracha don {0} san aitheantóir pacáiste.</value>
   </data>
   <data name="Parser_Error_006" xml:space="preserve">
-    <value>No product code.</value>
-    <comment>Error</comment>
+    <value>Níor soláthraíodh cód táirge.</value>
   </data>
   <data name="Parser_Error_007" xml:space="preserve">
-    <value>The product code is invalid.</value>
-    <comment>Error</comment>
+    <value>Tá an cód táirge neamhbhailí.</value>
   </data>
   <data name="Parser_Error_008" xml:space="preserve">
-    <value>Must be 14 characters in length.</value>
-    <comment>Error</comment>
+    <value>Ní mór a bheith 14 charachtar ar fhad.</value>
   </data>
   <data name="Parser_Error_009" xml:space="preserve">
-    <value>The value contains non-digit characters.</value>
-    <comment>Error</comment>
+    <value>Tá carachtair neamhdhigit sa luach.</value>
   </data>
   <data name="Parser_Error_010" xml:space="preserve">
-    <value>The checksum value is incorrect.</value>
-    <comment>Error</comment>
+    <value>Tá luach an tseiceála mícheart.</value>
   </data>
   <data name="Parser_Error_011" xml:space="preserve">
-    <value>Must be 12 characters in length.</value>
-    <comment>Error</comment>
+    <value>Ní mór a bheith 12 charachtar ar fhad.</value>
   </data>
   <data name="Parser_Error_012" xml:space="preserve">
-    <value>The PPN PRAC (Product Registration Agency Code) is invalid.</value>
-    <comment>Error</comment>
+    <value>Tá an cód PRAC PPN (Cód Gníomhaireachta Clárúcháin Táirgí) neamhbhailí.</value>
   </data>
   <data name="Parser_Error_013" xml:space="preserve">
-    <value>The PZN checksum is invalid, and therefore the PPN is invalid.</value>
-    <comment>Error</comment>
+    <value>Tá seiceáil PZN neamhbhailí, agus dá bhrí sin tá an PPN neamhbhailí.</value>
   </data>
   <data name="Parser_Error_014" xml:space="preserve">
-    <value>No batch identifier (lot).</value>
-    <comment>Error</comment>
+    <value>Níl aitheantóir bhaisc (lotha) ann.</value>
   </data>
   <data name="Parser_Error_015" xml:space="preserve">
-    <value>The batch identifier is invalid.</value>
-    <comment>Error</comment>
+    <value>Tá an t-aitheantóir baisc neamhbhailí.</value>
   </data>
   <data name="Parser_Error_016" xml:space="preserve">
-    <value>Must be between 1 and 20 characters in length.</value>
-    <comment>Error</comment>
+    <value>Ní mór a bheith idir 1 agus 20 carachtar ar fhad.</value>
   </data>
   <data name="Parser_Error_017" xml:space="preserve">
-    <value>The value contains disallowed characters.</value>
-    <comment>Error</comment>
+    <value>Tá carachtair neamhcheadaithe sa luach.</value>
   </data>
   <data name="Parser_Error_018" xml:space="preserve">
-    <value>No expiry date provided.</value>
-    <comment>Error</comment>
+    <value>Níor soláthraíodh dáta éaga.</value>
   </data>
   <data name="Parser_Error_019" xml:space="preserve">
-    <value>The expiry date is invalid.</value>
-    <comment>Error</comment>
+    <value>Tá an dáta éaga neamhbhailí.</value>
   </data>
   <data name="Parser_Error_020" xml:space="preserve">
-    <value>No serial number provided.</value>
-    <comment>Error</comment>
+    <value>Níor soláthraíodh uimhir shraithuimhir.</value>
   </data>
   <data name="Parser_Error_021" xml:space="preserve">
-    <value>The serial number is invalid.</value>
-    <comment>Error</comment>
+    <value>Tá an uimhir shraithuimhir neamhbhailí.</value>
   </data>
   <data name="Parser_Error_100" xml:space="preserve">
-    <value>Character {0} does not represent a digit.</value>
-    <comment>Error</comment>
+    <value>Ní léiríonn an carachtar {0} digit.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value> unique</value>
+    <value>uathúil</value>
   </data>
 </root>

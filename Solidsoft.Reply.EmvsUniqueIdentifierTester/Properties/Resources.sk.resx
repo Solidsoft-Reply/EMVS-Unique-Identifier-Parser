@@ -118,174 +118,174 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AutomaticEntryInstructions1" xml:space="preserve">
-    <value>Data will be submitted automatically.</value>
+    <value>Tiedot lähetetään automaattisesti.</value>
   </data>
   <data name="AutomaticEntryInstructions1Not" xml:space="preserve">
-    <value>Data will not be submitted automatically.</value>
+    <value>Tietoja ei lähetetä automaattisesti.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value> Press RETURN to submit data. Configure the scanner to transmit carriage returns.</value>
+    <value>Paina RETURN lähettääksesi tiedot. Määritä skanneri lähettämään rivinvaihtoja.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
-    <value>barcodes still to scan...</value>
+    <value>vielä skannattavia viivakoodeja...</value>
   </data>
   <data name="BarcodeStillToScan" xml:space="preserve">
-    <value>barcode still to scan...</value>
+    <value>vielä skannattavia viivakoodeja...</value>
   </data>
   <data name="CalibrationViewDoNotCallRender" xml:space="preserve">
-    <value>CalibrationView - do not call Render</value>
+    <value>Kalibrointinäkymä - älä kutsu Render-metodia</value>
   </data>
   <data name="ClearConsoleBuffer" xml:space="preserve">
-    <value>--- Clear console buffer ----</value>
+    <value>--- Tyhjennä konsolipuskuri ----</value>
   </data>
   <data name="CodePageInitialiseError" xml:space="preserve">
-    <value>Could not initialise code page {0}</value>
+    <value>Koodisivua {0} ei voitu alustaa</value>
   </data>
   <data name="CodePageInitialiseErrorRecovery" xml:space="preserve">
-    <value>Press any key to continue, using default code page...</value>
+    <value>Paina mitä tahansa näppäintä jatkaaksesi, käyttäen oletuskoodisivua...</value>
   </data>
   <data name="CodePageInitialiseFakeCommandLine" xml:space="preserve">
     <value>CodePage = {0}</value>
   </data>
   <data name="CommandPrompt" xml:space="preserve">
-    <value>Scan barcode&gt;</value>
+    <value>Skannaa viivakoodi&gt;</value>
   </data>
   <data name="ConsoleTitle" xml:space="preserve">
-    <value>EMVS Unique Identifier Tester</value>
+    <value>EMVS Yksilöllisen Tunnisteen Testaaja</value>
   </data>
   <data name="DidNotIncludePpn" xml:space="preserve">
-    <value>did not include</value>
+    <value>ei sisältynyt</value>
   </data>
   <data name="DisplayAdvice_1" xml:space="preserve">
-    <value>ADVICE</value>
+    <value>NEUVO</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_1" xml:space="preserve">
-    <value>The current combination of barcode and Operating System keyboard layouts cannot be calibrated.</value>
+    <value>Nykyistä viivakoodin ja käyttöjärjestelmän näppäimistöasettelujen yhdistelmää ei voi kalibroida.</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_2" xml:space="preserve">
-    <value>Check that you have scanned the correct barcode for calibration. If you have, reconfigure the</value>
+    <value>Tarkista, että olet skannannut oikean viivakoodin kalibrointia varten. Jos olet, määritä uudelleen</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_3" xml:space="preserve">
-    <value>scanner to emulate a different keyboard layout or a numeric keypad.</value>
+    <value>skanneri matkimaan erilaista näppäimistöasettelua tai numeerista näppäimistöä.</value>
   </data>
   <data name="DisplayCalibrationInformation_1" xml:space="preserve">
-    <value>Press any key to continue...</value>
+    <value>Paina mitä tahansa näppäintä jatkaaksesi...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Scan the barcode to calibrate the tester application.</value>
+    <value>* Skannaa viivakoodi kalibroidaksesi testisovelluksen.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Press Ctrl-O to exit the calibration mode.</value>
+    <value>* Paina Ctrl-O poistuaksesi kalibrointitilasta.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
-    <value>CALIBRATION REPORT</value>
+    <value>KALIBROINTIRAPORTTI</value>
   </data>
   <data name="DisplayCalibrationSaveError_1" xml:space="preserve">
-    <value>Press any key to continue...</value>
+    <value>Paina mitä tahansa näppäintä jatkaaksesi...</value>
   </data>
   <data name="DisplayKeepScanning_1" xml:space="preserve">
-    <value>Keep scanning...</value>
+    <value>Jatka skannausta...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value> * Scan a barcode.</value>
+    <value>* Skannaa viivakoodi.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value> * Type in or paste data and press Enter.</value>
+    <value>* Kirjoita tai liitä tietoja ja paina Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value> * Press Ctrl-R to toggle between automatic and manual (carriage return) submission of data.</value>
+    <value>* Paina Ctrl-R vaihtaaksesi automaattisen ja manuaalisen (rivinvaihto) datan lähettämisen välillä.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value> * Press Ctrl-K to calibrate the tester for the current scanner and keyboard layout.</value>
+    <value>* Paina Ctrl-K kalibroidaksesi testaajan nykyiselle skannerille ja näppäimistöasettelulle.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value> * Press Shift Ctrl-K to calibrate the tester for the current scanner and keyboard layout for GS1 FNC barcodes, only.</value>
+    <value>* Paina Shift Ctrl-K kalibroidaksesi testaajan nykyiselle skannerille ja näppäimistöasettelulle vain GS1 FNC -viivakoodeille.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value> * Press Ctrl-S to clear the screen.</value>
+    <value>* Paina Ctrl-S tyhjentääksesi näytön.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value> * Press Ctrl-T to exit the program.</value>
+    <value>* Paina Ctrl-T poistuaksesi ohjelmasta.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value> * Press Up and Down Arrows to select and retry cached entries.</value>
+    <value>* Paina ylös- ja alasnuolia valitaksesi ja yrittääksesi uudelleen välimuistiin tallennettuja merkintöjä.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
-    <value>Input contains one or more characters that cannot be encoded.</value>
+    <value>Syöte sisältää yhden tai useamman merkin, jota ei voida koodata.</value>
   </data>
   <data name="DisplayParserResults_2" xml:space="preserve">
-    <value>PARSER ERROR:</value>
+    <value>JÄSENTÄJÄN VIRHE:</value>
   </data>
   <data name="DisplayParserResults_3" xml:space="preserve">
-    <value>ERROR:</value>
+    <value>VIRHE:</value>
   </data>
   <data name="DoNotSubmitToNationalSystem" xml:space="preserve">
-    <value>do not submit to national system</value>
+    <value>älä lähetä kansalliseen järjestelmään</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>Error</value>
+    <value>Virhe</value>
   </data>
   <data name="IncludePpn" xml:space="preserve">
-    <value>included</value>
+    <value>sisältyi</value>
   </data>
   <data name="Information" xml:space="preserve">
-    <value>Information</value>
+    <value>Tieto</value>
   </data>
   <data name="InformationForPpn" xml:space="preserve">
-    <value>{0}: Calibration {1} tests for Format 05 and Format 06 (German PPN) barcodes.</value>
+    <value>{0}: Kalibrointi {1} testit Format 05 ja Format 06 (espanjalaiset PPN) -viivakoodeille.</value>
   </data>
   <data name="Initialise_1" xml:space="preserve">
-    <value>Press any key to continue...</value>
+    <value>Paina mitä tahansa näppäintä jatkaaksesi...</value>
   </data>
   <data name="Invalid" xml:space="preserve">
-    <value>invalid</value>
+    <value>ei kelpaa</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value> □ represents an invalid character </value>
+    <value>□ edustaa virheellistä merkkiä</value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
-    <value>Company or national identifier assigned by issuing agency in {0}.</value>
+    <value>Yrityksen tai kansallinen tunniste, jonka myöntäjävirasto on määrittänyt {0}.</value>
   </data>
   <data name="ListIntPtrCastError" xml:space="preserve">
-    <value>GCHandle Target could not be cast as List&lt;IntPtr&gt;</value>
+    <value>GCHandle Target ei voitu muuntaa List&lt;IntPtr&gt; -muotoon</value>
   </data>
   <data name="MenuAutoSubmit" xml:space="preserve">
-    <value>Auto-submit</value>
+    <value>Automaattilähetys</value>
   </data>
   <data name="MenuCalibrateFull" xml:space="preserve">
-    <value>Calibrate (full)</value>
+    <value>Kalibroi (kokonaan)</value>
   </data>
   <data name="MenuCalibrateGS1" xml:space="preserve">
-    <value>Calibrate (GS1)</value>
+    <value>Kalibroi (GS1)</value>
   </data>
   <data name="MenuClearScreen" xml:space="preserve">
-    <value>Clear Screen</value>
+    <value>Tyhjennä näyttö</value>
   </data>
   <data name="MenuExit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Poistu</value>
   </data>
   <data name="Nothing" xml:space="preserve">
-    <value>nothing</value>
+    <value>ei mitään</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>OPTIONS</value>
+    <value>VAIHTOEHDOT</value>
   </data>
   <data name="SaveError" xml:space="preserve">
-    <value>The calibration was not saved{0}</value>
+    <value>Kalibrointia ei tallennettu{0}</value>
   </data>
   <data name="SubmitToNationalSystem" xml:space="preserve">
-    <value>submit to national system</value>
+    <value>lähetä kansalliseen järjestelmään</value>
   </data>
   <data name="Unknown" xml:space="preserve">
-    <value>unknown</value>
+    <value>tuntematon</value>
   </data>
   <data name="Valid" xml:space="preserve">
-    <value>valid</value>
+    <value>kelpaa</value>
   </data>
   <data name="VtSequencesNotSupported" xml:space="preserve">
-    <value>The application requires VT sequences which are not supported on this platform.</value>
+    <value>Sovellus vaatii VT-sekvenssejä, joita ei tueta tällä alustalla.</value>
   </data>
   <data name="Warning" xml:space="preserve">
-    <value>Warning</value>
+    <value>Varoitus</value>
   </data>
 </root>

@@ -118,174 +118,174 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AutomaticEntryInstructions1" xml:space="preserve">
-    <value>Data will be submitted automatically.</value>
+    <value>Podatki bodo samodejno oddani.</value>
   </data>
   <data name="AutomaticEntryInstructions1Not" xml:space="preserve">
-    <value>Data will not be submitted automatically.</value>
+    <value>Podatki ne bodo samodejno oddani.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value> Press RETURN to submit data. Configure the scanner to transmit carriage returns.</value>
+    <value>Pritisnite RETURN za oddajo podatkov. Nastavite skener za prenos vračalk.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
-    <value>barcodes still to scan...</value>
+    <value>črtne kode še za skeniranje...</value>
   </data>
   <data name="BarcodeStillToScan" xml:space="preserve">
-    <value>barcode still to scan...</value>
+    <value>črtna koda še za skeniranje...</value>
   </data>
   <data name="CalibrationViewDoNotCallRender" xml:space="preserve">
-    <value>CalibrationView - do not call Render</value>
+    <value>CalibrationView - ne kliči Render</value>
   </data>
   <data name="ClearConsoleBuffer" xml:space="preserve">
-    <value>--- Clear console buffer ----</value>
+    <value>--- Počisti medpomnilnik konzole ----</value>
   </data>
   <data name="CodePageInitialiseError" xml:space="preserve">
-    <value>Could not initialise code page {0}</value>
+    <value>Ni mogoče inicializirati kodne strani {0}</value>
   </data>
   <data name="CodePageInitialiseErrorRecovery" xml:space="preserve">
-    <value>Press any key to continue, using default code page...</value>
+    <value>Pritisnite katerokoli tipko za nadaljevanje, uporaba privzete kodne strani...</value>
   </data>
   <data name="CodePageInitialiseFakeCommandLine" xml:space="preserve">
     <value>CodePage = {0}</value>
   </data>
   <data name="CommandPrompt" xml:space="preserve">
-    <value>Scan barcode&gt;</value>
+    <value>Skeniraj črtno kodo&gt;</value>
   </data>
   <data name="ConsoleTitle" xml:space="preserve">
-    <value>EMVS Unique Identifier Tester</value>
+    <value>Testni program za enolične identifikatorje EMVS</value>
   </data>
   <data name="DidNotIncludePpn" xml:space="preserve">
-    <value>did not include</value>
+    <value>ni vključeno</value>
   </data>
   <data name="DisplayAdvice_1" xml:space="preserve">
-    <value>ADVICE</value>
+    <value>NASVET</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_1" xml:space="preserve">
-    <value>The current combination of barcode and Operating System keyboard layouts cannot be calibrated.</value>
+    <value>Trenutna kombinacija črtne kode in razporeda tipk na tipkovnici operacijskega sistema ne more biti kalibrirana.</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_2" xml:space="preserve">
-    <value>Check that you have scanned the correct barcode for calibration. If you have, reconfigure the</value>
+    <value>Preverite, ali ste skenirali pravilno črtno kodo za kalibracijo. Če ste jo, ponovno nastavite</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_3" xml:space="preserve">
-    <value>scanner to emulate a different keyboard layout or a numeric keypad.</value>
+    <value>skener za posnemanje drugačnega razporeda tipk na tipkovnici ali numerične tipkovnice.</value>
   </data>
   <data name="DisplayCalibrationInformation_1" xml:space="preserve">
-    <value>Press any key to continue...</value>
+    <value>Pritisnite katerokoli tipko za nadaljevanje...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Scan the barcode to calibrate the tester application.</value>
+    <value>* Skenirajte črtno kodo za kalibracijo testnega programa.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Press Ctrl-O to exit the calibration mode.</value>
+    <value>* Pritisnite Ctrl-O za izhod iz načina kalibracije.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
-    <value>CALIBRATION REPORT</value>
+    <value>POROČILO O KALIBRACIJI</value>
   </data>
   <data name="DisplayCalibrationSaveError_1" xml:space="preserve">
-    <value>Press any key to continue...</value>
+    <value>Pritisnite katerokoli tipko za nadaljevanje...</value>
   </data>
   <data name="DisplayKeepScanning_1" xml:space="preserve">
-    <value>Keep scanning...</value>
+    <value>Nadaljujte s skeniranjem...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value> * Scan a barcode.</value>
+    <value>* Skeniraj črtno kodo.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value> * Type in or paste data and press Enter.</value>
+    <value>* Vnesite ali prilepite podatke in pritisnite Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value> * Press Ctrl-R to toggle between automatic and manual (carriage return) submission of data.</value>
+    <value>* Pritisnite Ctrl-R za preklapljanje med avtomatskim in ročnim (z vračalko) oddajanjem podatkov.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value> * Press Ctrl-K to calibrate the tester for the current scanner and keyboard layout.</value>
+    <value>* Pritisnite Ctrl-K za kalibracijo testnega programa za trenutni skener in razpored tipk na tipkovnici.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value> * Press Shift Ctrl-K to calibrate the tester for the current scanner and keyboard layout for GS1 FNC barcodes, only.</value>
+    <value>* Pritisnite Shift Ctrl-K za kalibracijo testnega programa samo za črtne kode GS1 FNC.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value> * Press Ctrl-S to clear the screen.</value>
+    <value>* Pritisnite Ctrl-S za čiščenje zaslona.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value> * Press Ctrl-T to exit the program.</value>
+    <value>* Pritisnite Ctrl-T za izhod iz programa.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value> * Press Up and Down Arrows to select and retry cached entries.</value>
+    <value>* Uporabite puščici Gor in Dol za izbiro in ponovni poskus predhodno shranjenih vnosov.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
-    <value>Input contains one or more characters that cannot be encoded.</value>
+    <value>Vnos vsebuje enega ali več znakov, ki ne morejo biti kodirani.</value>
   </data>
   <data name="DisplayParserResults_2" xml:space="preserve">
-    <value>PARSER ERROR:</value>
+    <value>NAPAKA RAZČLENJEVALNIKA:</value>
   </data>
   <data name="DisplayParserResults_3" xml:space="preserve">
-    <value>ERROR:</value>
+    <value>NAPAKA:</value>
   </data>
   <data name="DoNotSubmitToNationalSystem" xml:space="preserve">
-    <value>do not submit to national system</value>
+    <value>ne oddaj v nacionalni sistem</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>Error</value>
+    <value>Napaka</value>
   </data>
   <data name="IncludePpn" xml:space="preserve">
-    <value>included</value>
+    <value>vključeno</value>
   </data>
   <data name="Information" xml:space="preserve">
-    <value>Information</value>
+    <value>Informacija</value>
   </data>
   <data name="InformationForPpn" xml:space="preserve">
-    <value>{0}: Calibration {1} tests for Format 05 and Format 06 (German PPN) barcodes.</value>
+    <value>{0}: Kalibracija {1} testov za črtne kode formata 05 in formata 06 (španski PPN).</value>
   </data>
   <data name="Initialise_1" xml:space="preserve">
-    <value>Press any key to continue...</value>
+    <value>Pritisnite katerokoli tipko za nadaljevanje...</value>
   </data>
   <data name="Invalid" xml:space="preserve">
-    <value>invalid</value>
+    <value>neveljavno</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value> □ represents an invalid character </value>
+    <value>□ predstavlja neveljaven znak</value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
-    <value>Company or national identifier assigned by issuing agency in {0}.</value>
+    <value>Podjetje ali nacionalni identifikator, dodeljen s strani izdajateljske agencije v {0}.</value>
   </data>
   <data name="ListIntPtrCastError" xml:space="preserve">
-    <value>GCHandle Target could not be cast as List&lt;IntPtr&gt;</value>
+    <value>Cilj GCHandle ni mogel biti pretvorjen v List&lt;IntPtr&gt;</value>
   </data>
   <data name="MenuAutoSubmit" xml:space="preserve">
-    <value>Auto-submit</value>
+    <value>Samodejno oddajanje</value>
   </data>
   <data name="MenuCalibrateFull" xml:space="preserve">
-    <value>Calibrate (full)</value>
+    <value>Celotna kalibracija</value>
   </data>
   <data name="MenuCalibrateGS1" xml:space="preserve">
-    <value>Calibrate (GS1)</value>
+    <value>Kalibracija (GS1)</value>
   </data>
   <data name="MenuClearScreen" xml:space="preserve">
-    <value>Clear Screen</value>
+    <value>Počisti zaslon</value>
   </data>
   <data name="MenuExit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Izhod</value>
   </data>
   <data name="Nothing" xml:space="preserve">
-    <value>nothing</value>
+    <value>nič</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>OPTIONS</value>
+    <value>MOŽNOSTI</value>
   </data>
   <data name="SaveError" xml:space="preserve">
-    <value>The calibration was not saved{0}</value>
+    <value>Kalibracija ni bila shranjena{0}</value>
   </data>
   <data name="SubmitToNationalSystem" xml:space="preserve">
-    <value>submit to national system</value>
+    <value>oddaj v nacionalni sistem</value>
   </data>
   <data name="Unknown" xml:space="preserve">
-    <value>unknown</value>
+    <value>neznano</value>
   </data>
   <data name="Valid" xml:space="preserve">
-    <value>valid</value>
+    <value>veljavno</value>
   </data>
   <data name="VtSequencesNotSupported" xml:space="preserve">
-    <value>The application requires VT sequences which are not supported on this platform.</value>
+    <value>Aplikacija zahteva VT sekvence, ki niso podprte na tej platformi.</value>
   </data>
   <data name="Warning" xml:space="preserve">
-    <value>Warning</value>
+    <value>Opozorilo</value>
   </data>
 </root>

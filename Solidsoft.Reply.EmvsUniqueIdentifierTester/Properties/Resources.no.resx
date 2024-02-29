@@ -118,174 +118,174 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AutomaticEntryInstructions1" xml:space="preserve">
-    <value>Data will be submitted automatically.</value>
+    <value>Data vil bli sendt automatisk.</value>
   </data>
   <data name="AutomaticEntryInstructions1Not" xml:space="preserve">
-    <value>Data will not be submitted automatically.</value>
+    <value>Data vil ikke bli sendt automatisk.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value> Press RETURN to submit data. Configure the scanner to transmit carriage returns.</value>
+    <value>Trykk RETURN for å sende inn data. Konfigurer skanneren til å sende linjeskift.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
-    <value>barcodes still to scan...</value>
+    <value>strekkoder igjen å skanne...</value>
   </data>
   <data name="BarcodeStillToScan" xml:space="preserve">
-    <value>barcode still to scan...</value>
+    <value>strekkode igjen å skanne...</value>
   </data>
   <data name="CalibrationViewDoNotCallRender" xml:space="preserve">
-    <value>CalibrationView - do not call Render</value>
+    <value>CalibrationView - ikke kall Render</value>
   </data>
   <data name="ClearConsoleBuffer" xml:space="preserve">
-    <value>--- Clear console buffer ----</value>
+    <value>--- Tøm konsollbuffer ----</value>
   </data>
   <data name="CodePageInitialiseError" xml:space="preserve">
-    <value>Could not initialise code page {0}</value>
+    <value>Kunne ikke initialisere kode side {0}</value>
   </data>
   <data name="CodePageInitialiseErrorRecovery" xml:space="preserve">
-    <value>Press any key to continue, using default code page...</value>
+    <value>Trykk på en hvilken som helst tast for å fortsette, bruker standard kode side...</value>
   </data>
   <data name="CodePageInitialiseFakeCommandLine" xml:space="preserve">
     <value>CodePage = {0}</value>
   </data>
   <data name="CommandPrompt" xml:space="preserve">
-    <value>Scan barcode&gt;</value>
+    <value>Skann strekkode&gt;</value>
   </data>
   <data name="ConsoleTitle" xml:space="preserve">
-    <value>EMVS Unique Identifier Tester</value>
+    <value>EMVS Unik Identifikator Tester</value>
   </data>
   <data name="DidNotIncludePpn" xml:space="preserve">
-    <value>did not include</value>
+    <value>ikke inkludert</value>
   </data>
   <data name="DisplayAdvice_1" xml:space="preserve">
-    <value>ADVICE</value>
+    <value>RÅD</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_1" xml:space="preserve">
-    <value>The current combination of barcode and Operating System keyboard layouts cannot be calibrated.</value>
+    <value>Den nåværende kombinasjonen av strekkode og operativsystemets tastaturoppsett kan ikke kalibreres.</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_2" xml:space="preserve">
-    <value>Check that you have scanned the correct barcode for calibration. If you have, reconfigure the</value>
+    <value>Sjekk at du har skannet riktig strekkode for kalibrering. Hvis du har det, rekonfigurer</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_3" xml:space="preserve">
-    <value>scanner to emulate a different keyboard layout or a numeric keypad.</value>
+    <value>skanneren for å etterligne et annet tastaturoppsett eller et numerisk tastatur.</value>
   </data>
   <data name="DisplayCalibrationInformation_1" xml:space="preserve">
-    <value>Press any key to continue...</value>
+    <value>Trykk på en hvilken som helst tast for å fortsette...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Scan the barcode to calibrate the tester application.</value>
+    <value>* Skann strekkoden for å kalibrere testapplikasjonen.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Press Ctrl-O to exit the calibration mode.</value>
+    <value>* Trykk Ctrl-O for å forlate kalibreringsmodus.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
-    <value>CALIBRATION REPORT</value>
+    <value>KALIBRERINGSRAPPORT</value>
   </data>
   <data name="DisplayCalibrationSaveError_1" xml:space="preserve">
-    <value>Press any key to continue...</value>
+    <value>Trykk på en hvilken som helst tast for å fortsette...</value>
   </data>
   <data name="DisplayKeepScanning_1" xml:space="preserve">
-    <value>Keep scanning...</value>
+    <value>Fortsett å skanne...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value> * Scan a barcode.</value>
+    <value>* Skann en strekkode.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value> * Type in or paste data and press Enter.</value>
+    <value>* Skriv inn eller lim inn data og trykk Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value> * Press Ctrl-R to toggle between automatic and manual (carriage return) submission of data.</value>
+    <value>* Trykk Ctrl-R for å veksle mellom automatisk og manuell (linjeskift) innsending av data.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value> * Press Ctrl-K to calibrate the tester for the current scanner and keyboard layout.</value>
+    <value>* Trykk Ctrl-K for å kalibrere testeren for den nåværende skanneren og tastaturoppsettet.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value> * Press Shift Ctrl-K to calibrate the tester for the current scanner and keyboard layout for GS1 FNC barcodes, only.</value>
+    <value>* Trykk Shift Ctrl-K for å kalibrere testeren for den nåværende skanneren og tastaturoppsettet kun for GS1 FNC-strekkoder.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value> * Press Ctrl-S to clear the screen.</value>
+    <value>* Trykk Ctrl-S for å tømme skjermen.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value> * Press Ctrl-T to exit the program.</value>
+    <value>* Trykk Ctrl-T for å avslutte programmet.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value> * Press Up and Down Arrows to select and retry cached entries.</value>
+    <value>* Bruk pil opp og pil ned for å velge og prøve igjen lagrede oppføringer.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
-    <value>Input contains one or more characters that cannot be encoded.</value>
+    <value>Inndata inneholder en eller flere tegn som ikke kan kodes.</value>
   </data>
   <data name="DisplayParserResults_2" xml:space="preserve">
-    <value>PARSER ERROR:</value>
+    <value>PARSER FEIL:</value>
   </data>
   <data name="DisplayParserResults_3" xml:space="preserve">
-    <value>ERROR:</value>
+    <value>FEIL:</value>
   </data>
   <data name="DoNotSubmitToNationalSystem" xml:space="preserve">
-    <value>do not submit to national system</value>
+    <value>ikke send til nasjonalt system</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>Error</value>
+    <value>Feil</value>
   </data>
   <data name="IncludePpn" xml:space="preserve">
-    <value>included</value>
+    <value>inkludert</value>
   </data>
   <data name="Information" xml:space="preserve">
-    <value>Information</value>
+    <value>Informasjon</value>
   </data>
   <data name="InformationForPpn" xml:space="preserve">
-    <value>{0}: Calibration {1} tests for Format 05 and Format 06 (German PPN) barcodes.</value>
+    <value>{0}: Kalibrering {1} tester for Format 05 og Format 06 (Spansk PPN) strekkoder.</value>
   </data>
   <data name="Initialise_1" xml:space="preserve">
-    <value>Press any key to continue...</value>
+    <value>Trykk på en hvilken som helst tast for å fortsette...</value>
   </data>
   <data name="Invalid" xml:space="preserve">
-    <value>invalid</value>
+    <value>ugyldig</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value> □ represents an invalid character </value>
+    <value>□ representerer et ugyldig tegn</value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
-    <value>Company or national identifier assigned by issuing agency in {0}.</value>
+    <value>Bedrifts- eller nasjonal identifikator tildelt av utstedende byrå i {0}.</value>
   </data>
   <data name="ListIntPtrCastError" xml:space="preserve">
-    <value>GCHandle Target could not be cast as List&lt;IntPtr&gt;</value>
+    <value>GCHandle Target kunne ikke kastes som List&lt;IntPtr&gt;</value>
   </data>
   <data name="MenuAutoSubmit" xml:space="preserve">
-    <value>Auto-submit</value>
+    <value>Auto-innsend</value>
   </data>
   <data name="MenuCalibrateFull" xml:space="preserve">
-    <value>Calibrate (full)</value>
+    <value>Kalibrer (full)</value>
   </data>
   <data name="MenuCalibrateGS1" xml:space="preserve">
-    <value>Calibrate (GS1)</value>
+    <value>Kalibrer (GS1)</value>
   </data>
   <data name="MenuClearScreen" xml:space="preserve">
-    <value>Clear Screen</value>
+    <value>Tøm skjerm</value>
   </data>
   <data name="MenuExit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Avslutt</value>
   </data>
   <data name="Nothing" xml:space="preserve">
-    <value>nothing</value>
+    <value>ingenting</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>OPTIONS</value>
+    <value>ALTERNATIVER</value>
   </data>
   <data name="SaveError" xml:space="preserve">
-    <value>The calibration was not saved{0}</value>
+    <value>Kalibreringen ble ikke lagret{0}</value>
   </data>
   <data name="SubmitToNationalSystem" xml:space="preserve">
-    <value>submit to national system</value>
+    <value>send til nasjonalt system</value>
   </data>
   <data name="Unknown" xml:space="preserve">
-    <value>unknown</value>
+    <value>ukjent</value>
   </data>
   <data name="Valid" xml:space="preserve">
-    <value>valid</value>
+    <value>gyldig</value>
   </data>
   <data name="VtSequencesNotSupported" xml:space="preserve">
-    <value>The application requires VT sequences which are not supported on this platform.</value>
+    <value>Applikasjonen krever VT-sekvenser som ikke støttes på denne plattformen.</value>
   </data>
   <data name="Warning" xml:space="preserve">
-    <value>Warning</value>
+    <value>Advarsel</value>
   </data>
 </root>

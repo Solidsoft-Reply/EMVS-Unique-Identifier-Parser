@@ -253,6 +253,69 @@ public class EmvsParserTests
         Assert.Equal(6, barcodes.Values.ElementAt(2).Count);
     }
 
+    /// <summary>
+    /// Get the baseline barcode as SVG content.
+    /// </summary>
+    [Fact]
+    public void BaselineBarcodesSvg() {
+        var parser = new Parser();
+        var barcodes = parser.Calibrator.BaselineBarcodesSvg();
+        Assert.Single(barcodes);
+    }
+
+    /// <summary>
+    /// Get the small baseline barcodes as SVG content.
+    /// </summary>
+    [Fact]
+    public void BaselineBarcodesSmallSvg() {
+        var parser = new Parser();
+        var barcodes = parser.Calibrator.BaselineBarcodesSvg(size: DataMatrixSize.Dm24X24);
+        Assert.Equal(7, barcodes.Count);
+    }
+
+    /// <summary>
+    /// Get the supplementary barcode as SVG content.
+    /// </summary>
+    [Fact]
+    public void NoSupplementaryBarcodesSvg() {
+        var parser = new Parser();
+        var barcodes = parser.Calibrator.SupplementalBarcodesSvg();
+        Assert.Empty(barcodes);
+    }
+
+    /// <summary>
+    /// Get the small supplementary barcodes as SVG content.
+    /// </summary>
+    [Fact]
+    public void NoSupplementaryBarcodesSmallSvg() {
+        var parser = new Parser();
+        var barcodes = parser.Calibrator.SupplementalBarcodesSvg(size: DataMatrixSize.Dm24X24);
+        Assert.Empty(barcodes);
+    }
+
+    /// <summary>
+    /// Get the supplementary barcode as SVG content.
+    /// </summary>
+    [Fact]
+    public void SupplementaryBarcodesSvg() {
+        var parser = CalibrateBaseline("Belgian French");
+        var barcodes = parser.Calibrator.SupplementalBarcodesSvg();
+        Assert.Equal(2, barcodes.Count);
+    }
+
+    /// <summary>
+    /// Get the small supplementary barcodes as SVG content.
+    /// </summary>
+    [Fact]
+    public void SupplementaryBarcodesSmallSvg() {
+        var parser = CalibrateBaseline("Swiss French 24x24", size: DataMatrixSize.Dm24X24);
+        var barcodes = parser.Calibrator.SupplementalBarcodesSvg(size: DataMatrixSize.Dm24X24);
+        Assert.Equal(3, barcodes.Count);
+        Assert.Equal(6, barcodes.Values.ElementAt(0).Count);
+        Assert.Equal(6, barcodes.Values.ElementAt(1).Count);
+        Assert.Equal(6, barcodes.Values.ElementAt(2).Count);
+    }
+
     [Fact]
     public void MatchingDeadKeys()
     {

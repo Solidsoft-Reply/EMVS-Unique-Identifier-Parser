@@ -118,114 +118,87 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
-    <comment>Error</comment>
+    <value>Netinkamas patarimo elementas.</value>
   </data>
   <data name="Packs_Error_001" xml:space="preserve">
-    <value>The barcode does not contain a{0} product code.</value>
-    <comment>Error</comment>
+    <value>Brūkšniniame kode nėra{0} produkto kodo.</value>
   </data>
   <data name="Packs_Error_002" xml:space="preserve">
-    <value>The barcode does not contain a{0} batch identifier.</value>
-    <comment>Error</comment>
+    <value>Brūkšniniame kode nėra{0} partijos identifikatoriaus.</value>
   </data>
   <data name="Packs_Error_003" xml:space="preserve">
-    <value>The barcode does not contain a{0} expiry date.</value>
-    <comment>Error</comment>
+    <value>Brūkšniniame kode nėra{0} galiojimo datos.</value>
   </data>
   <data name="Packs_Error_004" xml:space="preserve">
-    <value>The barcode does not contain a{0} serial number.</value>
-    <comment>Error</comment>
+    <value>Brūkšniniame kode nėra{0} serijos numerio.</value>
   </data>
   <data name="Parser_Error_001" xml:space="preserve">
-    <value>No data provided.</value>
-    <comment>Error</comment>
+    <value>Duomenų nepateikta.</value>
   </data>
   <data name="Parser_Error_002" xml:space="preserve">
-    <value>The barcode symbology is not supported for pack identifiers.</value>
-    <comment>Error</comment>
+    <value>Brūkšninio kodo simbolika nėra palaikoma pakuotės identifikatoriams.</value>
   </data>
   <data name="Parser_Error_003" xml:space="preserve">
-    <value>The barcode does not contain a unique pack identifier.</value>
-    <comment>Error</comment>
+    <value>Brūkšniniame kode nėra unikalaus pakuotės identifikatoriaus.</value>
   </data>
   <data name="Parser_Error_004" xml:space="preserve">
-    <value>The pack identifier contains invalid or unrecognised data.</value>
-    <comment>Error</comment>
+    <value>Pakuotės identifikatorius turi netinkamus arba nepripažintus duomenis.</value>
   </data>
   <data name="Parser_Error_005" xml:space="preserve">
-    <value>The pack identifier contains multiple national numbers for {0}.</value>
-    <comment>Error</comment>
+    <value>Pakuotės identifikatorius turi kelis nacionalinius numerius {0}.</value>
   </data>
   <data name="Parser_Error_006" xml:space="preserve">
-    <value>No product code.</value>
-    <comment>Error</comment>
+    <value>Nėra produkto kodo.</value>
   </data>
   <data name="Parser_Error_007" xml:space="preserve">
-    <value>The product code is invalid.</value>
-    <comment>Error</comment>
+    <value>Produkto kodas yra netinkamas.</value>
   </data>
   <data name="Parser_Error_008" xml:space="preserve">
-    <value>Must be 14 characters in length.</value>
-    <comment>Error</comment>
+    <value>Turi būti 14 simbolių ilgio.</value>
   </data>
   <data name="Parser_Error_009" xml:space="preserve">
-    <value>The value contains non-digit characters.</value>
-    <comment>Error</comment>
+    <value>Vertė turi neskaitmeninius simbolius.</value>
   </data>
   <data name="Parser_Error_010" xml:space="preserve">
-    <value>The checksum value is incorrect.</value>
-    <comment>Error</comment>
+    <value>Kontrolinės sumos vertė yra neteisinga.</value>
   </data>
   <data name="Parser_Error_011" xml:space="preserve">
-    <value>Must be 12 characters in length.</value>
-    <comment>Error</comment>
+    <value>Turi būti 12 simbolių ilgio.</value>
   </data>
   <data name="Parser_Error_012" xml:space="preserve">
-    <value>The PPN PRAC (Product Registration Agency Code) is invalid.</value>
-    <comment>Error</comment>
+    <value>PPN PRAC (Produkto Registracijos Agentūros Kodas) yra netinkamas.</value>
   </data>
   <data name="Parser_Error_013" xml:space="preserve">
-    <value>The PZN checksum is invalid, and therefore the PPN is invalid.</value>
-    <comment>Error</comment>
+    <value>PZN kontrolinė suma yra neteisinga, todėl PPN yra netinkamas.</value>
   </data>
   <data name="Parser_Error_014" xml:space="preserve">
-    <value>No batch identifier (lot).</value>
-    <comment>Error</comment>
+    <value>Nėra partijos identifikatoriaus (siuntos).</value>
   </data>
   <data name="Parser_Error_015" xml:space="preserve">
-    <value>The batch identifier is invalid.</value>
-    <comment>Error</comment>
+    <value>Partijos identifikatorius yra netinkamas.</value>
   </data>
   <data name="Parser_Error_016" xml:space="preserve">
-    <value>Must be between 1 and 20 characters in length.</value>
-    <comment>Error</comment>
+    <value>Turi būti nuo 1 iki 20 simbolių ilgio.</value>
   </data>
   <data name="Parser_Error_017" xml:space="preserve">
-    <value>The value contains disallowed characters.</value>
-    <comment>Error</comment>
+    <value>Vertė turi nedraudžiamus simbolius.</value>
   </data>
   <data name="Parser_Error_018" xml:space="preserve">
-    <value>No expiry date provided.</value>
-    <comment>Error</comment>
+    <value>Nepateikta galiojimo datos.</value>
   </data>
   <data name="Parser_Error_019" xml:space="preserve">
-    <value>The expiry date is invalid.</value>
-    <comment>Error</comment>
+    <value>Galiojimo data yra netinkama.</value>
   </data>
   <data name="Parser_Error_020" xml:space="preserve">
-    <value>No serial number provided.</value>
-    <comment>Error</comment>
+    <value>Nepateikto serijos numerio.</value>
   </data>
   <data name="Parser_Error_021" xml:space="preserve">
-    <value>The serial number is invalid.</value>
-    <comment>Error</comment>
+    <value>Serijos numeris yra netinkamas.</value>
   </data>
   <data name="Parser_Error_100" xml:space="preserve">
-    <value>Character {0} does not represent a digit.</value>
-    <comment>Error</comment>
+    <value>Simbolis {0} neatstovauja skaitmeniui.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value> unique</value>
+    <value>unikalus</value>
   </data>
 </root>

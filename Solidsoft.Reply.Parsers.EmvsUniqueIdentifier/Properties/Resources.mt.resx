@@ -118,114 +118,87 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
-    <comment>Error</comment>
+    <value>Oġġett ta' parir invalidu.</value>
   </data>
   <data name="Packs_Error_001" xml:space="preserve">
-    <value>The barcode does not contain a{0} product code.</value>
-    <comment>Error</comment>
+    <value>Il-barcode ma fihx kodiċi tal-prodott{0}.</value>
   </data>
   <data name="Packs_Error_002" xml:space="preserve">
-    <value>The barcode does not contain a{0} batch identifier.</value>
-    <comment>Error</comment>
+    <value>Il-barcode ma fihx identifikatur tal-lott{0}.</value>
   </data>
   <data name="Packs_Error_003" xml:space="preserve">
-    <value>The barcode does not contain a{0} expiry date.</value>
-    <comment>Error</comment>
+    <value>Il-barcode ma fihx data ta' skadenza{0}.</value>
   </data>
   <data name="Packs_Error_004" xml:space="preserve">
-    <value>The barcode does not contain a{0} serial number.</value>
-    <comment>Error</comment>
+    <value>Il-barcode ma fihx numru tas-serje{0}.</value>
   </data>
   <data name="Parser_Error_001" xml:space="preserve">
-    <value>No data provided.</value>
-    <comment>Error</comment>
+    <value>Ma ngħatatx data.</value>
   </data>
   <data name="Parser_Error_002" xml:space="preserve">
-    <value>The barcode symbology is not supported for pack identifiers.</value>
-    <comment>Error</comment>
+    <value>Is-simboloġija tal-barcode mhix appoġġjata għall-identifikaturi tal-pakketti.</value>
   </data>
   <data name="Parser_Error_003" xml:space="preserve">
-    <value>The barcode does not contain a unique pack identifier.</value>
-    <comment>Error</comment>
+    <value>Il-barcode ma fihx identifikatur uniku tal-pakkett.</value>
   </data>
   <data name="Parser_Error_004" xml:space="preserve">
-    <value>The pack identifier contains invalid or unrecognised data.</value>
-    <comment>Error</comment>
+    <value>L-identifikatur tal-pakkett fih data invalida jew mhux rikonoxxuta.</value>
   </data>
   <data name="Parser_Error_005" xml:space="preserve">
-    <value>The pack identifier contains multiple national numbers for {0}.</value>
-    <comment>Error</comment>
+    <value>L-identifikatur tal-pakkett fih numri nazzjonali multipli għal {0}.</value>
   </data>
   <data name="Parser_Error_006" xml:space="preserve">
-    <value>No product code.</value>
-    <comment>Error</comment>
+    <value>M'hemmx kodiċi tal-prodott.</value>
   </data>
   <data name="Parser_Error_007" xml:space="preserve">
-    <value>The product code is invalid.</value>
-    <comment>Error</comment>
+    <value>Il-kodiċi tal-prodott huwa invalidu.</value>
   </data>
   <data name="Parser_Error_008" xml:space="preserve">
-    <value>Must be 14 characters in length.</value>
-    <comment>Error</comment>
+    <value>Trid tkun ta' 14-il karattru fit-tul.</value>
   </data>
   <data name="Parser_Error_009" xml:space="preserve">
-    <value>The value contains non-digit characters.</value>
-    <comment>Error</comment>
+    <value>Il-valur fih karattri mhux numeriċi.</value>
   </data>
   <data name="Parser_Error_010" xml:space="preserve">
-    <value>The checksum value is incorrect.</value>
-    <comment>Error</comment>
+    <value>Il-valur tal-checksum huwa żbaljat.</value>
   </data>
   <data name="Parser_Error_011" xml:space="preserve">
-    <value>Must be 12 characters in length.</value>
-    <comment>Error</comment>
+    <value>Trid tkun ta' 12-il karattru fit-tul.</value>
   </data>
   <data name="Parser_Error_012" xml:space="preserve">
-    <value>The PPN PRAC (Product Registration Agency Code) is invalid.</value>
-    <comment>Error</comment>
+    <value>Il-PRAC PPN (Kodiċi tal-Aġenzija tar-Reġistrazzjoni tal-Prodott) huwa invalidu.</value>
   </data>
   <data name="Parser_Error_013" xml:space="preserve">
-    <value>The PZN checksum is invalid, and therefore the PPN is invalid.</value>
-    <comment>Error</comment>
+    <value>Il-checksum PZN huwa invalidu, u għalhekk il-PPN huwa invalidu.</value>
   </data>
   <data name="Parser_Error_014" xml:space="preserve">
-    <value>No batch identifier (lot).</value>
-    <comment>Error</comment>
+    <value>M'hemmx identifikatur tal-lott (batch).</value>
   </data>
   <data name="Parser_Error_015" xml:space="preserve">
-    <value>The batch identifier is invalid.</value>
-    <comment>Error</comment>
+    <value>L-identifikatur tal-lott huwa invalidu.</value>
   </data>
   <data name="Parser_Error_016" xml:space="preserve">
-    <value>Must be between 1 and 20 characters in length.</value>
-    <comment>Error</comment>
+    <value>Trid tkun bejn 1 u 20 karattru fit-tul.</value>
   </data>
   <data name="Parser_Error_017" xml:space="preserve">
-    <value>The value contains disallowed characters.</value>
-    <comment>Error</comment>
+    <value>Il-valur fih karattri pprojbiti.</value>
   </data>
   <data name="Parser_Error_018" xml:space="preserve">
-    <value>No expiry date provided.</value>
-    <comment>Error</comment>
+    <value>M'hemmx data ta' skadenza pprovduta.</value>
   </data>
   <data name="Parser_Error_019" xml:space="preserve">
-    <value>The expiry date is invalid.</value>
-    <comment>Error</comment>
+    <value>Id-data ta' skadenza hija invalida.</value>
   </data>
   <data name="Parser_Error_020" xml:space="preserve">
-    <value>No serial number provided.</value>
-    <comment>Error</comment>
+    <value>M'hemmx numru tas-serje pprovdut.</value>
   </data>
   <data name="Parser_Error_021" xml:space="preserve">
-    <value>The serial number is invalid.</value>
-    <comment>Error</comment>
+    <value>In-numru tas-serje huwa invalidu.</value>
   </data>
   <data name="Parser_Error_100" xml:space="preserve">
-    <value>Character {0} does not represent a digit.</value>
-    <comment>Error</comment>
+    <value>Il-karattru {0} ma jirrappreżentax ċifra.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value> unique</value>
+    <value>uniku</value>
   </data>
 </root>

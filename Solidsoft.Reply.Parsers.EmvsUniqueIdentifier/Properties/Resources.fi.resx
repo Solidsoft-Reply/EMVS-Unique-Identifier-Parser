@@ -117,115 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
-    <comment>Error</comment>
+  <data name="String" xml:space="preserve">
+    <value>uniikki</value>
   </data>
-  <data name="Packs_Error_001" xml:space="preserve">
-    <value>The barcode does not contain a{0} product code.</value>
-    <comment>Error</comment>
+  <data name="String1" xml:space="preserve">
+    <value>Merkki {0} ei edusta numeroa.</value>
   </data>
-  <data name="Packs_Error_002" xml:space="preserve">
-    <value>The barcode does not contain a{0} batch identifier.</value>
-    <comment>Error</comment>
+  <data name="String10" xml:space="preserve">
+    <value>Sarjanumeroa ei ole annettu.</value>
   </data>
-  <data name="Packs_Error_003" xml:space="preserve">
-    <value>The barcode does not contain a{0} expiry date.</value>
-    <comment>Error</comment>
+  <data name="String11" xml:space="preserve">
+    <value>Viivakoodi ei sisällä yksilöllistä pakkaustunnistetta.</value>
   </data>
-  <data name="Packs_Error_004" xml:space="preserve">
-    <value>The barcode does not contain a{0} serial number.</value>
-    <comment>Error</comment>
+  <data name="String12" xml:space="preserve">
+    <value>Viivakoodi ei sisällä {0} eränumeroa.</value>
   </data>
-  <data name="Parser_Error_001" xml:space="preserve">
-    <value>No data provided.</value>
-    <comment>Error</comment>
+  <data name="String13" xml:space="preserve">
+    <value>Viivakoodi ei sisällä {0} viimeistä käyttöpäivää.</value>
   </data>
-  <data name="Parser_Error_002" xml:space="preserve">
-    <value>The barcode symbology is not supported for pack identifiers.</value>
-    <comment>Error</comment>
+  <data name="String14" xml:space="preserve">
+    <value>Viivakoodi ei sisällä {0} tuotekoodia.</value>
   </data>
-  <data name="Parser_Error_003" xml:space="preserve">
-    <value>The barcode does not contain a unique pack identifier.</value>
-    <comment>Error</comment>
+  <data name="String15" xml:space="preserve">
+    <value>Viivakoodi ei sisällä {0} sarjanumeroa.</value>
   </data>
-  <data name="Parser_Error_004" xml:space="preserve">
-    <value>The pack identifier contains invalid or unrecognised data.</value>
-    <comment>Error</comment>
+  <data name="String16" xml:space="preserve">
+    <value>Viivakoodin symboliikkaa ei tueta pakkaustunnisteille.</value>
   </data>
-  <data name="Parser_Error_005" xml:space="preserve">
-    <value>The pack identifier contains multiple national numbers for {0}.</value>
-    <comment>Error</comment>
+  <data name="String17" xml:space="preserve">
+    <value>Eränumero on virheellinen.</value>
   </data>
-  <data name="Parser_Error_006" xml:space="preserve">
-    <value>No product code.</value>
-    <comment>Error</comment>
+  <data name="String18" xml:space="preserve">
+    <value>Tarkistussumma on virheellinen.</value>
   </data>
-  <data name="Parser_Error_007" xml:space="preserve">
-    <value>The product code is invalid.</value>
-    <comment>Error</comment>
+  <data name="String19" xml:space="preserve">
+    <value>Viimeinen käyttöpäivä on virheellinen.</value>
   </data>
-  <data name="Parser_Error_008" xml:space="preserve">
-    <value>Must be 14 characters in length.</value>
-    <comment>Error</comment>
+  <data name="String2" xml:space="preserve">
+    <value>Virheellinen neuvontakohde.</value>
   </data>
-  <data name="Parser_Error_009" xml:space="preserve">
-    <value>The value contains non-digit characters.</value>
-    <comment>Error</comment>
+  <data name="String20" xml:space="preserve">
+    <value>Pakkaustunniste sisältää virheellistä tai tunnistamatonta dataa.</value>
   </data>
-  <data name="Parser_Error_010" xml:space="preserve">
-    <value>The checksum value is incorrect.</value>
-    <comment>Error</comment>
+  <data name="String21" xml:space="preserve">
+    <value>Pakkaustunniste sisältää useita kansallisia numeroita kohteelle {0}.</value>
   </data>
-  <data name="Parser_Error_011" xml:space="preserve">
-    <value>Must be 12 characters in length.</value>
-    <comment>Error</comment>
+  <data name="String22" xml:space="preserve">
+    <value>PPN PRAC (tuotteen rekisteröintiviraston koodi) on virheellinen.</value>
   </data>
-  <data name="Parser_Error_012" xml:space="preserve">
-    <value>The PPN PRAC (Product Registration Agency Code) is invalid.</value>
-    <comment>Error</comment>
+  <data name="String23" xml:space="preserve">
+    <value>Tuotekoodi on virheellinen.</value>
   </data>
-  <data name="Parser_Error_013" xml:space="preserve">
-    <value>The PZN checksum is invalid, and therefore the PPN is invalid.</value>
-    <comment>Error</comment>
+  <data name="String24" xml:space="preserve">
+    <value>PZN-tarkistussumma on virheellinen, ja siksi PPN on virheellinen.</value>
   </data>
-  <data name="Parser_Error_014" xml:space="preserve">
-    <value>No batch identifier (lot).</value>
-    <comment>Error</comment>
+  <data name="String25" xml:space="preserve">
+    <value>Sarjanumero on virheellinen.</value>
   </data>
-  <data name="Parser_Error_015" xml:space="preserve">
-    <value>The batch identifier is invalid.</value>
-    <comment>Error</comment>
+  <data name="String26" xml:space="preserve">
+    <value>Arvo sisältää kiellettyjä merkkejä.</value>
   </data>
-  <data name="Parser_Error_016" xml:space="preserve">
-    <value>Must be between 1 and 20 characters in length.</value>
-    <comment>Error</comment>
+  <data name="String27" xml:space="preserve">
+    <value>Arvo sisältää ei-numeerisia merkkejä.</value>
   </data>
-  <data name="Parser_Error_017" xml:space="preserve">
-    <value>The value contains disallowed characters.</value>
-    <comment>Error</comment>
+  <data name="String3" xml:space="preserve">
+    <value>Pituuden on oltava 12 merkkiä.</value>
   </data>
-  <data name="Parser_Error_018" xml:space="preserve">
-    <value>No expiry date provided.</value>
-    <comment>Error</comment>
+  <data name="String4" xml:space="preserve">
+    <value>Pituuden on oltava 14 merkkiä.</value>
   </data>
-  <data name="Parser_Error_019" xml:space="preserve">
-    <value>The expiry date is invalid.</value>
-    <comment>Error</comment>
+  <data name="String5" xml:space="preserve">
+    <value>Pituuden on oltava 1-20 merkkiä.</value>
   </data>
-  <data name="Parser_Error_020" xml:space="preserve">
-    <value>No serial number provided.</value>
-    <comment>Error</comment>
+  <data name="String6" xml:space="preserve">
+    <value>Eränumeroa (erä) ei ole.</value>
   </data>
-  <data name="Parser_Error_021" xml:space="preserve">
-    <value>The serial number is invalid.</value>
-    <comment>Error</comment>
+  <data name="String7" xml:space="preserve">
+    <value>Tietoja ei ole annettu.</value>
   </data>
-  <data name="Parser_Error_100" xml:space="preserve">
-    <value>Character {0} does not represent a digit.</value>
-    <comment>Error</comment>
+  <data name="String8" xml:space="preserve">
+    <value>Viimeistä käyttöpäivää ei ole annettu.</value>
   </data>
-  <data name="SubstituteUnique" xml:space="preserve">
-    <value> unique</value>
+  <data name="String9" xml:space="preserve">
+    <value>Tuotekoodia ei ole.</value>
   </data>
 </root>

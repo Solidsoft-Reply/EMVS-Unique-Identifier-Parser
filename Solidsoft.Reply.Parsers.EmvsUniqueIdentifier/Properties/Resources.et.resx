@@ -118,114 +118,87 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
-    <comment>Error</comment>
+    <value>Vigane nõuande element.</value>
   </data>
   <data name="Packs_Error_001" xml:space="preserve">
-    <value>The barcode does not contain a{0} product code.</value>
-    <comment>Error</comment>
+    <value>Vöötkood ei sisalda{0} tootekoodi.</value>
   </data>
   <data name="Packs_Error_002" xml:space="preserve">
-    <value>The barcode does not contain a{0} batch identifier.</value>
-    <comment>Error</comment>
+    <value>Vöötkood ei sisalda{0} partii identifikaatorit.</value>
   </data>
   <data name="Packs_Error_003" xml:space="preserve">
-    <value>The barcode does not contain a{0} expiry date.</value>
-    <comment>Error</comment>
+    <value>Vöötkood ei sisalda{0} aegumiskuupäeva.</value>
   </data>
   <data name="Packs_Error_004" xml:space="preserve">
-    <value>The barcode does not contain a{0} serial number.</value>
-    <comment>Error</comment>
+    <value>Vöötkood ei sisalda{0} seerianumbrit.</value>
   </data>
   <data name="Parser_Error_001" xml:space="preserve">
-    <value>No data provided.</value>
-    <comment>Error</comment>
+    <value>Andmeid ei ole esitatud.</value>
   </data>
   <data name="Parser_Error_002" xml:space="preserve">
-    <value>The barcode symbology is not supported for pack identifiers.</value>
-    <comment>Error</comment>
+    <value>Pakendi identifikaatorite jaoks ei toetata vöötkoodi sümboloogiat.</value>
   </data>
   <data name="Parser_Error_003" xml:space="preserve">
-    <value>The barcode does not contain a unique pack identifier.</value>
-    <comment>Error</comment>
+    <value>Vöötkood ei sisalda unikaalset pakendi identifikaatorit.</value>
   </data>
   <data name="Parser_Error_004" xml:space="preserve">
-    <value>The pack identifier contains invalid or unrecognised data.</value>
-    <comment>Error</comment>
+    <value>Pakendi identifikaator sisaldab kehtetuid või äratundmata andmeid.</value>
   </data>
   <data name="Parser_Error_005" xml:space="preserve">
-    <value>The pack identifier contains multiple national numbers for {0}.</value>
-    <comment>Error</comment>
+    <value>Pakendi identifikaator sisaldab mitut rahvuslikku numbrit {0} jaoks.</value>
   </data>
   <data name="Parser_Error_006" xml:space="preserve">
-    <value>No product code.</value>
-    <comment>Error</comment>
+    <value>Tootekood puudub.</value>
   </data>
   <data name="Parser_Error_007" xml:space="preserve">
-    <value>The product code is invalid.</value>
-    <comment>Error</comment>
+    <value>Tootekood on kehtetu.</value>
   </data>
   <data name="Parser_Error_008" xml:space="preserve">
-    <value>Must be 14 characters in length.</value>
-    <comment>Error</comment>
+    <value>Peab olema 14 tähemärgi pikkune.</value>
   </data>
   <data name="Parser_Error_009" xml:space="preserve">
-    <value>The value contains non-digit characters.</value>
-    <comment>Error</comment>
+    <value>Väärtus sisaldab mitte-numbrilisi tähemärke.</value>
   </data>
   <data name="Parser_Error_010" xml:space="preserve">
-    <value>The checksum value is incorrect.</value>
-    <comment>Error</comment>
+    <value>Kontrollsumma väärtus on vale.</value>
   </data>
   <data name="Parser_Error_011" xml:space="preserve">
-    <value>Must be 12 characters in length.</value>
-    <comment>Error</comment>
+    <value>Peab olema 12 tähemärgi pikkune.</value>
   </data>
   <data name="Parser_Error_012" xml:space="preserve">
-    <value>The PPN PRAC (Product Registration Agency Code) is invalid.</value>
-    <comment>Error</comment>
+    <value>PPN PRAC (Toote Registreerimise Agentuuri Kood) on kehtetu.</value>
   </data>
   <data name="Parser_Error_013" xml:space="preserve">
-    <value>The PZN checksum is invalid, and therefore the PPN is invalid.</value>
-    <comment>Error</comment>
+    <value>PZN kontrollsumma on kehtetu, seega on PPN kehtetu.</value>
   </data>
   <data name="Parser_Error_014" xml:space="preserve">
-    <value>No batch identifier (lot).</value>
-    <comment>Error</comment>
+    <value>Partii identifikaator (partii number) puudub.</value>
   </data>
   <data name="Parser_Error_015" xml:space="preserve">
-    <value>The batch identifier is invalid.</value>
-    <comment>Error</comment>
+    <value>Partii identifikaator on kehtetu.</value>
   </data>
   <data name="Parser_Error_016" xml:space="preserve">
-    <value>Must be between 1 and 20 characters in length.</value>
-    <comment>Error</comment>
+    <value>Peab olema pikkuselt 1 kuni 20 tähemärki.</value>
   </data>
   <data name="Parser_Error_017" xml:space="preserve">
-    <value>The value contains disallowed characters.</value>
-    <comment>Error</comment>
+    <value>Väärtus sisaldab lubamatuid tähemärke.</value>
   </data>
   <data name="Parser_Error_018" xml:space="preserve">
-    <value>No expiry date provided.</value>
-    <comment>Error</comment>
+    <value>Aegumiskuupäeva ei ole esitatud.</value>
   </data>
   <data name="Parser_Error_019" xml:space="preserve">
-    <value>The expiry date is invalid.</value>
-    <comment>Error</comment>
+    <value>Aegumiskuupäev on kehtetu.</value>
   </data>
   <data name="Parser_Error_020" xml:space="preserve">
-    <value>No serial number provided.</value>
-    <comment>Error</comment>
+    <value>Seerianumbrit ei ole esitatud.</value>
   </data>
   <data name="Parser_Error_021" xml:space="preserve">
-    <value>The serial number is invalid.</value>
-    <comment>Error</comment>
+    <value>Seerianumber on kehtetu.</value>
   </data>
   <data name="Parser_Error_100" xml:space="preserve">
-    <value>Character {0} does not represent a digit.</value>
-    <comment>Error</comment>
+    <value>Tähemärk {0} ei esinda numbrit.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value> unique</value>
+    <value>unikaaalne</value>
   </data>
 </root>

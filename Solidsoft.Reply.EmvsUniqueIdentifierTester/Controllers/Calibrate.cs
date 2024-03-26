@@ -61,7 +61,7 @@ public class Calibrate : IController
     /// <summary>
     /// A list of reported calibration information.
     /// </summary>
-    private readonly IList<CalibrationInformation> _calibrationInformation = new List<CalibrationInformation>();
+    private readonly IList<Information> _calibrationInformation = new List<Information>();
 
     /// <summary>
     /// The view for calibrating scanners.
@@ -97,7 +97,7 @@ public class Calibrate : IController
     /// <summary>
     /// The current calibration token enumerator.
     /// </summary>
-    private IEnumerator<CalibrationToken> _calibrationTokens;
+    private IEnumerator<Token> _calibrationTokens;
 #endif
 
     /// <summary>
@@ -346,7 +346,7 @@ public class Calibrate : IController
 
         return;
 
-        void AddInfoAndWarnings(CalibrationToken token)
+        void AddInfoAndWarnings(Token token)
         {
             foreach (var warning in token.Warnings)
             {

@@ -126,7 +126,7 @@ public class ScanningView : IView {
     /// <summary>
     /// Gets a list of reported calibration information.
     /// </summary>
-    private IList<CalibrationInformation> CalibrationInformation { get; set; }
+    private IList<Information> CalibrationInformation { get; set; }
 
     /// <summary>
     /// Gets a list of reported calibration information.
@@ -223,7 +223,7 @@ public class ScanningView : IView {
                 IncludeFormat06 = (bool)value;
                 break;
             case "CalibrationInformation":
-                CalibrationInformation = (IList<CalibrationInformation>)value;
+                CalibrationInformation = (IList<Information>)value;
                 break;
             case "SystemCapabilities":
                 SystemCapabilities = (SystemCapabilities)value;

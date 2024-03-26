@@ -106,7 +106,7 @@ public class Scan : IController
     /// <summary>
     /// Gets a list of reported calibration information.
     /// </summary>
-    public IList<CalibrationInformation> CalibrationInformation { get; set; }
+    public IList<Information> CalibrationInformation { get; set; }
 
     /// <summary>
     /// Gets a list of system capabilities.
@@ -186,7 +186,7 @@ public class Scan : IController
         }
         else
         {
-            _baseParser.Calibrator.CalibrationData = new CalibrationData(calibration);
+            _baseParser.Calibrator.CalibrationData = new Data(calibration);
         }
 
         if (CommandLineArguments.CodePage > 0)

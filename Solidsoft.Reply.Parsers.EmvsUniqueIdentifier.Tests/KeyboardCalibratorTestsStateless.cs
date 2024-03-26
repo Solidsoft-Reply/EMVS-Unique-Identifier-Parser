@@ -1517,7 +1517,7 @@ public class KeyboardCalibratorTestsStateless
     /// </summary>
     [Fact]
     public void ToSwissFrench2424() => PerformParserTest(
-        PerformCalibrationTest("Swiss French 24x24", size: DataMatrixSize.Dm24X24).CalibrationData,
+        PerformCalibrationTest("Swiss French 24x24", size: Size.Dm24X24).CalibrationData,
         SwissFrenchBarcodeData());
 
     /// <summary>
@@ -1527,7 +1527,7 @@ public class KeyboardCalibratorTestsStateless
     /// <param name="multiplier">The multiplier for the size of the data matrix image.</param>
     /// <param name="size">The size of the data matrix.</param>
     /// <returns>A calibration token.</returns>
-    private static CalibrationToken PerformCalibrationTest(string layoutName, float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic)
+    private static Token PerformCalibrationTest(string layoutName, float multiplier = 1F, Size size = Size.Automatic)
     {
         Debug.WriteLine(layoutName);
 
@@ -1537,7 +1537,7 @@ public class KeyboardCalibratorTestsStateless
         var loopCountForBaseline = 0;
         var loopCount = -1;
 
-        CalibrationToken currentToken = default;
+        Token currentToken = default;
 
         while (true)
         {
@@ -1612,11 +1612,11 @@ public class KeyboardCalibratorTestsStateless
         return currentToken;
     }
 
-    private void PerformParserTest(CalibrationData calibrationData, Dictionary<string, string> scannedData)
+    private void PerformParserTest(BarcodeScanner.Calibration.Data data, Dictionary<string, string> scannedData)
     {
-        Assert.NotNull(calibrationData);
+        Assert.NotNull(data);
 
-        var parser = new Parser(calibrationData);
+        var parser = new Parser(data);
 
         foreach (var barcodeData in scannedData)
         {
@@ -1636,18 +1636,18 @@ public class KeyboardCalibratorTestsStateless
     /// <summary>
     /// Returns a collection of pack identifiers for the scanner keyboard layout.
     /// </summary>
-    /// <param name="calibrationData">Calibration data for the scanner keyboard layout.</param>
+    /// <param name="data">Calibration data for the scanner keyboard layout.</param>
     /// <returns>A collection of pack identifiers for the scanner keyboard layout.</returns>
-    private static Dictionary<string, IPackIdentifier> BasePackIdentifiers(CalibrationData calibrationData)
+    private static Dictionary<string, IPackIdentifier> BasePackIdentifiers(BarcodeScanner.Calibration.Data data)
     {
         var identifiers = new Dictionary<string, IPackIdentifier>();
 
-        if (calibrationData is null)
+        if (data is null)
         {
             return identifiers;
         }
 
-        var parser = new Parser(calibrationData);
+        var parser = new Parser(data);
 
         foreach (var barcodeData in UnitedStatesBarcodeData())
         {
@@ -1662,7 +1662,7 @@ public class KeyboardCalibratorTestsStateless
     /// <summary>
     /// Performs a calibration test.
     /// </summary>
-    private static CalibrationToken BaseCalibration()
+    private static Token BaseCalibration()
     {
         var computerKeyboardLayout = new Dictionary<string, IList<string>>
                                      {
@@ -1674,7 +1674,7 @@ public class KeyboardCalibratorTestsStateless
 
         var calibrator = new Calibrator();
         var loopCount = -1;
-        CalibrationToken currentToken = default;
+        Token currentToken = default;
 
         foreach (var token in calibrator.CalibrationTokens())
         {

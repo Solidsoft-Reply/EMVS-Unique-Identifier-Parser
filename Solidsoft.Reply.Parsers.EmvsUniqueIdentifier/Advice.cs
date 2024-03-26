@@ -92,7 +92,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         var scannerMayCompensateForCapsLock = systemCapabilities.ScannerMayCompensateForCapsLock.GetValueOrDefault();
         var keyboardScriptDoesNotSupportCase = systemCapabilities.KeyboardScriptDoesNotSupportCase;
         var aimIdentifierUncertain = systemCapabilities.AimIdentifierUncertain;
-        var calibrationAssumption = systemCapabilities.CalibrationAssumption;
+        var calibrationAssumption = systemCapabilities.Assumption;
         var deadKeys = systemCapabilities.DeadKeys;
         var platform = systemCapabilities.Platform;
 #pragma warning restore CA1062 // Validate arguments of public methods
@@ -699,10 +699,10 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         bool IfTheKeyboardLayoutsCorrespondForUniqueIdentifiers() => keyboardLayoutsCorrespondForInvariantCharacters ?? false;
         bool IfTheKeyboardLayoutsDoNotCorrespondForUniqueIdentifiers() => !keyboardLayoutsCorrespondForInvariantCharacters ?? false;
         bool IfWeKnowIfKeyboardLayoutsCorrespondForUniqueIdentifiers() => keyboardLayoutsCorrespondForInvariantCharacters is not null;
-        bool IfWeAssumeAgnosticism() => calibrationAssumption == CalibrationAssumption.Agnostic;
-        bool IfWeAssumeCalibration() => calibrationAssumption == CalibrationAssumption.Calibration;
-        bool IfWeDoNotAssumeCalibration() => calibrationAssumption != CalibrationAssumption.Calibration;
-        bool IfWeAssumeNoCalibration() => calibrationAssumption == CalibrationAssumption.NoCalibration;
+        bool IfWeAssumeAgnosticism() => calibrationAssumption == Assumption.Agnostic;
+        bool IfWeAssumeCalibration() => calibrationAssumption == Assumption.Calibration;
+        bool IfWeDoNotAssumeCalibration() => calibrationAssumption != Assumption.Calibration;
+        bool IfWeAssumeNoCalibration() => calibrationAssumption == Assumption.NoCalibration;
         bool IfTheCurrentPlatformIsMacintosh() => platform == SupportedPlatform.Macintosh;
         bool IfTheKeyboardLayoutsCanRepresentRecordSeparators() => keyboardLayoutsCanRepresentRecordSeparator ?? false;
         bool IfTheKeyboardLayoutsCannotRepresentRecordSeparators() => !keyboardLayoutsCanRepresentRecordSeparator ?? false;

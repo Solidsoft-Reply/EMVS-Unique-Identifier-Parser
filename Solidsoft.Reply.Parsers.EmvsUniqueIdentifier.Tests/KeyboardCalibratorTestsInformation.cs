@@ -214,7 +214,7 @@ public class KeyboardCalibratorTestsInformation
     {
         // Calibration fails
         var token = PerformCalibrationTest("MultipleSequences");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.MultipleSequences);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.MultipleSequences);
     }
 
     /// <summary>
@@ -226,7 +226,7 @@ public class KeyboardCalibratorTestsInformation
     {
         // Calibration fails
         var token = PerformCalibrationTest("MultipleKeys");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.MultipleKeys);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.MultipleKeys);
     }
 
     /// <summary>
@@ -239,8 +239,8 @@ public class KeyboardCalibratorTestsInformation
     {
         // Calibration fails
         var token = PerformCalibrationTest("MultipleSequencesForScannerDeadKey");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.MultipleSequencesForScannerDeadKey);
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.IncompatibleScannerDeadKey);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.MultipleSequencesForScannerDeadKey);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.IncompatibleScannerDeadKey);
     }
 
     /// <summary>
@@ -252,16 +252,16 @@ public class KeyboardCalibratorTestsInformation
     {
         // Calibration fails
         var token = PerformCalibrationTest("GroupSeparatorMappingA");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.GroupSeparatorMapping);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.GroupSeparatorMapping);
 
         token = PerformCalibrationTest("GroupSeparatorMappingB");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.GroupSeparatorMapping);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.GroupSeparatorMapping);
 
         token = PerformCalibrationTest("GroupSeparatorMappingC");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.GroupSeparatorMapping);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.GroupSeparatorMapping);
 
         token = PerformCalibrationTest("GroupSeparatorMappingD");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.GroupSeparatorMapping);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.GroupSeparatorMapping);
     }
 
     /// <summary>
@@ -273,16 +273,16 @@ public class KeyboardCalibratorTestsInformation
     public void WarningFormat0506NotRecognised()
     {
         var token = PerformCalibrationTest("Format0506NotRecognisedA");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.IsoIec15434SyntaxNotRecognised);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.IsoIec15434SyntaxNotRecognised);
 
         token = PerformCalibrationTest("Format0506NotRecognisedB");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.IsoIec15434SyntaxNotRecognised);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.IsoIec15434SyntaxNotRecognised);
 
         token = PerformCalibrationTest("Format0506NotRecognisedC");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.IsoIec15434SyntaxNotRecognised);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.IsoIec15434SyntaxNotRecognised);
 
         token = PerformCalibrationTest("Format0506NotRecognisedD");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.IsoIec15434SyntaxNotRecognised);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.IsoIec15434SyntaxNotRecognised);
     }
 
     /// <summary>
@@ -294,7 +294,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningFormat0506NotReliablyRecognised()
     {
         var token = PerformCalibrationTest("Format0506NotReliablyRecognised1");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.IsoIec15434EdiNotReliablyReadable);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.IsoIec15434EdiNotReliablyReadable);
     }
 
     /// <summary>
@@ -305,19 +305,19 @@ public class KeyboardCalibratorTestsInformation
     public void WarningControlCharacterMapping()
     {
         var token = PerformCalibrationTest("ControlCharacterMappingA");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.ControlCharacterMappingAdditionalDataElements);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingAdditionalDataElements);
 
         token = PerformCalibrationTest("ControlCharacterMappingB");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.ControlCharacterMappingAdditionalDataElements);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingAdditionalDataElements);
 
         token = PerformCalibrationTest("ControlCharacterMappingC");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.ControlCharacterMappingAdditionalDataElements);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingAdditionalDataElements);
 
         token = PerformCalibrationTest("ControlCharacterMappingD");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.ControlCharacterMappingAdditionalDataElements);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingAdditionalDataElements);
 
         token = PerformCalibrationTest("ControlCharacterMappingE");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.ControlCharacterMappingAdditionalDataElements);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingAdditionalDataElements);
     }
 
     /// <summary>
@@ -339,7 +339,7 @@ public class KeyboardCalibratorTestsInformation
     {
         // Calibration fails
         var token = PerformCalibrationTest("IncompatibleScannerDeadKey");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.IncompatibleScannerDeadKey);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.IncompatibleScannerDeadKey);
     }
 
     /// <summary>
@@ -350,13 +350,13 @@ public class KeyboardCalibratorTestsInformation
     public void WarningFormat06GroupSeparatorMapping()
     {
         var token = PerformCalibrationTest("Format06GroupSeparatorMappingA");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.IsoIec15434RecordSeparatorMapping);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.IsoIec15434RecordSeparatorMapping);
 
         token = PerformCalibrationTest("Format06GroupSeparatorMappingB");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.IsoIec15434RecordSeparatorMapping);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.IsoIec15434RecordSeparatorMapping);
 
         token = PerformCalibrationTest("Format06GroupSeparatorMappingC");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.IsoIec15434RecordSeparatorMapping);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.IsoIec15434RecordSeparatorMapping);
 
     }
 
@@ -368,7 +368,7 @@ public class KeyboardCalibratorTestsInformation
     public void ErrorNoDelimiters()
     {
         var token = PerformCalibrationTest("NoDelimiters");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.NoDelimiters);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.NoDelimiters);
     }
 
     /// <summary>
@@ -400,7 +400,7 @@ public class KeyboardCalibratorTestsInformation
     public void ErrorDeadKeyMultipleKeys()
     {
         var token = PerformCalibrationTest("DeadKeyMultipleKeys");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.DeadKeyMultipleKeys);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.DeadKeyMultipleKeys);
     }
 
     /// <summary>
@@ -412,7 +412,7 @@ public class KeyboardCalibratorTestsInformation
     public void ErrorDeadKeyMultiMapping()
     {
         var token = PerformCalibrationTest("DeadKeyMultiMapping");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.DeadKeyMultiMapping);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.DeadKeyMultiMapping);
     }
 
     /// <summary>
@@ -422,7 +422,7 @@ public class KeyboardCalibratorTestsInformation
     public void ErrorNoGroupSeparatorMapping()
     {
         var token = PerformCalibrationTest("NoGroupSeparatorMapping");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.NoGroupSeparatorMapping);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.NoGroupSeparatorMapping);
     }
 
     /// <summary>
@@ -435,7 +435,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningMultipleKeysMultipleAsciiCharacters()
     {
         var token = PerformCalibrationTest("MultipleKeysMultipleNonInvariantCharacters");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.MultipleKeysMultipleNonInvariantCharacters);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.MultipleKeysMultipleNonInvariantCharacters);
     }
 
     /// <summary>
@@ -446,7 +446,7 @@ public class KeyboardCalibratorTestsInformation
     public void ErrorSomeDeadKeyCombinationsUnrecognised()
     {
         var token = PerformCalibrationTest("SomeDeadKeyCombinationsUnrecognised");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants);
     }
 
     /// <summary>
@@ -458,7 +458,7 @@ public class KeyboardCalibratorTestsInformation
     public void ErrorSomeCharactersUnrecognised()
     {
         var token = PerformCalibrationTest("SomeCharactersUnrecognised");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.SomeInvariantCharactersUnrecognised);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.SomeInvariantCharactersUnrecognised);
     }
 
     /// <summary>
@@ -468,7 +468,7 @@ public class KeyboardCalibratorTestsInformation
     public void ErrorUndetectedUniqueIdentifierCharacters()
     {
         var token = PerformCalibrationTest("UndetectedUniqueIdentifierCharacters");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.UndetectedInvariantCharacters);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.UndetectedInvariantCharacters);
     }
 
     /// <summary>
@@ -479,13 +479,13 @@ public class KeyboardCalibratorTestsInformation
     public void ErrorTooManyCharactersDetected()
     {
         var token = PerformCalibrationTest("TooManyCharactersDetectedA");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.TooManyCharactersDetected);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.TooManyCharactersDetected);
 
         token = PerformCalibrationTest("TooManyCharactersDetectedB");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.TooManyCharactersDetected);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.TooManyCharactersDetected);
 
         token = PerformCalibrationTest("TooManyCharactersDetectedC");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.TooManyCharactersDetected);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.TooManyCharactersDetected);
     }
 
     /// <summary>
@@ -497,10 +497,10 @@ public class KeyboardCalibratorTestsInformation
     public void ErrorUnrecognisedData()
     {
         var token = PerformCalibrationTest("UnrecognisedData");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.UnrecognisedData);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.UnrecognisedData);
 
         token = PerformCalibrationTestWithSegments("UnrecognisedData");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.UnrecognisedData);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.UnrecognisedData);
     }
 
     /// <summary>
@@ -510,16 +510,16 @@ public class KeyboardCalibratorTestsInformation
     public void ErrorNoCalibrationDataReported()
     {
         var token = PerformCalibrationTestWithDefaultToken("NoCalibrationDataReportedA");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.NoCalibrationDataReported);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.NoCalibrationDataReported);
 
         token = PerformCalibrationTest("NoCalibrationDataReportedB");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.NoCalibrationDataReported);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.NoCalibrationDataReported);
 
         token = PerformCalibrationTest("NoCalibrationDataReportedC");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.NoCalibrationDataReported);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.NoCalibrationDataReported);
 
         token = PerformCalibrationTestWithSegments("NoCalibrationDataReported");
-        Assert.Contains(token.Errors, e => e.InformationType == CalibrationInformationType.NoCalibrationDataReported);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.NoCalibrationDataReported);
     }
 
     /// <summary>
@@ -529,10 +529,10 @@ public class KeyboardCalibratorTestsInformation
     public void WarningCapsLockProbablyOn()
     {
         var token = PerformCalibrationTest("CapsLockProbablyOn");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.CapsLockProbablyOn);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.CapsLockProbablyOn);
 
         token = PerformCalibrationTest("CapsLockProbablyOff");
-        Assert.DoesNotContain(token.Warnings, e => e.InformationType == CalibrationInformationType.CapsLockProbablyOn);
+        Assert.DoesNotContain(token.Warnings, e => e.InformationType == InformationType.CapsLockProbablyOn);
     }
 
     /// <summary>
@@ -542,7 +542,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningNonCorrespondingKeyboardLayoutsRecordSeparator()
     {
         var token = PerformCalibrationTest("NonCorrespondingKeyboardLayoutsRecordSeparator");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.NonCorrespondingKeyboardLayoutsRecordSeparator);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator);
     }
 
     /// <summary>
@@ -552,7 +552,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningNonCorrespondingKeyboardLayoutsGroupSeparator()
     {
         var token = PerformCalibrationTest("NonCorrespondingKeyboardLayoutsGroupSeparator");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.NonCorrespondingKeyboardLayoutsGroupSeparator);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator);
     }
 
     /// <summary>
@@ -562,7 +562,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningNonCorrespondingKeyboardLayouts()
     {
         var token = PerformCalibrationTest("NonCorrespondingKeyboardLayouts");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.NonCorrespondingKeyboardLayouts);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.NonCorrespondingKeyboardLayouts);
     }
 
     /// <summary>
@@ -573,7 +573,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningNonCorrespondingKeyboardLayoutsForCharacterSet82()
     {
         var token = PerformCalibrationTest("NonCorrespondingKeyboardLayoutsForCharacterSet82");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.NonCorrespondingKeyboardLayoutsForInvariants);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.NonCorrespondingKeyboardLayoutsForInvariants);
     }
 
     /// <summary>
@@ -584,7 +584,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningNonCorrespondingKeyboardLayoutsAdditionalAsciiCharacters()
     {
         var token = PerformCalibrationTest("NonCorrespondingKeyboardLayoutsAdditionalAsciiCharacters");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters);
     }
 
     /// <summary>
@@ -595,7 +595,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningAmbiguousCharacterSequence()
     {
         var token = PerformCalibrationTest("AmbiguousCharacterSequence");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.NonInvariantCharacterSequence);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.NonInvariantCharacterSequence);
     }
 
     /// <summary>
@@ -606,10 +606,10 @@ public class KeyboardCalibratorTestsInformation
     public void WarningDeadKeyMultiMappingAdditionalAsciiCharacters()
     {
         var token = PerformCalibrationTest("DeadKeyMultiMappingAdditionalAsciiCharactersA");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.DeadKeyMultiMappingNonInvariantCharacters);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.DeadKeyMultiMappingNonInvariantCharacters);
 
         token = PerformCalibrationTest("DeadKeyMultiMappingAdditionalAsciiCharactersB");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.DeadKeyMultiMappingNonInvariantCharacters);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.DeadKeyMultiMappingNonInvariantCharacters);
     }
 
     /// <summary>
@@ -620,7 +620,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningMultipleKeysAimFlagCharacter()
     {
         var token = PerformCalibrationTest("MultipleKeysAimFlagCharacter");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.MultipleKeysAimFlagCharacter);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.MultipleKeysAimFlagCharacter);
     }
 
     /// <summary>
@@ -633,10 +633,10 @@ public class KeyboardCalibratorTestsInformation
     public void WarningMultipleKeysAdditionalAsciiCharacters()
     {
         var token = PerformCalibrationTest("MultipleKeysAdditionalAsciiCharactersA");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.MultipleKeysNonInvariantCharacters);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.MultipleKeysNonInvariantCharacters);
 
         token = PerformCalibrationTest("MultipleKeysAdditionalAsciiCharactersB");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.MultipleKeysNonInvariantCharacters);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.MultipleKeysNonInvariantCharacters);
     }
 
     /// <summary>
@@ -646,7 +646,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningEndOfLineNotTransmitted()
     {
         var token = PerformCalibrationTest("EndOfLineNotTransmitted");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.EndOfLineNotTransmitted);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.EndOfLineNotTransmitted);
     }
 
     /// <summary>
@@ -656,7 +656,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningSuffixTransmitted()
     {
         var token = PerformCalibrationTest("SuffixTransmitted");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.SuffixTransmitted);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.SuffixTransmitted);
     }
 
     /// <summary>
@@ -666,22 +666,22 @@ public class KeyboardCalibratorTestsInformation
     public void WarningPrefixTransmitted()
     {
         var token = PerformCalibrationTest("PrefixTransmittedA");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.PrefixTransmitted);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.PrefixTransmitted);
 
         token = PerformCalibrationTest("PrefixTransmittedB");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.PrefixTransmitted);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.PrefixTransmitted);
 
         token = PerformCalibrationTest("PrefixTransmittedC");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.PrefixTransmitted);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.PrefixTransmitted);
 
         token = PerformCalibrationTest("PrefixTransmittedD");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.PrefixTransmitted);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.PrefixTransmitted);
 
         token = PerformCalibrationTest("PrefixTransmittedE");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.PrefixTransmitted);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.PrefixTransmitted);
 
         token = PerformCalibrationTest("PrefixTransmittedF");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.PrefixTransmitted);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.PrefixTransmitted);
     }
 
     /// <summary>
@@ -692,7 +692,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningAimNotRecognised()
     {
         var token = PerformCalibrationTest("AimNotRecognised");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.AimNotRecognised);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.AimNotRecognised);
     }
 
     /// <summary>
@@ -702,10 +702,10 @@ public class KeyboardCalibratorTestsInformation
     public void WarningAimNotTransmitted()
     {
         var token = PerformCalibrationTest("AimNotTransmittedA");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.AimNotTransmitted);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.AimNotTransmitted);
 
         token = PerformCalibrationTest("AimNotTransmittedB");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.AimNotTransmitted);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.AimNotTransmitted);
     }
 
     /// <summary>
@@ -717,7 +717,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningSomeAdditionalCharacterCombinationsUnrecognised()
     {
         var token = PerformCalibrationTest("SomeNonInvariantCharacterCombinationsUnrecognised");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.SomeNonInvariantCharacterCombinationsUnrecognised);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.SomeNonInvariantCharacterCombinationsUnrecognised);
     }
 
     /// <summary>
@@ -728,10 +728,10 @@ public class KeyboardCalibratorTestsInformation
     public void WarningSomeAdditionalCharactersUnrecognised()
     {
         var token = PerformCalibrationTest("SomeAdditionalCharactersUnrecognisedA");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.SomeNonInvariantCharactersUnrecognised);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.SomeNonInvariantCharactersUnrecognised);
 
         token = PerformCalibrationTest("SomeAdditionalCharactersUnrecognisedB");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.SomeNonInvariantCharactersUnrecognised);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.SomeNonInvariantCharactersUnrecognised);
     }
 
     /// <summary>
@@ -741,7 +741,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningSomeCharactersUnreported()
     {
         var token = PerformCalibrationTest("SomeNonInvariantCharactersUnreported");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.SomeNonInvariantCharactersUnreported);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.SomeNonInvariantCharactersUnreported);
     }
 
     /// <summary>
@@ -751,9 +751,9 @@ public class KeyboardCalibratorTestsInformation
     public void WarningNonCorrespondingKeyboardLayoutsForAimIdentifier()
     {
         var token = PerformCalibrationTest("NonCorrespondingKeyboardLayoutsForAimIdentifier1");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier);
         token = PerformCalibrationTest("NonCorrespondingKeyboardLayoutsForAimIdentifier2");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier);
     }
 
     /// <summary>
@@ -779,7 +779,7 @@ public class KeyboardCalibratorTestsInformation
     public void InformationRecordSeparatorSupported()
     {
         var token = PerformCalibrationTest("RecordSeparatorSupported");
-        Assert.Contains(token.Information, e => e.InformationType == CalibrationInformationType.RecordSeparatorSupported);
+        Assert.Contains(token.Information, e => e.InformationType == InformationType.RecordSeparatorSupported);
     }
 
     /// <summary>
@@ -789,7 +789,7 @@ public class KeyboardCalibratorTestsInformation
     public void InformationGroupSeparatorSupported()
     {
         var token = PerformCalibrationTest("GroupSeparatorSupported");
-        Assert.Contains(token.Information, e => e.InformationType == CalibrationInformationType.GroupSeparatorSupported);
+        Assert.Contains(token.Information, e => e.InformationType == InformationType.GroupSeparatorSupported);
     }
 
 
@@ -800,7 +800,7 @@ public class KeyboardCalibratorTestsInformation
     public void InformationEndOfLineTransmitted()
     {
         var token = PerformCalibrationTest("EndOfLineTransmitted");
-        Assert.Contains(token.Information, e => e.InformationType == CalibrationInformationType.EndOfLineTransmitted);
+        Assert.Contains(token.Information, e => e.InformationType == InformationType.EndOfLineTransmitted);
     }
 
     /// <summary>
@@ -810,7 +810,7 @@ public class KeyboardCalibratorTestsInformation
     public void InformationAimTransmitted()
     {
         var token = PerformCalibrationTest("AimTransmitted");
-        Assert.Contains(token.Information, e => e.InformationType == CalibrationInformationType.AimTransmitted);
+        Assert.Contains(token.Information, e => e.InformationType == InformationType.AimTransmitted);
     }
 
     /// <summary>
@@ -820,7 +820,7 @@ public class KeyboardCalibratorTestsInformation
     public void InformationAimSupported()
     {
         var token = PerformCalibrationTest("AimSupported");
-        Assert.Contains(token.Information, e => e.InformationType == CalibrationInformationType.AimSupported);
+        Assert.Contains(token.Information, e => e.InformationType == InformationType.AimSupported);
     }
 
     /// <summary>
@@ -830,7 +830,7 @@ public class KeyboardCalibratorTestsInformation
     public void InformationScannerMayCompensateForCapsLock()
     {
         var token = PerformCalibrationTest("ScannerMayCompensateForCapsLock", capsLock: true);
-        Assert.Contains(token.Information, e => e.InformationType == CalibrationInformationType.ScannerMayCompensateForCapsLock);
+        Assert.Contains(token.Information, e => e.InformationType == InformationType.ScannerMayCompensateForCapsLock);
     }
 
     /// <summary>
@@ -840,7 +840,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningCapsLockOn()
     {
         var token = PerformCalibrationTest("CapsLockOn", capsLock: true);
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.CapsLockOn);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.CapsLockOn);
     }
 
     /// <summary>
@@ -850,7 +850,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningScannerMayConvertToUpperCase()
     {
         var token = PerformCalibrationTest("ScannerMayConvertToUpperCase");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.ScannerMayConvertToUpperCase);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ScannerMayConvertToUpperCase);
     }
 
     /// <summary>
@@ -860,7 +860,7 @@ public class KeyboardCalibratorTestsInformation
     public void WarningScannerMayConvertToLowerCase()
     {
         var token = PerformCalibrationTest("ScannerMayConvertToLowerCase");
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.ScannerMayConvertToLowerCase);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ScannerMayConvertToLowerCase);
     }
 
     /// <summary>
@@ -870,9 +870,9 @@ public class KeyboardCalibratorTestsInformation
     public void WarningScannerMayInvertCase()
     {
         var token = PerformCalibrationTest("ScannerMayInvertCase", capsLock: false);
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.ScannerMayInvertCase);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ScannerMayInvertCase);
         token = PerformCalibrationTest("ScannerMayInvertCase",platform: SupportedPlatform.Macintosh);
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.ScannerMayInvertCase);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ScannerMayInvertCase);
     }
 
     /// <summary>
@@ -882,11 +882,11 @@ public class KeyboardCalibratorTestsInformation
     public void WarningSubOptimalScannerKeyboardPerformance()
     {
         var token = PerformCalibrationTest("SubOptimalScannerKeyboardPerformance", dataEntryTimeSpan: new TimeSpan(0,0,0,0, 500));
-        Assert.DoesNotContain(token.Warnings, e => e.InformationType == CalibrationInformationType.SubOptimalScannerKeyboardPerformance);
+        Assert.DoesNotContain(token.Warnings, e => e.InformationType == InformationType.SubOptimalScannerKeyboardPerformance);
         token = PerformCalibrationTest("SubOptimalScannerKeyboardPerformance", dataEntryTimeSpan: new TimeSpan(0, 0, 0, 1, 500));
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.SubOptimalScannerKeyboardPerformance);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.SubOptimalScannerKeyboardPerformance);
         token = PerformCalibrationTest("SubOptimalScannerKeyboardPerformance", dataEntryTimeSpan: new TimeSpan(0, 0, 0, 3));
-        Assert.Contains(token.Warnings, e => e.InformationType == CalibrationInformationType.SubOptimalScannerKeyboardPerformance);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.SubOptimalScannerKeyboardPerformance);
     }
 
     /// <summary>
@@ -896,7 +896,7 @@ public class KeyboardCalibratorTestsInformation
     public void ChainedSequence()
     {
         var token = PerformCalibrationTest("ChainedSequence");
-        Assert.Contains(token.Information, e => e.InformationType == CalibrationInformationType.AimSupported);
+        Assert.Contains(token.Information, e => e.InformationType == InformationType.AimSupported);
     }
 
     /// <summary>
@@ -1936,7 +1936,7 @@ public class KeyboardCalibratorTestsInformation
     /// <param name="platform">The platform on which the system resides.</param>
     /// <param name="dataEntryTimeSpan">The time span specifying how long it took from the start of the scan to submitting the data.</param>
     /// <returns>A calibration token.</returns>
-    private static CalibrationToken PerformCalibrationTest(
+    private static Token PerformCalibrationTest(
         string layoutName, 
         bool? capsLock = null, 
         SupportedPlatform platform = SupportedPlatform.Windows, 
@@ -1947,7 +1947,7 @@ public class KeyboardCalibratorTestsInformation
         var computerKeyboardLayout = UnitedStatesTestData()[layoutName];
         var calibrator = new Calibrator();
         var loopCount = -1;
-        CalibrationToken currentToken = default;
+        Token currentToken = default;
 
         var recognisedDataElements = new List<RecognisedDataElement>
         {
@@ -2016,14 +2016,14 @@ public class KeyboardCalibratorTestsInformation
     /// </summary>
     /// <param name="layoutName">The name of the computer keyboard layout</param>
     /// <returns>A calibration token.</returns>
-    private static CalibrationToken PerformCalibrationTestWithDefaultToken(string layoutName)
+    private static Token PerformCalibrationTestWithDefaultToken(string layoutName)
     {
         Debug.WriteLine(layoutName);
 
         var computerKeyboardLayout = UnitedStatesTestData()[layoutName];
         var calibrator = new Calibrator();
         var loopCount = -1;
-        CalibrationToken currentToken = default;
+        Token currentToken = default;
 
         foreach (var token in calibrator.CalibrationTokens())
         {
@@ -2032,7 +2032,7 @@ public class KeyboardCalibratorTestsInformation
 
             if (loopCount < 0)
             {
-                currentToken = calibrator.Calibrate(ConvertToCharacterValues(baseLine), new CalibrationToken());
+                currentToken = calibrator.Calibrate(ConvertToCharacterValues(baseLine), new Token());
                 loopCount++;
             }
             else
@@ -2041,7 +2041,7 @@ public class KeyboardCalibratorTestsInformation
                 {
                     currentToken = calibrator.Calibrate(
                         ConvertToCharacterValues(computerKeyboardLayout[baseLine][loopCount++]),
-                        new CalibrationToken());
+                        new Token());
                 }
             }
 
@@ -2071,7 +2071,7 @@ public class KeyboardCalibratorTestsInformation
     /// </summary>
     /// <param name="layoutName">The name of the computer keyboard layout</param>
     /// <returns>A calibration token.</returns>
-    private static CalibrationToken PerformCalibrationTestWithSegments(string layoutName)
+    private static Token PerformCalibrationTestWithSegments(string layoutName)
     {
         Debug.WriteLine(layoutName);
 
@@ -2080,9 +2080,9 @@ public class KeyboardCalibratorTestsInformation
         var currentDeadKey = string.Empty;
         var deadKey = string.Empty;
         var keyIndex = 0;
-        CalibrationToken currentToken = default;
+        Token currentToken = default;
 
-        foreach (var token in calibrator.CalibrationTokens(1F, DataMatrixSize.Dm26X26))
+        foreach (var token in calibrator.CalibrationTokens(1F, Size.Dm26X26))
         {
             var deadKeyData = computerKeyboardLayout[computerKeyboardLayout.Keys.First()];
             string data;

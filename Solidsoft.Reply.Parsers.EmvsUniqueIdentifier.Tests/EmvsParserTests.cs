@@ -202,7 +202,7 @@ public class EmvsParserTests
     public void BaselineBarcodesSmall()
     {
         var parser = new Parser();
-        var barcodes = parser.Calibrator.BaselineBarcodes(size: DataMatrixSize.Dm24X24);
+        var barcodes = parser.Calibrator.BaselineBarcodes(size: Size.Dm24X24);
         Assert.Equal(7, barcodes.Count);
     }
 
@@ -224,7 +224,7 @@ public class EmvsParserTests
     public void NoSupplementaryBarcodesSmall()
     {
         var parser = new Parser();
-        var barcodes = parser.Calibrator.SupplementalBarcodes(size: DataMatrixSize.Dm24X24);
+        var barcodes = parser.Calibrator.SupplementalBarcodes(size: Size.Dm24X24);
         Assert.Empty(barcodes);
     }
 
@@ -245,8 +245,8 @@ public class EmvsParserTests
     [Fact]
     public void SupplementaryBarcodesSmall()
     {
-        var parser = CalibrateBaseline("Swiss French 24x24", size: DataMatrixSize.Dm24X24);
-        var barcodes = parser.Calibrator.SupplementalBarcodes(size: DataMatrixSize.Dm24X24);
+        var parser = CalibrateBaseline("Swiss French 24x24", size: Size.Dm24X24);
+        var barcodes = parser.Calibrator.SupplementalBarcodes(size: Size.Dm24X24);
         Assert.Equal(3, barcodes.Count);
         Assert.Equal(6, barcodes.Values.ElementAt(0).Count);
         Assert.Equal(6, barcodes.Values.ElementAt(1).Count);
@@ -269,7 +269,7 @@ public class EmvsParserTests
     [Fact]
     public void BaselineBarcodesSmallSvg() {
         var parser = new Parser();
-        var barcodes = parser.Calibrator.BaselineBarcodesSvg(size: DataMatrixSize.Dm24X24);
+        var barcodes = parser.Calibrator.BaselineBarcodesSvg(size: Size.Dm24X24);
         Assert.Equal(7, barcodes.Count);
     }
 
@@ -289,7 +289,7 @@ public class EmvsParserTests
     [Fact]
     public void NoSupplementaryBarcodesSmallSvg() {
         var parser = new Parser();
-        var barcodes = parser.Calibrator.SupplementalBarcodesSvg(size: DataMatrixSize.Dm24X24);
+        var barcodes = parser.Calibrator.SupplementalBarcodesSvg(size: Size.Dm24X24);
         Assert.Empty(barcodes);
     }
 
@@ -308,8 +308,8 @@ public class EmvsParserTests
     /// </summary>
     [Fact]
     public void SupplementaryBarcodesSmallSvg() {
-        var parser = CalibrateBaseline("Swiss French 24x24", size: DataMatrixSize.Dm24X24);
-        var barcodes = parser.Calibrator.SupplementalBarcodesSvg(size: DataMatrixSize.Dm24X24);
+        var parser = CalibrateBaseline("Swiss French 24x24", size: Size.Dm24X24);
+        var barcodes = parser.Calibrator.SupplementalBarcodesSvg(size: Size.Dm24X24);
         Assert.Equal(3, barcodes.Count);
         Assert.Equal(6, barcodes.Values.ElementAt(0).Count);
         Assert.Equal(6, barcodes.Values.ElementAt(1).Count);
@@ -844,42 +844,42 @@ public class EmvsParserTests
         var token = PerformCalibrationTest("Not a Baseline");
         Assert.Null(token.CalibrationData);
         Assert.Contains(token.Errors,
-                        e => e.InformationType == CalibrationInformationType.UnrecognisedData);
+                        e => e.InformationType == InformationType.UnrecognisedData);
 
         token = PerformCalibrationTest("Not a Deadkey");
         Assert.Null(token.CalibrationData);
         Assert.Contains(token.Errors,
-                        e => e.InformationType == CalibrationInformationType.UnrecognisedData);
+                        e => e.InformationType == InformationType.UnrecognisedData);
 
         token = PerformCalibrationTest("Empty Baseline");
         Assert.Null(token.CalibrationData);
         Assert.Contains(token.Errors,
-                        e => e.InformationType == CalibrationInformationType.NoCalibrationDataReported);
+                        e => e.InformationType == InformationType.NoCalibrationDataReported);
 
         token = PerformCalibrationTest("Empty Deadkey");
         Assert.Null(token.CalibrationData);
         Assert.Contains(token.Errors,
-                        e => e.InformationType == CalibrationInformationType.NoCalibrationDataReported);
+                        e => e.InformationType == InformationType.NoCalibrationDataReported);
 
         token = PerformCalibrationTest("Partial Baseline");
         Assert.Null(token.CalibrationData);
         Assert.Contains(token.Errors,
-                        w => w.InformationType == CalibrationInformationType.PartialCalibrationDataReported);
+                        w => w.InformationType == InformationType.PartialCalibrationDataReported);
 
         token = PerformCalibrationTest("Partial Deadkey");
         Assert.Null(token.CalibrationData);
         Assert.Contains(token.Errors,
-                        w => w.InformationType == CalibrationInformationType.PartialCalibrationDataReported);
+                        w => w.InformationType == InformationType.PartialCalibrationDataReported);
 
         token = PerformCalibrationTest("Wrong Baseline");
         Assert.Null(token.CalibrationData);
         Assert.Contains(token.Errors,
-                        w => w.InformationType == CalibrationInformationType.IncorrectCalibrationDataReported);
+                        w => w.InformationType == InformationType.IncorrectCalibrationDataReported);
 
         token = PerformCalibrationTest("Wrong Deadkey");
         Assert.Null(token.CalibrationData);
         Assert.Contains(token.Errors,
-                        w => w.InformationType == CalibrationInformationType.IncorrectCalibrationDataReported);
+                        w => w.InformationType == InformationType.IncorrectCalibrationDataReported);
     }
 
     [Fact]
@@ -929,14 +929,14 @@ public class EmvsParserTests
     /// <param name="multiplier">The multiplier for the size of the data matrix image.</param>
     /// <param name="size">The size of the data matrix.</param>
     /// <returns>A calibration token.</returns>
-    private static Parser CalibrateBaseline(string layoutName, string prefix = "", string suffix = "", float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic)
+    private static Parser CalibrateBaseline(string layoutName, string prefix = "", string suffix = "", float multiplier = 1F, Size size = Size.Automatic)
     {
         var computerKeyboardLayout = UnitedStatesTestData()[layoutName];
 
         var calibrator = new Calibrator();
         var loopCountForBaseline = 0;
         var loopCount = -1;
-        CalibrationToken currentToken = default;
+        Token currentToken = default;
 
         // If a prefix is provided with two consecutive spaces, we should pre-configure the calibrator with the prefix value.
         if (!string.IsNullOrEmpty(prefix) && prefix.Contains("  "))
@@ -993,7 +993,7 @@ public class EmvsParserTests
             }
         }
 
-        return new Parser(currentToken.CalibrationData ?? new CalibrationData(
+        return new Parser(currentToken.CalibrationData ?? new BarcodeScanner.Calibration.Data(
             aimFlagCharacterSequence: null,
             characterMap: null,
             deadKeysMap: null,
@@ -1017,7 +1017,7 @@ public class EmvsParserTests
     /// <param name="multiplier">The multiplier for the size of the data matrix image.</param>
     /// <param name="size">The size of the data matrix.</param>
     /// <returns>A calibration token.</returns>
-    private static CalibrationToken PerformCalibrationTest(string layoutName, float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic)
+    private static Token PerformCalibrationTest(string layoutName, float multiplier = 1F, Size size = Size.Automatic)
     {
         Debug.WriteLine(layoutName);
 
@@ -1027,7 +1027,7 @@ public class EmvsParserTests
         var calibrator = new Calibrator();
         var loopCountForBaseline = 0;
         var loopCount = -1;
-        CalibrationToken currentToken = default;
+        Token currentToken = default;
 
         foreach (var token in calibrator.CalibrationTokens(multiplier, size))
         {

@@ -47,7 +47,7 @@ internal class CalibrationReport : IComponent {
     /// <summary>
     /// Gets a list of reported calibration information.
     /// </summary>
-    public IList<CalibrationInformation> CalibrationInformation { get; set; }
+    public IList<Information> CalibrationInformation { get; set; }
 
     /// <summary>
     /// Render the component in the console window.
@@ -59,16 +59,16 @@ internal class CalibrationReport : IComponent {
         WriteLine();
         foreach (var information in CalibrationInformation.OrderByDescending(i => i.Level)) {
             ForegroundColor = information.Level switch {
-                                  CalibrationInformationLevel.Error       => ConsoleColor.Red,
-                                  CalibrationInformationLevel.Warning     => ConsoleColor.DarkYellow,
-                                  CalibrationInformationLevel.Information => ConsoleColor.Green,
+                                  InformationLevel.Error       => ConsoleColor.Red,
+                                  InformationLevel.Warning     => ConsoleColor.DarkYellow,
+                                  InformationLevel.Information => ConsoleColor.Green,
                                   _                                       => ForegroundColor
                               };
 
             var levelName = information.Level switch
             {
-                CalibrationInformationLevel.Warning => Resources.Warning,
-                CalibrationInformationLevel.Error => Resources.Error,
+                InformationLevel.Warning => Resources.Warning,
+                InformationLevel.Error => Resources.Error,
                 _ => Resources.Information,
             };
             

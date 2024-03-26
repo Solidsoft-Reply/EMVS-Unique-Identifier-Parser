@@ -79,7 +79,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToBelgianComma()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.BelgianCommaCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BelgianCommaCalibration),
             BelgianCommaBarcodeData());
     }
 
@@ -91,7 +91,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToBelgianFrench()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.BelgianFrenchCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BelgianFrenchCalibration),
             BelgianFrenchBarcodeData());
     }
 
@@ -103,7 +103,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToBelgianPeriod()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.BelgianPeriodCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BelgianPeriodCalibration),
             BelgianPeriodBarcodeData());
     }
 
@@ -115,7 +115,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToBulgarian()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.BulgarianCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianCalibration),
             BulgarianBarcodeData());
     }
 
@@ -127,7 +127,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToBulgarianLatin()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.BulgarianLatinCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianLatinCalibration),
             BulgarianLatinBarcodeData());
     }
 
@@ -139,7 +139,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToBulgarianPhonetic()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.BulgarianPhoneticCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianPhoneticCalibration),
             BulgarianPhoneticBarcodeData());
     }
 
@@ -151,7 +151,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToBulgarianPhoneticTraditional()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.BulgarianPhoneticTraditionalCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianPhoneticTraditionalCalibration),
             BulgarianPhoneticTraditionalBarcodeData());
     }
 
@@ -163,7 +163,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToBulgarianTypewriter()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.BulgarianTypewriterCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianTypewriterCalibration),
             BulgarianTypewriterBarcodeData());
     }
 
@@ -175,7 +175,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToCzech()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.CzechCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.CzechCalibration),
             CzechBarcodeData());
     }
 
@@ -187,7 +187,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToCzechProgrammers()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.CzechProgrammersCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.CzechProgrammersCalibration),
             CzechProgrammersBarcodeData());
     }
 
@@ -199,7 +199,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToCzechQwerty()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.CzechQwertyCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.CzechQwertyCalibration),
             CzechQwertyBarcodeData());
     }
 
@@ -211,7 +211,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToDanish()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.DanishCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.DanishCalibration),
             DanishBarcodeData());
     }
 
@@ -223,7 +223,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToDutch()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.DutchCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.DutchCalibration),
             DutchBarcodeData());
     }
 
@@ -235,7 +235,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToEstonian()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.EstonianCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.EstonianCalibration),
             EstonianBarcodeData());
     }
 
@@ -247,7 +247,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToFinnish()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.FinnishCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.FinnishCalibration),
             FinnishBarcodeData());
     }
 
@@ -259,7 +259,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToFinnishWithSami()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.FinnishWithSamiCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.FinnishWithSamiCalibration),
             FinnishWithSamiBarcodeData());
     }
 
@@ -271,7 +271,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToFrench()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.FrenchCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.FrenchCalibration),
             FrenchBarcodeData());
     }
 
@@ -283,7 +283,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToGaelic()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.GaelicCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GaelicCalibration),
             GaelicBarcodeData());
     }
 
@@ -295,7 +295,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToGerman()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.GermanCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GermanCalibration),
             GermanBarcodeData());
     }
 
@@ -307,7 +307,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToGermanIbm()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.GermanIbmCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GermanIbmCalibration),
             GermanIbmBarcodeData());
     }
 
@@ -319,7 +319,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToGreek319()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.Greek319Calibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Greek319Calibration),
             Greek319BarcodeData());
     }
 
@@ -331,7 +331,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToGreek319Latin()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.Greek319LatinCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Greek319LatinCalibration),
             Greek319LatinBarcodeData());
     }
 
@@ -343,7 +343,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToGreek()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.GreekCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GreekCalibration),
             GreekBarcodeData());
     }
 
@@ -355,7 +355,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToGreekLatin()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.GreekLatinCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GreekLatinCalibration),
             GreekLatinBarcodeData());
     }
 
@@ -367,7 +367,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToHungarian()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.HungarianCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.HungarianCalibration),
             HungarianBarcodeData());
     }
 
@@ -379,7 +379,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToHungarian101Key()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.Hungarian101KeyCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Hungarian101KeyCalibration),
             Hungarian101KeyBarcodeData());
     }
 
@@ -391,7 +391,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToIcelandic()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.IcelandicCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.IcelandicCalibration),
             IcelandicBarcodeData());
     }
 
@@ -403,7 +403,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToIrish()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.IrishCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.IrishCalibration),
             IrishBarcodeData());
     }
 
@@ -415,7 +415,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToItalian()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.ItalianCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.ItalianCalibration),
             ItalianBarcodeData());
     }
 
@@ -427,7 +427,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToItalian142()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.Italian142Calibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Italian142Calibration),
             Italian142BarcodeData());
     }
 
@@ -439,7 +439,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToLatvian()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.LatvianCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LatvianCalibration),
             LatvianBarcodeData());
     }
 
@@ -451,7 +451,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToLatvianQwerty()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.LatvianQwertyCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LatvianQwertyCalibration),
             LatvianQwertyBarcodeData());
     }
 
@@ -463,7 +463,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToLithuanian()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.LithuanianCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LithuanianCalibration),
             LithuanianBarcodeData());
     }
 
@@ -475,7 +475,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToLithuanianIbm()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.LithuanianIbmCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LithuanianIbmCalibration),
             LithuanianIbmBarcodeData());
     }
 
@@ -487,7 +487,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToLithuanianStandard()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.LithuanianStandardCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LithuanianStandardCalibration),
             LithuanianStandardBarcodeData());
     }
 
@@ -499,7 +499,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToLuxembourgish()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.LuxembourgishCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LuxembourgishCalibration),
             LuxembourgishBarcodeData());
     }
 
@@ -511,7 +511,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToMaltese47Key()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.Maltese47KeyCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Maltese47KeyCalibration),
             Maltese47KeyBarcodeData());
     }
 
@@ -523,7 +523,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToMaltese48Key()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.Maltese48KeyCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Maltese48KeyCalibration),
             Maltese48KeyBarcodeData());
     }
 
@@ -535,7 +535,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToNorwegian()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.NorwegianCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.NorwegianCalibration),
             NorwegianBarcodeData());
     }
 
@@ -547,7 +547,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToNorwegianWithSami()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.NorwegianWithSamiCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.NorwegianWithSamiCalibration),
             NorwegianWithSamiBarcodeData());
     }
 
@@ -559,7 +559,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToPolish214()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.Polish214Calibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Polish214Calibration),
             Polish214BarcodeData());
     }
 
@@ -571,7 +571,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToPolishProgrammers()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.PolishProgrammersCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.PolishProgrammersCalibration),
             PolishProgrammersBarcodeData());
     }
 
@@ -583,7 +583,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToPortuguese()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.PortugueseCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.PortugueseCalibration),
             PortugueseBarcodeData());
     }
 
@@ -595,7 +595,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToRomanianLegacy()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.RomanianLegacyCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.RomanianLegacyCalibration),
             RomanianLegacyBarcodeData());
     }
 
@@ -607,7 +607,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToRomanianProgrammers()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.RomanianProgrammersCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.RomanianProgrammersCalibration),
             RomanianProgrammersBarcodeData());
     }
 
@@ -619,7 +619,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToRomanianStandard()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.RomanianStandardCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.RomanianStandardCalibration),
             RomanianStandardBarcodeData());
     }
 
@@ -631,7 +631,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToSamiExtendedFinlandSwedenCalibration()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.SamiExtendedFinlandSwedenCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SamiExtendedFinlandSwedenCalibration),
             SamiExtendedFinlandSwedenBarcodeData());
     }
 
@@ -643,7 +643,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToSamiExtendedNorwayCalibration()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.SamiExtendedNorwayCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SamiExtendedNorwayCalibration),
             SamiExtendedNorwayBarcodeData());
     }
 
@@ -655,7 +655,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToSlovakQwerty()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.SlovakQwertyCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SlovakQwertyCalibration),
             SlovakQwertyBarcodeData());
     }
 
@@ -667,7 +667,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToSlovenian()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.SlovenianCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SlovenianCalibration),
             SlovenianBarcodeData());
     }
 
@@ -679,7 +679,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToSorbianExtended()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.SorbianExtendedCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SorbianExtendedCalibration),
             SorbianExtendedBarcodeData());
     }
 
@@ -691,7 +691,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToSorbianStandard()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.SorbianStandardCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SorbianStandardCalibration),
             SorbianStandardBarcodeData());
     }
 
@@ -703,7 +703,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToSorbianStandardLegacy()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.SorbianStandardLegacyCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SorbianStandardLegacyCalibration),
             SorbianStandardLegacyBarcodeData());
     }
 
@@ -715,7 +715,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToSpanish()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.SpanishCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SpanishCalibration),
             SpanishBarcodeData());
     }
 
@@ -727,7 +727,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToStandard()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.StandardCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.StandardCalibration),
             StandardBarcodeData());
     }
 
@@ -739,7 +739,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToSwedish()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.SwedishCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SwedishCalibration),
             SwedishBarcodeData());
     }
 
@@ -751,7 +751,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToSwedishWithSami()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.SwedishWithSamiCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SwedishWithSamiCalibration),
             SwedishWithSamiBarcodeData());
     }
 
@@ -763,7 +763,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToSwissFrench()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.SwissFrenchCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SwissFrenchCalibration),
             SwissFrenchBarcodeData());
     }
 
@@ -775,7 +775,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToSwissGerman()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.SwissGermanCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SwissGermanCalibration),
             SwissGermanBarcodeData());
     }
 
@@ -787,7 +787,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToUnitedKingdom()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.UnitedKingdomCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.UnitedKingdomCalibration),
             UnitedKingdomBarcodeData());
     }
 
@@ -799,25 +799,25 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     public void ToUnitedKingdomExtended()
     {
         PerformParserTest(
-            new CalibrationData(UsToEuropeanCalibrations.UnitedKingdomExtendedCalibration),
+            new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.UnitedKingdomExtendedCalibration),
             UnitedKingdomExtendedBarcodeData());
     }
 
     /// <summary>
     /// Returns a collection of pack identifiers for the scanner keyboard layout.
     /// </summary>
-    /// <param name="calibrationData">Calibration data for the scanner keyboard layout.</param>
+    /// <param name="data">Calibration data for the scanner keyboard layout.</param>
     /// <returns>A collection of pack identifiers for the scanner keyboard layout.</returns>
-    private static Dictionary<string, IPackIdentifier> BasePackIdentifiers(CalibrationData calibrationData)
+    private static Dictionary<string, IPackIdentifier> BasePackIdentifiers(BarcodeScanner.Calibration.Data data)
     {
         var identifiers = new Dictionary<string, IPackIdentifier>();
 
-        if (calibrationData is null)
+        if (data is null)
         {
             return identifiers;
         }
 
-        var parser = new Parser(calibrationData);
+        var parser = new Parser(data);
 
         foreach (var barcodeData in UnitedStatesBarcodeData())
         {
@@ -2259,7 +2259,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Performs a calibration test.
     /// </summary>
     /// <returns>A calibration token.</returns>
-    private static CalibrationToken BaseCalibration()
+    private static Token BaseCalibration()
     {
         var computerKeyboardLayout = new Dictionary<string, IList<string>>
                                      {
@@ -2271,7 +2271,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
 
         var calibrator = new Calibrator();
         var loopCount = -1;
-        CalibrationToken currentToken = default;
+        Token currentToken = default;
 
         foreach (var token in calibrator.CalibrationTokens())
         {
@@ -2344,13 +2344,13 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// <summary>
     /// Perform a parser test.
     /// </summary>
-    /// <param name="calibrationData">The calibration data.</param>
+    /// <param name="data">The calibration data.</param>
     /// <param name="scannedData">The scanned data.</param>
-    private void PerformParserTest(CalibrationData calibrationData, Dictionary<string, string> scannedData)
+    private void PerformParserTest(BarcodeScanner.Calibration.Data data, Dictionary<string, string> scannedData)
     {
-        Assert.NotNull(calibrationData);
+        Assert.NotNull(data);
 
-        var parser = new Parser(calibrationData);
+        var parser = new Parser(data);
 
         foreach (var barcodeData in scannedData)
         {

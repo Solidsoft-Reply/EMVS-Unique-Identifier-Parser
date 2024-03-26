@@ -71,7 +71,7 @@ public class CalibrationView : IView {
     /// <summary>
     /// Gets the current calibration token enumerator.
     /// </summary>
-    public IEnumerator<CalibrationToken> CalibrationTokens { get; private set; }
+    public IEnumerator<Token> CalibrationTokens { get; private set; }
 #endif
 
     /// <summary>
@@ -90,7 +90,7 @@ public class CalibrationView : IView {
     /// Gets a list of reported calibration information.
     /// </summary>
     // ReSharper disable once UnusedAutoPropertyAccessor.Global
-    public IList<CalibrationInformation> CalibrationInformation { get; private set; }
+    public IList<Information> CalibrationInformation { get; private set; }
 
     /// <summary>
     /// Render the calibration view.
@@ -144,7 +144,7 @@ public class CalibrationView : IView {
                 CurrentCalibrationToken = (CalibrationToken)value;
 #else
             case "CalibrationTokens":
-                CalibrationTokens = (IEnumerator<CalibrationToken>)value;
+                CalibrationTokens = (IEnumerator<Token>)value;
 #endif
                 break;
             case "SaveErrorMessage":
@@ -154,7 +154,7 @@ public class CalibrationView : IView {
                 IncludeFormat06 = (bool)value;
                 break;
             case "CalibrationInformation":
-                CalibrationInformation = (IList<CalibrationInformation>)value;
+                CalibrationInformation = (IList<Information>)value;
                 break;
         }
     }

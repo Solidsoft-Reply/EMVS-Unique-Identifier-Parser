@@ -32,21 +32,21 @@ public class Parser {
     /// <summary>
     ///   Initializes a new instance of the <see cref="Parser" /> class.
     /// </summary>
-    /// <param name="calibrationAssumption">The assumption made concerning the use of calibration in client systems.</param>
+    /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
     public Parser(
-        CalibrationAssumption calibrationAssumption = CalibrationAssumption.Calibration) {
-        Calibrator = new Calibrator(calibrationAssumption);
+        Assumption assumption = Assumption.Calibration) {
+        Calibrator = new Calibrator(assumption);
     }
 
     /// <summary>
     ///   Initializes a new instance of the <see cref="Parser" /> class.
     /// </summary>
-    /// <param name="calibrationData">The calibration data.</param>
-    /// <param name="calibrationAssumption">The assumption made concerning the use of calibration in client systems.</param>
+    /// <param name="data">The calibration data.</param>
+    /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
     public Parser(
-        CalibrationData calibrationData,
-        CalibrationAssumption calibrationAssumption = CalibrationAssumption.Calibration) {
-        Calibrator = new Calibrator(calibrationData, calibrationAssumption);
+        Data data,
+        Assumption assumption = Assumption.Calibration) {
+        Calibrator = new Calibrator(data, assumption);
     }
 
     /// <summary>

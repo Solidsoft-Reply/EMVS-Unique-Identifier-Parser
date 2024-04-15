@@ -2,19 +2,6 @@
 // <copyright file="LinuxClipboard.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Copies text to the Linux clipboard.
 // </summary>
@@ -29,8 +16,7 @@ using System.IO;
 /// <summary>
 /// Copies text to the Linux clipboard.
 /// </summary>
-public static class LinuxClipboard
-{
+public static class LinuxClipboard {
     /// <summary>
     /// Copies text to the clipboard in a Linux graphical desktop environment
     /// using xclip.
@@ -41,17 +27,14 @@ public static class LinuxClipboard
     /// on the computer, open a terminal window and type which xclip. If that command returns
     /// output like /usr/bin/xclip, then xclip is installed. Otherwise, install xclip.
     /// </remarks>
-    public static void SetText(string text)
-    {
-        var tempFileName = Path.GetTempFileName();
+    public static void SetText(string text) {
+        var tempFileName = Path.GetRandomFileName();
         File.WriteAllText(tempFileName, text);
 
-        try
-        {
+        try {
             BashRunner.Run($"cat {tempFileName} | xclip");
         }
-        finally
-        {
+        finally {
             File.Delete(tempFileName);
         }
     }
@@ -60,22 +43,19 @@ public static class LinuxClipboard
 /// <summary>
 /// Runs bash command lines.
 /// </summary>
-public static class BashRunner
-{
+public static class BashRunner {
     /// <summary>
     /// Runs a command line in a bash terminal process.
     /// </summary>
     /// <param name="commandLine">The command line</param>
     /// <returns>The output of the command.</returns>
-    public static string Run(string commandLine)
-    {
+    public static string Run(string commandLine) {
         var errorBuilder = new StringBuilder();
         var outputBuilder = new StringBuilder();
         var arguments = $"-c \"{commandLine}\"";
 
         using var process = new Process();
-        process.StartInfo = new ProcessStartInfo
-        {
+        process.StartInfo = new ProcessStartInfo {
             FileName = "bash",
             Arguments = arguments,
             RedirectStandardOutput = true,
@@ -89,17 +69,17 @@ public static class BashRunner
         process.ErrorDataReceived += (_, args) => { errorBuilder.AppendLine(args.Data); };
         process.BeginErrorReadLine();
 
-        if (!process.WaitForExit(500))
-        {
+        if (!process.WaitForExit(500)) {
             var timeoutError = $"""
                                 Process timed out. Command line: bash {arguments}.
                                 Output: {outputBuilder}
                                 Error: {errorBuilder}
                                 """;
+#pragma warning disable S112 // General or reserved exceptions should never be thrown
             throw new Exception(timeoutError);
+#pragma warning restore S112 // General or reserved exceptions should never be thrown
         }
-        if (process.ExitCode == 0)
-        {
+        if (process.ExitCode == 0) {
             return outputBuilder.ToString();
         }
 
@@ -108,6 +88,8 @@ public static class BashRunner
                      Output: {outputBuilder}
                      Error: {errorBuilder}
                      """;
+#pragma warning disable S112 // General or reserved exceptions should never be thrown
         throw new Exception(error);
+#pragma warning restore S112 // General or reserved exceptions should never be thrown
     }
 }

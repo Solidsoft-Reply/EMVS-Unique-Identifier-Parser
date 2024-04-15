@@ -2,19 +2,6 @@
 // <copyright file="UsToEuropeanGs1BarcodesWithAim.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.  All rights reserved.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Data for GS1 Parser US to European GS1 barcodes with AIM identifiers calibration tests.
 // </summary>
@@ -28,8 +15,7 @@ using System.Diagnostics.CodeAnalysis;
 /// Data for GS1 Parser US to European GS1 barcodes with AIM identifiers calibration tests.
 /// </summary>
 [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1600:ElementsMustBeDocumented", Justification = "Reviewed.")]
-public static class UsToEuropeanGs1BarcodesWithAim
-{
+public static class UsToEuropeanGs1BarcodesWithAim {
     public const string UsBaseline =
         "]d1  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \u001d    \u001c    \u001e        \r";
 
@@ -674,7 +660,7 @@ public static class UsToEuropeanGs1BarcodesWithAim
     public const string LithuanianIbmBarcode12 =
         "“d\")!)\":!((!(;;\"?/:\"!HIrĄ(ĄeTyĄ\u001d!)\"ų:žEY_\u001d!.\":););";
 
-    public const string LithuanianStandardBaseline = 
+    public const string LithuanianStandardBaseline =
         "wd!  1 Ė 5 7 ė 9 0 8 X č ? f ę ) ! - / ; : , . = ( Ų ų Č x F Ę A B C D E Š G H I J K L M N O P Ą R S T U V Ž Ū Y Z + a b c d e š g h i j k l m n o p ą r s t u v ž ū y z   3 4 2 į q w 6 ` Į Q W ~    \0    \0    \0        \r";
 
     public const string LithuanianStandardBarcode1 = "wd-)!)-:!((!(;;-=/:-!yCH8;ėh!Ab\0!)DdVcŪČt\0!.-:)-)(";
@@ -989,16 +975,16 @@ public static class UsToEuropeanGs1BarcodesWithAim
     public const string SlovakDeadkeyBarcode1 =
         "äd+\0ˇ1\0ˇ!\0ˇ3\0ˇ4\0ˇ5\0ˇ7\0ˇ§\0ˇ9\0ˇ0\0ˇ8\0ˇˇ\0ˇ,\0ˇ=\0ˇ.\0ˇ-\0ˇé\0ˇ+\0ˇľ\0ˇš\0ˇč\0ˇť\0ˇž\0ˇý\0ˇá\0ˇí\0ˇ\"\0ˇô\0ˇ?\0ˇ´\0ˇ:\0ˇ_\0ˇ2\0ˇA\0ˇB\0Č\0Ď\0Ě\0ˇF\0ˇG\0ˇH\0ˇI\0ˇJ\0ˇK\0Ľ\0ˇM\0Ň\0ˇO\0ˇP\0ˇQ\0Ř\0Š\0Ť\0ˇU\0ˇV\0ˇW\0ˇX\0Ž\0ˇY\0ˇú\0ˇň\0ˇä\0ˇ6\0ˇ%\0ˇ;\0ˇa\0ˇb\0č\0ď\0ě\0ˇf\0ˇg\0ˇh\0ˇi\0ˇj\0ˇk\0ľ\0ˇm\0ň\0ˇo\0ˇp\0ˇq\0ř\0š\0ť\0ˇu\0ˇv\0ˇw\0ˇx\0ž\0ˇy\0ˇ/\0ˇ)\0ˇ(\0ˇ°\r";
 
-    public const string SlovakQwertyBaseline = 
+    public const string SlovakQwertyBaseline =
         "äd+  1 ! 5 7 § 9 0 8 \0ˇ, = . - é + ľ š č ť ž ý á í \" ô ? \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z % a b c d e f g h i j k l m n o p q r s t u v w x y z   3 4 2 ú ň ä 6 ; / ) ( \0°   \u001b    \u001c    \u001e        \r";
 
-    public const string SlovakQwertyDeadkeyBarcode1 = 
+    public const string SlovakQwertyDeadkeyBarcode1 =
         "äd+\0ˇ1\0ˇ!\0ˇ3\0ˇ4\0ˇ5\0ˇ7\0ˇ§\0ˇ9\0ˇ0\0ˇ8\0ˇˇ\0ˇ,\0ˇ=\0ˇ.\0ˇ-\0ˇé\0ˇ+\0ˇľ\0ˇš\0ˇč\0ˇť\0ˇž\0ˇý\0ˇá\0ˇí\0ˇ\"\0ˇô\0ˇ?\0ˇ´\0ˇ:\0ˇ_\0ˇ2\0ˇA\0ˇB\0Č\0Ď\0Ě\0ˇF\0ˇG\0ˇH\0ˇI\0ˇJ\0ˇK\0Ľ\0ˇM\0Ň\0ˇO\0ˇP\0ˇQ\0Ř\0Š\0Ť\0ˇU\0ˇV\0ˇW\0ˇX\0ˇY\0Ž\0ˇú\0ˇň\0ˇä\0ˇ6\0ˇ%\0ˇ;\0ˇa\0ˇb\0č\0ď\0ě\0ˇf\0ˇg\0ˇh\0ˇi\0ˇj\0ˇk\0ľ\0ˇm\0ň\0ˇo\0ˇp\0ˇq\0ř\0š\0ť\0ˇu\0ˇv\0ˇw\0ˇx\0ˇy\0ž\0ˇ/\0ˇ)\0ˇ(\0ˇ°\r";
- 
-    public const string SlovakQwertyDeadkeyBarcode2 = 
+
+    public const string SlovakQwertyDeadkeyBarcode2 =
         "äd+\0´1\0´!\0´3\0´4\0´5\0´7\0´§\0´9\0´0\0´8\0´ˇ\0´,\0´=\0´.\0´-\0´é\0´+\0´ľ\0´š\0´č\0´ť\0´ž\0´ý\0´á\0´í\0´\"\0´ô\0´?\0´´\0´:\0´_\0´2\0Á\0´B\0Ć\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0Ĺ\0´M\0Ń\0Ó\0´P\0´Q\0Ŕ\0Ś\0´T\0Ú\0´V\0´W\0´X\0Ý\0Ź\0´ú\0´ň\0´ä\0´6\0´%\0´;\0á\0´b\0ć\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0ĺ\0´m\0ń\0ó\0´p\0´q\0ŕ\0ś\0´t\0ú\0´v\0´w\0´x\0ý\0ź\0´/\0´)\0´(\0´°\r";
- 
-    public const string SlovakQwertyDeadkeyBarcode3 = 
+
+    public const string SlovakQwertyDeadkeyBarcode3 =
         "äd+\0°1\0°!\0°3\0°4\0°5\0°7\0°§\0°9\0°0\0°8\0°ˇ\0°,\0°=\0°.\0°-\0°é\0°+\0°ľ\0°š\0°č\0°ť\0°ž\0°ý\0°á\0°í\0°\"\0°ô\0°?\0°´\0°:\0°_\0°2\0°A\0°B\0°C\0°D\0°E\0°F\0°G\0°H\0°I\0°J\0°K\0°L\0°M\0°N\0°O\0°P\0°Q\0°R\0°S\0°T\0Ů\0°V\0°W\0°X\0°Y\0°Z\0°ú\0°ň\0°ä\0°6\0°%\0°;\0°a\0°b\0°c\0°d\0°e\0°f\0°g\0°h\0°i\0°j\0°k\0°l\0°m\0°n\0°o\0°p\0°q\0°r\0°s\0°t\0ů\0°v\0°w\0°x\0°y\0°z\0°/\0°)\0°(\0°°\r";
 
     public const string SlovakQwertyBarcode1 = "ädľé+éľť+íí+íččľášťľ+yCH8č§h+Ab\u001b+éDdVcX?t\u001b+ýľťéľéí";

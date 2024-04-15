@@ -2,19 +2,6 @@
 // <copyright file="Gs1ParserTests.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2018 Solidsoft Reply Ltd.  All rights reserved.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Tests for GS1 Parser.
 // </summary>
@@ -23,7 +10,6 @@
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Tests;
 
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Gs1Ai;
 
@@ -34,15 +20,12 @@ using Xunit;
 /// <summary>
 /// Tests for GS1 Parser.
 /// </summary>
-[SuppressMessage("ReSharper", "CommentTypo", Justification = "Reviewed")]
-public class ParserTests
-{
+public class ParserTests {
     /// <summary>
     /// GS1 Character Set 82 - test 01.
     /// </summary>
     [Fact]
-    public void Gs1CharacterSet8201()
-    {
+    public void Gs1CharacterSet8201() {
         var gs1TestData = $"010477298543159410DdVcX<t{(char)29}1723020721yCH*4'h1Ab";
 
         var expectedResults = new Dictionary<string, string>
@@ -60,8 +43,7 @@ public class ParserTests
     /// GS1 Character Set 82 - test 02.
     /// </summary>
     [Fact]
-    public void Gs1CharacterSet8202()
-    {
+    public void Gs1CharacterSet8202() {
         // ReSharper disable once StringLiteralTypo
         var gs1TestData = $"010477298543159410.GRs!qO{(char)29}1723072921Tglv?,6BmK";
 
@@ -81,8 +63,7 @@ public class ParserTests
     /// GS1 Character Set 82 - test 03.
     /// </summary>
     [Fact]
-    public void Gs1CharacterSet8203()
-    {
+    public void Gs1CharacterSet8203() {
         var gs1TestData = $"010477298543159410(fpNxYi{(char)29}1723040521Z&Ur7>0oQS";
 
         var expectedResults = new Dictionary<string, string>
@@ -100,8 +81,7 @@ public class ParserTests
     /// GS1 Character Set 82 - test 04.
     /// </summary>
     [Fact]
-    public void Gs1CharacterSet8204()
-    {
+    public void Gs1CharacterSet8204() {
         var gs1TestData = $"010477298543159410=8Fn_P\"{(char)29}1723100221Ew5;2/zaMJ";
 
         var expectedResults = new Dictionary<string, string>
@@ -119,8 +99,7 @@ public class ParserTests
     /// GS1 Character Set 82 - test 05.
     /// </summary>
     [Fact]
-    public void Gs1CharacterSet8205()
-    {
+    public void Gs1CharacterSet8205() {
         var gs1TestData = $"0104772985431594103kuW)L9{(char)29}17230304215j4CltEc-Y";
 
         var expectedResults = new Dictionary<string, string>
@@ -138,8 +117,7 @@ public class ParserTests
     /// GS1 Character Set 82 - test 06.
     /// </summary>
     [Fact]
-    public void Gs1CharacterSet8206()
-    {
+    public void Gs1CharacterSet8206() {
         var gs1TestData = $"010477298543159410:j\"%e+P{(char)29}172310312151itJzCguA";
 
         var expectedResults = new Dictionary<string, string>
@@ -157,8 +135,7 @@ public class ParserTests
     /// GS1 Character Set 82 - test 07.
     /// </summary>
     [Fact]
-    public void Gs1CharacterSet8207()
-    {
+    public void Gs1CharacterSet8207() {
         var gs1TestData = $"010477298543159410bA1h'4*{(char)29}1723121421t<XcVdD0q!";
 
         var expectedResults = new Dictionary<string, string>
@@ -176,8 +153,7 @@ public class ParserTests
     /// GS1 Character Set 82 - test 08.
     /// </summary>
     [Fact]
-    public void Gs1CharacterSet8208()
-    {
+    public void Gs1CharacterSet8208() {
         var gs1TestData = $"010477298543159410HCyKmB6{(char)29}1724062021sRG.iYxNpf";
 
         var expectedResults = new Dictionary<string, string>
@@ -195,8 +171,7 @@ public class ParserTests
     /// GS1 Character Set 82 - test 09.
     /// </summary>
     [Fact]
-    public void Gs1CharacterSet8209()
-    {
+    public void Gs1CharacterSet8209() {
         var gs1TestData = $"010477298543159410,?vigTS{(char)29}1724021821(\"P-nF8=9L";
 
         var expectedResults = new Dictionary<string, string>
@@ -214,8 +189,7 @@ public class ParserTests
     /// GS1 Character Set 82 - test 10.
     /// </summary>
     [Fact]
-    public void Gs1CharacterSet8210()
-    {
+    public void Gs1CharacterSet8210() {
         var gs1TestData = $"010477298543159410Qo0>7rU{(char)29}1724070321)Wuk3P+e%\"";
 
         var expectedResults = new Dictionary<string, string>
@@ -233,8 +207,7 @@ public class ParserTests
     /// GS1 Character Set 82 - test 11.
     /// </summary>
     [Fact]
-    public void Gs1CharacterSet8211()
-    {
+    public void Gs1CharacterSet8211() {
         var gs1TestData = $"010477298543159410&ZjMaz/{(char)29}1723112621j:AugCzJt";
 
         var expectedResults = new Dictionary<string, string>
@@ -252,8 +225,7 @@ public class ParserTests
     /// GS1 Character Set 82 - test 12.
     /// </summary>
     [Fact]
-    public void Gs1CharacterSet8212()
-    {
+    public void Gs1CharacterSet8212() {
         var gs1TestData = $"0104772985431594102;5wEY-{(char)29}1723040421HIrQ9QeTyQ";
 
         var expectedResults = new Dictionary<string, string>
@@ -271,8 +243,7 @@ public class ParserTests
     /// GS1 Disallowed characters - test 01.
     /// </summary>
     [Fact]
-    public void Gs1DisallowedCharacters01()
-    {
+    public void Gs1DisallowedCharacters01() {
         var gs1TestData = $"010477298543159410AB#0123{(char)29}1723020721622~409215";
 
         var expectedResults = new Dictionary<string, string>
@@ -284,7 +255,7 @@ public class ParserTests
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        var resolvedEntities = results as IResolvedEntity[] ?? results.ToArray();
+        var resolvedEntities = results ?? [.. results];
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
@@ -293,8 +264,7 @@ public class ParserTests
     /// GS1 Disallowed characters - test 02.
     /// </summary>
     [Fact]
-    public void Gs1DisallowedCharacters02()
-    {
+    public void Gs1DisallowedCharacters02() {
         var gs1TestData = $"010477298543159410AB$0123{(char)29}1723072921622|409215";
 
         var expectedResults = new Dictionary<string, string>
@@ -306,7 +276,7 @@ public class ParserTests
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        var resolvedEntities = results as IResolvedEntity[] ?? results.ToArray();
+        var resolvedEntities = results ?? [.. results];
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
@@ -315,8 +285,7 @@ public class ParserTests
     /// GS1 Disallowed characters - test 03.
     /// </summary>
     [Fact]
-    public void Gs1DisallowedCharacters03()
-    {
+    public void Gs1DisallowedCharacters03() {
         var gs1TestData = $"010477298543159410AB@0123{(char)29}1723040521{{622409215}}";
 
         var expectedResults = new Dictionary<string, string>
@@ -328,7 +297,7 @@ public class ParserTests
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        var resolvedEntities = results as IResolvedEntity[] ?? results.ToArray();
+        var resolvedEntities = results ?? [.. results];
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
@@ -337,8 +306,7 @@ public class ParserTests
     /// GS1 Disallowed characters - test 04.
     /// </summary>
     [Fact]
-    public void Gs1DisallowedCharacters04()
-    {
+    public void Gs1DisallowedCharacters04() {
         var gs1TestData = $"010477298543159410[AB0123]{(char)29}1723100221`622409215`";
 
         var expectedResults = new Dictionary<string, string>
@@ -350,7 +318,7 @@ public class ParserTests
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        var resolvedEntities = results as IResolvedEntity[] ?? results.ToArray();
+        var resolvedEntities = results ?? [.. results];
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
@@ -359,8 +327,7 @@ public class ParserTests
     /// GS1 Disallowed characters - test 05.
     /// </summary>
     [Fact]
-    public void Gs1DisallowedCharacters05()
-    {
+    public void Gs1DisallowedCharacters05() {
         var gs1TestData = $"010477298543159410AB\\0123{(char)29}1723030421^622409215";
 
         var expectedResults = new Dictionary<string, string>
@@ -372,7 +339,7 @@ public class ParserTests
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        var resolvedEntities = results as IResolvedEntity[] ?? results.ToArray();
+        var resolvedEntities = results ?? [.. results];
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
@@ -381,8 +348,7 @@ public class ParserTests
     /// GS1 Disallowed characters - test 06.
     /// </summary>
     [Fact]
-    public void Gs1DisallowedCharacters06()
-    {
+    public void Gs1DisallowedCharacters06() {
         var gs1TestData = $"010477298543159410AB^0123{(char)29}1723103121622\\409215";
 
         var expectedResults = new Dictionary<string, string>
@@ -394,7 +360,7 @@ public class ParserTests
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        var resolvedEntities = results as IResolvedEntity[] ?? results.ToArray();
+        var resolvedEntities = results ?? [.. results];
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
@@ -403,8 +369,7 @@ public class ParserTests
     /// GS1 Disallowed characters - test 07.
     /// </summary>
     [Fact]
-    public void Gs1DisallowedCharacters07()
-    {
+    public void Gs1DisallowedCharacters07() {
         var gs1TestData = $"010477298543159410`AB`0123{(char)29}1723121421[622409215]";
 
         var expectedResults = new Dictionary<string, string>
@@ -416,7 +381,7 @@ public class ParserTests
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        var resolvedEntities = results as IResolvedEntity[] ?? results.ToArray();
+        var resolvedEntities = results ?? [.. results];
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
@@ -425,8 +390,7 @@ public class ParserTests
     /// GS1 Disallowed characters - test 08.
     /// </summary>
     [Fact]
-    public void Gs1DisallowedCharacters08()
-    {
+    public void Gs1DisallowedCharacters08() {
         var gs1TestData = $"010477298543159410{{AB0123}}{(char)29}1724062021@622409215";
 
         var expectedResults = new Dictionary<string, string>
@@ -438,7 +402,7 @@ public class ParserTests
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        var resolvedEntities = results as IResolvedEntity[] ?? results.ToArray();
+        var resolvedEntities = results ?? [.. results];
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
@@ -447,8 +411,7 @@ public class ParserTests
     /// GS1 Disallowed characters - test 09.
     /// </summary>
     [Fact]
-    public void Gs1DisallowedCharacters09()
-    {
+    public void Gs1DisallowedCharacters09() {
         var gs1TestData = $"010477298543159410AB|0123{(char)29}1724021821$622409215";
 
         var expectedResults = new Dictionary<string, string>
@@ -460,7 +423,7 @@ public class ParserTests
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        var resolvedEntities = results as IResolvedEntity[] ?? results.ToArray();
+        var resolvedEntities = results ?? [.. results];
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
@@ -469,8 +432,7 @@ public class ParserTests
     /// GS1 Disallowed characters - test 10.
     /// </summary>
     [Fact]
-    public void Gs1DisallowedCharacters10()
-    {
+    public void Gs1DisallowedCharacters10() {
         var gs1TestData = $"010477298543159410AB~0123{(char)29}1724070321#622409215";
 
         var expectedResults = new Dictionary<string, string>
@@ -482,7 +444,7 @@ public class ParserTests
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        var resolvedEntities = results as IResolvedEntity[] ?? results.ToArray();
+        var resolvedEntities = results ?? [.. results];
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
@@ -491,8 +453,7 @@ public class ParserTests
     /// No value - test.
     /// </summary>
     [Fact]
-    public void Gs1NoValue()
-    {
+    public void Gs1NoValue() {
         const string gs1TestData = "01";
 
         var expectedResults = new Dictionary<string, string>
@@ -508,8 +469,7 @@ public class ParserTests
     /// Whitespace value - test.
     /// </summary>
     [Fact]
-    public void Gs1InvalidForAiValue()
-    {
+    public void Gs1InvalidForAiValue() {
         var gs1TestData = "10    ";
 
         var expectedResults = new Dictionary<string, string>
@@ -518,7 +478,7 @@ public class ParserTests
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        var resolvedEntities = results as IResolvedEntity[] ?? results.ToArray();
+        var resolvedEntities = results ?? [.. results];
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
 
         gs1TestData = "17459272";
@@ -529,7 +489,7 @@ public class ParserTests
         };
 
         results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        resolvedEntities = results as IResolvedEntity[] ?? results.ToArray();
+        resolvedEntities = results ?? [.. results];
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
@@ -538,8 +498,7 @@ public class ParserTests
     /// Insufficient fixed width value value (2) - test.
     /// </summary>
     [Fact]
-    public void Gs1WInsufficientFixedWidthValue()
-    {
+    public void Gs1WInsufficientFixedWidthValue() {
         const string gs1TestData = "010123";
 
         var expectedResults = new Dictionary<string, string>
@@ -555,8 +514,7 @@ public class ParserTests
     /// Null value - test.
     /// </summary>
     [Fact]
-    public void Gs1NullValue()
-    {
+    public void Gs1NullValue() {
         var expectedResults = new Dictionary<string, string>();
 
         DoTestGs1WithErrors(null, expectedResults);
@@ -566,8 +524,7 @@ public class ParserTests
     /// Serial Shipping Container Code - test.
     /// </summary>
     [Fact]
-    public void Gs1SerialShippingContainerCode()
-    {
+    public void Gs1SerialShippingContainerCode() {
         const string gs1TestData = "00007189085627231896";
 
         var expectedResults = new Dictionary<string, string>
@@ -582,8 +539,7 @@ public class ParserTests
     /// Serial Shipping Container Code - test.
     /// </summary>
     [Fact]
-    public void Gs1SerialShippingContainerCodeWithErrors()
-    {
+    public void Gs1SerialShippingContainerCodeWithErrors() {
         const string gs1TestData = "00A07189085627231896";
 
         var expectedResults = new Dictionary<string, string>
@@ -598,8 +554,7 @@ public class ParserTests
     /// Global Trade Item Number - test.
     /// </summary>
     [Fact]
-    public void Gs1GlobalTradeItemNumber()
-    {
+    public void Gs1GlobalTradeItemNumber() {
         const string gs1TestData = "0104070071967072";
 
         var expectedResults = new Dictionary<string, string>
@@ -614,8 +569,7 @@ public class ParserTests
     /// Global Trade Item Number - test.
     /// </summary>
     [Fact]
-    public void Gs1GlobalTradeItemNumberWithErrors()
-    {
+    public void Gs1GlobalTradeItemNumberWithErrors() {
         const string gs1TestData = "01A4070071967072";
 
         var expectedResults = new Dictionary<string, string>
@@ -630,8 +584,7 @@ public class ParserTests
     /// Global Trade Item Number - test.
     /// </summary>
     [Fact]
-    public void Gs1GtinOfContainedTradeItems()
-    {
+    public void Gs1GtinOfContainedTradeItems() {
         const string gs1TestData = "0210634158608732";
 
         var expectedResults = new Dictionary<string, string>
@@ -646,8 +599,7 @@ public class ParserTests
     /// Global Trade Item Number - test.
     /// </summary>
     [Fact]
-    public void Gs1GtinOfContainedTradeItemsWithErrors()
-    {
+    public void Gs1GtinOfContainedTradeItemsWithErrors() {
         const string gs1TestData = "02A0634158608732";
 
         var expectedResults = new Dictionary<string, string>
@@ -662,8 +614,7 @@ public class ParserTests
     /// Batch or Lot Number - test.
     /// </summary>
     [Fact]
-    public void Gs1BatchLotNumber()
-    {
+    public void Gs1BatchLotNumber() {
         const string gs1TestData = "104512XA";
 
         var expectedResults = new Dictionary<string, string>
@@ -678,8 +629,7 @@ public class ParserTests
     /// Batch or Lot Number - test.
     /// </summary>
     [Fact]
-    public void Gs1BatchLotNumberWithErrors()
-    {
+    public void Gs1BatchLotNumberWithErrors() {
         const string gs1TestData = "104512~XA";
 
         var expectedResults = new Dictionary<string, string>
@@ -695,8 +645,7 @@ public class ParserTests
     /// </summary>
     [Fact]
     // ReSharper disable once IdentifierTypo
-    public void Gs1ProductionDateYymmdd()
-    {
+    public void Gs1ProductionDateYymmdd() {
         const string gs1TestData = "11190412";
 
         var expectedResults = new Dictionary<string, string>
@@ -712,8 +661,7 @@ public class ParserTests
     /// </summary>
     [Fact]
     // ReSharper disable once IdentifierTypo
-    public void Gs1ProductionDateYymmddWithErrors()
-    {
+    public void Gs1ProductionDateYymmddWithErrors() {
         const string gs1TestData = "11192712";
 
         var expectedResults = new Dictionary<string, string>
@@ -729,8 +677,7 @@ public class ParserTests
     /// </summary>
     [Fact]
     // ReSharper disable once IdentifierTypo
-    public void Gs1DueDateYymmdd()
-    {
+    public void Gs1DueDateYymmdd() {
         const string gs1TestData = "12190412";
 
         var expectedResults = new Dictionary<string, string>
@@ -746,8 +693,7 @@ public class ParserTests
     /// </summary>
     [Fact]
     // ReSharper disable once IdentifierTypo
-    public void Gs1DueDateYymmddWithErrors()
-    {
+    public void Gs1DueDateYymmddWithErrors() {
         const string gs1TestData = "1219AP12";
 
         var expectedResults = new Dictionary<string, string>
@@ -763,8 +709,7 @@ public class ParserTests
     /// </summary>
     [Fact]
     // ReSharper disable once IdentifierTypo
-    public void Gs1PackagingDateYymmdd()
-    {
+    public void Gs1PackagingDateYymmdd() {
         const string gs1TestData = "13190412";
 
         var expectedResults = new Dictionary<string, string>
@@ -780,8 +725,7 @@ public class ParserTests
     /// </summary>
     [Fact]
     // ReSharper disable once IdentifierTypo
-    public void Gs1PackagingDateYymmddWithErrors()
-    {
+    public void Gs1PackagingDateYymmddWithErrors() {
         const string gs1TestData = "13190440";
 
         var expectedResults = new Dictionary<string, string>
@@ -797,8 +741,7 @@ public class ParserTests
     /// </summary>
     [Fact]
     // ReSharper disable once IdentifierTypo
-    public void Gs1BetBeforeDateYymmdd()
-    {
+    public void Gs1BetBeforeDateYymmdd() {
         const string gs1TestData = "15190412";
 
         var expectedResults = new Dictionary<string, string>
@@ -814,8 +757,7 @@ public class ParserTests
     /// </summary>
     [Fact]
     // ReSharper disable once IdentifierTypo
-    public void Gs1BetBeforeDateYymmddWithErrors()
-    {
+    public void Gs1BetBeforeDateYymmddWithErrors() {
         const string gs1TestData = "151904TU";
 
         var expectedResults = new Dictionary<string, string>
@@ -831,8 +773,7 @@ public class ParserTests
     /// </summary>
     [Fact]
     // ReSharper disable once IdentifierTypo
-    public void Gs1SellByDateYymmdd()
-    {
+    public void Gs1SellByDateYymmdd() {
         const string gs1TestData = "16190412";
 
         var expectedResults = new Dictionary<string, string>
@@ -848,8 +789,7 @@ public class ParserTests
     /// </summary>
     [Fact]
     // ReSharper disable once IdentifierTypo
-    public void Gs1SellByDateYymmddWithErrors()
-    {
+    public void Gs1SellByDateYymmddWithErrors() {
         const string gs1TestData = "161900412";
 
         var expectedResults = new Dictionary<string, string>
@@ -865,8 +805,7 @@ public class ParserTests
     /// </summary>
     [Fact]
     // ReSharper disable once IdentifierTypo
-    public void Gs1ExpiryDateYymmdd()
-    {
+    public void Gs1ExpiryDateYymmdd() {
         const string gs1TestData = "17190412";
 
         var expectedResults = new Dictionary<string, string>
@@ -882,8 +821,7 @@ public class ParserTests
     /// </summary>
     [Fact]
     // ReSharper disable once IdentifierTypo
-    public void Gs1ExpiryDateYymmddWithErrors()
-    {
+    public void Gs1ExpiryDateYymmddWithErrors() {
         const string gs1TestData = "1719\\04\\12";
 
         var expectedResults = new Dictionary<string, string>
@@ -898,8 +836,7 @@ public class ParserTests
     /// Internal product variant - test.
     /// </summary>
     [Fact]
-    public void Gs1InternalProductVariant()
-    {
+    public void Gs1InternalProductVariant() {
         const string gs1TestData = "2001";
 
         var expectedResults = new Dictionary<string, string>
@@ -914,8 +851,7 @@ public class ParserTests
     /// Internal product variant - test.
     /// </summary>
     [Fact]
-    public void Gs1InternalProductVariantWithErrors()
-    {
+    public void Gs1InternalProductVariantWithErrors() {
         const string gs1TestData = "20001";
 
         var expectedResults = new Dictionary<string, string>
@@ -930,8 +866,7 @@ public class ParserTests
     /// Serial number - test.
     /// </summary>
     [Fact]
-    public void Gs1SerialNumber()
-    {
+    public void Gs1SerialNumber() {
         const string gs1TestData = "2112R2134IU7";
 
         var expectedResults = new Dictionary<string, string>
@@ -946,8 +881,7 @@ public class ParserTests
     /// Serial number - test.
     /// </summary>
     [Fact]
-    public void Gs1SerialNumberWithErrors()
-    {
+    public void Gs1SerialNumberWithErrors() {
         const string gs1TestData = "2112R213[4IU7]";
 
         var expectedResults = new Dictionary<string, string>
@@ -962,8 +896,7 @@ public class ParserTests
     /// Consumer Product Variant - test.
     /// </summary>
     [Fact]
-    public void Gs1ConsumerProductVariant()
-    {
+    public void Gs1ConsumerProductVariant() {
         const string gs1TestData = "2212R2134IU7";
 
         var expectedResults = new Dictionary<string, string>
@@ -978,8 +911,7 @@ public class ParserTests
     /// Consumer Product Variant - test.
     /// </summary>
     [Fact]
-    public void Gs1ConsumerProductVariantWithErrors()
-    {
+    public void Gs1ConsumerProductVariantWithErrors() {
         const string gs1TestData = "2212R213`4IU7`";
 
         var expectedResults = new Dictionary<string, string>
@@ -994,8 +926,7 @@ public class ParserTests
     /// Third Party Controlled, Serialised Extension of GTIN (TPX) - test.
     /// </summary>
     [Fact]
-    public void Gs1ThirdPartyControlledSerialisedExtensionOfGtinTpx()
-    {
+    public void Gs1ThirdPartyControlledSerialisedExtensionOfGtinTpx() {
         const string gs1TestData = "2352R2134IU7";
 
         var expectedResults = new Dictionary<string, string>
@@ -1010,8 +941,7 @@ public class ParserTests
     /// Third Party Controlled, Serialised Extension of GTIN (TPX) - test.
     /// </summary>
     [Fact]
-    public void Gs1ThirdPartyControlledSerialisedExtensionOfGtinTpxWithErrors()
-    {
+    public void Gs1ThirdPartyControlledSerialisedExtensionOfGtinTpxWithErrors() {
         const string gs1TestData = "2352R213`4IU7`";
 
         var expectedResults = new Dictionary<string, string>
@@ -1026,8 +956,7 @@ public class ParserTests
     /// Additional Item Identification - test.
     /// </summary>
     [Fact]
-    public void Gs1AdditionalItemIdentification()
-    {
+    public void Gs1AdditionalItemIdentification() {
         const string gs1TestData = "240122R2134IU7";
 
         var expectedResults = new Dictionary<string, string>
@@ -1042,8 +971,7 @@ public class ParserTests
     /// Additional Item Identification - test.
     /// </summary>
     [Fact]
-    public void Gs1AdditionalItemIdentificationWithErrors()
-    {
+    public void Gs1AdditionalItemIdentificationWithErrors() {
         const string gs1TestData = "24012R213`4IU7`";
 
         var expectedResults = new Dictionary<string, string>
@@ -1058,8 +986,7 @@ public class ParserTests
     /// Customer Part Number - test.
     /// </summary>
     [Fact]
-    public void Gs1CustomerPartNumber()
-    {
+    public void Gs1CustomerPartNumber() {
         const string gs1TestData = "241122R2134IU7";
 
         var expectedResults = new Dictionary<string, string>
@@ -1074,8 +1001,7 @@ public class ParserTests
     /// Customer Part Number - test.
     /// </summary>
     [Fact]
-    public void Gs1CustomerPartNumberWithErrors()
-    {
+    public void Gs1CustomerPartNumberWithErrors() {
         const string gs1TestData = "24112R213`4IU7`";
 
         var expectedResults = new Dictionary<string, string>
@@ -1090,8 +1016,7 @@ public class ParserTests
     /// Made to Order Variation Number - test.
     /// </summary>
     [Fact]
-    public void Gs1MadeToOrderVariationNumber()
-    {
+    public void Gs1MadeToOrderVariationNumber() {
         const string gs1TestData = "242190213";
 
         var expectedResults = new Dictionary<string, string>
@@ -1106,8 +1031,7 @@ public class ParserTests
     /// Made to Order Variation Number - test.
     /// </summary>
     [Fact]
-    public void Gs1MadeToOrderVariationNumberWithErrors()
-    {
+    public void Gs1MadeToOrderVariationNumberWithErrors() {
         const string gs1TestData = "242A90213";
 
         var expectedResults = new Dictionary<string, string>
@@ -1122,8 +1046,7 @@ public class ParserTests
     /// Packaging Component Number - test.
     /// </summary>
     [Fact]
-    public void Gs1PackagingComponentNumber()
-    {
+    public void Gs1PackagingComponentNumber() {
         const string gs1TestData = "243122R2134IU7";
 
         var expectedResults = new Dictionary<string, string>
@@ -1138,8 +1061,7 @@ public class ParserTests
     /// Packaging Component Number - test.
     /// </summary>
     [Fact]
-    public void Gs1PackagingComponentNumberWithErrors()
-    {
+    public void Gs1PackagingComponentNumberWithErrors() {
         const string gs1TestData = "24312R213`4IU7`";
 
         var expectedResults = new Dictionary<string, string>
@@ -1154,8 +1076,7 @@ public class ParserTests
     /// Secondary Serial Number - test.
     /// </summary>
     [Fact]
-    public void Gs1SecondarySerialNumber()
-    {
+    public void Gs1SecondarySerialNumber() {
         const string gs1TestData = "250122R2134IU7";
 
         var expectedResults = new Dictionary<string, string>
@@ -1170,8 +1091,7 @@ public class ParserTests
     /// Secondary Serial Number - test.
     /// </summary>
     [Fact]
-    public void Gs1SecondarySerialNumberWithErrors()
-    {
+    public void Gs1SecondarySerialNumberWithErrors() {
         const string gs1TestData = "25012R213`4IU7`";
 
         var expectedResults = new Dictionary<string, string>
@@ -1186,8 +1106,7 @@ public class ParserTests
     /// Reference to Source Entity - test.
     /// </summary>
     [Fact]
-    public void Gs1ReferenceToSourceEntity()
-    {
+    public void Gs1ReferenceToSourceEntity() {
         const string gs1TestData = "251122R2134IU7";
 
         var expectedResults = new Dictionary<string, string>
@@ -1202,8 +1121,7 @@ public class ParserTests
     /// Reference to Source Entity - test.
     /// </summary>
     [Fact]
-    public void Gs1ReferenceToSourceEntityWithErrors()
-    {
+    public void Gs1ReferenceToSourceEntityWithErrors() {
         const string gs1TestData = "25112R213`4IU7`";
 
         var expectedResults = new Dictionary<string, string>
@@ -1218,8 +1136,7 @@ public class ParserTests
     /// Global Document Type Identifier - test.
     /// </summary>
     [Fact]
-    public void Gs1GlobalDocumentTypeIdentifier()
-    {
+    public void Gs1GlobalDocumentTypeIdentifier() {
         const string gs1TestData1 = "2530123456789012";
 
         var expectedResults1 = new Dictionary<string, string>
@@ -1243,8 +1160,7 @@ public class ParserTests
     /// Global Document Type Identifier - test.
     /// </summary>
     [Fact]
-    public void Gs1GlobalDocumentTypeIdentifierWithErrors()
-    {
+    public void Gs1GlobalDocumentTypeIdentifierWithErrors() {
         const string gs1TestData1 = "253DUMMYDATA1234";
 
         var expectedResults1 = new Dictionary<string, string>
@@ -1269,8 +1185,7 @@ public class ParserTests
     /// GLN Extension Component - test.
     /// </summary>
     [Fact]
-    public void Gs1GlnExtensionComponent()
-    {
+    public void Gs1GlnExtensionComponent() {
         const string gs1TestData = "254AB123456CDF+6";
 
         var expectedResults = new Dictionary<string, string>
@@ -1285,8 +1200,7 @@ public class ParserTests
     /// GLN Extension Component - test.
     /// </summary>
     [Fact]
-    public void Gs1GlnExtensionComponentWithErrors()
-    {
+    public void Gs1GlnExtensionComponentWithErrors() {
         const string gs1TestData1 = "254AB123456CDF~6";
 
         var expectedResults1 = new Dictionary<string, string>
@@ -1310,8 +1224,7 @@ public class ParserTests
     /// Global Coupon Number (GCN) - test.
     /// </summary>
     [Fact]
-    public void Gs1GlobalCouponNumber()
-    {
+    public void Gs1GlobalCouponNumber() {
         const string gs1TestData1 = "2550123456789012";
 
         var expectedResults1 = new Dictionary<string, string>
@@ -1335,8 +1248,7 @@ public class ParserTests
     /// Global Coupon Number (GCN) - test.
     /// </summary>
     [Fact]
-    public void Gs1GlobalCouponNumberWithErrors()
-    {
+    public void Gs1GlobalCouponNumberWithErrors() {
         const string gs1TestData1 = "255DUMMYDATA1234";
 
         var expectedResults1 = new Dictionary<string, string>
@@ -1361,8 +1273,7 @@ public class ParserTests
     /// Variable count of items (variable measure trade item) (VAR. COUNT) - test.
     /// </summary>
     [Fact]
-    public void Gs1VariableCountOfItemsVariableMeasureTradeItem()
-    {
+    public void Gs1VariableCountOfItemsVariableMeasureTradeItem() {
         const string gs1TestData1 = "3001234567";
 
         var expectedResults1 = new Dictionary<string, string>
@@ -1377,8 +1288,7 @@ public class ParserTests
     /// Variable count of items (variable measure trade item) (VAR. COUNT) - test.
     /// </summary>
     [Fact]
-    public void Gs1VariableCountOfItemsVariableMeasureTradeItemWithErrors()
-    {
+    public void Gs1VariableCountOfItemsVariableMeasureTradeItemWithErrors() {
         // ReSharper disable once StringLiteralTypo
         const string gs1TestData1 = "30DUMMYDAT";
 
@@ -1404,35 +1314,28 @@ public class ParserTests
     /// Trade Measures - test.
     /// </summary>
     [Fact]
-    public void Gs1TradeMeasures()
-    {
-        for (var idx = 310; idx <= 316; idx++)
-        {
+    public void Gs1TradeMeasures() {
+        for (var idx = 310; idx <= 316; idx++) {
             Gs1Vmti6DecimalPlaces(idx.ToString());
         }
 
-        for (var idx = 320; idx <= 329; idx++)
-        {
+        for (var idx = 320; idx <= 329; idx++) {
             Gs1Vmti6DecimalPlaces(idx.ToString());
         }
 
-        for (var idx = 350; idx <= 352; idx++)
-        {
+        for (var idx = 350; idx <= 352; idx++) {
             Gs1Vmti6DecimalPlaces(idx.ToString());
         }
 
-        for (var idx = 356; idx <= 357; idx++)
-        {
+        for (var idx = 356; idx <= 357; idx++) {
             Gs1Vmti6DecimalPlaces(idx.ToString());
         }
 
-        for (var idx = 360; idx <= 361; idx++)
-        {
+        for (var idx = 360; idx <= 361; idx++) {
             Gs1Vmti6DecimalPlaces(idx.ToString());
         }
 
-        for (var idx = 364; idx <= 366; idx++)
-        {
+        for (var idx = 364; idx <= 366; idx++) {
             Gs1Vmti6DecimalPlaces(idx.ToString());
         }
     }
@@ -1441,35 +1344,28 @@ public class ParserTests
     /// Trade Measures - test.
     /// </summary>
     [Fact]
-    public void Gs1TradeMeasuresWithErrors()
-    {
-        for (var idx = 310; idx <= 316; idx++)
-        {
+    public void Gs1TradeMeasuresWithErrors() {
+        for (var idx = 310; idx <= 316; idx++) {
             Gs1Vmti6DecimalPlacesWithErrors(idx.ToString());
         }
 
-        for (var idx = 320; idx <= 329; idx++)
-        {
+        for (var idx = 320; idx <= 329; idx++) {
             Gs1Vmti6DecimalPlacesWithErrors(idx.ToString());
         }
 
-        for (var idx = 350; idx <= 352; idx++)
-        {
+        for (var idx = 350; idx <= 352; idx++) {
             Gs1Vmti6DecimalPlacesWithErrors(idx.ToString());
         }
 
-        for (var idx = 356; idx <= 357; idx++)
-        {
+        for (var idx = 356; idx <= 357; idx++) {
             Gs1Vmti6DecimalPlacesWithErrors(idx.ToString());
         }
 
-        for (var idx = 360; idx <= 361; idx++)
-        {
+        for (var idx = 360; idx <= 361; idx++) {
             Gs1Vmti6DecimalPlacesWithErrors(idx.ToString());
         }
 
-        for (var idx = 364; idx <= 366; idx++)
-        {
+        for (var idx = 364; idx <= 366; idx++) {
             Gs1Vmti6DecimalPlacesWithErrors(idx.ToString());
         }
     }
@@ -1478,30 +1374,24 @@ public class ParserTests
     /// Logistic Measures - test.
     /// </summary>
     [Fact]
-    public void Gs1LogisticMeasures()
-    {
-        for (var idx = 330; idx <= 336; idx++)
-        {
+    public void Gs1LogisticMeasures() {
+        for (var idx = 330; idx <= 336; idx++) {
             Gs1Vmti6DecimalPlaces(idx.ToString());
         }
 
-        for (var idx = 340; idx <= 349; idx++)
-        {
+        for (var idx = 340; idx <= 349; idx++) {
             Gs1Vmti6DecimalPlaces(idx.ToString());
         }
 
-        for (var idx = 353; idx <= 355; idx++)
-        {
+        for (var idx = 353; idx <= 355; idx++) {
             Gs1Vmti6DecimalPlaces(idx.ToString());
         }
 
-        for (var idx = 362; idx <= 363; idx++)
-        {
+        for (var idx = 362; idx <= 363; idx++) {
             Gs1Vmti6DecimalPlaces(idx.ToString());
         }
 
-        for (var idx = 367; idx <= 369; idx++)
-        {
+        for (var idx = 367; idx <= 369; idx++) {
             Gs1Vmti6DecimalPlaces(idx.ToString());
         }
     }
@@ -1510,30 +1400,24 @@ public class ParserTests
     /// Logistic Measures - test.
     /// </summary>
     [Fact]
-    public void Gs1LogisticWithErrors()
-    {
-        for (var idx = 330; idx <= 336; idx++)
-        {
+    public void Gs1LogisticWithErrors() {
+        for (var idx = 330; idx <= 336; idx++) {
             Gs1Vmti6DecimalPlacesWithErrors(idx.ToString());
         }
 
-        for (var idx = 340; idx <= 349; idx++)
-        {
+        for (var idx = 340; idx <= 349; idx++) {
             Gs1Vmti6DecimalPlacesWithErrors(idx.ToString());
         }
 
-        for (var idx = 353; idx <= 355; idx++)
-        {
+        for (var idx = 353; idx <= 355; idx++) {
             Gs1Vmti6DecimalPlacesWithErrors(idx.ToString());
         }
 
-        for (var idx = 362; idx <= 363; idx++)
-        {
+        for (var idx = 362; idx <= 363; idx++) {
             Gs1Vmti6DecimalPlacesWithErrors(idx.ToString());
         }
 
-        for (var idx = 367; idx <= 369; idx++)
-        {
+        for (var idx = 367; idx <= 369; idx++) {
             Gs1Vmti6DecimalPlacesWithErrors(idx.ToString());
         }
     }
@@ -1542,8 +1426,7 @@ public class ParserTests
     /// Kilograms per Square Meter - test.
     /// </summary>
     [Fact]
-    public void Gs1KilogramsPerSquareMeter()
-    {
+    public void Gs1KilogramsPerSquareMeter() {
         Gs1Vmti6DecimalPlaces("337");
     }
 
@@ -1551,8 +1434,7 @@ public class ParserTests
     /// Kilograms per Square Meter - test.
     /// </summary>
     [Fact]
-    public void Gs1KilogramsPerSquareMeterWithErrors()
-    {
+    public void Gs1KilogramsPerSquareMeterWithErrors() {
         Gs1Vmti6DecimalPlacesWithErrors("337");
     }
 
@@ -1560,8 +1442,7 @@ public class ParserTests
     /// Count of Trade Item Pieces contained in Logistics Unit - test.
     /// </summary>
     [Fact]
-    public void Gs1CountOfTradeItemPiecesContainedInLogisticsUnit()
-    {
+    public void Gs1CountOfTradeItemPiecesContainedInLogisticsUnit() {
         var gs1TestData1 = "3712345678";
 
         var expectedResults1 = new Dictionary<string, string>
@@ -1585,8 +1466,7 @@ public class ParserTests
     /// Count of Trade Item Pieces contained in Logistics Unit - test.
     /// </summary>
     [Fact]
-    public void Gs1CountOfTradeItemPiecesContainedInLogisticsUnitWithErrors()
-    {
+    public void Gs1CountOfTradeItemPiecesContainedInLogisticsUnitWithErrors() {
         // ReSharper disable once StringLiteralTypo
         const string gs1TestData1 = "37DUMMYDAT";
 
@@ -1603,8 +1483,7 @@ public class ParserTests
     /// Amount Payable or Coupon Value - test.
     /// </summary>
     [Fact]
-    public void Gs1AmountPayableOrCouponValue()
-    {
+    public void Gs1AmountPayableOrCouponValue() {
         Gs1Vmti6DecimalPlaces("390");
 
         var gs1TestData1 = "3902123456";
@@ -1639,8 +1518,7 @@ public class ParserTests
     /// Amount Payable or Coupon Value - test.
     /// </summary>
     [Fact]
-    public void Gs1AmountPayableOrCouponValueWithErrors()
-    {
+    public void Gs1AmountPayableOrCouponValueWithErrors() {
         const string gs1TestData1 = "3902€12345";
 
         var expectedResults1 = new Dictionary<string, string>
@@ -1655,8 +1533,7 @@ public class ParserTests
     /// Amount Payable and ISO Currency Code - test.
     /// </summary>
     [Fact]
-    public void Gs1AmountPayableAndIsoCurrencyCode()
-    {
+    public void Gs1AmountPayableAndIsoCurrencyCode() {
         Gs1Vmti6DecimalPlaces("391");
 
         var gs1TestData1 = "3912978123456";
@@ -1691,8 +1568,7 @@ public class ParserTests
     /// Amount Payable and ISO Currency Code - test.
     /// </summary>
     [Fact]
-    public void Gs1AmountPayableAndIsoCurrencyCodeWithErrors()
-    {
+    public void Gs1AmountPayableAndIsoCurrencyCodeWithErrors() {
         var gs1TestData1 = "3912";
 
         var expectedResults1 = new Dictionary<string, string>
@@ -1725,8 +1601,7 @@ public class ParserTests
     /// Amount Payable for a Variable Measure Trade Item – Single Monetary Area - test.
     /// </summary>
     [Fact]
-    public void Gs1AmountPayableForVariableMeasureAreaSingleMonetaryArea()
-    {
+    public void Gs1AmountPayableForVariableMeasureAreaSingleMonetaryArea() {
         Gs1Vmti6DecimalPlaces("392");
 
         var gs1TestData1 = "3922123456";
@@ -1761,8 +1636,7 @@ public class ParserTests
     /// Amount Payable for a Variable Measure Trade Item – Single Monetary Area - test.
     /// </summary>
     [Fact]
-    public void Gs1AmountPayableForVariableMeasureAreaSingleMonetaryAreaWithErrors()
-    {
+    public void Gs1AmountPayableForVariableMeasureAreaSingleMonetaryAreaWithErrors() {
         const string gs1TestData1 = "3922€12345";
 
         var expectedResults1 = new Dictionary<string, string>
@@ -1777,8 +1651,7 @@ public class ParserTests
     /// National Healthcare Reimbursement Number (NHRN) - Germany (PZN).
     /// </summary>
     [Fact]
-    public void Gs1NationalHealthcareReimbursementNumberGermanyPzn()
-    {
+    public void Gs1NationalHealthcareReimbursementNumberGermanyPzn() {
         const string gs1TestData = "71003752864";
 
         var expectedResults = new Dictionary<string, string>
@@ -1793,8 +1666,7 @@ public class ParserTests
     /// National Healthcare Reimbursement Number (NHRN) - France (CIP).
     /// </summary>
     [Fact]
-    public void Gs1NationalHealthcareReimbursementNumberFranceCip()
-    {
+    public void Gs1NationalHealthcareReimbursementNumberFranceCip() {
         const string gs1TestData = "7113400930000120";
 
         var expectedResults = new Dictionary<string, string>
@@ -1809,8 +1681,7 @@ public class ParserTests
     /// National Healthcare Reimbursement Number (NHRN) - Spain (CN).
     /// </summary>
     [Fact]
-    public void Gs1NationalHealthcareReimbursementNumberSpainCn()
-    {
+    public void Gs1NationalHealthcareReimbursementNumberSpainCn() {
         const string gs1TestData = "712713479.4";
 
         var expectedResults = new Dictionary<string, string>
@@ -1825,8 +1696,7 @@ public class ParserTests
     /// National Healthcare Reimbursement Number (NHRN) - Brazil (DRN).
     /// </summary>
     [Fact]
-    public void Gs1NationalHealthcareReimbursementNumberBrazilDrn()
-    {
+    public void Gs1NationalHealthcareReimbursementNumberBrazilDrn() {
         const string gs1TestData = "7134005632804976";
 
         var expectedResults = new Dictionary<string, string>
@@ -1841,8 +1711,7 @@ public class ParserTests
     /// National Healthcare Reimbursement Number (NHRN) - Portugal (AIM).
     /// </summary>
     [Fact]
-    public void Gs1NationalHealthcareReimbursementNumberPortugalAim()
-    {
+    public void Gs1NationalHealthcareReimbursementNumberPortugalAim() {
         const string gs1TestData = "7141234567";
 
         var expectedResults = new Dictionary<string, string>
@@ -1857,8 +1726,7 @@ public class ParserTests
     /// National Healthcare Reimbursement Number (NHRN) - United States of America (NDC).
     /// </summary>
     [Fact]
-    public void Gs1NationalHealthcareReimbursementNumberUnitedStatesAim()
-    {
+    public void Gs1NationalHealthcareReimbursementNumberUnitedStatesAim() {
         const string gs1TestData = "7150777310502";
 
         var expectedResults = new Dictionary<string, string>
@@ -1873,8 +1741,7 @@ public class ParserTests
     /// National Healthcare Reimbursement Number (NHRN) - Multi-Market.
     /// </summary>
     [Fact]
-    public void Gs1NationalHealthcareReimbursementNumberMulti()
-    {
+    public void Gs1NationalHealthcareReimbursementNumberMulti() {
         var gs1TestData = $"71003752864{(char)29}7113400930000120{(char)29}712713479.4{(char)29}7134005632804976{(char)29}7141234567{(char)29}7150777310502";
 
         var expectedResults = new Dictionary<string, string>
@@ -1895,8 +1762,7 @@ public class ParserTests
     /// </summary>
     /// <param name="identifier">An application identifier.</param>
     // ReSharper disable once IdentifierTypo
-    private static void Gs1Vmti6DecimalPlaces(string identifier)
-    {
+    private static void Gs1Vmti6DecimalPlaces(string identifier) {
         var gs1TestData1 = identifier + "2124456";
 
         var expectedResults1 = new Dictionary<string, string>
@@ -1912,8 +1778,7 @@ public class ParserTests
     /// </summary>
     /// <param name="identifier">An application identifier.</param>
     // ReSharper disable once IdentifierTypo
-    private static void Gs1Vmti6DecimalPlacesWithErrors(string identifier)
-    {
+    private static void Gs1Vmti6DecimalPlacesWithErrors(string identifier) {
         var gs1TestData1 = identifier + "31234";
 
         var expectedResults1 = new Dictionary<string, string>
@@ -1948,13 +1813,11 @@ public class ParserTests
     /// <param name="gs1TestData">The GS1 data to be tested.</param>
     /// <param name="expectedResults">The expected results.</param>
     // ReSharper disable once UnusedMethodReturnValue.Local
-    private static void DoTestGs1WithNoErrors(string gs1TestData, IReadOnlyDictionary<string, string> expectedResults)
-    {
+    private static void DoTestGs1WithNoErrors(string gs1TestData, IReadOnlyDictionary<string, string> expectedResults) {
         var results = DoTestGs1(gs1TestData, expectedResults);
-        var doTestGs1WithNoErrors = results as IResolvedEntity[] ?? results.ToArray();
+        var doTestGs1WithNoErrors = results ?? [.. results];
 
-        foreach (var result in doTestGs1WithNoErrors)
-        {
+        foreach (var result in doTestGs1WithNoErrors) {
             Assert.False(result.IsError);
         }
     }
@@ -1965,12 +1828,11 @@ public class ParserTests
     /// <param name="gs1TestData">The GS1 data to be tested.</param>
     /// <param name="expectedResults">The expected results.</param>
     /// <returns>The results.</returns>
-    private static IEnumerable<IResolvedEntity> DoTestGs1WithErrors(string gs1TestData, IReadOnlyDictionary<string, string> expectedResults)
-    {
+    private static IResolvedEntity[] DoTestGs1WithErrors(string gs1TestData, IReadOnlyDictionary<string, string> expectedResults) {
         var results = DoTestGs1(gs1TestData, expectedResults, true);
 
-        var doTestGs1WithErrors = results as IResolvedEntity[] ?? results.ToArray();
-        var containsErrors = doTestGs1WithErrors.Any(result => result.IsError);
+        var doTestGs1WithErrors = results ?? [.. results];
+        var containsErrors = System.Array.Exists(doTestGs1WithErrors, result => result.IsError);
 
         Assert.True(containsErrors);
 
@@ -1984,28 +1846,22 @@ public class ParserTests
     /// <param name="expectedResults">The expected results.</param>
     /// <param name="suppressErrors">If true, assertion errors are suppressed.</param>
     /// <returns>The results.</returns>
-    [SuppressMessage("ReSharper", "ParameterOnlyUsedForPreconditionCheck.Local", Justification = "Reviewed")]
-    private static IEnumerable<IResolvedEntity> DoTestGs1(string gs1TestData, IReadOnlyDictionary<string, string> expectedResults, bool suppressErrors = false)
-    {
+    private static IResolvedEntity[] DoTestGs1(string gs1TestData, IReadOnlyDictionary<string, string> expectedResults, bool suppressErrors = false) {
         var results = new List<IResolvedEntity>();
         Parser.Parse(gs1TestData, entity => results.Add(entity));
 
-        foreach (var result in results)
-        {
-            try
-            {
+        foreach (var result in results) {
+            try {
                 Assert.True(expectedResults.ContainsKey(result.Identifier));
                 Assert.Equal(expectedResults[result.Identifier], result.Value);
             }
-            catch
-            {
-                if (!suppressErrors)
-                {
+            catch {
+                if (!suppressErrors) {
                     throw;
                 }
             }
         }
 
-        return results;
+        return [.. results];
     }
 }

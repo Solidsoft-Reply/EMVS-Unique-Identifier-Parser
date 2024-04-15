@@ -2,19 +2,6 @@
 // <copyright file="TextInputControl.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Manages the keyboard input to the console for a text input line. This handler 
 // emulates the classic Windows (DOS-like) command line.
@@ -35,8 +22,7 @@ using static Console;
 /// Handles the keyboard input to the console for a text input line.  This handler 
 /// emulates the classic Windows (DOS-like) command line.
 /// </summary>
-public class TextInputControl
-{
+public class TextInputControl {
     /// <summary>
     /// The character used to escape ASCII control characters.
     /// </summary>
@@ -345,8 +331,7 @@ public class TextInputControl
                 break;
             default:
 
-                if (keyInfo.KeyChar > 0 && keyInfo is { Key: ConsoleKey.A, Modifiers: ConsoleModifiers.Control })
-                {
+                if (keyInfo.KeyChar > 0 && keyInfo is { Key: ConsoleKey.A, Modifiers: ConsoleModifiers.Control }) {
                     ToggleLineHighlight();
                     return;
                 }
@@ -383,7 +368,7 @@ public class TextInputControl
                 var asciiCtrl = keyChar < 32;
                 Write((asciiCtrl && keyChar != 0 ? "^" + (char)(keyChar + 64) : keyChar == 0 ? string.Empty : keyChar) + remainder);
                 _input = _input[..insertPos] + (asciiCtrl && keyChar != 0 ? IdcEscapeChar + keyChar.ToString() : keyChar == 0 ? IdcNullChar : keyChar.ToString()) + remainder;
-                var (top, left) = MapAbsoluteToPos(insertPos + (asciiCtrl && keyChar != 0  ? 2 : 1) + StartAbsolute);
+                var (top, left) = MapAbsoluteToPos(insertPos + (asciiCtrl && keyChar != 0 ? 2 : 1) + StartAbsolute);
                 CursorTop = top;
                 CursorLeft = left - (left >= BufferWidth ? BufferWidth : 0);
                 break;
@@ -403,8 +388,8 @@ public class TextInputControl
         switch (Visibility) {
             case Visibility.Visible:
                 var inSpan = TryDetectSpan(out var deletePos);
-                var remainder = _input.Length > 0 && deletePos < _input.Length 
-                    ? _input[(deletePos + (inSpan ? 2 : 1))..] 
+                var remainder = _input.Length > 0 && deletePos < _input.Length
+                    ? _input[(deletePos + (inSpan ? 2 : 1))..]
                     : string.Empty;
                 Write(remainder);
                 Write(new string(' ', inSpan ? 2 : 1));
@@ -473,11 +458,11 @@ public class TextInputControl
                 CursorLeft -= 1;
                 var inSpan = TryDetectSpan(out spanStartIndex);
                 var inSpanAtLeft = inSpan && CursorLeft == 0;
-                CursorLeft -= inSpanAtLeft 
-                    ? -(BufferWidth - (BufferCursorIndex - spanStartIndex)) 
-                    : inSpan 
+                CursorLeft -= inSpanAtLeft
+                    ? -(BufferWidth - (BufferCursorIndex - spanStartIndex))
+                    : inSpan
                         ? BufferCursorIndex - spanStartIndex
-                        :0;
+                        : 0;
                 CursorTop -= inSpanAtLeft ? 1 : 0;
                 break;
         }
@@ -618,22 +603,26 @@ public class TextInputControl
     /// <summary>
     /// Retrieves and displays the first stored text input.
     /// </summary>
+#pragma warning disable IDE0060 // Remove unused parameter
     public void RetrieveFirstStoredInput(bool visible = true) {
         if (_storedInputs.Count == 0 || _storedInputCurrentPos <= 0) return;
 
         _storedInputCurrentPos = 0;
         DisplayHistoricInput();
     }
+#pragma warning restore IDE0060 // Remove unused parameter
 
     /// <summary>
     /// Retrieves and displays the last stored input.
     /// </summary>
+#pragma warning disable IDE0060 // Remove unused parameter
     public void RetrieveLastStoredInput(bool visible = true) {
         if (_storedInputs.Count <= 0 || _storedInputCurrentPos >= _storedInputs.Count - 1) return;
 
         _storedInputCurrentPos = _storedInputs.Count - 1;
         DisplayHistoricInput();
     }
+#pragma warning restore IDE0060 // Remove unused parameter
 
     /// <summary>
     /// Retrieves and appends a character from the current stored input to the current input.
@@ -682,8 +671,7 @@ public class TextInputControl
     /// submitted or abandoned.
     /// </summary>
     public void Terminate() {
-        if (_input.Length == 0)
-        {
+        if (_input.Length == 0) {
             Clear();
             return;
         }
@@ -720,7 +708,7 @@ public class TextInputControl
     /// Reset the input.
     /// </summary>
     public void Reset() {
-        _input =string.Empty;
+        _input = string.Empty;
         _startPosition = (false, -1, -1, -1);
     }
 
@@ -738,7 +726,7 @@ public class TextInputControl
 
         var state = cursorIndex switch {
             <= 1 => 0,
-            _ when cursorIndex >= _input.Length => 0, 
+            _ when cursorIndex >= _input.Length => 0,
             _ when _input[cursorIndex] == IdcEscapeChar => 1,
             _ when _input[cursorIndex - 1] == IdcEscapeChar => 2,
             _ => 0
@@ -756,8 +744,7 @@ public class TextInputControl
     /// <summary>
     /// Displays a historic input line as the current input.
     /// </summary>
-    private void DisplayHistoricInput()
-    {
+    private void DisplayHistoricInput() {
         Clear();
         InsertLine(RemoveControlEscapes(_storedInputs[_storedInputCurrentPos]));
     }
@@ -768,8 +755,8 @@ public class TextInputControl
     /// <param name="absolutePosition">An absolute screen buffer position</param>
     /// <returns>Screen buffer coordinates</returns>
     private static (int top, int left) MapAbsoluteToPos(int absolutePosition) => absolutePosition switch {
-            < 0 => (0, 0),
-            _ => (absolutePosition / BufferWidth, absolutePosition % BufferWidth)
+        < 0 => (0, 0),
+        _ => (absolutePosition / BufferWidth, absolutePosition % BufferWidth)
     };
 
     /// <summary>
@@ -777,28 +764,30 @@ public class TextInputControl
     /// </summary>
     /// <param name="value">The string to be converted.</param>
     /// <returns>The converted string.</returns>
-    private static string RemoveControlEscapes(string value)
-    {
+    private static string RemoveControlEscapes(string value) {
         if (string.IsNullOrWhiteSpace(value)) return value;
 
         var convertedChars = new char[value.Length];
         var charIdx = 0;
 
 
-        for (var idx = 0; idx < value.Length; idx++)
-        {
+        for (var idx = 0; idx < value.Length; idx++) {
             convertedChars[charIdx] = value[idx] == IdcEscapeChar &&
                                       idx < value.Length - 1 &&
-                                      value[idx + 1] switch
-                                      {
+                                      value[idx + 1] switch {
                                           < (char)32 => true,
                                           _ => false
                                       }
                 ? ConvertToNextCharacter()
                 : ConvertToCharacter();
-            continue;
 
+#pragma warning disable S1751
+            continue;
+#pragma warning restore S1751
+
+#pragma warning disable S127 // "for" loop stop conditions should be invariant
             char ConvertToNextCharacter() => convertedChars[charIdx++] = value[++idx];
+#pragma warning restore S127 // "for" loop stop conditions should be invariant
 
             char ConvertToCharacter() => convertedChars[charIdx++] = value[idx];
         }
@@ -824,7 +813,7 @@ public class TextInputControl
     /// </summary>
     private (bool init, int width, int top, int promptOffset) StartPosition => _startPosition =
         (_startPosition.width != BufferWidth) switch {
-            true => (_startPosition.init, 
+            true => (_startPosition.init,
                      BufferWidth,
                      GetCursorPosition().Top - (_currentCursorIndex + _startPosition.promptOffset) / BufferWidth,
                      _startPosition.promptOffset),

@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="NhrnMarket.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="NhrnMarket.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,18 +12,17 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Markets with NHRNs
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
 // ReSharper disable UnusedMember.Global
-
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Packs;
 
 /// <summary>
-///   Markets with NHRNs
+///   Markets with NHRNs.
 /// </summary>
 public enum NhrnMarket
 {
@@ -62,6 +59,5 @@ public enum NhrnMarket
     /// <summary>
     ///   United States of America market.
     /// </summary>
-    UnitedStates
-
+    UnitedStates,
 }

@@ -2,19 +2,6 @@
 // <copyright file="WinApi.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 //  Windows API bindings.
 // </summary>
@@ -29,8 +16,7 @@ using System.Runtime.InteropServices;
 /// Windows API bindings.
 /// </summary>
 [SuppressMessage(category: "Microsoft.StyleCop.CSharp.NamingRules", checkId: "SA1305:FieldNamesMustNotUseHungarianNotation", Justification = "Code follows Windows API naming conventions.")]
-public static class WinApi
-{
+public static class WinApi {
     // Message pump with C# and p/invoke  
     // please check out   
     //   http://msdn.microsoft.com/en-us/library/windows/desktop/ms644928(v=vs.85).aspx  
@@ -40,16 +26,16 @@ public static class WinApi
     //    Howto: Marshal Structures Using PInvoke : http://msdn.microsoft.com/en-us/library/ef4c3t39(v=vs.80).aspx  
     //    using P/Invoke to call Unmanaged APIs from your Managed Classes: http://msdn.microsoft.com/en-us/library/aa719104(v=vs.10).aspx  
     [DllImport("user32.dll", EntryPoint = "DispatchMessageW")]
-    internal static extern IntPtr DispatchMessage([In] ref MSG lpmsg);
+    internal static extern IntPtr DispatchMessage([In] ref Msg lpmsg);
 
     [DllImport("user32.dll")]
-    internal static extern bool TranslateMessage([In] ref MSG lpMsg);
+    internal static extern bool TranslateMessage([In] ref Msg lpMsg);
 
     [DllImport("user32.dll", EntryPoint = "GetMessageW")]
     internal static extern sbyte GetMessage(
-        out MSG lpMsg, 
-        IntPtr hWnd, 
-        uint wMsgFilterMin, 
+        out Msg lpMsg,
+        IntPtr hWnd,
+        uint wMsgFilterMin,
         uint wMsgFilterMax);
 
     // Create a window, but accept an atom value.  

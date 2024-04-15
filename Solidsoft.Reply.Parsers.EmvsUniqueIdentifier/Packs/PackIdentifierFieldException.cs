@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="PackIdentifierFieldException.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="PackIdentifierFieldException.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // A parse exception pack identifier field exception.
 // </summary>
@@ -105,9 +103,12 @@ public class PackIdentifierFieldException : PackIdentifierException
     /// <param name="info">The serialization information.</param>
     /// <param name="context">The streaming context.</param>
 #if NET5_0_OR_GREATER
+#pragma warning disable S1133
     [Obsolete("Formatter serialisation has been deprecated in .NET.", DiagnosticId = "SYSLIB0051")]
+#pragma warning restore S1133
 #endif
-    protected PackIdentifierFieldException(SerializationInfo info, StreamingContext context) : base(info, context)
+    protected PackIdentifierFieldException(SerializationInfo info, StreamingContext context)
+        : base(info, context)
     {
     }
 

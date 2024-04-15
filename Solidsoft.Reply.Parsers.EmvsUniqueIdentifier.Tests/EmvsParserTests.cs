@@ -2,19 +2,6 @@
 // <copyright file="EmvsParserTests.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.  All rights reserved.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Tests for GS1 Parser.
 // </summary>
@@ -37,18 +24,17 @@ using Packs;
 using Xunit;
 
 [SuppressMessage("ReSharper", "StringLiteralTypo")]
-public class EmvsParserTests
-{
+public class EmvsParserTests {
     private const string BelgianFrenchBaseline = "  1 % 5 7 ù 9 0 8 _ ; ) : = à & é \" ' ( § è ! ç M m . - / + Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 \0^µ $ 6 ² \0¨£ * ³    \x001D    \x001C    \0    \0    \x000D";
     private const string BelgianFrenchDeadKey1 = "\0^1\0^%\0^3\0^4\0^5\0^7\0^ù\0^9\0^0\0^8\0^_\0^;\0^)\0^:\0^=\0^à\0^&\0^é\0^\"\0^'\0^(\0^§\0^è\0^!\0^ç\0^M\0^m\0^.\0^-\0^/\0^+\0^2\0^Q\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^?\0^N\0Ô\0^P\0Â\0^R\0^S\0^T\0Û\0^V\0^Z\0^X\0^Y\0^W\0^^\0^µ\0^$\0^6\0^°\0^²\0^q\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^,\0^n\0ô\0^p\0â\0^r\0^s\0^t\0û\0^v\0^z\0^x\0^y\0^w\0^¨\0^£\0^*\0^³\x000D";
     private const string BelgianFrenchDeadKey2 = "\0¨1\0¨%\0¨3\0¨4\0¨5\0¨7\0¨ù\0¨9\0¨0\0¨8\0¨_\0¨;\0¨)\0¨:\0¨=\0¨à\0¨&\0¨é\0¨\"\0¨'\0¨(\0¨§\0¨è\0¨!\0¨ç\0¨M\0¨m\0¨.\0¨-\0¨/\0¨+\0¨2\0¨Q\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨?\0¨N\0Ö\0¨P\0Ä\0¨R\0¨S\0¨T\0Ü\0¨V\0¨Z\0¨X\0¨Y\0¨W\0¨^\0¨µ\0¨$\0¨6\0¨°\0¨²\0¨q\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨,\0¨n\0ö\0¨p\0ä\0¨r\0¨s\0¨t\0ü\0¨v\0¨z\0¨x\0ÿ\0¨w\0¨¨\0¨£\0¨*\0¨³\x000D";
-    private const string BelgianFrenchCalibration = "{\"aimFlagCharacterSequence\":\"$\",\"characterMap\":{\"1\":\"!\",\"%\":\"\\\"\",\"5\":\"%\",\"7\":\"&\",\"\\u00f9\":\"'\",\"9\":\"(\",\"0\":\")\",\"8\":\"*\",\"_\":\"+\",\";\":\",\",\")\":\"-\",\":\":\".\",\"=\":\"/\",\"\\u00e0\":\"0\",\"&\":\"1\",\"\\u00e9\":\"2\",\"\\\"\":\"3\",\"'\":\"4\",\"(\":\"5\",\"\\u00a7\":\"6\",\"\\u00e8\":\"7\",\"!\":\"8\",\"\\u00e7\":\"9\",\"M\":\":\",\"m\":\";\",\".\":\"<\",\"-\":\"=\",\"/\":\">\",\"+\":\"?\",\"Q\":\"A\",\"?\":\"M\",\"A\":\"Q\",\"Z\":\"W\",\"W\":\"Z\",\"\\u00b0\":\"_\",\"q\":\"a\",\",\":\"m\",\"a\":\"q\",\"z\":\"w\",\"w\":\"z\",\"3\":\"#\",\"4\":\"$\",\"2\":\"@\",\"\\u00b5\":\"\\\\\",\"6\":\"^\",\"\\u00b2\":\"`\",\"\\u00a3\":\"|\",\"*\":\"}\",\"\\u00b3\":\"~\",\"^\":\"[\",\"\\u00a8\":\"{\"},\"deadKeysMap\":{\"\\u0000^\":\"[\",\"\\u0000\\u00a8\":\"{\",\"\\u0000\\u00ca\":\"[E\",\"\\u0000\\u00ce\":\"[I\",\"\\u0000\\u00d4\":\"[O\",\"\\u0000\\u00c2\":\"[Q\",\"\\u0000\\u00db\":\"[U\",\"\\u0000\\u00ea\":\"[e\",\"\\u0000\\u00ee\":\"[i\",\"\\u0000\\u00f4\":\"[o\",\"\\u0000\\u00e2\":\"[q\",\"\\u0000\\u00fb\":\"[u\",\"\\u0000\\u00cb\":\"{E\",\"\\u0000\\u00cf\":\"{I\",\"\\u0000\\u00d6\":\"{O\",\"\\u0000\\u00c4\":\"{Q\",\"\\u0000\\u00dc\":\"{U\",\"\\u0000\\u00eb\":\"{e\",\"\\u0000\\u00ef\":\"{i\",\"\\u0000\\u00f6\":\"{o\",\"\\u0000\\u00e4\":\"{q\",\"\\u0000\\u00fc\":\"{u\",\"\\u0000\\u00ff\":\"{y\"},\"deadKeyCharacterMap\":{\"\\u0000^\":\"[\",\"\\u0000\\u00a8\":\"{\"},\"reportedCharacters\":\"1%57\\u00f9908_;):=\\u00e0&\\u00e9\\\"'(\\u00a7\\u00e8!\\u00e7Mm.-/+QBCDEFGHIJKL?NOPARSTUVZXYW\\u00b0qbcdefghijkl,noparstuvzxyw342\\u00b5$6\\u00b2\\u00a3*\\u00b3\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"keyboardScript\":\"Latin\"}";
-    private const string BelgianFrenchCalibrationNoNull = "{\"aimFlagCharacterSequence\":\"]\",\"characterMap\":{\"1\":\"!\",\"%\":\"\\\"\",\"5\":\"%\",\"7\":\"&\",\"\\u00f9\":\"'\",\"9\":\"(\",\"0\":\")\",\"8\":\"*\",\"_\":\"+\",\";\":\",\",\")\":\"-\",\":\":\".\",\"=\":\"/\",\"\\u00e0\":\"0\",\"&\":\"1\",\"\\u00e9\":\"2\",\"\\\"\":\"3\",\"'\":\"4\",\"(\":\"5\",\"\\u00a7\":\"6\",\"\\u00e8\":\"7\",\"!\":\"8\",\"\\u00e7\":\"9\",\"M\":\":\",\"m\":\";\",\".\":\"<\",\"-\":\"=\",\"/\":\">\",\"+\":\"?\",\"Q\":\"A\",\"?\":\"M\",\"A\":\"Q\",\"Z\":\"W\",\"W\":\"Z\",\"\\u00b0\":\"_\",\"q\":\"a\",\",\":\"m\",\"a\":\"q\",\"z\":\"w\",\"w\":\"z\",\"\\u0000\":\"\\u001f\"},\"ligatureMap\":{\"^\\u00b5\":\"[\",\"\\u00a8\\u00a3\":\"`\"},\"reportedCharacters\":\"1%57\\u00f9908_;):=\\u00e0&\\u00e9\\\"'(\\u00a7\\u00e8!\\u00e7Mm.-/+QBCDEFGHIJKL?NOPARSTUVZXYW\\u00b0qbcdefghijkl,noparstuvzxyw\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"keyboardScript\":\"Latin\"}";
+    private const string BelgianFrenchCalibration = "{\"characterMap\":{\"1\":\"!\",\"%\":\"\\\"\",\"5\":\"%\",\"7\":\"&\",\"\\u00f9\":\"'\",\"9\":\"(\",\"0\":\")\",\"8\":\"*\",\"_\":\"+\",\";\":\",\",\")\":\"-\",\":\":\".\",\"=\":\"/\",\"\\u00e0\":\"0\",\"&\":\"1\",\"\\u00e9\":\"2\",\"\\\"\":\"3\",\"'\":\"4\",\"(\":\"5\",\"\\u00a7\":\"6\",\"\\u00e8\":\"7\",\"!\":\"8\",\"\\u00e7\":\"9\",\"M\":\":\",\"m\":\";\",\".\":\"<\",\"-\":\"=\",\"/\":\">\",\"+\":\"?\",\"Q\":\"A\",\"?\":\"M\",\"A\":\"Q\",\"Z\":\"W\",\"W\":\"Z\",\"\\u00b0\":\"_\",\"q\":\"a\",\",\":\"m\",\"a\":\"q\",\"z\":\"w\",\"w\":\"z\",\"3\":\"#\",\"4\":\"$\",\"2\":\"@\",\"\\u00b5\":\"\\\\\",\"6\":\"^\",\"\\u00b2\":\"`\",\"\\u00a3\":\"|\",\"*\":\"}\",\"\\u00b3\":\"~\",\"^\":\"[\",\"\\u00a8\":\"{\"},\"deadKeysMap\":{\"^\":\"[\",\"\\u00a8\":\"{\",\"\\u00ca\":\"[E\",\"\\u00ce\":\"[I\",\"\\u00d4\":\"[O\",\"\\u00c2\":\"[Q\",\"\\u00db\":\"[U\",\"\\u00ea\":\"[e\",\"\\u00ee\":\"[i\",\"\\u00f4\":\"[o\",\"\\u00e2\":\"[q\",\"\\u00fb\":\"[u\",\"\\u00cb\":\"{E\",\"\\u00cf\":\"{I\",\"\\u00d6\":\"{O\",\"\\u00c4\":\"{Q\",\"\\u00dc\":\"{U\",\"\\u00eb\":\"{e\",\"\\u00ef\":\"{i\",\"\\u00f6\":\"{o\",\"\\u00e4\":\"{q\",\"\\u00fc\":\"{u\",\"\\u00ff\":\"{y\"},\"deadKeyCharacterMap\":{\"^\":\"[\",\"\\u00a8\":\"{\"},\"reportedCharacters\":\"1%57\\u00f9908_;):=\\u00e0&\\u00e9\\\"'(\\u00a7\\u00e8!\\u00e7Mm.-/+QBCDEFGHIJKL?NOPARSTUVZXYW\\u00b0qbcdefghijkl,noparstuvzxyw342\\u00b5$6\\u00b2\\u00a3*\\u00b3\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"aimFlagCharacterSequence\":\"$\",\"keyboardScript\":\"Latin\"}";
+    private const string BelgianFrenchCalibrationNoNull = "{\"characterMap\":{\"1\":\"!\",\"%\":\"\\\"\",\"5\":\"%\",\"7\":\"&\",\"\\u00f9\":\"'\",\"9\":\"(\",\"0\":\")\",\"8\":\"*\",\"_\":\"+\",\";\":\",\",\")\":\"-\",\":\":\".\",\"=\":\"/\",\"\\u00e0\":\"0\",\"&\":\"1\",\"\\u00e9\":\"2\",\"\\\"\":\"3\",\"'\":\"4\",\"(\":\"5\",\"\\u00a7\":\"6\",\"\\u00e8\":\"7\",\"!\":\"8\",\"\\u00e7\":\"9\",\"M\":\":\",\"m\":\";\",\".\":\"<\",\"-\":\"=\",\"/\":\">\",\"+\":\"?\",\"Q\":\"A\",\"?\":\"M\",\"A\":\"Q\",\"Z\":\"W\",\"W\":\"Z\",\"\\u00b0\":\"_\",\"q\":\"a\",\",\":\"m\",\"a\":\"q\",\"z\":\"w\",\"w\":\"z\",\"\\u0000\":\"\\u001f\"},\"ligatureMap\":{\"^\\u00b5\":\"[\",\"\\u00a8\\u00a3\":\"`\"},\"reportedCharacters\":\"1%57\\u00f9908_;):=\\u00e0&\\u00e9\\\"'(\\u00a7\\u00e8!\\u00e7Mm.-/+QBCDEFGHIJKL?NOPARSTUVZXYW\\u00b0qbcdefghijkl,noparstuvzxyw\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"aimFlagCharacterSequence\":\"]\",\"keyboardScript\":\"Latin\"}";
 
     private const string GermanToGermanBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] \0^ \0` { | } ~    \u001d    \u001c    \0    \u001f    \x000D";
-    private const string GermanToGermanCalibration = "{\"aimFlagCharacterSequence\":\"]\",\"characterMap\":{\"\\u0000\":\"\\u001e\"},\"deadKeysMap\":{\"\\u0000^\":\"^\",\"\\u0000`\":\"`\"},\"scannerDeadKeysMap\":{\"^\":\"\\u0000^\",\"`\":\"\\u0000`\"},\"reportedCharacters\":\"!\\\"%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz#$@[\\\\]{|}~\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"keyboardScript\":\"Latin\"}";
+    private const string GermanToGermanCalibration = "{\"characterMap\":{\"\\u0000\":\"\\u001e\"},\"deadKeysMap\":{\"^\":\"^\",\"`\":\"`\"},\"scannerDeadKeysMap\":{\"^\":\"\\u0000^\",\"`\":\"\\u0000`\"},\"reportedCharacters\":\"!\\\"%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz#$@[\\\\]{|}~\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"aimFlagCharacterSequence\":\"]\",\"keyboardScript\":\"Latin\"}";
     private const string GermanToUkWithAimBaseline = "\u0000d1  ! \" % ^ ~ * ( } ] , / . \u0026 0 1 2 3 4 5 6 7 8 9 \u003e \u003c \\ ) | _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   # $ \u0000 \u0000 \u0000 \u0000 `  +  \u0000 \u0000 \u0000 \u0000    \u001d    \u0000    \u001e    \u001f    \r";
-    private const string GermanToUkWithAimCalibration = "{\"aimFlagCharacterSequence\":\"\\u0000\",\"characterMap\":{\"^\":\"&\",\"~\":\"'\",\"*\":\"(\",\"(\":\")\",\"}\":\"*\",\"]\":\"+\",\"/\":\"-\",\"&\":\"/\",\">\":\":\",\"<\":\";\",\"\\\\\":\"<\",\")\":\"=\",\"|\":\">\",\"_\":\"?\",\"Z\":\"Y\",\"Y\":\"Z\",\"?\":\"_\",\"z\":\"y\",\"y\":\"z\",\"\\u0000\":\"]\"},\"scannerDeadKeysMap\":{\"^\":\"` \",\"`\":\"+ \"},\"scannerUnassignedKeys\":[\"~\"],\"ligatureMap\":{\"` \":\"^\",\"+ \":\"`\"},\"reportedCharacters\":\"!\\\"%^~*(}],/.&0123456789><\\\\)|_ABCDEFGHIJKLMNOPQRSTUVWXZY?abcdefghijklmnopqrstuvwxzy#$\\u0000\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"keyboardScript\":\"Latin\"}";
+    private const string GermanToUkWithAimCalibration = "{\"characterMap\":{\"^\":\"&\",\"~\":\"'\",\"*\":\"(\",\"(\":\")\",\"}\":\"*\",\"]\":\"+\",\"/\":\"-\",\"&\":\"/\",\">\":\":\",\"<\":\";\",\"\\\\\":\"<\",\")\":\"=\",\"|\":\">\",\"_\":\"?\",\"Z\":\"Y\",\"Y\":\"Z\",\"?\":\"_\",\"z\":\"y\",\"y\":\"z\",\"\\u0000\":\"]\"},\"ligatureMap\":{\"` \":\"^\",\"+ \":\"`\"},\"scannerDeadKeysMap\":{\"^\":\"` \",\"`\":\"+ \"},\"scannerUnassignedKeys\":[\"~\"],\"reportedCharacters\":\"!\\\"%^~*(}],/.&0123456789><\\\\)|_ABCDEFGHIJKLMNOPQRSTUVWXZY?abcdefghijklmnopqrstuvwxzy#$\\u0000\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"aimFlagCharacterSequence\":\"\\u0000\",\"keyboardScript\":\"Latin\"}";
 
     private const string NotABaseline = "fh shdfkjshdfkjhsdkjfhskjdfh ksjdhfk jhsjkfh skjdhf kjshfkjshdfjkh jkshdfiuhweufh weiuhfiusdhfshdofhweuhf ewiohfohfesbfhsaofhwqofhouehfohefo usdhfosdhf ohwfouwheoufhsudhfosdjfowehfouwehfouwh";
     private const string NotADeadKey = "72672y4273462478923y98432y948y23 9y289v37482937489b237482347892f3749823749b8237b489237572138094801y9817u42097892y58203q4098325y9235y8023vu4023v85yb923u509";
@@ -100,8 +86,7 @@ public class EmvsParserTests
     /// GS1 Character Set 82 - test 01.
     /// </summary>
     [Fact]
-    public void EmvsGs1CharacterSet8201()
-    {
+    public void EmvsGs1CharacterSet8201() {
         var emvsTestData = $"010477298543159410DdVcX<t{(char)29}1723020721yCH*4'h1Ab";
         var identifier = DoTestEmvsWithNoErrors(emvsTestData);
         Assert.Equal(Scheme.Gs1, identifier.Scheme);
@@ -122,8 +107,7 @@ public class EmvsParserTests
     /// GS1 Trade Item Grouping.
     /// </summary>
     [Fact]
-    public void EmvsGs1TradeItemGrouping()
-    {
+    public void EmvsGs1TradeItemGrouping() {
         var emvsTestData = $"011477298543159110DdVcX<t{(char)29}1723020721yCH*4'h1Ab";
         var identifier = DoTestEmvsWithNoErrors(emvsTestData);
         Assert.Equal(Scheme.Gs1, identifier.Scheme);
@@ -144,8 +128,7 @@ public class EmvsParserTests
     /// GS1 Variable Measure Trade Item.
     /// </summary>
     [Fact]
-    public void EmvsGs1VariableMeasureTradeItem()
-    {
+    public void EmvsGs1VariableMeasureTradeItem() {
         var emvsTestData = $"019477298543159710DdVcX<t{(char)29}1723020721yCH*4'h1Ab";
         var identifier = DoTestEmvsWithNoErrors(emvsTestData);
         Assert.Equal(Scheme.Gs1, identifier.Scheme);
@@ -166,8 +149,7 @@ public class EmvsParserTests
     /// GS1 Variable Measure Trade Item.
     /// </summary>
     [Fact]
-    public void EmvsGs1BadGtin()
-    {
+    public void EmvsGs1BadGtin() {
         var emvsTestData = $"010477298543159710DdVcX<t{(char)29}1723020721yCH*4'h1Ab";
         var identifier = DoTestEmvsWithErrors(emvsTestData);
         Assert.Equal(Scheme.Gs1, identifier.Scheme);
@@ -188,8 +170,7 @@ public class EmvsParserTests
     /// Get the baseline barcode.
     /// </summary>
     [Fact]
-    public void BaselineBarcodes()
-    {
+    public void BaselineBarcodes() {
         var parser = new Parser();
         var barcodes = parser.Calibrator.BaselineBarcodes();
         Assert.Single(barcodes);
@@ -199,8 +180,7 @@ public class EmvsParserTests
     /// Get the small baseline barcodes.
     /// </summary>
     [Fact]
-    public void BaselineBarcodesSmall()
-    {
+    public void BaselineBarcodesSmall() {
         var parser = new Parser();
         var barcodes = parser.Calibrator.BaselineBarcodes(size: Size.Dm24X24);
         Assert.Equal(7, barcodes.Count);
@@ -210,8 +190,7 @@ public class EmvsParserTests
     /// Get the supplementary barcode.
     /// </summary>
     [Fact]
-    public void NoSupplementaryBarcodes()
-    {
+    public void NoSupplementaryBarcodes() {
         var parser = new Parser();
         var barcodes = parser.Calibrator.SupplementalBarcodes();
         Assert.Empty(barcodes);
@@ -221,8 +200,7 @@ public class EmvsParserTests
     /// Get the small supplementary barcodes.
     /// </summary>
     [Fact]
-    public void NoSupplementaryBarcodesSmall()
-    {
+    public void NoSupplementaryBarcodesSmall() {
         var parser = new Parser();
         var barcodes = parser.Calibrator.SupplementalBarcodes(size: Size.Dm24X24);
         Assert.Empty(barcodes);
@@ -232,8 +210,7 @@ public class EmvsParserTests
     /// Get the supplementary barcode.
     /// </summary>
     [Fact]
-    public void SupplementaryBarcodes()
-    {
+    public void SupplementaryBarcodes() {
         var parser = CalibrateBaseline("Belgian French");
         var barcodes = parser.Calibrator.SupplementalBarcodes();
         Assert.Equal(2, barcodes.Count);
@@ -243,8 +220,7 @@ public class EmvsParserTests
     /// Get the small supplementary barcodes.
     /// </summary>
     [Fact]
-    public void SupplementaryBarcodesSmall()
-    {
+    public void SupplementaryBarcodesSmall() {
         var parser = CalibrateBaseline("Swiss French 24x24", size: Size.Dm24X24);
         var barcodes = parser.Calibrator.SupplementalBarcodes(size: Size.Dm24X24);
         Assert.Equal(3, barcodes.Count);
@@ -317,15 +293,13 @@ public class EmvsParserTests
     }
 
     [Fact]
-    public void MatchingDeadKeys()
-    {
+    public void MatchingDeadKeys() {
         var token = PerformCalibrationTest("German to German");
         Assert.Empty(token.Errors);
     }
 
     [Fact]
-    public void AimAsAsciiNull()
-    {
+    public void AimAsAsciiNull() {
         var token = PerformCalibrationTest("German to UK with AIM");
         Assert.Empty(token.Errors);
         ////var emvsTestData = $"{(char)0}d201089028055000561716083110DL13010B{(char)29}21D6222N9424";
@@ -349,8 +323,7 @@ public class EmvsParserTests
     /// Test a valid PPN.
     /// </summary>
     [Fact]
-    public void ValidPpn()
-    {
+    public void ValidPpn() {
         var emvsTestData = $"[)>{(char)30}06{(char)29}9N111234567842{(char)29}D230207{(char)29}1TDdVcX<t{(char)29}SyCH*4'h1Ab{(char)30}{(char)4}";
         var identifier = DoTestEmvsWithNoErrors(emvsTestData);
         Assert.Equal(Scheme.Ifa, identifier.Scheme);
@@ -386,8 +359,7 @@ public class EmvsParserTests
     /// Test an invalid PPN.
     /// </summary>
     [Fact]
-    public void InvalidPpn()
-    {
+    public void InvalidPpn() {
         var emvsTestData = $"[)>{(char)30}06{(char)29}9N111234567843{(char)29}D2302071TDdVcX<t{(char)29}SyCH*4'h1Ab{(char)30}{(char)4}";
         var identifier = DoTestEmvsWithErrors(emvsTestData);
         Assert.Equal(Scheme.Ifa, identifier.Scheme);
@@ -438,8 +410,7 @@ public class EmvsParserTests
     /// Test an invalid PPN.
     /// </summary>
     [Fact]
-    public void InvalidFormat05()
-    {
+    public void InvalidFormat05() {
         var emvsTestData = $"[)>{(char)30}05{(char)29}01040700719670731723020710DdVcX<t{(char)29}21yCH*4'h1Ab{(char)30}{(char)4}";
         var identifier = DoTestEmvsWithErrors(emvsTestData);
         Assert.Equal(Scheme.Gs1, identifier.Scheme);
@@ -532,8 +503,7 @@ public class EmvsParserTests
     }
 
     [Fact]
-    public void Prefix()
-    {
+    public void Prefix() {
         var parser = CalibrateBaseline("United Kingdom", prefix: "prefix");
         var emvsTestData = $"010477298543159410DdVcX<t{(char)29}1723020721yCH*4'h1Ab";
         var emvsTestDataWithAim = $"010477298543159410DdVcX<t{(char)29}1723020721yCH*4'h1Ab";
@@ -554,8 +524,7 @@ public class EmvsParserTests
         return;
 #pragma warning restore S3626
 
-        static void DoNoErrorAsserts(IPackIdentifier identifier)
-        {
+        static void DoNoErrorAsserts(IPackIdentifier identifier) {
             Assert.Empty(identifier.ParseExceptions);
             Assert.Empty(identifier.Exceptions);
             Assert.Equal(Scheme.Gs1, identifier.Scheme);
@@ -571,8 +540,7 @@ public class EmvsParserTests
             Assert.Empty(identifier.NationalNumbers);
         }
 
-        static void DoWithErrorAsserts(IPackIdentifier identifier)
-        {
+        static void DoWithErrorAsserts(IPackIdentifier identifier) {
             Assert.NotEmpty(identifier.ParseExceptions);
             // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
             Assert.Contains(identifier.ParseExceptions, e => e.ErrorNumber == 1003);
@@ -586,8 +554,7 @@ public class EmvsParserTests
     }
 
     [Fact]
-    public void Suffix()
-    {
+    public void Suffix() {
         var parser = CalibrateBaseline("United Kingdom", suffix: "suffix");
         var emvsTestDataWithSuffix = $"010477298543159410DdVcX<t{(char)29}1723020721yCH*4'h1Absuffix";
         var emvsTestDataWithSuffixAndAim = $"]d2010477298543159410DdVcX<t{(char)29}1723020721yCH*4'h1Absuffix";
@@ -610,8 +577,7 @@ public class EmvsParserTests
         return;
 #pragma warning restore S3626
 
-        static void DoNoErrorAsserts(IPackIdentifier identifier)
-        {
+        static void DoNoErrorAsserts(IPackIdentifier identifier) {
             Assert.Empty(identifier.ParseExceptions);
             Assert.Empty(identifier.Exceptions);
             Assert.True(identifier.IsValid);
@@ -622,8 +588,7 @@ public class EmvsParserTests
             Assert.Empty(identifier.NationalNumbers);
         }
 
-        static void DoWithErrorAsserts(IPackIdentifier identifier)
-        {
+        static void DoWithErrorAsserts(IPackIdentifier identifier) {
             Assert.NotEmpty(identifier.ParseExceptions);
             // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
             Assert.Contains(identifier.ParseExceptions, e => e.ErrorNumber == 1003);
@@ -631,8 +596,7 @@ public class EmvsParserTests
     }
 
     [Fact]
-    public void PrefixAndSuffix()
-    {
+    public void PrefixAndSuffix() {
         var parser = CalibrateBaseline("United Kingdom", prefix: "prefix", suffix: "suffix");
         var emvsTestDataWithSuffix = $"prefix010477298543159410DdVcX<t{(char)29}1723020721yCH*4'h1Absuffix";
         var emvsTestDataWithSuffixAndAim = $"]d2prefix010477298543159410DdVcX<t{(char)29}1723020721yCH*4'h1Absuffix";
@@ -665,8 +629,7 @@ public class EmvsParserTests
         return;
 #pragma warning restore S3626
 
-        static void DoNoErrorAsserts(IPackIdentifier identifier)
-        {
+        static void DoNoErrorAsserts(IPackIdentifier identifier) {
             Assert.Empty(identifier.ParseExceptions);
             Assert.Empty(identifier.Exceptions);
             Assert.True(identifier.IsValid);
@@ -677,8 +640,7 @@ public class EmvsParserTests
             Assert.Empty(identifier.NationalNumbers);
         }
 
-        static void DoWithErrorAsserts(IPackIdentifier identifier)
-        {
+        static void DoWithErrorAsserts(IPackIdentifier identifier) {
             Assert.NotEmpty(identifier.ParseExceptions);
             // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
             Assert.Contains(identifier.ParseExceptions, e => e.ErrorNumber == 1003);
@@ -686,8 +648,7 @@ public class EmvsParserTests
     }
 
     [Fact]
-    public void PrefixWithSpaces()
-    {
+    public void PrefixWithSpaces() {
         // Single space
         var parser = CalibrateBaseline("United Kingdom", prefix: "pre fix");
         var emvsTestDataWithPrefix = $"pre fix010477298543159410DdVcX<t{(char)29}1723020721yCH*4'h1Ab";
@@ -728,8 +689,7 @@ public class EmvsParserTests
         return;
 #pragma warning restore S3626
 
-        static void DoWithErrorAsserts(IPackIdentifier identifier)
-        {
+        static void DoWithErrorAsserts(IPackIdentifier identifier) {
             Assert.NotEmpty(identifier.ParseExceptions);
             // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
             Assert.Contains(identifier.ParseExceptions, e => e.ErrorNumber == 1003);
@@ -741,8 +701,7 @@ public class EmvsParserTests
             Assert.Empty(identifier.NationalNumbers);
         }
 
-        static void DoNoErrorAsserts(IPackIdentifier identifier)
-        {
+        static void DoNoErrorAsserts(IPackIdentifier identifier) {
             Assert.Empty(identifier.ParseExceptions);
             Assert.Empty(identifier.Exceptions);
             Assert.Equal(Scheme.Gs1, identifier.Scheme);
@@ -760,8 +719,7 @@ public class EmvsParserTests
     }
 
     [Fact]
-    public void SuffixWithSpaces()
-    {
+    public void SuffixWithSpaces() {
         // Single space
         var parser = CalibrateBaseline("United Kingdom", suffix: "suf fix");
         var emvsTestDataWithSuffix = $"010477298543159410DdVcX<t{(char)29}1723020721yCH*4'h1Absuf fix";
@@ -818,15 +776,13 @@ public class EmvsParserTests
         return;
 #pragma warning restore S3626
 
-        static void DoWithErrorAsserts(IPackIdentifier identifier)
-        {
+        static void DoWithErrorAsserts(IPackIdentifier identifier) {
             Assert.NotEmpty(identifier.ParseExceptions);
             // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
             Assert.Contains(identifier.ParseExceptions, e => e.ErrorNumber == 1003);
         }
 
-        static void DoNoErrorAsserts(IPackIdentifier identifier)
-        {
+        static void DoNoErrorAsserts(IPackIdentifier identifier) {
             Assert.Empty(identifier.ParseExceptions);
             Assert.Empty(identifier.Exceptions);
             Assert.True(identifier.IsValid);
@@ -839,8 +795,7 @@ public class EmvsParserTests
     }
 
     [Fact]
-    public void PartialOrInvalidCalibrationBarcodes()
-    {
+    public void PartialOrInvalidCalibrationBarcodes() {
         var token = PerformCalibrationTest("Not a Baseline");
         Assert.Null(token.CalibrationData);
         Assert.Contains(token.Errors,
@@ -883,8 +838,7 @@ public class EmvsParserTests
     }
 
     [Fact]
-    public void NoAsciiNull()
-    {
+    public void NoAsciiNull() {
         var token = PerformCalibrationTest("Swiss French with No ASCII Null");
         Assert.Null(token.CalibrationData);
 
@@ -896,8 +850,7 @@ public class EmvsParserTests
     /// A valid AIM identifier without any additional content.
     /// </summary>
     [Fact]
-    public void AimIdentifierOnly()
-    {
+    public void AimIdentifierOnly() {
         const string aimTestData = "]d2";
 
         var identifier = DoTestEmvsWithErrors(aimTestData);
@@ -910,8 +863,7 @@ public class EmvsParserTests
     /// An invalid AIM identifier without any additional content.
     /// </summary>
     [Fact]
-    public void InvalidAimIdentifierOnly()
-    {
+    public void InvalidAimIdentifierOnly() {
         const string aimTestData = "]f0";
 
         var identifier = DoTestEmvsWithErrors(aimTestData);
@@ -929,8 +881,7 @@ public class EmvsParserTests
     /// <param name="multiplier">The multiplier for the size of the data matrix image.</param>
     /// <param name="size">The size of the data matrix.</param>
     /// <returns>A calibration token.</returns>
-    private static Parser CalibrateBaseline(string layoutName, string prefix = "", string suffix = "", float multiplier = 1F, Size size = Size.Automatic)
-    {
+    private static Parser CalibrateBaseline(string layoutName, string prefix = "", string suffix = "", float multiplier = 1F, Size size = Size.Automatic) {
         var computerKeyboardLayout = UnitedStatesTestData()[layoutName];
 
         var calibrator = new Calibrator();
@@ -939,49 +890,44 @@ public class EmvsParserTests
         Token currentToken = default;
 
         // If a prefix is provided with two consecutive spaces, we should pre-configure the calibrator with the prefix value.
-        if (!string.IsNullOrEmpty(prefix) && prefix.Contains("  "))
-        {
+        if (!string.IsNullOrEmpty(prefix) && prefix.Contains("  ")) {
             calibrator.SetReportedPrefix(prefix);
         }
 
-        foreach (var token in calibrator.CalibrationTokens(multiplier, size))
-        {
+        foreach (var token in calibrator.CalibrationTokens(multiplier, size)) {
             var baseLine = computerKeyboardLayout.Keys.First();
             currentToken = token;
 
-            if (loopCount < 0)
-            {
+            if (loopCount < 0) {
                 currentToken = calibrator.Calibrate(ConvertToCharacterValues(prefix + AttachSuffix(baseLine[loopCountForBaseline++])), currentToken);
                 loopCount = loopCountForBaseline == baseLine.Length ? ++loopCount : loopCount;
             }
-            else
-            {
-                if (loopCount < computerKeyboardLayout[baseLine].Count)
-                {
+            else {
+                if (loopCount < computerKeyboardLayout[baseLine].Count) {
                     currentToken = calibrator.Calibrate(
                         ConvertToCharacterValues(prefix + AttachSuffix(computerKeyboardLayout[baseLine][loopCount++])),
                         currentToken);
                 }
             }
 
-            foreach (var error in currentToken.Errors)
-            {
+            foreach (var error in currentToken.Errors) {
                 Debug.WriteLine(error.Description);
             }
 
+#pragma warning disable S3626
+#pragma warning disable S1751
             continue;
+#pragma warning restore S1751
+#pragma warning restore S3626
 
-            string AttachSuffix(string baseline)
-            {
-                if (string.IsNullOrEmpty(suffix))
-                {
+            string AttachSuffix(string baseline) {
+                if (string.IsNullOrEmpty(suffix)) {
                     return baseline;
                 }
 
                 var eolSeq = string.Empty;
 
-                while (baseline.EndsWith('\r') || baseline.EndsWith('\n'))
-                {
+                while (baseline.EndsWith('\r') || baseline.EndsWith('\n')) {
                     eolSeq += baseline.Last();
                     baseline = baseline[..^1];
                 }
@@ -994,20 +940,20 @@ public class EmvsParserTests
         }
 
         return new Parser(currentToken.CalibrationData ?? new BarcodeScanner.Calibration.Data(
-            aimFlagCharacterSequence: null,
-            characterMap: null,
-            deadKeysMap: null,
-            deadKeyCharacterMap: null,
-            ligatureMap: null,
-            scannerDeadKeysMap:null,
-            scannerUnassignedKeys: null,
-            reportedCharacters: null,
-            reportedPrefix: null,
-            reportedCode: null,
-            reportedSuffix: null,
-            keyboardScript: null,
-            scannerKeyboardPerformance: ScannerKeyboardPerformance.High,
-            lineFeedCharacter: null));
+            CharacterMap: null,
+            DeadKeysMap: null,
+            DeadKeyCharacterMap: null,
+            LigatureMap: null,
+            ScannerDeadKeysMap: null,
+            ScannerUnassignedKeys: null,
+            ReportedCharacters: null,
+            AimFlagCharacterSequence: null,
+            Prefix: null,
+            Code: null,
+            Suffix: null,
+            KeyboardScript: null,
+            ScannerKeyboardPerformance: ScannerKeyboardPerformance.High,
+            LineFeedCharacter: null));
     }
 
     /// <summary>
@@ -1017,8 +963,7 @@ public class EmvsParserTests
     /// <param name="multiplier">The multiplier for the size of the data matrix image.</param>
     /// <param name="size">The size of the data matrix.</param>
     /// <returns>A calibration token.</returns>
-    private static Token PerformCalibrationTest(string layoutName, float multiplier = 1F, Size size = Size.Automatic)
-    {
+    private static Token PerformCalibrationTest(string layoutName, float multiplier = 1F, Size size = Size.Automatic) {
         Debug.WriteLine(layoutName);
 
         var expectedCalibrations = UnitedStatesExpectedCalibrations();
@@ -1029,28 +974,23 @@ public class EmvsParserTests
         var loopCount = -1;
         Token currentToken = default;
 
-        foreach (var token in calibrator.CalibrationTokens(multiplier, size))
-        {
+        foreach (var token in calibrator.CalibrationTokens(multiplier, size)) {
             var baseLine = computerKeyboardLayout.Keys.First();
             currentToken = token;
 
-            if (loopCount < 0)
-            {
+            if (loopCount < 0) {
                 currentToken = calibrator.Calibrate(ConvertToCharacterValues(baseLine[loopCountForBaseline++]), currentToken);
                 loopCount = loopCountForBaseline == baseLine.Length ? ++loopCount : loopCount;
             }
-            else
-            {
-                if (loopCount < computerKeyboardLayout[baseLine].Count)
-                {
+            else {
+                if (loopCount < computerKeyboardLayout[baseLine].Count) {
                     currentToken = calibrator.Calibrate(
                         ConvertToCharacterValues(computerKeyboardLayout[baseLine][loopCount++]),
                         currentToken);
                 }
             }
 
-            foreach (var error in currentToken.Errors)
-            {
+            foreach (var error in currentToken.Errors) {
                 Debug.WriteLine(error.Description);
             }
         }
@@ -1070,17 +1010,14 @@ public class EmvsParserTests
     /// </summary>
     /// <param name="input">The string of characters to be converted.</param>
     /// <returns>A comma-separated value list of character values.</returns>
-    private static int[] ConvertToCharacterValues(string input)
-    {
-        if (string.IsNullOrWhiteSpace(input))
-        {
-            return Array.Empty<int>();
+    private static int[] ConvertToCharacterValues(string input) {
+        if (string.IsNullOrWhiteSpace(input)) {
+            return [];
         }
 
         var outputBuilder = new int[input.Length];
 
-        for (var idx = 0; idx < input.Length; idx++)
-        {
+        for (var idx = 0; idx < input.Length; idx++) {
             outputBuilder[idx] = input[idx];
         }
 
@@ -1093,8 +1030,7 @@ public class EmvsParserTests
     /// <param name="gs1TestData">The GS1 data to be tested.</param>
     /// <returns>The results.</returns>
     // ReSharper disable once UnusedMethodReturnValue.Local
-    private static IPackIdentifier DoTestEmvsWithNoErrors(string gs1TestData)
-    {
+    private static IPackIdentifier DoTestEmvsWithNoErrors(string gs1TestData) {
         var identifier = DoTestEmvs(gs1TestData);
         Assert.Empty(identifier.ParseExceptions);
         Assert.Empty(identifier.Exceptions);
@@ -1108,8 +1044,7 @@ public class EmvsParserTests
     /// </summary>
     /// <param name="emvsTestData">The EMVS data to be tested.</param>
     /// <returns>The results.</returns>
-    private static IPackIdentifier DoTestEmvsWithErrors(string emvsTestData)
-    {
+    private static IPackIdentifier DoTestEmvsWithErrors(string emvsTestData) {
         var identifier = DoTestEmvs(emvsTestData);
         var anyParseExceptions = identifier.ParseExceptions.Any();
         var anyExceptions = identifier.Exceptions.Any();
@@ -1125,8 +1060,7 @@ public class EmvsParserTests
     /// <param name="emvsTestData">The data to be tested.</param>
     /// <returns>The results.</returns>
     // ReSharper disable once ParameterOnlyUsedForPreconditionCheck.Local
-    private static IPackIdentifier DoTestEmvs(string emvsTestData)
-    {
+    private static IPackIdentifier DoTestEmvs(string emvsTestData) {
         var parser = new Parser();
         return parser.Parse(emvsTestData);
     }
@@ -1136,8 +1070,7 @@ public class EmvsParserTests
     /// computer keyboard layouts for each European keyboard defined in Windows.
     /// </summary>
     /// <returns>A dictionary of test data.</returns>
-    private static Dictionary<string, Dictionary<string[], IList<string>>> UnitedStatesTestData()
-    {
+    private static Dictionary<string, Dictionary<string[], IList<string>>> UnitedStatesTestData() {
         var unitedStatesTestData = new Dictionary<string, Dictionary<string[], IList<string>>>
                                    {
                                        {
@@ -1400,8 +1333,7 @@ public class EmvsParserTests
     /// keyboard layouts for each European keyboard defined in Windows.
     /// </summary>
     /// <returns>A dictionary of expected calibrations.</returns>
-    private static Dictionary<string, string> UnitedStatesExpectedCalibrations()
-    {
+    private static Dictionary<string, string> UnitedStatesExpectedCalibrations() {
         var unitedStatesTestCalibrations = new Dictionary<string, string>
                                            {
                                                { "Belgian French", BelgianFrenchCalibration },

@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Extensions.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="Extensions.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Extension methods.
 // </summary>
@@ -75,18 +73,29 @@ public static class Extensions
         return thisDateTime.ToString(format, CultureInfo.InvariantCulture);
     }
 
+    /// <summary>
+    ///   Convert a character representation of an integer to an integer.
+    /// </summary>
+    /// <param name="character">A character representing a digit.</param>
+    /// <returns>An integer.</returns>
+    /// <exception cref="ArgumentException">The character cannot be converted to an integer.</exception>
     // ReSharper disable once UnusedMember.Global
-    public static int ToInt(this char character) {
-        if (int.TryParse(character.ToInvariantString(), out var integer)) {
+    public static int ToInt(this char character)
+    {
+        if (int.TryParse(character.ToInvariantString(), out var integer))
+        {
             return integer;
         }
+
+#pragma warning disable SA1116 // Split parameters should start on-line after declaration
         throw new ArgumentException(
-            string.Format(CultureInfo.InvariantCulture, 
+            string.Format(CultureInfo.InvariantCulture,
 #if NET8_0_OR_GREATER
             ParserError100,
 #else
             Resources.Parser_Error_100,
 #endif
             character));
+#pragma warning restore SA1116 // Split parameters should start on-line after declaration
     }
 }

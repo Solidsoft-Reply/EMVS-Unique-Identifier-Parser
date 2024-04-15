@@ -2,19 +2,6 @@
 // <copyright file="MessagePump.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // The Windows message pump.
 // </summary>
@@ -36,8 +23,7 @@ using System.Runtime.InteropServices;
 /// <summary>
 /// The Windows message pump.
 /// </summary>
-public class MessagePump : IDisposable
-{
+public sealed class MessagePump : IDisposable {
     /// <summary>
     ///     The class name.
     /// </summary>
@@ -91,29 +77,29 @@ public class MessagePump : IDisposable
     /// <summary>
     ///     The registration atom for the CalibrationBarcodeWin class.
     /// </summary>
-    private static ushort _classAtom;
+    private ushort _classAtom;
 
     /// <summary>
     ///     The console window.  We obtain this as the foreground window in Windows.  There is an
     ///     assumption here that the conhost window is the foreground window.
     /// </summary>
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
-    private static IntPtr _consoleForegroundWindow;
+    private IntPtr _consoleForegroundWindow;
 
     /// <summary>
     ///     The current bitmap.
     /// </summary>
-    private static System.Drawing.Bitmap _currentBitmap;
+    private System.Drawing.Bitmap _currentBitmap;
 
     /// <summary>
     ///     The current handle for the pop-up window.
     /// </summary>
-    private static IntPtr _currentPopupHwnd = IntPtr.Zero;
+    private IntPtr _currentPopupHwnd = IntPtr.Zero;
 
     /// <summary>
     ///     Garbage collection handle for the managed window procedure.
     /// </summary>
-    private static GCHandle _gchManagedWndProc;
+    private GCHandle _gchManagedWndProc;
 
     /// <summary>
     ///     The instance handle for the current process.
@@ -122,12 +108,12 @@ public class MessagePump : IDisposable
         "Microsoft.StyleCop.CSharp.NamingRules",
         "SA1305:FieldNamesMustNotUseHungarianNotation",
         Justification = "Code follows Windows API naming conventions.")]
-    private static IntPtr _hInstance;
+    private IntPtr _hInstance;
 
     /// <summary>
     ///     The pop-up window class information.
     /// </summary>
-    private static WNDCLASSEX _wndClass;
+    private WNDCLASSEX _wndClass;
 
     /// <summary>
     ///     A queue of input characters.  Strings are used to support Unicode.
@@ -157,8 +143,7 @@ public class MessagePump : IDisposable
     /// <summary>
     ///     Finalizes an instance of the <see cref="MessagePump" /> class.
     /// </summary>
-    ~MessagePump()
-    {
+    ~MessagePump() {
         ReleaseUnmanagedResources();
     }
 
@@ -174,56 +159,44 @@ public class MessagePump : IDisposable
     public void CreateMessagePump(
         Stream bitmapStream,
         Action<Action<uint>> registerPostMessage,
-        Action<ConsoleKeyInfo> sendKey)
-    {
+        Action<ConsoleKeyInfo> sendKey) {
         _hInstance = Process.GetCurrentProcess().Handle;
         const int marginPercent = 10;
         const double scaleFactor = 8D;
 
-        if (_wndClass.hInstance == IntPtr.Zero)
-        {
-            _wndClass = new WNDCLASSEX
-                       {
-                           cbSize = Marshal.SizeOf(typeof(WNDCLASSEX)),
-                           style = (int)(ClassStyles.HorizontalRedraw | ClassStyles.VerticalRedraw
+        if (_wndClass.hInstance == IntPtr.Zero) {
+            _wndClass = new WNDCLASSEX {
+                cbSize = Marshal.SizeOf(typeof(WNDCLASSEX)),
+                style = (int)(ClassStyles.HorizontalRedraw | ClassStyles.VerticalRedraw
                                                                       | ClassStyles.DropShadow)
-                       };
+            };
 
             // ReSharper disable once IdentifierTypo
             IDisplayCalibrationBarcode barcodeDisplayer = new DisplayCalibrationBarcodeOnWindows();
 
-            WndProc managedWndProc = (hWnd, message, wParam, lParam) =>
-            {
-                void ProcessCharacterMessage(char character)
-                {
+            WndProc managedWndProc = (hWnd, message, wParam, lParam) => {
+                void ProcessCharacterMessage(char character) {
                     ProcessStringMessage(Convert.ToString(character));
                 }
 
                 // We pass the character as a string in order to handle UNICHAR messages.
-                void ProcessStringMessage(string character)
-                {
-                    if (_κeyDownEnqueuedCharCount > 0)
-                    {
-                        void RemoveLastΝull()
-                        {
-                            if (_charQueue.Count == 0)
-                            {
+                void ProcessStringMessage(string character) {
+                    if (_κeyDownEnqueuedCharCount > 0) {
+                        void RemoveLastΝull() {
+                            if (_charQueue.Count == 0) {
                                 return;
                             }
 
                             var recycleCount = _charQueue.Count - 1;
 
-                            for (var idx = 0; idx < recycleCount; idx++)
-                            {
+                            for (var idx = 0; idx < recycleCount; idx++) {
                                 _charQueue.Enqueue(_charQueue.Dequeue());
                             }
 
-                            if (_charQueue.Peek() == "\0")
-                            {
+                            if (_charQueue.Peek() == "\0") {
                                 _charQueue.Dequeue();
                             }
-                            else
-                            {
+                            else {
                                 _charQueue.Enqueue(_charQueue.Dequeue());
                             }
                         }
@@ -232,16 +205,13 @@ public class MessagePump : IDisposable
 
                         _charQueue.Enqueue(character);
                     }
-                    else
-                    {
+                    else {
                         SendInput(character);
                     }
                 }
 
-                void SendInput(string input)
-                {
-                    foreach (var c in input)
-                    {
+                void SendInput(string input) {
+                    foreach (var c in input) {
                         sendKey(
                             new ConsoleKeyInfo(
                                 c,
@@ -253,8 +223,7 @@ public class MessagePump : IDisposable
                 }
 
                 // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
-                switch ((WM)message)
-                {
+                switch ((WM)message) {
                     case WM.PAINT:
                         WinApi.GetWindowRect(_consoleForegroundWindow, out var lpRect);
                         WinApi.GetClientRect(_consoleForegroundWindow, out var rect);
@@ -283,8 +252,7 @@ public class MessagePump : IDisposable
                         ProcessCharacterMessage((char)(int)wParam);
                         return IntPtr.Zero;
                     case WM.UNICHAR:
-                        if (wParam == IdcUnicodeNochar)
-                        {
+                        if (wParam == IdcUnicodeNochar) {
                             return 1;
                         }
 
@@ -295,8 +263,7 @@ public class MessagePump : IDisposable
                         return IntPtr.Zero;
                     case WM.KEYDOWN:
                     case WM.SYSKEYDOWN:
-                        switch ((int)wParam)
-                        {
+                        switch ((int)wParam) {
                             case IdcVkShift:
                             case IdcVkLshift:
                             case IdcVkRshift:
@@ -321,8 +288,7 @@ public class MessagePump : IDisposable
                         return IntPtr.Zero;
                     case WM.KEYUP:
                     case WM.SYSKEYUP:
-                        switch ((int)wParam)
-                        {
+                        switch ((int)wParam) {
                             case IdcVkShift:
                             case IdcVkLshift:
                             case IdcVkRshift:
@@ -340,10 +306,8 @@ public class MessagePump : IDisposable
                             default:
                                 _κeyDownEnqueuedCharCount--;
 
-                                if (_κeyDownEnqueuedCharCount == 0)
-                                {
-                                    while (_charQueue.Count > 0)
-                                    {
+                                if (_κeyDownEnqueuedCharCount == 0) {
+                                    while (_charQueue.Count > 0) {
                                         SendInput(_charQueue.Dequeue());
                                     }
                                 }
@@ -371,14 +335,11 @@ public class MessagePump : IDisposable
         }
 
         // Get the bitmap
-        using (bitmapStream)
-        {
-            try
-            {
+        using (bitmapStream) {
+            try {
                 _currentBitmap = new System.Drawing.Bitmap(bitmapStream);
             }
-            catch
-            {
+            catch {
                 return;
             }
         }
@@ -402,10 +363,9 @@ public class MessagePump : IDisposable
             _hInstance,
             IntPtr.Zero);
 
-        if (_currentPopupHwnd == IntPtr.Zero)
-        {
+        if (_currentPopupHwnd == IntPtr.Zero) {
             var lastError = Marshal.GetLastWin32Error();
-            Trace.WriteLine($"Current popup handle is 0: {new Win32Exception(lastError).Message}");
+            Trace.TraceInformation($"Current popup handle is 0: {new Win32Exception(lastError).Message}");
         }
 
         registerPostMessage(m => WinApi.PostMessage(_currentPopupHwnd, m, IntPtr.Zero, IntPtr.Zero));
@@ -413,8 +373,7 @@ public class MessagePump : IDisposable
         WinApi.ShowWindow(_currentPopupHwnd, ShowWindowCommands.Normal);
         WinApi.UpdateWindow(_currentPopupHwnd);
 
-        while (WinApi.GetMessage(out var msg, IntPtr.Zero, 0, 0) != 0)
-        {
+        while (WinApi.GetMessage(out var msg, IntPtr.Zero, 0, 0) != 0) {
             WinApi.TranslateMessage(ref msg);
             WinApi.DispatchMessage(ref msg);
         }
@@ -423,8 +382,7 @@ public class MessagePump : IDisposable
     /// <summary>
     ///     Disposes the instance of the <see cref="MessagePump" /> class.
     /// </summary>
-    public void Dispose()
-    {
+    public void Dispose() {
         ReleaseUnmanagedResources();
         GC.SuppressFinalize(this);
     }
@@ -432,15 +390,12 @@ public class MessagePump : IDisposable
     /// <summary>
     ///     Release managed resources.
     /// </summary>
-    private static void ReleaseUnmanagedResources()
-    {
-        if (!WinApi.UnregisterClass(IdcCalibrationBarcodeWinClassName, _hInstance))
-        {
+    private void ReleaseUnmanagedResources() {
+        if (!WinApi.UnregisterClass(IdcCalibrationBarcodeWinClassName, _hInstance)) {
             return;
         }
 
-        if (_gchManagedWndProc.IsAllocated)
-        {
+        if (_gchManagedWndProc.IsAllocated) {
             _gchManagedWndProc.Free();
         }
     }
@@ -450,8 +405,7 @@ public class MessagePump : IDisposable
     /// </summary>
     /// <param name="keyChar">The character to resolve</param>
     /// <returns>The console key for the given character.</returns>
-    private static ConsoleKey ResolveKey(char keyChar)
-    {
+    private static ConsoleKey ResolveKey(char keyChar) {
         _ = Enum.TryParse<ConsoleKey>(keyChar.ToString().ToUpper(), out var consoleKey);
         return consoleKey;
     }

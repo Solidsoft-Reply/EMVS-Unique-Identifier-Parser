@@ -2,19 +2,6 @@
 // <copyright file="WNDCLASSEX.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Contains window class information. It is used with the RegisterClassEx
 // and GetClassInfoEx functions.
@@ -35,8 +22,7 @@ using System.Runtime.InteropServices;
 // ReSharper disable once InconsistentNaming
 [SuppressMessage("Microsoft.StyleCop.CSharp.NamingRules", "SA1305:FieldNamesMustNotUseHungarianNotation", Justification = "Code follows Windows API naming conventions.")]
 [SuppressMessage("StyleCop.CSharp.NamingRules", "SA1307:AccessibleFieldsMustBeginWithUpperCaseLetter", Justification = "Code follows Windows API naming conventions.")]
-public struct WNDCLASSEX
-{
+public struct WNDCLASSEX {
     /// <summary>
     /// The size, in bytes, of this structure. Set this member to sizeof(WNDCLASSEX).
     /// Be sure to set this member before calling the GetClassInfoEx function.

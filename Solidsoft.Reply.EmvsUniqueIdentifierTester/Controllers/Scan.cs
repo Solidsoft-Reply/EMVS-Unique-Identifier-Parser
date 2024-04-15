@@ -2,19 +2,6 @@
 // <copyright file="Scan.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Controls scan mode.
 // </summary>
@@ -47,13 +34,7 @@ using static System.Console;
 /// <summary>
 /// Controls scan mode.
 /// </summary>
-public class Scan : IController
-{
-    /// <summary>
-    /// An instance of the pack parser.
-    /// </summary>
-    private static Parser _baseParser;
-
+public class Scan : IController {
     /// <summary>
     /// The mode manager for the application.
     /// </summary>
@@ -65,6 +46,11 @@ public class Scan : IController
     private readonly ModalInputHandler _inputHandler;
 
     /// <summary>
+    /// An instance of the pack parser.
+    /// </summary>
+    private Parser _baseParser;
+
+    /// <summary>
     /// The view for scanning packs.
     /// </summary>
     private IView _scanningView;
@@ -72,7 +58,7 @@ public class Scan : IController
     /// <summary>
     /// Set of name-value pair properties.
     /// </summary>
-    private Tuple<string, object>[] _preambleProperties = Array.Empty<Tuple<string, object>>();
+    private Tuple<string, object>[] _preambleProperties = [];
 
     /// <summary>
     /// Event handler.  Handles the key press event raised by the input handler.
@@ -89,8 +75,7 @@ public class Scan : IController
     /// </summary>
     /// <param name="modeManager">The mode manager.</param>
     /// <param name="inputHandler">The input handler.</param>
-    public Scan(ModeManager modeManager, ModalInputHandler inputHandler)
-    {
+    public Scan(ModeManager modeManager, ModalInputHandler inputHandler) {
         _modeManager = modeManager;
         _inputHandler = inputHandler;
         _inputHandler.KeyPress += OnKeyPress;
@@ -116,16 +101,14 @@ public class Scan : IController
     /// <summary>
     /// Display the Calibration Failed message.
     /// </summary>
-    public void CalibrationFailedMessage()
-    {
+    public void CalibrationFailedMessage() {
         _scanningView.Render(nameof(Components.CalibrationFailedMessage));
     }
 
     /// <summary>
     /// Display the calibration report.
     /// </summary>
-    public void DisplayCalibrationReport()
-    {
+    public void DisplayCalibrationReport() {
         _scanningView.SetValue(nameof(IncludeFormat06), IncludeFormat06);
         _scanningView.SetValue(nameof(CalibrationInformation), CalibrationInformation);
         _scanningView.SetValue(nameof(SystemCapabilities), SystemCapabilities);
@@ -151,8 +134,7 @@ public class Scan : IController
     /// Initialise the application.
     /// </summary>
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
-    private void Initialise()
-    {
+    private void Initialise() {
         // Initialise the input handler
         _inputHandler.Visibility = Visibility.Visible;
         _inputHandler.Reset();
@@ -161,8 +143,7 @@ public class Scan : IController
         _scanningView = new ScanningView(_inputHandler);
 
         // Set an preamble properties
-        foreach (var (item1, item2) in _preambleProperties)
-        {
+        foreach (var (item1, item2) in _preambleProperties) {
             _scanningView.SetValue(item1, item2);
         }
 
@@ -177,42 +158,33 @@ public class Scan : IController
         // Load the current calibration, if any
         var calibration = ReadCalibration(out var readErrorMessage);
 
-        if (string.IsNullOrWhiteSpace(calibration))
-        {
-            if (!string.IsNullOrWhiteSpace(readErrorMessage))
-            {
+        if (string.IsNullOrWhiteSpace(calibration)) {
+            if (!string.IsNullOrWhiteSpace(readErrorMessage)) {
                 new InitialisationError($@" The calibration could not be read: {readErrorMessage}").Render();
             }
         }
-        else
-        {
+        else {
             _baseParser.Calibrator.CalibrationData = new Data(calibration);
         }
 
-        if (CommandLineArguments.CodePage > 0)
-        {
+        if (CommandLineArguments.CodePage > 0) {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-            try
-            {
+            try {
                 OutputEncoding = Encoding.GetEncoding(CommandLineArguments.CodePage);
             }
-            catch (IOException)
-            {
+            catch (IOException) {
                 WriteLine(Resources.CodePageInitialiseFakeCommandLine, CommandLineArguments.CodePage);
                 WriteLine(Resources.CodePageInitialiseError, CommandLineArguments.CodePage);
                 WriteLine(Resources.CodePageInitialiseErrorRecovery);
                 ReadKey();
             }
         }
-        else if (!string.IsNullOrWhiteSpace(CommandLineArguments.CodePageName))
-        {
+        else if (!string.IsNullOrWhiteSpace(CommandLineArguments.CodePageName)) {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-            try
-            {
+            try {
                 OutputEncoding = Encoding.GetEncoding(CommandLineArguments.CodePageName);
             }
-            catch (IOException)
-            {
+            catch (IOException) {
                 WriteLine(Resources.CodePageInitialiseFakeCommandLine, CommandLineArguments.CodePage);
                 WriteLine(Resources.CodePageInitialiseErrorRecovery);
                 WriteLine(Resources.CodePageInitialiseError, CommandLineArguments.CodePageName);
@@ -228,24 +200,20 @@ public class Scan : IController
     /// <param name="errorMessage">The error message, if any.</param>
     /// <returns>The calibration, if any; otherwise and empty string</returns>
     [SuppressMessage("Design", "CA1031:Do not catch general exception types", Justification = "<Pending>")]
-    private static string ReadCalibration(out string errorMessage)
-    {
+    private static string ReadCalibration(out string errorMessage) {
         errorMessage = string.Empty;
 
-        try
-        {
+        try {
             var filePath = $"{Directory.GetCurrentDirectory()}\\Keyboard.Calibration";
 
-            if (File.Exists(filePath))
-            {
+            if (File.Exists(filePath)) {
                 var fileStream = new FileStream(filePath, FileMode.Open);
 
                 using var reader = new StreamReader(fileStream);
                 return reader.ReadToEnd();
             }
         }
-        catch (Exception ex)
-        {
+        catch (Exception ex) {
             errorMessage = $"[{ex.GetType().Name}] - {ex.Message}";
         }
 
@@ -257,11 +225,9 @@ public class Scan : IController
     /// </summary>
     /// <param name="sender">The event sender.</param>
     /// <param name="consoleKeyEventArgs">Console event arguments.</param>
-    private void OnKeyPress(object sender, ConsoleKeyEventArgs consoleKeyEventArgs)
-    {
+    private void OnKeyPress(object sender, ConsoleKeyEventArgs consoleKeyEventArgs) {
         // Guard on mode.  This controller only handles events generated in scanning mode.
-        if (consoleKeyEventArgs.Mode != Mode.Scanning.ToString())
-        {
+        if (consoleKeyEventArgs.Mode != Mode.Scanning.ToString()) {
             return;
         }
 
@@ -269,8 +235,7 @@ public class Scan : IController
         switch (consoleKeyEventArgs.Key) {
             case ConsoleKey.F6:
                 if ((consoleKeyEventArgs.Modifiers & ConsoleModifiers.Control)
-                 == ConsoleModifiers.Control)
-                {
+                 == ConsoleModifiers.Control) {
                     _inputHandler.AutomaticEntry = !_inputHandler.AutomaticEntry;
                     _scanningView.Render(nameof(AutomaticEntryStatus));
                     _scanningView.Render(nameof(CommandPrompt));
@@ -280,11 +245,10 @@ public class Scan : IController
 
             case ConsoleKey.F11:
                 if ((consoleKeyEventArgs.Modifiers & ConsoleModifiers.Control)
-                 == ConsoleModifiers.Control)
-                {
+                 == ConsoleModifiers.Control) {
                     // Create controller for calibration
                     // ReSharper disable once AssignmentIsFullyDiscarded
-                    _modeManager.CalibrateController.IncludeFormatnnTests =
+                    _modeManager.CalibrateController.IncludeFormatTests =
                         (consoleKeyEventArgs.Modifiers & ConsoleModifiers.Shift)
                      == ConsoleModifiers.Shift;
 
@@ -295,16 +259,14 @@ public class Scan : IController
 
                 break;
             case ConsoleKey.X:
-                if (consoleKeyEventArgs.Modifiers == ConsoleModifiers.Control)
-                {
+                if (consoleKeyEventArgs.Modifiers == ConsoleModifiers.Control) {
                     _modeManager.Mode = Mode.Exiting;
                     Environment.Exit(0);
                 }
 
                 break;
             case ConsoleKey.F12:
-                if (consoleKeyEventArgs.Modifiers == ConsoleModifiers.Control)
-                {
+                if (consoleKeyEventArgs.Modifiers == ConsoleModifiers.Control) {
                     _scanningView.SetValue("Input", string.Empty);
                     _scanningView.Render();
                 }
@@ -317,19 +279,16 @@ public class Scan : IController
     /// Event handler. Handles the line entry event raised by the input handler.
     /// </summary>
     /// <param name="sender">The input handler.</param>
-    /// <param name="consoleLineEntryArgs">The line entry event arguments.</param>
-    private void OnLineEntry(object sender, ConsoleLineEntryArgs consoleLineEntryArgs)
-    {
+    /// <param name="consoleLineEntryEventArgs">The line entry event arguments.</param>
+    private void OnLineEntry(object sender, ConsoleLineEntryEventArgs consoleLineEntryEventArgs) {
         // Guard on mode.  This controller only handles events in scanning mode.
-        if (consoleLineEntryArgs.Mode != Mode.Scanning.ToString())
-        {
+        if (consoleLineEntryEventArgs.Mode != Mode.Scanning.ToString()) {
             return;
         }
 
-        var input = consoleLineEntryArgs.Line;
+        var input = consoleLineEntryEventArgs.Line;
 
-        if (input is "\r" or "\n" or "\r\n")
-        {
+        if (input is "\r" or "\n" or "\r\n") {
             return;
         }
 
@@ -342,8 +301,7 @@ public class Scan : IController
     }
 
     /// <inheritdoc />
-    public Action<string> Activate(params Tuple<string, object>[] properties)
-    {
+    public Action<string> Activate(params Tuple<string, object>[] properties) {
         _preambleProperties = properties;
         Initialise();
         ////scanningView.Render();
@@ -354,19 +312,15 @@ public class Scan : IController
     /// Parse the keyboard input.
     /// </summary>
     /// <param name="input">The keyboard input.</param>
-    private void ParseInput(string input)
-    {
+    private void ParseInput(string input) {
         // Strip off any CR or LF characters at end of string
-        while (true)
-        {
+        while (true) {
             if (!string.IsNullOrWhiteSpace(input) &&
                 (input[^1] == '\r' ||
-                 input[^1] == '\n'))
-            {
+                 input[^1] == '\n')) {
                 input = input[..^1];
             }
-            else
-            {
+            else {
                 break;
             }
         }
@@ -382,8 +336,7 @@ public class Scan : IController
                             packIdentifier.Expiry.Length
                         }.Max();
 
-        if (dataWidth == 0)
-        {
+        if (dataWidth == 0) {
             packIdentifierFound = false;
         }
 

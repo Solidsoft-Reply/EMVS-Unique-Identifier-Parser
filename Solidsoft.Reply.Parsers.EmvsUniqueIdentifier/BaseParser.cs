@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="BaseParser.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="BaseParser.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,20 +12,20 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // The base pack identifier parser.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
 // ReSharper disable CommentTypo
-
 using System.Collections.Immutable;
 using System.Collections.ObjectModel;
 using System.Text;
 
 #pragma warning disable S907
 [assembly: CLSCompliant(true)]
+
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
 
 using System.Collections.Generic;
@@ -50,9 +48,7 @@ using Properties;
 /// <summary>
 ///   The pack identifier parser.
 /// </summary>
-internal static partial class BaseParser
-{
-    
+internal static partial class BaseParser {
 #if NET8_0_OR_GREATER
     /// <summary>
     /// Composite format for Packs_Error_001.
@@ -79,35 +75,6 @@ internal static partial class BaseParser
     /// </summary>
     private static readonly CompositeFormat ParserError005 = CompositeFormat.Parse(Resources.Parser_Error_005);
 #endif
-    
-    /// <summary>
-    ///   Returns a regular expression to test that an IFA product code is composed of digits only.
-    /// </summary>
-    /// <returns>A regualar expression.</returns>
-    [GeneratedRegex(@"^\d{12}$", RegexOptions.None, "en-US")]
-    private static partial Regex WellFormedIfaProductCodeRegex();
-
-    /// <summary>
-    ///   Returns a regular expression to test that a GTIN/NTIN product code is composed of digits only.
-    /// </summary>
-    /// <returns>A regualar expression.</returns>
-    [GeneratedRegex(@"^\d{14}$", RegexOptions.None, "en-US")]
-    private static partial Regex WellFormedGtinOrNtinRegex();
-
-    /// <summary>
-    ///   Returns a regular expression for six-digit date representation - YYMMDD.
-    ///   If it is not necessary to specify the day, the day field can be filled with two zeros.
-    /// </summary>
-    /// <returns>A regualar expression.</returns>
-    [GeneratedRegex(@"(((\d{2})(0[13578]|1[02])(0[0-9]|[12]\d|3[01]))|((\d{2})(0[13456789]|1[012])(0[0-9]|[12]\d|30))|((\d{2})02(0[0-9]|1\d|2[0-8]))|(((0[048]|[2468][048]|[13579][26]))0229))", RegexOptions.None, "en-US")]
-    private static partial Regex DatePatternYyMmDdZerosRegex();
-
-    /// <summary>
-    ///   Returns a regular expression for Character Set 82 character strings of variable length.
-    /// </summary>
-    /// <returns>A regualar expression.</returns>
-    [GeneratedRegex(@"^[-!""%&'()*+,./0-9:;<=>?A-Z_a-z]{1,20}$", RegexOptions.None, "en-US")]
-    private static partial Regex CharacterSet82Regex();
 
     /// <summary>
     ///   Parse the raw barcode data.
@@ -117,14 +84,11 @@ internal static partial class BaseParser
     /// <param name="calibrationProcessor">Pre-processor for calibration data.</param>
     /// <param name="preProcessors">Additional pre-processor functions, provided as a delegate.</param>
     /// <returns>A pack identifier.</returns>
-    public static IPackIdentifier Parse(string? data, out string preProcessedData, Preprocessor? calibrationProcessor, Preprocessor? preProcessors = null)
-    {
+    public static IPackIdentifier Parse(string? data, out string preProcessedData, Preprocessor? calibrationProcessor, Preprocessor? preProcessors = null) {
         // Remove any trailing CR or LF
-        while (true)
-        {
-            if (!string.IsNullOrEmpty(data) && 
-                (data.EndsWith('\r') || data.EndsWith('\n')))
-            {
+        while (true) {
+            if (!string.IsNullOrEmpty(data) &&
+                (data.EndsWith('\r') || data.EndsWith('\n'))) {
                 data = data[..^1];
                 continue;
             }
@@ -132,16 +96,13 @@ internal static partial class BaseParser
             break;
         }
 
-        // We need to convert the AIM identifier if it exists and there is a conversion. 
-        if (calibrationProcessor != default)
-        {
+        // We need to convert the AIM identifier if it exists and there is a conversion.
+        if (calibrationProcessor != default) {
             // Add the calibration processor to the list of pre-processors
-            if (preProcessors is null)
-            {
+            if (preProcessors is null) {
                 preProcessors = calibrationProcessor;
             }
-            else
-            {
+            else {
                 if (!Array.Exists(preProcessors.GetInvocationList(), d => d.Equals(calibrationProcessor))) {
                     preProcessors += calibrationProcessor;
                 }
@@ -161,8 +122,7 @@ internal static partial class BaseParser
         if (preProcessors is null) {
             preProcessors = IsoIec15434Envelope.FixMissingControlCharacters;
         }
-        else
-        {
+        else {
             var missingControlCharacters = new Preprocessor(IsoIec15434Envelope.FixMissingControlCharacters);
             if (!Array.Exists(preProcessors.GetInvocationList(), d => d.Equals(missingControlCharacters))) {
                 preProcessors += missingControlCharacters;
@@ -178,7 +138,7 @@ internal static partial class BaseParser
         var barcode = Parsers.HighCapacityAidc.Parser.Parse(data, out var preProcessedDataOut, preProcessors);
 
         preProcessedData = preProcessedDataOut;
-        packIdentifier.RawData = preProcessedDataOut;  
+        packIdentifier.RawData = preProcessedDataOut;
 
         packIdentifier.ValidSymbology = ValidSymbology(barcode);
 
@@ -186,8 +146,7 @@ internal static partial class BaseParser
             packIdentifier.AddException(new PackIdentifierException(3, Resources.Parser_Error_002));
         }
 
-        if (barcode.IsRecognised)
-        {
+        if (barcode.IsRecognised) {
             // Add any exceptions to the pack identifier.
             foreach (var exception in barcode.Exceptions) {
                 if (exception is DataElementException elementException) {
@@ -220,7 +179,7 @@ internal static partial class BaseParser
                 packIdentifier.AddRecord(record);
             }
 
-            // Collect identifier information accross multiple records to check for 
+            // Collect identifier information accross multiple records to check for
             // ambiguities both within and between records.
             var candidateIdentifiers =
                 new List<(Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers)>();
@@ -235,7 +194,7 @@ internal static partial class BaseParser
                                                 { "productCode", new List<string>() },
                                                 { "batchIdentifier", new List<string>() },
                                                 { "expiry", new List<string>() },
-                                                { "serialNumber", new List<string>() }
+                                                { "serialNumber", new List<string>() },
                                             };
 
                 var isUnique = true;
@@ -259,13 +218,12 @@ internal static partial class BaseParser
                 }
 
                 // If the record level only contains unique identifier elements, continue processing.
-                if (isUnique)
-                {
+                if (isUnique) {
                     candidateIdentifiers.Add(
-                        (scheme: packIdentifier.Scheme, 
+                        (scheme: packIdentifier.Scheme,
                          productCode: packIdentifier.ProductCode,
                          serialNumber: packIdentifier.SerialNumber,
-                         batchIdentifier: packIdentifier.BatchIdentifier, 
+                         batchIdentifier: packIdentifier.BatchIdentifier,
                          expiry: packIdentifier.Expiry,
                          nationalNumbers: new ReadOnlyDictionary<NhrnMarket, string>(packIdentifier.NationalNumbers.ToImmutableDictionary())));
 
@@ -274,75 +232,70 @@ internal static partial class BaseParser
                 }
 
                 // The record is not unique, there is no point in continuing to parse the records, as there is
-                // no pissibility of retrieving a unique identifier unambiguously from the barcode. 
+                // no pissibility of retrieving a unique identifier unambiguously from the barcode.
                 packIdentifier.AddException(new PackIdentifierException(4, Resources.Parser_Error_003));
                 return PostProcessIdentifier(packIdentifier);
             }
 
-            switch (candidateIdentifiers.Count)
-            {
-                case > 1:
-                    {
+            switch (candidateIdentifiers.Count) {
+                case > 1: {
                         var distinctCandidates = candidateIdentifiers.Distinct();
 
                         // If a single distinct candidate exists, we will return it.
                         var valueTuples =
                             distinctCandidates as (
                                 Scheme scheme,
-                                string productCode, 
-                                string serialNumber, 
+                                string productCode,
+                                string serialNumber,
                                 string
-                                batchIdentifier, 
+                                batchIdentifier,
                                 string expiry,
                                 IReadOnlyDictionary<NhrnMarket, string> nationalNumbers)[] ?? distinctCandidates.ToArray();
 
-                        if (valueTuples.Length == 1)
-                        {
+                        if (valueTuples.Length == 1) {
                             SetIdentifier(valueTuples[0]);
                             return PostProcessIdentifier(packIdentifier);
                         }
 
-                        // If there are two or more distinct records with both a product code and a serial number, we 
+                        // If there are two or more distinct records with both a product code and a serial number, we
                         // have an ambiguity.
                         var distinctRecordsAll = (from distinctCandidate in valueTuples
-                            where !string.IsNullOrEmpty(distinctCandidate.productCode)
-                                  && !string.IsNullOrEmpty(distinctCandidate.serialNumber)
-                            select distinctCandidate).ToList();
+                                                  where !string.IsNullOrEmpty(distinctCandidate.productCode)
+                                                        && !string.IsNullOrEmpty(distinctCandidate.serialNumber)
+                                                  select distinctCandidate).ToList();
                         var distinctRecords = distinctRecordsAll.Distinct(new DistinctRecordComparer());
 
-                        if (distinctRecords.Count() > 1)
-                        {
+                        if (distinctRecords.Count() > 1) {
                             packIdentifier.ResetIdentifier();
 
                             var distinctProductCodes = (from distinctRecord in distinctRecordsAll
-                                where !string.IsNullOrEmpty(distinctRecord.productCode)
-                                select distinctRecord.productCode).Distinct().ToList();
+                                                        where !string.IsNullOrEmpty(distinctRecord.productCode)
+                                                        select distinctRecord.productCode).Distinct().ToList();
 
                             var distinctSerialNumbers = (from distinctRecord in distinctRecordsAll
-                                where !string.IsNullOrEmpty(distinctRecord.serialNumber)
-                                select distinctRecord.serialNumber).Distinct().ToList();
+                                                         where !string.IsNullOrEmpty(distinctRecord.serialNumber)
+                                                         select distinctRecord.serialNumber).Distinct().ToList();
 
                             var distinctBatchIdentifiers = (from distinctRecord in distinctRecordsAll
-                                where !string.IsNullOrEmpty(distinctRecord.batchIdentifier)
-                                select distinctRecord.batchIdentifier).Distinct().ToList();
+                                                            where !string.IsNullOrEmpty(distinctRecord.batchIdentifier)
+                                                            select distinctRecord.batchIdentifier).Distinct().ToList();
 
                             var distinctExpiryDates = (from distinctRecord in distinctRecordsAll
-                                where !string.IsNullOrEmpty(distinctRecord.expiry)
-                                select distinctRecord.expiry).Distinct().ToList();
+                                                       where !string.IsNullOrEmpty(distinctRecord.expiry)
+                                                       select distinctRecord.expiry).Distinct().ToList();
 
-                            switch (distinctProductCodes.Count)
-                            {
+                            switch (distinctProductCodes.Count) {
                                 // Replace errors
                                 case > 1:
                                     packIdentifier.AddOrReplaceException(
                                         new PackIdentifierException(
                                             10,
                                             string.Format(
-                                                CultureInfo.CurrentCulture, 
+                                                CultureInfo.CurrentCulture,
 #if NET8_0_OR_GREATER
                                                 PacksError001,
 #else
-                                                Resources.Packs_Error_001, 
+                                                Resources.Packs_Error_001,
 #endif
                                                 Resources.SubstituteUnique)));
                                     break;
@@ -351,16 +304,15 @@ internal static partial class BaseParser
                                     break;
                             }
 
-                            switch (distinctSerialNumbers.Count)
-                            {
+                            switch (distinctSerialNumbers.Count) {
                                 case > 1:
                                     packIdentifier.AddOrReplaceException(
                                         new PackIdentifierException(
                                             9,
                                             string.Format(
-                                                CultureInfo.CurrentCulture, 
+                                                CultureInfo.CurrentCulture,
 #if NET8_0_OR_GREATER
-                                                PacksError004, 
+                                                PacksError004,
 #else
                                                 Resources.Packs_Error_004,
 #endif
@@ -371,8 +323,7 @@ internal static partial class BaseParser
                                     break;
                             }
 
-                            switch (distinctBatchIdentifiers.Count)
-                            {
+                            switch (distinctBatchIdentifiers.Count) {
                                 case > 1:
                                     packIdentifier.AddOrReplaceException(
                                         new PackIdentifierException(
@@ -382,7 +333,7 @@ internal static partial class BaseParser
 #if NET8_0_OR_GREATER
                                                 PacksError002,
 #else
-                                                Resources.Packs_Error_002, 
+                                                Resources.Packs_Error_002,
 #endif
                                                 Resources.SubstituteUnique)));
                                     break;
@@ -391,8 +342,7 @@ internal static partial class BaseParser
                                     break;
                             }
 
-                            switch (distinctExpiryDates.Count)
-                            {
+                            switch (distinctExpiryDates.Count) {
                                 case > 1:
                                     packIdentifier.AddOrReplaceException(
                                         new PackIdentifierException(
@@ -417,14 +367,13 @@ internal static partial class BaseParser
 
                         // If there is a single distinct record with all four elements, we will favour this.
                         var favouredCandidates = (from distinctCandidate in valueTuples
-                            where !string.IsNullOrEmpty(distinctCandidate.productCode)
-                                  && !string.IsNullOrEmpty(distinctCandidate.serialNumber)
-                                  && !string.IsNullOrEmpty(distinctCandidate.batchIdentifier)
-                                  && !string.IsNullOrEmpty(distinctCandidate.expiry)
-                            select distinctCandidate).ToList();
+                                                  where !string.IsNullOrEmpty(distinctCandidate.productCode)
+                                                        && !string.IsNullOrEmpty(distinctCandidate.serialNumber)
+                                                        && !string.IsNullOrEmpty(distinctCandidate.batchIdentifier)
+                                                        && !string.IsNullOrEmpty(distinctCandidate.expiry)
+                                                  select distinctCandidate).ToList();
 
-                        if (favouredCandidates.Count == 1)
-                        {
+                        if (favouredCandidates.Count == 1) {
                             SetIdentifier(favouredCandidates[0]);
                             return PostProcessIdentifier(packIdentifier);
                         }
@@ -434,17 +383,17 @@ internal static partial class BaseParser
                         var schemeValues =
                             (from distinctCandidate in valueTuples select distinctCandidate.scheme).Distinct();
                         var productCodeValues = (from distinctCandidate in valueTuples
-                            where !string.IsNullOrEmpty(distinctCandidate.productCode)
-                            select distinctCandidate.productCode).Distinct().ToList();
+                                                 where !string.IsNullOrEmpty(distinctCandidate.productCode)
+                                                 select distinctCandidate.productCode).Distinct().ToList();
                         var serialNumberValues = (from distinctCandidate in valueTuples
-                            where !string.IsNullOrEmpty(distinctCandidate.serialNumber)
-                            select distinctCandidate.serialNumber).Distinct().ToList();
+                                                  where !string.IsNullOrEmpty(distinctCandidate.serialNumber)
+                                                  select distinctCandidate.serialNumber).Distinct().ToList();
                         var batchIdentifierValues = (from distinctCandidate in valueTuples
-                            where !string.IsNullOrEmpty(distinctCandidate.batchIdentifier)
-                            select distinctCandidate.batchIdentifier).Distinct().ToList();
+                                                     where !string.IsNullOrEmpty(distinctCandidate.batchIdentifier)
+                                                     select distinctCandidate.batchIdentifier).Distinct().ToList();
                         var expiryValues = (from distinctCandidate in valueTuples
-                            where !string.IsNullOrEmpty(distinctCandidate.expiry)
-                            select distinctCandidate.expiry).Distinct().ToList();
+                                            where !string.IsNullOrEmpty(distinctCandidate.expiry)
+                                            select distinctCandidate.expiry).Distinct().ToList();
 
                         packIdentifier.ResetIdentifier();
                         var schemes = schemeValues as Scheme[] ?? schemeValues.ToArray();
@@ -552,6 +501,7 @@ internal static partial class BaseParser
                                 ? Scheme.Gs1
                                 : TestForPpnProductCode();
                     }
+
                 case > 0:
                     SetIdentifier(candidateIdentifiers[0]);
                     break;
@@ -560,16 +510,14 @@ internal static partial class BaseParser
             return PostProcessIdentifier(packIdentifier);
 
             void SetIdentifier(
-                (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers) candidate)
-            {
+                (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers) candidate) {
                 packIdentifier.ResetIdentifier();
                 packIdentifier.Scheme = candidate.scheme;
                 packIdentifier.ProductCode = candidate.productCode;
                 packIdentifier.SerialNumber = candidate.serialNumber;
                 packIdentifier.BatchIdentifier = candidate.batchIdentifier;
                 packIdentifier.Expiry = candidate.expiry;
-                foreach (var nationalNumber in candidate.nationalNumbers)
-                {
+                foreach (var nationalNumber in candidate.nationalNumbers) {
                     packIdentifier.AddNationalNumber(nationalNumber.Key, nationalNumber.Value);
                 }
             }
@@ -579,6 +527,35 @@ internal static partial class BaseParser
         packIdentifier.AddException(new PackIdentifierException(4, Resources.Parser_Error_003));
         return packIdentifier;
     }
+
+    /// <summary>
+    ///   Returns a regular expression to test that an IFA product code is composed of digits only.
+    /// </summary>
+    /// <returns>A regualar expression.</returns>
+    [GeneratedRegex(@"^\d{12}$", RegexOptions.None, "en-US")]
+    private static partial Regex WellFormedIfaProductCodeRegex();
+
+    /// <summary>
+    ///   Returns a regular expression to test that a GTIN/NTIN product code is composed of digits only.
+    /// </summary>
+    /// <returns>A regualar expression.</returns>
+    [GeneratedRegex(@"^\d{14}$", RegexOptions.None, "en-US")]
+    private static partial Regex WellFormedGtinOrNtinRegex();
+
+    /// <summary>
+    ///   Returns a regular expression for six-digit date representation - YYMMDD.
+    ///   If it is not necessary to specify the day, the day field can be filled with two zeros.
+    /// </summary>
+    /// <returns>A regualar expression.</returns>
+    [GeneratedRegex(@"(((\d{2})(0[13578]|1[02])(0[0-9]|[12]\d|3[01]))|((\d{2})(0[13456789]|1[012])(0[0-9]|[12]\d|30))|((\d{2})02(0[0-9]|1\d|2[0-8]))|(((0[048]|[2468][048]|[13579][26]))0229))", RegexOptions.None, "en-US")]
+    private static partial Regex DatePatternYyMmDdZerosRegex();
+
+    /// <summary>
+    ///   Returns a regular expression for Character Set 82 character strings of variable length.
+    /// </summary>
+    /// <returns>A regualar expression.</returns>
+    [GeneratedRegex(@"^[-!""%&'()*+,./0-9:;<=>?A-Z_a-z]{1,20}$", RegexOptions.None, "en-US")]
+    private static partial Regex CharacterSet82Regex();
 
     /// <summary>
     ///   Processes a record to assign pack identifier fields.
@@ -593,8 +570,7 @@ internal static partial class BaseParser
     private static bool AssignGs1PackIdentifierFields(
         IRecord record,
         PackIdentifier packIdentifier,
-        IReadOnlyDictionary<string, List<string>> crossRecordIdentifier)
-    {
+        IReadOnlyDictionary<string, List<string>> crossRecordIdentifier) {
         // Select GS1 pack identifier fields. We will allow scenarios where the same field is duplicated
         // with the same value, as this does not compromise the uniqueness of the pack identifier.
         var nonUniquenessDetected = false;
@@ -606,11 +582,9 @@ internal static partial class BaseParser
         var nhrnNationalNumbers = new Dictionary<NhrnMarket, string>();
         var elementIndex = 0;
 
-        foreach (var element in record.Elements)
-        {
+        foreach (var element in record.Elements) {
             // Get the GS1 AI
-            if (!Enum.TryParse(element.Identifier, out ApplicationIdentifier gs1Ai))
-            {
+            if (!Enum.TryParse(element.Identifier, out ApplicationIdentifier gs1Ai)) {
                 gs1Ai = ApplicationIdentifier.Unrecognised;
             }
 
@@ -618,23 +592,19 @@ internal static partial class BaseParser
             elementIndex++;
 
             // ReSharper disable once SwitchStatementMissingSomeCases
-            switch (gs1Ai)
-            {
+            switch (gs1Ai) {
                 case ApplicationIdentifier.GlobalTradeItemNumber:
 
                     // Validate the GTIN/NTIN.
-                    if (!IsGtinValid(element.Data, packIdentifier, element.Identifier, element.Title, elementIndex) && 
-                        packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1))
-                    {
+                    if (!IsGtinValid(element.Data, packIdentifier, element.Identifier, element.Title, elementIndex) &&
+                        packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1)) {
                         packIdentifier.AddException(new PackIdentifierException(1, Resources.Parser_Error_004));
                     }
 
                     scheme = Scheme.Gs1;
 
-                    if (!string.IsNullOrEmpty(productCode))
-                    {
-                        if (productCode.Trim() != element.Data.Trim())
-                        {
+                    if (!string.IsNullOrEmpty(productCode)) {
+                        if (productCode.Trim() != element.Data.Trim()) {
                             crossRecordIdentifier[nameof(productCode)].Add(element.Data);
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
@@ -669,18 +639,15 @@ internal static partial class BaseParser
                             packIdentifier,
                             element.Identifier,
                             element.Title,
-                            elementIndex) && packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1))
-                    {
+                            elementIndex) && packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1)) {
                         packIdentifier.AddException(new PackIdentifierException(1, Resources.Parser_Error_004));
                     }
 
-                    if (!string.IsNullOrEmpty(batchIdentifier))
-                    {
+                    if (!string.IsNullOrEmpty(batchIdentifier)) {
                         if (!string.Equals(
                                 batchIdentifier.Trim(),
                                 element.Data.Trim(),
-                                StringComparison.Ordinal))
-                        {
+                                StringComparison.Ordinal)) {
                             crossRecordIdentifier[nameof(batchIdentifier)].Add(element.Data);
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
@@ -714,15 +681,12 @@ internal static partial class BaseParser
                             packIdentifier,
                             element.Identifier,
                             element.Title,
-                            elementIndex) && packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1))
-                    {
+                            elementIndex) && packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1)) {
                         packIdentifier.AddException(new PackIdentifierException(1, Resources.Parser_Error_004));
                     }
 
-                    if (!string.IsNullOrEmpty(expiry))
-                    {
-                        if (expiry.Trim() != element.Data.Trim())
-                        {
+                    if (!string.IsNullOrEmpty(expiry)) {
+                        if (expiry.Trim() != element.Data.Trim()) {
                             crossRecordIdentifier[nameof(expiry)].Add(element.Data);
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
@@ -756,19 +720,16 @@ internal static partial class BaseParser
                             packIdentifier,
                             element.Identifier,
                             element.Title,
-                            elementIndex) && 
-                        packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1))
-                    {
+                            elementIndex) &&
+                        packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1)) {
                         packIdentifier.AddException(new PackIdentifierException(1, Resources.Parser_Error_004));
                     }
 
-                    if (!string.IsNullOrEmpty(serialNumber))
-                    {
+                    if (!string.IsNullOrEmpty(serialNumber)) {
                         if (!string.Equals(
                                 serialNumber.Trim(),
                                 element.Data.Trim(),
-                                StringComparison.Ordinal))
-                        {
+                                StringComparison.Ordinal)) {
                             crossRecordIdentifier[nameof(serialNumber)].Add(element.Data);
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
@@ -804,10 +765,8 @@ internal static partial class BaseParser
                     nhrnMarket = NhrnMarket.Spain;
                     goto case ApplicationIdentifier.NationalHealthcareReimbursementNumberPortugalAim;
                 case ApplicationIdentifier.NationalHealthcareReimbursementNumberPortugalAim:
-                    if (packIdentifier.NationalNumbers.ContainsKey(nhrnMarket))
-                    {
-                        if (packIdentifier.ParseExceptions.All(ex => ex.ErrorNumber != 2))
-                        {
+                    if (packIdentifier.NationalNumbers.ContainsKey(nhrnMarket)) {
+                        if (packIdentifier.ParseExceptions.All(ex => ex.ErrorNumber != 2)) {
                             packIdentifier.AddException(
                                 new PackIdentifierException(
                                     2,
@@ -824,10 +783,8 @@ internal static partial class BaseParser
                         break;
                     }
 
-                    if (nhrnNationalNumbers.ContainsKey(nhrnMarket))
-                    {
-                        if (packIdentifier.ParseExceptions.All(ex => ex.ErrorNumber != 2))
-                        {
+                    if (nhrnNationalNumbers.ContainsKey(nhrnMarket)) {
+                        if (packIdentifier.ParseExceptions.All(ex => ex.ErrorNumber != 2)) {
                             packIdentifier.AddException(
                                 new PackIdentifierException(
                                     2,
@@ -853,17 +810,14 @@ internal static partial class BaseParser
             }
         }
 
-        if (nonUniquenessDetected)
-        {
+        if (nonUniquenessDetected) {
             // Populate the pack identifier with each unambiguous element.
             var uniqueElements = crossRecordIdentifier.Where(elementList => elementList.Value.Count == 1);
             packIdentifier.ResetIdentifier();
             packIdentifier.Scheme = scheme;
 
-            foreach (var element in uniqueElements)
-            {
-                switch (element.Key)
-                {
+            foreach (var element in uniqueElements) {
+                switch (element.Key) {
                     case nameof(productCode):
                         packIdentifier.ProductCode = productCode;
                         break;
@@ -878,8 +832,7 @@ internal static partial class BaseParser
                         break;
                 }
 
-                foreach (var nationalNumber in nhrnNationalNumbers)
-                {
+                foreach (var nationalNumber in nhrnNationalNumbers) {
                     packIdentifier.AddNationalNumber(nationalNumber.Key, nationalNumber.Value);
                 }
             }
@@ -898,8 +851,7 @@ internal static partial class BaseParser
                                         + (string.IsNullOrEmpty(packIdentifier.Expiry) ? 0 : 1)
                                         + (string.IsNullOrEmpty(packIdentifier.SerialNumber) ? 0 : 1);
 
-        switch (numberOfFieldsFound)
-        {
+        switch (numberOfFieldsFound) {
             // Resolve the candidate record for the pack identifier.
             // If we have already found a complete pack identifier in a previous record,
             // the pack identifier is ambiguous.
@@ -911,21 +863,18 @@ internal static partial class BaseParser
                 PopulatePackIdentifierFields();
                 break;
             default:
-                if (numberOfPreviousFieldsFound >= 4)
-                {
+                if (numberOfPreviousFieldsFound >= 4) {
                     return !nonUniquenessDetected;
                 }
 
                 // We have two partial candidates. If one has more fields than the other, it will
                 // be taken as the candidate
-                if (numberOfFieldsFound > numberOfPreviousFieldsFound)
-                {
+                if (numberOfFieldsFound > numberOfPreviousFieldsFound) {
                     // This record is now the candidate for the pack identifier
                     PopulatePackIdentifierFields();
                 }
-                else if (numberOfFieldsFound == numberOfPreviousFieldsFound && 
-                         packIdentifier.Scheme == Scheme.Ifa)
-                {
+                else if (numberOfFieldsFound == numberOfPreviousFieldsFound &&
+                         packIdentifier.Scheme == Scheme.Ifa) {
                     // GS1 is favoured over IFA and earlier records are favoured.
                     // This record is now the candidate for the pack identifier
                     PopulatePackIdentifierFields();
@@ -936,8 +885,7 @@ internal static partial class BaseParser
 
         return !nonUniquenessDetected;
 
-        void PopulatePackIdentifierFields()
-        {
+        void PopulatePackIdentifierFields() {
             // This record is now the candidate for the pack identifier
             packIdentifier.Scheme = Scheme.Gs1;
             packIdentifier.ProductCode = productCode;
@@ -945,8 +893,7 @@ internal static partial class BaseParser
             packIdentifier.Expiry = expiry;
             packIdentifier.SerialNumber = serialNumber;
 
-            foreach (var nationalNumber in nhrnNationalNumbers)
-            {
+            foreach (var nationalNumber in nhrnNationalNumbers) {
                 packIdentifier.AddNationalNumber(nationalNumber.Key, nationalNumber.Value);
             }
         }
@@ -956,7 +903,7 @@ internal static partial class BaseParser
     ///   Processes a record to assign pack identifier fields.
     /// </summary>
     /// <param name="record">The record.</param>
-    /// <param name="packIdentifier">The pack identifier</param>
+    /// <param name="packIdentifier">The pack identifier.</param>
     /// <param name="crossRecordIdentifier">A candidate collection of data elements that may be taken as a pack identifier.</param>
     /// <returns>
     ///   True, if the pack identifier fields are currently unique or unassigned for all records
@@ -965,8 +912,7 @@ internal static partial class BaseParser
     private static bool AssignIfaPackIdentifierFields(
         IRecord record,
         PackIdentifier packIdentifier,
-        IReadOnlyDictionary<string, List<string>> crossRecordIdentifier)
-    {
+        IReadOnlyDictionary<string, List<string>> crossRecordIdentifier) {
         // Select IFA pack identifier fields. We will allow scenarios where the same field is duplicated
         // with the same value, as this does not compromise the uniqueness of the pack identifier.
         var nonUniquenessDetected = false;
@@ -978,15 +924,13 @@ internal static partial class BaseParser
         var nhrnNationalNumbers = new Dictionary<NhrnMarket, string>();
         var elementIndex = 0;
 
-        foreach (var element in record.Elements)
-        {
+        foreach (var element in record.Elements) {
             // Get the ASC MH10.8.2 DI
             var nhrnMarket = NhrnMarket.Portugal;
             elementIndex++;
 
             // ReSharper disable once SwitchStatementMissingSomeCases
-            switch ((DataIdentifier)element.Data.Resolve(element.Identifier, 0).Entity)
-            {
+            switch ((DataIdentifier)element.Data.Resolve(element.Identifier, 0).Entity) {
                 case DataIdentifier.Ppn:
                     // For EMVS, PPNs are treated as fixed width numeric data in which the first two digits represent an issuing
                     // authority, the last two digits are a checksum based on the ASCII characters of the rest of the PPN and the
@@ -995,18 +939,15 @@ internal static partial class BaseParser
                     // EMVS-specific validation is invoked here.
 
                     // Validate the PPN as a German medicinal product code.
-                    if (!IsPpnValid(element.Data, packIdentifier, element.Identifier, element.Title, elementIndex) && 
-                        packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1))
-                    {
+                    if (!IsPpnValid(element.Data, packIdentifier, element.Identifier, element.Title, elementIndex) &&
+                        packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1)) {
                         packIdentifier.AddException(new PackIdentifierException(1, Resources.Parser_Error_004));
                     }
 
                     scheme = Scheme.Ifa;
 
-                    if (!string.IsNullOrEmpty(productCode))
-                    {
-                        if (productCode.Trim() != element.Data.Trim())
-                        {
+                    if (!string.IsNullOrEmpty(productCode)) {
+                        if (productCode.Trim() != element.Data.Trim()) {
                             crossRecordIdentifier[nameof(productCode)].Add(element.Data);
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
@@ -1041,20 +982,18 @@ internal static partial class BaseParser
                             packIdentifier,
                             element.Identifier,
                             element.Title,
-                            elementIndex) && 
-                        packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1))
-                    {
+                            elementIndex) &&
+                        packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1)) {
                         packIdentifier.AddException(new PackIdentifierException(1, Resources.Parser_Error_004));
                     }
 
-                    if (!string.IsNullOrEmpty(batchIdentifier))
-                    {
+                    if (!string.IsNullOrEmpty(batchIdentifier)) {
                         if (!string.Equals(
                                 batchIdentifier.Trim(),
                                 element.Data.Trim(),
-                                StringComparison.Ordinal))
-                        {
+                                StringComparison.Ordinal)) {
                             crossRecordIdentifier[nameof(batchIdentifier)].Add(element.Data);
+#pragma warning disable SA1118 // Parameter should not span multiple lines
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
                                     scheme == Scheme.Unknown ? 7 : 30,
@@ -1071,6 +1010,7 @@ internal static partial class BaseParser
                                         ? "TRACEABILITY NUMBER ASSIGNED BY THE SUPPLIER"
                                         : string.Empty,
                                     0));
+#pragma warning restore SA1118 // Parameter should not span multiple lines
 
                             nonUniquenessDetected = true;
                         }
@@ -1089,16 +1029,13 @@ internal static partial class BaseParser
                             packIdentifier,
                             element.Identifier,
                             element.Title,
-                            elementIndex) && 
-                        packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1))
-                    {
+                            elementIndex) &&
+                        packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1)) {
                         packIdentifier.AddException(new PackIdentifierException(1, Resources.Parser_Error_004));
                     }
 
-                    if (!string.IsNullOrEmpty(expiry))
-                    {
-                        if (expiry.Trim() != element.Data.Trim())
-                        {
+                    if (!string.IsNullOrEmpty(expiry)) {
+                        if (expiry.Trim() != element.Data.Trim()) {
                             crossRecordIdentifier[nameof(expiry)].Add(element.Data);
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
@@ -1132,19 +1069,16 @@ internal static partial class BaseParser
                             packIdentifier,
                             element.Identifier,
                             element.Title,
-                            elementIndex) && 
-                        packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1))
-                    {
+                            elementIndex) &&
+                        packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 1)) {
                         packIdentifier.AddException(new PackIdentifierException(1, Resources.Parser_Error_004));
                     }
 
-                    if (!string.IsNullOrEmpty(serialNumber))
-                    {
+                    if (!string.IsNullOrEmpty(serialNumber)) {
                         if (!string.Equals(
                                 serialNumber.Trim(),
                                 element.Data.Trim(),
-                                StringComparison.Ordinal))
-                        {
+                                StringComparison.Ordinal)) {
                             crossRecordIdentifier[nameof(serialNumber)].Add(element.Data);
                             packIdentifier.AddException(
                                 new PackIdentifierFieldException(
@@ -1174,8 +1108,7 @@ internal static partial class BaseParser
                     var country = element.Data.ResolveGtinNtinToGs1Country();
 
                     // ReSharper disable once SwitchStatementMissingSomeCases
-                    switch (country)
-                    {
+                    switch (country) {
                         case CountryCode.Germany:
                             nhrnMarket = NhrnMarket.Germany;
                             goto case CountryCode.Portugal;
@@ -1186,9 +1119,8 @@ internal static partial class BaseParser
                             nhrnMarket = NhrnMarket.Spain;
                             goto case CountryCode.Portugal;
                         case CountryCode.Portugal:
-                            if (packIdentifier.NationalNumbers.ContainsKey(nhrnMarket) && 
-                                packIdentifier.ParseExceptions.All(ex => ex.ErrorNumber != 2))
-                            {
+                            if (packIdentifier.NationalNumbers.ContainsKey(nhrnMarket) &&
+                                packIdentifier.ParseExceptions.All(ex => ex.ErrorNumber != 2)) {
                                 packIdentifier.AddException(
                                     new PackIdentifierException(
                                         2,
@@ -1203,10 +1135,8 @@ internal static partial class BaseParser
                                 break;
                             }
 
-                            if (nhrnNationalNumbers.ContainsKey(nhrnMarket))
-                            {
-                                if (packIdentifier.ParseExceptions.All(ex => ex.ErrorNumber != 2))
-                                {
+                            if (nhrnNationalNumbers.ContainsKey(nhrnMarket)) {
+                                if (packIdentifier.ParseExceptions.All(ex => ex.ErrorNumber != 2)) {
                                     packIdentifier.AddException(
                                         new PackIdentifierException(
                                             2,
@@ -1239,17 +1169,14 @@ internal static partial class BaseParser
             }
         }
 
-        if (nonUniquenessDetected)
-        {
+        if (nonUniquenessDetected) {
             // Populate the pack identifier with each unambiguous element.
             var uniqueElements = crossRecordIdentifier.Where(elementList => elementList.Value.Count == 1);
             packIdentifier.ResetIdentifier();
             packIdentifier.Scheme = scheme;
 
-            foreach (var (uniqueElementKey, _) in uniqueElements)
-            {
-                switch (uniqueElementKey)
-                {
+            foreach (var (uniqueElementKey, _) in uniqueElements) {
+                switch (uniqueElementKey) {
                     case nameof(productCode):
                         packIdentifier.ProductCode = productCode;
                         break;
@@ -1264,8 +1191,7 @@ internal static partial class BaseParser
                         break;
                 }
 
-                foreach (var (key, value) in nhrnNationalNumbers)
-                {
+                foreach (var (key, value) in nhrnNationalNumbers) {
                     packIdentifier.AddNationalNumber(key, value);
                 }
             }
@@ -1284,8 +1210,7 @@ internal static partial class BaseParser
                                         + (string.IsNullOrEmpty(packIdentifier.Expiry) ? 0 : 1)
                                         + (string.IsNullOrEmpty(packIdentifier.SerialNumber) ? 0 : 1);
 
-        switch (numberOfFieldsFound)
-        {
+        switch (numberOfFieldsFound) {
             // Resolve the candidate record for the pack identifier.
             // If we have already found a complete pack identifier in a previous record,
             // the pack identifier is ambiguous.
@@ -1297,16 +1222,13 @@ internal static partial class BaseParser
                 PopulatePackIdentifierFields();
                 break;
             default:
-                if (numberOfPreviousFieldsFound == 4)
-                {
+                if (numberOfPreviousFieldsFound == 4) {
                     // The previously detected record remains the candidate for the pack identifier
                 }
-                else
-                {
+                else {
                     // We have two partial candidates. If one has more fields than the other, it will
                     // be taken as the candidate
-                    if (numberOfFieldsFound > numberOfPreviousFieldsFound)
-                    {
+                    if (numberOfFieldsFound > numberOfPreviousFieldsFound) {
                         // This record is now the candidate for the pack identifier
                         PopulatePackIdentifierFields();
                     }
@@ -1319,8 +1241,7 @@ internal static partial class BaseParser
 
         return !nonUniquenessDetected;
 
-        void PopulatePackIdentifierFields()
-        {
+        void PopulatePackIdentifierFields() {
             // This record is now the candidate for the pack identifier
             packIdentifier.Scheme = Scheme.Ifa;
             packIdentifier.ProductCode = productCode;
@@ -1328,8 +1249,7 @@ internal static partial class BaseParser
             packIdentifier.Expiry = expiry;
             packIdentifier.SerialNumber = serialNumber;
 
-            foreach (var nationalNumber in nhrnNationalNumbers)
-            {
+            foreach (var nationalNumber in nhrnNationalNumbers) {
                 packIdentifier.AddNationalNumber(nationalNumber.Key, nationalNumber.Value);
             }
         }
@@ -1346,13 +1266,13 @@ internal static partial class BaseParser
     ///   The element index of the batch identifier in the data transmitted by the scanner.
     /// </param>
     /// <returns>True, if the batch identifier is valid; otherwise false.</returns>
+    // ReSharper disable once SuggestBaseTypeForParameter
     private static bool IsBatchIdentifierValid(
         string batchIdentifier,
-        IPackIdentifier packIdentifier,
+        PackIdentifier packIdentifier,
         string identifier,
         string title,
-        int elementIndex)
-    {
+        int elementIndex) {
         // SecurPharm and IFA define a batch identifier (lot number) for medicinal packs of prescription
         // medicine in the same way as the GS1 General Specifications. It is a string of between 1 and 20
         // characters containing the invariant characters defined in ISO 646. GS1 calls this 'Character Set 82'.
@@ -1361,15 +1281,13 @@ internal static partial class BaseParser
         var isValid = true;
 
         // Rule 1: The batch identifier must contain data.
-        if (string.IsNullOrEmpty(batchIdentifier))
-        {
+        if (string.IsNullOrEmpty(batchIdentifier)) {
             packIdentifier.AddException(new PackIdentifierException(31, Resources.Parser_Error_014));
             isValid = false;
         }
 
         // Rule 2: The batch identifier must be between 1 and 20 characters in length.
-        if (batchIdentifier is { Length: > 20 })
-        {
+        if (batchIdentifier is { Length: > 20 }) {
             packIdentifier.AddException(
                 new PackIdentifierFieldException(
                     32,
@@ -1382,8 +1300,7 @@ internal static partial class BaseParser
         }
 
         // Rule 3: The batch identifier must be composed of invariant characters only.
-        if (CharacterSet82Regex().Match(batchIdentifier).Success)
-        {
+        if (CharacterSet82Regex().Match(batchIdentifier).Success) {
             return isValid;
         }
 
@@ -1409,13 +1326,13 @@ internal static partial class BaseParser
     ///   The element index of the expiry date in the data transmitted by the scanner.
     /// </param>
     /// <returns>True, if the expiry date is valid; otherwise false.</returns>
+    // ReSharper disable once SuggestBaseTypeForParameter
     private static bool IsExpiryDateValid(
         string expiryDate,
-        IPackIdentifier packIdentifier,
+        PackIdentifier packIdentifier,
         string identifier,
         string title,
-        int elementIndex)
-    {
+        int elementIndex) {
         // SecurPharm and IFA define an expiry date for medicinal packs of prescription medicine in
         // the same way as the GS1 General Specifications. It is a string containing exactly 6 digits
         // representing the date in YYMMDD format. The DD digits can be set to "00" for expiry by
@@ -1423,15 +1340,13 @@ internal static partial class BaseParser
         var isValid = true;
 
         // Rule 1: The batch identifier must contain data.
-        if (string.IsNullOrEmpty(expiryDate))
-        {
+        if (string.IsNullOrEmpty(expiryDate)) {
             packIdentifier.AddException(new PackIdentifierException(41, Resources.Parser_Error_018));
             isValid = false;
         }
 
         // Rule 2: The expiry date must be correctly formatted as YYMMDD allowing DD to be 00.
-        if (DatePatternYyMmDdZerosRegex().Match(expiryDate).Success)
-        {
+        if (DatePatternYyMmDdZerosRegex().Match(expiryDate).Success) {
             return isValid;
         }
 
@@ -1444,24 +1359,21 @@ internal static partial class BaseParser
     /// <summary>
     ///   Validates a GTIN/NTIN by testing that its checksum is correct according to the GS1 specification.
     /// </summary>
-    /// <param name="gtin">The PPN</param>
+    /// <param name="gtin">The PPN.</param>
     /// <returns>True, if the checksum is correct; otherwise false.</returns>
-    private static bool IsGs1ChecksumValid(string gtin)
-    {
+    private static bool IsGs1ChecksumValid(string gtin) {
         /* Each GTIN requires a check digit for additional data security. To calculate the check digit, we
          * the sequence of digits in the GTIN. Each digit in an even position in the reversed sequence is
          * mutiplied by three and cummulatively summed with all digits in odd positions. The summed total
          * should be exactly divisible by 10. Otherwise, the chwck digit (the last digit in the GTIN) is
          * invalid.
          * */
-        if (string.IsNullOrWhiteSpace(gtin))
-        {
+        if (string.IsNullOrWhiteSpace(gtin)) {
             return false;
         }
 
         // Ensure that the string contains only integer values.
-        if (gtin.Any(c => (int)char.GetNumericValue(c) == -1))
-        {
+        if (gtin.Any(c => (int)char.GetNumericValue(c) == -1)) {
             return false;
         }
 
@@ -1481,13 +1393,13 @@ internal static partial class BaseParser
     /// <param name="title">The data element title.</param>
     /// <param name="elementIndex">The element index of the GTIN/NTIN in the data transmitted by the scanner.</param>
     /// <returns>True, if the GTIN/NTIN is valid; otherwise false.</returns>
+    // ReSharper disable once SuggestBaseTypeForParameter
     private static bool IsGtinValid(
         string? gtin,
-        IPackIdentifier packIdentifier,
+        PackIdentifier packIdentifier,
         string identifier,
         string title,
-        int elementIndex)
-    {
+        int elementIndex) {
         // GS1 defines a GTIN 14 or NTIN-14 for medicinal packs of prescription medicine as a fixed
         // sequence of 14 digits. The initial digits represent the country of the assigning GS1 office
         // and, for GTINs, a company or organisations (for NTINs, this is a nationally-assigned set of digits)
@@ -1495,15 +1407,13 @@ internal static partial class BaseParser
         var isValid = true;
 
         // Rule 1: The GTIN/NTIN must contain data.
-        if (string.IsNullOrEmpty(gtin))
-        {
+        if (string.IsNullOrEmpty(gtin)) {
             packIdentifier.AddException(new PackIdentifierException(11, Resources.Parser_Error_006));
             isValid = false;
         }
 
         // Rule 2: The TIN/NTIN must be 14 characters in length.
-        if (gtin is not null && gtin.Length != 14)
-        {
+        if (gtin is not null && gtin.Length != 14) {
             packIdentifier.AddException(
                 new PackIdentifierFieldException(
                     12,
@@ -1516,8 +1426,7 @@ internal static partial class BaseParser
         }
 
         // Rule 3: The GTIN/NTIN product code must be composed of digits only.
-        if (!WellFormedGtinOrNtinRegex().Match(gtin ?? string.Empty).Success)
-        {
+        if (!WellFormedGtinOrNtinRegex().Match(gtin ?? string.Empty).Success) {
             packIdentifier.AddException(
                 new PackIdentifierFieldException(
                     13,
@@ -1530,8 +1439,7 @@ internal static partial class BaseParser
         }
 
         // Rule 4: The GTIN/NTIN checksum obeys GS1 rules
-        if (IsGs1ChecksumValid(gtin ?? string.Empty))
-        {
+        if (IsGs1ChecksumValid(gtin ?? string.Empty)) {
             return isValid;
         }
 
@@ -1555,8 +1463,7 @@ internal static partial class BaseParser
     /// <returns>
     ///   True, if valid; otherwise false.
     /// </returns>
-    private static bool IsPpnChecksumValid(string ppn)
-    {
+    private static bool IsPpnChecksumValid(string ppn) {
         /* Each PPN requires a Modulo 97 Check Sum for additional data security. To calculate the check sum
          * the ASCII value of the alphanumeric characters are used. Each of the characters is converted into
          * the ASCII value and multiplied with the incrementing weight factor beginning with the most
@@ -1569,8 +1476,7 @@ internal static partial class BaseParser
         // Get the checksum and convert to an integer
         var checkCharacters = ppn[^2..];
 
-        if (!int.TryParse(checkCharacters, out var checksum))
-        {
+        if (!int.TryParse(checkCharacters, out var checksum)) {
             return false;
         }
 
@@ -1579,8 +1485,7 @@ internal static partial class BaseParser
 
         var sum = 0;
 
-        for (var weightFactor = 2; weightFactor <= ppnAlphaNumericChars.Length + 1; weightFactor++)
-        {
+        for (var weightFactor = 2; weightFactor <= ppnAlphaNumericChars.Length + 1; weightFactor++) {
             sum += weightFactor * ppnAlphaNumericChars[weightFactor - 2];
         }
 
@@ -1596,13 +1501,13 @@ internal static partial class BaseParser
     /// <param name="title">The data element title.</param>
     /// <param name="elementIndex">The element index of the PPN in the data transmitted by the scanner.</param>
     /// <returns>True, if the PPN is valid; otherwise false.</returns>
+    // ReSharper disable once SuggestBaseTypeForParameter
     private static bool IsPpnValid(
         string? ppn,
-        IPackIdentifier packIdentifier,
+        PackIdentifier packIdentifier,
         string identifier,
         string title,
-        int elementIndex)
-    {
+        int elementIndex) {
         // IFA and SecurPharm define a PPN for medicinal packs of prescription medicine as a fixed
         // sequence of 12 digits. The first two digits represent the Product Registration Agency Code
         // (PRA Code or PRAC) abd are always "11" for PZNs. the next eight digits represent a PZN8.
@@ -1610,15 +1515,13 @@ internal static partial class BaseParser
         var isValid = true;
 
         // Rule 1: The PPN must contain data.
-        if (string.IsNullOrEmpty(ppn))
-        {
+        if (string.IsNullOrEmpty(ppn)) {
             packIdentifier.AddException(new PackIdentifierException(21, Resources.Parser_Error_006));
             isValid = false;
         }
 
         // Rule 2: The PPN must be 12 characters in length.
-        if (ppn is not null && ppn.Length != 12)
-        {
+        if (ppn is not null && ppn.Length != 12) {
             packIdentifier.AddException(
                 new PackIdentifierFieldException(
                     22,
@@ -1631,8 +1534,7 @@ internal static partial class BaseParser
         }
 
         // Rule 3: The IFA product code must be composed of digits only.
-        if (!WellFormedIfaProductCodeRegex().Match(ppn ?? string.Empty).Success)
-        {
+        if (!WellFormedIfaProductCodeRegex().Match(ppn ?? string.Empty).Success) {
             packIdentifier.AddException(
                 new PackIdentifierFieldException(
                     23,
@@ -1645,16 +1547,14 @@ internal static partial class BaseParser
         }
 
         // Rule 4: The first two characters of the PPN are "11", representing PZN.
-        if (ppn is { Length: > 2 } && ppn[..2] != "11")
-        {
+        if (ppn is { Length: > 2 } && ppn[..2] != "11") {
             packIdentifier.AddException(
                 new PackIdentifierFieldException(24, Resources.Parser_Error_012, identifier, title, elementIndex));
             isValid = false;
         }
 
         // Rule 5: The PZN checksum obeys IFA rules
-        if (!IsPznChecksumValid(ppn ?? string.Empty))
-        {
+        if (!IsPznChecksumValid(ppn ?? string.Empty)) {
             packIdentifier.AddException(
                 new PackIdentifierFieldException(25, Resources.Parser_Error_013, identifier, title, elementIndex));
 
@@ -1662,8 +1562,7 @@ internal static partial class BaseParser
         }
 
         // Rule 6: The IFA product code must contain a correct checksum value.
-        if (IsPpnChecksumValid(ppn ?? string.Empty))
-        {
+        if (IsPpnChecksumValid(ppn ?? string.Empty)) {
             return isValid;
         }
 
@@ -1683,8 +1582,7 @@ internal static partial class BaseParser
     /// </summary>
     /// <param name="ppn">The PPN value.</param>
     /// <returns>True, if the checksum is correct; otherwise false.</returns>
-    private static bool IsPznChecksumValid(string ppn)
-    {
+    private static bool IsPznChecksumValid(string ppn) {
         /*  1.  Multiply the 1st digit by 1,
                          the 2nd digit by 2,
                          the 3rd digit by 3,
@@ -1702,8 +1600,7 @@ internal static partial class BaseParser
         // Get the checksum and convert to an integer
         var checksumCharacters = ppn.Length >= 3 ? ppn[^3].ToString(CultureInfo.InvariantCulture) : string.Empty;
 
-        if (!int.TryParse(checksumCharacters, out var checksum))
-        {
+        if (!int.TryParse(checksumCharacters, out var checksum)) {
             return false;
         }
 
@@ -1711,8 +1608,7 @@ internal static partial class BaseParser
         var pzn = ppn.Length > 2 ? ppn[2..^2] : string.Empty;
 
         // Check that the PZN is numeric
-        if (!long.TryParse(pzn, out _))
-        {
+        if (!long.TryParse(pzn, out _)) {
             return false;
         }
 
@@ -1720,8 +1616,7 @@ internal static partial class BaseParser
         var pznDigits = pzn.Select(Convert.ToInt32).ToArray();
         var sum = 0;
 
-        for (var multiplier = 1; multiplier < pznDigits.Length; multiplier++)
-        {
+        for (var multiplier = 1; multiplier < pznDigits.Length; multiplier++) {
             sum += multiplier * int.Parse(
                        Convert.ToChar(pznDigits[multiplier - 1], CultureInfo.InvariantCulture)
                               .ToInvariantString(),
@@ -1742,13 +1637,13 @@ internal static partial class BaseParser
     ///   The element index of the serial number in the data transmitted by the scanner.
     /// </param>
     /// <returns>True, if the serial number is valid; otherwise false.</returns>
+    // ReSharper disable once SuggestBaseTypeForParameter
     private static bool IsSerialNumberValid(
         string serialNumber,
-        IPackIdentifier packIdentifier,
+        PackIdentifier packIdentifier,
         string identifier,
         string title,
-        int elementIndex)
-    {
+        int elementIndex) {
         // SecurPharm and IFA define a serial number for medicinal packs of prescription medicine in the same
         // way as the GS1 General Specifications. It is a string of between 1 and 20 characters containing
         // the invariant characters defined in ISO 646. GS1 calls this 'Character Set 82". NB. These rules
@@ -1758,15 +1653,13 @@ internal static partial class BaseParser
         var isValid = true;
 
         // Rule 1: The serial number must contain data.
-        if (string.IsNullOrEmpty(serialNumber))
-        {
+        if (string.IsNullOrEmpty(serialNumber)) {
             packIdentifier.AddException(new PackIdentifierException(51, Resources.Parser_Error_020));
             isValid = false;
         }
 
         // Rule 2: The serial number must be between 1 and 20 characters in length.
-        if (serialNumber is { Length: > 20 })
-        {
+        if (serialNumber is { Length: > 20 }) {
             packIdentifier.AddException(
                 new PackIdentifierFieldException(
                     52,
@@ -1779,13 +1672,11 @@ internal static partial class BaseParser
         }
 
         // Rule 3: The serial number must be composed of invariant characters only.
-        if (CharacterSet82Regex().Match(serialNumber).Success)
-        {
+        if (CharacterSet82Regex().Match(serialNumber).Success) {
             return isValid;
         }
 
-        if (packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 53))
-        {
+        if (packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 53)) {
             packIdentifier.AddException(
                 new PackIdentifierFieldException(
                     53,
@@ -1803,10 +1694,8 @@ internal static partial class BaseParser
     /// </summary>
     /// <param name="packIdentifier">The pack identifier.</param>
     /// <returns>The post-processed pack identifier.</returns>
-    private static IPackIdentifier PostProcessIdentifier(IPackIdentifier packIdentifier)
-    {
-        if (packIdentifier.Scheme != Scheme.Ifa)
-        {
+    private static IPackIdentifier PostProcessIdentifier(IPackIdentifier packIdentifier) {
+        if (packIdentifier.Scheme != Scheme.Ifa) {
             return packIdentifier;
         }
 
@@ -1817,8 +1706,7 @@ internal static partial class BaseParser
          * exceptions simply highlights potential confusion based on this discrepency
          * between the two specifications.
          */
-        if (packIdentifier.ParseExceptions is not List<ParseException> parseExceptionsList)
-        {
+        if (packIdentifier.ParseExceptions is not List<ParseException> parseExceptionsList) {
             return packIdentifier;
         }
 
@@ -1826,31 +1714,27 @@ internal static partial class BaseParser
         const string serialNumberTitle = "SERIAL NUMBER";
 
         // If there are no batch identifier errors at the pack level, remove any at the parser level.
-        if (packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 33) && 
+        if (packIdentifier.Exceptions.All(ex => ex.ErrorNumber != 33) &&
             parseExceptionsList.RemoveAll(
-                ex => ex.ErrorNumber is 3005 or 3100 && 
-                      ex.DataElementTitle == batchIdTitle) >= 1 && parseExceptionsList.Count == 1)
-        {
+                ex => ex.ErrorNumber is 3005 or 3100 &&
+                      ex.DataElementTitle == batchIdTitle) >= 1 && parseExceptionsList.Count == 1) {
             // If the pack has any batch identifier parser errors, remove them
             parseExceptionsList.RemoveAll(ex => ex.ErrorNumber == 1003);
         }
 
         // If there are no batch identifier errors at the pack level, remove any at the parser level.
-        if (packIdentifier.Exceptions.Any(ex => ex.ErrorNumber == 52))
-        {
+        if (packIdentifier.Exceptions.Any(ex => ex.ErrorNumber == 52)) {
             return packIdentifier;
         }
 
         // If the pack has any serial number parser errors, remove them
         if (parseExceptionsList.RemoveAll(
                 ex => ex.ErrorNumber is 3005 or 3100
-                   && ex.DataElementTitle == serialNumberTitle) < 1)
-        {
+                   && ex.DataElementTitle == serialNumberTitle) < 1) {
             return packIdentifier;
         }
 
-        if (parseExceptionsList.Count == 1)
-        {
+        if (parseExceptionsList.Count == 1) {
             parseExceptionsList.RemoveAll(ex => ex.ErrorNumber == 1003);
         }
 
@@ -1874,20 +1758,16 @@ internal static partial class BaseParser
             _ => SymbologyValidity.False
         };
 
-
     // Comparer class for distint records used only in this contect
-    private sealed class DistinctRecordComparer : IEqualityComparer<(Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers)>
-    {
+    private sealed class DistinctRecordComparer : IEqualityComparer<(Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers)> {
         public bool Equals(
             (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers) x,
-            (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers) y)
-        {
+            (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers) y) {
             return x.productCode == y.productCode && x.serialNumber == y.serialNumber;
         }
 
         public int GetHashCode(
-            (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers) obj)
-        {
+            (Scheme scheme, string productCode, string serialNumber, string batchIdentifier, string expiry, IReadOnlyDictionary<NhrnMarket, string> nationalNumbers) obj) {
             return obj.productCode.GetHashCode(StringComparison.Ordinal)
                  ^ obj.serialNumber.GetHashCode(StringComparison.Ordinal);
         }

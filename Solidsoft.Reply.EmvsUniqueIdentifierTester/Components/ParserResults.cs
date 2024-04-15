@@ -2,19 +2,6 @@
 // <copyright file="ParserResults.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2022 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // A component displaying the results of parsing a barcode.
 // </summary>
@@ -275,8 +262,7 @@ internal class ParserResults : IComponent {
                         DateTime.Now.Year.ToInvariantString("0000")[..2] + "00",
                         CultureInfo.InvariantCulture);
 
-                    century = yearMinusThisYear switch
-                    {
+                    century = yearMinusThisYear switch {
                         > 50 and < 100 => century - 100,
                         <= -50 and > -100 => century + 100,
                         _ => century
@@ -305,8 +291,7 @@ internal class ParserResults : IComponent {
                 }
             }
             // ReSharper disable once EmptyGeneralCatchClause
-            catch
-            {
+            catch {
                 // Do nothing here
             }
 

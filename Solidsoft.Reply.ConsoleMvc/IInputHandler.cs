@@ -2,19 +2,6 @@
 // <copyright file="IInputHandler.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Represents an input handler for console applications. 
 // </summary>
@@ -27,8 +14,7 @@ using System;
 /// <summary>
 /// Represents an input handler for console applications. 
 /// </summary>
-public interface IInputHandler : IDisposable
-{
+public interface IInputHandler : IDisposable {
     /// <summary>
     /// Represents a key press event.
     /// </summary>
@@ -37,7 +23,7 @@ public interface IInputHandler : IDisposable
     /// <summary>
     /// Represents entering of a line.
     /// </summary>
-    public event EventHandler<ConsoleLineEntryArgs> LineEntry;
+    public event EventHandler<ConsoleLineEntryEventArgs> LineEntry;
 
     /// <summary>
     /// Gets or sets a value indicating whether lines of text that are not terminated by a

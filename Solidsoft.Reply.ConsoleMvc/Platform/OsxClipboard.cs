@@ -2,19 +2,6 @@
 // <copyright file="OsxClipboard.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Copies text to the macOS pasteboard.
 // </summary>
@@ -27,8 +14,7 @@ using System.Runtime.InteropServices;
 /// <summary>
 /// Copies text to the macOS pasteboard.
 /// </summary>
-public static class OsxClipboard
-{
+public static class OsxClipboard {
     /// <summary>
     /// Data format used for text.
     /// </summary>
@@ -38,14 +24,12 @@ public static class OsxClipboard
     /// Copies text to the macOS clipboard.
     /// </summary>
     /// <param name="text">The text to be copied.</param>
-    public static void SetText(string text)
-    {
+    public static void SetText(string text) {
         var nsString = objc_getClass("NSString");
         IntPtr str = default;
         IntPtr dataType = default;
 
-        try
-        {
+        try {
             str = objc_msgSend(objc_msgSend(nsString, sel_registerName("alloc")), sel_registerName("initWithUTF8String:"), text);
             dataType = objc_msgSend(objc_msgSend(nsString, sel_registerName("alloc")), sel_registerName("initWithUTF8String:"), NsPasteboardTypeString);
 
@@ -55,15 +39,12 @@ public static class OsxClipboard
             objc_msgSend(generalPasteboard, sel_registerName("clearContents"));
             objc_msgSend(generalPasteboard, sel_registerName("setString:forType:"), str, dataType);
         }
-        finally
-        {
-            if (str != default)
-            {
+        finally {
+            if (str != default) {
                 objc_msgSend(str, sel_registerName("release"));
             }
 
-            if (dataType != default)
-            {
+            if (dataType != default) {
                 objc_msgSend(dataType, sel_registerName("release"));
             }
         }

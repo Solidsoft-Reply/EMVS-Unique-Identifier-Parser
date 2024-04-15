@@ -2,19 +2,6 @@
 // <copyright file="CalibrationReport.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2022 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // A component displaying the calibration report.
 // </summary>
@@ -59,19 +46,18 @@ internal class CalibrationReport : IComponent {
         WriteLine();
         foreach (var information in CalibrationInformation.OrderByDescending(i => i.Level)) {
             ForegroundColor = information.Level switch {
-                                  InformationLevel.Error       => ConsoleColor.Red,
-                                  InformationLevel.Warning     => ConsoleColor.DarkYellow,
-                                  InformationLevel.Information => ConsoleColor.Green,
-                                  _                                       => ForegroundColor
-                              };
+                InformationLevel.Error => ConsoleColor.Red,
+                InformationLevel.Warning => ConsoleColor.DarkYellow,
+                InformationLevel.Information => ConsoleColor.Green,
+                _ => ForegroundColor
+            };
 
-            var levelName = information.Level switch
-            {
+            var levelName = information.Level switch {
                 InformationLevel.Warning => Resources.Warning,
                 InformationLevel.Error => Resources.Error,
                 _ => Resources.Information,
             };
-            
+
             WriteLine($@" {levelName}: {information.Description}");
         }
 

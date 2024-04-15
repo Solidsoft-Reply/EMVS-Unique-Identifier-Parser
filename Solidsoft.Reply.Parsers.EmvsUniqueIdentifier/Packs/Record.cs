@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Record.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="Record.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // A data record in a barcode.
 // </summary>
@@ -48,11 +46,11 @@ public class Record : IRecord
     public Record(FormatIndicator format, IEnumerable<IDataEntity>? elements)
     {
         Encoding = format switch
-                        {
-                            FormatIndicator.Gs1Ai     => Encoding.Gs1,
-                            FormatIndicator.AscMh10Di => Encoding.AscMh10,
-                            _                         => Encoding.Unknown
-                        };
+        {
+            FormatIndicator.Gs1Ai => Encoding.Gs1,
+            FormatIndicator.AscMh10Di => Encoding.AscMh10,
+            _ => Encoding.Unknown
+        };
 
         var packElements = new List<IDataElement>();
 
@@ -120,7 +118,7 @@ public class Record : IRecord
     public IEnumerable<IDataElement> Elements { get; }
 
     /// <summary>
-    ///   Gets the data element encoding (GS1 or ASC MH10.8.2)
+    ///   Gets the data element encoding (GS1 or ASC MH10.8.2).
     /// </summary>
     public Encoding Encoding { get; }
 }

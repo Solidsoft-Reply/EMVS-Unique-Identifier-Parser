@@ -2,19 +2,6 @@
 // <copyright file="Rectangle.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2018 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // The Rectangle structure defines the coordinates of the upper-left and lower-right corners of a rectangle.
 // </summary>
@@ -30,8 +17,7 @@ using System.Runtime.InteropServices;
 /// The Rectangle structure defines the coordinates of the upper-left and lower-right corners of a rectangle.
 /// </summary>
 [StructLayout(LayoutKind.Sequential)]
-internal struct Rectangle : System.IEquatable<Rectangle>
-{
+internal struct Rectangle : System.IEquatable<Rectangle> {
     /// <summary>
     /// The x-coordinate of the upper-left corner of the rectangle.
     /// </summary>
@@ -67,8 +53,7 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// <param name="bottom">
     /// The y-coordinate of the lower-right corner of the rectangle.
     /// </param>
-    public Rectangle(int left, int top, int right, int bottom)
-    {
+    public Rectangle(int left, int top, int right, int bottom) {
         Left = left;
         Top = top;
         Right = right;
@@ -86,18 +71,15 @@ internal struct Rectangle : System.IEquatable<Rectangle>
         "SA1650:ElementDocumentationMustBeSpelledCorrectly",
         Justification = "Reviewed. Suppression is OK here.")]
     public Rectangle(System.Drawing.Rectangle r)
-        : this(r.Left, r.Top, r.Right, r.Bottom)
-    {
+        : this(r.Left, r.Top, r.Right, r.Bottom) {
     }
 
     /// <summary>
     /// Gets or sets the x-coordinate of the upper-left corner of the rectangle.
     /// </summary>
-    public int X
-    {
+    public int X {
         get => Left;
-        set
-        {
+        set {
             Right -= Left - value;
             Left = value;
         }
@@ -106,11 +88,9 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// <summary>
     /// Gets or sets the y-coordinate of the upper-left corner of the rectangle.
     /// </summary>
-    public int Y
-    {
+    public int Y {
         get => Top;
-        set
-        {
+        set {
             Bottom -= Top - value;
             Top = value;
         }
@@ -119,8 +99,7 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// <summary>
     /// Gets or sets the height of the rectangle.
     /// </summary>
-    public int Height
-    {
+    public int Height {
         get => Bottom - Top;
         set => Bottom = value + Top;
     }
@@ -128,8 +107,7 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// <summary>
     /// Gets or sets the width of the rectangle.
     /// </summary>
-    public int Width
-    {
+    public int Width {
         get => Right - Left;
         set => Right = value + Left;
     }
@@ -139,11 +117,9 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// origin of the rectangle.
     /// </summary>
     // ReSharper disable once UnusedMember.Global
-    public Point Location
-    {
+    public System.Drawing.Point Location {
         get => new(Left, Top);
-        set
-        {
+        set {
             X = value.X;
             Y = value.Y;
         }
@@ -153,11 +129,9 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// Gets or sets an ordered set of integers that specify the size of the rectangle.
     /// </summary>
     // ReSharper disable once UnusedMember.Global
-    public Size Size
-    {
+    public Size Size {
         get => new(Width, Height);
-        set
-        {
+        set {
             Width = value.Width;
             Height = value.Height;
         }
@@ -167,8 +141,7 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// Implicitly convert a Windows rectangle .NET rectangle.
     /// </summary>
     /// <param name="r">The Windows rectangle.</param>
-    public static implicit operator System.Drawing.Rectangle(Rectangle r)
-    {
+    public static implicit operator System.Drawing.Rectangle(Rectangle r) {
         return new System.Drawing.Rectangle(r.Left, r.Top, r.Width, r.Height);
     }
 
@@ -176,8 +149,7 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// Implicitly convert a .NET rectangle to a Windows rectangle.
     /// </summary>
     /// <param name="r">The .NET rectangle.</param>
-    public static implicit operator Rectangle(System.Drawing.Rectangle r)
-    {
+    public static implicit operator Rectangle(System.Drawing.Rectangle r) {
         return new Rectangle(r);
     }
 
@@ -189,8 +161,7 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// <returns>
     /// True, if the rectangles overlap precisely; otherwise false.
     /// </returns>
-    public static bool operator ==(Rectangle r1, Rectangle r2)
-    {
+    public static bool operator ==(Rectangle r1, Rectangle r2) {
         return r1.Equals(r2);
     }
 
@@ -202,8 +173,7 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// <returns>
     /// True, if the rectangles do not overlap precisely; otherwise false.
     /// </returns>
-    public static bool operator !=(Rectangle r1, Rectangle r2)
-    {
+    public static bool operator !=(Rectangle r1, Rectangle r2) {
         return !r1.Equals(r2);
     }
 
@@ -214,8 +184,7 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// <returns>
     /// True, if the rectangles overlap precisely; otherwise false.
     /// </returns>
-    public bool Equals(Rectangle r)
-    {
+    public bool Equals(Rectangle r) {
         return r.Left == Left && r.Top == Top && r.Right == Right && r.Bottom == Bottom;
     }
 
@@ -227,14 +196,12 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// True, if the rectangles overlap precisely; otherwise false.
     /// </returns>
     [SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1126:PrefixCallsCorrectly", Justification = "Reviewed. Suppression is OK here.")]
-    public override bool Equals(object obj)
-    {
-        return obj switch
-               {
-                   Rectangle rectangle                => Equals(rectangle),
-                   System.Drawing.Rectangle rectangle => Equals(new Rectangle(rectangle)),
-                   _                                  => false
-               };
+    public override bool Equals(object obj) {
+        return obj switch {
+            Rectangle rectangle => Equals(rectangle),
+            System.Drawing.Rectangle rectangle => Equals(new Rectangle(rectangle)),
+            _ => false
+        };
     }
 
     /// <summary>
@@ -243,8 +210,7 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// <returns>
     /// A hash code for this rectangle.
     /// </returns>
-    public override int GetHashCode()
-    {
+    public override int GetHashCode() {
         return ((System.Drawing.Rectangle)this).GetHashCode();
     }
 
@@ -252,8 +218,7 @@ internal struct Rectangle : System.IEquatable<Rectangle>
     /// Returns a textual representation of the rectangle.
     /// </summary>
     /// <returns>A textual representation of the rectangle.</returns>
-    public override string ToString()
-    {
+    public override string ToString() {
         return string.Format(System.Globalization.CultureInfo.CurrentCulture, "{{Left={0},Top={1},Right={2},Bottom={3}}}", Left, Top, Right, Bottom);
     }
 }

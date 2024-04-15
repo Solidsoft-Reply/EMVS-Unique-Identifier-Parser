@@ -2,19 +2,6 @@
 // <copyright file="WM.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Windows Messages.Defined in winuser.h from Windows SDK v6.1 documentation
 // pulled from MSDN.
@@ -32,8 +19,7 @@ using System.Diagnostics.CodeAnalysis;
 /// pulled from MSDN.  
 /// </summary>  
 [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
-public enum WM : uint
-{
+public enum WM : uint {
     /// <summary>  
     /// The WM_NULL message performs no operation. An application sends the WM_NULL message if it wants to post a message that the recipient window will ignore.  
     /// </summary>  
@@ -297,7 +283,9 @@ public enum WM : uint
     /// <summary>  
     /// WM_COMMNOTIFY is Obsolete for Win32-Based Applications  
     /// </summary>  
-    [Obsolete]
+#pragma warning disable S1133 // Deprecated code should be removed
+    [Obsolete("Obsolete for Win32-Based Applications.")]
+#pragma warning restore S1133 // Deprecated code should be removed
     COMMNOTIFY = 0x0044,
 
     /// <summary>  
@@ -314,7 +302,9 @@ public enum WM : uint
     /// Notifies applications that the system, typically a battery-powered personal computer, is about to enter a suspended mode.  
     /// Use: POWERBROADCAST  
     /// </summary>  
-    [Obsolete]
+#pragma warning disable S1133 // Deprecated code should be removed
+    [Obsolete("Use POWERBROADCAST")]
+#pragma warning restore S1133 // Deprecated code should be removed
     POWER = 0x0048,
 
     /// <summary>  
@@ -517,7 +507,9 @@ public enum WM : uint
     /// The WM_KEYDOWN message is posted to the window with the keyboard focus when a non-system key is pressed. A non-system key is a key that is pressed when the ALT key is not pressed.   
     /// </summary>  
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
+#pragma warning disable CA1069 // Enums values should not be duplicated
     KEYDOWN = 0x0100,
+#pragma warning restore CA1069 // Enums values should not be duplicated
 
     /// <summary>  
     /// The WM_KEYUP message is posted to the window with the keyboard focus when a non-system key is released. A non-system key is a key that is pressed when the ALT key is not pressed, or a keyboard key that is pressed when a window has the keyboard focus.   
@@ -564,7 +556,9 @@ public enum WM : uint
     /// <summary>  
     /// This message filters for keyboard messages.  
     /// </summary>  
+#pragma warning disable CA1069 // Enums values should not be duplicated
     KEYLAST = 0x0109,
+#pragma warning restore CA1069 // Enums values should not be duplicated
 
     /// <summary>  
     /// Sent immediately before the IME generates the composition string as a result of a keystroke. A window receives this message through its WindowProc function.   
@@ -584,7 +578,9 @@ public enum WM : uint
     /// <summary>
     /// Sent to an application when the IME changes composition status as a result of a keystroke. A window receives this message through its WindowProc function.   
     /// </summary>
+#pragma warning disable CA1069 // Enums values should not be duplicated
     IME_KEYLAST = 0x010F,
+#pragma warning restore CA1069 // Enums values should not be duplicated
 
     /// <summary>  
     /// The WM_INITDIALOG message is sent to the dialog box procedure immediately before a dialog box is displayed. Dialog box procedures typically use this message to initialize controls and carry out any other initialization tasks that affect the appearance of the dialog box.   
@@ -724,7 +720,9 @@ public enum WM : uint
     /// <summary>  
     /// The WM_MOUSEMOVE message is posted to a window when the cursor moves. If the mouse is not captured, the message is posted to the window that contains the cursor. Otherwise, the message is posted to the window that has captured the mouse.  
     /// </summary>  
+#pragma warning disable CA1069 // Enums values should not be duplicated
     MOUSEMOVE = 0x0200,
+#pragma warning restore CA1069 // Enums values should not be duplicated
 
     /// <summary>  
     /// The WM_LBUTTONDOWN message is posted when the user presses the left mouse button while the cursor is in the client area of a window. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.  
@@ -799,7 +797,9 @@ public enum WM : uint
     /// <summary>  
     /// Use WM_MOUSELAST to specify the last mouse message. Used with PeekMessage() Function.  
     /// </summary>  
+#pragma warning disable CA1069 // Enums values should not be duplicated
     MOUSELAST = 0x020E,
+#pragma warning restore CA1069 // Enums values should not be duplicated
 
     /// <summary>  
     /// The WM_PARENTNOTIFY message is sent to the parent of a child window when the child window is created or destroyed, or when the user clicks a mouse button while the cursor is over the child window. When the child window is being created, the system sends WM_PARENTNOTIFY just before the CreateWindow or CreateWindowEx function that creates the window returns. When the child window is being destroyed, the system sends the message before any processing to destroy the window takes place.  

@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Advice.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2020 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="Advice.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Provides an ordered sequence of advice items.
 // </summary>
@@ -23,13 +21,13 @@
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
 
 using BarcodeScanner.Calibration;
+
 using Properties;
 
 /// <summary>
 ///   Provides an ordered sequence of advice items.
 /// </summary>
-public class Advice : IAdvice<AdviceItem, AdviceType>
-{
+public class Advice : IAdvice<AdviceItem, AdviceType> {
     /// <summary>
     ///   An ordered list of advice items.
     /// </summary>
@@ -43,25 +41,22 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Major Code Smell", "S3358:Ternary operators should not be nested", Justification = "<Pending>")]
     private Advice(
         SystemCapabilities? systemCapabilities,
-        Territory adviceTerritory = Territory.Europe)
-    {
+        Territory adviceTerritory = Territory.Europe) {
         var lowSeverity = new List<AdviceItem>();
         var mediumSeverity = new List<AdviceItem>();
         var highSeverity = new List<AdviceItem>();
 
-        if (systemCapabilities is null)
-        {
+        if (systemCapabilities is null) {
             ArgumentNullException.ThrowIfNull(systemCapabilities);
         }
 
-        var testGs1Only = !systemCapabilities.FormatnnSupportAssessed;
+        var testGs1Only = !systemCapabilities.FormatSupportAssessed;
 
         AddAdviceItemToList(
-            systemCapabilities.ScannerKeyboardPerformance switch
-            {
-                ScannerKeyboardPerformance.Low    => ReportThatTheDataInputPerformanceIsVeryPoor(),
+            systemCapabilities.ScannerKeyboardPerformance switch {
+                ScannerKeyboardPerformance.Low => ReportThatTheDataInputPerformanceIsVeryPoor(),
                 ScannerKeyboardPerformance.Medium => ReportThatTheDataInputPerformanceIsSlowerThanExpected(),
-                _                                 => null
+                _ => null
             });
 
         // Get boolean values
@@ -434,27 +429,25 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         // issue, it feels redundant and confusing to an end user to warn them that they didn't run the
         // PPN tests. So, we will remove the warning if this occurs.
         if ((from ppnTestWarning in mediumSeverity
-             let isPpnError= (from ppnError in highSeverity
-                              where ppnError.AdviceType is AdviceType.RecordSeparatorIncorrectlyRepresentedGermany 
-                                                        or AdviceType.RecordSeparatorIncorrectlyRepresentedNoCalibrationGermany 
-                                                        or AdviceType.CannotReadPpnReliablyGermany 
-                                                        or AdviceType.LayoutsDoNotMatchNoPpn 
-                                                        or AdviceType.HiddenCharactersNotRepresentedCorrectlyNoPpn
-                              select ppnError).Any()
+             let isPpnError = (from ppnError in highSeverity
+                               where ppnError.AdviceType is AdviceType.RecordSeparatorIncorrectlyRepresentedGermany
+                                                         or AdviceType.RecordSeparatorIncorrectlyRepresentedNoCalibrationGermany
+                                                         or AdviceType.CannotReadPpnReliablyGermany
+                                                         or AdviceType.LayoutsDoNotMatchNoPpn
+                                                         or AdviceType.HiddenCharactersNotRepresentedCorrectlyNoPpn
+                               select ppnError).Any()
              let isPpnWarning = (from ppnWarning in mediumSeverity
-                                 where ppnWarning.AdviceType is AdviceType.MayNotReadPpn 
-                                                             or AdviceType.MayNotReadPpnNoCalibration 
+                                 where ppnWarning.AdviceType is AdviceType.MayNotReadPpn
+                                                             or AdviceType.MayNotReadPpnNoCalibration
                                                              or AdviceType.CannotReadPpnReliably
                                  select ppnWarning).Any()
              let isPpnInfo = (from ppnInfo in lowSeverity
-                              where ppnInfo.AdviceType is AdviceType.ReadsUniqueIdentifiersReliablyNoPpnTest 
-                                                       or AdviceType.ReadsUniqueIdentifiersReliablyMayNotReadPpn 
+                              where ppnInfo.AdviceType is AdviceType.ReadsUniqueIdentifiersReliablyNoPpnTest
+                                                       or AdviceType.ReadsUniqueIdentifiersReliablyMayNotReadPpn
                                                        or AdviceType.ReadsUniqueIdentifiersReliablyExceptPpn
                               select ppnInfo).Any()
-
              where (isPpnError || isPpnWarning || isPpnInfo) && ppnTestWarning.AdviceType == AdviceType.NoPpnTest
-             select ppnTestWarning).Any())
-        {
+             select ppnTestWarning).Any()) {
             mediumSeverity.RemoveAll(item => item.AdviceType == AdviceType.NoPpnTest);
         }
 
@@ -462,16 +455,15 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         var layoutsDoNotMatchNoPpn = highSeverity.Find(a => a.AdviceType == AdviceType.LayoutsDoNotMatchNoPpn);
         var hiddenCharactersNotRepresentedCorrectlyNoPpn = highSeverity.Find(a => a.AdviceType == AdviceType.HiddenCharactersNotRepresentedCorrectlyNoPpn);
 
-        if (layoutsDoNotMatchNoPpn is not null || hiddenCharactersNotRepresentedCorrectlyNoPpn is not null ) {
+        if (layoutsDoNotMatchNoPpn is not null || hiddenCharactersNotRepresentedCorrectlyNoPpn is not null) {
             var cannotReadPpnReliably = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadPpnReliably);
             var cannotReadPpnReliablyGermany = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadPpnReliablyGermany);
- 
+
             if (cannotReadPpnReliably is not null) {
                 mediumSeverity.Remove(cannotReadPpnReliably);
             }
 
-            if (cannotReadPpnReliablyGermany is not null)
-            {
+            if (cannotReadPpnReliablyGermany is not null) {
                 mediumSeverity.Remove(cannotReadPpnReliablyGermany);
             }
         }
@@ -481,8 +473,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
             var cannotReadPpnReliablyGermany = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadPpnReliablyGermany);
             var cannotReadUniqueIdentifiersReliably = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadUniqueIdentifiersReliably);
 
-            if (cannotReadPpnReliablyGermany is not null && cannotReadUniqueIdentifiersReliably is not null)
-            {
+            if (cannotReadPpnReliablyGermany is not null && cannotReadUniqueIdentifiersReliably is not null) {
                 highSeverity.Remove(cannotReadPpnReliablyGermany);
             }
         }
@@ -502,67 +493,57 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
             }
 
             var cannotReadUniqueIdentifiersReliably = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadUniqueIdentifiersReliably);
-            if (cannotReadUniqueIdentifiersReliably is not null)
-            {
+            if (cannotReadUniqueIdentifiersReliably is not null) {
                 highSeverity.Remove(cannotReadUniqueIdentifiersReliably);
             }
+
             var recordSeparatorIncorrectlyRepresentedGermany = highSeverity.Find(a => a.AdviceType == AdviceType.RecordSeparatorIncorrectlyRepresentedGermany);
-            if (recordSeparatorIncorrectlyRepresentedGermany is not null)
-            {
+            if (recordSeparatorIncorrectlyRepresentedGermany is not null) {
                 highSeverity.Remove(recordSeparatorIncorrectlyRepresentedGermany);
             }
 
             var mayNotReadAim = mediumSeverity.Find(a => a.AdviceType == AdviceType.MayNotReadAim);
-            if (mayNotReadAim is not null)
-            {
+            if (mayNotReadAim is not null) {
                 mediumSeverity.Remove(mayNotReadAim);
             }
 
             var cannotReadAimNoCalibration = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAimNoCalibration);
-            if (cannotReadAimNoCalibration is not null)
-            {
+            if (cannotReadAimNoCalibration is not null) {
                 mediumSeverity.Remove(cannotReadAimNoCalibration);
             }
 
             var cannotReadAim = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAim);
-            if (cannotReadAim is not null)
-            {
+            if (cannotReadAim is not null) {
                 mediumSeverity.Remove(cannotReadAim);
             }
 
             var mayNotReadPpn = mediumSeverity.Find(a => a.AdviceType == AdviceType.MayNotReadPpn);
-            if (mayNotReadPpn is not null)
-            {
+            if (mayNotReadPpn is not null) {
                 mediumSeverity.Remove(mayNotReadPpn);
             }
 
             var mayNotReadPpnNoCalibration = mediumSeverity.Find(a => a.AdviceType == AdviceType.MayNotReadPpnNoCalibration);
-            if (mayNotReadPpnNoCalibration is not null)
-            {
+            if (mayNotReadPpnNoCalibration is not null) {
                 mediumSeverity.Remove(mayNotReadPpnNoCalibration);
             }
 
             var cannotReadPpnReliably = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadPpnReliably);
-            if (cannotReadPpnReliably is not null)
-            {
+            if (cannotReadPpnReliably is not null) {
                 mediumSeverity.Remove(cannotReadPpnReliably);
             }
 
             var mayNotReadAdditionalDataReliably = mediumSeverity.Find(a => a.AdviceType == AdviceType.MayNotReadAdditionalDataReliably);
-            if (mayNotReadAdditionalDataReliably is not null)
-            {
+            if (mayNotReadAdditionalDataReliably is not null) {
                 mediumSeverity.Remove(mayNotReadAdditionalDataReliably);
             }
 
             var mayNotReadAdditionalDataNoCalibration = mediumSeverity.Find(a => a.AdviceType == AdviceType.MayNotReadAdditionalDataNoCalibration);
-            if (mayNotReadAdditionalDataNoCalibration is not null)
-            {
+            if (mayNotReadAdditionalDataNoCalibration is not null) {
                 mediumSeverity.Remove(mayNotReadAdditionalDataNoCalibration);
             }
 
             var cannotReadAdditionalData = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAdditionalData);
-            if (cannotReadAdditionalData is not null)
-            {
+            if (cannotReadAdditionalData is not null) {
                 mediumSeverity.Remove(cannotReadAdditionalData);
             }
         }
@@ -571,11 +552,9 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         // determines that te scanner appears to be automatically compensating for this, we don't need to
         // report the CAPS LOCK being on, as this is subsumed into the information about compensation.
         var capsLockOn = highSeverity.Find(a => a.AdviceType == AdviceType.CapsLockOn);
-        if (capsLockOn is not null)
-        {
+        if (capsLockOn is not null) {
             var capsLockCompensation = mediumSeverity.Find(a => a.AdviceType == AdviceType.CapsLockCompensation);
-            if (capsLockCompensation is not null)
-            {
+            if (capsLockCompensation is not null) {
                 highSeverity.Remove(capsLockOn);
             }
         }
@@ -594,22 +573,18 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
             highSeverity.Find(a => a.AdviceType == AdviceType.CapsLockOnConvertsToUpperCase) is not null ||
             highSeverity.Find(a => a.AdviceType == AdviceType.CapsLockOnConvertsToLowerCase) is not null ||
             highSeverity.Find(a => a.AdviceType == AdviceType.ConvertsToUpperCase) is not null ||
-            highSeverity.Find(a => a.AdviceType == AdviceType.ConvertsToLowerCase) is not null)
-        {
+            highSeverity.Find(a => a.AdviceType == AdviceType.ConvertsToLowerCase) is not null) {
             var testsFailed = highSeverity.Find(a => a.AdviceType == AdviceType.TestFailed);
 
-            if (testsFailed is not null)
-            {
+            if (testsFailed is not null) {
                 highSeverity.Remove(testsFailed);
             }
 
-            if (noDataReported is not null && partialDataReported is not null)
-            {
+            if (noDataReported is not null && partialDataReported is not null) {
                 highSeverity.Remove(partialDataReported);
             }
 
-            if (noDataReported is not null || partialDataReported is not null)
-            {
+            if (noDataReported is not null || partialDataReported is not null) {
                 // Remove any report about AIM identifiers, additional characters or control characters.
             }
         }
@@ -621,37 +596,35 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         var cannotReadAimNoCalibration2 = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAimNoCalibration);
         var notTransmittingAim = highSeverity.Find(a => a.AdviceType == AdviceType.NotTransmittingAim);
 
-        if ((mayNotReadAim2 is not null || cannotReadAimNoCalibration2 is not null) && 
+        if ((mayNotReadAim2 is not null || cannotReadAimNoCalibration2 is not null) &&
             notTransmittingAim is not null) {
             highSeverity.Remove(notTransmittingAim);
         }
 
-        if (highSeverity.Count > 0)
-        {
-            // Do not report low-severity, as these are used to represent 'green' conditions. 
-            // Given that there are high-severity problems, it can be very confusing if the 
+        if (highSeverity.Count > 0) {
+            // Do not report low-severity, as these are used to represent 'green' conditions.
+            // Given that there are high-severity problems, it can be very confusing if the
             // list also contains low-priority entries ("there is a significant problem...but all is well").
             _adviceItems.AddRange(highSeverity.OrderBy(ai => (int)ai.AdviceType));
             _adviceItems.AddRange(mediumSeverity.OrderBy(ai => (int)ai.AdviceType));
         }
-        else
-        {
+        else {
             // Fix-up for 'green' messages.
-            if (mediumSeverity.Count > 0)
-            {
+            if (mediumSeverity.Count > 0) {
                 // Add a hint that there are other issues to 'green' messages. If a UI shows one
                 // advice message at a time, this will improve the UX.
-                for (var idx = 0; idx < lowSeverity.Count; idx++)
-                {
+                for (var idx = 0; idx < lowSeverity.Count; idx++) {
+#pragma warning disable SA1118 // Parameter should not span multiple lines
                     lowSeverity[idx] = new AdviceItem(
                         lowSeverity[idx].AdviceType,
                         lowSeverity[idx].Condition,
                         lowSeverity[idx].Description +
-                        lowSeverity[idx].Advice +
-                        (mediumSeverity.Count > 1
-                            ? "There are also some additional issues:"
-                            : "There is also an additional issue."),
+                            lowSeverity[idx].Advice +
+                            (mediumSeverity.Count > 1
+                                ? "There are also some additional issues:"
+                                : "There is also an additional issue."),
                         lowSeverity[idx].Severity);
+#pragma warning restore SA1118 // Parameter should not span multiple lines
                 }
             }
 
@@ -661,10 +634,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         return;
 
-        void AddAdviceItemToList(AdviceItem? adviceItem)
-        {
-            switch (adviceItem?.Severity)
-            {
+        void AddAdviceItemToList(AdviceItem? adviceItem) {
+            switch (adviceItem?.Severity) {
                 case ConditionSeverity.Low:
                     lowSeverity.Add(adviceItem);
                     break;
@@ -740,7 +711,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         bool IfAdviceIsNotProvidedSpecificallyForGermany() => adviceTerritory != Territory.Germany;
 
         // 100
-        AdviceItem ReportThatInvariantCharactersAreReadReliably() => 
+        AdviceItem ReportThatInvariantCharactersAreReadReliably() =>
             new(AdviceType.ReadsUniqueIdentifiersReliably);
 
         // 105
@@ -957,6 +928,12 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
     }
 
     /// <summary>
+    ///   Gets an ordered collection of advice items.
+    /// </summary>
+    /// <returns>An ordered collection of advice items.</returns>
+    public IEnumerable<AdviceItem> Items => _adviceItems;
+
+    /// <summary>
     /// Factory method for creating new Advice.
     /// </summary>
     /// <param name="systemCapabilities">The system capabilities.</param>
@@ -965,13 +942,6 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
     public static Advice CreateAdvice(
         SystemCapabilities systemCapabilities,
         Territory adviceTerritory = Territory.Europe) {
-
         return new Advice(systemCapabilities, adviceTerritory);
     }
-
-    /// <summary>
-    ///   Gets an ordered collection of advice items.
-    /// </summary>
-    /// <returns>An ordered collection of advice items.</returns>
-    public IEnumerable<AdviceItem> Items => _adviceItems;
 }

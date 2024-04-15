@@ -2,19 +2,6 @@
 // <copyright file="POINT.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // The POINT structure defines the x- and y-coordinates of a point.
 // </summary>
@@ -25,8 +12,9 @@ namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Platform.Windows;
 /// The POINT structure defines the x- and y-coordinates of a point.
 /// </summary>
 // ReSharper disable once InconsistentNaming
-public struct POINT
-{
+public struct Point {
+#pragma warning disable S1104 // Fields should not have public accessibility
     public int X;
     public int Y;
+#pragma warning restore S1104 // Fields should not have public accessibility
 }

@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="PackIdentifier.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="PackIdentifier.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // An EMVS pack identifier.
 // </summary>
@@ -58,7 +56,7 @@ public class PackIdentifier : IPackIdentifier
     /// </summary>
     private static readonly CompositeFormat PacksError004 = CompositeFormat.Parse(Resources.Packs_Error_004);
 #endif
-    
+
     /// <summary>
     ///   Initializes a new instance of the <see cref="PackIdentifier" /> class.
     /// </summary>
@@ -101,7 +99,7 @@ public class PackIdentifier : IPackIdentifier
     ///   of the pharmaceutical product.
     /// </summary>
     // ReSharper disable once UnusedMember.Global
-    public CountryCode IssuingAgencyCountryCode 
+    public CountryCode IssuingAgencyCountryCode
     {
         get
         {
@@ -117,7 +115,7 @@ public class PackIdentifier : IPackIdentifier
     }
 
     /// <summary>
-    ///   Get a value indicating whether the product code represents a trade item grouping.
+    ///   Gets a value indicating whether the product code represents a trade item grouping.
     /// </summary>
     public bool IsTradeItemGrouping =>
         Scheme == Scheme.Gs1 && ProductCode.Length == 14 && char.IsDigit(ProductCode[0])
@@ -146,7 +144,7 @@ public class PackIdentifier : IPackIdentifier
             }
 
             // Does the identifier contain a product code?
-            if (string.IsNullOrEmpty(ProductCode) && 
+            if (string.IsNullOrEmpty(ProductCode) &&
                 !Exceptions.Any(ex => ex.ErrorNumber is >= 10 and < 30))
             {
                 var multipleProductCodes = Exceptions.Any(
@@ -172,15 +170,15 @@ public class PackIdentifier : IPackIdentifier
             }
 
             // Did the parser fail to detect any batch identifier data elements?
-            if (string.IsNullOrEmpty(BatchIdentifier) && 
+            if (string.IsNullOrEmpty(BatchIdentifier) &&
                 !Exceptions.Any(ex => ex.ErrorNumber is >= 30 and < 40))
             {
                 var multipleBatchIdentifiers =
                     Exceptions.Any(ex => ex.ErrorNumber is 7 or 30);
 
                 string GetIfaBatchElementId() => Scheme == Scheme.Ifa ? "1T" : string.Empty;
-                string GetIfaBatchElementTitle() => Scheme == Scheme.Ifa 
-                                                        ? "TRACEABILITY NUMBER ASSIGNED BY THE SUPPLIER" 
+                string GetIfaBatchElementTitle() => Scheme == Scheme.Ifa
+                                                        ? "TRACEABILITY NUMBER ASSIGNED BY THE SUPPLIER"
                                                         : string.Empty;
 
                 AddException(
@@ -191,7 +189,7 @@ public class PackIdentifier : IPackIdentifier
 #if NET8_0_OR_GREATER
                             PacksError002,
 #else
-                            Resources.Packs_Error_002, 
+                            Resources.Packs_Error_002,
 #endif
                             multipleBatchIdentifiers ? string.Empty : Resources.SubstituteUnique),
                         Scheme == Scheme.Gs1 ? "10" : GetIfaBatchElementId(),
@@ -200,7 +198,7 @@ public class PackIdentifier : IPackIdentifier
             }
 
             // Did the parser fail to detect any expiry date data elements?
-            if (string.IsNullOrEmpty(Expiry) && 
+            if (string.IsNullOrEmpty(Expiry) &&
                 !Exceptions.Any(ex => ex.ErrorNumber is >= 40 and < 50))
             {
                 var multipleExpiryDate = Exceptions.Any(ex => ex.ErrorNumber is 8 or 40);
@@ -347,7 +345,7 @@ public class PackIdentifier : IPackIdentifier
     public SymbologyValidity ValidSymbology { get; set; }
 
     /// <summary>
-    ///   Gets or set the raw data containing the pack identifier.
+    ///   Gets or sets the raw data containing the pack identifier.
     /// </summary>
     /// <remarks>
     ///   The raw data is provided, even if the parser cannot

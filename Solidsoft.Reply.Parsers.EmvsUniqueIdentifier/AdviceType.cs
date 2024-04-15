@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="AdviceType.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2020 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="AdviceType.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // The types of advice provided through analysis of the calibration results.
 // </summary>
@@ -408,5 +406,5 @@ public enum AdviceType
     ///   data entry to verify PPN unique identifiers or configure your barcode
     ///   scanner to emulate a numeric keypad.</p>
     /// </summary>
-    ReadsUniqueIdentifiersReliablyExceptPpn = 115
+    ReadsUniqueIdentifiersReliablyExceptPpn = 115,
 }

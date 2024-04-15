@@ -2,19 +2,6 @@
 // <copyright file="KeyboardCalibratorTestsFromUnitedStatesPpn.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2018 Solidsoft Reply Ltd.  All rights reserved.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Unit tests for the Keyboard Calibrator
 // </summary>
@@ -37,8 +24,7 @@ using BarcodeScanner.Calibration;
 /// <summary>
 /// Unit tests for the Keyboard Calibrator.
 /// </summary>
-public class KeyboardCalibratorTestsFromUnitedStatesPpn
-{
+public class KeyboardCalibratorTestsFromUnitedStatesPpn {
     private const string UnitedStatesBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \x001D    \x001C    \0    \0    \x000D";
     private const string UnitedStatesBarcode1 = "[)>\006\x001D9N111003592770\x001D1TDdVcX<t\x001DD230207\x001DSyCH*4'h1Ab\0\x0004\x000D";
     private const string UnitedStatesBarcode2 = "[)>\006\x001D9N111003592770\x001D1T.GRs!qO\x001DD230729\x001DSTgIv?,6BmK\0\x0004\x000D";
@@ -989,8 +975,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// <summary>
     /// Initializes a new instance of the <see cref="KeyboardCalibratorTestsFromUnitedStates"/> class.
     /// </summary>
-    public KeyboardCalibratorTestsFromUnitedStatesPpn()
-    {
+    public KeyboardCalibratorTestsFromUnitedStatesPpn() {
         _baseIdentifiers = BasePackIdentifiers(
             BaseCalibration().CalibrationData);
     }
@@ -999,13 +984,11 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Test a simple string
     /// </summary>
     [Fact]
-    public void UnitedStatesToUnitedStates()
-    {
+    public void UnitedStatesToUnitedStates() {
         var calibrator = new Calibrator();
         var loopCount = 0;
 
-        foreach (var token in calibrator.CalibrationTokens())
-        {
+        foreach (var token in calibrator.CalibrationTokens()) {
             calibrator.Calibrate(ConvertToCharacterValues(BaselineCalibrationUsUs()), token);
             loopCount++;
         }
@@ -1020,8 +1003,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void LexonPpnError()
-    {
+    public void LexonPpnError() {
         PerformParserTest(
             PerformCalibrationTest("Lexon PPN Error").CalibrationData,
             LexonPpnErrorBarcodeData());
@@ -1033,8 +1015,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBelgianFrench()
-    {
+    public void ToBelgianFrench() {
         PerformParserTest(
             PerformCalibrationTest("Belgian French").CalibrationData,
             BelgianFrenchBarcodeData());
@@ -1045,8 +1026,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBelgianComma()
-    {
+    public void ToBelgianComma() {
         PerformParserTest(
             PerformCalibrationTest("Belgian (Comma)").CalibrationData,
             BelgianCommaBarcodeData());
@@ -1057,8 +1037,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBelgianPeriod()
-    {
+    public void ToBelgianPeriod() {
         PerformParserTest(
             PerformCalibrationTest("Belgian (Period)").CalibrationData,
             BelgianPeriodBarcodeData());
@@ -1069,8 +1048,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToFrench()
-    {
+    public void ToFrench() {
         PerformParserTest(
             PerformCalibrationTest("French").CalibrationData,
             FrenchBarcodeData());
@@ -1081,8 +1059,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSwissFrench()
-    {
+    public void ToSwissFrench() {
         PerformParserTest(
             PerformCalibrationTest("Swiss French").CalibrationData,
             SwissFrenchBarcodeData());
@@ -1093,8 +1070,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToCroatianStandard()
-    {
+    public void ToCroatianStandard() {
         PerformParserTest(
             PerformCalibrationTest("Croatian (Standard)").CalibrationData,
             CroatianStandardBarcodeData());
@@ -1105,8 +1081,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBulgarian()
-    {
+    public void ToBulgarian() {
         PerformParserTest(
             PerformCalibrationTest("Bulgarian").CalibrationData,
             BulgarianBarcodeData());
@@ -1117,8 +1092,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBulgarianLatin()
-    {
+    public void ToBulgarianLatin() {
         PerformParserTest(
             PerformCalibrationTest("Bulgarian (Latin)").CalibrationData,
             BulgarianLatinBarcodeData());
@@ -1129,8 +1103,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBulgarianPhoneticTraditional()
-    {
+    public void ToBulgarianPhoneticTraditional() {
         PerformParserTest(
             PerformCalibrationTest("Bulgarian (Phonetic Traditional)").CalibrationData,
             BulgarianPhoneticTraditionalBarcodeData());
@@ -1141,8 +1114,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBulgarianPhonetic()
-    {
+    public void ToBulgarianPhonetic() {
         PerformParserTest(
             PerformCalibrationTest("Bulgarian (Phonetic)").CalibrationData,
             BulgarianPhoneticBarcodeData());
@@ -1153,8 +1125,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBulgarianTypewriter()
-    {
+    public void ToBulgarianTypewriter() {
         PerformParserTest(
             PerformCalibrationTest("Bulgarian (Typewriter)").CalibrationData,
             BulgarianTypewriterBarcodeData());
@@ -1165,8 +1136,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSwedish()
-    {
+    public void ToSwedish() {
         PerformParserTest(
             PerformCalibrationTest("Swedish").CalibrationData,
             SwedishBarcodeData());
@@ -1177,8 +1147,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSwedishWithSami()
-    {
+    public void ToSwedishWithSami() {
         PerformParserTest(
             PerformCalibrationTest("Swedish with Sami").CalibrationData,
             SwedishWithSamiBarcodeData());
@@ -1189,8 +1158,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToGreek()
-    {
+    public void ToGreek() {
         PerformParserTest(
             PerformCalibrationTest("Greek").CalibrationData,
             GreekBarcodeData());
@@ -1200,8 +1168,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Test calibration for a Greek (220) computer keyboard layout
     /// </summary>
     [Fact]
-    public void ToGreek220()
-    {
+    public void ToGreek220() {
         // Calibration fails
         var token = PerformCalibrationTest("Greek (220)");
         Assert.Null(token.CalibrationData);
@@ -1212,8 +1179,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToGreek319()
-    {
+    public void ToGreek319() {
         PerformParserTest(
             PerformCalibrationTest("Greek (319)").CalibrationData,
             Greek319BarcodeData());
@@ -1223,8 +1189,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Test calibration for a Greek Polytonic computer keyboard layout
     /// </summary>
     [Fact]
-    public void ToGreekPolytonic()
-    {
+    public void ToGreekPolytonic() {
         // Calibration fails
         var token = PerformCalibrationTest("Greek Polytonic");
         Assert.Null(token.CalibrationData);
@@ -1234,8 +1199,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Test calibration for a Czech computer keyboard layout
     /// </summary>
     [Fact]
-    public void ToCzech()
-    {
+    public void ToCzech() {
         var token = PerformCalibrationTest("Czech");
         // Check warning for German PPN packs not recognised.
         Assert.Contains(token.Warnings, ci => ci.InformationType == InformationType.IsoIec15434SyntaxNotRecognised);
@@ -1246,8 +1210,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToCzechQwerty()
-    {
+    public void ToCzechQwerty() {
         PerformParserTest(
             PerformCalibrationTest("Czech (QWERTY)").CalibrationData,
             CzechQwertyBarcodeData());
@@ -1258,8 +1221,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToCzechProgrammers()
-    {
+    public void ToCzechProgrammers() {
         PerformParserTest(
             PerformCalibrationTest("Czech Programmers").CalibrationData,
             CzechProgrammersBarcodeData());
@@ -1270,8 +1232,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToDutch()
-    {
+    public void ToDutch() {
         PerformParserTest(
             PerformCalibrationTest("Dutch").CalibrationData,
             DutchBarcodeData());
@@ -1282,8 +1243,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToEstonian()
-    {
+    public void ToEstonian() {
         PerformParserTest(
             PerformCalibrationTest("Estonian").CalibrationData,
             EstonianBarcodeData());
@@ -1294,8 +1254,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToFinnish()
-    {
+    public void ToFinnish() {
         PerformParserTest(
             PerformCalibrationTest("Finnish").CalibrationData,
             FinnishBarcodeData());
@@ -1306,8 +1265,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToFinnishWithSami()
-    {
+    public void ToFinnishWithSami() {
         PerformParserTest(
             PerformCalibrationTest("Finnish with Sami").CalibrationData,
             FinnishWithSamiBarcodeData());
@@ -1318,8 +1276,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToGerman()
-    {
+    public void ToGerman() {
         PerformParserTest(
             PerformCalibrationTest("German").CalibrationData,
             GermanBarcodeData());
@@ -1330,8 +1287,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToGermanIbm()
-    {
+    public void ToGermanIbm() {
         PerformParserTest(
             PerformCalibrationTest("German (IBM)").CalibrationData,
             GermanIbmBarcodeData());
@@ -1342,8 +1298,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSwissGerman()
-    {
+    public void ToSwissGerman() {
         PerformParserTest(
             PerformCalibrationTest("Swiss German").CalibrationData,
             SwissGermanBarcodeData());
@@ -1354,8 +1309,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToDanish()
-    {
+    public void ToDanish() {
         PerformParserTest(
             PerformCalibrationTest("Danish").CalibrationData,
             DanishBarcodeData());
@@ -1366,8 +1320,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToHungarian()
-    {
+    public void ToHungarian() {
         PerformParserTest(
             PerformCalibrationTest("Hungarian").CalibrationData,
             HungarianBarcodeData());
@@ -1378,8 +1331,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToHungarian101Key()
-    {
+    public void ToHungarian101Key() {
         PerformParserTest(
             PerformCalibrationTest("Hungarian 101-key").CalibrationData,
             Hungarian101KeyBarcodeData());
@@ -1390,8 +1342,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToIcelandic()
-    {
+    public void ToIcelandic() {
         PerformParserTest(
             PerformCalibrationTest("Icelandic").CalibrationData,
             IcelandicBarcodeData());
@@ -1402,8 +1353,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToIrish()
-    {
+    public void ToIrish() {
         PerformParserTest(
             PerformCalibrationTest("Irish").CalibrationData,
             IrishBarcodeData());
@@ -1414,8 +1364,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToItalian()
-    {
+    public void ToItalian() {
         PerformParserTest(
             PerformCalibrationTest("Italian").CalibrationData,
             ItalianBarcodeData());
@@ -1426,8 +1375,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToItalian142()
-    {
+    public void ToItalian142() {
         PerformParserTest(
             PerformCalibrationTest("Italian (142)").CalibrationData,
             Italian142BarcodeData());
@@ -1437,8 +1385,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Test calibration for a Latvian (Standard) computer keyboard layout
     /// </summary>
     [Fact]
-    public void ToLatvianStandard()
-    {
+    public void ToLatvianStandard() {
         // Calibration fails
         var token = PerformCalibrationTest("Latvian (Standard)");
         Assert.Null(token.CalibrationData);
@@ -1449,8 +1396,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToLatvianQwerty()
-    {
+    public void ToLatvianQwerty() {
         PerformParserTest(
             PerformCalibrationTest("Latvian (QWERTY)").CalibrationData,
             LatvianQwertyBarcodeData());
@@ -1461,8 +1407,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToLatvian()
-    {
+    public void ToLatvian() {
         PerformParserTest(
             PerformCalibrationTest("Latvian").CalibrationData,
             LatvianBarcodeData());
@@ -1473,8 +1418,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToLithuanian()
-    {
+    public void ToLithuanian() {
         PerformParserTest(
             PerformCalibrationTest("Lithuanian").CalibrationData,
             LithuanianBarcodeData());
@@ -1485,8 +1429,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToLithuanianIbm()
-    {
+    public void ToLithuanianIbm() {
         PerformParserTest(
             PerformCalibrationTest("Lithuanian (IBM)").CalibrationData,
             LithuanianIbmBarcodeData());
@@ -1497,8 +1440,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToLithuanianStandard()
-    {
+    public void ToLithuanianStandard() {
         PerformParserTest(
             PerformCalibrationTest("Lithuanian (Standard)").CalibrationData,
             LithuanianStandardBarcodeData());
@@ -1509,8 +1451,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSorbian()
-    {
+    public void ToSorbian() {
         PerformParserTest(
             PerformCalibrationTest("Sorbian").CalibrationData,
             SorbianBarcodeData());
@@ -1521,8 +1462,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToNorwegianWithSami()
-    {
+    public void ToNorwegianWithSami() {
         PerformParserTest(
             PerformCalibrationTest("Norwegian with Sami").CalibrationData,
             NorwegianWithSamiBarcodeData());
@@ -1533,8 +1473,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToLuxembourgish()
-    {
+    public void ToLuxembourgish() {
         PerformParserTest(
             PerformCalibrationTest("Luxembourgish").CalibrationData,
             LuxembourgishBarcodeData());
@@ -1545,8 +1484,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToNorwegian()
-    {
+    public void ToNorwegian() {
         PerformParserTest(
             PerformCalibrationTest("Norwegian").CalibrationData,
             NorwegianBarcodeData());
@@ -1557,8 +1495,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToMaltese47Key()
-    {
+    public void ToMaltese47Key() {
         PerformParserTest(
             PerformCalibrationTest("Maltese 47-key").CalibrationData,
             Maltese47KeyBarcodeData());
@@ -1569,8 +1506,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToMaltese48Key()
-    {
+    public void ToMaltese48Key() {
         PerformParserTest(
             PerformCalibrationTest("Maltese 48-key").CalibrationData,
             Maltese48KeyBarcodeData());
@@ -1581,8 +1517,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToPolishProgrammers()
-    {
+    public void ToPolishProgrammers() {
         PerformParserTest(
             PerformCalibrationTest("Polish (Programmers)").CalibrationData,
             PolishProgrammersBarcodeData());
@@ -1593,8 +1528,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToPolish214()
-    {
+    public void ToPolish214() {
         PerformParserTest(
             PerformCalibrationTest("Polish (214)").CalibrationData,
             Polish214BarcodeData());
@@ -1605,8 +1539,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToPortuguese()
-    {
+    public void ToPortuguese() {
         PerformParserTest(
             PerformCalibrationTest("Portuguese").CalibrationData,
             PortugueseBarcodeData());
@@ -1617,8 +1550,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToRomanianStandard()
-    {
+    public void ToRomanianStandard() {
         PerformParserTest(
             PerformCalibrationTest("Romanian (Standard)").CalibrationData,
             RomanianStandardBarcodeData());
@@ -1629,8 +1561,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToRomanianLegacy()
-    {
+    public void ToRomanianLegacy() {
         PerformParserTest(
             PerformCalibrationTest("Romanian (Legacy)").CalibrationData,
             RomanianLegacyBarcodeData());
@@ -1641,8 +1572,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToRomanianProgrammers()
-    {
+    public void ToRomanianProgrammers() {
         PerformParserTest(
             PerformCalibrationTest("Romanian (Programmers)").CalibrationData,
             RomanianProgrammersBarcodeData());
@@ -1653,8 +1583,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToScottishGaelic()
-    {
+    public void ToScottishGaelic() {
         PerformParserTest(
             PerformCalibrationTest("Scottish Gaelic").CalibrationData,
             ScottishGaelicBarcodeData());
@@ -1664,8 +1593,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Test calibration for a Slovak computer keyboard layout
     /// </summary>
     [Fact]
-    public void ToSlovak()
-    {
+    public void ToSlovak() {
         // Calibration fails
         var token = PerformCalibrationTest("Slovak");
         Assert.Null(token.CalibrationData);
@@ -1675,8 +1603,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Test calibration for a Slovak (QWERTY) computer keyboard layout
     /// </summary>
     [Fact]
-    public void ToSlovakQwerty()
-    {
+    public void ToSlovakQwerty() {
         PerformParserTest(
             PerformCalibrationTest("Slovak (QWERTY)").CalibrationData,
             SlovakQwertyBarcodeData());
@@ -1687,8 +1614,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSlovenian()
-    {
+    public void ToSlovenian() {
         PerformParserTest(
             PerformCalibrationTest("Slovenian").CalibrationData,
             SlovenianBarcodeData());
@@ -1699,8 +1625,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSpanish()
-    {
+    public void ToSpanish() {
         PerformParserTest(
             PerformCalibrationTest("Spanish").CalibrationData,
             SpanishBarcodeData());
@@ -1710,8 +1635,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Test calibration for a Spanish Variation computer keyboard layout
     /// </summary>
     [Fact]
-    public void ToSpanishVariation()
-    {
+    public void ToSpanishVariation() {
         // Calibration fails
         var token = PerformCalibrationTest("Spanish Variation");
         Assert.Null(token.CalibrationData);
@@ -1722,8 +1646,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSorbianStandard()
-    {
+    public void ToSorbianStandard() {
         PerformParserTest(
             PerformCalibrationTest("Sorbian Standard").CalibrationData,
             SorbianStandardBarcodeData());
@@ -1734,8 +1657,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSorbianExtended()
-    {
+    public void ToSorbianExtended() {
         PerformParserTest(
             PerformCalibrationTest("Sorbian Extended").CalibrationData,
             SorbianExtendedBarcodeData());
@@ -1746,8 +1668,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSorbianStandardLegacy()
-    {
+    public void ToSorbianStandardLegacy() {
         PerformParserTest(
             PerformCalibrationTest("Sorbian Standard (Legacy)").CalibrationData,
             SorbianStandardLegacyBarcodeData());
@@ -1758,8 +1679,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToUnitedKingdom()
-    {
+    public void ToUnitedKingdom() {
         PerformParserTest(
             PerformCalibrationTest("United Kingdom").CalibrationData,
             UnitedKingdomBarcodeData());
@@ -1770,8 +1690,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToUnitedKingdomExtended()
-    {
+    public void ToUnitedKingdomExtended() {
         PerformParserTest(
             PerformCalibrationTest("United Kingdom Extended").CalibrationData,
             UnitedKingdomExtendedBarcodeData());
@@ -1782,8 +1701,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void Ascii30AsRepresented()
-    {
+    public void Ascii30AsRepresented() {
         PerformParserTest(
             PerformCalibrationTest("United Kingdom Variant 1").CalibrationData,
             UnitedKingdomVariant1BarcodeData());
@@ -1794,8 +1712,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void Ascii30AsVariantCharacter()
-    {
+    public void Ascii30AsVariantCharacter() {
         PerformParserTest(
             PerformCalibrationTest("United Kingdom Variant 2").CalibrationData,
             UnitedKingdomVariant2BarcodeData());
@@ -1806,8 +1723,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void Ascii30AsInvariantCharacter()
-    {
+    public void Ascii30AsInvariantCharacter() {
         PerformParserTest(
             PerformCalibrationTest("United Kingdom Variant 3").CalibrationData,
             UnitedKingdomVariant3BarcodeData());
@@ -1817,8 +1733,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Performs a calibration test.
     /// </summary>
     /// <param name="layoutName">The name of the computer keyboard layout</param>
-    private static Token PerformCalibrationTest(string layoutName)
-    {
+    private static Token PerformCalibrationTest(string layoutName) {
         Debug.WriteLine(layoutName);
 
         var expectedCalibrations = UnitedStatesExpectedCalibrations();
@@ -1846,28 +1761,23 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
 
         calibrator.RecognisedDataElements = recognisedDataElements;
 
-        foreach (var token in calibrator.CalibrationTokens())
-        {
+        foreach (var token in calibrator.CalibrationTokens()) {
             var baseLine = computerKeyboardLayout.Keys.First();
             currentToken = token;
 
-            if (loopCount < 0)
-            {
+            if (loopCount < 0) {
                 currentToken = calibrator.Calibrate(ConvertToCharacterValues(baseLine), currentToken);
                 loopCount++;
             }
-            else
-            {
-                if (loopCount < computerKeyboardLayout[baseLine].Count)
-                {
+            else {
+                if (loopCount < computerKeyboardLayout[baseLine].Count) {
                     currentToken = calibrator.Calibrate(
                         ConvertToCharacterValues(computerKeyboardLayout[baseLine][loopCount++]),
                         currentToken);
                 }
             }
 
-            foreach (var error in currentToken.Errors)
-            {
+            foreach (var error in currentToken.Errors) {
                 Debug.WriteLine(error.Description);
             }
         }
@@ -1881,8 +1791,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
 
         return currentToken;
 
-        static string ToLiteral(string input)
-        {
+        static string ToLiteral(string input) {
             using var writer = new StringWriter();
             using var provider = CodeDomProvider.CreateProvider("CSharp");
             provider.GenerateCodeFromExpression(new System.CodeDom.CodePrimitiveExpression(input), writer, null!);
@@ -1890,14 +1799,12 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
         }
     }
 
-    private void PerformParserTest(BarcodeScanner.Calibration.Data data, Dictionary<string, string> scannedData)
-    {
+    private void PerformParserTest(BarcodeScanner.Calibration.Data data, Dictionary<string, string> scannedData) {
         Assert.NotNull(data);
 
         var parser = new Parser(data);
 
-        foreach (var barcodeData in scannedData)
-        {
+        foreach (var barcodeData in scannedData) {
             var identifier = parser.Parse(barcodeData.Value);
             Assert.True(identifier.IsValid);
 
@@ -1916,19 +1823,16 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     /// <param name="data">Calibration data for the scanner keyboard layout.</param>
     /// <returns>A collection of pack identifiers for the scanner keyboard layout.</returns>
-    private static Dictionary<string, IPackIdentifier> BasePackIdentifiers(BarcodeScanner.Calibration.Data data)
-    {
+    private static Dictionary<string, IPackIdentifier> BasePackIdentifiers(BarcodeScanner.Calibration.Data data) {
         var identifiers = new Dictionary<string, IPackIdentifier>();
 
-        if (data is null)
-        {
+        if (data is null) {
             return identifiers;
         }
 
         var parser = new Parser(data);
 
-        foreach (var barcodeData in UnitedStatesBarcodeData())
-        {
+        foreach (var barcodeData in UnitedStatesBarcodeData()) {
             var identifier = parser.Parse(barcodeData.Value);
             identifiers.Add(barcodeData.Key, identifier);
             Assert.True(identifier.IsValid);
@@ -1940,8 +1844,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// <summary>
     /// Performs a calibration test.
     /// </summary>
-    private static Token BaseCalibration()
-    {
+    private static Token BaseCalibration() {
         var computerKeyboardLayout = new Dictionary<string, IList<string>>
                                      {
                                          {
@@ -1954,28 +1857,23 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
         var loopCount = -1;
         Token currentToken = default;
 
-        foreach (var token in calibrator.CalibrationTokens())
-        {
+        foreach (var token in calibrator.CalibrationTokens()) {
             var baseLine = computerKeyboardLayout.Keys.First();
             currentToken = token;
 
-            if (loopCount < 0)
-            {
+            if (loopCount < 0) {
                 currentToken = calibrator.Calibrate(ConvertToCharacterValues(baseLine), currentToken);
                 loopCount++;
             }
-            else
-            {
-                if (loopCount < computerKeyboardLayout[baseLine].Count)
-                {
+            else {
+                if (loopCount < computerKeyboardLayout[baseLine].Count) {
                     currentToken = calibrator.Calibrate(
                         ConvertToCharacterValues(computerKeyboardLayout[baseLine][loopCount++]),
                         currentToken);
                 }
             }
 
-            foreach (var error in currentToken.Errors)
-            {
+            foreach (var error in currentToken.Errors) {
                 Debug.WriteLine(error.Description);
             }
         }
@@ -1989,8 +1887,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// computer keyboard layouts for each European keyboard defined in Windows.
     /// </summary>
     /// <returns>A dictionary of test data.</returns>
-    private static Dictionary<string, Dictionary<string, IList<string>>> UnitedStatesTestData()
-    {
+    private static Dictionary<string, Dictionary<string, IList<string>>> UnitedStatesTestData() {
         var unitedStatesTestData = new Dictionary<string, Dictionary<string, IList<string>>>
                                    {
                                        {
@@ -2756,8 +2653,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// keyboard layouts for each European keyboard defined in Windows.
     /// </summary>
     /// <returns>A dictionary of expected calibrations.</returns>
-    private static Dictionary<string, string> UnitedStatesExpectedCalibrations()
-    {
+    private static Dictionary<string, string> UnitedStatesExpectedCalibrations() {
         var unitedStatesTestCalibrations = new Dictionary<string, string>
                                            {
                                                { "Lexon PPN Error", Calibrations.LexonPpnErrorCalibration },
@@ -2835,8 +2731,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the barcode data as entered using a United States keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> UnitedStatesBarcodeData()
-    {
+    private static Dictionary<string, string> UnitedStatesBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UnitedStatesBarcode1 },
@@ -2858,8 +2753,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for the Lexon PPN error keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LexonPpnErrorBarcodeData()
-    {
+    private static Dictionary<string, string> LexonPpnErrorBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", LexonPpnErrorBarcode1 },
@@ -2881,8 +2775,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Belgian French keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BelgianFrenchBarcodeData()
-    {
+    private static Dictionary<string, string> BelgianFrenchBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", BelgianFrenchBarcode1 },
@@ -2904,8 +2797,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Belgian (Comma) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BelgianCommaBarcodeData()
-    {
+    private static Dictionary<string, string> BelgianCommaBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", BelgianCommaBarcode1 },
@@ -2927,8 +2819,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Belgian (Period) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BelgianPeriodBarcodeData()
-    {
+    private static Dictionary<string, string> BelgianPeriodBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", BelgianPeriodBarcode1 },
@@ -2950,8 +2841,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a French keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> FrenchBarcodeData()
-    {
+    private static Dictionary<string, string> FrenchBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", FrenchBarcode1 },
@@ -2973,8 +2863,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a SwissFrench keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SwissFrenchBarcodeData()
-    {
+    private static Dictionary<string, string> SwissFrenchBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", SwissFrenchBarcode1 },
@@ -2996,8 +2885,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Croatian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> CroatianStandardBarcodeData()
-    {
+    private static Dictionary<string, string> CroatianStandardBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", CroatianStandardBarcode1 },
@@ -3019,8 +2907,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Bulgarian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BulgarianBarcodeData()
-    {
+    private static Dictionary<string, string> BulgarianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", BulgarianBarcode1 },
@@ -3042,8 +2929,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Bulgarian (Latin) keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BulgarianLatinBarcodeData()
-    {
+    private static Dictionary<string, string> BulgarianLatinBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", BulgarianLatinBarcode1 },
@@ -3065,8 +2951,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Bulgarian (Phonetic Traditional) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BulgarianPhoneticTraditionalBarcodeData()
-    {
+    private static Dictionary<string, string> BulgarianPhoneticTraditionalBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", BulgarianPhoneticTraditionalBarcode1 },
@@ -3088,8 +2973,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Bulgarian (Phonetic) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BulgarianPhoneticBarcodeData()
-    {
+    private static Dictionary<string, string> BulgarianPhoneticBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", BulgarianPhoneticBarcode1 },
@@ -3111,8 +2995,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Bulgarian (Typewriter) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BulgarianTypewriterBarcodeData()
-    {
+    private static Dictionary<string, string> BulgarianTypewriterBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", BulgarianTypewriterBarcode1 },
@@ -3134,8 +3017,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Swedish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SwedishBarcodeData()
-    {
+    private static Dictionary<string, string> SwedishBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", SwedishBarcode1 },
@@ -3157,8 +3039,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Swedish with Sami computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SwedishWithSamiBarcodeData()
-    {
+    private static Dictionary<string, string> SwedishWithSamiBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", SwedishWithSamiBarcode1 },
@@ -3180,8 +3061,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Greek computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> GreekBarcodeData()
-    {
+    private static Dictionary<string, string> GreekBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", GreekBarcode1 },
@@ -3203,8 +3083,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Greek (319) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Greek319BarcodeData()
-    {
+    private static Dictionary<string, string> Greek319BarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", Greek319Barcode1 },
@@ -3226,8 +3105,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Czech (QWERTY) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> CzechQwertyBarcodeData()
-    {
+    private static Dictionary<string, string> CzechQwertyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", CzechQwertyBarcode1 },
@@ -3249,8 +3127,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Czech Programmers computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> CzechProgrammersBarcodeData()
-    {
+    private static Dictionary<string, string> CzechProgrammersBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", CzechProgrammersBarcode1 },
@@ -3272,8 +3149,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Dutch computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> DutchBarcodeData()
-    {
+    private static Dictionary<string, string> DutchBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", DutchBarcode1 },
@@ -3295,8 +3171,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for an Estonian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> EstonianBarcodeData()
-    {
+    private static Dictionary<string, string> EstonianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", EstonianBarcode1 },
@@ -3318,8 +3193,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Finnish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> FinnishBarcodeData()
-    {
+    private static Dictionary<string, string> FinnishBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", FinnishBarcode1 },
@@ -3341,8 +3215,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Finnish with Sami computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> FinnishWithSamiBarcodeData()
-    {
+    private static Dictionary<string, string> FinnishWithSamiBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", FinnishWithSamiBarcode1 },
@@ -3364,8 +3237,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a German computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> GermanBarcodeData()
-    {
+    private static Dictionary<string, string> GermanBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", GermanBarcode1 },
@@ -3387,8 +3259,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a German (IBM) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> GermanIbmBarcodeData()
-    {
+    private static Dictionary<string, string> GermanIbmBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", GermanIbmBarcode1 },
@@ -3410,8 +3281,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Swiss German computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SwissGermanBarcodeData()
-    {
+    private static Dictionary<string, string> SwissGermanBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", SwissGermanBarcode1 },
@@ -3433,8 +3303,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Danish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> DanishBarcodeData()
-    {
+    private static Dictionary<string, string> DanishBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", DanishBarcode1 },
@@ -3456,8 +3325,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Hungarian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> HungarianBarcodeData()
-    {
+    private static Dictionary<string, string> HungarianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", HungarianBarcode1 },
@@ -3479,8 +3347,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Hungarian101 computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Hungarian101KeyBarcodeData()
-    {
+    private static Dictionary<string, string> Hungarian101KeyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", Hungarian101KeyBarcode1 },
@@ -3502,8 +3369,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for an Icelandic computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> IcelandicBarcodeData()
-    {
+    private static Dictionary<string, string> IcelandicBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", IcelandicBarcode1 },
@@ -3525,8 +3391,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for an Irish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> IrishBarcodeData()
-    {
+    private static Dictionary<string, string> IrishBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", IrishBarcode1 },
@@ -3548,8 +3413,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for an Italian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> ItalianBarcodeData()
-    {
+    private static Dictionary<string, string> ItalianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", ItalianBarcode1 },
@@ -3571,8 +3435,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for an Italian (142) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Italian142BarcodeData()
-    {
+    private static Dictionary<string, string> Italian142BarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", Italian142Barcode1 },
@@ -3594,8 +3457,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Latvian (QWERTY) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LatvianQwertyBarcodeData()
-    {
+    private static Dictionary<string, string> LatvianQwertyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", LatvianQwertyBarcode1 },
@@ -3617,8 +3479,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Latvian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LatvianBarcodeData()
-    {
+    private static Dictionary<string, string> LatvianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", LatvianBarcode1 },
@@ -3640,8 +3501,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Lithuanian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LithuanianBarcodeData()
-    {
+    private static Dictionary<string, string> LithuanianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", LithuanianBarcode1 },
@@ -3663,8 +3523,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Lithuanian IBM computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LithuanianIbmBarcodeData()
-    {
+    private static Dictionary<string, string> LithuanianIbmBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", LithuanianIbmBarcode1 },
@@ -3686,8 +3545,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Lithuanian Standard computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LithuanianStandardBarcodeData()
-    {
+    private static Dictionary<string, string> LithuanianStandardBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", LithuanianStandardBarcode1 },
@@ -3709,8 +3567,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Norwegian with Sami computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> NorwegianWithSamiBarcodeData()
-    {
+    private static Dictionary<string, string> NorwegianWithSamiBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", NorwegianWithSamiBarcode1 },
@@ -3732,8 +3589,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Luxembourgish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LuxembourgishBarcodeData()
-    {
+    private static Dictionary<string, string> LuxembourgishBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", LuxembourgishBarcode1 },
@@ -3755,8 +3611,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Norwegian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> NorwegianBarcodeData()
-    {
+    private static Dictionary<string, string> NorwegianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", NorwegianBarcode1 },
@@ -3778,8 +3633,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Maltese 47-Key computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Maltese47KeyBarcodeData()
-    {
+    private static Dictionary<string, string> Maltese47KeyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", Maltese47KeyBarcode1 },
@@ -3801,8 +3655,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Maltese 48-Key computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Maltese48KeyBarcodeData()
-    {
+    private static Dictionary<string, string> Maltese48KeyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", Maltese48KeyBarcode1 },
@@ -3824,8 +3677,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Polish (Programmers) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> PolishProgrammersBarcodeData()
-    {
+    private static Dictionary<string, string> PolishProgrammersBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", PolishProgrammersBarcode1 },
@@ -3847,8 +3699,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Polish (214) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Polish214BarcodeData()
-    {
+    private static Dictionary<string, string> Polish214BarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", Polish214Barcode1 },
@@ -3870,8 +3721,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Portuguese computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> PortugueseBarcodeData()
-    {
+    private static Dictionary<string, string> PortugueseBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", PortugueseBarcode1 },
@@ -3893,8 +3743,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Romanian (Standard) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> RomanianStandardBarcodeData()
-    {
+    private static Dictionary<string, string> RomanianStandardBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", RomanianStandardBarcode1 },
@@ -3916,8 +3765,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Romanian (Legacy) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> RomanianLegacyBarcodeData()
-    {
+    private static Dictionary<string, string> RomanianLegacyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", RomanianLegacyBarcode1 },
@@ -3939,8 +3787,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Romanian (Programmers) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> RomanianProgrammersBarcodeData()
-    {
+    private static Dictionary<string, string> RomanianProgrammersBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", RomanianProgrammersBarcode1 },
@@ -3962,8 +3809,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Scottish Gaelic computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> ScottishGaelicBarcodeData()
-    {
+    private static Dictionary<string, string> ScottishGaelicBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", ScottishGaelicBarcode1 },
@@ -3985,8 +3831,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Slovak (QWERTY) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SlovakQwertyBarcodeData()
-    {
+    private static Dictionary<string, string> SlovakQwertyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", SlovakQwertyBarcode1 },
@@ -4008,8 +3853,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Slovenian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SlovenianBarcodeData()
-    {
+    private static Dictionary<string, string> SlovenianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", SlovenianBarcode1 },
@@ -4031,8 +3875,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Spanish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SpanishBarcodeData()
-    {
+    private static Dictionary<string, string> SpanishBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", SpanishBarcode1 },
@@ -4054,8 +3897,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Sorbian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SorbianBarcodeData()
-    {
+    private static Dictionary<string, string> SorbianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", SorbianBarcode1 },
@@ -4077,8 +3919,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Sorbian Standard computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SorbianStandardBarcodeData()
-    {
+    private static Dictionary<string, string> SorbianStandardBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", SorbianStandardBarcode1 },
@@ -4100,8 +3941,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Sorbian Extended computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SorbianExtendedBarcodeData()
-    {
+    private static Dictionary<string, string> SorbianExtendedBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", SorbianExtendedBarcode1 },
@@ -4123,8 +3963,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a Sorbian Standard (Legacy) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SorbianStandardLegacyBarcodeData()
-    {
+    private static Dictionary<string, string> SorbianStandardLegacyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", SorbianStandardLegacyBarcode1 },
@@ -4146,8 +3985,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a United Kingdom computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> UnitedKingdomBarcodeData()
-    {
+    private static Dictionary<string, string> UnitedKingdomBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UnitedKingdomBarcode1 },
@@ -4169,8 +4007,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// Returns the expected barcode data for a United Kingdom Extended computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> UnitedKingdomExtendedBarcodeData()
-    {
+    private static Dictionary<string, string> UnitedKingdomExtendedBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UnitedKingdomExtendedBarcode1 },
@@ -4193,8 +4030,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// case that the ASCII character is reported correctly as an ASCII 30 character.
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> UnitedKingdomVariant1BarcodeData()
-    {
+    private static Dictionary<string, string> UnitedKingdomVariant1BarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UnitedKingdomVariant1Barcode1 },
@@ -4218,8 +4054,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// case that the ASCII character is reported ambiguously as an invariant ASCII character.
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> UnitedKingdomVariant2BarcodeData()
-    {
+    private static Dictionary<string, string> UnitedKingdomVariant2BarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UnitedKingdomVariant2Barcode1 },
@@ -4242,8 +4077,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// case that the ASCII character is reported ambiguously as a variant ASCII character.
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> UnitedKingdomVariant3BarcodeData()
-    {
+    private static Dictionary<string, string> UnitedKingdomVariant3BarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UnitedKingdomVariant3Barcode1 },
@@ -4270,8 +4104,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// The scanner is configured for a US keyboard.
     /// The computer is configured for a US keyboard.
     /// </returns>
-    private static string BaselineCalibrationUsUs()
-    {
+    private static string BaselineCalibrationUsUs() {
         var testString =
             "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    "
           + (char)29;
@@ -4283,17 +4116,14 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn
     /// </summary>
     /// <param name="input">The string of characters to be converted.</param>
     /// <returns>A comma-separated value list of character values.</returns>
-    private static int[] ConvertToCharacterValues(string input)
-    {
-        if (string.IsNullOrWhiteSpace(input))
-        {
-            return Array.Empty<int>();
+    private static int[] ConvertToCharacterValues(string input) {
+        if (string.IsNullOrWhiteSpace(input)) {
+            return [];
         }
 
         var outputBuilder = new int[input.Length];
 
-        for (var idx = 0; idx < input.Length; idx++)
-        {
+        for (var idx = 0; idx < input.Length; idx++) {
             outputBuilder[idx] = input[idx];
         }
 

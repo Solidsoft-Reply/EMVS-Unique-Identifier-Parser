@@ -2,19 +2,6 @@
 // <copyright file="WindowsClipboard.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Copies text to the Windows clipboard.
 // </summary>
@@ -31,8 +18,7 @@ using System.Threading;
 /// Copies text to the Windows clipboard.
 /// </summary>
 [SuppressMessage(category: "Microsoft.StyleCop.CSharp.NamingRules", checkId: "SA1305:FieldNamesMustNotUseHungarianNotation", Justification = "Code follows Windows API naming conventions.")]
-public static class WindowsClipboard
-{
+public static class WindowsClipboard {
     /// <summary>
     /// Data format used for text.
     /// </summary>
@@ -42,50 +28,41 @@ public static class WindowsClipboard
     /// Copies text to the Windows clipboard.
     /// </summary>
     /// <param name="text">The text to be copied.</param>
-    public static void SetText(string text)
-    {
+    public static void SetText(string text) {
         OpenClipboard();
 
         EmptyClipboard();
         IntPtr hGlobal = default;
 
-        try
-        {
+        try {
             var bytes = (text.Length + 1) * 2;
             hGlobal = Marshal.AllocHGlobal(bytes);
 
-            if (hGlobal == default)
-            {
+            if (hGlobal == default) {
                 ThrowWin32();
             }
 
             var target = GlobalLock(hGlobal);
 
-            if (target == default)
-            {
+            if (target == default) {
                 ThrowWin32();
             }
 
-            try
-            {
+            try {
                 Marshal.Copy(text.ToCharArray(), 0, target, text.Length);
             }
-            finally
-            {
+            finally {
                 GlobalUnlock(target);
             }
 
-            if (SetClipboardData(CfUnicodeText, hGlobal) == default)
-            {
+            if (SetClipboardData(CfUnicodeText, hGlobal) == default) {
                 ThrowWin32();
             }
 
             hGlobal = default;
         }
-        finally
-        {
-            if (hGlobal != default)
-            {
+        finally {
+            if (hGlobal != default) {
                 Marshal.FreeHGlobal(hGlobal);
             }
 
@@ -96,14 +73,11 @@ public static class WindowsClipboard
     /// <summary>
     /// Opens the clipboard for examination and prevents other applications from modifying the clipboard content.
     /// </summary>
-    public static void OpenClipboard()
-    {
+    public static void OpenClipboard() {
         var num = 10;
 
-        while (true)
-        {
-            if (OpenClipboard(default))
-            {
+        while (true) {
+            if (OpenClipboard(default)) {
                 break;
             }
 
@@ -121,8 +95,7 @@ public static class WindowsClipboard
     /// <summary>
     /// Throws a Win32 exception.
     /// </summary>
-    private static void ThrowWin32()
-    {
+    private static void ThrowWin32() {
         throw new Win32Exception(Marshal.GetLastWin32Error());
     }
 

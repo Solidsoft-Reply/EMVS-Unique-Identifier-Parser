@@ -2,19 +2,6 @@
 // <copyright file="UsToEuropeanGs1BarcodesWithAimParseTests.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2021 Solidsoft Reply Ltd.  All rights reserved.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Unit tests for the Keyboard Calibrator
 // </summary>
@@ -37,8 +24,7 @@ using Packs;
 /// and the computer keyboard is a European keyboard, and the scanner outputs
 /// an AIM identifier.
 /// </summary>
-public class UsToEuropeanGs1BarcodesWithAimParseTests
-{
+public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// <summary>
     /// A dictionary of base identifiers.
     /// </summary>
@@ -47,8 +33,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// <summary>
     /// Initializes a new instance of the <see cref="UsToEuropeanGs1BarcodesWithAimParseTests"/> class.
     /// </summary>
-    public UsToEuropeanGs1BarcodesWithAimParseTests()
-    {
+    public UsToEuropeanGs1BarcodesWithAimParseTests() {
         _baseIdentifiers = BasePackIdentifiers(
             BaseCalibration().CalibrationData);
     }
@@ -57,13 +42,11 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Test a simple string
     /// </summary>
     [Fact]
-    public void ToUnitedStates()
-    {
+    public void ToUnitedStates() {
         var calibrator = new Calibrator();
         var loopCount = 0;
 
-        foreach (var token in calibrator.CalibrationTokens())
-        {
+        foreach (var token in calibrator.CalibrationTokens()) {
             calibrator.Calibrate(ConvertToCharacterValues(BaselineCalibrationUsUs()), token);
             loopCount++;
         }
@@ -76,8 +59,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBelgianComma()
-    {
+    public void ToBelgianComma() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BelgianCommaCalibration),
             BelgianCommaBarcodeData());
@@ -88,8 +70,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBelgianFrench()
-    {
+    public void ToBelgianFrench() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BelgianFrenchCalibration),
             BelgianFrenchBarcodeData());
@@ -100,8 +81,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBelgianPeriod()
-    {
+    public void ToBelgianPeriod() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BelgianPeriodCalibration),
             BelgianPeriodBarcodeData());
@@ -112,8 +92,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBulgarian()
-    {
+    public void ToBulgarian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianCalibration),
             BulgarianBarcodeData());
@@ -124,8 +103,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBulgarianLatin()
-    {
+    public void ToBulgarianLatin() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianLatinCalibration),
             BulgarianLatinBarcodeData());
@@ -136,8 +114,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBulgarianPhonetic()
-    {
+    public void ToBulgarianPhonetic() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianPhoneticCalibration),
             BulgarianPhoneticBarcodeData());
@@ -148,8 +125,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBulgarianPhoneticTraditional()
-    {
+    public void ToBulgarianPhoneticTraditional() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianPhoneticTraditionalCalibration),
             BulgarianPhoneticTraditionalBarcodeData());
@@ -160,8 +136,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToBulgarianTypewriter()
-    {
+    public void ToBulgarianTypewriter() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianTypewriterCalibration),
             BulgarianTypewriterBarcodeData());
@@ -172,8 +147,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToCzech()
-    {
+    public void ToCzech() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.CzechCalibration),
             CzechBarcodeData());
@@ -184,8 +158,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToCzechProgrammers()
-    {
+    public void ToCzechProgrammers() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.CzechProgrammersCalibration),
             CzechProgrammersBarcodeData());
@@ -196,8 +169,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToCzechQwerty()
-    {
+    public void ToCzechQwerty() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.CzechQwertyCalibration),
             CzechQwertyBarcodeData());
@@ -208,8 +180,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToDanish()
-    {
+    public void ToDanish() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.DanishCalibration),
             DanishBarcodeData());
@@ -220,8 +191,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToDutch()
-    {
+    public void ToDutch() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.DutchCalibration),
             DutchBarcodeData());
@@ -232,8 +202,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToEstonian()
-    {
+    public void ToEstonian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.EstonianCalibration),
             EstonianBarcodeData());
@@ -244,8 +213,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToFinnish()
-    {
+    public void ToFinnish() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.FinnishCalibration),
             FinnishBarcodeData());
@@ -256,8 +224,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToFinnishWithSami()
-    {
+    public void ToFinnishWithSami() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.FinnishWithSamiCalibration),
             FinnishWithSamiBarcodeData());
@@ -268,8 +235,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToFrench()
-    {
+    public void ToFrench() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.FrenchCalibration),
             FrenchBarcodeData());
@@ -280,8 +246,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToGaelic()
-    {
+    public void ToGaelic() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GaelicCalibration),
             GaelicBarcodeData());
@@ -292,8 +257,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToGerman()
-    {
+    public void ToGerman() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GermanCalibration),
             GermanBarcodeData());
@@ -304,8 +268,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToGermanIbm()
-    {
+    public void ToGermanIbm() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GermanIbmCalibration),
             GermanIbmBarcodeData());
@@ -316,8 +279,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToGreek319()
-    {
+    public void ToGreek319() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Greek319Calibration),
             Greek319BarcodeData());
@@ -328,8 +290,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToGreek319Latin()
-    {
+    public void ToGreek319Latin() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Greek319LatinCalibration),
             Greek319LatinBarcodeData());
@@ -340,8 +301,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToGreek()
-    {
+    public void ToGreek() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GreekCalibration),
             GreekBarcodeData());
@@ -352,8 +312,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToGreekLatin()
-    {
+    public void ToGreekLatin() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GreekLatinCalibration),
             GreekLatinBarcodeData());
@@ -364,8 +323,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToHungarian()
-    {
+    public void ToHungarian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.HungarianCalibration),
             HungarianBarcodeData());
@@ -376,8 +334,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToHungarian101Key()
-    {
+    public void ToHungarian101Key() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Hungarian101KeyCalibration),
             Hungarian101KeyBarcodeData());
@@ -388,8 +345,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToIcelandic()
-    {
+    public void ToIcelandic() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.IcelandicCalibration),
             IcelandicBarcodeData());
@@ -400,8 +356,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToIrish()
-    {
+    public void ToIrish() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.IrishCalibration),
             IrishBarcodeData());
@@ -412,8 +367,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToItalian()
-    {
+    public void ToItalian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.ItalianCalibration),
             ItalianBarcodeData());
@@ -424,8 +378,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToItalian142()
-    {
+    public void ToItalian142() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Italian142Calibration),
             Italian142BarcodeData());
@@ -436,8 +389,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToLatvian()
-    {
+    public void ToLatvian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LatvianCalibration),
             LatvianBarcodeData());
@@ -448,8 +400,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToLatvianQwerty()
-    {
+    public void ToLatvianQwerty() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LatvianQwertyCalibration),
             LatvianQwertyBarcodeData());
@@ -460,8 +411,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToLithuanian()
-    {
+    public void ToLithuanian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LithuanianCalibration),
             LithuanianBarcodeData());
@@ -472,8 +422,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToLithuanianIbm()
-    {
+    public void ToLithuanianIbm() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LithuanianIbmCalibration),
             LithuanianIbmBarcodeData());
@@ -484,8 +433,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToLithuanianStandard()
-    {
+    public void ToLithuanianStandard() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LithuanianStandardCalibration),
             LithuanianStandardBarcodeData());
@@ -496,8 +444,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToLuxembourgish()
-    {
+    public void ToLuxembourgish() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LuxembourgishCalibration),
             LuxembourgishBarcodeData());
@@ -508,8 +455,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToMaltese47Key()
-    {
+    public void ToMaltese47Key() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Maltese47KeyCalibration),
             Maltese47KeyBarcodeData());
@@ -520,8 +466,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToMaltese48Key()
-    {
+    public void ToMaltese48Key() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Maltese48KeyCalibration),
             Maltese48KeyBarcodeData());
@@ -532,8 +477,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToNorwegian()
-    {
+    public void ToNorwegian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.NorwegianCalibration),
             NorwegianBarcodeData());
@@ -544,8 +488,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToNorwegianWithSami()
-    {
+    public void ToNorwegianWithSami() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.NorwegianWithSamiCalibration),
             NorwegianWithSamiBarcodeData());
@@ -556,8 +499,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToPolish214()
-    {
+    public void ToPolish214() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Polish214Calibration),
             Polish214BarcodeData());
@@ -568,8 +510,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToPolishProgrammers()
-    {
+    public void ToPolishProgrammers() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.PolishProgrammersCalibration),
             PolishProgrammersBarcodeData());
@@ -580,8 +521,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToPortuguese()
-    {
+    public void ToPortuguese() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.PortugueseCalibration),
             PortugueseBarcodeData());
@@ -592,8 +532,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToRomanianLegacy()
-    {
+    public void ToRomanianLegacy() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.RomanianLegacyCalibration),
             RomanianLegacyBarcodeData());
@@ -604,8 +543,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToRomanianProgrammers()
-    {
+    public void ToRomanianProgrammers() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.RomanianProgrammersCalibration),
             RomanianProgrammersBarcodeData());
@@ -616,8 +554,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToRomanianStandard()
-    {
+    public void ToRomanianStandard() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.RomanianStandardCalibration),
             RomanianStandardBarcodeData());
@@ -628,8 +565,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSamiExtendedFinlandSwedenCalibration()
-    {
+    public void ToSamiExtendedFinlandSwedenCalibration() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SamiExtendedFinlandSwedenCalibration),
             SamiExtendedFinlandSwedenBarcodeData());
@@ -640,8 +576,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSamiExtendedNorwayCalibration()
-    {
+    public void ToSamiExtendedNorwayCalibration() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SamiExtendedNorwayCalibration),
             SamiExtendedNorwayBarcodeData());
@@ -652,8 +587,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSlovakQwerty()
-    {
+    public void ToSlovakQwerty() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SlovakQwertyCalibration),
             SlovakQwertyBarcodeData());
@@ -664,8 +598,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSlovenian()
-    {
+    public void ToSlovenian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SlovenianCalibration),
             SlovenianBarcodeData());
@@ -676,8 +609,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSorbianExtended()
-    {
+    public void ToSorbianExtended() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SorbianExtendedCalibration),
             SorbianExtendedBarcodeData());
@@ -688,8 +620,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSorbianStandard()
-    {
+    public void ToSorbianStandard() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SorbianStandardCalibration),
             SorbianStandardBarcodeData());
@@ -700,8 +631,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSorbianStandardLegacy()
-    {
+    public void ToSorbianStandardLegacy() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SorbianStandardLegacyCalibration),
             SorbianStandardLegacyBarcodeData());
@@ -712,8 +642,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSpanish()
-    {
+    public void ToSpanish() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SpanishCalibration),
             SpanishBarcodeData());
@@ -724,8 +653,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToStandard()
-    {
+    public void ToStandard() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.StandardCalibration),
             StandardBarcodeData());
@@ -736,8 +664,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSwedish()
-    {
+    public void ToSwedish() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SwedishCalibration),
             SwedishBarcodeData());
@@ -748,8 +675,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSwedishWithSami()
-    {
+    public void ToSwedishWithSami() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SwedishWithSamiCalibration),
             SwedishWithSamiBarcodeData());
@@ -760,8 +686,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSwissFrench()
-    {
+    public void ToSwissFrench() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SwissFrenchCalibration),
             SwissFrenchBarcodeData());
@@ -772,8 +697,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToSwissGerman()
-    {
+    public void ToSwissGerman() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SwissGermanCalibration),
             SwissGermanBarcodeData());
@@ -784,8 +708,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToUnitedKingdom()
-    {
+    public void ToUnitedKingdom() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.UnitedKingdomCalibration),
             UnitedKingdomBarcodeData());
@@ -796,8 +719,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     [Fact]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
-    public void ToUnitedKingdomExtended()
-    {
+    public void ToUnitedKingdomExtended() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.UnitedKingdomExtendedCalibration),
             UnitedKingdomExtendedBarcodeData());
@@ -808,19 +730,16 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     /// <param name="data">Calibration data for the scanner keyboard layout.</param>
     /// <returns>A collection of pack identifiers for the scanner keyboard layout.</returns>
-    private static Dictionary<string, IPackIdentifier> BasePackIdentifiers(BarcodeScanner.Calibration.Data data)
-    {
+    private static Dictionary<string, IPackIdentifier> BasePackIdentifiers(BarcodeScanner.Calibration.Data data) {
         var identifiers = new Dictionary<string, IPackIdentifier>();
 
-        if (data is null)
-        {
+        if (data is null) {
             return identifiers;
         }
 
         var parser = new Parser(data);
 
-        foreach (var barcodeData in UnitedStatesBarcodeData())
-        {
+        foreach (var barcodeData in UnitedStatesBarcodeData()) {
             var identifier = parser.Parse(barcodeData.Value);
             identifiers.Add(barcodeData.Key, identifier);
             Assert.True(identifier.IsValid);
@@ -833,8 +752,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the barcode data as entered using a United States keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> UnitedStatesBarcodeData()
-    {
+    private static Dictionary<string, string> UnitedStatesBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.UsBarcode1 },
@@ -856,8 +774,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Belgian (Comma) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BelgianCommaBarcodeData()
-    {
+    private static Dictionary<string, string> BelgianCommaBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.BelgianCommaBarcode1 },
@@ -879,8 +796,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Belgian French keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BelgianFrenchBarcodeData()
-    {
+    private static Dictionary<string, string> BelgianFrenchBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.BelgianFrenchBarcode1 },
@@ -902,8 +818,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Belgian (Period) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BelgianPeriodBarcodeData()
-    {
+    private static Dictionary<string, string> BelgianPeriodBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.BelgianPeriodBarcode1 },
@@ -925,8 +840,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Bulgarian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BulgarianBarcodeData()
-    {
+    private static Dictionary<string, string> BulgarianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.BulgarianBarcode1 },
@@ -948,8 +862,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Bulgarian (Latin) keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BulgarianLatinBarcodeData()
-    {
+    private static Dictionary<string, string> BulgarianLatinBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.BulgarianLatinBarcode1 },
@@ -971,8 +884,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Bulgarian (Phonetic) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BulgarianPhoneticBarcodeData()
-    {
+    private static Dictionary<string, string> BulgarianPhoneticBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.BulgarianPhoneticBarcode1 },
@@ -994,8 +906,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Bulgarian (Phonetic Traditional) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BulgarianPhoneticTraditionalBarcodeData()
-    {
+    private static Dictionary<string, string> BulgarianPhoneticTraditionalBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.BulgarianPhoneticTraditionalBarcode1 },
@@ -1017,8 +928,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Bulgarian (Typewriter) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> BulgarianTypewriterBarcodeData()
-    {
+    private static Dictionary<string, string> BulgarianTypewriterBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.BulgarianTypewriterBarcode1 },
@@ -1040,8 +950,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Czech computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> CzechBarcodeData()
-    {
+    private static Dictionary<string, string> CzechBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.CzechBarcode1 },
@@ -1063,8 +972,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Czech Programmers computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> CzechProgrammersBarcodeData()
-    {
+    private static Dictionary<string, string> CzechProgrammersBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.CzechProgrammersBarcode1 },
@@ -1086,8 +994,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Czech (QWERTY) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> CzechQwertyBarcodeData()
-    {
+    private static Dictionary<string, string> CzechQwertyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.CzechQwertyBarcode1 },
@@ -1109,8 +1016,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Danish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> DanishBarcodeData()
-    {
+    private static Dictionary<string, string> DanishBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.DanishBarcode1 },
@@ -1132,8 +1038,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Dutch computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> DutchBarcodeData()
-    {
+    private static Dictionary<string, string> DutchBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.DutchBarcode1 },
@@ -1155,8 +1060,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for an Estonian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> EstonianBarcodeData()
-    {
+    private static Dictionary<string, string> EstonianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.EstonianBarcode1 },
@@ -1178,8 +1082,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Finnish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> FinnishBarcodeData()
-    {
+    private static Dictionary<string, string> FinnishBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.FinnishBarcode1 },
@@ -1201,8 +1104,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Finnish with Sami computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> FinnishWithSamiBarcodeData()
-    {
+    private static Dictionary<string, string> FinnishWithSamiBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.FinnishWithSamiBarcode1 },
@@ -1224,8 +1126,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a French keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> FrenchBarcodeData()
-    {
+    private static Dictionary<string, string> FrenchBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.FrenchBarcode1 },
@@ -1247,8 +1148,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Scottish Gaelic computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> GaelicBarcodeData()
-    {
+    private static Dictionary<string, string> GaelicBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.GaelicBarcode1 },
@@ -1270,8 +1170,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a German computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> GermanBarcodeData()
-    {
+    private static Dictionary<string, string> GermanBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.GermanBarcode1 },
@@ -1293,8 +1192,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a German (IBM) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> GermanIbmBarcodeData()
-    {
+    private static Dictionary<string, string> GermanIbmBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.GermanIbmBarcode1 },
@@ -1316,8 +1214,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Greek (319) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Greek319BarcodeData()
-    {
+    private static Dictionary<string, string> Greek319BarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.Greek319Barcode1 },
@@ -1339,8 +1236,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Greek (319) Latin computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Greek319LatinBarcodeData()
-    {
+    private static Dictionary<string, string> Greek319LatinBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.Greek319LatinBarcode1 },
@@ -1357,13 +1253,12 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
                    { "Barcode12", UsToEuropeanGs1BarcodesWithAim.Greek319LatinBarcode12 }
                };
     }
-        
+
     /// <summary>
     /// Returns the expected barcode data for a Greek computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> GreekBarcodeData()
-    {
+    private static Dictionary<string, string> GreekBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.GreekBarcode1 },
@@ -1385,8 +1280,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Greek Latin computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> GreekLatinBarcodeData()
-    {
+    private static Dictionary<string, string> GreekLatinBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.GreekLatinBarcode1 },
@@ -1408,8 +1302,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Hungarian101 computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Hungarian101KeyBarcodeData()
-    {
+    private static Dictionary<string, string> Hungarian101KeyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.Hungarian101KeyBarcode1 },
@@ -1431,8 +1324,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Hungarian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> HungarianBarcodeData()
-    {
+    private static Dictionary<string, string> HungarianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.HungarianBarcode1 },
@@ -1454,8 +1346,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for an Icelandic computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> IcelandicBarcodeData()
-    {
+    private static Dictionary<string, string> IcelandicBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.IcelandicBarcode1 },
@@ -1477,8 +1368,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for an Irish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> IrishBarcodeData()
-    {
+    private static Dictionary<string, string> IrishBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.IrishBarcode1 },
@@ -1500,8 +1390,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for an Italian (142) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Italian142BarcodeData()
-    {
+    private static Dictionary<string, string> Italian142BarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.Italian142Barcode1 },
@@ -1523,8 +1412,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for an Italian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> ItalianBarcodeData()
-    {
+    private static Dictionary<string, string> ItalianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.ItalianBarcode1 },
@@ -1546,8 +1434,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Latvian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LatvianBarcodeData()
-    {
+    private static Dictionary<string, string> LatvianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.LatvianBarcode1 },
@@ -1569,8 +1456,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Latvian (QWERTY) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LatvianQwertyBarcodeData()
-    {
+    private static Dictionary<string, string> LatvianQwertyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.LatvianQwertyBarcode1 },
@@ -1592,8 +1478,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Lithuanian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LithuanianBarcodeData()
-    {
+    private static Dictionary<string, string> LithuanianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.LithuanianBarcode1 },
@@ -1615,8 +1500,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Lithuanian IBM computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LithuanianIbmBarcodeData()
-    {
+    private static Dictionary<string, string> LithuanianIbmBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.LithuanianIbmBarcode1 },
@@ -1638,8 +1522,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Lithuanian Standard computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LithuanianStandardBarcodeData()
-    {
+    private static Dictionary<string, string> LithuanianStandardBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.LithuanianStandardBarcode1 },
@@ -1661,8 +1544,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a SwissFrench keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SwissFrenchBarcodeData()
-    {
+    private static Dictionary<string, string> SwissFrenchBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.SwissFrenchBarcode1 },
@@ -1684,8 +1566,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Croatian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> StandardBarcodeData()
-    {
+    private static Dictionary<string, string> StandardBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.StandardBarcode1 },
@@ -1707,8 +1588,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Swedish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SwedishBarcodeData()
-    {
+    private static Dictionary<string, string> SwedishBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.SwedishBarcode1 },
@@ -1730,8 +1610,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Swedish with Sami computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SwedishWithSamiBarcodeData()
-    {
+    private static Dictionary<string, string> SwedishWithSamiBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.SwedishWithSamiBarcode1 },
@@ -1753,8 +1632,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Swiss German computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SwissGermanBarcodeData()
-    {
+    private static Dictionary<string, string> SwissGermanBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.SwissGermanBarcode1 },
@@ -1776,8 +1654,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Norwegian with Sami computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> NorwegianWithSamiBarcodeData()
-    {
+    private static Dictionary<string, string> NorwegianWithSamiBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.NorwegianWithSamiBarcode1 },
@@ -1799,8 +1676,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Luxembourgish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> LuxembourgishBarcodeData()
-    {
+    private static Dictionary<string, string> LuxembourgishBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.LuxembourgishBarcode1 },
@@ -1822,8 +1698,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Norwegian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> NorwegianBarcodeData()
-    {
+    private static Dictionary<string, string> NorwegianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.NorwegianBarcode1 },
@@ -1845,8 +1720,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Maltese 47-Key computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Maltese47KeyBarcodeData()
-    {
+    private static Dictionary<string, string> Maltese47KeyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.Maltese47KeyBarcode1 },
@@ -1868,8 +1742,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Maltese 48-Key computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Maltese48KeyBarcodeData()
-    {
+    private static Dictionary<string, string> Maltese48KeyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.Maltese48KeyBarcode1 },
@@ -1891,8 +1764,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Polish (Programmers) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> PolishProgrammersBarcodeData()
-    {
+    private static Dictionary<string, string> PolishProgrammersBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.PolishProgrammersBarcode1 },
@@ -1914,8 +1786,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Polish (214) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> Polish214BarcodeData()
-    {
+    private static Dictionary<string, string> Polish214BarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.Polish214Barcode1 },
@@ -1937,8 +1808,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Portuguese computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> PortugueseBarcodeData()
-    {
+    private static Dictionary<string, string> PortugueseBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.PortugueseBarcode1 },
@@ -1960,8 +1830,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Romanian (Standard) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> RomanianStandardBarcodeData()
-    {
+    private static Dictionary<string, string> RomanianStandardBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.RomanianStandardBarcode1 },
@@ -1983,8 +1852,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Romanian (Legacy) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> RomanianLegacyBarcodeData()
-    {
+    private static Dictionary<string, string> RomanianLegacyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.RomanianLegacyBarcode1 },
@@ -2006,8 +1874,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Romanian (Programmers) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> RomanianProgrammersBarcodeData()
-    {
+    private static Dictionary<string, string> RomanianProgrammersBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.RomanianProgrammersBarcode1 },
@@ -2029,8 +1896,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Slovak (QWERTY) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SlovakQwertyBarcodeData()
-    {
+    private static Dictionary<string, string> SlovakQwertyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.SlovakQwertyBarcode1 },
@@ -2052,8 +1918,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Sami Extended Finland-Sweden computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SamiExtendedFinlandSwedenBarcodeData()
-    {
+    private static Dictionary<string, string> SamiExtendedFinlandSwedenBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.SamiExtendedFinlandSwedenBarcode1 },
@@ -2075,8 +1940,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Sami Extended Norway computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SamiExtendedNorwayBarcodeData()
-    {
+    private static Dictionary<string, string> SamiExtendedNorwayBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.SamiExtendedNorwayBarcode1 },
@@ -2098,8 +1962,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Slovenian computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SlovenianBarcodeData()
-    {
+    private static Dictionary<string, string> SlovenianBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.SlovenianBarcode1 },
@@ -2121,8 +1984,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Spanish computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SpanishBarcodeData()
-    {
+    private static Dictionary<string, string> SpanishBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.SpanishBarcode1 },
@@ -2144,8 +2006,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Sorbian Standard computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SorbianStandardBarcodeData()
-    {
+    private static Dictionary<string, string> SorbianStandardBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.SorbianStandardBarcode1 },
@@ -2167,8 +2028,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Sorbian Extended computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SorbianExtendedBarcodeData()
-    {
+    private static Dictionary<string, string> SorbianExtendedBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.SorbianExtendedBarcode1 },
@@ -2190,8 +2050,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a Sorbian Standard (Legacy) computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> SorbianStandardLegacyBarcodeData()
-    {
+    private static Dictionary<string, string> SorbianStandardLegacyBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.SorbianStandardLegacyBarcode1 },
@@ -2213,8 +2072,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a United Kingdom computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> UnitedKingdomBarcodeData()
-    {
+    private static Dictionary<string, string> UnitedKingdomBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.UnitedKingdomBarcode1 },
@@ -2236,8 +2094,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Returns the expected barcode data for a United Kingdom Extended computer keyboard layout
     /// </summary>
     /// <returns>A dictionary of barcode data.</returns>
-    private static Dictionary<string, string> UnitedKingdomExtendedBarcodeData()
-    {
+    private static Dictionary<string, string> UnitedKingdomExtendedBarcodeData() {
         return new Dictionary<string, string>
                {
                    { "Barcode1", UsToEuropeanGs1BarcodesWithAim.UnitedKingdomExtendedBarcode1 },
@@ -2259,8 +2116,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// Performs a calibration test.
     /// </summary>
     /// <returns>A calibration token.</returns>
-    private static Token BaseCalibration()
-    {
+    private static Token BaseCalibration() {
         var computerKeyboardLayout = new Dictionary<string, IList<string>>
                                      {
                                          {
@@ -2273,28 +2129,23 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
         var loopCount = -1;
         Token currentToken = default;
 
-        foreach (var token in calibrator.CalibrationTokens())
-        {
+        foreach (var token in calibrator.CalibrationTokens()) {
             var baseLine = computerKeyboardLayout.Keys.First();
             currentToken = token;
 
-            if (loopCount < 0)
-            {
+            if (loopCount < 0) {
                 currentToken = calibrator.Calibrate(ConvertToCharacterValues(baseLine), currentToken);
                 loopCount++;
             }
-            else
-            {
-                if (loopCount < computerKeyboardLayout[baseLine].Count)
-                {
+            else {
+                if (loopCount < computerKeyboardLayout[baseLine].Count) {
                     currentToken = calibrator.Calibrate(
                         ConvertToCharacterValues(computerKeyboardLayout[baseLine][loopCount++]),
                         currentToken);
                 }
             }
 
-            foreach (var error in currentToken.Errors)
-            {
+            foreach (var error in currentToken.Errors) {
                 System.Diagnostics.Debug.WriteLine(error.Description);
             }
         }
@@ -2311,8 +2162,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// The scanner is configured for a US keyboard.
     /// The computer is configured for a US keyboard.
     /// </returns>
-    private static string BaselineCalibrationUsUs()
-    {
+    private static string BaselineCalibrationUsUs() {
         var testString =
             "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    "
           + (char)29;
@@ -2324,17 +2174,14 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     /// <param name="input">The string of characters to be converted.</param>
     /// <returns>A comma-separated value list of character values.</returns>
-    private static int[] ConvertToCharacterValues(string input)
-    {
-        if (string.IsNullOrWhiteSpace(input))
-        {
-            return Array.Empty<int>();
+    private static int[] ConvertToCharacterValues(string input) {
+        if (string.IsNullOrWhiteSpace(input)) {
+            return [];
         }
 
         var outputBuilder = new int[input.Length];
 
-        for (var idx = 0; idx < input.Length; idx++)
-        {
+        for (var idx = 0; idx < input.Length; idx++) {
             outputBuilder[idx] = input[idx];
         }
 
@@ -2346,14 +2193,12 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests
     /// </summary>
     /// <param name="data">The calibration data.</param>
     /// <param name="scannedData">The scanned data.</param>
-    private void PerformParserTest(BarcodeScanner.Calibration.Data data, Dictionary<string, string> scannedData)
-    {
+    private void PerformParserTest(BarcodeScanner.Calibration.Data data, Dictionary<string, string> scannedData) {
         Assert.NotNull(data);
 
         var parser = new Parser(data);
 
-        foreach (var barcodeData in scannedData)
-        {
+        foreach (var barcodeData in scannedData) {
             var identifier = parser.Parse(barcodeData.Value);
             Assert.True(identifier.IsValid);
 

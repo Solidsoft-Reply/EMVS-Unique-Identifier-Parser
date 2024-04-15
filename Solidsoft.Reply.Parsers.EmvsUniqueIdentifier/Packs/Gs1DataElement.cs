@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Gs1DataElement.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="Gs1DataElement.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // A data element in a GS1-encoded barcode.
 // </summary>
@@ -33,7 +31,7 @@ public class Gs1DataElement : IDataElement
     ///   Initializes a new instance of the <see cref="Gs1DataElement" /> class.
     /// </summary>
     /// <param name="applicationIdentifier">The GS1 application identifier.</param>
-    /// <param name="identifier">The GS1 application identifier text</param>
+    /// <param name="identifier">The GS1 application identifier text.</param>
     /// <param name="data">The element data.</param>
     /// <param name="title">The element title.</param>
     /// <param name="description">The element description.</param>

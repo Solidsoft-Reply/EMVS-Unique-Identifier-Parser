@@ -2,19 +2,6 @@
 // <copyright file="ModalInputHandler.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2020 Solidsoft Reply Ltd.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // A modal console input handler.  The handler assumes that control is managed by a mode handler,
 // and is not specified by commands e.g., entered at a prompt.
@@ -26,7 +13,8 @@ namespace Solidsoft.Reply.ConsoleMvc;
 using System;
 using System.Text;
 using System.Threading;
-using Platform; 
+
+using Platform;
 
 using static System.Console;
 
@@ -34,8 +22,7 @@ using static System.Console;
 /// A modal console input handler.  The handler assumes that control is managed by a mode
 /// handler, and is not specified by commands e.g., entered at a prompt.
 /// </summary>
-public class ModalInputHandler : IInputHandler
-{
+public class ModalInputHandler : IInputHandler {
     /// <summary>
     /// A lock object for the current line.
     /// </summary>
@@ -95,7 +82,7 @@ public class ModalInputHandler : IInputHandler
     /// <summary>
     /// Represents entering of a line.
     /// </summary>
-    public event EventHandler<ConsoleLineEntryArgs> LineEntry;
+    public event EventHandler<ConsoleLineEntryEventArgs> LineEntry;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="ModalInputHandler"/> class
@@ -111,24 +98,19 @@ public class ModalInputHandler : IInputHandler
     /// Indicates that the input handler must support VT escape sequences.  This is false
     /// by default because older versions of Windows don't support VT and implementation vary
     /// across other platforms and terminals.</param>
-    public ModalInputHandler(IModeManager modeManager, int promptOffset = 0, bool mustSupportVt = false)
-    {
+    public ModalInputHandler(IModeManager modeManager, int promptOffset = 0, bool mustSupportVt = false) {
         PromptOffset = promptOffset;
         _modeManager = modeManager;
 
-        if (mustSupportVt && Platform.OperatingSystem.IsWindows)
-        {
-            try
-            {
+        if (mustSupportVt && Platform.OperatingSystem.IsWindows) {
+            try {
                 var result = WindowsVt.Enable();
 
-                if (!result)
-                {
+                if (!result) {
                     throw new VtUnsupportedException();
                 }
             }
-            catch (Exception)
-            {
+            catch (Exception) {
                 throw new VtUnsupportedException();
             }
         }
@@ -141,7 +123,7 @@ public class ModalInputHandler : IInputHandler
     /// <summary>
     /// Finalizes the instance of the <see cref="ModalInputHandler"/> class
     /// </summary>
-    ~ModalInputHandler() => Dispose(true);
+    ~ModalInputHandler() => Dispose(false);
 
     /// <summary>
     /// The offset required for a command prompt at the start of the command line.
@@ -153,22 +135,18 @@ public class ModalInputHandler : IInputHandler
     /// Gets or sets a value indicating whether lines of text that are not terminated by a
     /// carriage return should be entered automatically.
     /// </summary>
-    public bool AutomaticEntry
-    {
+    public bool AutomaticEntry {
         get => _automaticLineEntry;
 
-        set
-        {
+        set {
 #pragma warning disable S2696
             _automaticLineEntry = value;
 #pragma warning restore S2696
 
-            if (value)
-            {
+            if (value) {
                 StartTimer();
             }
-            else
-            {
+            else {
                 StopTimer();
             }
         }
@@ -186,8 +164,7 @@ public class ModalInputHandler : IInputHandler
     public Visibility Visibility {
         get => _visibility;
 
-        set
-        {
+        set {
             _visibility = value;
             _inputControl.Visibility = _visibility;
         }
@@ -196,8 +173,7 @@ public class ModalInputHandler : IInputHandler
     /// <summary>
     /// Dispose of resources for the <see cref="ModalInputHandler"/> class
     /// </summary>
-    public void Dispose()
-    {
+    public void Dispose() {
         // Dispose of unmanaged resources.
         Dispose(true);
 
@@ -211,8 +187,7 @@ public class ModalInputHandler : IInputHandler
     /// <param name="keyChar">The character.  Note that this is case-insensitive.
     /// You must provide a modifier to shift the character. </param>
     /// <param name="modifiers">The modifier flags.</param>
-    public void Send(char keyChar, ConsoleModifiers modifiers = 0)
-    {
+    public void Send(char keyChar, ConsoleModifiers modifiers = 0) {
         SendKey(
             new ConsoleKeyInfo(
                 keyChar,
@@ -226,10 +201,8 @@ public class ModalInputHandler : IInputHandler
     /// Send a key to the input.  This simulates a key press.
     /// </summary>
     /// <param name="keyInfo">The key information.</param>
-    public void SendKey(ConsoleKeyInfo keyInfo)
-    {
-        lock (_currentLineLock)
-        {
+    public void SendKey(ConsoleKeyInfo keyInfo) {
+        lock (_currentLineLock) {
             // Write character to input buffer
             WriteToBuffer(keyInfo);
         }
@@ -246,8 +219,7 @@ public class ModalInputHandler : IInputHandler
     /// Resets the input handler.
     /// </summary>
     /// <param name="promptOffset">The offset required for a command prompt at the start of the command line.</param>
-    public void Reset(int promptOffset = 0)
-    {
+    public void Reset(int promptOffset = 0) {
         PromptOffset = promptOffset;
         StateReset();
     }
@@ -256,15 +228,12 @@ public class ModalInputHandler : IInputHandler
     /// Dispose of resources for the <see cref="ModalInputHandler"/> class
     /// </summary>
     /// <param name="disposing">Used to detect redundant disposal calls.</param>
-    protected virtual void Dispose(bool disposing)
-    {
-        if (_disposed)
-        {
+    protected virtual void Dispose(bool disposing) {
+        if (_disposed) {
             return;
         }
 
-        if (disposing)
-        {
+        if (disposing) {
             // Dispose managed state.
             _terminateMessagePump = true;
         }
@@ -275,10 +244,8 @@ public class ModalInputHandler : IInputHandler
     /// <summary>
     /// Resets the Console handler state.
     /// </summary>
-    private void StateReset()
-    {
-        lock (_currentLineLock)
-        {
+    private void StateReset() {
+        lock (_currentLineLock) {
             _inputControl.Reset();
             _timedReturn = false;
             _currentLineBuffer = string.Empty;
@@ -288,19 +255,15 @@ public class ModalInputHandler : IInputHandler
     /// <summary>
     /// Process each key press. This is the message pump.
     /// </summary>
-    private void ProcessReadKey()
-    {
-        while (true)
-        {
-            if (_terminateMessagePump)
-            {
+    private void ProcessReadKey() {
+        while (true) {
+            if (_terminateMessagePump) {
                 return;
             }
 
             ConsoleKeyInfo input;
 
-            try
-            {
+            try {
 
                 input = ReadKey(true);
 
@@ -308,27 +271,23 @@ public class ModalInputHandler : IInputHandler
                 // When a dead key literal occurs before an ASCII 04, e.g., in a barcode, it may be reported after the DC3 - i.e., the
                 // DC3 is reported before the dead key literal character.  We will detect this and reverse the characters.  We will
                 // retain the DC3 for fidelity to the scanner behaviour.
-                if (input.KeyChar == 19 && input.Modifiers == 0)
-                {
+                if (input.KeyChar == 19 && input.Modifiers == 0) {
                     int nextChar;
 
-                    if ((nextChar = Read()) > -1)
-                    {
+                    if ((nextChar = Read()) > -1) {
                         // There is a character immediately after the DC3
                         Send((char)nextChar);
                     }
                 }
             }
-            catch (EncoderFallbackException)
-            {
+            catch (EncoderFallbackException) {
                 // If the character is not a recognised Unicode character, the encoder (which is always UTF 8 in .NET Core)
                 // issues this fallback exception.  The fallback is to emit a space.
                 Send(' ');
                 continue;
             }
 
-            lock (_currentLineLock)
-            {
+            lock (_currentLineLock) {
                 // Add the character to input
                 WriteToBuffer(input);
             }
@@ -338,10 +297,8 @@ public class ModalInputHandler : IInputHandler
     /// <summary>
     /// Start the timer.
     /// </summary>
-    private void StartTimer()
-    {
-        if (_timer == null && _automaticLineEntry)
-        {
+    private void StartTimer() {
+        if (_timer == null && _automaticLineEntry) {
             _timer = new Timer(OnTimedEvent, null, 0, AutomaticEntryPeriod);
         }
     }
@@ -349,10 +306,8 @@ public class ModalInputHandler : IInputHandler
     /// <summary>
     /// Stop the timer.
     /// </summary>
-    private void StopTimer()
-    {
-        if (_timer == null)
-        {
+    private void StopTimer() {
+        if (_timer == null) {
             return;
         }
 
@@ -365,21 +320,17 @@ public class ModalInputHandler : IInputHandler
     /// data and no data has been received in the last timer interval.
     /// </summary>
     /// <param name="source">The source.</param>
-    private void OnTimedEvent(object source)
-    {
-        lock (_currentLineLock)
-        {
+    private void OnTimedEvent(object source) {
+        lock (_currentLineLock) {
             var currentLine = _inputControl.Input;
 
             // Test to make sure we have had no more input for the timer interval period
-            if (currentLine.Length > 0 && _currentLineBuffer == currentLine)
-            {
+            if (currentLine.Length > 0 && _currentLineBuffer == currentLine) {
                 // If no further input detected, trigger the parser.
                 _timedReturn = true;
                 Send('\r');
             }
-            else
-            {
+            else {
                 _currentLineBuffer = currentLine;
             }
         }
@@ -390,8 +341,7 @@ public class ModalInputHandler : IInputHandler
     /// </summary>
     /// <param name="keyChar">The character to resolve</param>
     /// <returns>The console key for the given character.</returns>
-    private static ConsoleKey ResolveKey(char keyChar)
-    {
+    private static ConsoleKey ResolveKey(char keyChar) {
         _ = Enum.TryParse<ConsoleKey>(keyChar.ToString().ToUpper(), out var consoleKey);
         return consoleKey;
     }
@@ -404,25 +354,20 @@ public class ModalInputHandler : IInputHandler
         var switchHighlightingOff = _inputControl.IsTextHighlighted;
         var currentInput = _inputControl.Input;
 
-        switch (input.KeyChar)
-        {
+        switch (input.KeyChar) {
             case '\r':
             case '\n':
-                if (switchHighlightingOff)
-                {
+                if (switchHighlightingOff) {
                     // Pressing Enter will copy the highlighted text to the clipboard
-                    if (Platform.OperatingSystem.IsWindows)
-                    {
+                    if (Platform.OperatingSystem.IsWindows) {
                         WindowsClipboard.SetText(currentInput);
                     }
 
-                    if (Platform.OperatingSystem.IsMacOs)
-                    {
+                    if (Platform.OperatingSystem.IsMacOs) {
                         OsxClipboard.SetText(currentInput);
                     }
 
-                    if (Platform.OperatingSystem.IsLinux)
-                    {
+                    if (Platform.OperatingSystem.IsLinux) {
                         LinuxClipboard.SetText(currentInput);
                     }
 
@@ -430,27 +375,24 @@ public class ModalInputHandler : IInputHandler
 
                     return;
                 }
-                
+
                 _inputControl.Terminate();
 
                 // Read the newInput and raise an event
                 var readLine = currentInput;
 
-                lock (_currentLineLock)
-                {
-                    if (!_timedReturn && input.KeyChar is '\r' or '\n')
-                    {
+                lock (_currentLineLock) {
+                    if (!_timedReturn && input.KeyChar is '\r' or '\n') {
                         readLine += input.KeyChar;
                     }
-                    else
-                    {
+                    else {
                         _timedReturn = false;
                     }
                 }
 
                 StateReset();
                 WriteLine();
-                LineEntry?.Invoke(this, new ConsoleLineEntryArgs(_modeManager.ModeName, readLine));
+                LineEntry?.Invoke(this, new ConsoleLineEntryEventArgs(_modeManager.ModeName, readLine));
                 _inputControl.Reset();
                 break;
             case '\b':
@@ -459,8 +401,7 @@ public class ModalInputHandler : IInputHandler
             default:
                 _inputControl.ProcessKey(input);
 
-                if (switchHighlightingOff)
-                {
+                if (switchHighlightingOff) {
                     _inputControl.ToggleLineHighlight();
                 }
 

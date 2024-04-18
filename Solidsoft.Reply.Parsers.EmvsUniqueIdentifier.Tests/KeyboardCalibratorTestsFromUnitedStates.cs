@@ -936,6 +936,20 @@ public class KeyboardCalibratorTestsFromUnitedStates {
     private const string UnitedKingdomBarcode10 = "010477298543159410Qo0>7rU\x001D1724070321)Wuk3P+e%@\x000D";
     private const string UnitedKingdomBarcode11 = "010477298543159410&ZJMaz/\x001D1723112621@j:AugCzJt\x000D";
     private const string UnitedKingdomBarcode12 = "0104772985431594102;5wEY-\x001D1723040421HIrQ9QeTyQ\x000D";
+    private const string UnitedKingdomVmBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    0029    0028    0030    0031    \x000D";
+    private const string UnitedKingdomVmBarcode1 = "010012227308435510DdVcX<t00291723020721yCH*4'h1Ab\x000D";
+    private const string UnitedKingdomVmBarcode2 = "010012227308435510.GRs!qO00291723072921TgIv?,6BmK\x000D";
+    private const string UnitedKingdomVmBarcode3 = "010012227308435510(fpNxYi00291723040521Z&Ur7>0oQS\x000D";
+    private const string UnitedKingdomVmBarcode4 = "010012227308435510=8Fn_P@00291724100221Ew5;2/zaMJ\x000D";
+    private const string UnitedKingdomVmBarcode5 = "0100122273084355103kuW)L9002917240304215j4CltEc-Y\x000D";
+    private const string UnitedKingdomVmBarcode6 = "010012227308435510:j@%e+P0029172310312151itJzCguA\x000D";
+    private const string UnitedKingdomVmBarcode7 = "010012227308435510bA1h'4*00291723121421t<XcVdD0q!\x000D";
+    private const string UnitedKingdomVmBarcode8 = "010012227308435510HCyKmB600291724062021sRG.iYxNpf\x000D";
+    private const string UnitedKingdomVmBarcode9 = "010012227308435510,?vIgTS00291724021821(@P_nF8=9L\x000D";
+    private const string UnitedKingdomVmBarcode10 = "010012227308435510Qo0>7rU00291724070321)Wuk3P+e%@\x000D";
+    private const string UnitedKingdomVmBarcode11 = "010012227308435510&ZJMaz/00291723112621@j:AugCzJt\x000D";
+    private const string UnitedKingdomVmBarcode12 = "0100122273084355102;5wEY-00291723040421HIrQ9QeTyQ\x000D";
+
     private const string UnitedKingdomExtendedBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ \0`{ ~ } ¬    \0    \0    \0    \0    \x000D";
     private const string UnitedKingdomExtendedDeadKey1 = "\0`!\0`@\0`£\0`$\0`%\0`&\0`'\0`(\0`)\0`*\0`+\0`,\0`-\0`.\0`/\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`:\0`;\0`<\0`=\0`>\0`?\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0Ẁ\0`X\0Ỳ\0`Z\0`[\0`#\0`]\0`^\0`_\0``\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0ẁ\0`x\0ỳ\0`z\0`{\0`~\0`}\0`¬\x000D";
     private const string UnitedKingdomExtendedBarcode1 = "010477298543159410DdVcX<t\01723020721yCH*4'h1Ab\x000D";
@@ -1699,6 +1713,17 @@ public class KeyboardCalibratorTestsFromUnitedStates {
             UnitedKingdomBarcodeData());
     }
 
+    /// <summary>
+    /// Test calibration for a United Kingdom computer keyboard layout
+    /// </summary>
+    [Fact]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    public void ToUnitedKingdomVm() {
+        PerformParserTest(
+            PerformCalibrationTest("United Kingdom VM").CalibrationData,
+            UnitedKingdomVmBarcodeData());
+    }
+    
     /// <summary>
     /// Test calibration for a United Kingdom Extended computer keyboard layout
     /// </summary>
@@ -2631,6 +2656,13 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            }
                                        },
                                        {
+                                           "United Kingdom VM",
+                                           new Dictionary<string[], IList<string>>
+                                           {
+                                               { [UnitedKingdomVmBaseline], new List<string>() }
+                                           }
+                                       },
+                                       {
                                            "United Kingdom Extended",
                                            new Dictionary<string[], IList<string>>
                                            {
@@ -2756,6 +2788,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                                { "Sorbian Extended", Calibrations.SorbianExtendedCalibration },
                                                { "Sorbian Standard (Legacy)", Calibrations.SorbianStandardLegacyCalibration },
                                                { "United Kingdom", Calibrations.UnitedKingdomCalibration },
+                                               { "United Kingdom VM", Calibrations.UnitedKingdomVmCalibration },
                                                { "United Kingdom Extended", Calibrations.UnitedKingdomExtendedCalibration },
                                                { "Swiss French 24x24", Calibrations.SwissFrenchCalibration }
                                            };
@@ -4081,6 +4114,30 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                    { "Barcode12", UnitedKingdomBarcode12 }
                };
     }
+
+    /// <summary>
+    /// Returns the expected barcode data for a United Kingdom computer keyboard layout for the VM issue
+    /// in which ASCII control characters are reported as strings of digits. 
+    /// </summary>
+    /// <returns>A dictionary of barcode data.</returns>
+    private static Dictionary<string, string> UnitedKingdomVmBarcodeData() {
+        return new Dictionary<string, string>
+        {
+            { "Barcode1", UnitedKingdomVmBarcode1 },
+            { "Barcode2", UnitedKingdomVmBarcode2 },
+            { "Barcode3", UnitedKingdomVmBarcode3 },
+            { "Barcode4", UnitedKingdomVmBarcode4 },
+            { "Barcode5", UnitedKingdomVmBarcode5 },
+            { "Barcode6", UnitedKingdomVmBarcode6 },
+            { "Barcode7", UnitedKingdomVmBarcode7 },
+            { "Barcode8", UnitedKingdomVmBarcode8 },
+            { "Barcode9", UnitedKingdomVmBarcode9 },
+            { "Barcode10", UnitedKingdomVmBarcode10 },
+            { "Barcode11", UnitedKingdomVmBarcode11 },
+            { "Barcode12", UnitedKingdomVmBarcode12 }
+        };
+    }
+
 
     /// <summary>
     /// Returns the expected barcode data for a United Kingdom Extended computer keyboard layout

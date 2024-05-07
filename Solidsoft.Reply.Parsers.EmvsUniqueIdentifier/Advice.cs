@@ -31,14 +31,13 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
     /// <summary>
     ///   An ordered list of advice items.
     /// </summary>
-    private readonly List<AdviceItem> _adviceItems = new();
+    private readonly List<AdviceItem> _adviceItems = new ();
 
     /// <summary>
     ///   Initializes a new instance of the <see cref="Advice"/> class.
     /// </summary>
     /// <param name="systemCapabilities">The capabilities of the barcode scanner/computer combination.</param>
     /// <param name="adviceTerritory">Territory for which advice will be provided.</param>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Major Code Smell", "S3358:Ternary operators should not be nested", Justification = "<Pending>")]
     private Advice(
         SystemCapabilities? systemCapabilities,
         Territory adviceTerritory = Territory.Europe) {
@@ -60,7 +59,6 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
             });
 
         // Get boolean values
-#pragma warning disable CA1062 // Validate arguments of public methods
         var unexpectedError = systemCapabilities.UnexpectedError;
         var testsSucceeded = systemCapabilities.TestsSucceeded;
         var dataReported = systemCapabilities.DataReported;
@@ -90,7 +88,6 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         var calibrationAssumption = systemCapabilities.Assumption;
         var deadKeys = systemCapabilities.DeadKeys;
         var platform = systemCapabilities.Platform;
-#pragma warning restore CA1062 // Validate arguments of public methods
 
         /* To facilitate reasoning over this code, I've used verbosely named methods to represent boolean expressions and
            I have nested ternary operators quite deeply in some places. "The code is the documentation".
@@ -712,219 +709,219 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
 
         // 100
         AdviceItem ReportThatInvariantCharactersAreReadReliably() =>
-            new(AdviceType.ReadsUniqueIdentifiersReliably);
+            new (AdviceType.ReadsUniqueIdentifiersReliably);
 
         // 105
         AdviceItem ReportThatUniqueIdentifiersAreReadReliablyButThePpnTestWasOmitted() =>
-            new(AdviceType.ReadsUniqueIdentifiersReliablyNoPpnTest);
+            new (AdviceType.ReadsUniqueIdentifiersReliablyNoPpnTest);
 
         // 110
         AdviceItem ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesMayNotBeReadReliably() =>
-            new(AdviceType.ReadsUniqueIdentifiersReliablyMayNotReadPpn);
+            new (AdviceType.ReadsUniqueIdentifiersReliablyMayNotReadPpn);
 
         // 115
         AdviceItem ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesAreNotReadReliably() =>
-            new(AdviceType.ReadsUniqueIdentifiersReliablyExceptPpn);
+            new (AdviceType.ReadsUniqueIdentifiersReliablyExceptPpn);
 
         // 200
         AdviceItem ReportThatTheBarcodeScannerDoesNotTransmitAimIdentifiers() =>
-            new(AdviceType.NotTransmittingAim);
+            new (AdviceType.NotTransmittingAim);
 
         // 205
         AdviceItem ReportThatCapsLockIsSwitchedOnButCaseIsReportedCorrectly() =>
-            new(AdviceType.CapsLockCompensation);
+            new (AdviceType.CapsLockCompensation);
 
         // 206
         AdviceItem ReportThatCapsLockIsSwitchedOnOnMacOsButCaseIsPreserved() =>
-            new(AdviceType.CapsLockOnPreservationMacintosh);
+            new (AdviceType.CapsLockOnPreservationMacintosh);
 
         // 210
         AdviceItem ReportThatCapsLockIsSwitchedOnButScriptDoesNotSupportCase() =>
-            new(AdviceType.CapsLockOnNoCase);
+            new (AdviceType.CapsLockOnNoCase);
 
         // 215
         AdviceItem ReportThatTheScannerDoesNotTransmitAnEndOfLineSequence() =>
-            new(AdviceType.NotTransmittingEndOfLine);
+            new (AdviceType.NotTransmittingEndOfLine);
 
         // 220
         AdviceItem ReportThatTheScannerTransmitsAPrefix() =>
-            new(AdviceType.TransmittingPrefix);
+            new (AdviceType.TransmittingPrefix);
 
         // 225
         AdviceItem ReportThatTheScannerTransmitsASuffix() =>
-            new(AdviceType.TransmittingSuffix);
+            new (AdviceType.TransmittingSuffix);
 
         // 230
         AdviceItem ReportThatWeMayNotReadAimIdentifiersAssumingAgnosticism() =>
-            new(AdviceType.MayNotReadAim);
+            new (AdviceType.MayNotReadAim);
 
         // 231
         AdviceItem ReportThatWeMayNotReadAimIdentifiersAssumingNoCalibration() =>
-            new(AdviceType.CannotReadAimNoCalibration);
+            new (AdviceType.CannotReadAimNoCalibration);
 
         // 232
         AdviceItem ReportThatTheBarcodeScannerMayNotTransmitAimIdentifiers() =>
-            new(AdviceType.MayNotTransmitAim);
+            new (AdviceType.MayNotTransmitAim);
 
         // 235
         AdviceItem ReportThatWeCannotReadAimIdentifiers() =>
-            new(AdviceType.CannotReadAim);
+            new (AdviceType.CannotReadAim);
 
         // 240
         AdviceItem ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingAgnosticism() =>
-            new(AdviceType.MayNotReadPpn);
+            new (AdviceType.MayNotReadPpn);
 
         // 241
         AdviceItem ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingNoCalibration() =>
-            new(AdviceType.MayNotReadPpnNoCalibration);
+            new (AdviceType.MayNotReadPpnNoCalibration);
 
         // 245
         AdviceItem ReportThatFormat05OrFormat06AreNotReadReliably() =>
-            new(AdviceType.CannotReadPpnReliably);
+            new (AdviceType.CannotReadPpnReliably);
 
         // 250
         AdviceItem ReportThatWeDidNotTestForIsoIec15434() =>
-            new(AdviceType.NoPpnTest);
+            new (AdviceType.NoPpnTest);
 
         // 255
         AdviceItem ReportThatTheDataInputPerformanceIsSlowerThanExpected() =>
-            new(AdviceType.SlowScannerPerformance);
+            new (AdviceType.SlowScannerPerformance);
 
         // 256
         AdviceItem ReportThatTheDataInputPerformanceIsVeryPoor() =>
-            new(AdviceType.VerySlowScannerPerformance);
+            new (AdviceType.VerySlowScannerPerformance);
 
         // 260
         AdviceItem ReportThatNonAdditionalDataMayNotBeReadReliablyAssumingAgnosticism() =>
-            new(AdviceType.MayNotReadAdditionalDataReliably);
+            new (AdviceType.MayNotReadAdditionalDataReliably);
 
         // 261
         AdviceItem ReportThatNonAdditionalDataMayNotBeReadReliablyAssumingNoCalibration() =>
-            new(AdviceType.MayNotReadAdditionalDataNoCalibration);
+            new (AdviceType.MayNotReadAdditionalDataNoCalibration);
 
         // 265
         AdviceItem ReportThatTheSystemCannotReadAdditionalDataReliably() =>
-            new(AdviceType.CannotReadAdditionalData);
+            new (AdviceType.CannotReadAdditionalData);
 
         // 270
         AdviceItem ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism() =>
-            new(AdviceType.MayNotReadEdiCharactersReliably);
+            new (AdviceType.MayNotReadEdiCharactersReliably);
 
         // 271
         AdviceItem ReportThatEdiCharactersMayNotBeReadReliablyAssumingNoCalibration() =>
-            new(AdviceType.MayNotReadEdiCharactersNoCalibration);
+            new (AdviceType.MayNotReadEdiCharactersNoCalibration);
 
         // 275
         AdviceItem ReportThatTheSystemCannotReadEdiCharactersReliably() =>
-            new(AdviceType.CannotReadEdiCharacters);
+            new (AdviceType.CannotReadEdiCharacters);
 
         // 300
         AdviceItem ReportThatTheTestFailed() =>
-            new(AdviceType.TestFailed);
+            new (AdviceType.TestFailed);
 
         // 301
         AdviceItem ReportThatNoScannedDataWasReportedForBaseLineBarcode() =>
-            new(AdviceType.NoDataReported);
+            new (AdviceType.NoDataReported);
 
         // 303
         AdviceItem ReportThatScannedDataWasPartiallyReportedForBaselineBarcode() =>
-            new(AdviceType.PartialDataReported);
+            new (AdviceType.PartialDataReported);
 
         // 304
         AdviceItem ReportThatNoScannedDataWasReportedForDeadKeyBarcodes() =>
-            new(AdviceType.NoDataReportedDeadKeys);
+            new (AdviceType.NoDataReportedDeadKeys);
 
         // 305
         AdviceItem ReportThatUserScannedADeadKeyBarcodeOutOfSequence() =>
-            new(AdviceType.IncorrectSequenceDeadKeys);
+            new (AdviceType.IncorrectSequenceDeadKeys);
 
         // 306
         AdviceItem ReportThatScannedDataWasPartiallyReportedForDeadKeyBarcodes() =>
-            new(AdviceType.PartialDataReportedDeadKeys);
+            new (AdviceType.PartialDataReportedDeadKeys);
 
         // 307
         AdviceItem ReportThatLayoutsDoNotMatch() =>
-            new(AdviceType.LayoutsDoNotMatch);
+            new (AdviceType.LayoutsDoNotMatch);
 
         // 308
         AdviceItem ReportThatLayoutsDoNotMatchForNoCalibrationAssumption() =>
-            new(AdviceType.LayoutsDoNotMatchNoCalibration);
+            new (AdviceType.LayoutsDoNotMatchNoCalibration);
 
         // 309
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectly() =>
-            new(AdviceType.HiddenCharactersNotRepresentedCorrectly);
+            new (AdviceType.HiddenCharactersNotRepresentedCorrectly);
 
         // 310
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibration() =>
-            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibration);
+            new (AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibration);
 
         // 311
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectlyForGermany() =>
-            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyGermany);
+            new (AdviceType.HiddenCharactersNotRepresentedCorrectlyGermany);
 
         // 312
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibrationForGermany() =>
-            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibrationGermany);
+            new (AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibrationGermany);
 
         // 315
         AdviceItem ReportThatLayoutsDoNotMatchAndPpnBarcodesCannotBeReadReliably() =>
-            new(AdviceType.LayoutsDoNotMatchNoPpn);
+            new (AdviceType.LayoutsDoNotMatchNoPpn);
 
         // 316
         AdviceItem ReportThatHiddenCharactersAreNotReportedCorrectlyAndPpnBarcodesCannotBeReadReliably() =>
-            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoPpn);
+            new (AdviceType.HiddenCharactersNotRepresentedCorrectlyNoPpn);
 
         // 320
         AdviceItem ReportThatSystemCannotReadUniqueIdentifiersReliably() =>
-            new(AdviceType.CannotReadUniqueIdentifiersReliably);
+            new (AdviceType.CannotReadUniqueIdentifiersReliably);
 
         // 325
         AdviceItem ReportThatCapsLockIsSwitchedOn() =>
-            new(AdviceType.CapsLockOn);
+            new (AdviceType.CapsLockOn);
 
         // 326
         AdviceItem ReportThatCapsLockIsSwitchedOnForMacintosh() =>
-            new(AdviceType.CapsLockOnMacintosh);
+            new (AdviceType.CapsLockOnMacintosh);
 
         // 327
         AdviceItem ReportThatCapsLockIsOnAndSystemConvertsToUpperCases() =>
-            new(AdviceType.CapsLockOnConvertsToUpperCase);
+            new (AdviceType.CapsLockOnConvertsToUpperCase);
 
         // 328
         AdviceItem ReportThatCapsLockIsOnAndSystemConvertsToLowerCases() =>
-            new(AdviceType.CapsLockOnConvertsToLowerCase);
+            new (AdviceType.CapsLockOnConvertsToLowerCase);
 
         // 330
         AdviceItem ReportThatSystemConvertsUpperAndLowerCases() =>
-            new(AdviceType.CaseIsSwitched);
+            new (AdviceType.CaseIsSwitched);
 
         // 331
         AdviceItem ReportThatSystemConvertsToUpperCase() =>
-            new(AdviceType.ConvertsToUpperCase);
+            new (AdviceType.ConvertsToUpperCase);
 
         // 332
         AdviceItem ReportThatSystemConvertsToLowerCase() =>
-            new(AdviceType.ConvertsToLowerCase);
+            new (AdviceType.ConvertsToLowerCase);
 
         // 335
         AdviceItem ReportBarcodesCannotBeReadReliablyForKeyboardScriptThatDoesNotSupportCase() =>
-            new(AdviceType.NoSupportForCase, systemCapabilities.KeyboardScript);
+            new (AdviceType.NoSupportForCase, systemCapabilities.KeyboardScript);
 
         // 350
         AdviceItem ReportIncorrectRepresentationOfPpnRecordSeparators() =>
-            new(AdviceType.RecordSeparatorIncorrectlyRepresentedGermany);
+            new (AdviceType.RecordSeparatorIncorrectlyRepresentedGermany);
 
         // 351
         AdviceItem ReportIncorrectRepresentationOfPpnRecordSeparatorsAssumingNoCalibration() =>
-            new(AdviceType.RecordSeparatorIncorrectlyRepresentedNoCalibrationGermany);
+            new (AdviceType.RecordSeparatorIncorrectlyRepresentedNoCalibrationGermany);
 
         // 355
         AdviceItem ReportThatPpnBarcodesCannotBeReadReliably() =>
-            new(AdviceType.CannotReadPpnReliablyGermany);
+            new (AdviceType.CannotReadPpnReliablyGermany);
 
         // 390
         AdviceItem ReportThatAnUnexpectedErrorWasReported() =>
-            new(AdviceType.UnexpectedErrorReported);
+            new (AdviceType.UnexpectedErrorReported);
     }
 
     /// <summary>

@@ -132,7 +132,6 @@ public sealed record AdviceItem(
     /// </summary>
     /// <returns>The hash value.</returns>
     // ReSharper disable once BaseObjectGetHashCodeCallInGetHashCode
-    [SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
     public override int GetHashCode() =>
         Fnv.CreateHashFnv1A(
             AdviceType,

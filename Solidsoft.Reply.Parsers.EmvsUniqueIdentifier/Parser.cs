@@ -20,7 +20,7 @@
 
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
 
-using BarcodeScanner.Calibration;
+using Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using Packs;
 

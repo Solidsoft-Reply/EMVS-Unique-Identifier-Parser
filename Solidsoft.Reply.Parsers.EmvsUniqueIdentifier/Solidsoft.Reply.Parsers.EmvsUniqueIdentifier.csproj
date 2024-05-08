@@ -62,6 +62,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration.csproj" />
 		<ProjectReference Include="..\..\Solidsoft.Reply.Parsers.HighCapacityAidc\Solidsoft.Reply.Parsers.HighCapacityAidc\Solidsoft.Reply.Parsers.HighCapacityAidc.csproj" />
 	</ItemGroup>
 

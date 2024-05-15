@@ -16,8 +16,8 @@
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>emvs;medicine;verification;parser;gs1;ppn;</PackageTags>
 	<PackageReleaseNotes>
-		1) Added an optional tracing capability to the parser.  Client code can now switch on tracing of the data 
-		   submitted for parsing, including bit the raw submitted data and the pre-processed data.  This is a non-breaking
+		1) Added an optional tracing capability to the parser. Client code can now switch on tracing of the data 
+		   submitted for parsing, including both the raw submitted data and the pre-processed data. This is a non-breaking
 		   change that introduces a new optional parameter on the Parse method.
 	</PackageReleaseNotes>
 	<Description>

@@ -23,6 +23,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
 using Properties;
 
 using System;
+using System.Diagnostics.Contracts;
 using System.Globalization;
 using System.Text;
 
@@ -98,4 +99,40 @@ public static class Extensions
             character));
 #pragma warning restore SA1116 // Split parameters should start on-line after declaration
     }
+
+    /// <summary>
+    ///   Converts an ASCII control character to a Unicode Control Picture character.
+    /// </summary>
+    /// <param name="originalChar">The original character.</param>
+    /// <returns>
+    ///   The Unicode Control Picture character. If the original character is not an ASCII
+    ///   control character, it is returned unchanged.
+    /// </returns>
+    [Pure]
+    public static char ToControlPicture(this char originalChar) =>
+        originalChar switch {
+            _ when originalChar < 32 => (char)(originalChar + 9216),
+            _ => originalChar
+        };
+
+    /// <summary>
+    ///   Converts an ASCII control character to a Unicode Control Picture string.
+    /// </summary>
+    /// <param name="originalChar">The original character.</param>
+    /// <returns>
+    ///   The Unicode Control Picture string. If the original character is not an ASCII
+    ///   control character, it is returned unchanged.
+    /// </returns>
+    [Pure]
+    public static string ToControlPictureString(this char originalChar) =>
+        ToControlPicture(originalChar).ToInvariantString();
+
+    /// <summary>
+    ///   Converts any ASCII control characters in a string to Unicode Control Picture characters.
+    /// </summary>
+    /// <param name="originalString">The original string.</param>
+    /// <returns>A string containing Unicode Control Pictures for any ASCII control characters.</returns>
+    [Pure]
+    public static string ToControlPictures(this string originalString) =>
+        new(originalString.ToCharArray().Select(c => c.ToControlPicture()).ToArray());
 }

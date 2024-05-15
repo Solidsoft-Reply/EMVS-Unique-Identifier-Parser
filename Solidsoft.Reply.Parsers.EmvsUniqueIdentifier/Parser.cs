@@ -18,6 +18,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Diagnostics;
+
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
 
 using Solidsoft.Reply.BarcodeScanner.Calibration;
@@ -64,24 +66,63 @@ public class Parser
     /// <param name="data">The raw barcode data.</param>
     /// <param name="preProcessedData">The pre-processed barcode data.</param>
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
+    /// <param name="trace">Indicates whether the parser should trace the data it receives. This supports debugging.</param>
     /// <returns>A pack identifier.</returns>
-    public IPackIdentifier Parse(string? data, out string preProcessedData, Preprocessor? preProcessors = null)
+    public IPackIdentifier Parse(string? data, out string preProcessedData, Preprocessor? preProcessors = null, bool trace = false)
     {
+        if (trace) {
+            try {
+                Console.WriteLine(data?.ToControlPictures());
+            }
+            catch {
+                // Do nothing here
+            }
+
+            try {
+                Trace.TraceInformation(data?.ToControlPictures());
+            }
+            catch {
+                // Do nothing here
+            }
+        }
+
         var calibrationProcessor = Calibrator.IsProcessingRequired
             ? Calibrator.ProcessInput
             : default(Preprocessor);
 
-        return BaseParser.Parse(data, out preProcessedData, calibrationProcessor, preProcessors);
+        var packIdentifier =  BaseParser.Parse(data, out preProcessedData, calibrationProcessor, preProcessors);
+
+        if (!trace
+            || string.IsNullOrEmpty(preProcessedData)
+            || string.IsNullOrEmpty(data)
+            || preProcessedData == data) return packIdentifier;
+
+        try {
+            Console.WriteLine(preProcessedData.ToControlPictures());
+        }
+        catch {
+            // Do nothing here
+        }
+
+        try {
+            Trace.TraceInformation(preProcessedData.ToControlPictures());
+        }
+        catch {
+            // Do nothing here
+        }
+
+        return packIdentifier;
     }
 
     /// <summary>
     ///   Parse the raw barcode data.
     /// </summary>
     /// <param name="data">The raw barcode data.</param>
+    /// <param name="trace">Indicates whether the parser should trace the data it receives. This supports debugging.</param>
     /// <returns>A pack identifier.</returns>
     // ReSharper disable once UnusedMember.Global
-    public IPackIdentifier Parse(string data)
+    public IPackIdentifier Parse(string data, bool trace = false)
     {
-        return Parse(data, out _);
+        return Parse(data, out _, trace: trace);
     }
 }

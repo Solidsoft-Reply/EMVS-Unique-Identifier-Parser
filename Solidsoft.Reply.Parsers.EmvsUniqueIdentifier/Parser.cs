@@ -19,6 +19,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Diagnostics;
+using Solidsoft.Reply.Parsers.HighCapacityAidc.PreProcessors;
 
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
 
@@ -70,6 +71,10 @@ public class Parser
     /// <returns>A pack identifier.</returns>
     public IPackIdentifier Parse(string? data, out string preProcessedData, Preprocessor? preProcessors = null, bool trace = false)
     {
+        ////data =
+        ////    "[{\"code\":\"Digit9\",\"modifiers\":54},{\"code\":\"KeyD\",\"modifiers\":49},{\"code\":\"Digit2\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit5\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit7\",\"modifiers\":48},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit2\",\"modifiers\":48},{\"code\":\"Digit3\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit5\",\"modifiers\":48},{\"code\":\"Digit5\",\"modifiers\":48},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit6\",\"modifiers\":48},{\"code\":\"Digit4\",\"modifiers\":48},{\"code\":\"Digit2\",\"modifiers\":48},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit2\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit7\",\"modifiers\":48},{\"code\":\"Digit7\",\"modifiers\":48},{\"code\":\"Digit3\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"KeyA\",\"modifiers\":48},{\"code\":\"KeyK\",\"modifiers\":48},{\"code\":\"KeyV\",\"modifiers\":48},{\"code\":\"KeyA\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit7\",\"modifiers\":48},{\"code\":\"BracketRight\",\"modifiers\":50},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit7\",\"modifiers\":48},{\"code\":\"Digit2\",\"modifiers\":48},{\"code\":\"Digit5\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit9\",\"modifiers\":48},{\"code\":\"Digit3\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit2\",\"modifiers\":48},{\"code\":\"Digit4\",\"modifiers\":48},{\"code\":\"Digit5\",\"modifiers\":48},{\"code\":\"Digit4\",\"modifiers\":48},{\"code\":\"Digit8\",\"modifiers\":48},{\"code\":\"Enter\",\"modifiers\":48}]";
+
+        ////preProcessors = Dom3KeyboardEventCodes.ConvertCodesToString;
         if (trace) {
             try {
                 Console.WriteLine(data?.ToControlPictures());

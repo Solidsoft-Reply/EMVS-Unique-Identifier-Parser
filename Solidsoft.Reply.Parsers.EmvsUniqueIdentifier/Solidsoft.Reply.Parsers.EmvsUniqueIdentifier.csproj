@@ -16,9 +16,7 @@
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>emvs;medicine;verification;parser;gs1;ppn;</PackageTags>
 	<PackageReleaseNotes>
-		1) Added an optional tracing capability to the parser. Client code can now switch on tracing of the data 
-		   submitted for parsing, including both the raw submitted data and the pre-processed data. This is a non-breaking
-		   change that introduces a new optional parameter on the Parse method.
+		1) Updated to use the latest version of the Calibrator.
 	</PackageReleaseNotes>
 	<Description>
 		A reliable and validating barcode data parser for the European Medicines Verification System (EMVS).
@@ -27,7 +25,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>1.1.0</Version>
+	<Version>1.1.1</Version>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>

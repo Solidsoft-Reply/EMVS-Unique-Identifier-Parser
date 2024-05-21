@@ -68,7 +68,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
-		<PackageReference Include="Solidsoft.Reply.BarcodeScanner.Calibration" Version="2.2.2" />
+		<PackageReference Include="Solidsoft.Reply.BarcodeScanner.Calibration" Version="2.2.3" />
 		<PackageReference Include="Solidsoft.Reply.Parsers.HighCapacityAidc" Version="1.0.6" />
 		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
 		  <PrivateAssets>all</PrivateAssets>

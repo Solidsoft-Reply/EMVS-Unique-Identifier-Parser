@@ -763,7 +763,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain EDI data..
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI).
         /// </summary>
         public static string Condition_270 {
             get {
@@ -772,7 +772,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain EDI data..
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI).
         /// </summary>
         public static string Condition_271 {
             get {
@@ -781,7 +781,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain EDI data..
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI).
         /// </summary>
         public static string Condition_275 {
             get {

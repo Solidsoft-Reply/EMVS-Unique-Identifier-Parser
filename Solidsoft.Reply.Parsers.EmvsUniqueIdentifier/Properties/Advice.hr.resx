@@ -352,13 +352,13 @@
     <value>Vaš sustav možda neće pouzdano čitati dodatne podatke.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Vaš sustav ne može pouzdano čitati barkodove ako sadrže EDI podatke.</value>
+    <value>Vaš sustav ne može pouzdano čitati barkodove ako sadrže podatke za Elektroničku Razmjenu Podataka (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Vaš sustav ne može pouzdano čitati barkodove ako sadrže EDI podatke.</value>
+    <value>Vaš sustav ne može pouzdano čitati barkodove ako sadrže podatke za Elektroničku Razmjenu Podataka (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Vaš sustav ne može pouzdano čitati barkodove ako sadrže EDI podatke.</value>
+    <value>Vaš sustav ne može pouzdano čitati barkodove ako sadrže podatke za Elektroničku Razmjenu Podataka (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test je propao.</value>

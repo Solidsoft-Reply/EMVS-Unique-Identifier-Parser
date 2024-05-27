@@ -352,13 +352,13 @@
     <value>Dit system kan måske ikke læse yderligere data pålideligt.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Dit system kan ikke pålideligt læse stregkoder, hvis de indeholder EDI-data.</value>
+    <value>Dit system kan ikke læse stregkoder pålideligt, hvis de indeholder data til Elektronisk Dataudveksling (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Dit system kan ikke pålideligt læse stregkoder, hvis de indeholder EDI-data.</value>
+    <value>Dit system kan ikke læse stregkoder pålideligt, hvis de indeholder data til Elektronisk Dataudveksling (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Dit system kan ikke pålideligt læse stregkoder, hvis de indeholder EDI-data.</value>
+    <value>Dit system kan ikke læse stregkoder pålideligt, hvis de indeholder data til Elektronisk Dataudveksling (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testen mislykkedes.</value>

@@ -352,13 +352,13 @@
     <value>Sistemul dvs. s-ar putea să nu citească în mod fiabil datele suplimentare.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Sistemul dvs. nu poate citi în mod fiabil codurile de bare dacă conțin date EDI.</value>
+    <value>Sistemul dvs. nu poate citi fiabil codurile de bare dacă acestea conțin date pentru schimbul electronic de date (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Sistemul dvs. nu poate citi în mod fiabil codurile de bare dacă conțin date EDI.</value>
+    <value>Sistemul dvs. nu poate citi fiabil codurile de bare dacă acestea conțin date pentru schimbul electronic de date (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Sistemul dvs. nu poate citi în mod fiabil codurile de bare dacă conțin date EDI.</value>
+    <value>Sistemul dvs. nu poate citi fiabil codurile de bare dacă acestea conțin date pentru schimbul electronic de date (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testul a eșuat.</value>

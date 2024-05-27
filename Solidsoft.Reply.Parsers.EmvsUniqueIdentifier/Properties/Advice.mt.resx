@@ -190,10 +190,10 @@
     <value>Jekk tiskennja barcodes oħra, u tesperjenza diffikultà, ipprova tikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_270" xml:space="preserve">
-    <value>Jekk tiskennja barcodes li fihom data EDI, u tesperjenza diffikultà, ipprova tikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
+    <value>Is-sistema tiegħek ma tistax taqra l-kodiċijiet tal-bar b'mod affidabbli jekk fihom data għall-Iskambju Elettroniku tad-Data (EDI).</value>
   </data>
   <data name="Advice_271" xml:space="preserve">
-    <value>Jekk tiskennja barcodes li fihom data EDI, u tesperjenza diffikultà, ipprova tikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
+    <value>Is-sistema tiegħek ma tistax taqra l-kodiċijiet tal-bar b'mod affidabbli jekk fihom data għall-Iskambju Elettroniku tad-Data (EDI).</value>
   </data>
   <data name="Advice_275" xml:space="preserve">
     <value>Jekk tiskennja barcodes li fihom data EDI, u tesperjenza diffikultà, ipprova tikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
@@ -352,13 +352,13 @@
     <value>Is-sistema tiegħek jista' ma taqra data addizzjonali b'mod affidabbli.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom data EDI.</value>
+    <value>Is-sistema tiegħek ma tistax taqra l-kodiċijiet tal-bar b'mod affidabbli jekk fihom data għall-Iskambju Elettroniku tad-Data (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom data EDI.</value>
+    <value>Is-sistema tiegħek ma tistax taqra l-kodiċijiet tal-bar b'mod affidabbli jekk fihom data għall-Iskambju Elettroniku tad-Data (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom data EDI.</value>
+    <value>Is-sistema tiegħek ma tistax taqra l-kodiċijiet tal-bar b'mod affidabbli jekk fihom data għall-Iskambju Elettroniku tad-Data (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>It-test falla.</value>

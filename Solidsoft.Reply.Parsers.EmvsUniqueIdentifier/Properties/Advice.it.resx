@@ -121,64 +121,64 @@
     <value />
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Potresti aver scansionato un codice a barre sbagliato o inserito dati errati usando la tastiera. Il tuo scanner di codici a barre o il sistema potrebbe essere lento, o potrebbero essersi verificati alcuni problemi inaspettati o intermittenti.</value>
+    <value>Devi inserire manualmente i dati nel tuo software di verifica per verificare gli identificatori unici PPN.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Se riscontri problemi durante la scansione dei codici a barre PPN tedeschi, inserisci manualmente i dati nel tuo software di verifica.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Se riscontri problemi nella scansione dei codici a barre PPN tedeschi, inserisci manualmente i dati nel tuo software di verifica.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori PPN unici tedeschi.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori unici PPN tedeschi.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
-    <value>Configura il tuo scanner di codici a barre per trasmettere gli identificatori AIM. Se hai problemi nella trasmissione degli identificatori AIM, torna alla configurazione attuale.</value>
+    <value>Configura il tuo scanner di codici a barre per trasmettere gli identificatori AIM. Se hai problemi nella trasmissione degli identificatori AIM, ripristina la configurazione attuale.</value>
   </data>
   <data name="Advice_205" xml:space="preserve">
-    <value>Potresti voler disattivare il blocco maiuscole.</value>
+    <value>Potresti voler disattivare il Caps Lock e provare di nuovo.</value>
   </data>
   <data name="Advice_206" xml:space="preserve">
-    <value>Controlla le configurazioni del tuo scanner di codici a barre, tastiera e computer e riconfigurali se necessario.;;Potresti voler disattivare il blocco maiuscole e provare di nuovo.</value>
+    <value>Controlla le configurazioni del tuo scanner di codici a barre, della tastiera e del computer e riconfigurarle se necessario.;;Potresti voler disattivare il Caps Lock e provare di nuovo.</value>
   </data>
   <data name="Advice_210" xml:space="preserve">
-    <value>Potrebbe essere necessario inserire manualmente i dati nel tuo software di verifica per verificare gli identificatori PPN unici.</value>
+    <value>Potresti voler disattivare il Caps Lock.</value>
   </data>
   <data name="Advice_215" xml:space="preserve">
-    <value>Configura il tuo scanner di codici a barre per trasmettere le sequenze di fine riga e prova di nuovo. Se hai problemi nella trasmissione delle sequenze di fine riga, torna alla configurazione attuale.</value>
+    <value>Configura il tuo scanner di codici a barre per trasmettere le sequenze di fine riga e prova di nuovo. Se hai problemi nella trasmissione delle sequenze di fine riga, ripristina la configurazione attuale.</value>
   </data>
   <data name="Advice_220" xml:space="preserve">
-    <value>Se hai problemi nella verifica dei pacchi di medicinali, configura il tuo scanner di codici a barre in modo che non trasmetta un prefisso.</value>
+    <value>Se hai problemi a verificare i pacchetti di medicinali, configura il tuo scanner di codici a barre in modo che non trasmetta un prefisso.</value>
   </data>
   <data name="Advice_225" xml:space="preserve">
-    <value>Se hai problemi nella verifica dei pacchi di medicinali, configura il tuo scanner di codici a barre in modo che non trasmetta alcun suffisso.</value>
+    <value>Se hai problemi a verificare i pacchetti di medicinali, configura il tuo scanner di codici a barre in modo che non trasmetta alcun suffisso.</value>
   </data>
   <data name="Advice_230" xml:space="preserve">
-    <value>Assicurati che le disposizioni della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Assicurati che i layout della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_231" xml:space="preserve">
-    <value>Assicurati che le disposizioni della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Assicurati che i layout della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_232" xml:space="preserve">
-    <value>Verifica che il tuo scanner di codici a barre sia configurato per trasmettere gli identificatori AIM.</value>
+    <value>Controlla che il tuo scanner di codici a barre sia configurato per trasmettere gli identificatori AIM.</value>
   </data>
   <data name="Advice_235" xml:space="preserve">
-    <value>Assicurati che le disposizioni della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico e trasmettere gli identificatori AIM.</value>
+    <value>Assicurati che i layout della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico e trasmettere gli identificatori AIM.</value>
   </data>
   <data name="Advice_240" xml:space="preserve">
-    <value>Se riscontri problemi durante la scansione dei codici a barre PPN tedeschi, inserisci manualmente i dati nel tuo software di verifica.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Se riscontri problemi nella scansione dei codici a barre PPN tedeschi, inserisci manualmente i dati nel tuo software di verifica.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_241" xml:space="preserve">
-    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori PPN unici.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori unici PPN.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_245" xml:space="preserve">
-    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori PPN unici.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori unici PPN.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_250" xml:space="preserve">
-    <value>Se prevedi di verificare i codici a barre PPN, esegui di nuovo il test, questa volta includendo il test di compatibilità PPN tedesco.</value>
+    <value>Se prevedi di verificare i codici a barre PPN, esegui nuovamente il test, includendo questa volta il test di compatibilità PPN tedesco.</value>
   </data>
   <data name="Advice_255" xml:space="preserve">
-    <value>Se il problema persiste, verifica la configurazione del tuo scanner di codici a barre. Cerca impostazioni che miglioreranno le prestazioni di inserimento da tastiera.</value>
+    <value>Se il problema persiste, controlla la configurazione del tuo scanner di codici a barre. Cerca impostazioni che migliorino le prestazioni di immissione dalla tastiera.</value>
   </data>
   <data name="Advice_256" xml:space="preserve">
-    <value>Se il problema persiste, verifica la configurazione del tuo scanner di codici a barre. Cerca impostazioni che miglioreranno le prestazioni di inserimento da tastiera.</value>
+    <value>Se il problema persiste, controlla la configurazione del tuo scanner di codici a barre. Cerca impostazioni che migliorino le prestazioni di immissione dalla tastiera.</value>
   </data>
   <data name="Advice_260" xml:space="preserve">
     <value>Se scansioni altri codici a barre e incontri difficoltà, prova a configurare il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
@@ -199,226 +199,226 @@
     <value>Se scansioni codici a barre che contengono dati EDI e incontri difficoltà, prova a configurare il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
-    <value>Questo potrebbe rallentare le tue prestazioni di scansione. Tuttavia, il tuo software di verifica potrebbe non supportare le sequenze di fine riga.</value>
+    <value>Riprova, assicurandoti di scansionare il/i codice/i a barre corretto/i.</value>
   </data>
   <data name="Advice_301" xml:space="preserve">
-    <value>Prova di nuovo, assicurandoti di scansionare il codice a barre corretto.</value>
+    <value>Riprova, assicurandoti di scansionare il codice a barre corretto.</value>
   </data>
   <data name="Advice_303" xml:space="preserve">
-    <value>Prova di nuovo.;;Assicurati che le disposizioni della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Riprova.;;Assicurati che i layout della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_304" xml:space="preserve">
-    <value>Prova di nuovo, assicurandoti di scansionare il codice a barre corretto.</value>
+    <value>Riprova, assicurandoti di scansionare il/i codice/i a barre corretto/i.</value>
   </data>
   <data name="Advice_305" xml:space="preserve">
-    <value>Prova di nuovo, assicurandoti di scansionare il codice a barre corretto.</value>
+    <value>Riprova, assicurandoti di scansionare il codice a barre corretto.;;Se ti viene chiesto di scansionare più codici a barre, assicurati di scansionarli nell'ordine corretto.</value>
   </data>
   <data name="Advice_306" xml:space="preserve">
-    <value>Prova di nuovo, assicurandoti di scansionare il codice a barre corretto.</value>
+    <value>Riprova.</value>
   </data>
   <data name="Advice_307" xml:space="preserve">
-    <value>Se il tuo software di verifica non può compensare, configura il tuo scanner di codici a barre per corrispondere alla disposizione della tastiera del tuo computer.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Se il tuo software di verifica non riesce a compensare, configura il tuo scanner di codici a barre per corrispondere al layout della tastiera del tuo computer.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_308" xml:space="preserve">
-    <value>Configura il tuo scanner di codici a barre per corrispondere alla disposizione della tastiera del tuo computer.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Configura il tuo scanner di codici a barre per corrispondere al layout della tastiera del tuo computer.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_309" xml:space="preserve">
-    <value>Se il tuo software di verifica non può compensare, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Se il tuo software di verifica non riesce a compensare, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_310" xml:space="preserve">
     <value>Configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_311" xml:space="preserve">
-    <value>Se il tuo software di verifica non può compensare, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Se il tuo software di verifica non riesce a compensare, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_312" xml:space="preserve">
     <value>Configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_315" xml:space="preserve">
-    <value>Configura il tuo scanner di codici a barre per corrispondere alla disposizione della tastiera del tuo computer.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Configura il tuo scanner di codici a barre per corrispondere al layout della tastiera del tuo computer.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_316" xml:space="preserve">
     <value>Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_320" xml:space="preserve">
-    <value>Se il tuo software di verifica non può compensare, configura il tuo scanner di codici a barre per corrispondere alla disposizione della tastiera del tuo computer.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Se il tuo software di verifica non riesce a compensare, configura il tuo scanner di codici a barre per corrispondere al layout della tastiera del tuo computer.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_325" xml:space="preserve">
-    <value>Disattiva il blocco maiuscole e prova di nuovo.</value>
+    <value>Disattiva il Caps Lock e prova di nuovo.;;Se devi mantenere il Caps Lock attivo durante la verifica degli identificatori unici, potresti essere in grado di configurare il tuo scanner di codici a barre per compensare.</value>
   </data>
   <data name="Advice_326" xml:space="preserve">
-    <value>Disattiva il blocco maiuscole e prova di nuovo.</value>
+    <value>Disattiva il Caps Lock e prova di nuovo.</value>
   </data>
   <data name="Advice_327" xml:space="preserve">
-    <value>Controlla la configurazione del tuo scanner di codici a barre, tastiera e computer e riconfigurali se necessario.;;Disattiva il blocco maiuscole e prova di nuovo.</value>
+    <value>Controlla la configurazione del tuo scanner di codici a barre, della tastiera e del computer e riconfigurarle se necessario.;;Disattiva il Caps Lock e prova di nuovo.</value>
   </data>
   <data name="Advice_328" xml:space="preserve">
-    <value>Controlla la configurazione del tuo scanner di codici a barre, tastiera e computer e riconfigurali se necessario.;;Disattiva il blocco maiuscole e prova di nuovo.</value>
+    <value>Controlla la configurazione del tuo scanner di codici a barre, della tastiera e del computer e riconfigurarle se necessario.;;Disattiva il Caps Lock e prova di nuovo.</value>
   </data>
   <data name="Advice_330" xml:space="preserve">
-    <value>Controlla la configurazione del tuo scanner, tastiera e computer e riconfigurali se necessario.</value>
+    <value>Controlla la configurazione del tuo scanner, della tastiera e del computer e riconfigurarle se necessario.</value>
   </data>
   <data name="Advice_331" xml:space="preserve">
-    <value>Controlla la configurazione del tuo scanner di codici a barre, tastiera e computer e riconfigurali se necessario.</value>
+    <value>Controlla la configurazione del tuo scanner di codici a barre, della tastiera e del computer e riconfigurarle se necessario.</value>
   </data>
   <data name="Advice_332" xml:space="preserve">
-    <value>Controlla la configurazione del tuo scanner di codici a barre, tastiera e computer e riconfigurali se necessario.</value>
+    <value>Controlla la configurazione del tuo scanner di codici a barre, della tastiera e del computer e riconfigurarle se necessario.</value>
   </data>
   <data name="Advice_335" xml:space="preserve">
-    <value>Se possibile, configura il tuo computer per utilizzare una disposizione di tastiera diversa.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Se possibile, configura il tuo computer per utilizzare un layout di tastiera diverso.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_350" xml:space="preserve">
-    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori PPN unici.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori unici PPN.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_351" xml:space="preserve">
-    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori PPN unici.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori unici PPN.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_355" xml:space="preserve">
-    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori PPN unici.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori unici PPN.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_390" xml:space="preserve">
-    <value>Prova di nuovo.;;Assicurati che le disposizioni della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Riprova.</value>
   </data>
   <data name="Condition_100" xml:space="preserve">
-    <value>Il tuo sistema legge in modo affidabile la maggior parte degli identificatori unici.</value>
+    <value>Il tuo sistema legge gli identificatori unici in modo affidabile.</value>
   </data>
   <data name="Condition_105" xml:space="preserve">
-    <value>Il tuo sistema legge in modo affidabile la maggior parte degli identificatori unici.</value>
+    <value>Il tuo sistema legge gli identificatori unici in modo affidabile.</value>
   </data>
   <data name="Condition_110" xml:space="preserve">
-    <value>Il tuo sistema legge in modo affidabile la maggior parte degli identificatori unici.</value>
+    <value>Il tuo sistema legge gli identificatori unici in modo affidabile.</value>
   </data>
   <data name="Condition_115" xml:space="preserve">
-    <value>Il tuo sistema potrebbe non leggere i caratteri degli identificatori AIM.</value>
+    <value>Il tuo sistema legge la maggior parte degli identificatori unici in modo affidabile.</value>
   </data>
   <data name="Condition_200" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre e il computer hanno disposizioni di tastiera diverse.</value>
+    <value>Il tuo scanner di codici a barre non trasmette gli identificatori AIM.</value>
   </data>
   <data name="Condition_205" xml:space="preserve">
-    <value>Il blocco maiuscole è attivo, ma la formattazione delle lettere è segnalata correttamente.</value>
+    <value>Caps Lock è attivo, ma la maiuscola delle lettere è riportata correttamente.</value>
   </data>
   <data name="Condition_206" xml:space="preserve">
-    <value>Il blocco maiuscole è attivo, ma la formattazione delle lettere è preservata.</value>
+    <value>Caps Lock è attivo, ma la maiuscola delle lettere è preservata.</value>
   </data>
   <data name="Condition_210" xml:space="preserve">
-    <value>Il blocco maiuscole è attivato.</value>
+    <value>Caps Lock è attivato.</value>
   </data>
   <data name="Condition_215" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre non trasmette identificatori AIM.</value>
+    <value>Il tuo scanner di codici a barre non trasmette una sequenza di fine riga.</value>
   </data>
   <data name="Condition_220" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre o il sistema potrebbe essere lento o potrebbe essere influenzato da software antivirus o da qualche altro problema inaspettato o intermittente.</value>
-  </data>
-  <data name="Condition_225" xml:space="preserve">
     <value>Il tuo scanner di codici a barre trasmette un prefisso.</value>
   </data>
+  <data name="Condition_225" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre trasmette un suffisso.</value>
+  </data>
   <data name="Condition_230" xml:space="preserve">
-    <value>Il tuo sistema potrebbe non leggere in modo affidabile dati aggiuntivi.</value>
+    <value>Il tuo sistema potrebbe non leggere i caratteri identificativi AIM.</value>
   </data>
   <data name="Condition_231" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri degli identificatori AIM.</value>
+    <value>Il tuo sistema non può leggere i caratteri identificativi AIM.</value>
   </data>
   <data name="Condition_232" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre potrebbe essere configurato per simulare il blocco maiuscole.</value>
+    <value>Il tuo scanner di codici a barre potrebbe non trasmettere gli identificatori AIM.</value>
   </data>
   <data name="Condition_235" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile caratteri aggiuntivi.</value>
+    <value>Il tuo sistema non può leggere i caratteri identificativi AIM in modo affidabile.</value>
   </data>
   <data name="Condition_240" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i codici a barre se contengono dati EDI.</value>
+    <value>Il tuo sistema non può leggere i caratteri dei codici a barre PPN tedeschi in modo affidabile.</value>
   </data>
   <data name="Condition_241" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri dei codici a barre PPN tedeschi.</value>
+    <value>Il tuo sistema non può leggere i caratteri dei codici a barre PPN tedeschi.</value>
   </data>
   <data name="Condition_245" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri dei codici a barre PPN tedeschi.</value>
+    <value>Il tuo sistema non può leggere i caratteri dei codici a barre PPN tedeschi.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Quando il blocco maiuscole è attivato, il comportamento predefinito è segnalare tutti i caratteri in maiuscolo.</value>
+    <value>Non hai testato la compatibilità per i codici a barre PPN tedeschi.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
-    <value>Le prestazioni di inserimento dei dati sono più lente del previsto.</value>
+    <value>Le prestazioni di immissione dei dati sono più lente del previsto.</value>
   </data>
   <data name="Condition_256" xml:space="preserve">
-    <value>Le prestazioni di inserimento dei dati sono molto scarse.</value>
+    <value>Le prestazioni di immissione dei dati sono molto scarse.</value>
   </data>
   <data name="Condition_260" xml:space="preserve">
-    <value>Il tuo software deve implementare la mappatura dei caratteri per leggere in modo affidabile i codici a barre PPN.</value>
+    <value>Il tuo sistema non può leggere altri caratteri in modo affidabile.</value>
   </data>
   <data name="Condition_261" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile caratteri aggiuntivi.</value>
+    <value>Il tuo sistema non può leggere altri caratteri.</value>
   </data>
   <data name="Condition_265" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri degli identificatori unici.</value>
+    <value>Il tuo sistema potrebbe non leggere altri dati in modo affidabile.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri degli identificatori AIM.</value>
+    <value>Il tuo sistema non può leggere i codici a barre in modo affidabile se contengono dati per lo scambio elettronico di dati (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i codici a barre se contengono dati EDI.</value>
+    <value>Il tuo sistema non può leggere i codici a barre in modo affidabile se contengono dati per lo scambio elettronico di dati (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i codici a barre se contengono dati EDI.</value>
+    <value>Il tuo sistema non può leggere i codici a barre in modo affidabile se contengono dati per lo scambio elettronico di dati (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
-    <value>Il test è fallito inaspettatamente.</value>
+    <value>Il test è fallito.</value>
   </data>
   <data name="Condition_301" xml:space="preserve">
-    <value>Non sono stati segnalati dati per il codice a barre.</value>
+    <value>Nessun dato è stato riportato per il codice a barre.</value>
   </data>
   <data name="Condition_303" xml:space="preserve">
-    <value>Alcuni dati non sono stati segnalati quando hai scansionato il codice a barre.</value>
+    <value>Alcuni dati non sono stati riportati quando hai scansionato il codice a barre.</value>
   </data>
   <data name="Condition_304" xml:space="preserve">
-    <value>Non sono stati segnalati dati per uno o più codici a barre.</value>
+    <value>Nessun dato è stato riportato per uno o più codici a barre.</value>
   </data>
   <data name="Condition_305" xml:space="preserve">
-    <value>Potresti voler disattivare il blocco maiuscole.</value>
-  </data>
-  <data name="Condition_306" xml:space="preserve">
-    <value>Alcuni dati non sono stati segnalati quando hai scansionato uno o più codici a barre.</value>
-  </data>
-  <data name="Condition_307" xml:space="preserve">
     <value>Hai scansionato un codice a barre fuori sequenza.</value>
   </data>
+  <data name="Condition_306" xml:space="preserve">
+    <value>Alcuni dati non sono stati riportati quando hai scansionato uno o più codici a barre.</value>
+  </data>
+  <data name="Condition_307" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre e il computer hanno layout di tastiera diversi.</value>
+  </data>
   <data name="Condition_308" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre e il computer hanno disposizioni di tastiera diverse.</value>
+    <value>Il tuo scanner di codici a barre e il computer hanno layout di tastiera diversi.</value>
   </data>
   <data name="Condition_309" xml:space="preserve">
-    <value>I caratteri nascosti nei codici a barre non sono segnalati correttamente.</value>
+    <value>I caratteri nascosti nei codici a barre non sono riportati correttamente.</value>
   </data>
   <data name="Condition_310" xml:space="preserve">
-    <value>I caratteri nascosti nei codici a barre non sono segnalati correttamente.</value>
+    <value>I caratteri nascosti nei codici a barre non sono riportati correttamente.</value>
   </data>
   <data name="Condition_311" xml:space="preserve">
-    <value>I caratteri nascosti nei codici a barre non sono segnalati correttamente.</value>
+    <value>I caratteri nascosti nei codici a barre non sono riportati correttamente.</value>
   </data>
   <data name="Condition_312" xml:space="preserve">
-    <value>I caratteri nascosti nei codici a barre non sono segnalati correttamente.</value>
+    <value>I caratteri nascosti nei codici a barre non sono riportati correttamente.</value>
   </data>
   <data name="Condition_315" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre e il computer hanno disposizioni di tastiera diverse.</value>
+    <value>Il tuo scanner di codici a barre e il computer hanno layout di tastiera diversi.</value>
   </data>
   <data name="Condition_316" xml:space="preserve">
-    <value>I caratteri nascosti nei codici a barre non sono segnalati correttamente.</value>
+    <value>I caratteri nascosti nei codici a barre non sono riportati correttamente.</value>
   </data>
   <data name="Condition_320" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri dei codici a barre PPN.</value>
+    <value>Il tuo sistema non può leggere i caratteri identificativi unici in modo affidabile.</value>
   </data>
   <data name="Condition_325" xml:space="preserve">
-    <value>Il blocco maiuscole è attivato.</value>
+    <value>Caps Lock è attivato.</value>
   </data>
   <data name="Condition_326" xml:space="preserve">
-    <value>Il blocco maiuscole è attivato.</value>
+    <value>Caps Lock è attivato.</value>
   </data>
   <data name="Condition_327" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre potrebbe essere configurato per convertire i caratteri in minuscolo.</value>
+    <value>Il tuo scanner di codici a barre potrebbe essere configurato per convertire i caratteri in maiuscolo.</value>
   </data>
   <data name="Condition_328" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre è probabilmente configurato per compensare automaticamente il blocco maiuscole.</value>
+    <value>Il tuo scanner di codici a barre potrebbe essere configurato per convertire i caratteri in minuscolo.</value>
   </data>
   <data name="Condition_330" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre potrebbe essere configurato per convertire i caratteri in maiuscolo.</value>
+    <value>Il tuo scanner di codici a barre potrebbe essere configurato per simulare il Caps Lock.</value>
   </data>
   <data name="Condition_331" xml:space="preserve">
     <value>Il tuo scanner di codici a barre potrebbe essere configurato per convertire i caratteri in maiuscolo.</value>
@@ -427,141 +427,141 @@
     <value>Il tuo scanner di codici a barre potrebbe essere configurato per convertire i caratteri in minuscolo.</value>
   </data>
   <data name="Condition_335" xml:space="preserve">
-    <value>Il tasto del blocco maiuscole potrebbe essere disabilitato o rimappato.</value>
+    <value>Il layout della tua tastiera supporta i caratteri {0} e non può leggere gli identificatori unici in modo affidabile.</value>
   </data>
   <data name="Condition_350" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri dei codici a barre PPN tedeschi.</value>
+    <value>Il tuo sistema non può leggere i caratteri dei codici a barre PPN in modo affidabile.</value>
   </data>
   <data name="Condition_351" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri dei codici a barre PPN.</value>
+    <value>Il tuo sistema non può leggere i caratteri dei codici a barre PPN.</value>
   </data>
   <data name="Condition_355" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri dei codici a barre PPN.</value>
+    <value>Il tuo sistema non può leggere i caratteri dei codici a barre PPN.</value>
   </data>
   <data name="Condition_390" xml:space="preserve">
-    <value>La disposizione della tastiera dello scanner di codici a barre e del computer potrebbero non corrispondere. Potresti aver scansionato un codice a barre sbagliato o inserito dati errati usando la tastiera. Il tuo scanner di codici a barre o il sistema potrebbe essere lento, o potrebbero essersi verificati alcuni problemi inaspettati o intermittenti.</value>
+    <value>Il test è fallito inaspettatamente.</value>
   </data>
   <data name="Description_105" xml:space="preserve">
-    <value>Tuttavia, non hai testato la compatibilità per i codici a barre PPN tedeschi. Il tuo sistema potrebbe non essere in grado di leggere in modo affidabile i codici a barre PPN tedeschi.</value>
+    <value>Tuttavia, non hai testato la compatibilità per i codici a barre PPN tedeschi. Il tuo sistema potrebbe non essere in grado di leggere i codici a barre PPN tedeschi in modo affidabile.</value>
   </data>
   <data name="Description_110" xml:space="preserve">
     <value>Tuttavia, il tuo software di verifica potrebbe non leggere correttamente i codici a barre PPN tedeschi.</value>
   </data>
   <data name="Description_115" xml:space="preserve">
-    <value>Tuttavia, non può leggere in modo affidabile i codici a barre PPN tedeschi.</value>
+    <value>Tuttavia, non può leggere i codici a barre PPN tedeschi in modo affidabile.</value>
   </data>
   <data name="Description_200" xml:space="preserve">
-    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software di verifica può utilizzarli per eliminare allarmi non necessari.</value>
+    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software di verifica potrebbe usarli per eliminare avvisi non necessari.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre non trasmette una sequenza di fine riga.</value>
+    <value>Il tuo scanner di codici a barre è probabilmente configurato per compensare automaticamente il Caps Lock.</value>
   </data>
   <data name="Description_206" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre trasmette un suffisso.</value>
+    <value>Il tasto Caps Lock potrebbe essere disabilitato o rimappato.</value>
   </data>
   <data name="Description_210" xml:space="preserve">
-    <value>Tuttavia, la disposizione della tastiera del tuo computer è per uno script che non supporta lettere maiuscole e minuscole.</value>
+    <value>Tuttavia, il layout della tastiera del tuo computer è per un sistema di scrittura che non supporta lettere maiuscole e minuscole.</value>
   </data>
   <data name="Description_215" xml:space="preserve">
-    <value>Questo potrebbe essere un problema temporaneo o intermittente. Il tuo computer potrebbe essere occupato, ad esempio eseguendo un antivirus o un servizio di testo predittivo.</value>
+    <value>Questo potrebbe rallentare le prestazioni della scansione. Tuttavia, il tuo software di verifica potrebbe non supportare le sequenze di fine riga.</value>
   </data>
   <data name="Description_220" xml:space="preserve">
-    <value>Il tuo software di verifica potrebbe essere in grado di compensare. Tuttavia, il tuo sistema non può leggere correttamente i caratteri dei codici a barre PPN tedeschi. Alcuni software di verifica potrebbero essere in grado di compensare analizzando i codici chiave piuttosto che i caratteri.Il tuo software di verifica potrebbe non riconoscere il prefisso.</value>
+    <value>Il tuo software di verifica potrebbe non riconoscere il prefisso.</value>
   </data>
   <data name="Description_225" xml:space="preserve">
     <value>Il tuo software di verifica potrebbe non riconoscere il suffisso.</value>
   </data>
   <data name="Description_230" xml:space="preserve">
-    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software di verifica può utilizzarli per eliminare allarmi non necessari. Tuttavia, il software deve implementare la mappatura dei caratteri per leggere in modo affidabile gli identificatori AIM.</value>
+    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software di verifica potrebbe usarli per eliminare avvisi non necessari. Tuttavia, il software deve implementare la mappatura dei caratteri per leggere gli identificatori AIM in modo affidabile.</value>
   </data>
   <data name="Description_231" xml:space="preserve">
-    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software di verifica può utilizzarli per eliminare allarmi non necessari.</value>
+    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software di verifica potrebbe usarli per eliminare avvisi non necessari.</value>
   </data>
   <data name="Description_232" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre potrebbe non trasmettere identificatori AIM.</value>
+    <value>Il tuo scanner di codici a barre potrebbe trasmettere identificatori AIM, ma non è certo. Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software di verifica potrebbe usarli per eliminare avvisi non necessari.</value>
   </data>
   <data name="Description_235" xml:space="preserve">
-    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software di verifica può utilizzarli per eliminare allarmi non necessari.</value>
+    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software di verifica potrebbe usarli per eliminare avvisi non necessari.</value>
   </data>
   <data name="Description_240" xml:space="preserve">
-    <value>La disposizione della tua tastiera supporta {0} caratteri e non può leggere in modo affidabile gli identificatori unici.</value>
+    <value>Il tuo software deve implementare la mappatura dei caratteri per leggere i codici a barre PPN in modo affidabile.</value>
   </data>
   <data name="Description_245" xml:space="preserve">
-    <value>Alcuni software di verifica possono compensare ciò analizzando i codici chiave piuttosto che i caratteri.</value>
+    <value>Alcuni software di verifica potrebbero essere in grado di compensare questo analizzando i codici chiave anziché i caratteri.</value>
   </data>
   <data name="Description_255" xml:space="preserve">
-    <value>Il test è fallito.</value>
+    <value>Questo potrebbe essere un problema temporaneo o intermittente. Il tuo computer potrebbe essere occupato, eseguendo un antivirus o un servizio di testo predittivo. Il tuo scanner di codici a barre potrebbe essere configurato come un tastierino numerico.</value>
   </data>
   <data name="Description_256" xml:space="preserve">
-    <value>Questo potrebbe essere un problema temporaneo o intermittente. Il tuo computer potrebbe essere occupato, ad esempio eseguendo un antivirus o un servizio di testo predittivo.</value>
+    <value>Questo potrebbe essere un problema temporaneo o intermittente. Il tuo computer potrebbe essere occupato, eseguendo un antivirus o un servizio di testo predittivo. Il tuo scanner di codici a barre potrebbe essere configurato come un tastierino numerico.</value>
   </data>
   <data name="Description_260" xml:space="preserve">
-    <value>Alcuni codici a barre possono contenere caratteri aggiuntivi che non compaiono mai negli identificatori unici. Il tuo software deve implementare la mappatura dei caratteri per leggere in modo affidabile questi codici a barre.</value>
+    <value>Alcuni codici a barre potrebbero contenere caratteri aggiuntivi che non appaiono mai negli identificatori unici. Il tuo software deve implementare la mappatura dei caratteri per leggere questi codici a barre in modo affidabile.</value>
   </data>
   <data name="Description_261" xml:space="preserve">
-    <value>Alcuni codici a barre possono contenere caratteri aggiuntivi che non compaiono mai negli identificatori unici.</value>
+    <value>Alcuni codici a barre potrebbero contenere caratteri aggiuntivi che non appaiono mai negli identificatori unici.</value>
   </data>
   <data name="Description_265" xml:space="preserve">
-    <value>Alcuni codici a barre possono contenere caratteri aggiuntivi che non compaiono mai negli identificatori unici.</value>
+    <value>Alcuni codici a barre potrebbero contenere caratteri aggiuntivi che non appaiono mai negli identificatori unici.</value>
   </data>
   <data name="Description_270" xml:space="preserve">
-    <value>Alcuni codici a barre possono contenere dati EDI. Il tuo software deve implementare la mappatura dei caratteri per leggere in modo affidabile questi codici a barre.</value>
+    <value>Alcuni codici a barre potrebbero contenere dati EDI. Il tuo software deve implementare la mappatura dei caratteri per leggere questi codici a barre in modo affidabile.</value>
   </data>
   <data name="Description_271" xml:space="preserve">
-    <value>Alcuni codici a barre possono contenere dati EDI.</value>
+    <value>Alcuni codici a barre potrebbero contenere dati EDI.</value>
   </data>
   <data name="Description_275" xml:space="preserve">
-    <value>Alcuni codici a barre possono contenere dati EDI.</value>
+    <value>Alcuni codici a barre potrebbero contenere dati EDI.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
-    <value>Non hai testato la compatibilità per i codici a barre PPN tedeschi.</value>
+    <value>Potresti aver scansionato un codice a barre errato o inserito dati errati utilizzando la tastiera. Il tuo scanner di codici a barre o sistema potrebbe essere lento, oppure potrebbe essersi verificato un problema inaspettato o intermittente.</value>
   </data>
   <data name="Description_303" xml:space="preserve">
-    <value>Disattiva il blocco maiuscole e prova di nuovo.;;Se devi mantenere il blocco maiuscole attivato durante la verifica di identificatori unici, potresti essere in grado di configurare il tuo scanner di codici a barre per compensare.</value>
+    <value>I layout della tastiera del tuo scanner di codici a barre e del computer potrebbero non corrispondere. Potresti aver scansionato un codice a barre errato o inserito dati errati utilizzando la tastiera. Il tuo scanner di codici a barre o sistema potrebbe essere lento, oppure potrebbe essersi verificato un problema inaspettato o intermittente.</value>
   </data>
   <data name="Description_306" xml:space="preserve">
-    <value>Potresti aver scansionato un codice a barre sbagliato o inserito dati errati usando la tastiera. Il tuo scanner di codici a barre o il sistema potrebbe essere lento, o potrebbero essersi verificati alcuni problemi inaspettati o intermittenti.</value>
+    <value>Potresti aver scansionato un codice a barre errato o inserito dati errati utilizzando la tastiera. Il tuo scanner di codici a barre o sistema potrebbe essere lento, oppure potrebbe essersi verificato un problema inaspettato o intermittente.</value>
   </data>
   <data name="Description_307" xml:space="preserve">
-    <value>Il tuo software di verifica deve implementare la mappatura dei caratteri per leggere in modo affidabile gli identificatori unici.</value>
+    <value>Il tuo software di verifica deve implementare la mappatura dei caratteri per leggere gli identificatori unici in modo affidabile.</value>
   </data>
   <data name="Description_309" xml:space="preserve">
-    <value>Il tuo sistema legge in modo affidabile la maggior parte degli identificatori unici.</value>
+    <value>Il tuo software di verifica potrebbe essere in grado di compensare.</value>
   </data>
   <data name="Description_311" xml:space="preserve">
     <value>Il tuo software di verifica potrebbe essere in grado di compensare.</value>
   </data>
   <data name="Description_315" xml:space="preserve">
-    <value>Il tuo software di verifica potrebbe essere in grado di compensare.</value>
+    <value>Il tuo software di verifica potrebbe essere in grado di compensare. Tuttavia, il tuo sistema non può leggere correttamente i caratteri dei codici a barre PPN tedeschi. Alcuni software di verifica potrebbero essere in grado di compensare questo analizzando i codici chiave anziché i caratteri.</value>
   </data>
   <data name="Description_316" xml:space="preserve">
-    <value>Il tuo software di verifica potrebbe essere in grado di compensare. Tuttavia, il tuo sistema non può leggere correttamente i caratteri dei codici a barre PPN tedeschi. Alcuni software di verifica potrebbero essere in grado di compensare analizzando i codici chiave piuttosto che i caratteri.</value>
+    <value>Il tuo software di verifica potrebbe essere in grado di compensare. Tuttavia, il tuo sistema non può leggere correttamente i caratteri dei codici a barre PPN tedeschi. Alcuni software di verifica potrebbero essere in grado di compensare questo analizzando i codici chiave anziché i caratteri.</value>
   </data>
   <data name="Description_320" xml:space="preserve">
-    <value>Alcuni software di verifica possono compensare ciò analizzando i codici chiave piuttosto che i caratteri.</value>
+    <value>Alcuni software di verifica potrebbero essere in grado di compensare questo analizzando i codici chiave anziché i caratteri.</value>
   </data>
   <data name="Description_326" xml:space="preserve">
-    <value>Prova di nuovo.;;Assicurati che le disposizioni della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>Quando il Caps Lock è attivo, il comportamento predefinito è di riportare tutti i caratteri in maiuscolo.</value>
   </data>
   <data name="Description_327" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri degli identificatori unici.</value>
+    <value>Il tuo sistema non può leggere i caratteri identificativi unici in modo affidabile.</value>
   </data>
   <data name="Description_328" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri degli identificatori unici.</value>
+    <value>Il tuo sistema non può leggere i caratteri identificativi unici in modo affidabile.</value>
   </data>
   <data name="Description_331" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri degli identificatori unici.</value>
+    <value>Il tuo sistema non può leggere i caratteri identificativi unici in modo affidabile.</value>
   </data>
   <data name="Description_332" xml:space="preserve">
-    <value>Il tuo sistema non può leggere in modo affidabile i caratteri degli identificatori unici.</value>
+    <value>Il tuo sistema non può leggere i caratteri identificativi unici in modo affidabile.</value>
   </data>
   <data name="Description_350" xml:space="preserve">
-    <value>Il tuo software deve implementare la mappatura dei caratteri per leggere in modo affidabile i codici a barre PPN.</value>
+    <value>Il tuo software deve implementare la mappatura dei caratteri per leggere i codici a barre PPN in modo affidabile.</value>
   </data>
   <data name="Description_355" xml:space="preserve">
-    <value>Alcuni software di verifica possono compensare ciò analizzando i codici chiave piuttosto che i caratteri.</value>
+    <value>Alcuni software di verifica potrebbero essere in grado di compensare questo analizzando i codici chiave anziché i caratteri.</value>
   </data>
   <data name="Description_390" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre potrebbe trasmettere identificatori AIM, ma non è certo. Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software di verifica può utilizzarli per eliminare allarmi non necessari.</value>
+    <value>Il tuo scanner di codici a barre o sistema potrebbe essere lento o potrebbe essere influenzato da un software antivirus o da qualche altro problema inaspettato o intermittente.</value>
   </data>
 </root>

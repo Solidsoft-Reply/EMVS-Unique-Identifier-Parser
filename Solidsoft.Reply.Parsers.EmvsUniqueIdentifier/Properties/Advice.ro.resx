@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Puteți verifica autenticitatea pachetelor de medicamente scanând codul de bare imprimat pe ambalajul exterior.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Este posibil să fie necesar să introduceți date manual în software-ul dvs. de verificare pentru a verifica identificatorii unici PPN.</value>
+    <value>Puteți verifica autenticitatea pachetelor de medicamente scanând codul de bare imprimat pe ambalajul exterior. S-ar putea să fie nevoie să introduci date manual în software-ul tău pentru coduri de bare care conțin date formate conform ISO/IEC 15434.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Dacă întâmpinați probleme la scanarea codurilor de bare PPN germane, introduceți date manual în software-ul dvs. de verificare.;;Dacă este necesar, configurați scannerul dvs. de coduri de bare să emuleze o tastatură numerică.</value>
+    <value>Puteți verifica autenticitatea majorității pachetelor de medicamente scanând codul de bare imprimat pe ambalajul exterior. Jeśli napotkasz problemy podczas skanowania kodów kreskowych zawierających dane w formacie 05 lub 06, wprowadź dane ręcznie do swojego oprogramowania. W razie potrzeby skonfiguruj skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Introduceți date manual în software-ul dumneavoastră de verificare pentru a verifica identificatorii unici PPN germani.;;Dacă este necesar, configurați scannerul dumneavoastră de coduri de bare să emuleze o tastatură numerică.</value>
+    <value>Puteți verifica autenticitatea majorității pachetelor de medicamente scanând codul de bare imprimat pe ambalajul exterior. Wprowadź dane ręcznie do swojego oprogramowania dla kodów kreskowych zawierających dane w formacie 05 lub 06. W razie potrzeby skonfiguruj skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Configurați scannerul dumneavoastră de coduri de bare să transmită identificatori AIM. Dacă aveți probleme la transmiterea identificatorilor AIM, reveniți la configurația actuală.</value>

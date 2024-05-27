@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>U kunt de echtheid van medicijnverpakkingen verifiëren door de streepjescode op de buitenverpakking te scannen.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>U moet mogelijk handmatig gegevens invoeren in uw verificatiesoftware om PPN unieke identificatoren te verifiëren.</value>
+    <value>U kunt de echtheid van medicijnverpakkingen verifiëren door de streepjescode op de buitenverpakking te scannen. U moet mogelijk handmatig gegevens invoeren in uw software voor barcodes die data bevatten geformatteerd volgens ISO/IEC 15434 karakters.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Als u problemen ondervindt bij het scannen van Duitse PPN barcodes, voer dan handmatig gegevens in uw verificatiesoftware in.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
+    <value>U kunt de echtheid van de meeste medicijnverpakkingen verifiëren door de streepjescode op de buitenverpakking te scannen. Als u problemen ondervindt bij het scannen van barcodes die Format 05 of Format 06 data bevatten, voer dan handmatig gegevens in uw software in. Indien nodig, configureer uw barcodescanner om een numeriek toetsenbord te emuleren.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Voer handmatig gegevens in uw verificatiesoftware in voor barcodes die Format 05 of Format 06 data bevatten.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenblok na te bootsen.</value>
+    <value>U kunt de echtheid van de meeste medicijnverpakkingen verifiëren door de streepjescode op de buitenverpakking te scannen.Voer handmatig gegevens in uw software in voor barcodes die Format 05 of Format 06 data bevatten. Indien nodig, configureer uw barcodescanner om een numeriek toetsenbord te emuleren.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Configureer uw barcodescanner om AIM-identificatoren te verzenden. Als u problemen ondervindt bij het verzenden van AIM-identificatoren, ga dan terug naar de huidige configuratie.</value>

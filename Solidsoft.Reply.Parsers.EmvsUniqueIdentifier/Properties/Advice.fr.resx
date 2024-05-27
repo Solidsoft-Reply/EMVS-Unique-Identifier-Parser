@@ -118,19 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Vous pouvez vérifier l'authenticité des emballages de médicaments en scannant le code-barres imprimé sur l'emballage extérieur.</value>
     <comment>Low</comment>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Vous devrez peut-être saisir les données manuellement dans votre logiciel de vérification pour vérifier les identifiants PPN uniques.</value>
+    <value>Vous pouvez vérifier l'authenticité des emballages de médicaments en scannant le code-barres imprimé sur l'emballage extérieur. Vous devrez peut-être saisir les données manuellement dans votre logiciel pour les codes-barres qui contiennent des données formatées selon les caractères ISO/IEC 15434.</value>
     <comment>Low</comment>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Si vous rencontrez des problèmes lors du scan des codes-barres PPN allemands, entrez les données manuellement dans votre logiciel de vérification.;;Si nécessaire, configurez votre scanner de code-barres pour émuler un pavé numérique.</value>
+    <value>Vous pouvez vérifier l'authenticité de la plupart des emballages de médicaments en scannant le code-barres imprimé sur l'emballage extérieur. Si vous rencontrez des problèmes lors du scan de codes-barres contenant des données de Format 05 ou Format 06, saisissez les données manuellement dans votre logiciel. Si nécessaire, configurez votre lecteur de code-barres pour émuler un pavé numérique.</value>
     <comment>Medium</comment>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Entrez manuellement les données dans votre logiciel de vérification pour vérifier les identifiants uniques PPN allemands.;;Si nécessaire, configurez votre scanner de code-barres pour émuler un pavé numérique.</value>
+    <value>Vous pouvez vérifier l'authenticité de la plupart des emballages de médicaments en scannant le code-barres imprimé sur l'emballage extérieur. Saisissez manuellement les données dans votre logiciel pour les codes-barres qui contiennent des données de Format 05 ou Format 06. Si nécessaire, configurez votre lecteur de code-barres pour émuler un pavé numérique.</value>
     <comment>Medium</comment>
   </data>
   <data name="Advice_200" xml:space="preserve">

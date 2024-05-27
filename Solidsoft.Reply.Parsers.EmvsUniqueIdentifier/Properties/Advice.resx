@@ -118,19 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>You can verify the authenticity of medicinal packs by scanning the barcode printed on the outer packaging.</value>
     <comment>Low</comment>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>You may need to enter data manually into your verification software to verify PPN unique identifiers.</value>
+    <value>You can verify the authenticity of medicinal packs by scanning the barcode printed on the outer packaging. You may need to enter data manually into your software for barcodes that contain data formatted according to ISO/IEC 15434 characters.</value>
     <comment>Low</comment>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>If you experience problems when scanning German PPN barcodes, enter data manually into your verification software.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
+    <value>You can verify the authenticity of most medicinal packs by scanning the barcode printed on the outer packaging. You can verify the authenticity of most medicinal packs by scanning the barcode printed on the outer packaging. If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
     <comment>Medium</comment>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Enter data manually into your verification software to verify German PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
+    <value>You can verify the authenticity of most medicinal packs by scanning the barcode printed on the outer packaging. You can verify the authenticity of most medicinal packs by scanning the barcode printed on the outer packaging. Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
     <comment>Medium</comment>
   </data>
   <data name="Advice_200" xml:space="preserve">

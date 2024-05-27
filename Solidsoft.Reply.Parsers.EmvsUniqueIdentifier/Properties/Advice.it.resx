@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>È possibile verificare l'autenticità delle confezioni di medicinali scansionando il codice a barre stampato sulla confezione esterna.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Devi inserire manualmente i dati nel tuo software di verifica per verificare gli identificatori unici PPN.</value>
+    <value>È possibile verificare l'autenticità delle confezioni di medicinali scansionando il codice a barre stampato sulla confezione esterna. Potrebbe essere necessario inserire manualmente i dati nel tuo software per codici a barre che contengono dati formattati secondo i caratteri ISO/IEC 15434.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Se riscontri problemi nella scansione dei codici a barre PPN tedeschi, inserisci manualmente i dati nel tuo software di verifica.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>È possibile verificare l'autenticità della maggior parte delle confezioni di medicinali scansionando il codice a barre stampato sulla confezione esterna. Se riscontri problemi durante la scansione di codici a barre che contengono dati Formato 05 o Formato 06, inserisci i dati manualmente nel tuo software. Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Inserisci manualmente i dati nel tuo software di verifica per verificare gli identificatori unici PPN tedeschi.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+    <value>È possibile verificare l'autenticità della maggior parte delle confezioni di medicinali scansionando il codice a barre stampato sulla confezione esterna. Inserisci manualmente i dati nel tuo software per i codici a barre che contengono dati Formato 05 o Formato 06. Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Configura il tuo scanner di codici a barre per trasmettere gli identificatori AIM. Se hai problemi nella trasmissione degli identificatori AIM, ripristina la configurazione attuale.</value>

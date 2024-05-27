@@ -61,7 +61,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to You can verify the authenticity of medicinal packs by scanning the barcode printed on the outer packaging..
         /// </summary>
         public static string Advice_100 {
             get {
@@ -70,7 +70,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You may need to enter data manually into your verification software to verify PPN unique identifiers..
+        ///   Looks up a localized string similar to You can verify the authenticity of medicinal packs by scanning the barcode printed on the outer packaging. You may need to enter data manually into your software for barcodes that contain data formatted according to ISO/IEC 15434 characters..
         /// </summary>
         public static string Advice_105 {
             get {
@@ -79,7 +79,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to If you experience problems when scanning German PPN barcodes, enter data manually into your verification software.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
+        ///   Looks up a localized string similar to You can verify the authenticity of most medicinal packs by scanning the barcode printed on the outer packaging. You can verify the authenticity of most medicinal packs by scanning the barcode printed on the outer packaging. If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
         public static string Advice_110 {
             get {
@@ -88,7 +88,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter data manually into your verification software to verify German PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
+        ///   Looks up a localized string similar to You can verify the authenticity of most medicinal packs by scanning the barcode printed on the outer packaging. You can verify the authenticity of most medicinal packs by scanning the barcode printed on the outer packaging. Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
         public static string Advice_115 {
             get {

@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Du kan bekræfte ægtheden af ​​medicinalpakker ved at scanne stregkoden, der er trykt på ydre emballage.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Du skal måske indtaste data manuelt i din verifikationssoftware for at verificere PPN-unikke identifikatorer.</value>
+    <value>Du kan bekræfte ægtheden af ​​medicinalpakker ved at scanne stregkoden, der er trykt på ydre emballage. Du skal muligvis indtaste data manuelt i din software til stregkoder, der indeholder data formateret ifølge ISO/IEC 15434 tegn.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Hvis du oplever problemer, når du scanner tyske PPN-stregkoder, indtast data manuelt i din verifikationssoftware.;;Hvis nødvendigt, konfigurer din stregkodescanner til at efterligne et numerisk tastatur.</value>
+    <value>Du kan bekræfte ægtheden af ​​de fleste medicinalpakker ved at scanne stregkoden, der er trykt på ydre emballage. Hvis du oplever problemer ved scanning af stregkoder, der indeholder Format 05 eller Format 06 data, indtast data manuelt i din software. Hvis nødvendigt, konfigurer din stregkodescanner til at emulere et numerisk tastatur.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Indtast data manuelt i din verifikationssoftware for at verificere tyske PPN-unikke identifikatorer.;;Hvis nødvendigt, konfigurer din stregkodescanner til at efterligne et numerisk tastatur.</value>
+    <value>Du kan bekræfte ægtheden af ​​de fleste medicinalpakker ved at scanne stregkoden, der er trykt på ydre emballage. Indtast data manuelt i din software til stregkoder, der indeholder Format 05 eller Format 06 data. Hvis nødvendigt, konfigurer din stregkodescanner til at emulere et numerisk tastatur.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Konfigurer din stregkodescanner til at overføre AIM-identifikatorer. Hvis du har problemer med at overføre AIM-identifikatorer, vend tilbage til den nuværende konfiguration.</value>

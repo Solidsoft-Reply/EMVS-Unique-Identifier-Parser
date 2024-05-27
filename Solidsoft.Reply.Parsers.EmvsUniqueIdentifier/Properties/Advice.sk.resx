@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Autentickosť liekových balení môžete overiť naskenovaním čiarového kódu vytlačeného na vonkajšom obale.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Možno budete musieť ručne zadať údaje do vášho overovacieho softvéru na overenie jedinečných identifikátorov PPN.</value>
+    <value>Autentickosť liekových balení môžete overiť naskenovaním čiarového kódu vytlačeného na vonkajšom obale. Možno budete musieť ručne zadať údaje do vášho softvéru pre čiarové kódy, ktoré obsahujú údaje formátované podľa znakov ISO/IEC 15434.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Ak máte problémy pri skenovaní nemeckých PPN čiarových kódov, ručne zadajte údaje do vášho overovacieho softvéru.;;Ak je to potrebné, nakonfigurujte váš čítač čiarových kódov tak, aby emuloval numerickú klávesnicu.</value>
+    <value>Autentickosť väčšiny liekových balení môžete overiť naskenovaním čiarového kódu vytlačeného na vonkajšom obale. Ak máte problémy pri skenovaní čiarových kódov obsahujúcich údaje vo Formáte 05 alebo Formáte 06, zadajte údaje ručne do vášho softvéru. Ak je to potrebné, nakonfigurujte vašu čítačku čiarových kódov tak, aby emulovala numerickú klávesnicu.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Ručne zadajte údaje do vášho overovacieho softvéru na overenie jedinečných identifikátorov nemeckých PPN.;;Ak je to potrebné, nakonfigurujte váš čítač čiarových kódov tak, aby emuloval numerickú klávesnicu.</value>
+    <value>Autentickosť väčšiny liekových balení môžete overiť naskenovaním čiarového kódu vytlačeného na vonkajšom obale. Zadajte údaje ručne do vášho softvéru pre čiarové kódy, ktoré obsahujú údaje vo Formáte 05 alebo Formáte 06. Ak je to potrebné, nakonfigurujte vašu čítačku čiarových kódov tak, aby emulovala numerickú klávesnicu.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Nakonfigurujte váš čítač čiarových kódov na prenos identifikátorov AIM. Ak máte problémy s prenosom identifikátorov AIM, vráťte sa k aktuálnej konfigurácii.</value>

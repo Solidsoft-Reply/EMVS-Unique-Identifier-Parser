@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Můžete ověřit pravost balení léků naskenováním čárového kódu vytištěného na vnějším obalu.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Možná budete muset ručně zadat data do vašeho ověřovacího softwaru pro ověření jedinečných identifikátorů PPN.</value>
+    <value>Můžete ověřit pravost balení léků naskenováním čárového kódu vytištěného na vnějším obalu. Možná budete muset zadat data ručně do vašeho softwaru pro čárové kódy, které obsahují data formátovaná podle ISO/IEC 15434 znaků.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Pokud máte problémy při skenování německých PPN čárových kódů, zadejte data ručně do svého ověřovacího softwaru.;;Pokud je to nutné, nakonfigurujte skener čárových kódů tak, aby emuloval numerickou klávesnici.</value>
+    <value>Můžete ověřit pravost většiny balení léků naskenováním čárového kódu vytištěného na vnějším obalu. Pokud máte problémy při skenování čárových kódů, které obsahují data ve formátu 05 nebo 06, zadejte data ručně do vašeho softwaru. Pokud je to nutné, nakonfigurujte váš skener čárových kódů tak, aby emuloval numerickou klávesnici.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Zadejte data ručně do svého ověřovacího softwaru pro ověření jedinečných identifikátorů německých PPN.;;Pokud je to nutné, nakonfigurujte skener čárových kódů tak, aby emuloval numerickou klávesnici.</value>
+    <value>Můžete ověřit pravost většiny balení léků naskenováním čárového kódu vytištěného na vnějším obalu. Zadejte data ručně do vašeho softwaru pro čárové kódy, které obsahují data ve formátu 05 nebo 06. Pokud je to nutné, nakonfigurujte váš skener čárových kódů tak, aby emuloval numerickou klávesnici.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Nakonfigurujte váš skener čárových kódů tak, aby přenášel identifikátory AIM. Pokud máte problémy s přenášením identifikátorů AIM, vraťte se k současné konfiguraci.</value>

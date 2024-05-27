@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Saate ravimipakendite autentsust kontrollida, skaneerides välimisele pakendile trükitud vöötkoodi.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Võib olla vajalik sisestada andmeid käsitsi oma verifitseerimistarkvarasse, et kontrollida PPN unikaalseid identifikaatoreid.</value>
+    <value>Saate ravimipakendite autentsust kontrollida, skaneerides välimisele pakendile trükitud vöötkoodi. Võib olla vajalik sisestada andmeid käsitsi oma tarkvarasse vöötkoodide jaoks, mis sisaldavad andmeid ISO/IEC 15434 tähemärkide kohaselt.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Kui teil tekib probleeme Saksa PPN vöötkoodide skaneerimisel, sisestage andmed käsitsi oma verifitseerimistarkvarasse.;;Vajadusel seadistage oma vöötkoodiskanner numbrilise klaviatuuri emuleerimiseks.</value>
+    <value>Saate enamiku ravimipakendite autentsust kontrollida, skaneerides välimisele pakendile trükitud vöötkoodi. Kui teil tekib probleeme vöötkoodide skaneerimisel, mis sisaldavad Formaat 05 või Formaat 06 andmeid, sisestage andmed käsitsi oma tarkvarasse. Vajadusel seadistage oma vöötkoodiskanner numbrilise klaviatuuri emuleerimiseks.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Sisestage andmed käsitsi oma verifitseerimistarkvarasse, et kontrollida Saksa PPN unikaalseid identifikaatoreid.;;Vajadusel seadistage oma vöötkoodiskanner numbrilise klaviatuuri emuleerimiseks.</value>
+    <value>Saate enamiku ravimipakendite autentsust kontrollida, skaneerides välimisele pakendile trükitud vöötkoodi. Sisestage andmed käsitsi oma tarkvarasse vöötkoodidele, mis sisaldavad Formaat 05 või Formaat 06 andmeid. Vajadusel seadistage oma vöötkoodiskanner numbrilise klaviatuuri emuleerimiseks.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Seadistage oma vöötkoodiskanner AIM-i identifikaatorite edastamiseks. Kui teil on probleeme AIM-i identifikaatorite edastamisega, naaske praeguse konfiguratsiooni juurde.</value>

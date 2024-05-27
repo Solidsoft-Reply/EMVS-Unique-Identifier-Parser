@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Galite patikrinti vaistų pakuočių autentiškumą nuskenuodami brūkšninį kodą, atspausdintą ant išorinės pakuotės.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Galbūt reikės rankiniu būdu įvesti duomenis į savo tikrinimo programinę įrangą, kad patikrintumėte PPN unikalius identifikatorius.</value>
+    <value>Galite patikrinti vaistų pakuočių autentiškumą nuskenuodami brūkšninį kodą, atspausdintą ant išorinės pakuotės. Galbūt reikės rankiniu būdu įvesti duomenis į savo programinę įrangą brūkšniniams kodams, kuriuose yra duomenų, suformatuotų pagal ISO/IEC 15434 simbolius.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Jei patiriate problemų skaitydami Vokietijos PPN brūkšninius kodus, rankiniu būdu įveskite duomenis į savo tikrinimo programinę įrangą.;;Jei reikia, nustatykite savo brūkšninių kodų skaitytuvą imituoti skaitmeninį klavišų bloką.</value>
+    <value>Galite patikrinti daugumos vaistų pakuočių autentiškumą nuskenuodami brūkšninį kodą, atspausdintą ant išorinės pakuotės. Jei patiriate problemų skaitydami brūkšninius kodus, kuriuose yra Formatas 05 arba Formatas 06, įveskite duomenis rankiniu būdu į savo programinę įrangą. Jei reikia, nustatykite savo brūkšninių kodų skaitytuvą imituoti skaitmeninį klavišų bloką.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Rankiniu būdu įveskite duomenis į savo tikrinimo programinę įrangą, kad patikrintumėte Vokietijos PPN unikalius identifikatorius.;;Jeigu reikia, nustatykite savo brūkšninių kodų skaitytuvą imituoti skaitmeninį klavišų bloką.</value>
+    <value>Galite patikrinti daugumos vaistų pakuočių autentiškumą nuskenuodami brūkšninį kodą, atspausdintą ant išorinės pakuotės. Įveskite duomenis rankiniu būdu į savo programinę įrangą brūkšniniams kodams, kuriuose yra Formatas 05 arba Formatas 06. Jei reikia, nustatykite savo brūkšninių kodų skaitytuvą imituoti skaitmeninį klavišų bloką.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Nustatykite savo brūkšninių kodų skaitytuvą siųsti AIM identifikatorius. Jei kyla problemų siunčiant AIM identifikatorius, grįžkite prie esamos konfigūracijos.</value>

@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>A gyógyszercsomagok hitelességét azáltal ellenőrizheti, hogy beolvassa a külső csomagoláson nyomtatott vonalkódot.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Manuálisan kell bevinni az adatokat a verifikációs szoftverébe a PPN egyedi azonosítók ellenőrzéséhez.</value>
+    <value>A gyógyszercsomagok hitelességét azáltal ellenőrizheti, hogy beolvassa a külső csomagoláson nyomtatott vonalkódot. Kézzel kell adatokat bevinnie a szoftverébe azoknál a vonalkódoknál, amelyek ISO/IEC 15434 karakterek szerinti formázott adatokat tartalmaznak.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Ha problémái vannak a német PPN vonalkódok beolvasásakor, adja meg az adatokat manuálisan a verifikációs szoftverében.;;Szükség esetén konfigurálja a vonalkódolvasót számbillentyűzet emulálására.</value>
+    <value>A legtöbb gyógyszercsomag hitelességét azáltal ellenőrizheti, hogy beolvassa a külső csomagoláson nyomtatott vonalkódot. Ha problémái vannak a 05 vagy 06 formátumú vonalkódok szkennelésekor, adja meg az adatokat kézzel a szoftverében. Szükség esetén állítsa be a vonalkódolvasóját úgy, hogy numerikus billentyűzetként működjön.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Adjon meg adatokat manuálisan a verifikációs szoftverében a német PPN egyedi azonosítók ellenőrzéséhez.;;Szükség esetén konfigurálja a vonalkódolvasót számbillentyűzet emulálására.</value>
+    <value>A legtöbb gyógyszercsomag hitelességét azáltal ellenőrizheti, hogy beolvassa a külső csomagoláson nyomtatott vonalkódot. Adjon meg adatokat kézzel a szoftverében a 05 vagy 06 formátumú vonalkódok esetén. Szükség esetén állítsa be a vonalkódolvasóját úgy, hogy numerikus billentyűzetként működjön.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Konfigurálja a vonalkódolvasót AIM azonosítók továbbítására. Ha problémái vannak az AIM azonosítók továbbításával, térjen vissza a jelenlegi konfigurációra.</value>

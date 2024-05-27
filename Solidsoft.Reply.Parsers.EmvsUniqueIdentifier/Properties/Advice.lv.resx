@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Jūs varat pārbaudīt zāļu iepakojumu autentiskumu, skenējot svītrkodu, kas drukāts uz ārējā iepakojuma.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Jums var būt nepieciešams manuāli ievadīt datus savā pārbaudes programmatūrā, lai pārbaudītu PPN unikālos identifikatorus.</value>
+    <value>Jūs varat pārbaudīt zāļu iepakojumu autentiskumu, skenējot svītrkodu, kas drukāts uz ārējā iepakojuma. Jums var nākties manuāli ievadīt datus savā programmatūrā svītrkodu gadījumos, kad tie satur datus, kas formatēti atbilstoši ISO/IEC 15434 rakstzīmēm.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Ja rodas problēmas, skenējot Vācu PPN svītrkodus, ievadiet datus manuāli savā verifikācijas programmatūrā.;;Ja nepieciešams, konfigurējiet savu svītrkoda skeneri, lai tas imitētu ciparu tastatūru.</value>
+    <value>Jūs varat pārbaudīt vairuma zāļu iepakojumu autentiskumu, skenējot svītrkodu, kas drukāts uz ārējā iepakojuma. Ja rodas problēmas, skenējot svītrkodus, kas satur Formāta 05 vai Formāta 06 datus, ievadiet datus manuāli savā programmatūrā. Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Ievadiet datus manuāli savā verifikācijas programmatūrā, lai pārbaudītu Vācijas PPN unikālos identifikatorus.;;Ja nepieciešams, konfigurējiet savu svītrkoda skeneri, lai tas imitētu ciparu tastatūru.</value>
+    <value>Jūs varat pārbaudīt vairuma zāļu iepakojumu autentiskumu, skenējot svītrkodu, kas drukāts uz ārējā iepakojuma. Ievadiet datus manuāli jūsu programmatūrā svītrkodiem, kas satur Format 05 vai Format 06 datus. Ja nepieciešams, konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Konfigurējiet savu svītrkoda skeneri AIM identifikatoru nosūtīšanai. Ja rodas problēmas, nosūtot AIM identifikatorus, atgriezieties pie pašreizējās konfigurācijas.</value>

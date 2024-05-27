@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Autentičnost pakiranja lijekova možete provjeriti skeniranjem barkoda ispisanog na vanjskoj ambalaži.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Možda ćete morati ručno unijeti podatke u svoj softver za provjeru kako biste provjerili jedinstvene identifikatore PPN-a.</value>
+    <value>Autentičnost pakiranja lijekova možete provjeriti skeniranjem barkoda ispisanog na vanjskoj ambalaži. Možda ćete morati ručno unijeti podatke u vaš softver za bar kodove koji sadrže podatke formatirane prema znakovima ISO/IEC 15434.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Ako imate problema s skeniranjem njemačkih PPN barkodova, ručno unesite podatke u svoj softver za provjeru.;;Ako je potrebno, konfigurirajte svoj skener barkoda tako da oponaša numeričku tipkovnicu.</value>
+    <value>Autentičnost većine pakiranja lijekova možete provjeriti skeniranjem barkoda ispisanog na vanjskoj ambalaži. Ako imate problema pri skeniranju bar kodova koji sadrže podatke Formata 05 ili Formata 06, unesite podatke ručno u vaš softver. Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Ručno unesite podatke u svoj softver za provjeru kako biste provjerili jedinstvene identifikatore PPN-a.;;Ako je potrebno, konfigurirajte svoj skener barkoda tako da oponaša numeričku tipkovnicu.</value>
+    <value>Autentičnost većine pakiranja lijekova možete provjeriti skeniranjem barkoda ispisanog na vanjskoj ambalaži. Ručno unesite podatke u vaš softver za bar kodove koji sadrže podatke Formata 05 ili Formata 06. Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Konfigurirajte svoj skener barkoda za prijenos sekvenci kraja reda i ponovno testirajte. Ako imate problema s prijenosom sekvenci kraja reda, vratite se na trenutnu konfiguraciju.</value>

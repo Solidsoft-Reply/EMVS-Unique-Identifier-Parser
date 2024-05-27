@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Du kan verifiera äktheten av medicinska förpackningar genom att skanna streckkoden som trycks på ytterförpackningen.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Du kanske behöver mata in data manuellt i din verifieringsprogramvara för att verifiera unika PPN-identifierare.</value>
+    <value>Du kan verifiera äktheten av medicinska förpackningar genom att skanna streckkoden som trycks på ytterförpackningen. Du kan behöva mata in data manuellt i din programvara för streckkoder som innehåller data formaterad enligt ISO/IEC 15434-tecken.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Om du upplever problem när du skannar streckkoder som innehåller Format 05 eller Format 06-data, mata in data manuellt i din programvara.;;Om nödvändigt, konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
+    <value>Du kan verifiera äktheten av de flesta medicinska förpackningar genom att skanna streckkoden som trycks på ytterförpackningen. Om du upplever problem när du skannar streckkoder som innehåller data i format 05 eller 06, ange data manuellt i din programvara. Om nödvändigt, konfigurera din streckkodsläsare för att emulera ett numeriskt tangentbord.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Mata in data manuellt i din verifieringsprogramvara för att verifiera tyska PPN-unika identifierare.;;Om nödvändigt, konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
+    <value>Du kan verifiera äktheten av de flesta medicinska förpackningar genom att skanna streckkoden som trycks på ytterförpackningen. Ange data manuellt i din programvara för streckkoder som innehåller data i format 05 eller 06. Om nödvändigt, konfigurera din streckkodsläsare för att emulera ett numeriskt tangentbord.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Konfigurera din streckkodsläsare för att sända AIM-identifierare. Om du har problem när du sänder AIM-identifierare, återgå till nuvarande konfiguration.</value>

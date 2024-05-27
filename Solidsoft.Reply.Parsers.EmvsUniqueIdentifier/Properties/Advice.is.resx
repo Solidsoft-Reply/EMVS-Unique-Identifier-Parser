@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Þú getur staðfest áreiðanleika lyfjapakkninga með því að skanna strikamerkið sem er prentað á ytri umbúðirnar.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Þú gætir þurft að slá inn gögn handvirkt í staðfestingarhugbúnaðinn þinn til að staðfesta PPN einstakar auðkennarar.</value>
+    <value>Þú getur staðfest áreiðanleika lyfjapakkninga með því að skanna strikamerkið sem er prentað á ytri umbúðirnar. Þú gætir þurft að slá inn gögn handvirkt í hugbúnaðinn þinn fyrir strikamerki sem innihalda gögn skv. ISO/IEC 15434 stöfum.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Ef þú lendir í vandræðum við að skanna þýskar PPN strikamerki, sláðu inn gögn handvirkt í staðfestingarhugbúnaðinn þinn.;;Ef þörf krefur, stilltu strikamerkjalesarann þinn þannig að hann líki eftir númeralyklaborði.</value>
+    <value>Þú getur staðfest áreiðanleika flestra lyfjapakkninga með því að skanna strikamerkið sem er prentað á ytri umbúðirnar. Ef þú lendir í vandræðum við að skanna strikamerki sem innihalda Format 05 eða Format 06 gögn, sláðu inn gögn handvirkt í hugbúnaðinn þinn. Ef þörf krefur, stilltu strikamerkjalesarann þinn þannig að hann líki eftir númeralyklaborði.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Sláðu inn gögn handvirkt í staðfestingarhugbúnaðinn þinn til að staðfesta þýskar PPN einstakar auðkennarar.;;Ef þörf krefur, stilltu strikamerkjalesarann þinn þannig að hann líki eftir númeralyklaborði.</value>
+    <value>Þú getur staðfest áreiðanleika flestra lyfjapakkninga með því að skanna strikamerkið sem er prentað á ytri umbúðirnar. Sláðu inn gögn handvirkt í hugbúnaðinn þinn fyrir strikamerki sem innihalda Format 05 eða Format 06 gögn. Ef þörf krefur, stilltu strikamerkjalesarann þinn þannig að hann líki eftir númeralyklaborði.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Stilltu strikamerkjalesarann þinn til að senda AIM auðkennara. Ef þú átt í vandræðum með að senda AIM auðkennara, snúðu aftur í núverandi uppsetningu.</value>

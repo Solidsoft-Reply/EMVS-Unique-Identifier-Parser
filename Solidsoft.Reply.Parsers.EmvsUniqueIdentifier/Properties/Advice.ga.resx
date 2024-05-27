@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Is féidir leat fíordheimhniú a dhéanamh ar phacáistí míochaine trí scanadh a dhéanamh ar an gcód barra clóite ar an bpacáistiú seachtrach.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>D'fhéadfadh go mbeadh ort sonraí a iontráil de láimh i do bhogearra fíoraithe chun aitheantóirí uathúla PPN a fhíorú.</value>
+    <value>Is féidir leat fíordheimhniú a dhéanamh ar phacáistí míochaine trí scanadh a dhéanamh ar an gcód barra clóite ar an bpacáistiú seachtrach. D'fhéadfadh ort sonraí a ionchur de láimh isteach i do bhogearraí fíoraithe le haghaidh barcodes a bhfuil sonraí formáidithe de réir ISO/IEC 15434 iontu.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Má bhíonn fadhbanna agat ag scanadh barachóid PPN Gearmánacha, cuir isteach sonraí de láimh i do bhogearra fíoraithe.;;Más gá, cumraigh do scanóir barachóid chun méarchlár uimhriúil a aithris.</value>
+    <value>Is féidir leat fíordheimhniú a dhéanamh ar fhormhór na bpacáistí míochaine trí scanadh a dhéanamh ar an gcód barra clóite ar an bpacáistiú seachtrach. Má tá fadhbanna agat agus tú ag scanadh barcodes a bhfuil Formáid 05 nó Formáid 06 iontu, cuir isteach sonraí de láimh i do bhogearraí. Más gá, cumraigh do scanóir barcode chun méarchlár uimhriúil a aithris.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Cuir isteach sonraí de láimh i do bhogearra fíoraithe chun aitheantóirí uathúla PPN Gearmánacha a fhíorú.;;Más gá, cumraigh do scanóir barachóid chun méarchlár uimhriúil a aithris.</value>
+    <value>Is féidir leat fíordheimhniú a dhéanamh ar fhormhór na bpacáistí míochaine trí scanadh a dhéanamh ar an gcód barra clóite ar an bpacáistiú seachtrach. Cuir isteach sonraí de láimh i do bhogearraí fíoraithe le haghaidh barcodes a bhfuil Formáid 05 nó Formáid 06 iontu. Más gá, cumraigh do scanóir barcode chun méarchlár uimhriúil a aithris.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Cumraigh do scanóir barachóid chun aitheantóirí AIM a tharchur. Má tá fadhbanna agat ag tarchur aitheantóirí AIM, fill ar ais chuig an gcumraíocht reatha.</value>

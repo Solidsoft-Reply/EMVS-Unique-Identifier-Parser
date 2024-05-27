@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Du kan verifisere ektheten av medisinske pakker ved å skanne strekkoden som er trykt på ytteremballasjen.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Du må kanskje skrive inn data manuelt i verifiseringsprogramvaren din for å verifisere PPN-unike identifikatorer.</value>
+    <value>Du kan verifisere ektheten av medisinske pakker ved å skanne strekkoden som er trykt på ytteremballasjen. Du må kanskje legge inn data manuelt i programvaren din for strekkoder som inneholder data formatert i henhold til ISO/IEC 15434-tegn.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Hvis du opplever problemer ved skanning av tyske PPN-strekkoder, skriv inn data manuelt i verifiseringsprogramvaren din.;;Om nødvendig, konfigurer strekkodeskanneren din til å etterligne et numerisk tastatur.</value>
+    <value>Du kan verifisere ektheten av de fleste medisinske pakker ved å skanne strekkoden som er trykt på ytteremballasjen. Jos koet ongelmia skannatessasi viivakoodeja, jotka sisältävät muotoa 05 tai 06 olevia tietoja, syötä tietoja manuaalisesti ohjelmistoosi. Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Skriv inn data manuelt i verifiseringsprogramvaren din for strekkoder som inneholder Format 05 eller Format 06 data.;;Om nødvendig, konfigurer strekkodeskanneren din til å etterligne et numerisk tastatur.</value>
+    <value>Du kan verifisere ektheten av de fleste medisinske pakker ved å skanne strekkoden som er trykt på ytteremballasjen. Syötä tietoja manuaalisesti ohjelmistoosi viivakoodeille, jotka sisältävät muotoa 05 tai 06 olevia tietoja. Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Konfigurer strekkodeskanneren din til å overføre AIM-identifikatorer. Hvis du har problemer med å overføre AIM-identifikatorer, gå tilbake til gjeldende konfigurasjon.</value>

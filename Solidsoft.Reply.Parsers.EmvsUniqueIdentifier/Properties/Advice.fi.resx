@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Voit tarkistaa lääkepakkausten aitouden skannaamalla ulkopakkaukseen painetun viivakoodin.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Saatat joutua syöttämään tietoja manuaalisesti varmistusohjelmistoosi vahvistaaksesi PPN-yksilölliset tunnisteet.</value>
+    <value>Voit tarkistaa lääkepakkausten aitouden skannaamalla ulkopakkaukseen painetun viivakoodin. Saatat joutua syöttämään tietoja manuaalisesti ohjelmistoosi viivakoodeille, jotka sisältävät ISO/IEC 15434:n mukaisesti muotoiltuja merkkejä.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Jos kohtaat ongelmia skannatessasi saksalaisia PPN-viivakoodeja, syötä tietoja manuaalisesti varmistusohjelmistoosi.;;Tarvittaessa konfiguroi viivakoodinlukijasi toimimaan numeerisen näppäimistön emulaattorina.</value>
+    <value>Voit tarkistaa useimpien lääkepakkausten aitouden skannaamalla ulkopakkaukseen painetun viivakoodin. Jos kohtaat ongelmia skannatessasi viivakoodeja, jotka sisältävät Formaatti 05 tai Formaatti 06 -tietoja, syötä tietoja manuaalisesti ohjelmistoosi. Tarvittaessa konfiguroi viivakoodinlukijasi toimimaan numeerisen näppäimistön emulaattorina.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Syötä tietoja manuaalisesti varmistusohjelmistoosi vahvistaaksesi saksalaiset PPN-yksilölliset tunnisteet.;;Tarvittaessa konfiguroi viivakoodinlukijasi toimimaan numeerisen näppäimistön emulaattorina.</value>
+    <value>Voit tarkistaa useimpien lääkepakkausten aitouden skannaamalla ulkopakkaukseen painetun viivakoodin. Syötä tietoja manuaalisesti ohjelmistoosi viivakoodeille, jotka sisältävät Formaatti 05 tai Formaatti 06 -tietoja. Tarvittaessa konfiguroi viivakoodinlukijasi toimimaan numeerisen näppäimistön emulaattorina.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Konfiguroi viivakoodinlukijasi lähettämään AIM-tunnisteita. Jos kohtaat ongelmia AIM-tunnisteiden lähettämisessä, palaa nykyiseen konfiguraatioon.</value>

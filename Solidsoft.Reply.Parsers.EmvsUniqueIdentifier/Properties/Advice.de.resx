@@ -118,19 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Sie können die Echtheit von Arzneimittelverpackungen überprüfen, indem Sie den auf der äußeren Verpackung aufgedruckten Barcode scannen.</value>
     <comment>Low</comment>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Möglicherweise müssen Sie Daten manuell in Ihre Verifizierungssoftware eingeben, um PPN-eindeutige Kennungen zu verifizieren.</value>
+    <value>Sie können die Echtheit von Arzneimittelverpackungen überprüfen, indem Sie den auf der äußeren Verpackung aufgedruckten Barcode scannen. Möglicherweise müssen Sie Daten manuell in Ihre Software für Barcodes eingeben, die Daten im Format gemäß ISO/IEC 15434 enthalten.</value>
     <comment>Low</comment>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Wenn Sie Probleme beim Scannen von deutschen PPN-Barcodes haben, geben Sie Daten manuell in Ihre Verifizierungssoftware ein.;;Falls notwendig, konfigurieren Sie Ihren Barcode-Scanner so, dass er ein numerisches Keypad emuliert.</value>
+    <value>Sie können die Echtheit der meisten Arzneimittelverpackungen überprüfen, indem Sie den auf der äußeren Verpackung aufgedruckten Barcode scannen. Wenn Sie Probleme beim Scannen von Barcodes haben, die Daten im Format 05 oder Format 06 enthalten, geben Sie die Daten manuell in Ihre Software ein. Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
     <comment>Medium</comment>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Geben Sie Daten manuell in Ihre Verifizierungssoftware ein, um deutsche PPN-eindeutige Kennungen zu überprüfen.;;Falls notwendig, konfigurieren Sie Ihren Barcode-Scanner so, dass er ein numerisches Keypad emuliert.</value>
+    <value>Sie können die Echtheit der meisten Arzneimittelverpackungen überprüfen, indem Sie den auf der äußeren Verpackung aufgedruckten Barcode scannen. Wenn Sie Probleme beim Scannen von Barcodes haben, die Daten im Format 05 oder Format 06 enthalten, geben Sie die Daten manuell in Ihre Software ein. Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
     <comment>Medium</comment>
   </data>
   <data name="Advice_200" xml:space="preserve">

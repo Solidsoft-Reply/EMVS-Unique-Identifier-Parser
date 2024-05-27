@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Tista' tivverifika l-awtentiċità tal-pakketti mediċinali billi teskannja l-barcode stampat fuq l-ippakkjar ta' barra.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Jista' jkollok bżonn tidħol id-data manwalment fis-softwer tal-verifika tiegħek biex tivverifika identifikaturi uniku tal-PPN.</value>
+    <value>Tista' tivverifika l-awtentiċità tal-pakketti mediċinali billi teskannja l-barcode stampat fuq l-ippakkjar ta' barra. Jista' jkollok bżonn tidħol id-data manwalment fis-softwer tiegħek għal barcodes li fihom data ifformattjata skont karattri ISO/IEC 15434.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Jekk tesperjenza problemi waqt li tiskennja barcodes tal-PPN Ġermaniż, daħħal id-data manwalment fis-softwer tal-verifika tiegħek.;;Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
+    <value>Tista' tivverifika l-awtentiċità tal-biċċa l-kbira tal-pakketti mediċinali billi teskannja l-barcode stampat fuq l-ippakkjar ta' barra. Jekk tesperjenza problemi waqt li tiskennja barcodes li fihom data tal-Format 05 jew Format 06, daħħal id-data manwalment fis-softwer tiegħek. Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Daħħal id-data manwalment fis-softwer tal-verifika tiegħek biex tivverifika identifikaturi uniku tal-PPN Ġermaniż.;;Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
+    <value>Tista' tivverifika l-awtentiċità tal-biċċa l-kbira tal-pakketti mediċinali billi teskannja l-barcode stampat fuq l-ippakkjar ta' barra. Daħħal id-data manwalment fis-softwer tiegħek għal barcodes li fihom data tal-Format 05 jew Format 06. Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Kkonfigura l-iskanner tal-barcode tiegħek biex jittrasmetti identifikaturi AIM. Jekk ikollok problemi waqt li jittrasmettu identifikaturi AIM, erġa' lura għall-konfigurazzjoni attwali.</value>

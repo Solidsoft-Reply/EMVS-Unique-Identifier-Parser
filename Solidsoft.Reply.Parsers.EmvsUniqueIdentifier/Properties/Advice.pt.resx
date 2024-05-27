@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Você pode verificar a autenticidade das embalagens de medicamentos digitalizando o código de barras impresso na embalagem externa.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Você pode precisar inserir dados manualmente em seu software de verificação para verificar identificadores únicos PPN.</value>
+    <value>Você pode verificar a autenticidade das embalagens de medicamentos digitalizando o código de barras impresso na embalagem externa. Você pode precisar inserir dados manualmente em seu software para códigos de barras que contenham dados formatados de acordo com caracteres ISO/IEC 15434.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Se você tiver problemas ao escanear códigos de barras PPN alemães, insira dados manualmente no seu software de verificação.;;Se necessário, configure seu scanner de código de barras para emular um teclado numérico.</value>
+    <value>Você pode verificar a autenticidade da maioria das embalagens de medicamentos digitalizando o código de barras impresso na embalagem externa. Se você tiver problemas ao escanear códigos de barras que contenham dados dos formatos 05 ou 06, insira dados manualmente no seu software. Se necessário, configure seu scanner de código de barras para emular um teclado numérico.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Insira dados manualmente no seu software de verificação para verificar identificadores PPN alemães.;;Se necessário, configure seu scanner de código de barras para emular um teclado numérico.</value>
+    <value>Você pode verificar a autenticidade da maioria das embalagens de medicamentos digitalizando o código de barras impresso na embalagem externa. Insira dados manualmente no seu software para códigos de barras que contenham dados dos formatos 05 ou 06. Se necessário, configure seu scanner de código de barras para emular um teclado numérico.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Configure seu scanner de código de barras para transmitir identificadores AIM. Se tiver problemas ao transmitir identificadores AIM, volte à configuração atual.</value>

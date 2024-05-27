@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Możesz zweryfikować autentyczność opakowań medycznych, skanując kod kreskowy wydrukowany na opakowaniu zewnętrznym.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Możesz potrzebować ręcznie wprowadzić dane do oprogramowania weryfikacyjnego, aby zweryfikować unikalne identyfikatory PPN.</value>
+    <value>Możesz zweryfikować autentyczność opakowań medycznych, skanując kod kreskowy wydrukowany na opakowaniu zewnętrznym. Możesz potrzebować wprowadzić dane ręcznie do swojego oprogramowania dla kodów kreskowych zawierających dane sformatowane zgodnie z ISO/IEC 15434.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Jeśli napotkasz problemy podczas skanowania niemieckich kodów kreskowych PPN, wprowadź dane ręcznie do oprogramowania weryfikacyjnego.;;W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
+    <value>Możesz zweryfikować autentyczność większości opakowań medycznych, skanując kod kreskowy wydrukowany na opakowaniu zewnętrznym. Jeśli napotkasz problemy podczas skanowania kodów kreskowych zawierających dane Formatu 05 lub Formatu 06, wprowadź dane ręcznie do swojego oprogramowania. W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Wprowadź dane ręcznie do oprogramowania weryfikacyjnego, aby zweryfikować niemieckie unikalne identyfikatory PPN.;;W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
+    <value>Możesz zweryfikować autentyczność większości opakowań medycznych, skanując kod kreskowy wydrukowany na opakowaniu zewnętrznym. Wprowadź dane ręcznie do swojego oprogramowania dla kodów kreskowych zawierających dane Formatu 05 lub Formatu 06. W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Skonfiguruj skaner kodów kreskowych do przesyłania identyfikatorów AIM. Jeśli wystąpią problemy podczas przesyłania identyfikatorów AIM, przywróć bieżącą konfigurację.</value>

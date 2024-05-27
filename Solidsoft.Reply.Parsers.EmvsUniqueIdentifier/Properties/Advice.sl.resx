@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Avtentičnost zdravilnih zavojčkov lahko preverite s skeniranjem črtne kode, natisnjene na zunanji embalaži.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Morda boste morali podatke ročno vnesti v vašo programsko opremo za preverjanje, da preverite enolične identifikatorje PPN.</value>
+    <value>Avtentičnost zdravilnih zavojčkov lahko preverite s skeniranjem črtne kode, natisnjene na zunanji embalaži. Morda boste morali ročno vnesti podatke v vašo programsko opremo za črtne kode, ki vsebujejo podatke, oblikovane v skladu z znaki ISO/IEC 15434.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Če imate težave pri skeniranju nemških črtnih kod PPN, ročno vnesite podatke v vašo programsko opremo za preverjanje.;;Po potrebi nastavite vaš skener črtne kode, da posnema numerično tipkovnico.</value>
+    <value>Avtentičnost večine zdravilnih zavojčkov lahko preverite s skeniranjem črtne kode, natisnjene na zunanji embalaži. Če imate težave pri skeniranju črtnih kod, ki vsebujejo podatke formata 05 ali formata 06, ročno vnesite podatke v vašo programsko opremo. Po potrebi nastavite vaš čitalnik črtnih kod, da emulira numerično tipkovnico.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Ročno vnesite podatke v vašo programsko opremo za preverjanje, da preverite enolične identifikatorje PPN v nemščini.;;Po potrebi nastavite vaš skener črtne kode, da posnema numerično tipkovnico.</value>
+    <value>Avtentičnost večine zdravilnih zavojčkov lahko preverite s skeniranjem črtne kode, natisnjene na zunanji embalaži. Ročno vnesite podatke v vašo programsko opremo za črtne kode, ki vsebujejo podatke formata 05 ali formata 06. Po potrebi nastavite vaš čitalnik črtnih kod, da emulira numerično tipkovnico.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
     <value>Nastavite vaš skener črtne kode, da prenaša identifikatorje AIM. Če imate težave pri prenosu identifikatorjev AIM, se vrnite na trenutno konfiguracijo.</value>

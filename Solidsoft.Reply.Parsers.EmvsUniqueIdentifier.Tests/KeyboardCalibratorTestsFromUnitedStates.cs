@@ -1019,7 +1019,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
     /// <summary>
     /// Test calibration for the error discovered by Lexon Ireland.  In this case, they appeared
     /// to have a US keyboard scanner and a UK or Ireland keyboard, but for some reason the scanner
-    /// reports the ASCII29 as a quote character.  It also reports @ as a quote.
+    /// reports the ASCII 29 as a quote character.  It also reports @ as a quote.
     /// </summary>
     [Fact]
     public void LexonError() {

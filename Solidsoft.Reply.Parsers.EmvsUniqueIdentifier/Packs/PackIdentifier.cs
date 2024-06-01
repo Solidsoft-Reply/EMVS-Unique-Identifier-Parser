@@ -33,8 +33,7 @@ using Properties;
 /// <summary>
 ///   An EMVS pack identifier.
 /// </summary>
-public class PackIdentifier : IPackIdentifier
-{
+public class PackIdentifier : IPackIdentifier {
 #if NET8_0_OR_GREATER
     /// <summary>
     /// Composite format for Packs_Error_001.
@@ -60,8 +59,7 @@ public class PackIdentifier : IPackIdentifier
     /// <summary>
     ///   Initializes a new instance of the <see cref="PackIdentifier" /> class.
     /// </summary>
-    public PackIdentifier()
-    {
+    public PackIdentifier() {
         Exceptions = new List<PackIdentifierException>();
         ParseExceptions = new List<ParseException>();
         NationalNumbers = new Dictionary<NhrnMarket, string>();
@@ -99,10 +97,8 @@ public class PackIdentifier : IPackIdentifier
     ///   of the pharmaceutical product.
     /// </summary>
     // ReSharper disable once UnusedMember.Global
-    public CountryCode IssuingAgencyCountryCode
-    {
-        get
-        {
+    public CountryCode IssuingAgencyCountryCode {
+        get {
             return Scheme == Scheme.Ifa
                        ? CountryCode.Germany
                        : ResolveGs1Country();
@@ -128,25 +124,21 @@ public class PackIdentifier : IPackIdentifier
     ///   Validity indicates if the barcode was parsed successfully without exceptions and
     ///   contains at least all four required data elements of a unique identifier.
     /// </remarks>
-    public bool IsValid
-    {
+    public bool IsValid {
         [SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1118:ParameterMustNotSpanMultipleLines", Justification = "Reviewed. Suppression is OK here.")]
-        get
-        {
+        get {
             var parseExceptions = (List<ParseException>)ParseExceptions;
             var exceptions = (List<PackIdentifierException>)Exceptions;
 
             // Does the identifier contain fatal parse exceptions?
             if (parseExceptions.Exists(
-                    ex => ex.IsFatal))
-            {
+                    ex => ex.IsFatal)) {
                 return false;
             }
 
             // Does the identifier contain a product code?
             if (string.IsNullOrEmpty(ProductCode) &&
-                !Exceptions.Any(ex => ex.ErrorNumber is >= 10 and < 30))
-            {
+                !Exceptions.Any(ex => ex.ErrorNumber is >= 10 and < 30)) {
                 var multipleProductCodes = Exceptions.Any(
                     ex => ex.ErrorNumber is 10 or 20 or 6);
 
@@ -171,8 +163,7 @@ public class PackIdentifier : IPackIdentifier
 
             // Did the parser fail to detect any batch identifier data elements?
             if (string.IsNullOrEmpty(BatchIdentifier) &&
-                !Exceptions.Any(ex => ex.ErrorNumber is >= 30 and < 40))
-            {
+                !Exceptions.Any(ex => ex.ErrorNumber is >= 30 and < 40)) {
                 var multipleBatchIdentifiers =
                     Exceptions.Any(ex => ex.ErrorNumber is 7 or 30);
 
@@ -199,8 +190,7 @@ public class PackIdentifier : IPackIdentifier
 
             // Did the parser fail to detect any expiry date data elements?
             if (string.IsNullOrEmpty(Expiry) &&
-                !Exceptions.Any(ex => ex.ErrorNumber is >= 40 and < 50))
-            {
+                !Exceptions.Any(ex => ex.ErrorNumber is >= 40 and < 50)) {
                 var multipleExpiryDate = Exceptions.Any(ex => ex.ErrorNumber is 8 or 40);
 
                 string GetIfaExpiryElementId() => Scheme == Scheme.Ifa ? "D" : string.Empty;
@@ -222,14 +212,12 @@ public class PackIdentifier : IPackIdentifier
                         0));
             }
 
-            if (!string.IsNullOrEmpty(SerialNumber))
-            {
+            if (!string.IsNullOrEmpty(SerialNumber)) {
                 return exceptions.Count <= 0;
             }
 
             // Did the parser fail to detect any serial number identifier data elements?
-            if (Exceptions.Any(ex => ex.ErrorNumber is >= 50 and < 60))
-            {
+            if (Exceptions.Any(ex => ex.ErrorNumber is >= 50 and < 60)) {
                 return exceptions.Count <= 0;
             }
 
@@ -300,13 +288,10 @@ public class PackIdentifier : IPackIdentifier
     ///   Gets a value indicating whether the pack identifier is suitable for submission to a national
     ///   medicines verification system for verification, supply, decommission or reactivation.
     /// </summary>
-    public bool Submit
-    {
-        get
-        {
+    public bool Submit {
+        get {
             // If the pack identifier is valid, it is suitable for submission
-            if (IsValid)
-            {
+            if (IsValid) {
                 return true;
             }
 
@@ -314,8 +299,7 @@ public class PackIdentifier : IPackIdentifier
             // then any unique identifier it may carry is not a unique identifier in
             // terms of the law, and the data should not be submitted to the National
             // System.
-            if (ValidSymbology == SymbologyValidity.False)
-            {
+            if (ValidSymbology == SymbologyValidity.False) {
                 return false;
             }
 
@@ -357,16 +341,12 @@ public class PackIdentifier : IPackIdentifier
     ///   Adds a pack identifier exception to the exception collection.
     /// </summary>
     /// <param name="exception">The exception to be added.</param>
-    public void AddException(PackIdentifierException exception)
-    {
-        if (exception is ParseException parseException)
-        {
+    public void AddException(PackIdentifierException exception) {
+        if (exception is ParseException parseException) {
             ((List<ParseException>)ParseExceptions).Add(parseException);
         }
-        else
-        {
-            if (Exceptions.All(ex => ex.ErrorNumber != exception.ErrorNumber))
-            {
+        else {
+            if (Exceptions.All(ex => ex.ErrorNumber != exception.ErrorNumber)) {
                 ((List<PackIdentifierException>)Exceptions).Add(exception);
             }
         }
@@ -378,8 +358,7 @@ public class PackIdentifier : IPackIdentifier
     /// <remarks>Any other national numbers will be found in the Elements collection of a record.</remarks>
     /// <param name="market">The market that assigned the NHRN.</param>
     /// <param name="nationalNumber">The NHRN national number to be added.</param>
-    public void AddNationalNumber(NhrnMarket market, string nationalNumber)
-    {
+    public void AddNationalNumber(NhrnMarket market, string nationalNumber) {
         ((Dictionary<NhrnMarket, string>)NationalNumbers).Add(market, nationalNumber);
     }
 
@@ -387,10 +366,8 @@ public class PackIdentifier : IPackIdentifier
     ///   Adds or replaces a pack identifier exception to the exception collection.
     /// </summary>
     /// <param name="exception">The exception to be added.</param>
-    public void AddOrReplaceException(PackIdentifierException exception)
-    {
-        if (exception is ParseException parseException)
-        {
+    public void AddOrReplaceException(PackIdentifierException exception) {
+        if (exception is ParseException parseException) {
             var parseExceptions = (List<ParseException>)ParseExceptions;
 
             var sameNumberExceptions = from pe in parseExceptions
@@ -399,18 +376,15 @@ public class PackIdentifier : IPackIdentifier
 
             var numberExceptions = sameNumberExceptions as ParseException[] ?? sameNumberExceptions.ToArray();
 
-            if (numberExceptions.Length > 0)
-            {
-                foreach (var sameNumberException in numberExceptions.ToList())
-                {
+            if (numberExceptions.Length > 0) {
+                foreach (var sameNumberException in numberExceptions.ToList()) {
                     parseExceptions.Remove(sameNumberException);
                 }
             }
 
             AddException(parseException);
         }
-        else
-        {
+        else {
             var exceptions = (List<PackIdentifierException>)Exceptions;
 
             var sameNumberExceptions = from e in exceptions where e.ErrorNumber == exception.ErrorNumber select e;
@@ -418,10 +392,8 @@ public class PackIdentifier : IPackIdentifier
             var packIdentifierExceptions =
                 sameNumberExceptions as PackIdentifierException[] ?? sameNumberExceptions.ToArray();
 
-            if (packIdentifierExceptions.Length > 0)
-            {
-                foreach (var sameNumberException in packIdentifierExceptions.ToList())
-                {
+            if (packIdentifierExceptions.Length > 0) {
+                foreach (var sameNumberException in packIdentifierExceptions.ToList()) {
                     exceptions.Remove(sameNumberException);
                 }
             }
@@ -434,16 +406,14 @@ public class PackIdentifier : IPackIdentifier
     ///   Adds a barcode record to the record collection.
     /// </summary>
     /// <param name="record">The barcode record to be added.</param>
-    public void AddRecord(IRecord record)
-    {
+    public void AddRecord(IRecord record) {
         ((List<IRecord>)Records).Add(record);
     }
 
     /// <summary>
     ///   Resets the pack identifier fields, but leaves the records collection unchanged.
     /// </summary>
-    public void ResetIdentifier()
-    {
+    public void ResetIdentifier() {
         Scheme = Scheme.Unknown;
         ProductCode = string.Empty;
         BatchIdentifier = string.Empty;

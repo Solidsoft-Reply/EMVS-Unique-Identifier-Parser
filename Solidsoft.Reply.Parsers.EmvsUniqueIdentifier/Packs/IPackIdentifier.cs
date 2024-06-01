@@ -26,8 +26,7 @@ using System.Collections.Generic;
 /// <summary>
 ///   Represents an EMVS pack identifier.
 /// </summary>
-public interface IPackIdentifier
-{
+public interface IPackIdentifier {
     /// <summary>
     ///   Gets the batch identifier.
     /// </summary>

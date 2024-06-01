@@ -25,8 +25,7 @@ using AnsiMhDi;
 /// <summary>
 ///   The data in an unsupported record format in an ISO/IEC 1543-encoded barcode.
 /// </summary>
-public class IsoIec15434DataElement : IDataElement
-{
+public class IsoIec15434DataElement : IDataElement {
     /// <summary>
     ///   Initializes a new instance of the <see cref="IsoIec15434DataElement" /> class.
     /// </summary>
@@ -34,8 +33,7 @@ public class IsoIec15434DataElement : IDataElement
     /// <param name="title">The record title.</param>
     /// <param name="description">The record description.</param>
     /// <param name="position">The character position of the start of the element.</param>
-    public IsoIec15434DataElement(string data, string title, string description, int position)
-    {
+    public IsoIec15434DataElement(string data, string title, string description, int position) {
         DataIdentifier = DataIdentifier.Unrecognised;
         Identifier = string.Empty;
         Data = data;

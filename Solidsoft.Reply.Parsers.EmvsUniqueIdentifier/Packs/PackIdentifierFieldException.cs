@@ -29,14 +29,12 @@ using System.Runtime.Serialization;
 ///   A pack identifier field exception.
 /// </summary>
 [Serializable]
-public class PackIdentifierFieldException : PackIdentifierException
-{
+public class PackIdentifierFieldException : PackIdentifierException {
     /// <summary>
     ///   Initializes a new instance of the <see cref="PackIdentifierFieldException" /> class.
     /// </summary>
     // ReSharper disable once UnusedMember.Global
-    public PackIdentifierFieldException()
-    {
+    public PackIdentifierFieldException() {
     }
 
     /// <summary>
@@ -47,8 +45,7 @@ public class PackIdentifierFieldException : PackIdentifierException
     /// </param>
     // ReSharper disable once UnusedMember.Global
     public PackIdentifierFieldException(string message)
-        : base(message)
-    {
+        : base(message) {
     }
 
     /// <summary>
@@ -62,8 +59,7 @@ public class PackIdentifierFieldException : PackIdentifierException
     /// </param>
     // ReSharper disable once UnusedMember.Global
     public PackIdentifierFieldException(string message, Exception innerException)
-        : base(message, innerException)
-    {
+        : base(message, innerException) {
     }
 
     /// <summary>
@@ -90,8 +86,7 @@ public class PackIdentifierFieldException : PackIdentifierException
         string elementId,
         string elementTitle,
         int elementIndex)
-        : base(errorNumber, message)
-    {
+        : base(errorNumber, message) {
         ElementIndex = elementIndex;
         ElementId = elementId;
         ElementTitle = elementTitle;
@@ -108,8 +103,7 @@ public class PackIdentifierFieldException : PackIdentifierException
 #pragma warning restore S1133
 #endif
     protected PackIdentifierFieldException(SerializationInfo info, StreamingContext context)
-        : base(info, context)
-    {
+        : base(info, context) {
     }
 
     /// <summary>

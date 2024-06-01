@@ -25,8 +25,7 @@ using System.Collections.Generic;
 /// <summary>
 ///   Represents a data record in a barcode.
 /// </summary>
-public interface IRecord
-{
+public interface IRecord {
     /// <summary>
     ///   Gets the data elements of the record.
     /// </summary>

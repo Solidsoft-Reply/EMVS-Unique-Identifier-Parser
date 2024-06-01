@@ -19,11 +19,10 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Diagnostics;
-using Solidsoft.Reply.Parsers.HighCapacityAidc.PreProcessors;
 
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
 
-using Solidsoft.Reply.BarcodeScanner.Calibration;
+using BarcodeScanner.Calibration;
 
 using Packs;
 
@@ -32,15 +31,13 @@ using Preprocessor = HighCapacityAidc.Preprocessor;
 /// <summary>
 ///   EMVS Unique Identifier parser.
 /// </summary>
-public class Parser
-{
+public class Parser {
     /// <summary>
     ///   Initializes a new instance of the <see cref="Parser" /> class.
     /// </summary>
     /// <param name="data">The calibration data.</param>
     public Parser(
-        Data data)
-    {
+        Data data) {
         Calibrator = new Calibrator(data);
     }
 
@@ -51,8 +48,7 @@ public class Parser
     /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
     public Parser(
         Data? data = null,
-        Assumption assumption = Assumption.Calibration)
-    {
+        Assumption assumption = Assumption.Calibration) {
         Calibrator = new Calibrator(data, assumption);
     }
 
@@ -69,8 +65,7 @@ public class Parser
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
     /// <param name="trace">Indicates whether the parser should trace the data it receives. This supports debugging.</param>
     /// <returns>A pack identifier.</returns>
-    public IPackIdentifier Parse(string? data, out string preProcessedData, Preprocessor? preProcessors = null, bool trace = false)
-    {
+    public IPackIdentifier Parse(string? data, out string preProcessedData, Preprocessor? preProcessors = null, bool trace = false) {
         ////data =
         ////    "[{\"code\":\"Digit9\",\"modifiers\":54},{\"code\":\"KeyD\",\"modifiers\":49},{\"code\":\"Digit2\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit5\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit7\",\"modifiers\":48},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit2\",\"modifiers\":48},{\"code\":\"Digit3\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit5\",\"modifiers\":48},{\"code\":\"Digit5\",\"modifiers\":48},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit6\",\"modifiers\":48},{\"code\":\"Digit4\",\"modifiers\":48},{\"code\":\"Digit2\",\"modifiers\":48},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit2\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit7\",\"modifiers\":48},{\"code\":\"Digit7\",\"modifiers\":48},{\"code\":\"Digit3\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"KeyA\",\"modifiers\":48},{\"code\":\"KeyK\",\"modifiers\":48},{\"code\":\"KeyV\",\"modifiers\":48},{\"code\":\"KeyA\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit7\",\"modifiers\":48},{\"code\":\"BracketRight\",\"modifiers\":50},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit7\",\"modifiers\":48},{\"code\":\"Digit2\",\"modifiers\":48},{\"code\":\"Digit5\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit9\",\"modifiers\":48},{\"code\":\"Digit3\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit1\",\"modifiers\":48},{\"code\":\"Digit0\",\"modifiers\":48},{\"code\":\"Digit2\",\"modifiers\":48},{\"code\":\"Digit4\",\"modifiers\":48},{\"code\":\"Digit5\",\"modifiers\":48},{\"code\":\"Digit4\",\"modifiers\":48},{\"code\":\"Digit8\",\"modifiers\":48},{\"code\":\"Enter\",\"modifiers\":48}]";
 
@@ -95,7 +90,7 @@ public class Parser
             ? Calibrator.ProcessInput
             : default(Preprocessor);
 
-        var packIdentifier =  BaseParser.Parse(data, out preProcessedData, calibrationProcessor, preProcessors);
+        var packIdentifier = BaseParser.Parse(data, out preProcessedData, calibrationProcessor, preProcessors);
 
         if (!trace
             || string.IsNullOrEmpty(preProcessedData)
@@ -126,8 +121,7 @@ public class Parser
     /// <param name="trace">Indicates whether the parser should trace the data it receives. This supports debugging.</param>
     /// <returns>A pack identifier.</returns>
     // ReSharper disable once UnusedMember.Global
-    public IPackIdentifier Parse(string data, bool trace = false)
-    {
+    public IPackIdentifier Parse(string data, bool trace = false) {
         return Parse(data, out _, trace: trace);
     }
 }

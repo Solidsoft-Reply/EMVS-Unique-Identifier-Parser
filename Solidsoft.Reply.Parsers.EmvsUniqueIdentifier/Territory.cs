@@ -23,8 +23,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
 /// <summary>
 ///   Territory for which advice will be provided.
 /// </summary>
-public enum Territory
-{
+public enum Territory {
     /// <summary>
     ///   Any market that has joined the EMVS, unless an alternative specific territory has been defined for the market.
     /// </summary>

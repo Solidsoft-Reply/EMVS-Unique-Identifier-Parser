@@ -23,8 +23,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
 /// <summary>
 ///   The types of advice provided through analysis of the calibration results.
 /// </summary>
-public enum AdviceType
-{
+public enum AdviceType {
     /// <summary>
     /// <p>No advice provided.</p>
     /// </summary>

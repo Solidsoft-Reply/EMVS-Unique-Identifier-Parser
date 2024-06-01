@@ -25,8 +25,7 @@ using Gs1Ai;
 /// <summary>
 ///   A data element in a GS1-encoded barcode.
 /// </summary>
-public class Gs1DataElement : IDataElement
-{
+public class Gs1DataElement : IDataElement {
     /// <summary>
     ///   Initializes a new instance of the <see cref="Gs1DataElement" /> class.
     /// </summary>
@@ -42,8 +41,7 @@ public class Gs1DataElement : IDataElement
         string data,
         string title,
         string description,
-        int position)
-    {
+        int position) {
         ApplicationIdentifier = applicationIdentifier;
         Identifier = identifier;
         Data = data;

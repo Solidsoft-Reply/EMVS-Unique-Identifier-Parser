@@ -24,8 +24,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Packs;
 /// <summary>
 ///   Markets with NHRNs.
 /// </summary>
-public enum NhrnMarket
-{
+public enum NhrnMarket {
     /// <summary>
     ///   Unknown market.
     /// </summary>

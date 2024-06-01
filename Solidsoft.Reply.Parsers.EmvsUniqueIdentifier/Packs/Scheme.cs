@@ -23,8 +23,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Packs;
 /// <summary>
 ///   Barcode encoding schema.
 /// </summary>
-public enum Scheme
-{
+public enum Scheme {
     /// <summary>
     ///   The scheme is unknown.
     /// </summary>

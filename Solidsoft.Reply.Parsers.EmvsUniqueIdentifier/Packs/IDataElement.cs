@@ -23,8 +23,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Packs;
 /// <summary>
 ///   Represents a data element in a barcode.
 /// </summary>
-public interface IDataElement
-{
+public interface IDataElement {
     /// <summary>
     ///   Gets the element data.
     /// </summary>

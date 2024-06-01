@@ -25,8 +25,7 @@ using AnsiMhDi;
 /// <summary>
 ///   A data element in an IFA-encoded barcode.
 /// </summary>
-public class IfaDataElement : IDataElement
-{
+public class IfaDataElement : IDataElement {
     /// <summary>
     ///   Initializes a new instance of the <see cref="IfaDataElement" /> class.
     /// </summary>
@@ -42,8 +41,7 @@ public class IfaDataElement : IDataElement
         string data,
         string title,
         string description,
-        int position)
-    {
+        int position) {
         DataIdentifier = dataIdentifier;
         Identifier = identifier;
         Data = data;

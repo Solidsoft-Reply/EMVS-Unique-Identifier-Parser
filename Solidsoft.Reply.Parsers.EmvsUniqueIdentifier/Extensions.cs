@@ -30,8 +30,7 @@ using System.Text;
 /// <summary>
 ///   Extension methods.
 /// </summary>
-public static class Extensions
-{
+public static class Extensions {
 #if NET8_0_OR_GREATER
     /// <summary>
     /// Composite format for Parser_Error_100.
@@ -45,8 +44,7 @@ public static class Extensions
     /// </summary>
     /// <param name="thisCharacter">The character to be converted.</param>
     /// <returns>A culture-invariant string.</returns>
-    public static string ToInvariantString(this char thisCharacter)
-    {
+    public static string ToInvariantString(this char thisCharacter) {
         return thisCharacter.ToString(CultureInfo.InvariantCulture);
     }
 
@@ -57,8 +55,7 @@ public static class Extensions
     /// <param name="thisInteger">The integer to be converted.</param>
     /// <param name="format">The string format to apply.</param>
     /// <returns>A culture-invariant string representing the integer.</returns>
-    public static string ToInvariantString(this int thisInteger, string format)
-    {
+    public static string ToInvariantString(this int thisInteger, string format) {
         return thisInteger.ToString(format, CultureInfo.InvariantCulture);
     }
 
@@ -69,8 +66,7 @@ public static class Extensions
     /// <param name="thisDateTime">The DateTime object to be converted.</param>
     /// <param name="format">A standard or custom date and time format string.</param>
     /// <returns>A culture-invariant string representing the DateTime object.</returns>
-    public static string ToInvariantString(this DateTime thisDateTime, string format)
-    {
+    public static string ToInvariantString(this DateTime thisDateTime, string format) {
         return thisDateTime.ToString(format, CultureInfo.InvariantCulture);
     }
 
@@ -81,10 +77,8 @@ public static class Extensions
     /// <returns>An integer.</returns>
     /// <exception cref="ArgumentException">The character cannot be converted to an integer.</exception>
     // ReSharper disable once UnusedMember.Global
-    public static int ToInt(this char character)
-    {
-        if (int.TryParse(character.ToInvariantString(), out var integer))
-        {
+    public static int ToInt(this char character) {
+        if (int.TryParse(character.ToInvariantString(), out var integer)) {
             return integer;
         }
 

@@ -27,14 +27,12 @@ using System.Runtime.Serialization;
 ///   A parse exception.
 /// </summary>
 [Serializable]
-public class PackIdentifierException : Exception
-{
+public class PackIdentifierException : Exception {
     /// <summary>
     ///   Initializes a new instance of the <see cref="PackIdentifierException" /> class.
     /// </summary>
     // ReSharper disable once UnusedMember.Global
-    public PackIdentifierException()
-    {
+    public PackIdentifierException() {
     }
 
     /// <summary>
@@ -42,8 +40,7 @@ public class PackIdentifierException : Exception
     /// </summary>
     /// <param name="message">The exception message.</param>
     public PackIdentifierException(string message)
-        : base(message)
-    {
+        : base(message) {
     }
 
     /// <summary>
@@ -52,8 +49,7 @@ public class PackIdentifierException : Exception
     /// <param name="message">The exception message.</param>
     /// <param name="innerException">The inner exception.</param>
     public PackIdentifierException(string message, Exception innerException)
-        : base(message, innerException)
-    {
+        : base(message, innerException) {
     }
 
     /// <summary>
@@ -69,8 +65,7 @@ public class PackIdentifierException : Exception
     ///   The inner Exception.
     /// </param>
     public PackIdentifierException(int errorNumber, string message, Exception? innerException = null)
-        : base(message, innerException)
-    {
+        : base(message, innerException) {
         ErrorNumber = errorNumber;
     }
 
@@ -85,8 +80,7 @@ public class PackIdentifierException : Exception
 #pragma warning restore S1133 // Deprecated code should be removed
 #endif
     protected PackIdentifierException(SerializationInfo info, StreamingContext context)
-        : base(info, context)
-    {
+        : base(info, context) {
     }
 
     /// <summary>

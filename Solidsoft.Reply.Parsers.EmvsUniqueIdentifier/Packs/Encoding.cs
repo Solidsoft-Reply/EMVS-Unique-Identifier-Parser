@@ -23,8 +23,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Packs;
 /// <summary>
 ///   The encodings used for data content in barcode records.
 /// </summary>
-public enum Encoding
-{
+public enum Encoding {
     /// <summary>
     ///   The barcode record encoding is unknown.
     /// </summary>

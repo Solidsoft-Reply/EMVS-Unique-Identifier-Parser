@@ -34,15 +34,13 @@ using Packs;
 ///   Supports a stateless model suitable for client/server scenarios where no session
 ///   state is maintained across multiple calls into the server.
 /// </remarks>
-public class StatelessParser
-{
+public class StatelessParser {
     /// <summary>
     ///   Initializes a new instance of the <see cref="StatelessParser" /> class.
     /// </summary>
     /// <param name="data">The calibration data.</param>
     public StatelessParser(
-        Data data)
-    {
+        Data data) {
         Calibrator = new StatelessCalibrator(data);
     }
 
@@ -53,8 +51,7 @@ public class StatelessParser
     /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
     public StatelessParser(
         Data? data = null,
-        Assumption assumption = Assumption.Calibration)
-    {
+        Assumption assumption = Assumption.Calibration) {
         Calibrator = new StatelessCalibrator(data, assumption);
     }
 
@@ -70,8 +67,7 @@ public class StatelessParser
     /// <param name="preProcessedData">The pre-processed barcode data.</param>
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
     /// <returns>A pack identifier.</returns>
-    public IPackIdentifier Parse(string? data, out string preProcessedData, Preprocessor? preProcessors = null)
-    {
+    public IPackIdentifier Parse(string? data, out string preProcessedData, Preprocessor? preProcessors = null) {
         var calibrationProcessor = Calibrator.IsProcessingRequired
             ? Calibrator.ProcessInput
             : default(Preprocessor);
@@ -85,8 +81,7 @@ public class StatelessParser
     /// <param name="data">The raw barcode data.</param>
     /// <returns>A pack identifier.</returns>
     // ReSharper disable once UnusedMember.Global
-    public IPackIdentifier Parse(string data)
-    {
+    public IPackIdentifier Parse(string data) {
         return Parse(data, out _);
     }
 }

@@ -32,8 +32,7 @@ using Gs1Ai;
 /// <summary>
 ///   A data record in a barcode.
 /// </summary>
-public class Record : IRecord
-{
+public class Record : IRecord {
     /// <summary>
     ///   Initializes a new instance of the <see cref="Record" /> class.
     /// </summary>
@@ -43,10 +42,8 @@ public class Record : IRecord
     /// <param name="elements">
     ///   The elements in the record.
     /// </param>
-    public Record(FormatIndicator format, IEnumerable<IDataEntity>? elements)
-    {
-        Encoding = format switch
-        {
+    public Record(FormatIndicator format, IEnumerable<IDataEntity>? elements) {
+        Encoding = format switch {
             FormatIndicator.Gs1Ai => Encoding.Gs1,
             FormatIndicator.AscMh10Di => Encoding.AscMh10,
             _ => Encoding.Unknown
@@ -54,16 +51,13 @@ public class Record : IRecord
 
         var packElements = new List<IDataElement>();
 
-        foreach (var element in elements ?? new List<IDataEntity>())
-        {
+        foreach (var element in elements ?? new List<IDataEntity>()) {
             // ReSharper disable once SwitchStatementMissingSomeCases
-            switch (format)
-            {
+            switch (format) {
                 case FormatIndicator.Gs1Ai:
                     if (Enum.TryParse(
                             ((DataElement)element).Identifier,
-                            out ApplicationIdentifier gs1Identifier))
-                    {
+                            out ApplicationIdentifier gs1Identifier)) {
                         packElements.Add(
                             new Gs1DataElement(
                                 gs1Identifier,

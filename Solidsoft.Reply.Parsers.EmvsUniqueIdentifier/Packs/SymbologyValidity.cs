@@ -23,8 +23,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Packs;
 /// <summary>
 ///   The legal validity of the use of the symbology to encode a unique pack identifier.
 /// </summary>
-public enum SymbologyValidity
-{
+public enum SymbologyValidity {
     /// <summary>
     ///   The legal validity of the use of the symbology to encode a unique pack identifier is unknown.
     /// </summary>

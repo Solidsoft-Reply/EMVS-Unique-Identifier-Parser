@@ -29,15 +29,13 @@ using Packs;
 ///   Represents a parse exception.
 /// </summary>
 [Serializable]
-public class ParseException : PackIdentifierException
-{
+public class ParseException : PackIdentifierException {
     /// <summary>
     ///   Initializes a new instance of the <see cref="ParseException" /> class.
     /// </summary>
     // ReSharper disable once UnusedMember.Global
     public ParseException()
-        : base(-1, string.Empty)
-    {
+        : base(-1, string.Empty) {
     }
 
     /// <summary>
@@ -48,8 +46,7 @@ public class ParseException : PackIdentifierException
     /// </param>
     // ReSharper disable once UnusedMember.Global
     public ParseException(string message)
-        : base(-1, message)
-    {
+        : base(-1, message) {
     }
 
     /// <summary>
@@ -63,8 +60,7 @@ public class ParseException : PackIdentifierException
     /// </param>
     // ReSharper disable once UnusedMember.Global
     public ParseException(string message, Exception innerException)
-        : base(-1, message, innerException)
-    {
+        : base(-1, message, innerException) {
     }
 
     /// <summary>
@@ -91,8 +87,7 @@ public class ParseException : PackIdentifierException
         string dataElementTitle,
         int characterPosition,
         bool isFatal)
-        : base(errorNumber, message)
-    {
+        : base(errorNumber, message) {
         DataElementTitle = dataElementTitle;
         CharacterPosition = characterPosition;
         IsFatal = isFatal;
@@ -109,8 +104,7 @@ public class ParseException : PackIdentifierException
 #pragma warning restore S1133 // Deprecated code should be removed
 #endif
     protected ParseException(SerializationInfo info, StreamingContext context)
-        : base(info, context)
-    {
+        : base(info, context) {
     }
 
     /// <summary>

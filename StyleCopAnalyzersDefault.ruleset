@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="StyleCop.Analyzers rules with default action" Description="StyleCop.Analyzers with default action. Rules with IsEnabledByDefault = false are disabled." ToolsVersion="17.0">
+  <Rules AnalyzerId="SonarAnalyzer.CSharp" RuleNamespace="SonarAnalyzer.CSharp">
+    <Rule Id="S3358" Action="None" />
+  </Rules>
   <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers.DocumentationRules">
     <Rule Id="SA1600" Action="Warning" />
     <Rule Id="SA1601" Action="Warning" />
@@ -174,6 +177,8 @@
     <Rule Id="SX1101" Action="None" />
   </Rules>
   <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <Rule Id="SA1008" Action="None" />
+    <Rule Id="SA1009" Action="None" />
     <Rule Id="SA1010" Action="None" />
     <Rule Id="SA1013" Action="Info" />
     <Rule Id="SA1025" Action="None" />
@@ -196,8 +201,8 @@
     <Rule Id="SA1005" Action="Warning" />
     <Rule Id="SA1006" Action="Warning" />
     <Rule Id="SA1007" Action="Warning" />
-    <Rule Id="SA1008" Action="Warning" />
-    <Rule Id="SA1009" Action="Warning" />
+    <Rule Id="SA1008" Action="None" />
+    <Rule Id="SA1009" Action="None" />
     <Rule Id="SA1010" Action="None" />
     <Rule Id="SA1011" Action="Warning" />
     <Rule Id="SA1012" Action="Warning" />

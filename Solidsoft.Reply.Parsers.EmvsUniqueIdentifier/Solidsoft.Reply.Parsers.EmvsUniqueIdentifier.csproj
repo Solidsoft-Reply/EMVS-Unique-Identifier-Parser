@@ -16,7 +16,7 @@
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>emvs;medicine;verification;parser;gs1;ppn;</PackageTags>
 	<PackageReleaseNotes>
-		1) Updated to use the latest version of the Calibrator (2.2.6).
+		1) Updated to use the latest version of the High Capacity AIDC parser (1.0.7).
 
 	</PackageReleaseNotes>
 	<Description>
@@ -26,7 +26,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>1.1.6</Version>
+	<Version>1.1.7</Version>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>

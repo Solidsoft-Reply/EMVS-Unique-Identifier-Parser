@@ -454,7 +454,7 @@
     <value>AIM-identificatoren vertegenwoordigen het type barcode. Uw verificatiesoftware kan ze gebruiken om onnodige meldingen te elimineren.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Uw barcodescanner is waarschijnlijk geconfigureerd om automatisch te compenseren voor Caps Lock.</value>
+    <value>Uw barcodescanner is waarschijnlijk geconfigureerd om automatisch te compenseren voor Caps Lock of om gegevens in te voeren met behulp van het numerieke toetsenblok (ALT-modus).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Uw Caps Lock-toets kan zijn uitgeschakeld of opnieuw toegewezen.</value>

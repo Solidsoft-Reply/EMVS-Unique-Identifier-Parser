@@ -454,7 +454,7 @@
     <value>Identificatorii AIM reprezintă tipul de cod de bare. Software-ul dumneavoastră de verificare îi poate folosi pentru a elimina alertele inutile.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Scanerul dvs. de coduri de bare este probabil configurat să compenseze automat pentru Caps Lock.</value>
+    <value>Scanerul dvs. de coduri de bare este probabil configurat pentru a compensa automat Caps Lock sau pentru a introduce date folosind tastatura numerică (modul ALT).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Tasta Caps Lock poate fi dezactivată sau remapată.</value>

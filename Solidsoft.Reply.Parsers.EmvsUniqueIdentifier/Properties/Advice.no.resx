@@ -454,7 +454,7 @@
     <value>AIM-identifikatorer representerer strekkodetypen. Programvaren din kan bruke dem til å eliminere unødvendige varsler.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Strekkodeskanneren din er sannsynligvis konfigurert til å kompensere automatisk for Caps Lock.</value>
+    <value>Strekkodeskanneren din er sannsynligvis konfigurert til å automatisk kompensere for Caps Lock eller til å legge inn data ved hjelp av det numeriske tastaturet (ALT-modus).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Caps Lock-tasten din kan være deaktivert eller omkonfigurert.</value>

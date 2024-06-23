@@ -454,7 +454,7 @@
     <value>Léiríonn aitheantóirí AIM cineál an bharachóid. Féadfaidh do bhogearra fíoraithe iad a úsáid chun rabhaidh neamhriachtanacha a eisiamh.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Tá do scanóir barachóid cumraithe go dócha chun cúiteamh a dhéanamh go huathoibríoch do Caps Lock.</value>
+    <value>Tá do scanóir cód barra socraithe go dóchúil chun dul i ngleic le Caps Lock go huathoibríoch nó chun sonraí a iontráil ag úsáid na heochracha uimhriúla (mód ALT).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>D'fhéadfadh do eochair Caps Lock a bheith díchumasaithe nó athmhúnlaíodh.</value>

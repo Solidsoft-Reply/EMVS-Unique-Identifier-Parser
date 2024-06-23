@@ -295,7 +295,7 @@
     <value>Teie vöötkoodiskanner ei edasta AIM identifikaatoreid.</value>
   </data>
   <data name="Condition_205" xml:space="preserve">
-    <value>Caps Lock on sisse lülitatud, kuid tähtede suurust kuvatakse õigesti.</value>
+    <value>Teie vöötkoodilugeja on tõenäoliselt konfigureeritud automaatselt kompenseerima suurtähelukku või sisestama andmeid numbriklaviatuuriga (ALT-režiim).</value>
   </data>
   <data name="Condition_206" xml:space="preserve">
     <value>Caps Lock on sisse lülitatud, kuid tähtede suurust säilitatakse.</value>

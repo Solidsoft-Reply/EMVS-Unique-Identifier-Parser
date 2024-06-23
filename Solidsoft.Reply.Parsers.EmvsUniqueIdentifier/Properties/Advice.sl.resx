@@ -454,7 +454,7 @@
     <value>Identifikatorji AIM predstavljajo tip črtne kode. Vaša programska oprema za preverjanje jih lahko uporabi za odpravo nepotrebnih opozoril.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Vaš skener črtne kode je verjetno nastavljen tako, da samodejno kompenzira vklop Caps Lock.</value>
+    <value>Vaš čitalnik črtne kode je verjetno konfiguriran za samodejno kompenzacijo Caps Lock ali za vnos podatkov s pomočjo numerične tipkovnice (ALT način).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Vaša tipka Caps Lock je morda onemogočena ali preprogramirana.</value>

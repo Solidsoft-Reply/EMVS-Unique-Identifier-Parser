@@ -454,7 +454,7 @@
     <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software di verifica potrebbe usarli per eliminare avvisi non necessari.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre è probabilmente configurato per compensare automaticamente il Caps Lock.</value>
+    <value>Il tuo lettore di codici a barre è probabilmente configurato per compensare automaticamente il Bloc Maiusc o per inserire i dati utilizzando il tastierino numerico (modalità ALT).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Il tasto Caps Lock potrebbe essere disabilitato o rimappato.</value>

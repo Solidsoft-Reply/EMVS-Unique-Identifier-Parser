@@ -304,6 +304,15 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        public static string Advice_276 {
+            get {
+                return ResourceManager.GetString("Advice_276", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Try again, making sure you scan the correct barcode(s)..
         /// </summary>
         public static string Advice_300 {
@@ -790,6 +799,15 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your system cannot distinguish between certain normal and special characters..
+        /// </summary>
+        public static string Condition_276 {
+            get {
+                return ResourceManager.GetString("Condition_276", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The test failed..
         /// </summary>
         public static string Condition_300 {
@@ -1245,6 +1263,15 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         public static string Description_275 {
             get {
                 return ResourceManager.GetString("Description_275", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to These characters should never appear together in a unique identifier barcode..
+        /// </summary>
+        public static string Description_276 {
+            get {
+                return ResourceManager.GetString("Description_276", resourceCulture);
             }
         }
         

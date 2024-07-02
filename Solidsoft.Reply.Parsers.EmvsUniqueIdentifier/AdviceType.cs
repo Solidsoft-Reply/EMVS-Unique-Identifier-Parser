@@ -378,6 +378,14 @@ public enum AdviceType {
     CannotReadEdiCharacters = 275,
 
     /// <summary>
+    /// <p>Your system cannot read ASCII 28 and/or ASCII 31 characters reliably.</p>
+    /// <p>Some barcodes may contain ASCII 28 or ASCII 31 characters.</p>
+    /// <p>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to
+    /// emulate a numeric keypad.</p>
+    /// </summary>
+    CannotReadAscii28Ascii31Characters = 276,
+
+    /// <summary>
     /// <p>Your system reads unique identifiers reliably.</p>
     /// </summary>
     ReadsUniqueIdentifiersReliably = 100,

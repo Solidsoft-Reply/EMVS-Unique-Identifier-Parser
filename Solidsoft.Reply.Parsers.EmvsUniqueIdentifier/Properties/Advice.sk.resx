@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Ak skenujete čiarové kódy, ktoré obsahujú EDI údaje, a máte problémy, skúste nakonfigurovať váš čítač čiarových kódov tak, aby emuloval numerickú klávesnicu.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Ak skenujete iné čiarové kódy a máte problémy, skúste nakonfigurovať váš skener čiarových kódov tak, aby emuloval numerickú klávesnicu.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Skúste to znova, uistite sa, že skenujete správny čiarový kód(y).</value>
   </data>
@@ -360,6 +363,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Váš systém nemôže spoľahlivo čítať čiarové kódy, ak obsahujú údaje pre elektronickú výmenu údajov (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Váš systém nedokáže rozlíšiť medzi určitými normálnymi a špeciálnymi znakmi.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test zlyhal.</value>
   </data>
@@ -512,6 +518,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Niektoré čiarové kódy môžu obsahovať EDI údaje.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Tieto znaky by sa nikdy nemali vyskytovať spolu v čiarovom kóde jedinečného identifikátora.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Možno ste naskenovali nesprávny čiarový kód alebo ste pomocou klávesnice zadali nesprávne údaje. Váš čítač čiarových kódov alebo systém môže byť pomalý, alebo mohlo dôjsť k nejakému neočakávanému alebo príležitostnému problému.</value>

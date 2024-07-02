@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Če skenirate črtne kode, ki vsebujejo podatke EDI, in imate težave, poskusite nastaviti vaš skener črtne kode, da posnema numerično tipkovnico.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Če skenirate druge črtne kode in imate težave, poskusite konfigurirati čitalnik črtnih kod, da bo posnemal numerično tipkovnico.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Poskusite znova, prepričajte se, da skenirate pravilno črtno kodo(-e).</value>
   </data>
@@ -360,6 +363,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Vaš sistem ne more zanesljivo brati črtnih kodov, če vsebujejo podatke za elektronsko izmenjavo podatkov (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Vaš sistem ne more razlikovati med nekaterimi običajnimi in posebnimi znaki.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test ni uspel.</value>
   </data>
@@ -512,6 +518,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Nekatere črtne kode lahko vsebujejo podatke EDI.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Ti znaki se nikoli ne smejo pojaviti skupaj v enotni identifikacijski črtni kodi.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Morda ste skenirali napačno črtno kodo ali vnesli napačne podatke preko tipkovnice. Vaš skener črtne kode ali sistem je lahko počasen, ali pa se je pojavila neka nepričakovana ali občasna težava.</value>

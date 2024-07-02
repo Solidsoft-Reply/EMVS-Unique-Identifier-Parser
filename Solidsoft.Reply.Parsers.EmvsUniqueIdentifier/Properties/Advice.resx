@@ -225,6 +225,10 @@
     <value>If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
     <comment>High</comment>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
+    <comment>Medium</comment>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Try again, making sure you scan the correct barcode(s).</value>
     <comment>Low</comment>
@@ -441,6 +445,10 @@
     <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI)</value>
     <comment>High</comment>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Your system cannot distinguish between certain normal and special characters.</value>
+    <comment>Medium</comment>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>The test failed.</value>
     <comment>Low</comment>
@@ -644,6 +652,10 @@
   <data name="Description_275" xml:space="preserve">
     <value>Some barcodes may contain EDI data.</value>
     <comment>High</comment>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>These characters should never appear together in a unique identifier barcode.</value>
+    <comment>Medium</comment>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>

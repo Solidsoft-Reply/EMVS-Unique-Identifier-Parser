@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Jei skenuojate brūkšninius kodus, kuriuose yra EDI duomenų, ir patiriate sunkumų, pabandykite nustatyti savo brūkšninių kodų skaitytuvą imituoti skaitmeninį klavišų bloką.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Jei skenuojate kitus brūkšninius kodus ir kyla sunkumų, pabandykite sukonfigūruoti savo brūkšninių kodų skaitytuvą, kad jis imituotų skaitmeninę klaviatūrą.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Bandykite dar kartą, įsitikindami, kad nuskenuojate teisingą brūkšninį kodą(-us).</value>
   </data>
@@ -360,6 +363,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Jūsų sistema negali patikimai nuskaityti brūkšninių kodų, jei juose yra elektroninių duomenų mainų (EDI) duomenų.</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Jūsų sistema negali atskirti tam tikrų įprastų ir specialiųjų simbolių.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testas nepavyko.</value>
   </data>
@@ -512,6 +518,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Kai kurie brūkšniniai kodai gali turėti EDI duomenų.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Šie simboliai niekada neturėtų būti kartu unikaliame identifikavimo brūkšniniame kode.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Galbūt nuskenuotas neteisingas brūkšninis kodas arba neteisingai įvesti duomenys naudojant klaviatūrą. Jūsų brūkšninių kodų skaitytuvas ar sistema gali veikti lėtai, arba gali kilti netikėtų ar laikinų problemų.</value>

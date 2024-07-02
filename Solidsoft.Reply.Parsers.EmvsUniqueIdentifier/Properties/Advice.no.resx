@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Hvis du skanner strekkoder som inneholder EDI-data og opplever problemer, prøv å konfigurere strekkodeskanneren din til å etterligne et numerisk tastatur.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Hvis du skanner andre strekkoder og opplever problemer, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Prøv igjen, og sørg for at du skanner de riktige strekkodene.</value>
   </data>
@@ -360,6 +363,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder data for elektronisk datautveksling (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Systemet ditt kan ikke skille mellom visse normale og spesialtegn.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testen feilet.</value>
   </data>
@@ -512,6 +518,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Noen strekkoder kan inneholde EDI-data.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Disse tegnene skal aldri vises sammen i en unik identifikasjonsstrekkode.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Du kan ha skannet en feil strekkode eller angitt feil data ved hjelp av tastaturet. Strekkodeskanneren eller systemet ditt kan være tregt, eller det kan ha oppstått et uventet eller periodisk problem.</value>

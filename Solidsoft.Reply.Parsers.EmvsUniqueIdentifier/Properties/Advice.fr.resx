@@ -225,6 +225,9 @@
     <value>Si vous scannez des codes-barres contenant des données EDI et rencontrez des difficultés, essayez de configurer votre scanner de code-barres pour émuler un pavé numérique.</value>
     <comment>High</comment>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Si vous scannez d'autres codes-barres et rencontrez des difficultés, essayez de configurer votre scanner de codes-barres pour émuler un pavé numérique.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Réessayez, en vous assurant de scanner le(s) bon(s) code(s)-barres.</value>
     <comment>Low</comment>
@@ -440,6 +443,9 @@
     <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des données pour l'échange de données électroniques (EDI).</value>
     <comment>High</comment>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Votre système ne peut pas distinguer certains caractères normaux et des caractères spéciaux.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Le test a échoué.</value>
     <comment>Low</comment>
@@ -642,6 +648,9 @@
   <data name="Description_275" xml:space="preserve">
     <value>Certains codes-barres peuvent contenir des données EDI.</value>
     <comment>High</comment>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Ces caractères ne doivent jamais apparaître ensemble dans un code-barres d'identification unique.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Vous avez peut-être scanné un code-barres erroné ou saisi des données incorrectes en utilisant le clavier. Votre scanner de code-barres ou système peut être lent, ou un problème inattendu ou intermittent peut être survenu.</value>

@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Jeśli skanujesz kody kreskowe zawierające dane EDI i napotykasz trudności, spróbuj skonfigurować skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Jeśli skanujesz inne kody kreskowe i napotykasz trudności, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Spróbuj ponownie, upewniając się, że skanujesz właściwy kod kreskowy(-e).</value>
   </data>
@@ -360,6 +363,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane do elektronicznej wymiany danych (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Twój system nie może rozróżniać niektórych normalnych i specjalnych znaków.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test nie powiódł się.</value>
   </data>
@@ -512,6 +518,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Niektóre kody kreskowe mogą zawierać dane EDI.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Te znaki nigdy nie powinny pojawiać się razem w kodzie kreskowym identyfikatora unikalnego.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Możliwe, że zeskanowano niewłaściwy kod kreskowy lub wprowadzono błędne dane za pomocą klawiatury. Twój skaner kodów kreskowych lub system może być wolny lub mogą wystąpić nieoczekiwane lub przerywane problemy.</value>

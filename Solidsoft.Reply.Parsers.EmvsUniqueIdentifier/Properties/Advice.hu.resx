@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Ha EDI adatokat tartalmazó vonalkódokat olvas be, és problémái vannak, próbálja meg konfigurálni a vonalkódolvasót számbillentyűzet emulálására.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Ha más vonalkódokat olvas be és nehézségei vannak, próbálja meg beállítani a vonalkódolvasóját, hogy numerikus billentyűzetként működjön.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Próbálja újra, ügyelve arra, hogy a megfelelő vonalkódot olvassa be.</value>
   </data>
@@ -360,6 +363,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>A rendszered nem tudja megbízhatóan olvasni a vonalkódokat, ha azok elektronikus adatcseréhez (EDI) tartozó adatokat tartalmaznak.</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Rendszere nem tudja megkülönböztetni bizonyos normál és speciális karaktereket.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>A teszt sikertelen volt.</value>
   </data>
@@ -512,6 +518,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Egyes vonalkódok EDI adatokat tartalmazhatnak.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Ezek a karakterek soha nem jelenhetnek meg együtt egy egyedi azonosító vonalkódban.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Előfordulhat, hogy rossz vonalkódot olvasott be vagy hibás adatot vitt be a billentyűzeten. A vonalkódolvasó vagy a rendszer lassú lehet, vagy valamilyen váratlan vagy időszakos probléma merülhetett fel.</value>

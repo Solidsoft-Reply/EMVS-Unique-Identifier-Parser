@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Ako skenirate barkodove koji sadrže EDI podatke i imate poteškoća, pokušajte konfigurirati svoj skener barkoda tako da oponaša numeričku tipkovnicu.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Ako skenirate druge barkodove i imate poteškoća, pokušajte konfigurirati svoj čitač barkoda da emulira numeričku tipkovnicu.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Pokušajte ponovno, pobrinite se da skenirate ispravne barkod(ove).</value>
   </data>
@@ -360,6 +363,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Vaš sustav ne može pouzdano čitati barkodove ako sadrže podatke za Elektroničku Razmjenu Podataka (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Vaš sustav ne može razlikovati određene normalne i posebne znakove.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test je propao.</value>
   </data>
@@ -512,6 +518,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Neki barkodovi mogu sadržavati EDI podatke.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Ovi znakovi nikada ne bi smjeli zajedno pojaviti u jedinstvenom identifikacijskom barkodu.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Možda ste skenirali pogrešan barkod ili unijeli netočne podatke pomoću tipkovnice. Vaš skener barkodova ili sustav može biti spor, ili je mogao nastati neki neočekivani ili povremeni problem.</value>

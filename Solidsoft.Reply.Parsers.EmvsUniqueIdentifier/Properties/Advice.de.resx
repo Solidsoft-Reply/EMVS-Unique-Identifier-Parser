@@ -225,6 +225,9 @@
     <value>Wenn Sie Barcodes scannen, die EDI-Daten enthalten, und Schwierigkeiten haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er ein numerisches Keypad emuliert.</value>
     <comment>High</comment>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Wenn Sie andere Barcodes scannen und auf Schwierigkeiten stoßen, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Versuchen Sie es erneut und stellen Sie sicher, dass Sie den richtigen Barcode(s) scannen.</value>
     <comment>Low</comment>
@@ -440,6 +443,9 @@
     <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie Daten für den elektronischen Datenaustausch (EDI) enthalten.</value>
     <comment>High</comment>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Ihr System kann bestimmte normale und Sonderzeichen nicht unterscheiden.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Der Test ist fehlgeschlagen.</value>
     <comment>Low</comment>
@@ -642,6 +648,9 @@
   <data name="Description_275" xml:space="preserve">
     <value>Einige Barcodes können EDI-Daten enthalten.</value>
     <comment>High</comment>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Diese Zeichen sollten niemals zusammen in einem eindeutigen Identifikationsbarcode erscheinen.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Möglicherweise haben Sie einen falschen Barcode gescannt oder falsche Daten über die Tastatur eingegeben. Ihr Barcode-Scanner oder System kann langsam sein, oder es ist möglicherweise ein unerwartetes oder intermittierendes Problem aufgetreten.</value>

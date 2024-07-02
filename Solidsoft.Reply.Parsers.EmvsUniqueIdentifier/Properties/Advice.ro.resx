@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Dacă scanați coduri de bare care conțin date EDI și întâmpinați dificultăți, încercați să configurați scannerul dvs. de coduri de bare să emuleze o tastatură numerică.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Dacă scanați alte coduri de bare și întâmpinați dificultăți, încercați să configurați scanerul de coduri de bare pentru a emula un tastatură numerică.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Încercați din nou, asigurându-vă că scanați codul/codurile de bare corect(e).</value>
   </data>
@@ -360,6 +363,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Sistemul dvs. nu poate citi fiabil codurile de bare dacă acestea conțin date pentru schimbul electronic de date (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Sistemul dvs. nu poate distinge între anumite caractere normale și speciale.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testul a eșuat.</value>
   </data>
@@ -512,6 +518,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Unele coduri de bare pot conține date EDI.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Aceste caractere nu ar trebui să apară niciodată împreună într-un cod de bare unic de identificare.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Este posibil să fi scanat un cod de bare greșit sau să fi introdus date incorecte folosind tastatura. Scanerul de coduri de bare sau sistemul dvs. poate fi lent sau pot exista probleme neașteptate sau intermitente.</value>

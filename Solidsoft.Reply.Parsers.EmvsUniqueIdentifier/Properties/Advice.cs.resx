@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Pokud skenujete čárové kódy obsahující EDI data a máte potíže, zkuste nakonfigurovat skener čárových kódů tak, aby emuloval numerickou klávesnici.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Pokud skenujete jiné čárové kódy a narazíte na potíže, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Zkuste to znovu a ujistěte se, že skenujete správný čárový kód(y).</value>
   </data>
@@ -360,6 +363,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Váš systém nemůže spolehlivě číst čárové kódy, pokud obsahují data pro elektronickou výměnu dat (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Váš systém nedokáže rozlišit mezi určitými normálními a speciálními znaky.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test selhal.</value>
   </data>
@@ -512,6 +518,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Některé čárové kódy mohou obsahovat data EDI.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Tyto znaky by se nikdy neměly vyskytovat společně v čárovém kódu jedinečného identifikátoru.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Možná jste naskenovali špatný čárový kód nebo jste pomocí klávesnice zadali nesprávná data. Váš skener čárových kódů nebo systém může být pomalý, nebo může nastat neočekávaný nebo přerušovaný problém.</value>

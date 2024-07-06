@@ -364,7 +364,7 @@ public class TextInputControl {
         switch (Visibility) {
             case Visibility.Visible:
                 var insertPos = BufferCursorIndex;
-                var remainder = _input[(insertPos + (_insert ? 0 : 1))..];
+                var remainder = _input.Length > 0 ? _input[(insertPos + (_insert ? 0 : 1))..] : string.Empty;
                 var asciiCtrl = keyChar < 32;
                 Write((asciiCtrl && keyChar != 0 ? "^" + (char)(keyChar + 64) : keyChar == 0 ? string.Empty : keyChar) + remainder);
                 _input = _input[..insertPos] + (asciiCtrl && keyChar != 0 ? IdcEscapeChar + keyChar.ToString() : keyChar == 0 ? IdcNullChar : keyChar.ToString()) + remainder;

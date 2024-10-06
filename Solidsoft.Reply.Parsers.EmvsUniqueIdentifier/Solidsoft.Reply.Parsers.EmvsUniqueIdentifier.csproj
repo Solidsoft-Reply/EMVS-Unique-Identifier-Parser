@@ -16,7 +16,7 @@
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>emvs;medicine;verification;parser;gs1;ppn;</PackageTags>
 	<PackageReleaseNotes>
-		1) Updated to use the latest version of the Calibrator (2.2.10).
+		1) Updated to use the latest version of the Calibrator (2.2.11).
 
 	</PackageReleaseNotes>
 	<Description>

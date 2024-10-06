@@ -267,6 +267,9 @@
   <data name="Nothing" xml:space="preserve">
     <value>nimic</value>
   </data>
+  <data name="Options" xml:space="preserve">
+    <value>OPȚIUNI</value>
+  </data>
   <data name="SaveError" xml:space="preserve">
     <value>Calibrarea nu a fost salvată{0}</value>
   </data>

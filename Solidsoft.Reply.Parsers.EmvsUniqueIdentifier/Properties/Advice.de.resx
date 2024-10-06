@@ -226,7 +226,22 @@
     <comment>High</comment>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Wenn Sie andere Barcodes scannen und auf Schwierigkeiten stoßen, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass eC158:S161r eine numerische Tastatur emuliert.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Wenn Sie Schwierigkeiten beim Scannen von PPN-Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Wenn Sie Schwierigkeiten beim Scannen von PPN-Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Versuchen Sie es erneut und stellen Sie sicher, dass Sie den richtigen Barcode(s) scannen.</value>
@@ -444,7 +459,22 @@
     <comment>High</comment>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Ihr System kann bestimmte normale und Sonderzeichen nicht unterscheiden.</value>
+    <value>Ihr System kann möglicherweise Dateitrennzeichen (ASCII 28) nicht korrekt lesen.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Ihr System kann Dateitrennzeichen (ASCII 28) nicht lesen.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Ihr System kann möglicherweise Einheitentrennzeichen (ASCII 31) nicht korrekt lesen.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Ihr System kann möglicherweise Einheitentrennzeichen (ASCII 31) nicht korrekt lesen.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Ihr System kann möglicherweise Übertragungsendzeichen (ASCII 04) nicht korrekt lesen.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Ihr System kann Übertragungsendzeichen (ASCII 04) nicht lesen.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Der Test ist fehlgeschlagen.</value>
@@ -650,7 +680,22 @@
     <comment>High</comment>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Diese Zeichen sollten niemals zusammen in einem eindeutigen Identifikationsbarcode erscheinen.</value>
+    <value>Diese Zeichen werden sehr wahrscheinlich nicht in eindeutigen Identifikatoren verwendet.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Diese Zeichen werden sehr wahrscheinlich nicht in eindeutigen Identifikatoren verwendet.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Diese Zeichen werden sehr wahrscheinlich nicht in eindeutigen Identifikatoren verwendet.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Diese Zeichen werden sehr wahrscheinlich nicht in eindeutigen Identifikatoren verwendet.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Dieses Zeichen kennzeichnet das Ende der Daten in PPN-Barcodes. Ihre Software kann möglicherweise kein Suffix korrekt lesen, das vom Barcode-Scanner hinzugefügt wurde.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Dieses Zeichen kennzeichnet das Ende der Daten in PPN-Barcodes. Ihre Software kann möglicherweise kein Suffix korrekt lesen, das vom Barcode-Scanner hinzugefügt wurde.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Möglicherweise haben Sie einen falschen Barcode gescannt oder falsche Daten über die Tastatur eingegeben. Ihr Barcode-Scanner oder System kann langsam sein, oder es ist möglicherweise ein unerwartetes oder intermittierendes Problem aufgetreten.</value>

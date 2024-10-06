@@ -199,7 +199,22 @@
     <value>Kui skaneerite vöötkoode, mis sisaldavad EDI andmeid, ja kogete raskusi, proovige seadistada oma vöötkoodiskanner numbrilise klaviatuuri emuleerimiseks.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Kui skannite teisi vöötkoode ja teil tekib raskusi, proovige seadistada oma vöötkoodilugeja numbriklaviatuuri emuleerimiseks.</value>
+    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Kui teil on raskusi PPN vöötkoodide skannimisel, proovige seadistada oma vöötkoodilugeja, et see jäljendaks numbriklaviatuuri.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Kui teil on raskusi PPN vöötkoodide skannimisel, proovige seadistada oma vöötkoodilugeja, et see jäljendaks numbriklaviatuuri.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Proovige uuesti, veendudes, et skaneerite õiget vöötkoodi(de).</value>
@@ -364,7 +379,22 @@
     <value>Teie süsteem ei suuda triipkoode usaldusväärselt lugeda, kui need sisaldavad elektroonilise andmevahetuse (EDI) andmeid.</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Teie süsteem ei suuda eristada teatud tavalisi ja erimärke.</value>
+    <value>Teie süsteem ei pruugi failieraldaja (ASCII 28) märke õigesti lugeda.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Teie süsteem ei saa lugeda failieraldaja (ASCII 28) märke.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Teie süsteem ei pruugi ühikueraldaja (ASCII 31) märke õigesti lugeda.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Teie süsteem ei pruugi ühikueraldaja (ASCII 31) märke õigesti lugeda.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Teie süsteem ei pruugi edastamise lõpu (ASCII 04) märke õigesti lugeda.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Teie süsteem ei saa lugeda edastamise lõpu (ASCII 04) märke.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test nurjus.</value>
@@ -520,7 +550,22 @@
     <value>Mõned vöötkoodid võivad sisaldada EDI andmeid.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Need märgid ei tohiks kunagi koos esineda unikaalse identifikaatori vöötkoodis.</value>
+    <value>On väga ebatõenäoline, et neid märke kasutatakse unikaalsetes identifikaatorites.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>On väga ebatõenäoline, et neid märke kasutatakse unikaalsetes identifikaatorites.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>On väga ebatõenäoline, et neid märke kasutatakse unikaalsetes identifikaatorites.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>On väga ebatõenäoline, et neid märke kasutatakse unikaalsetes identifikaatorites.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>See märk tähistab andmete lõppu PPN vöötkoodides. Teie tarkvara ei pruugi õigesti lugeda vöötkoodilugeja lisatud järelliidet.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>See märk tähistab andmete lõppu PPN vöötkoodides. Teie tarkvara ei pruugi õigesti lugeda vöötkoodilugeja lisatud järelliidet.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Võite olla skaneerinud vale vöötkoodi või sisestanud klaviatuuriga vale andme. Teie vöötkoodiskanner või süsteem võib olla aeglane või võis esineda mõni ootamatu või katkendlik probleem.</value>

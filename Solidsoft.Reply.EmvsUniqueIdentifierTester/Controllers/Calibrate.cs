@@ -236,7 +236,7 @@ public class Calibrate : IController {
             _currentCalibrationToken = token;
 #else
         if (_calibrationTokens != null) {
-            var token = _parser.Calibrator.Calibrate(input, _calibrationTokens.Current);
+            var token = _parser.Calibrator.Calibrate(input, _calibrationTokens.Current, trace: true);
 #endif
 
 #if SHORTCIRCUIT_CALIBRATION

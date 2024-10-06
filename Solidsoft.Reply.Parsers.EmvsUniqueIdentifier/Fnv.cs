@@ -37,12 +37,12 @@ public static class Fnv {
     /// <summary>
     ///   The FNV offset basis.
     /// </summary>
-    private const int OffsetBasis32 = unchecked((int)2166136261);
+    private const int OffsetBasis32 = unchecked((int)2_166_136_261);
 
     /// <summary>
     ///   The FNV prime number.
     /// </summary>
-    private const int Prime32 = 16777619;
+    private const int Prime32 = 16_777_619;
 
     /// <summary>
     ///   Create an FNV-1a hash value based on the hash codes of each data object.

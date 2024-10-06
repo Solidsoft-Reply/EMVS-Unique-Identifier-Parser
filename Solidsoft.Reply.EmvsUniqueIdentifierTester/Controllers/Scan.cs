@@ -304,7 +304,6 @@ public class Scan : IController {
     public Action<string> Activate(params Tuple<string, object>[] properties) {
         _preambleProperties = properties;
         Initialise();
-        ////scanningView.Render();
         return _scanningView.Render;
     }
 

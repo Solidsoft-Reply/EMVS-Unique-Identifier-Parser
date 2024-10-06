@@ -26,7 +26,7 @@ using BarcodeScanner.Calibration.DataMatrix;
 /// Unit tests for the Keyboard Calibrator - stateless iteration of tokens.
 /// </summary>
 public class KeyboardCalibratorTestsStateless {
-    private const string UnitedStatesBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \x001D    \x001C    \0    \0    \x000D";
+    private const string UnitedStatesBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string UnitedStatesBarcode1 = "010477298543159410DdVcX<t\x001D1723020721yCH*4'h1Ab\x000D";
     private const string UnitedStatesBarcode2 = "010477298543159410.GRs!qO\x001D1723072921TgIv?,6BmK\x000D";
     private const string UnitedStatesBarcode3 = "010477298543159410(fpNxYi\x001D1723040521Z&Ur7>0oQS\x000D";
@@ -40,7 +40,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string UnitedStatesBarcode11 = "010477298543159410&ZJMaz/\x001D1723112621\"j:AugCzJt\x000D";
     private const string UnitedStatesBarcode12 = "0104772985431594102;5wEY-\x001D1723040421HIrQ9QeTyQ\x000D";
 
-    private const string BelgianFrenchBaseline = "  1 % 5 7 ù 9 0 8 _ ; ) : = à & é \" ' ( § è ! ç M m . - / + Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 \0^µ $ 6 ² \0¨£ * ³    \x001D    \x001C    \0    \0    \x000D";
+    private const string BelgianFrenchBaseline = "  1 % 5 7 ù 9 0 8 _ ; ) : = à & é \" ' ( § è ! ç M m . - / + Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 \0^µ $ 6 ² \0¨£ * ³    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string BelgianFrenchDeadKey1 = "\0^1\0^%\0^3\0^4\0^5\0^7\0^ù\0^9\0^0\0^8\0^_\0^;\0^)\0^:\0^=\0^à\0^&\0^é\0^\"\0^'\0^(\0^§\0^è\0^!\0^ç\0^M\0^m\0^.\0^-\0^/\0^+\0^2\0^Q\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^?\0^N\0Ô\0^P\0Â\0^R\0^S\0^T\0Û\0^V\0^Z\0^X\0^Y\0^W\0^^\0^µ\0^$\0^6\0^°\0^²\0^q\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^,\0^n\0ô\0^p\0â\0^r\0^s\0^t\0û\0^v\0^z\0^x\0^y\0^w\0^¨\0^£\0^*\0^³\x000D";
     private const string BelgianFrenchDeadKey2 = "\0¨1\0¨%\0¨3\0¨4\0¨5\0¨7\0¨ù\0¨9\0¨0\0¨8\0¨_\0¨;\0¨)\0¨:\0¨=\0¨à\0¨&\0¨é\0¨\"\0¨'\0¨(\0¨§\0¨è\0¨!\0¨ç\0¨M\0¨m\0¨.\0¨-\0¨/\0¨+\0¨2\0¨Q\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨?\0¨N\0Ö\0¨P\0Ä\0¨R\0¨S\0¨T\0Ü\0¨V\0¨Z\0¨X\0¨Y\0¨W\0¨^\0¨µ\0¨$\0¨6\0¨°\0¨²\0¨q\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨,\0¨n\0ö\0¨p\0ä\0¨r\0¨s\0¨t\0ü\0¨v\0¨z\0¨x\0ÿ\0¨w\0¨¨\0¨£\0¨*\0¨³\x000D";
     private const string BelgianFrenchBarcode1 = "à&à'èèéç!('\"&(ç'&àDdVcX.t\x001D&èé\"àéàèé&yCH8'ùh&Qb\x000D";
@@ -55,7 +55,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string BelgianFrenchBarcode10 = "à&à'èèéç!('\"&(ç'&àAoà/èrU\x001D&èé'àèà\"é&0Zuk\"P_e5%\x000D";
     private const string BelgianFrenchBarcode11 = "à&à'èèéç!('\"&(ç'&à7WJ?qw=\x001D&èé\"&&é§é&%jMQugCwJt\x000D";
     private const string BelgianFrenchBarcode12 = "à&à'èèéç!('\"&(ç'&àém(zEY)\x001D&èé\"à'à'é&HIrAçAeTyA\x000D";
-    private const string BelgianCommaBaseline = "  1 % 5 7 ù 9 0 8 _ ; ) : = à & é \" ' ( § è ! ç M m . - / + Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 \0^µ $ 6 ² \0¨£ * ³    \x001D    \x001C    \0    \0    \x000D";
+    private const string BelgianCommaBaseline = "  1 % 5 7 ù 9 0 8 _ ; ) : = à & é \" ' ( § è ! ç M m . - / + Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 \0^µ $ 6 ² \0¨£ * ³    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string BelgianCommaDeadKey1 = "\0^1\0^%\0^3\0^4\0^5\0^7\0^ù\0^9\0^0\0^8\0^_\0^;\0^)\0^:\0^=\0^à\0^&\0^é\0^\"\0^'\0^(\0^§\0^è\0^!\0^ç\0^M\0^m\0^.\0^-\0^/\0^+\0^2\0^Q\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^?\0^N\0Ô\0^P\0Â\0^R\0^S\0^T\0Û\0^V\0^Z\0^X\0^Y\0^W\0^^\0^µ\0^$\0^6\0^°\0^²\0^q\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^,\0^n\0ô\0^p\0â\0^r\0^s\0^t\0û\0^v\0^z\0^x\0^y\0^w\0^¨\0^£\0^*\0^³\x000D";
     private const string BelgianCommaDeadKey2 = "\0¨1\0¨%\0¨3\0¨4\0¨5\0¨7\0¨ù\0¨9\0¨0\0¨8\0¨_\0¨;\0¨)\0¨:\0¨=\0¨à\0¨&\0¨é\0¨\"\0¨'\0¨(\0¨§\0¨è\0¨!\0¨ç\0¨M\0¨m\0¨.\0¨-\0¨/\0¨+\0¨2\0¨Q\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨?\0¨N\0Ö\0¨P\0Ä\0¨R\0¨S\0¨T\0Ü\0¨V\0¨Z\0¨X\0¨Y\0¨W\0¨^\0¨µ\0¨$\0¨6\0¨°\0¨²\0¨q\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨,\0¨n\0ö\0¨p\0ä\0¨r\0¨s\0¨t\0ü\0¨v\0¨z\0¨x\0ÿ\0¨w\0¨¨\0¨£\0¨*\0¨³\x000D";
     private const string BelgianCommaBarcode1 = "à&à'èèéç!('\"&(ç'&àDdVcX.t\x001D&èé\"àéàèé&yCH8'ùh&Qb\x000D";
@@ -70,7 +70,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string BelgianCommaBarcode10 = "à&à'èèéç!('\"&(ç'&àAoà/èrU\x001D&èé'àèà\"é&0Zuk\"P_e5%\x000D";
     private const string BelgianCommaBarcode11 = "à&à'èèéç!('\"&(ç'&à7WJ?qw=\x001D&èé\"&&é§é&%jMQugCwJt\x000D";
     private const string BelgianCommaBarcode12 = "à&à'èèéç!('\"&(ç'&àém(zEY)\x001D&èé\"à'à'é&HIrAçAeTyA\x000D";
-    private const string BelgianPeriodBaseline = "  1 % 5 7 ù 9 0 8 _ ; ) : = à & é \" ' ( § è ! ç M m . - / + Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 \0^µ $ 6 ² \0¨£ * ³    \x001D    \x001C    \0    \0    \x000D";
+    private const string BelgianPeriodBaseline = "  1 % 5 7 ù 9 0 8 _ ; ) : = à & é \" ' ( § è ! ç M m . - / + Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 \0^µ $ 6 ² \0¨£ * ³    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string BelgianPeriodDeadKey1 = "\0^1\0^%\0^3\0^4\0^5\0^7\0^ù\0^9\0^0\0^8\0^_\0^;\0^)\0^:\0^=\0^à\0^&\0^é\0^\"\0^'\0^(\0^§\0^è\0^!\0^ç\0^M\0^m\0^.\0^-\0^/\0^+\0^2\0^Q\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^?\0^N\0Ô\0^P\0Â\0^R\0^S\0^T\0Û\0^V\0^Z\0^X\0^Y\0^W\0^^\0^µ\0^$\0^6\0^°\0^²\0^q\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^,\0^n\0ô\0^p\0â\0^r\0^s\0^t\0û\0^v\0^z\0^x\0^y\0^w\0^¨\0^£\0^*\0^³\x000D";
     private const string BelgianPeriodDeadKey2 = "\0¨1\0¨%\0¨3\0¨4\0¨5\0¨7\0¨ù\0¨9\0¨0\0¨8\0¨_\0¨;\0¨)\0¨:\0¨=\0¨à\0¨&\0¨é\0¨\"\0¨'\0¨(\0¨§\0¨è\0¨!\0¨ç\0¨M\0¨m\0¨.\0¨-\0¨/\0¨+\0¨2\0¨Q\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨?\0¨N\0Ö\0¨P\0Ä\0¨R\0¨S\0¨T\0Ü\0¨V\0¨Z\0¨X\0¨Y\0¨W\0¨^\0¨µ\0¨$\0¨6\0¨°\0¨²\0¨q\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨,\0¨n\0ö\0¨p\0ä\0¨r\0¨s\0¨t\0ü\0¨v\0¨z\0¨x\0ÿ\0¨w\0¨¨\0¨£\0¨*\0¨³\x000D";
     private const string BelgianPeriodBarcode1 = "à&à'èèéç!('\"&(ç'&àDdVcX.t\x001D&èé\"àéàèé&yCH8'ùh&Qb\x000D";
@@ -85,7 +85,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string BelgianPeriodBarcode10 = "à&à'èèéç!('\"&(ç'&àAoà/èrU\x001D&èé'àèà\"é&0Zuk\"P_e5%\x000D";
     private const string BelgianPeriodBarcode11 = "à&à'èèéç!('\"&(ç'&à7WJ?qw=\x001D&èé\"&&é§é&%jMQugCwJt\x000D";
     private const string BelgianPeriodBarcode12 = "à&à'èèéç!('\"&(ç'&àém(zEY)\x001D&èé\"à'à'é&HIrAçAeTyA\x000D";
-    private const string FrenchBaseline = "  1 % 5 7 ù 9 0 8 + ; ) : ! à & é \" ' ( - è _ ç M m . = / § Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 \0^* $ 6 ² \0¨µ £ \0    \x001D    \x001C    \0    \0    \x000D";
+    private const string FrenchBaseline = "  1 % 5 7 ù 9 0 8 + ; ) : ! à & é \" ' ( - è _ ç M m . = / § Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 \0^* $ 6 ² \0¨µ £ \0    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string FrenchDeadKey1 = "\0^1\0^%\0^3\0^4\0^5\0^7\0^ù\0^9\0^0\0^8\0^+\0^;\0^)\0^:\0^!\0^à\0^&\0^é\0^\"\0^'\0^(\0^-\0^è\0^_\0^ç\0^M\0^m\0^.\0^=\0^/\0^§\0^2\0^Q\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^?\0^N\0Ô\0^P\0Â\0^R\0^S\0^T\0Û\0^V\0^Z\0^X\0^Y\0^W\0^^\0^*\0^$\0^6\0^°\0^²\0^q\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^,\0^n\0ô\0^p\0â\0^r\0^s\0^t\0û\0^v\0^z\0^x\0^y\0^w\0^¨\0^µ\0^£\0\0^";
     private const string FrenchDeadKey2 = "\0¨1\0¨%\0¨3\0¨4\0¨5\0¨7\0¨ù\0¨9\0¨0\0¨8\0¨+\0¨;\0¨)\0¨:\0¨!\0¨à\0¨&\0¨é\0¨\"\0¨'\0¨(\0¨-\0¨è\0¨_\0¨ç\0¨M\0¨m\0¨.\0¨=\0¨/\0¨§\0¨2\0¨Q\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨?\0¨N\0Ö\0¨P\0Ä\0¨R\0¨S\0¨T\0Ü\0¨V\0¨Z\0¨X\0¨Y\0¨W\0¨^\0¨*\0¨$\0¨6\0¨°\0¨²\0¨q\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨,\0¨n\0ö\0¨p\0ä\0¨r\0¨s\0¨t\0ü\0¨v\0¨z\0¨x\0ÿ\0¨w\0¨¨\0¨µ\0¨£\0\0¨";
     private const string FrenchBarcode1 = "à&à'èèéç_('\"&(ç'&àDdVcX.t\x001D&èé\"àéàèé&yCH8'ùh&Qb\x000D";
@@ -100,7 +100,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string FrenchBarcode10 = "à&à'èèéç_('\"&(ç'&àAoà/èrU\x001D&èé'àèà\"é&0Zuk\"P+e5%\x000D";
     private const string FrenchBarcode11 = "à&à'èèéç_('\"&(ç'&à7WJ?qw!\x001D&èé\"&&é-é&%jMQugCwJt\x000D";
     private const string FrenchBarcode12 = "à&à'èèéç_('\"&(ç'&àém(zEY)\x001D&èé\"à'à'é&HIrAçAeTyA\x000D";
-    private const string SwissFrenchBaseline = "  + ä % / à ) = ( \0`, ' . - 0 1 2 3 4 5 6 7 8 9 ö é ; \0^: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   * ç \" è $ \0\"& § ü £ ! °    \x001D    \x001C    \0    \0    \x000D";
+    private const string SwissFrenchBaseline = "  + ä % / à ) = ( \0`, ' . - 0 1 2 3 4 5 6 7 8 9 ö é ; \0^: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   * ç \" è $ \0\"& § ü £ ! °    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string SwissFrenchDeadKey1 = "\0`+\0`ä\0`*\0`ç\0`%\0`/\0`à\0`)\0`=\0`(\0``\0`,\0`'\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`ö\0`é\0`;\0`^\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Z\0`Y\0`è\0`$\0`¨\0`&\0`?\0`§\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`z\0`y\0`ü\0`£\0`!\0`°\x000D";
     private const string SwissFrenchDeadKey2 = "\0^+\0^ä\0^*\0^ç\0^%\0^/\0^à\0^)\0^=\0^(\0^`\0^,\0^'\0^.\0^-\0^0\0^1\0^2\0^3\0^4\0^5\0^6\0^7\0^8\0^9\0^ö\0^é\0^;\0^^\0^:\0^_\0^\"\0Â\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^M\0^N\0Ô\0^P\0^Q\0^R\0^S\0^T\0Û\0^V\0^W\0^X\0^Z\0^Y\0^è\0^$\0^¨\0^&\0^?\0^§\0â\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^m\0^n\0ô\0^p\0^q\0^r\0^s\0^t\0û\0^v\0^w\0^x\0^z\0^y\0^ü\0^£\0^!\0^°\x000D";
     private const string SwissFrenchDeadKey3 = "\0¨+\0¨ä\0¨*\0¨ç\0¨%\0¨/\0¨à\0¨)\0¨=\0¨(\0¨`\0¨,\0¨'\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨ö\0¨é\0¨;\0¨^\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0¨Z\0¨Y\0¨è\0¨$\0¨¨\0¨&\0¨?\0¨§\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0¨z\0ÿ\0¨ü\0¨£\0¨!\0¨°\x000D";
@@ -116,7 +116,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string SwissFrenchBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P\0è%ä\x000D";
     private const string SwissFrenchBarcode11 = "010477298543159410/YJMay-\x001D1723112621äjöAugCyJt\x000D";
     private const string SwissFrenchBarcode12 = "0104772985431594102é5wEZ'\x001D1723040421HIrQ9QeTzQ\x000D";
-    private const string CroatianStandardBaseline = "  ! Ć % / ć ) = ( * , ' . - 0 1 2 3 4 5 6 7 8 9 Č č ; + : _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   # $ \" š ž đ & \0¸Š Ž Đ \0¨   \x001B    \x001C    \0    \0    \x000D";
+    private const string CroatianStandardBaseline = "  ! Ć % / ć ) = ( * , ' . - 0 1 2 3 4 5 6 7 8 9 Č č ; + : _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   # $ \" š ž đ & \0¸Š Ž Đ \0¨   \x001B    \x001C    \0    \0    \0    \x000D";
     private const string CroatianStandardDeadKey1 = "\0¸!\0¸Ć\0¸#\0¸$\0¸%\0¸/\0¸ć\0¸)\0¸=\0¸(\0¸*\0¸,\0¸'\0¸.\0¸-\0¸0\0¸1\0¸2\0¸3\0¸4\0¸5\0¸6\0¸7\0¸8\0¸9\0¸Č\0¸č\0¸;\0¸+\0¸:\0¸_\0¸\"\0¸A\0¸B\0Ç\0¸D\0¸E\0¸F\0¸G\0¸H\0¸I\0¸J\0¸K\0¸L\0¸M\0¸N\0¸O\0¸P\0¸Q\0¸R\0Ş\0¸T\0¸U\0¸V\0¸W\0¸X\0¸Z\0¸Y\0¸š\0¸ž\0¸đ\0¸&\0¸?\0¸¸\0¸a\0¸b\0ç\0¸d\0¸e\0¸f\0¸g\0¸h\0¸i\0¸j\0¸k\0¸l\0¸m\0¸n\0¸o\0¸p\0¸q\0¸r\0ş\0¸t\0¸u\0¸v\0¸w\0¸x\0¸z\0¸y\0¸Š\0¸Ž\0¸Đ\0¸¨\x000D";
     private const string CroatianStandardDeadKey2 = "\0¨!\0¨Ć\0¨#\0¨$\0¨%\0¨/\0¨ć\0¨)\0¨=\0¨(\0¨*\0¨,\0¨'\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨Č\0¨č\0¨;\0¨+\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0¨I\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0¨Z\0¨Y\0¨š\0¨ž\0¨đ\0¨&\0¨?\0¨¸\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0¨i\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0¨z\0¨y\0¨Š\0¨Ž\0¨Đ\0¨¨\x000D";
     private const string CroatianStandardBarcode1 = "010477298543159410DdVcX;t\x001B1723020721zCH(4ćh1Ab\x000D";
@@ -131,7 +131,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string CroatianStandardBarcode10 = "010477298543159410Qo0:7rU\x001B1724070321=Wuk3P*e%Ć\x000D";
     private const string CroatianStandardBarcode11 = "010477298543159410/YJMay-\x001B1723112621ĆjČAugCyJt\x000D";
     private const string CroatianStandardBarcode12 = "0104772985431594102č5wEZ'\x001B1723040421HIrQ9QeTzQ\x000D";
-    private const string BulgarianBaseline = "  ! Ч % : ч – № / € р - л б 0 1 2 3 4 5 6 7 8 9 М м Р . Л Б ѝ Ф Ъ А Е О Ж Г С Т Н В П Х Д З ы И Я Ш К Э У Й Щ Ю $ ь ф ъ а е о ж г с т н в п х д з , и я ш к э у й щ ю   + \" ? ц „ ; = ( Ц “ § )    \0    \0    \0    \0    \x000D";
+    private const string BulgarianBaseline = "  ! Ч % : ч – № / € р - л б 0 1 2 3 4 5 6 7 8 9 М м Р . Л Б ѝ Ф Ъ А Е О Ж Г С Т Н В П Х Д З ы И Я Ш К Э У Й Щ Ю $ ь ф ъ а е о ж г с т н в п х д з , и я ш к э у й щ ю   + \" ? ц „ ; = ( Ц “ § )    \0    \0    \0    \0    \0    \x000D";
     private const string BulgarianBarcode1 = "010477298543159410АаЭъЙРш\01723020721щЪГ/4чг1ѝф\x000D";
     private const string BulgarianBarcode2 = "010477298543159410лЖИя!,Д\01723072921ШжСэБр6ФпН\x000D";
     private const string BulgarianBarcode3 = "010477298543159410–озХйЩс\01723040521Ю:Ки7Л0дыЯ\x000D";
@@ -144,7 +144,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string BulgarianBarcode10 = "010477298543159410ыд0Л7иК\01724070321№Укн3З€е%Ч\x000D";
     private const string BulgarianBarcode11 = "010477298543159410:ЮТПьюб\01723112621ЧтМѝкжЪюТш\x000D";
     private const string BulgarianBarcode12 = "0104772985431594102м5уЕЩ-\01723040421ГСиы9ыеШщы\x000D";
-    private const string BulgarianLatinBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \x001D    \x001C    \0    \0    \x000D";
+    private const string BulgarianLatinBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string BulgarianLatinBarcode1 = "010477298543159410DdVcX<t\x001D1723020721yCH*4'h1Ab\x000D";
     private const string BulgarianLatinBarcode2 = "010477298543159410.GRs!qO\x001D1723072921TgIv?,6BmK\x000D";
     private const string BulgarianLatinBarcode3 = "010477298543159410(fpNxYi\x001D1723040521Z&Ur7>0oQS\x000D";
@@ -157,7 +157,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string BulgarianLatinBarcode10 = "010477298543159410Qo0>7rU\x001D1724070321)Wuk3P+e%\"\x000D";
     private const string BulgarianLatinBarcode11 = "010477298543159410&ZJMaz/\x001D1723112621\"j:AugCzJt\x000D";
     private const string BulgarianLatinBarcode12 = "0104772985431594102;5wEY-\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string BulgarianPhoneticTraditionalBaseline = "  ! \" % § ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? А Б Ц Д Е Ф Г Х И Й К Л М Н О П Я Р С Т У Ж В ѝ Ъ З _ а б ц д е ф г х и й к л м н о п я р с т у ж в ь ъ з   № $ @ ш ю щ € ч Ш Ю Щ Ч    \0    \0    \0    \0    \x000D";
+    private const string BulgarianPhoneticTraditionalBaseline = "  ! \" % § ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? А Б Ц Д Е Ф Г Х И Й К Л М Н О П Я Р С Т У Ж В ѝ Ъ З _ а б ц д е ф г х и й к л м н о п я р с т у ж в ь ъ з   № $ @ ш ю щ € ч Ш Ю Щ Ч    \0    \0    \0    \0    \0    \x000D";
     private const string BulgarianPhoneticTraditionalBarcode1 = "010477298543159410ДдЖцѝ<т\01723020721ъЦХ*4'х1Аб\x000D";
     private const string BulgarianPhoneticTraditionalBarcode2 = "010477298543159410.ГРс!яО\01723072921ТгИж?,6БмК\x000D";
     private const string BulgarianPhoneticTraditionalBarcode3 = "010477298543159410(фпНьЪи\01723040521З§Ур7>0оЯС\x000D";
@@ -170,7 +170,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string BulgarianPhoneticTraditionalBarcode10 = "010477298543159410Яо0>7рУ\01724070321)Вук3П+е%\"\x000D";
     private const string BulgarianPhoneticTraditionalBarcode11 = "010477298543159410§ЗЙМаз/\01723112621\"й:АугЦзЙт\x000D";
     private const string BulgarianPhoneticTraditionalBarcode12 = "0104772985431594102;5вЕЪ-\01723040421ХИрЯ9ЯеТъЯ\x000D";
-    private const string BulgarianPhoneticBaseline = "  ! \" % § ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; „ = “ ? А Б Ц Д Е Ф Г Х И Й К Л М Н О П Ч Р С Т У В Ш Ж Ъ З – а б ц д е ф г х и й к л м н о п ч р с т у в ш ж ъ з   № $ @ я ь щ € ю Я ѝ Щ Ю    \0    \0    \0    \0    \x000D";
+    private const string BulgarianPhoneticBaseline = "  ! \" % § ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; „ = “ ? А Б Ц Д Е Ф Г Х И Й К Л М Н О П Ч Р С Т У В Ш Ж Ъ З – а б ц д е ф г х и й к л м н о п ч р с т у в ш ж ъ з   № $ @ я ь щ € ю Я ѝ Щ Ю    \0    \0    \0    \0    \0    \x000D";
     private const string BulgarianPhoneticBarcode1 = "010477298543159410ДдВцЖ„т\01723020721ъЦХ*4'х1Аб\x000D";
     private const string BulgarianPhoneticBarcode2 = "010477298543159410.ГРс!чО\01723072921ТгИв?,6БмК\x000D";
     private const string BulgarianPhoneticBarcode3 = "010477298543159410(фпНжЪи\01723040521З§Ур7“0оЧС\x000D";
@@ -183,7 +183,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string BulgarianPhoneticBarcode10 = "010477298543159410Чо0“7рУ\01724070321)Шук3П+е%\"\x000D";
     private const string BulgarianPhoneticBarcode11 = "010477298543159410§ЗЙМаз/\01723112621\"й:АугЦзЙт\x000D";
     private const string BulgarianPhoneticBarcode12 = "0104772985431594102;5шЕЪ-\01723040421ХИрЧ9ЧеТъЧ\x000D";
-    private const string BulgarianTypewriterBaseline = "  ! Ч % : ч _ № / V р - л б 0 1 2 3 4 5 6 7 8 9 М м Р . Л Б Ь Ф Ъ А Е О Ж Г С Т Н В П Х Д З ы И Я Ш К Э У Й Щ Ю І ь ф ъ а е о ж г с т н в п х д з , и я ш к э у й щ ю   + \" ? ц ( ; = ` Ц ) § ~    \x001D    \x001C    \0    \0    \x000D";
+    private const string BulgarianTypewriterBaseline = "  ! Ч % : ч _ № / V р - л б 0 1 2 3 4 5 6 7 8 9 М м Р . Л Б Ь Ф Ъ А Е О Ж Г С Т Н В П Х Д З ы И Я Ш К Э У Й Щ Ю І ь ф ъ а е о ж г с т н в п х д з , и я ш к э у й щ ю   + \" ? ц ( ; = ` Ц ) § ~    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string BulgarianTypewriterBarcode1 = "010477298543159410АаЭъЙРш\x001D1723020721щЪГ/4чг1Ьф\x000D";
     private const string BulgarianTypewriterBarcode2 = "010477298543159410лЖИя!,Д\x001D1723072921ШжСэБр6ФпН\x000D";
     private const string BulgarianTypewriterBarcode3 = "010477298543159410_озХйЩс\x001D1723040521Ю:Ки7Л0дыЯ\x000D";
@@ -196,7 +196,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string BulgarianTypewriterBarcode10 = "010477298543159410ыд0Л7иК\x001D1724070321№Укн3ЗVе%Ч\x000D";
     private const string BulgarianTypewriterBarcode11 = "010477298543159410:ЮТПьюб\x001D1723112621ЧтМЬкжЪюТш\x000D";
     private const string BulgarianTypewriterBarcode12 = "0104772985431594102м5уЕЩ-\x001D1723040421ГСиы9ыеШщы\x000D";
-    private const string SwedishBaseline = "  ! Ä % / ä ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& § Å * \0^½    \x001D    \0    \0    \0    \x000D";
+    private const string SwedishBaseline = "  ! Ä % / ä ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& § Å * \0^½    \x001D    \0    \0    \0    \0    \x000D";
     private const string SwedishDeadKey1 = "\0`!\0`Ä\0`#\0`¤\0`%\0`/\0`ä\0`)\0`=\0`(\0``\0`,\0`+\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ö\0`ö\0`;\0`´\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Y\0`Z\0`å\0`'\0`¨\0`&\0`?\0`§\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`y\0`z\0`Å\0`*\0`^\0`½\x000D";
     private const string SwedishDeadKey2 = "\0´!\0´Ä\0´#\0´¤\0´%\0´/\0´ä\0´)\0´=\0´(\0´`\0´,\0´+\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ö\0´ö\0´;\0´´\0´:\0´_\0´\"\0Á\0´B\0´C\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0´L\0´M\0´N\0Ó\0´P\0´Q\0´R\0´S\0´T\0Ú\0´V\0´W\0´X\0Ý\0´Z\0´å\0´'\0´¨\0´&\0´?\0´§\0á\0´b\0´c\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0´l\0´m\0´n\0ó\0´p\0´q\0´r\0´s\0´t\0ú\0´v\0´w\0´x\0ý\0´z\0´Å\0´*\0´^\0´½\x000D";
     private const string SwedishDeadKey3 = "\0¨!\0¨Ä\0¨#\0¨¤\0¨%\0¨/\0¨ä\0¨)\0¨=\0¨(\0¨`\0¨,\0¨+\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨Ö\0¨ö\0¨;\0¨´\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0¨Y\0¨Z\0¨å\0¨'\0¨¨\0¨&\0¨?\0¨§\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0ÿ\0¨z\0¨Å\0¨*\0¨^\0¨½\x000D";
@@ -213,7 +213,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string SwedishBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P\0è%Ä\x000D";
     private const string SwedishBarcode11 = "010477298543159410/ZJMaz-\x001D1723112621ÄjÖAugCzJt\x000D";
     private const string SwedishBarcode12 = "0104772985431594102ö5wEY+\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string SwedishWithSamiBaseline = "  ! Ä % / ä ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& § Å * \0^½    \0    \0    \0    \0    \x000D";
+    private const string SwedishWithSamiBaseline = "  ! Ä % / ä ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& § Å * \0^½    \0    \0    \0    \0    \0    \x000D";
     private const string SwedishWithSamiDeadKey1 = "\0`!\0`Ä\0`#\0`¤\0`%\0`/\0`ä\0`)\0`=\0`(\0``\0`,\0`+\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ö\0`ö\0`;\0`´\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0Ẁ\0`X\0Ỳ\0`Z\0`å\0`'\0`¨\0`&\0`?\0`§\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0ẁ\0`x\0ỳ\0`z\0`Å\0`*\0`^\0`½\x000D";
     private const string SwedishWithSamiDeadKey2 = "\0´!\0´Ä\0´#\0´¤\0´%\0´/\0´ä\0´)\0´=\0´(\0´`\0´,\0´+\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ö\0´ö\0´;\0´´\0´:\0´_\0´\"\0Á\0´B\0Ć\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0Ĺ\0´M\0Ń\0Ó\0´P\0´Q\0Ŕ\0Ś\0´T\0Ú\0´V\0Ẃ\0´X\0Ý\0Ź\0ǻ\0´'\0´¨\0´&\0´?\0´§\0á\0´b\0ć\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0ĺ\0´m\0ń\0ó\0´p\0´q\0ŕ\0ś\0´t\0ú\0´v\0ẃ\0´x\0ý\0ź\0Ǻ\0´*\0´^\0´½\x000D";
     private const string SwedishWithSamiDeadKey3 = "\0¨!\0¨Ä\0¨#\0¨¤\0¨%\0¨/\0¨ä\0¨)\0¨=\0¨(\0¨`\0¨,\0¨+\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨Ö\0¨ö\0¨;\0¨´\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0Ẅ\0¨X\0Ÿ\0¨Z\0¨å\0¨'\0¨¨\0¨&\0¨?\0¨§\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0ẅ\0¨x\0ÿ\0¨z\0¨Å\0¨*\0¨^\0¨½\x000D";
@@ -230,7 +230,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string SwedishWithSamiBarcode10 = "010477298543159410Qo0:7rU\01724070321=Wuk3P\0è%Ä\x000D";
     private const string SwedishWithSamiBarcode11 = "010477298543159410/ZJMaz-\01723112621ÄjÖAugCzJt\x000D";
     private const string SwedishWithSamiBarcode12 = "0104772985431594102ö5wEY+\01723040421HIrQ9QeTyQ\x000D";
-    private const string GreekBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 \0¨\0΄< = > ? Α Β Ψ Δ Ε Φ Γ Η Ι Ξ Κ Λ Μ Ν Ο Π : Ρ Σ Τ Θ Ω \0΅Χ Υ Ζ _ α β ψ δ ε φ γ η ι ξ κ λ μ ν ο π ; ρ σ τ θ ω ς χ υ ζ   # $ @ [ \\ ] ^ ` { | } ~    \x001D    \x001C    \0    \0    \x000D";
+    private const string GreekBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 \0¨\0΄< = > ? Α Β Ψ Δ Ε Φ Γ Η Ι Ξ Κ Λ Μ Ν Ο Π : Ρ Σ Τ Θ Ω \0΅Χ Υ Ζ _ α β ψ δ ε φ γ η ι ξ κ λ μ ν ο π ; ρ σ τ θ ω ς χ υ ζ   # $ @ [ \\ ] ^ ` { | } ~    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string GreekDeadKey1 = "\0¨!\0¨\"\0¨#\0¨$\0¨%\0¨&\0¨'\0¨(\0¨)\0¨*\0¨+\0¨,\0¨-\0¨.\0¨/\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨¨\0¨΄\0¨<\0¨=\0¨>\0¨?\0¨@\0¨Α\0¨Β\0¨Ψ\0¨Δ\0¨Ε\0¨Φ\0¨Γ\0¨Η\0Ϊ\0¨Ξ\0¨Κ\0¨Λ\0¨Μ\0¨Ν\0¨Ο\0¨Π\0¨:\0¨Ρ\0¨Σ\0¨Τ\0¨Θ\0¨Ω\0¨΅\0¨Χ\0Ϋ\0¨Ζ\0¨[\0¨\\\0¨]\0¨^\0¨_\0¨`\0¨α\0¨β\0¨ψ\0¨δ\0¨ε\0¨φ\0¨γ\0¨η\0ϊ\0¨ξ\0¨κ\0¨λ\0¨μ\0¨ν\0¨ο\0¨π\0¨;\0¨ρ\0¨σ\0¨τ\0¨θ\0¨ω\0¨ς\0¨χ\0ϋ\0¨ζ\0¨{\0¨|\0¨}\0¨~\x000D";
     private const string GreekDeadKey2 = "\0΄!\0΄\"\0΄#\0΄$\0΄%\0΄&\0΄'\0΄(\0΄)\0΄*\0΄+\0΄,\0΄-\0΄.\0΄/\0΄0\0΄1\0΄2\0΄3\0΄4\0΄5\0΄6\0΄7\0΄8\0΄9\0΄¨\0΄΄\0΄<\0΄=\0΄>\0΄?\0΄@\0Ά\0΄Β\0΄Ψ\0΄Δ\0Έ\0΄Φ\0΄Γ\0Ή\0Ί\0΄Ξ\0΄Κ\0΄Λ\0΄Μ\0΄Ν\0Ό\0΄Π\0΄:\0΄Ρ\0΄Σ\0΄Τ\0΄Θ\0Ώ\0΄΅\0΄Χ\0Ύ\0΄Ζ\0΄[\0΄\\\0΄]\0΄^\0΄_\0΄`\0ά\0΄β\0΄ψ\0΄δ\0έ\0΄φ\0΄γ\0ή\0ί\0΄ξ\0΄κ\0΄λ\0΄μ\0΄ν\0ό\0΄π\0΄;\0΄ρ\0΄σ\0΄τ\0΄θ\0ώ\0΄ς\0΄χ\0ύ\0΄ζ\0΄{\0΄|\0΄}\0΄~\x000D";
     private const string GreekDeadKey3 = "\0΅!\0΅\"\0΅#\0΅$\0΅%\0΅&\0΅'\0΅(\0΅)\0΅*\0΅+\0΅,\0΅-\0΅.\0΅/\0΅0\0΅1\0΅2\0΅3\0΅4\0΅5\0΅6\0΅7\0΅8\0΅9\0΅¨\0΅΄\0΅<\0΅=\0΅>\0΅?\0΅@\0΅Α\0΅Β\0΅Ψ\0΅Δ\0΅Ε\0΅Φ\0΅Γ\0΅Η\0΅Ι\0΅Ξ\0΅Κ\0΅Λ\0΅Μ\0΅Ν\0΅Ο\0΅Π\0΅:\0΅Ρ\0΅Σ\0΅Τ\0΅Θ\0΅Ω\0΅΅\0΅Χ\0΅Υ\0΅Ζ\0΅[\0΅\\\0΅]\0΅^\0΅_\0΅`\0΅α\0΅β\0΅ψ\0΅δ\0΅ε\0΅φ\0΅γ\0΅η\0ΐ\0΅ξ\0΅κ\0΅λ\0΅μ\0΅ν\0΅ο\0΅π\0΅;\0΅ρ\0΅σ\0΅τ\0΅θ\0΅ω\0΅ς\0΅χ\0ΰ\0΅ζ\0΅{\0΅|\0΅}\0΅~\x000D";
@@ -246,8 +246,8 @@ public class KeyboardCalibratorTestsStateless {
     private const string GreekBarcode10 = "010477298543159410:ο0>7ρΘ\x001D1724070321)\0΅θκ3Π+ε%\"\x000D";
     private const string GreekBarcode11 = "010477298543159410&ΖΞΜαζ/\x001D1723112621\"ξ\0¨ΑθγΨζΞτ\x000D";
     private const string GreekBarcode12 = "0104772985431594102\0΄5ςΕΥ-\x001D1723040421ΗΙρ:9:εΤυ:\x000D";
-    private const string Greek220Baseline = "  ! \0΅% / \0¨) = ( [ , ' . - 0 1 2 3 4 5 6 7 8 9 \0¨\0΄; ] : _ Α Β Ψ Δ Ε Φ Γ Η Ι Ξ Κ Λ Μ Ν Ο Π : Ρ Σ Τ Θ Ω ~ Χ Υ Ζ ? α β ψ δ ε φ γ η ι ξ κ λ μ ν ο π ; ρ σ τ θ ω ς χ υ ζ   £ $ \" + # } & ½ * @ { ±    \x001D    \0    \0    \0    \x000D";
-    private const string Greek319Baseline = "  ! ‘ % / ’ ) = ( * , ' . - 0 1 2 3 4 5 6 7 8 9 \0¨\0΄; + : _ Α Β Ψ Δ Ε Φ Γ Η Ι Ξ Κ Λ Μ Ν Ο Π ― Ρ Σ Τ Θ Ω ¦ Χ Υ Ζ ° α β ψ δ ε φ γ η ι ξ κ λ μ ν ο π · ρ σ τ θ ω ς χ υ ζ   £ $ \" [ ² ] ¬ ½ « ³ » ±    \x001D    \x001C    \0    \0    \x000D";
+    private const string Greek220Baseline = "  ! \0΅% / \0¨) = ( [ , ' . - 0 1 2 3 4 5 6 7 8 9 \0¨\0΄; ] : _ Α Β Ψ Δ Ε Φ Γ Η Ι Ξ Κ Λ Μ Ν Ο Π : Ρ Σ Τ Θ Ω ~ Χ Υ Ζ ? α β ψ δ ε φ γ η ι ξ κ λ μ ν ο π ; ρ σ τ θ ω ς χ υ ζ   £ $ \" + # } & ½ * @ { ±    \x001D    \0    \0    \0    \0    \x000D";
+    private const string Greek319Baseline = "  ! ‘ % / ’ ) = ( * , ' . - 0 1 2 3 4 5 6 7 8 9 \0¨\0΄; + : _ Α Β Ψ Δ Ε Φ Γ Η Ι Ξ Κ Λ Μ Ν Ο Π ― Ρ Σ Τ Θ Ω ¦ Χ Υ Ζ ° α β ψ δ ε φ γ η ι ξ κ λ μ ν ο π · ρ σ τ θ ω ς χ υ ζ   £ $ \" [ ² ] ¬ ½ « ³ » ±    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string Greek319DeadKey1 = "\0¨!\0¨‘\0¨£\0¨$\0¨%\0¨/\0¨’\0¨)\0¨=\0¨(\0¨*\0¨,\0¨'\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨¨\0¨΄\0¨;\0¨+\0¨:\0¨_\0¨\"\0¨Α\0¨Β\0¨Ψ\0¨Δ\0¨Ε\0¨Φ\0¨Γ\0¨Η\0Ϊ\0¨Ξ\0¨Κ\0¨Λ\0¨Μ\0¨Ν\0¨Ο\0¨Π\0¨―\0¨Ρ\0¨Σ\0¨Τ\0¨Θ\0¨Ω\0¨¦\0¨Χ\0Ϋ\0¨Ζ\0¨[\0¨²\0¨]\0¨¬\0¨°\0¨½\0¨α\0¨β\0¨ψ\0¨δ\0¨ε\0¨φ\0¨γ\0¨η\0ϊ\0¨ξ\0¨κ\0¨λ\0¨μ\0¨ν\0¨ο\0¨π\0¨·\0¨ρ\0¨σ\0¨τ\0¨θ\0¨ω\0¨ς\0¨χ\0ϋ\0¨ζ\0¨«\0¨³\0¨»\0¨±\x000D";
     private const string Greek319DeadKey2 = "\0΄!\0΄‘\0΄£\0΄$\0΄%\0΄/\0΄’\0΄)\0΄=\0΄(\0΄*\0΄,\0΄'\0΄.\0΄-\0΄0\0΄1\0΄2\0΄3\0΄4\0΄5\0΄6\0΄7\0΄8\0΄9\0΄¨\0΄΄\0΄;\0΄+\0΄:\0΄_\0΄\"\0Ά\0΄Β\0΄Ψ\0΄Δ\0Έ\0΄Φ\0΄Γ\0Ή\0Ί\0΄Ξ\0΄Κ\0΄Λ\0΄Μ\0΄Ν\0Ό\0΄Π\0΄―\0΄Ρ\0΄Σ\0΄Τ\0΄Θ\0Ώ\0΄¦\0΄Χ\0Ύ\0΄Ζ\0΄[\0΄²\0΄]\0΄¬\0΄°\0΄½\0ά\0΄β\0΄ψ\0΄δ\0έ\0΄φ\0΄γ\0ή\0ί\0΄ξ\0΄κ\0΄λ\0΄μ\0΄ν\0ό\0΄π\0΄·\0΄ρ\0΄σ\0΄τ\0΄θ\0ώ\0΄ς\0΄χ\0ύ\0΄ζ\0΄«\0΄³\0΄»\0΄±\x000D";
     private const string Greek319Barcode1 = "010477298543159410ΔδΩψΧ;τ\x001D1723020721υΨΗ(4’η1Αβ\x000D";
@@ -262,7 +262,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string Greek319Barcode10 = "010477298543159410―ο0:7ρΘ\x001D1724070321=¦θκ3Π*ε%‘\x000D";
     private const string Greek319Barcode11 = "010477298543159410/ΖΞΜαζ-\x001D1723112621‘ξ\0¨ΑθγΨζΞτ\x000D";
     private const string Greek319Barcode12 = "0104772985431594102\0΄5ςΕΥ'\x001D1723040421ΗΙρ―9―εΤυ―\x000D";
-    private const string GreekPolytonicBaseline = "  ! \0\"% & \0'( ) * \0+, \0-. \0/0 1 2 3 4 5 6 7 8 9 \0¨\0΄< \0=> \0?Α Β Ψ Δ Ε Φ Γ Η Ι Ξ Κ Λ Μ Ν Ο Π \0:Ρ Σ Τ Θ Ω \0΅Χ Υ Ζ \0_α β ψ δ ε φ γ η ι ξ κ λ μ ν ο π \0;ρ σ τ θ ω ς χ υ ζ   # $ @ \0[\0\\\0]^ \0~\0{\0|\0}\0`   \x001D    \x001C    \0    \0    \x000D";
+    private const string GreekPolytonicBaseline = "  ! \0\"% & \0'( ) * \0+, \0-. \0/0 1 2 3 4 5 6 7 8 9 \0¨\0΄< \0=> \0?Α Β Ψ Δ Ε Φ Γ Η Ι Ξ Κ Λ Μ Ν Ο Π \0:Ρ Σ Τ Θ Ω \0΅Χ Υ Ζ \0_α β ψ δ ε φ γ η ι ξ κ λ μ ν ο π \0;ρ σ τ θ ω ς χ υ ζ   # $ @ \0[\0\\\0]^ \0~\0{\0|\0}\0`   \x001D    \x001C    \0    \0    \0    \x000D";
     private const string GreekPolytonicDeadKey1 = "\0\"!\0\"\"\0\"#\0\"$\0\"%\0\"&\0\"'\0\"(\0\")\0\"*\0\"+\0\",\0\"-\0῾\0\"/\0\"0\0\"1\0\"2\0\"3\0\"4\0\"5\0\"6\0\"7\0\"8\0\"9\0\"¨\0\"΄\0\"<\0\"=\0\">\0\"?\0\"@\0Ἁ\0\"Β\0\"Ψ\0\"Δ\0Ἑ\0\"Φ\0\"Γ\0Ἡ\0Ἱ\0\"Ξ\0\"Κ\0\"Λ\0\"Μ\0\"Ν\0Ὁ\0\"Π\0\":\0Ῥ\0\"Σ\0\"Τ\0\"Θ\0Ὡ\0\"΅\0\"Χ\0Ὑ\0\"Ζ\0\"[\0\"\\\0\"]\0\"^\0\"_\0\"~\0ἁ\0\"β\0\"ψ\0\"δ\0ἑ\0\"φ\0\"γ\0ἡ\0ἱ\0\"ξ\0\"κ\0\"λ\0\"μ\0\"ν\0ὁ\0\"π\0\";\0ῥ\0\"σ\0\"τ\0\"θ\0ὡ\0\"ς\0\"χ\0ὑ\0\"ζ\0\"{\0\"|\0\"}\0\"`\x000D";
     private const string GreekPolytonicDeadKey2 = "\0'!\0'\"\0'#\0'$\0'%\0'&\0''\0'(\0')\0'*\0'+\0',\0'-\0᾿\0'/\0'0\0'1\0'2\0'3\0'4\0'5\0'6\0'7\0'8\0'9\0'¨\0'΄\0'<\0'=\0'>\0'?\0'@\0Ἀ\0'Β\0'Ψ\0'Δ\0Ἐ\0'Φ\0'Γ\0Ἠ\0Ἰ\0'Ξ\0'Κ\0'Λ\0'Μ\0'Ν\0Ὀ\0'Π\0':\0'Ρ\0'Σ\0'Τ\0'Θ\0Ὠ\0'΅\0'Χ\0'Υ\0'Ζ\0'[\0'\\\0']\0'^\0'_\0'~\0ἀ\0'β\0'ψ\0'δ\0ἐ\0'φ\0'γ\0ἠ\0ἰ\0'ξ\0'κ\0'λ\0'μ\0'ν\0ὀ\0'π\0';\0ῤ\0'σ\0'τ\0'θ\0ὠ\0'ς\0'χ\0ὐ\0'ζ\0'{\0'|\0'}\0'`\x000D";
     private const string GreekPolytonicDeadKey3 = "\0+!\0+\"\0+#\0+$\0+%\0+&\0+'\0+(\0+)\0+*\0++\0+,\0+-\0῟\0+/\0+0\0+1\0+2\0+3\0+4\0+5\0+6\0+7\0+8\0+9\0+¨\0+΄\0+<\0+=\0+>\0+?\0+@\0Ἇ\0+Β\0+Ψ\0+Δ\0+Ε\0+Φ\0+Γ\0Ἧ\0Ἷ\0+Ξ\0+Κ\0+Λ\0+Μ\0+Ν\0+Ο\0+Π\0+:\0+Ρ\0+Σ\0+Τ\0+Θ\0Ὧ\0+΅\0+Χ\0Ὗ\0+Ζ\0+[\0+\\\0+]\0+^\0+_\0+~\0ἇ\0+β\0+ψ\0+δ\0+ε\0+φ\0+γ\0ἧ\0ἷ\0+ξ\0+κ\0+λ\0+μ\0+ν\0+ο\0+π\0+;\0+ρ\0+σ\0+τ\0+θ\0ὧ\0+ς\0+χ\0ὗ\0+ζ\0+{\0+|\0+}\0+`\x000D";
@@ -270,7 +270,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string GreekPolytonicDeadKey5 = "\0/!\0/\"\0/#\0/$\0/%\0/&\0/'\0/(\0/)\0/*\0/+\0/,\0/-\0῎\0//\0/0\0/1\0/2\0/3\0/4\0/5\0/6\0/7\0/8\0/9\0/¨\0/΄\0/<\0/=\0/>\0/?\0/@\0Ἄ\0/Β\0/Ψ\0/Δ\0Ἔ\0/Φ\0/Γ\0Ἤ\0Ἴ\0/Ξ\0/Κ\0/Λ\0/Μ\0/Ν\0Ὄ\0/Π\0/:\0/Ρ\0/Σ\0/Τ\0/Θ\0Ὤ\0/΅\0/Χ\0/Υ\0/Ζ\0/[\0/\\\0/]\0/^\0/_\0/~\0ἄ\0/β\0/ψ\0/δ\0ἔ\0/φ\0/γ\0ἤ\0ἴ\0/ξ\0/κ\0/λ\0/μ\0/ν\0ὄ\0/π\0/;\0/ρ\0/σ\0/τ\0/θ\0ὤ\0/ς\0/χ\0ὔ\0/ζ\0/{\0/|\0/}\0/`\x000D";
     private const string GreekPolytonicDeadKey6 = "\0¨!\0¨\"\0¨#\0¨$\0¨%\0¨&\0¨'\0¨(\0¨)\0¨*\0¨+\0¨,\0¨-\0¨\0¨/\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨¨\0¨΄\0¨<\0¨=\0¨>\0¨?\0¨@\0¨Α\0¨Β\0¨Ψ\0¨Δ\0¨Ε\0¨Φ\0¨Γ\0¨Η\0Ϊ\0¨Ξ\0¨Κ\0¨Λ\0¨Μ\0¨Ν\0¨Ο\0¨Π\0¨:\0¨Ρ\0¨Σ\0¨Τ\0¨Θ\0¨Ω\0¨΅\0¨Χ\0Ϋ\0¨Ζ\0¨[\0¨\\\0¨]\0¨^\0¨_\0¨~\0¨α\0¨β\0¨ψ\0¨δ\0¨ε\0¨φ\0¨γ\0¨η\0ϊ\0¨ξ\0¨κ\0¨λ\0¨μ\0¨ν\0¨ο\0¨π\0¨;\0¨ρ\0¨σ\0¨τ\0¨θ\0¨ω\0¨ς\0¨χ\0ϋ\0¨ζ\0¨{\0¨|\0¨}\0¨`\x000D";
     private const string GreekPolytonicDeadKey7 = "\0΄!\0΄\"\0΄#\0΄$\0΄%\0΄&\0΄'\0΄(\0΄)\0΄*\0΄+\0΄,\0΄-\0΄\0΄/\0΄0\0΄1\0΄2\0΄3\0΄4\0΄5\0΄6\0΄7\0΄8\0΄9\0΄¨\0΄΄\0΄<\0΄=\0΄>\0΄?\0΄@\0Ά\0΄Β\0΄Ψ\0΄Δ\0Έ\0΄Φ\0΄Γ\0Ή\0Ί\0΄Ξ\0΄Κ\0΄Λ\0΄Μ\0΄Ν\0Ό\0΄Π\0΄:\0΄Ρ\0΄Σ\0΄Τ\0΄Θ\0Ώ\0΄΅\0΄Χ\0Ύ\0΄Ζ\0΄[\0΄\\\0΄]\0΄^\0΄_\0΄~\0ά\0΄β\0΄ψ\0΄δ\0έ\0΄φ\0΄γ\0ή\0ί\0΄ξ\0΄κ\0΄λ\0΄μ\0΄ν\0ό\0΄π\0΄;\0΄ρ\0΄σ\0΄τ\0΄θ\0ώ\0΄ς\0΄χ\0ύ\0΄ζ\0΄{\0΄|\0΄}\0΄`\x000D";
-    private const string CzechBaseline = "  1 ! 5 7 § 9 0 8 \0ˇ, = . - é + ě š č ř ž ý á í \" ů ? \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y % a b c d e f g h i j k l m n o p q r s t u v w x z y   3 4 2 ú \0¨) 6 ; / ' ( \0°   \x001D    \x001C    \0    \0    \x000D";
+    private const string CzechBaseline = "  1 ! 5 7 § 9 0 8 \0ˇ, = . - é + ě š č ř ž ý á í \" ů ? \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y % a b c d e f g h i j k l m n o p q r s t u v w x z y   3 4 2 ú \0¨) 6 ; / ' ( \0°   \x001D    \x001C    \0    \0    \0    \x000D";
     private const string CzechDeadKey1 = "\0ˇ1\0ˇ!\0ˇ3\0ˇ4\0ˇ5\0ˇ7\0ˇ§\0ˇ9\0ˇ0\0ˇ8\0ˇˇ\0ˇ,\0ˇ=\0ˇ.\0ˇ-\0ˇé\0ˇ+\0ˇě\0ˇš\0ˇč\0ˇř\0ˇž\0ˇý\0ˇá\0ˇí\0ˇ\"\0ˇů\0ˇ?\0ˇ´\0ˇ:\0ˇ_\0ˇ2\0ˇA\0ˇB\0Č\0Ď\0Ě\0ˇF\0ˇG\0ˇH\0ˇI\0ˇJ\0ˇK\0Ľ\0ˇM\0Ň\0ˇO\0ˇP\0ˇQ\0Ř\0Š\0Ť\0ˇU\0ˇV\0ˇW\0ˇX\0Ž\0ˇY\0ˇú\0ˇ¨\0ˇ)\0ˇ6\0ˇ%\0ˇ;\0ˇa\0ˇb\0č\0ď\0ě\0ˇf\0ˇg\0ˇh\0ˇi\0ˇj\0ˇk\0ľ\0ˇm\0ň\0ˇo\0ˇp\0ˇq\0ř\0š\0ť\0ˇu\0ˇv\0ˇw\0ˇx\0ž\0ˇy\0ˇ/\0ˇ'\0ˇ(\0ˇ°\x000D";
     private const string CzechDeadKey2 = "\0´1\0´!\0´3\0´4\0´5\0´7\0´§\0´9\0´0\0´8\0´ˇ\0´,\0´=\0´.\0´-\0´é\0´+\0´ě\0´š\0´č\0´ř\0´ž\0´ý\0´á\0´í\0´\"\0´ů\0´?\0´´\0´:\0´_\0´2\0Á\0´B\0Ć\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0Ĺ\0´M\0Ń\0Ó\0´P\0´Q\0Ŕ\0Ś\0´T\0Ú\0´V\0´W\0´X\0Ź\0Ý\0´ú\0´¨\0´)\0´6\0´%\0´;\0á\0´b\0ć\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0ĺ\0´m\0ń\0ó\0´p\0´q\0ŕ\0ś\0´t\0ú\0´v\0´w\0´x\0ź\0ý\0´/\0´'\0´(\0´°\x000D";
     private const string CzechDeadKey3 = "\0¨1\0¨!\0¨3\0¨4\0¨5\0¨7\0¨§\0¨9\0¨0\0¨8\0¨ˇ\0¨,\0¨=\0¨.\0¨-\0¨é\0¨+\0¨ě\0¨š\0¨č\0¨ř\0¨ž\0¨ý\0¨á\0¨í\0¨\"\0¨ů\0¨?\0¨´\0¨:\0¨_\0¨2\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0¨Z\0Ÿ\0¨ú\0¨¨\0¨)\0¨6\0¨%\0¨;\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0¨z\0ÿ\0¨/\0¨'\0¨(\0¨°\x000D";
@@ -287,7 +287,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string CzechBarcode10 = "é+éčýýěíářčš+říč+éQoé:ýrU\x001D+ýěčéýéšě+0WukšP\0ě5!\x000D";
     private const string CzechBarcode11 = "é+éčýýěíářčš+říč+é7YJMay-\x001D+ýěš++ěžě+!j\"AugCyJt\x000D";
     private const string CzechBarcode12 = "é+éčýýěíářčš+říč+éěůřwEZ=\x001D+ýěšéčéčě+HIrQíQeTzQ\x000D";
-    private const string CzechQwertyBaseline = "  1 ! 5 7 § 9 0 8 \0ˇ, = . - é + ě š č ř ž ý á í \" ů ? \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z % a b c d e f g h i j k l m n o p q r s t u v w x y z   3 4 2 ú \0¨) 6 ; / ' ( \0°   \x001B    \x001C    \x001E    \x001F    \x000D";
+    private const string CzechQwertyBaseline = "  1 ! 5 7 § 9 0 8 \0ˇ, = . - é + ě š č ř ž ý á í \" ů ? \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z % a b c d e f g h i j k l m n o p q r s t u v w x y z   3 4 2 ú \0¨) 6 ; / ' ( \0°   \x001B    \x001C    \x001E    \x001F    \0    \x000D";
     private const string CzechQwertyDeadKey1 = "\0ˇ1\0ˇ!\0ˇ3\0ˇ4\0ˇ5\0ˇ7\0ˇ§\0ˇ9\0ˇ0\0ˇ8\0ˇˇ\0ˇ,\0ˇ=\0ˇ.\0ˇ-\0ˇé\0ˇ+\0ˇě\0ˇš\0ˇč\0ˇř\0ˇž\0ˇý\0ˇá\0ˇí\0ˇ\"\0ˇů\0ˇ?\0ˇ´\0ˇ:\0ˇ_\0ˇ2\0ˇA\0ˇB\0Č\0Ď\0Ě\0ˇF\0ˇG\0ˇH\0ˇI\0ˇJ\0ˇK\0Ľ\0ˇM\0Ň\0ˇO\0ˇP\0ˇQ\0Ř\0Š\0Ť\0ˇU\0ˇV\0ˇW\0ˇX\0ˇY\0Ž\0ˇú\0ˇ¨\0ˇ)\0ˇ6\0ˇ%\0ˇ;\0ˇa\0ˇb\0č\0ď\0ě\0ˇf\0ˇg\0ˇh\0ˇi\0ˇj\0ˇk\0ľ\0ˇm\0ň\0ˇo\0ˇp\0ˇq\0ř\0š\0ť\0ˇu\0ˇv\0ˇw\0ˇx\0ˇy\0ž\0ˇ/\0ˇ'\0ˇ(\0ˇ°\x000D";
     private const string CzechQwertyDeadKey2 = "\0´1\0´!\0´3\0´4\0´5\0´7\0´§\0´9\0´0\0´8\0´ˇ\0´,\0´=\0´.\0´-\0´é\0´+\0´ě\0´š\0´č\0´ř\0´ž\0´ý\0´á\0´í\0´\"\0´ů\0´?\0´´\0´:\0´_\0´2\0Á\0´B\0Ć\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0Ĺ\0´M\0Ń\0Ó\0´P\0´Q\0Ŕ\0Ś\0´T\0Ú\0´V\0´W\0´X\0Ý\0Ź\0´ú\0´¨\0´)\0´6\0´%\0´;\0á\0´b\0ć\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0ĺ\0´m\0ń\0ó\0´p\0´q\0ŕ\0ś\0´t\0ú\0´v\0´w\0´x\0ý\0ź\0´/\0´'\0´(\0´°\x000D";
     private const string CzechQwertyDeadKey3 = "\0¨1\0¨!\0¨3\0¨4\0¨5\0¨7\0¨§\0¨9\0¨0\0¨8\0¨ˇ\0¨,\0¨=\0¨.\0¨-\0¨é\0¨+\0¨ě\0¨š\0¨č\0¨ř\0¨ž\0¨ý\0¨á\0¨í\0¨\"\0¨ů\0¨?\0¨´\0¨:\0¨_\0¨2\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0Ÿ\0¨Z\0¨ú\0¨¨\0¨)\0¨6\0¨%\0¨;\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0ÿ\0¨z\0¨/\0¨'\0¨(\0¨°\x000D";
@@ -304,7 +304,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string CzechQwertyBarcode10 = "é+éčýýěíářčš+říč+éQoé:ýrU\x001B+ýěčéýéšě+0WukšP\0ě5!\x000D";
     private const string CzechQwertyBarcode11 = "é+éčýýěíářčš+říč+é7ZJMaz-\x001B+ýěš++ěžě+!j\"AugCzJt\x000D";
     private const string CzechQwertyBarcode12 = "é+éčýýěíářčš+říč+éěůřwEY=\x001B+ýěšéčéčě+HIrQíQeTyQ\x000D";
-    private const string CzechProgrammersBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \x001B    \x001C    \x001E    \x001F    \x000D";
+    private const string CzechProgrammersBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \x001B    \x001C    \x001E    \x001F    \0    \x000D";
     private const string CzechProgrammersBarcode1 = "010477298543159410DdVcX<t\x001B1723020721yCH*4'h1Ab\x000D";
     private const string CzechProgrammersBarcode2 = "010477298543159410.GRs!qO\x001B1723072921TgIv?,6BmK\x000D";
     private const string CzechProgrammersBarcode3 = "010477298543159410(fpNxYi\x001B1723040521Z&Ur7>0oQS\x000D";
@@ -317,7 +317,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string CzechProgrammersBarcode10 = "010477298543159410Qo0>7rU\x001B1724070321)Wuk3P+e%\"\x000D";
     private const string CzechProgrammersBarcode11 = "010477298543159410&ZJMaz/\x001B1723112621\"j:AugCzJt\x000D";
     private const string CzechProgrammersBarcode12 = "0104772985431594102;5wEY-\x001B1723040421HIrQ9QeTyQ\x000D";
-    private const string DutchBaseline = "  ! \0`% _ \0´) ' ( \0~, / . - 0 1 2 3 4 5 6 7 8 9 ± + ; ° : = A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ \" \0¨< * & @ \0^> | §    \0    \0    \0    \x001C    \x000D";
+    private const string DutchBaseline = "  ! \0`% _ \0´) ' ( \0~, / . - 0 1 2 3 4 5 6 7 8 9 ± + ; ° : = A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ \" \0¨< * & @ \0^> | §    \0    \0    \0    \x001C    \0    \x000D";
     private const string DutchDeadKey1 = "\0`!\0``\0`#\0`$\0`%\0`_\0`´\0`)\0`'\0`(\0`~\0`,\0`/\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`±\0`+\0`;\0`°\0`:\0`=\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Y\0`Z\0`¨\0`<\0`*\0`&\0`?\0`@\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`y\0`z\0`^\0`>\0`|\0`§\x000D";
     private const string DutchDeadKey2 = "\0´!\0´`\0´#\0´$\0´%\0´_\0´´\0´)\0´'\0´(\0´~\0´,\0´/\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´±\0´+\0´;\0´°\0´:\0´=\0´\"\0Á\0´B\0´C\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0´L\0´M\0´N\0Ó\0´P\0´Q\0´R\0´S\0´T\0Ú\0´V\0´W\0´X\0Ý\0´Z\0´¨\0´<\0´*\0´&\0´?\0´@\0á\0´b\0´c\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0´l\0´m\0´n\0ó\0´p\0´q\0´r\0´s\0´t\0ú\0´v\0´w\0´x\0ý\0´z\0´^\0´>\0´|\0´§\x000D";
     private const string DutchDeadKey3 = "\0~!\0~`\0~#\0~$\0~%\0~_\0~´\0~)\0~'\0~(\0~~\0~,\0~/\0~.\0~-\0~0\0~1\0~2\0~3\0~4\0~5\0~6\0~7\0~8\0~9\0~±\0~+\0~;\0~°\0~:\0~=\0~\"\0Ã\0~B\0~C\0~D\0~E\0~F\0~G\0~H\0~I\0~J\0~K\0~L\0~M\0Ñ\0Õ\0~P\0~Q\0~R\0~S\0~T\0~U\0~V\0~W\0~X\0~Y\0~Z\0~¨\0~<\0~*\0~&\0~?\0~@\0ã\0~b\0~c\0~d\0~e\0~f\0~g\0~h\0~i\0~j\0~k\0~l\0~m\0ñ\0õ\0~p\0~q\0~r\0~s\0~t\0~u\0~v\0~w\0~x\0~y\0~z\0~^\0~>\0~|\0~§\x000D";
@@ -335,7 +335,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string DutchBarcode10 = "010477298543159410Qo0:7rU\01724070321'Wuk3P\0~e%\0`";
     private const string DutchBarcode11 = "010477298543159410_ZJMaz-\01723112621\0`j±AugCzJt\x000D";
     private const string DutchBarcode12 = "0104772985431594102+5wEY/\01723040421HIrQ9QeTyQ\x000D";
-    private const string EstonianBaseline = "  ! Ä % / ä ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" ü ' õ & \0ˇÜ * Õ \0~   \0    \0    \0    \0    \x000D";
+    private const string EstonianBaseline = "  ! Ä % / ä ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" ü ' õ & \0ˇÜ * Õ \0~   \0    \0    \0    \0    \0    \x000D";
     private const string EstonianDeadKey1 = "\0`!\0`Ä\0`#\0`¤\0`%\0`/\0`ä\0`)\0`=\0`(\0``\0`,\0`+\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ö\0`ö\0`;\0`´\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0`I\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Y\0`Z\0`ü\0`'\0`õ\0`&\0`?\0`ˇ\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0`i\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`y\0`z\0`Ü\0`*\0`Õ\0`~\x000D";
     private const string EstonianDeadKey2 = "\0´!\0´Ä\0´#\0´¤\0´%\0´/\0´ä\0´)\0´=\0´(\0´`\0´,\0´+\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ö\0´ö\0´;\0´´\0´:\0´_\0´\"\0´A\0´B\0Ć\0´D\0É\0´F\0´G\0´H\0´I\0´J\0´K\0´L\0´M\0Ń\0Ó\0´P\0´Q\0´R\0Ś\0´T\0´U\0´V\0´W\0´X\0´Y\0Ź\0´ü\0´'\0´õ\0´&\0´?\0´ˇ\0´a\0´b\0ć\0´d\0é\0´f\0´g\0´h\0´i\0´j\0´k\0´l\0´m\0ń\0ó\0´p\0´q\0´r\0ś\0´t\0´u\0´v\0´w\0´x\0´y\0ź\0´Ü\0´*\0´Õ\0´~\x000D";
     private const string EstonianDeadKey3 = "\0ˇ!\0ˇÄ\0ˇ#\0ˇ¤\0ˇ%\0ˇ/\0ˇä\0ˇ)\0ˇ=\0ˇ(\0ˇ`\0ˇ,\0ˇ+\0ˇ.\0ˇ-\0ˇ0\0ˇ1\0ˇ2\0ˇ3\0ˇ4\0ˇ5\0ˇ6\0ˇ7\0ˇ8\0ˇ9\0ˇÖ\0ˇö\0ˇ;\0ˇ´\0ˇ:\0ˇ_\0ˇ\"\0ˇA\0ˇB\0Č\0ˇD\0ˇE\0ˇF\0ˇG\0ˇH\0ˇI\0ˇJ\0ˇK\0ˇL\0ˇM\0ˇN\0ˇO\0ˇP\0ˇQ\0ˇR\0Š\0ˇT\0ˇU\0ˇV\0ˇW\0ˇX\0ˇY\0Ž\0ˇü\0ˇ'\0ˇõ\0ˇ&\0ˇ?\0ˇˇ\0ˇa\0ˇb\0č\0ˇd\0ˇe\0ˇf\0ˇg\0ˇh\0ˇi\0ˇj\0ˇk\0ˇl\0ˇm\0ˇn\0ˇo\0ˇp\0ˇq\0ˇr\0š\0ˇt\0ˇu\0ˇv\0ˇw\0ˇx\0ˇy\0ž\0ˇÜ\0ˇ*\0ˇÕ\0ˇ~\x000D";
@@ -352,7 +352,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string EstonianBarcode10 = "010477298543159410Qo0:7rU\01724070321=Wuk3P\0è%Ä\x000D";
     private const string EstonianBarcode11 = "010477298543159410/ZJMaz-\01723112621ÄjÖAugCzJt\x000D";
     private const string EstonianBarcode12 = "0104772985431594102ö5wEY+\01723040421HIrQ9QeTyQ\x000D";
-    private const string FinnishBaseline = "  ! Ä % / ä ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& § Å * \0^½    \x001D    \0    \0    \0    \x000D";
+    private const string FinnishBaseline = "  ! Ä % / ä ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& § Å * \0^½    \x001D    \0    \0    \0    \0    \x000D";
     private const string FinnishDeadKey1 = "\0`!\0`Ä\0`#\0`¤\0`%\0`/\0`ä\0`)\0`=\0`(\0``\0`,\0`+\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ö\0`ö\0`;\0`´\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Y\0`Z\0`å\0`'\0`¨\0`&\0`?\0`§\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`y\0`z\0`Å\0`*\0`^\0`½\x000D";
     private const string FinnishDeadKey2 = "\0´!\0´Ä\0´#\0´¤\0´%\0´/\0´ä\0´)\0´=\0´(\0´`\0´,\0´+\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ö\0´ö\0´;\0´´\0´:\0´_\0´\"\0Á\0´B\0´C\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0´L\0´M\0´N\0Ó\0´P\0´Q\0´R\0´S\0´T\0Ú\0´V\0´W\0´X\0Ý\0´Z\0´å\0´'\0´¨\0´&\0´?\0´§\0á\0´b\0´c\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0´l\0´m\0´n\0ó\0´p\0´q\0´r\0´s\0´t\0ú\0´v\0´w\0´x\0ý\0´z\0´Å\0´*\0´^\0´½\x000D";
     private const string FinnishDeadKey3 = "\0¨!\0¨Ä\0¨#\0¨¤\0¨%\0¨/\0¨ä\0¨)\0¨=\0¨(\0¨`\0¨,\0¨+\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨Ö\0¨ö\0¨;\0¨´\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0¨Y\0¨Z\0¨å\0¨'\0¨¨\0¨&\0¨?\0¨§\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0ÿ\0¨z\0¨Å\0¨*\0¨^\0¨½\x000D";
@@ -369,7 +369,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string FinnishBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P\0è%Ä\x000D";
     private const string FinnishBarcode11 = "010477298543159410/ZJMaz-\x001D1723112621ÄjÖAugCzJt\x000D";
     private const string FinnishBarcode12 = "0104772985431594102ö5wEY+\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string FinnishWithSamiBaseline = "  ! Ä % / ä ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& § Å * \0^½    \0    \0    \0    \0    \x000D";
+    private const string FinnishWithSamiBaseline = "  ! Ä % / ä ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& § Å * \0^½    \0    \0    \0    \0    \0    \x000D";
     private const string FinnishWithSamiDeadKey1 = "\0`!\0`Ä\0`#\0`¤\0`%\0`/\0`ä\0`)\0`=\0`(\0``\0`,\0`+\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ö\0`ö\0`;\0`´\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0Ẁ\0`X\0Ỳ\0`Z\0`å\0`'\0`¨\0`&\0`?\0`§\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0ẁ\0`x\0ỳ\0`z\0`Å\0`*\0`^\0`½\x000D";
     private const string FinnishWithSamiDeadKey2 = "\0´!\0´Ä\0´#\0´¤\0´%\0´/\0´ä\0´)\0´=\0´(\0´`\0´,\0´+\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ö\0´ö\0´;\0´´\0´:\0´_\0´\"\0Á\0´B\0Ć\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0Ĺ\0´M\0Ń\0Ó\0´P\0´Q\0Ŕ\0Ś\0´T\0Ú\0´V\0Ẃ\0´X\0Ý\0Ź\0ǻ\0´'\0´¨\0´&\0´?\0´§\0á\0´b\0ć\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0ĺ\0´m\0ń\0ó\0´p\0´q\0ŕ\0ś\0´t\0ú\0´v\0ẃ\0´x\0ý\0ź\0Ǻ\0´*\0´^\0´½\x000D";
     private const string FinnishWithSamiDeadKey3 = "\0¨!\0¨Ä\0¨#\0¨¤\0¨%\0¨/\0¨ä\0¨)\0¨=\0¨(\0¨`\0¨,\0¨+\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨Ö\0¨ö\0¨;\0¨´\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0Ẅ\0¨X\0Ÿ\0¨Z\0¨å\0¨'\0¨¨\0¨&\0¨?\0¨§\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0ẅ\0¨x\0ÿ\0¨z\0¨Å\0¨*\0¨^\0¨½\x000D";
@@ -386,7 +386,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string FinnishWithSamiBarcode10 = "010477298543159410Qo0:7rU\01724070321=Wuk3P\0è%Ä\x000D";
     private const string FinnishWithSamiBarcode11 = "010477298543159410/ZJMaz-\01723112621ÄjÖAugCzJt\x000D";
     private const string FinnishWithSamiBarcode12 = "0104772985431594102ö5wEY+\01723040421HIrQ9QeTyQ\x000D";
-    private const string GermanBaseline = "  ! Ä % / ä ) = ( \0`, ß . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   § $ \" ü # + & \0^Ü ' * °    \x001D    \x001C    \0    \0    \x000D";
+    private const string GermanBaseline = "  ! Ä % / ä ) = ( \0`, ß . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   § $ \" ü # + & \0^Ü ' * °    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string GermanDeadKey1 = "\0`!\0`Ä\0`§\0`$\0`%\0`/\0`ä\0`)\0`=\0`(\0``\0`,\0`ß\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ö\0`ö\0`;\0`´\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Z\0`Y\0`ü\0`#\0`+\0`&\0`?\0`^\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`z\0`y\0`Ü\0`'\0`*\0`°\x000D";
     private const string GermanDeadKey2 = "\0´!\0´Ä\0´§\0´$\0´%\0´/\0´ä\0´)\0´=\0´(\0´`\0´,\0´ß\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ö\0´ö\0´;\0´´\0´:\0´_\0´\"\0Á\0´B\0´C\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0´L\0´M\0´N\0Ó\0´P\0´Q\0´R\0´S\0´T\0Ú\0´V\0´W\0´X\0´Z\0Ý\0´ü\0´#\0´+\0´&\0´?\0´^\0á\0´b\0´c\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0´l\0´m\0´n\0ó\0´p\0´q\0´r\0´s\0´t\0ú\0´v\0´w\0´x\0´z\0ý\0´Ü\0´'\0´*\0´°\x000D";
     private const string GermanDeadKey3 = "\0^!\0^Ä\0^§\0^$\0^%\0^/\0^ä\0^)\0^=\0^(\0^`\0^,\0^ß\0^.\0^-\0^0\0^1\0^2\0^3\0^4\0^5\0^6\0^7\0^8\0^9\0^Ö\0^ö\0^;\0^´\0^:\0^_\0^\"\0Â\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^M\0^N\0Ô\0^P\0^Q\0^R\0^S\0^T\0Û\0^V\0^W\0^X\0^Z\0^Y\0^ü\0^#\0^+\0^&\0^?\0^^\0â\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^m\0^n\0ô\0^p\0^q\0^r\0^s\0^t\0û\0^v\0^w\0^x\0^z\0^y\0^Ü\0^'\0^*\0^°\x000D";
@@ -402,7 +402,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string GermanBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P\0è%Ä\x000D";
     private const string GermanBarcode11 = "010477298543159410/YJMay-\x001D1723112621ÄjÖAugCyJt\x000D";
     private const string GermanBarcode12 = "0104772985431594102ö5wEZß\x001D1723040421HIrQ9QeTzQ\x000D";
-    private const string GermanIbmBaseline = "  ! Ä % / ä ) = ( \0`, ß . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   § $ \" ü # + & \0^Ü ' * °    \x001D    \x001C    \0    \0    \x000D";
+    private const string GermanIbmBaseline = "  ! Ä % / ä ) = ( \0`, ß . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   § $ \" ü # + & \0^Ü ' * °    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string GermanIbmDeadKey1 = "\0`!\0`Ä\0`§\0`$\0`%\0`/\0`ä\0`)\0`=\0`(\0``\0`,\0`ß\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ö\0`ö\0`;\0`´\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Z\0`Y\0`ü\0`#\0`+\0`&\0`?\0`^\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`z\0`y\0`Ü\0`'\0`*\0`°\x000D";
     private const string GermanIbmDeadKey2 = "\0´!\0´Ä\0´§\0´$\0´%\0´/\0´ä\0´)\0´=\0´(\0´`\0´,\0´ß\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ö\0´ö\0´;\0´´\0´:\0´_\0´\"\0Á\0´B\0´C\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0´L\0´M\0´N\0Ó\0´P\0´Q\0´R\0´S\0´T\0Ú\0´V\0´W\0´X\0´Z\0Ý\0´ü\0´#\0´+\0´&\0´?\0´^\0á\0´b\0´c\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0´l\0´m\0´n\0ó\0´p\0´q\0´r\0´s\0´t\0ú\0´v\0´w\0´x\0´z\0ý\0´Ü\0´'\0´*\0´°\x000D";
     private const string GermanIbmDeadKey3 = "\0^!\0^Ä\0^§\0^$\0^%\0^/\0^ä\0^)\0^=\0^(\0^`\0^,\0^ß\0^.\0^-\0^0\0^1\0^2\0^3\0^4\0^5\0^6\0^7\0^8\0^9\0^Ö\0^ö\0^;\0^´\0^:\0^_\0^\"\0Â\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^M\0^N\0Ô\0^P\0^Q\0^R\0^S\0^T\0Û\0^V\0^W\0^X\0^Z\0^Y\0^ü\0^#\0^+\0^&\0^?\0^^\0â\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^m\0^n\0ô\0^p\0^q\0^r\0^s\0^t\0û\0^v\0^w\0^x\0^z\0^y\0^Ü\0^'\0^*\0^°\x000D";
@@ -418,7 +418,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string GermanIbmBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P\0è%Ä\x000D";
     private const string GermanIbmBarcode11 = "010477298543159410/YJMay-\x001D1723112621ÄjÖAugCyJt\x000D";
     private const string GermanIbmBarcode12 = "0104772985431594102ö5wEZß\x001D1723040421HIrQ9QeTzQ\x000D";
-    private const string SwissGermanBaseline = "  + à % / ä ) = ( \0`, ' . - 0 1 2 3 4 5 6 7 8 9 é ö ; \0^: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   * ç \" ü $ \0¨& § è £ ! °    \x001D    \x001C    \0    \0    \x000D";
+    private const string SwissGermanBaseline = "  + à % / ä ) = ( \0`, ' . - 0 1 2 3 4 5 6 7 8 9 é ö ; \0^: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   * ç \" ü $ \0¨& § è £ ! °    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string SwissGermanDeadKey1 = "\0`+\0`à\0`*\0`ç\0`%\0`/\0`ä\0`)\0`=\0`(\0``\0`,\0`'\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`é\0`ö\0`;\0`^\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Z\0`Y\0`ü\0`$\0`¨\0`&\0`?\0`§\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`z\0`y\0`è\0`£\0`!\0`°\x000D";
     private const string SwissGermanDeadKey2 = "\0^+\0^à\0^*\0^ç\0^%\0^/\0^ä\0^)\0^=\0^(\0^`\0^,\0^'\0^.\0^-\0^0\0^1\0^2\0^3\0^4\0^5\0^6\0^7\0^8\0^9\0^é\0^ö\0^;\0^^\0^:\0^_\0^\"\0Â\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^M\0^N\0Ô\0^P\0^Q\0^R\0^S\0^T\0Û\0^V\0^W\0^X\0^Z\0^Y\0^ü\0^$\0^¨\0^&\0^?\0^§\0â\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^m\0^n\0ô\0^p\0^q\0^r\0^s\0^t\0û\0^v\0^w\0^x\0^z\0^y\0^è\0^£\0^!\0^°\x000D";
     private const string SwissGermanDeadKey3 = "\0¨+\0¨à\0¨*\0¨ç\0¨%\0¨/\0¨ä\0¨)\0¨=\0¨(\0¨`\0¨,\0¨'\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨é\0¨ö\0¨;\0¨^\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0¨Z\0¨Y\0¨ü\0¨$\0¨¨\0¨&\0¨?\0¨§\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0¨z\0ÿ\0¨è\0¨£\0¨!\0¨°\x000D";
@@ -434,7 +434,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string SwissGermanBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P\0è%à\x000D";
     private const string SwissGermanBarcode11 = "010477298543159410/YJMay-\x001D1723112621àjéAugCyJt\x000D";
     private const string SwissGermanBarcode12 = "0104772985431594102ö5wEZ'\x001D1723040421HIrQ9QeTzQ\x000D";
-    private const string DanishBaseline = "  ! Ø % / ø ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Æ æ ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& ½ Å * \0^§    \x001D    \0    \0    \0    \x000D";
+    private const string DanishBaseline = "  ! Ø % / ø ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Æ æ ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& ½ Å * \0^§    \x001D    \0    \0    \0    \0    \x000D";
     private const string DanishDeadKey1 = "\0`!\0`Ø\0`#\0`¤\0`%\0`/\0`ø\0`)\0`=\0`(\0``\0`,\0`+\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Æ\0`æ\0`;\0`´\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Y\0`Z\0`å\0`'\0`¨\0`&\0`?\0`½\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`y\0`z\0`Å\0`*\0`^\0`§\x000D";
     private const string DanishDeadKey2 = "\0´!\0´Ø\0´#\0´¤\0´%\0´/\0´ø\0´)\0´=\0´(\0´`\0´,\0´+\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Æ\0´æ\0´;\0´´\0´:\0´_\0´\"\0Á\0´B\0´C\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0´L\0´M\0´N\0Ó\0´P\0´Q\0´R\0´S\0´T\0Ú\0´V\0´W\0´X\0Ý\0´Z\0´å\0´'\0´¨\0´&\0´?\0´½\0á\0´b\0´c\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0´l\0´m\0´n\0ó\0´p\0´q\0´r\0´s\0´t\0ú\0´v\0´w\0´x\0ý\0´z\0´Å\0´*\0´^\0´§\x000D";
     private const string DanishDeadKey3 = "\0¨!\0¨Ø\0¨#\0¨¤\0¨%\0¨/\0¨ø\0¨)\0¨=\0¨(\0¨`\0¨,\0¨+\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨Æ\0¨æ\0¨;\0¨´\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0¨Y\0¨Z\0¨å\0¨'\0¨¨\0¨&\0¨?\0¨½\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0ÿ\0¨z\0¨Å\0¨*\0¨^\0¨§\x000D";
@@ -451,7 +451,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string DanishBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P\0è%Ø\x000D";
     private const string DanishBarcode11 = "010477298543159410/ZJMaz-\x001D1723112621ØjÆAugCzJt\x000D";
     private const string DanishBarcode12 = "0104772985431594102æ5wEY+\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string HungarianBaseline = "  ' Á % = á ) Ö ( Ó , ü . - ö 1 2 3 4 5 6 7 8 9 É é ? ó : _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y Ü a b c d e f g h i j k l m n o p q r s t u v w x z y   + ! \" ő ű ú / 0 Ő Ű Ú §    \x001D    \x001C    \0    \0    \x000D";
+    private const string HungarianBaseline = "  ' Á % = á ) Ö ( Ó , ü . - ö 1 2 3 4 5 6 7 8 9 É é ? ó : _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y Ü a b c d e f g h i j k l m n o p q r s t u v w x z y   + ! \" ő ű ú / 0 Ő Ű Ú §    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string HungarianBarcode1 = "ö1ö47729854315941öDdVcX?t\x001D1723ö2ö721zCH(4áh1Ab\x000D";
     private const string HungarianBarcode2 = "ö1ö47729854315941ö.GRs'qO\x001D1723ö72921TgIv_,6BmK\x000D";
     private const string HungarianBarcode3 = "ö1ö47729854315941ö)fpNxZi\x001D1723ö4ö521Y=Ur7:öoQS\x000D";
@@ -464,7 +464,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string HungarianBarcode10 = "ö1ö47729854315941öQoö:7rU\x001D1724ö7ö321ÖWuk3PÓe%Á\x000D";
     private const string HungarianBarcode11 = "ö1ö47729854315941ö=YJMay-\x001D1723112621ÁjÉAugCyJt\x000D";
     private const string HungarianBarcode12 = "ö1ö47729854315941ö2é5wEZü\x001D1723ö4ö421HIrQ9QeTzQ\x000D";
-    private const string Hungarian101KeyBaseline = "  ' Á % = á ) Ö ( Ó , ü . - ö 1 2 3 4 5 6 7 8 9 É é ? ó : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Ü a b c d e f g h i j k l m n o p q r s t u v w x y z   + ! \" ő ű ú / í Ő Ű Ú Í    \x001D    \x001C    \0    \0    \x000D";
+    private const string Hungarian101KeyBaseline = "  ' Á % = á ) Ö ( Ó , ü . - ö 1 2 3 4 5 6 7 8 9 É é ? ó : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Ü a b c d e f g h i j k l m n o p q r s t u v w x y z   + ! \" ő ű ú / í Ő Ű Ú Í    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string Hungarian101KeyBarcode1 = "ö1ö47729854315941öDdVcX?t\x001D1723ö2ö721yCH(4áh1Ab\x000D";
     private const string Hungarian101KeyBarcode2 = "ö1ö47729854315941ö.GRs'qO\x001D1723ö72921TgIv_,6BmK\x000D";
     private const string Hungarian101KeyBarcode3 = "ö1ö47729854315941ö)fpNxYi\x001D1723ö4ö521Z=Ur7:öoQS\x000D";
@@ -477,7 +477,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string Hungarian101KeyBarcode10 = "ö1ö47729854315941öQoö:7rU\x001D1724ö7ö321ÖWuk3PÓe%Á\x000D";
     private const string Hungarian101KeyBarcode11 = "ö1ö47729854315941ö=ZJMaz-\x001D1723112621ÁjÉAugCzJt\x000D";
     private const string Hungarian101KeyBarcode12 = "ö1ö47729854315941ö2é5wEYü\x001D1723ö4ö421HIrQ9QeTyQ\x000D";
-    private const string IcelandicBaseline = "  ! ' % / \0´) = ( _ , ö . þ 0 1 2 3 4 5 6 7 8 9 Æ æ ; - : Þ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Ö a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ \" ð + ' & \0°Ð * ? \0¨   \x001D    \0    \0    \0    \x000D";
+    private const string IcelandicBaseline = "  ! ' % / \0´) = ( _ , ö . þ 0 1 2 3 4 5 6 7 8 9 Æ æ ; - : Þ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Ö a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ \" ð + ' & \0°Ð * ? \0¨   \x001D    \0    \0    \0    \0    \x000D";
     private const string IcelandicDeadKey1 = "\0´!\0´'\0´#\0´$\0´%\0´/\0´´\0´)\0´=\0´(\0´_\0´,\0´ö\0´.\0´þ\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Æ\0´æ\0´;\0´-\0´:\0´Þ\0´\"\0Á\0´B\0´C\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0´L\0´M\0´N\0Ó\0´P\0´Q\0´R\0´S\0´T\0Ú\0´V\0´W\0´X\0Ý\0´Z\0´ð\0´+\0´'\0´&\0´Ö\0´°\0á\0´b\0´c\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0´l\0´m\0´n\0ó\0´p\0´q\0´r\0´s\0´t\0ú\0´v\0´w\0´x\0ý\0´z\0´Ð\0´*\0´?\0´¨\x000D";
     private const string IcelandicDeadKey2 = "\0°!\0°'\0°#\0°$\0°%\0°/\0°´\0°)\0°=\0°(\0°_\0°,\0°ö\0°.\0°þ\0°0\0°1\0°2\0°3\0°4\0°5\0°6\0°7\0°8\0°9\0°Æ\0°æ\0°;\0°-\0°:\0°Þ\0°\"\0Å\0°B\0°C\0°D\0°E\0°F\0°G\0°H\0°I\0°J\0°K\0°L\0°M\0°N\0°O\0°P\0°Q\0°R\0°S\0°T\0°U\0°V\0°W\0°X\0°Y\0°Z\0°ð\0°+\0°'\0°&\0°Ö\0°°\0å\0°b\0°c\0°d\0°e\0°f\0°g\0°h\0°i\0°j\0°k\0°l\0°m\0°n\0°o\0°p\0°q\0°r\0°s\0°t\0°u\0°v\0°w\0°x\0°y\0°z\0°Ð\0°*\0°?\0°¨\x000D";
     private const string IcelandicDeadKey3 = "\0¨!\0¨'\0¨#\0¨$\0¨%\0¨/\0¨´\0¨)\0¨=\0¨(\0¨_\0¨,\0¨ö\0¨.\0¨þ\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨Æ\0¨æ\0¨;\0¨-\0¨:\0¨Þ\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0¨Y\0¨Z\0¨ð\0¨+\0¨'\0¨&\0¨Ö\0¨°\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0ÿ\0¨z\0¨Ð\0¨*\0¨?\0¨¨\x000D";
@@ -493,7 +493,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string IcelandicBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P_e%'\x000D";
     private const string IcelandicBarcode11 = "010477298543159410/ZJMazþ\x001D1723112621'jÆAugCzJt\x000D";
     private const string IcelandicBarcode12 = "0104772985431594102æ5wEYö\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string IrishBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ \0`{ ~ } ¬    \x001D    \x001C    \0    \0    \x000D";
+    private const string IrishBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ \0`{ ~ } ¬    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string IrishDeadKey1 = "\0`!\0`@\0`£\0`$\0`%\0`&\0`'\0`(\0`)\0`*\0`+\0`,\0`-\0`.\0`/\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`:\0`;\0`<\0`=\0`>\0`?\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Y\0`Z\0`[\0`#\0`]\0`^\0`_\0``\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`y\0`z\0`{\0`~\0`}\0`¬\x000D";
     private const string IrishBarcode1 = "010477298543159410DdVcX<t\x001D1723020721yCH*4'h1Ab\x000D";
     private const string IrishBarcode2 = "010477298543159410.GRs!qO\x001D1723072921TgIv?,6BmK\x000D";
@@ -507,7 +507,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string IrishBarcode10 = "010477298543159410Qo0>7rU\x001D1724070321)Wuk3P+e%@\x000D";
     private const string IrishBarcode11 = "010477298543159410&ZJMaz/\x001D1723112621@j:AugCzJt\x000D";
     private const string IrishBarcode12 = "0104772985431594102;5wEY-\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string ItalianBaseline = "  ! ° % / à ) = ( ^ , ' . - 0 1 2 3 4 5 6 7 8 9 ç ò ; ì : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" è ù + & \\ é § * |    \x001D    \x001C    \0    \0    \x000D";
+    private const string ItalianBaseline = "  ! ° % / à ) = ( ^ , ' . - 0 1 2 3 4 5 6 7 8 9 ç ò ; ì : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" è ù + & \\ é § * |    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string ItalianBarcode1 = "010477298543159410DdVcX;t\x001D1723020721yCH(4àh1Ab\x000D";
     private const string ItalianBarcode2 = "010477298543159410.GRs!qO\x001D1723072921TgIv_,6BmK\x000D";
     private const string ItalianBarcode3 = "010477298543159410)fpNxYi\x001D1723040521Z/Ur7:0oQS\x000D";
@@ -520,7 +520,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string ItalianBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P^e%°\x000D";
     private const string ItalianBarcode11 = "010477298543159410/ZJMaz-\x001D1723112621°jçAugCzJt\x000D";
     private const string ItalianBarcode12 = "0104772985431594102ò5wEY'\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string Italian142Baseline = "  ! ° % / à ) = ( ^ , ' . - 0 1 2 3 4 5 6 7 8 9 ç ò ; ì : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" è ù + & \\ é § * |    \x001D    \x001C    \0    \0    \x000D";
+    private const string Italian142Baseline = "  ! ° % / à ) = ( ^ , ' . - 0 1 2 3 4 5 6 7 8 9 ç ò ; ì : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" è ù + & \\ é § * |    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string Italian142Barcode1 = "010477298543159410DdVcX;t\x001D1723020721yCH(4àh1Ab\x000D";
     private const string Italian142Barcode2 = "010477298543159410.GRs!qO\x001D1723072921TgIv_,6BmK\x000D";
     private const string Italian142Barcode3 = "010477298543159410)fpNxYi\x001D1723040521Z/Ur7:0oQS\x000D";
@@ -533,9 +533,9 @@ public class KeyboardCalibratorTestsStateless {
     private const string Italian142Barcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P^e%°\x000D";
     private const string Italian142Barcode11 = "010477298543159410/ZJMaz-\x001D1723112621°jçAugCzJt\x000D";
     private const string Italian142Barcode12 = "0104772985431594102ò5wEY'\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string LatvianStandardBaseline = "  ! \0\"% & \0'( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \x001D    \x001C    \0    \0    \x000D";
+    private const string LatvianStandardBaseline = "  ! \0\"% & \0'( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string LatvianStandardDeadKey1 = "\0\"!\0\"\"\0\"#\0§\0°\0±\0\"'\0\"(\0\")\0×\0\"+\0\",\0—\0\".\0\"/\0\"0\0\"1\0\"2\0\"3\0§\0°\0\"6\0±\0×\0\"9\0\":\0\";\0\"<\0\"=\0\">\0\"?\0\"@\0Ā\0\"B\0Č\0\"D\0Ē\0\"F\0Ģ\0\"H\0Ī\0\"J\0Ķ\0Ļ\0\"M\0Ņ\0Ō\0\"P\0\"Q\0Ŗ\0Š\0\"T\0Ū\0\"V\0\"W\0\"X\0\"Y\0Ž\0\"[\0\"\\\0\"]\0\"^\0—\0\"`\0Ā\0\"b\0Č\0\"d\0Ē\0\"f\0Ģ\0\"h\0Ī\0\"j\0Ķ\0Ļ\0\"m\0Ņ\0Ō\0\"p\0\"q\0Ŗ\0Š\0\"t\0Ū\0\"v\0\"w\0\"x\0\"y\0Ž\0\"{\0\"|\0\"}\0\"~\x000D";
-    private const string LatvianQwertyBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \0°] ^ ` { | } \0~   \x001D    \x001C    \0    \0    \x000D";
+    private const string LatvianQwertyBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \0°] ^ ` { | } \0~   \x001D    \x001C    \0    \0    \0    \x000D";
     private const string LatvianQwertyDeadKey1 = "\0°!\0°\"\0°#\0°$\0°%\0°&\0°'\0°(\0°)\0°*\0°+\0°,\0°-\0°.\0°/\0°0\0°1\0°2\0°3\0°4\0°5\0°6\0°7\0°8\0°9\0°:\0°;\0°<\0°=\0°>\0°?\0°@\0Å\0°B\0°C\0°D\0Ė\0°F\0°G\0°H\0°I\0°J\0°K\0°L\0°M\0°N\0°O\0°P\0°Q\0°R\0°S\0°T\0°U\0°V\0°W\0°X\0°Y\0Ż\0°[\0°°\0°]\0°^\0°_\0°`\0å\0°b\0°c\0°d\0ė\0°f\0ġ\0°h\0°i\0°j\0°k\0°l\0°m\0°n\0°o\0°p\0°q\0°r\0°s\0°t\0°u\0°v\0°w\0°x\0°y\0ż\0°{\0°|\0°}\0°~\x000D";
     private const string LatvianQwertyDeadKey2 = "\0~!\0~\"\0~#\0~$\0~%\0~&\0~'\0~(\0~)\0~*\0~+\0~,\0~-\0~.\0~/\0~0\0~1\0~2\0~3\0~4\0~5\0~6\0~7\0~8\0~9\0~:\0~;\0~<\0~=\0~>\0~?\0~@\0~A\0~B\0~C\0~D\0~E\0~F\0~G\0~H\0~I\0~J\0~K\0~L\0~M\0~N\0Õ\0~P\0~Q\0~R\0~S\0~T\0~U\0~V\0~W\0~X\0~Y\0~Z\0~[\0~°\0~]\0~^\0~_\0~`\0~a\0~b\0~c\0~d\0~e\0~f\0~g\0~h\0~i\0~j\0~k\0~l\0~m\0~n\0õ\0~p\0~q\0~r\0~s\0~t\0~u\0~v\0~w\0~x\0~y\0~z\0~{\0~|\0~}\0~~\x000D";
     private const string LatvianQwertyBarcode1 = "010477298543159410DdVcX<t\x001D1723020721yCH*4'h1Ab\x000D";
@@ -550,7 +550,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string LatvianQwertyBarcode10 = "010477298543159410Qo0>7rU\x001D1724070321)Wuk3P+e%\"\x000D";
     private const string LatvianQwertyBarcode11 = "010477298543159410&ZJMaz/\x001D1723112621\"j:AugCzJt\x000D";
     private const string LatvianQwertyBarcode12 = "0104772985431594102;5wEY-\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string LatvianBaseline = "  ! \0°% & \0´( ) × F , - . ļ 0 1 2 3 4 5 6 7 8 9 C c ; f : Ļ Š P Ī S J I L D Z A T E Ā O Ē Č Ū R U M N K G B V Ņ _ š p ī s j i l d z a t e ā o ē č ū r u m n k g b v ņ   » $ « ž ķ h / ­ Ž Ķ H ?    \x0008    \x001C    \0    \0    \x000D";
+    private const string LatvianBaseline = "  ! \0°% & \0´( ) × F , - . ļ 0 1 2 3 4 5 6 7 8 9 C c ; f : Ļ Š P Ī S J I L D Z A T E Ā O Ē Č Ū R U M N K G B V Ņ _ š p ī s j i l d z a t e ā o ē č ū r u m n k g b v ņ   » $ « ž ķ h / ­ Ž Ķ H ?    \x0008    \x001C    \0    \0    \0    \x000D";
     private const string LatvianDeadKey1 = "\0°!\0°°\0°»\0°$\0°%\0°&\0°´\0°(\0°)\0°×\0°F\0°,\0°-\0°.\0°ļ\0°0\0°1\0°2\0°3\0°4\0°5\0°6\0°7\0°8\0°9\0°C\0°c\0°;\0°f\0°:\0°Ļ\0°«\0°Š\0°P\0°Ī\0°S\0°J\0°I\0°L\0°D\0Ż\0Å\0°T\0Ė\0°Ā\0°O\0°Ē\0°Č\0°Ū\0°R\0°U\0°M\0°N\0°K\0°G\0°B\0°V\0°Ņ\0°ž\0°ķ\0°h\0°/\0°_\0°­\0°š\0°p\0°ī\0°s\0°j\0°i\0°l\0°d\0ż\0å\0°t\0ė\0°ā\0°o\0°ē\0°č\0°ū\0°r\0°u\0°m\0°n\0°k\0ġ\0°b\0°v\0°ņ\0°Ž\0°Ķ\0°H\0°?\x000D";
     private const string LatvianDeadKey2 = "\0´!\0´°\0´»\0´$\0´%\0´&\0´´\0´(\0´)\0´×\0´F\0´,\0´-\0´.\0´ļ\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0Ć\0ć\0´;\0´f\0´:\0´Ļ\0´«\0´Š\0´P\0´Ī\0Ś\0´J\0´I\0´L\0´D\0Ź\0´A\0´T\0É\0´Ā\0Ó\0´Ē\0´Č\0´Ū\0´R\0´U\0´M\0Ń\0´K\0´G\0´B\0´V\0´Ņ\0´ž\0´ķ\0´h\0´/\0´_\0´­\0´š\0´p\0´ī\0ś\0´j\0´i\0´l\0´d\0ź\0´a\0´t\0é\0´ā\0ó\0´ē\0´č\0´ū\0´r\0´u\0´m\0ń\0´k\0´g\0´b\0´v\0´ņ\0´Ž\0´Ķ\0´H\0´?\x000D";
     private const string LatvianBarcode1 = "010477298543159410SsKīB;m\x00081723020721vĪD×4\0´d1Šp\x000D";
@@ -565,7 +565,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string LatvianBarcode10 = "010477298543159410Ūē0:7rN\x00081724070321)Gnt3ČFj%\0°";
     private const string LatvianBarcode11 = "010477298543159410&ŅAĀšņļ\x00081723112621\0åCŠnlĪņAm\x000D";
     private const string LatvianBarcode12 = "0104772985431594102c5gJV-\x00081723040421DZrŪ9ŪjMvŪ\x000D";
-    private const string LithuanianBaseline = "  Ą \" Į Ų ' ( ) Ū Ž , - . / 0 ą č ę ė į š ų ū 9 : ; < ž > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   Ę Ė Č [ \\ ] Š ` { | } ~    \x001D    \x001C    \0    \0    \x000D";
+    private const string LithuanianBaseline = "  Ą \" Į Ų ' ( ) Ū Ž , - . / 0 ą č ę ė į š ų ū 9 : ; < ž > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   Ę Ė Č [ \\ ] Š ` { | } ~    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string LithuanianBarcode1 = "0ą0ėųųč9ūįėęąį9ėą0DdVcX<t\x001Dąųčę0č0ųčąyCHŪė'hąAb\x000D";
     private const string LithuanianBarcode2 = "0ą0ėųųč9ūįėęąį9ėą0.GRsĄqO\x001Dąųčę0ųč9čąTgIv?,šBmK\x000D";
     private const string LithuanianBarcode3 = "0ą0ėųųč9ūįėęąį9ėą0(fpNxYi\x001Dąųčę0ė0įčąZŲUrų>0oQS\x000D";
@@ -578,7 +578,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string LithuanianBarcode10 = "0ą0ėųųč9ūįėęąį9ėą0Qo0>ųrU\x001Dąųčė0ų0ęčą)WukęPŽeĮ\"\x000D";
     private const string LithuanianBarcode11 = "0ą0ėųųč9ūįėęąį9ėą0ŲZJMaz/\x001Dąųčęąąčščą\"j:AugCzJt\x000D";
     private const string LithuanianBarcode12 = "0ą0ėųųč9ūįėęąį9ėą0č;įwEY-\x001Dąųčę0ė0ėčąHIrQ9QeTyQ\x000D";
-    private const string LithuanianIbmBaseline = "  1 Ė 5 7 ė 9 0 8 = č _ š ę ) ! \" / ; : , . ? ( Ų ų Č + Š Ę A B C D E F G H I J K L M N O P Ą R S T U V Ž Ū Y Z - a b c d e f g h i j k l m n o p ą r s t u v ž ū y z   3 4 2 į | “ 6 ` Į \\ ” ~    \x001D    \x001C    \0    \0    \x000D";
+    private const string LithuanianIbmBaseline = "  1 Ė 5 7 ė 9 0 8 = č _ š ę ) ! \" / ; : , . ? ( Ų ų Č + Š Ę A B C D E F G H I J K L M N O P Ą R S T U V Ž Ū Y Z - a b c d e f g h i j k l m n o p ą r s t u v ž ū y z   3 4 2 į | “ 6 ` Į \\ ” ~    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string LithuanianIbmBarcode1 = ")!);..\"(?:;/!:(;!)DdVcŪČt\x001D!.\"/)\").\"!yCH8;ėh!Ab\x000D";
     private const string LithuanianIbmBarcode2 = ")!);..\"(?:;/!:(;!)šGRs1ąO\x001D!.\"/).\"(\"!TgIvĘč,BmK\x000D";
     private const string LithuanianIbmBarcode3 = ")!);..\"(?:;/!:(;!)9fpNūYi\x001D!.\"/);):\"!Z7Ur.Š)oĄS\x000D";
@@ -591,7 +591,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string LithuanianIbmBarcode10 = ")!);..\"(?:;/!:(;!)Ąo)Š.rU\x001D!.\";).)/\"!0Žuk/P=e5Ė\x000D";
     private const string LithuanianIbmBarcode11 = ")!);..\"(?:;/!:(;!)7ZJMazę\x001D!.\"/!!\",\"!ĖjŲAugCzJt\x000D";
     private const string LithuanianIbmBarcode12 = ")!);..\"(?:;/!:(;!)\"ų:žEY_\x001D!.\"/););\"!HIrĄ(ĄeTyĄ\x000D";
-    private const string LithuanianStandardBaseline = "  1 Ė 5 7 ė 9 0 8 X č ? f ę ) ! - / ; : , . = ( Ų ų Č x F Ę A B C D E Š G H I J K L M N O P Ą R S T U V Ž Ū Y Z + a b c d e š g h i j k l m n o p ą r s t u v ž ū y z   3 4 2 į q w 6 ` Į Q W ~    \0    \0    \0    \0    \x000D";
+    private const string LithuanianStandardBaseline = "  1 Ė 5 7 ė 9 0 8 X č ? f ę ) ! - / ; : , . = ( Ų ų Č x F Ę A B C D E Š G H I J K L M N O P Ą R S T U V Ž Ū Y Z + a b c d e š g h i j k l m n o p ą r s t u v ž ū y z   3 4 2 į q w 6 ` Į Q W ~    \0    \0    \0    \0    \0    \x000D";
     private const string LithuanianStandardBarcode1 = ")!);..-(=:;/!:(;!)DdVcŪČt\0!.-/)-).-!yCH8;ėh!Ab\x000D";
     private const string LithuanianStandardBarcode2 = ")!);..-(=:;/!:(;!)fGRs1ąO\0!.-/).-(-!TgIvĘč,BmK\x000D";
     private const string LithuanianStandardBarcode3 = ")!);..-(=:;/!:(;!)9špNūYi\0!.-/);):-!Z7Ur.F)oĄS\x000D";
@@ -604,7 +604,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string LithuanianStandardBarcode10 = ")!);..-(=:;/!:(;!)Ąo)F.rU\0!.-;).)/-!0Žuk/PXe5Ė\x000D";
     private const string LithuanianStandardBarcode11 = ")!);..-(=:;/!:(;!)7ZJMazę\0!.-/!!-,-!ĖjŲAugCzJt\x000D";
     private const string LithuanianStandardBarcode12 = ")!);..-(=:;/!:(;!)-ų:žEY?\0!.-/););-!HIrĄ(ĄeTyĄ\x000D";
-    private const string SorbianBaseline = "  ! Ä % / ä ) = ( \0`, ß . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   § $ \" ü # + & \0^Ü ' * °    \0    \0    \0    \0    \x000D";
+    private const string SorbianBaseline = "  ! Ä % / ä ) = ( \0`, ß . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   § $ \" ü # + & \0^Ü ' * °    \0    \0    \0    \0    \0    \x000D";
     private const string SorbianDeadKey1 = "\0`!\0`Ä\0`§\0`$\0`%\0`/\0`ä\0`)\0`=\0`(\0``\0`,\0`ß\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ö\0`ö\0`;\0`´\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Z\0`Y\0`ü\0`#\0`+\0`&\0`?\0`^\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`z\0`y\0`Ü\0`'\0`*\0`°\x000D";
     private const string SorbianDeadKey2 = "\0´!\0´Ä\0´§\0´$\0´%\0´/\0´ä\0´)\0´=\0´(\0´`\0´,\0´ß\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ö\0´ö\0´;\0´´\0´:\0´_\0´\"\0´A\0´B\0Ć\0´D\0´E\0´F\0´G\0´H\0´I\0´J\0´K\0Ł\0´M\0Ń\0Ó\0´P\0´Q\0Ŕ\0Ś\0´T\0´U\0´V\0´W\0´X\0Ź\0´Y\0´ü\0´#\0´+\0´&\0´?\0´^\0´a\0´b\0ć\0´d\0´e\0´f\0´g\0´h\0´i\0´j\0´k\0ł\0´m\0ń\0ó\0´p\0´q\0ŕ\0ś\0´t\0´u\0´v\0´w\0´x\0ź\0´y\0´Ü\0´'\0´*\0´°\x000D";
     private const string SorbianDeadKey3 = "\0^!\0^Ä\0^§\0^$\0^%\0^/\0^ä\0^)\0^=\0^(\0^`\0^,\0^ß\0^.\0^-\0^0\0^1\0^2\0^3\0^4\0^5\0^6\0^7\0^8\0^9\0^Ö\0^ö\0^;\0^´\0^:\0^_\0^\"\0^A\0^B\0Č\0^D\0Ě\0^F\0^G\0^H\0^I\0^J\0^K\0^L\0^M\0^N\0^O\0^P\0^Q\0Ř\0Š\0^T\0^U\0^V\0^W\0^X\0Ž\0^Y\0^ü\0^#\0^+\0^&\0^?\0^^\0^a\0^b\0č\0^d\0ě\0^f\0^g\0^h\0^i\0^j\0^k\0^l\0^m\0^n\0^o\0^p\0^q\0ř\0š\0^t\0^u\0^v\0^w\0^x\0ž\0^y\0^Ü\0^'\0^*\0^°\x000D";
@@ -620,7 +620,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string SorbianBarcode10 = "010477298543159410Qo0:7rU\01724070321=Wuk3P\0è%Ä\x000D";
     private const string SorbianBarcode11 = "010477298543159410/YJMay-\01723112621ÄjÖAugCyJt\x000D";
     private const string SorbianBarcode12 = "0104772985431594102ö5wEZß\01723040421HIrQ9QeTzQ\x000D";
-    private const string NorwegianWithSamiBaseline = "  ! Æ % / æ ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ø ø ; \\ : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& | Å * \0^§    \0    \0    \0    \0    \x000D";
+    private const string NorwegianWithSamiBaseline = "  ! Æ % / æ ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ø ø ; \\ : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& | Å * \0^§    \0    \0    \0    \0    \0    \x000D";
     private const string NorwegianWithSamiDeadKey1 = "\0`!\0`Æ\0`#\0`¤\0`%\0`/\0`æ\0`)\0`=\0`(\0``\0`,\0`+\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ø\0`ø\0`;\0`\\\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0Ẁ\0`X\0Ỳ\0`Z\0`å\0`'\0`¨\0`&\0`?\0`|\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0ẁ\0`x\0ỳ\0`z\0`Å\0`*\0`^\0`§\x000D";
     private const string NorwegianWithSamiDeadKey2 = "\0¨!\0¨Æ\0¨#\0¨¤\0¨%\0¨/\0¨æ\0¨)\0¨=\0¨(\0¨`\0¨,\0¨+\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨Ø\0¨ø\0¨;\0¨\\\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0Ẅ\0¨X\0Ÿ\0¨Z\0¨å\0¨'\0¨¨\0¨&\0¨?\0¨|\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0ẅ\0¨x\0ÿ\0¨z\0¨Å\0¨*\0¨^\0¨§\x000D";
     private const string NorwegianWithSamiDeadKey3 = "\0^!\0^Æ\0^#\0^¤\0^%\0^/\0^æ\0^)\0^=\0^(\0^`\0^,\0^+\0^.\0^-\0^0\0^1\0^2\0^3\0^4\0^5\0^6\0^7\0^8\0^9\0^Ø\0^ø\0^;\0^\\\0^:\0^_\0^\"\0Â\0^B\0Ĉ\0^D\0Ê\0^F\0Ĝ\0Ĥ\0Î\0Ĵ\0^K\0^L\0^M\0^N\0Ô\0^P\0^Q\0^R\0Ŝ\0^T\0Û\0^V\0Ŵ\0^X\0Ŷ\0^Z\0^å\0^'\0^¨\0^&\0^?\0^|\0â\0^b\0ĉ\0^d\0ê\0^f\0ĝ\0ĥ\0î\0ĵ\0^k\0^l\0^m\0^n\0ô\0^p\0^q\0^r\0ŝ\0^t\0û\0^v\0ŵ\0^x\0ŷ\0^z\0^Å\0^*\0^^\0^§\x000D";
@@ -636,7 +636,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string NorwegianWithSamiBarcode10 = "010477298543159410Qo0:7rU\01724070321=Wuk3P\0è%Æ\x000D";
     private const string NorwegianWithSamiBarcode11 = "010477298543159410/ZJMaz-\01723112621ÆjØAugCzJt\x000D";
     private const string NorwegianWithSamiBarcode12 = "0104772985431594102ø5wEY+\01723040421HIrQ9QeTyQ\x000D";
-    private const string LuxembourgishBaseline = "  + ä % / à ) = ( \0`, ' . - 0 1 2 3 4 5 6 7 8 9 ö é ; \0^: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   * ç \" è $ \0\"& § ü £ ! °    \x001D    \x001C    \0    \0    \x000D";
+    private const string LuxembourgishBaseline = "  + ä % / à ) = ( \0`, ' . - 0 1 2 3 4 5 6 7 8 9 ö é ; \0^: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   * ç \" è $ \0\"& § ü £ ! °    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string LuxembourgishDeadKey1 = "\0`+\0`ä\0`*\0`ç\0`%\0`/\0`à\0`)\0`=\0`(\0``\0`,\0`'\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`ö\0`é\0`;\0`^\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Z\0`Y\0`è\0`$\0`¨\0`&\0`?\0`§\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`z\0`y\0`ü\0`£\0`!\0`°\x000D";
     private const string LuxembourgishDeadKey2 = "\0^+\0^ä\0^*\0^ç\0^%\0^/\0^à\0^)\0^=\0^(\0^`\0^,\0^'\0^.\0^-\0^0\0^1\0^2\0^3\0^4\0^5\0^6\0^7\0^8\0^9\0^ö\0^é\0^;\0^^\0^:\0^_\0^\"\0Â\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^M\0^N\0Ô\0^P\0^Q\0^R\0^S\0^T\0Û\0^V\0^W\0^X\0^Z\0^Y\0^è\0^$\0^¨\0^&\0^?\0^§\0â\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^m\0^n\0ô\0^p\0^q\0^r\0^s\0^t\0û\0^v\0^w\0^x\0^z\0^y\0^ü\0^£\0^!\0^°\x000D";
     private const string LuxembourgishDeadKey3 = "\0¨+\0¨ä\0¨*\0¨ç\0¨%\0¨/\0¨à\0¨)\0¨=\0¨(\0¨`\0¨,\0¨'\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨ö\0¨é\0¨;\0¨^\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0¨Z\0¨Y\0¨è\0¨$\0¨¨\0¨&\0¨?\0¨§\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0¨z\0ÿ\0¨ü\0¨£\0¨!\0¨°\x000D";
@@ -652,7 +652,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string LuxembourgishBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P\0è%ä\x000D";
     private const string LuxembourgishBarcode11 = "010477298543159410/YJMay-\x001D1723112621äjöAugCyJt\x000D";
     private const string LuxembourgishBarcode12 = "0104772985431594102é5wEZ'\x001D1723040421HIrQ9QeTzQ\x000D";
-    private const string NorwegianBaseline = "  ! Æ % / æ ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ø ø ; \\ : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& | Å * \0^§    \x001D    \0    \0    \0    \x000D";
+    private const string NorwegianBaseline = "  ! Æ % / æ ) = ( \0`, + . - 0 1 2 3 4 5 6 7 8 9 Ø ø ; \\ : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # ¤ \" å ' \0¨& | Å * \0^§    \x001D    \0    \0    \0    \0    \x000D";
     private const string NorwegianDeadKey1 = "\0`!\0`Æ\0`#\0`¤\0`%\0`/\0`æ\0`)\0`=\0`(\0``\0`,\0`+\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ø\0`ø\0`;\0`\\\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Y\0`Z\0`å\0`'\0`¨\0`&\0`?\0`|\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`y\0`z\0`Å\0`*\0`^\0`§\x000D";
     private const string NorwegianDeadKey2 = "\0¨!\0¨Æ\0¨#\0¨¤\0¨%\0¨/\0¨æ\0¨)\0¨=\0¨(\0¨`\0¨,\0¨+\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨Ø\0¨ø\0¨;\0¨\\\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0¨Y\0¨Z\0¨å\0¨'\0¨¨\0¨&\0¨?\0¨|\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0ÿ\0¨z\0¨Å\0¨*\0¨^\0¨§\x000D";
     private const string NorwegianDeadKey3 = "\0^!\0^Æ\0^#\0^¤\0^%\0^/\0^æ\0^)\0^=\0^(\0^`\0^,\0^+\0^.\0^-\0^0\0^1\0^2\0^3\0^4\0^5\0^6\0^7\0^8\0^9\0^Ø\0^ø\0^;\0^\\\0^:\0^_\0^\"\0Â\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^M\0^N\0Ô\0^P\0^Q\0^R\0^S\0^T\0Û\0^V\0^W\0^X\0^Y\0^Z\0^å\0^'\0^¨\0^&\0^?\0^|\0â\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^m\0^n\0ô\0^p\0^q\0^r\0^s\0^t\0û\0^v\0^w\0^x\0^y\0^z\0^Å\0^*\0^^\0^§\x000D";
@@ -668,7 +668,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string NorwegianBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P\0è%Æ\x000D";
     private const string NorwegianBarcode11 = "010477298543159410/ZJMaz-\x001D1723112621ÆjØAugCzJt\x000D";
     private const string NorwegianBarcode12 = "0104772985431594102ø5wEY+\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string Maltese47KeyBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   € $ @ ġ ż ħ ^ ċ Ġ Ż Ħ Ċ    \0    \0    \0    \0    \x000D";
+    private const string Maltese47KeyBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   € $ @ ġ ż ħ ^ ċ Ġ Ż Ħ Ċ    \0    \0    \0    \0    \0    \x000D";
     private const string Maltese47KeyBarcode1 = "010477298543159410DdVcX<t\01723020721yCH*4'h1Ab\x000D";
     private const string Maltese47KeyBarcode2 = "010477298543159410.GRs!qO\01723072921TgIv?,6BmK\x000D";
     private const string Maltese47KeyBarcode3 = "010477298543159410(fpNxYi\01723040521Z&Ur7>0oQS\x000D";
@@ -681,7 +681,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string Maltese47KeyBarcode10 = "010477298543159410Qo0>7rU\01724070321)Wuk3P+e%\"\x000D";
     private const string Maltese47KeyBarcode11 = "010477298543159410&ZJMaz/\01723112621\"j:AugCzJt\x000D";
     private const string Maltese47KeyBarcode12 = "0104772985431594102;5wEY-\01723040421HIrQ9QeTyQ\x000D";
-    private const string Maltese48KeyBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   € $ \" ġ # ħ ^ ċ Ġ ~ Ħ Ċ    \0    \0    \0    \0    \x000D";
+    private const string Maltese48KeyBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   € $ \" ġ # ħ ^ ċ Ġ ~ Ħ Ċ    \0    \0    \0    \0    \0    \x000D";
     private const string Maltese48KeyBarcode1 = "010477298543159410DdVcX<t\01723020721yCH*4'h1Ab\x000D";
     private const string Maltese48KeyBarcode2 = "010477298543159410.GRs!qO\01723072921TgIv?,6BmK\x000D";
     private const string Maltese48KeyBarcode3 = "010477298543159410(fpNxYi\01723040521Z&Ur7>0oQS\x000D";
@@ -694,7 +694,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string Maltese48KeyBarcode10 = "010477298543159410Qo0>7rU\01724070321)Wuk3P+e%@\x000D";
     private const string Maltese48KeyBarcode11 = "010477298543159410&ZJMaz/\01723112621@j:AugCzJt\x000D";
     private const string Maltese48KeyBarcode12 = "0104772985431594102;5wEY-\01723040421HIrQ9QeTyQ\x000D";
-    private const string PolishProgrammersBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } \0~   \x001D    \x001C    \0    \x001F    \x000D";
+    private const string PolishProgrammersBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } \0~   \x001D    \x001C    \0    \x001F    \0    \x000D";
     private const string PolishProgrammersDeadKey1 = "\0~!\0~\"\0~#\0~$\0~%\0~&\0~'\0~(\0~)\0~*\0~+\0~,\0~-\0~.\0~/\0~0\0~1\0~2\0~3\0~4\0~5\0~6\0~7\0~8\0~9\0~:\0~;\0~<\0~=\0~>\0~?\0~@\0Ą\0~B\0Ć\0~D\0Ę\0~F\0~G\0~H\0~I\0~J\0~K\0Ł\0~M\0Ń\0Ó\0~P\0~Q\0~R\0Ś\0~T\0~U\0~V\0~W\0Ź\0~Y\0Ż\0~[\0~\\\0~]\0~^\0~_\0~`\0ą\0~b\0ć\0~d\0ę\0~f\0~g\0~h\0~i\0~j\0~k\0ł\0~m\0ń\0ó\0~p\0~q\0~r\0ś\0~t\0~u\0~v\0~w\0ź\0~y\0ż\0~{\0~|\0~}\0~~\x000D";
     private const string PolishProgrammersBarcode1 = "010477298543159410DdVcX<t\x001D1723020721yCH*4'h1Ab\x000D";
     private const string PolishProgrammersBarcode2 = "010477298543159410.GRs!qO\x001D1723072921TgIv?,6BmK\x000D";
@@ -708,7 +708,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string PolishProgrammersBarcode10 = "010477298543159410Qo0>7rU\x001D1724070321)Wuk3P+e%\"\x000D";
     private const string PolishProgrammersBarcode11 = "010477298543159410&ZJMaz/\x001D1723112621\"j:AugCzJt\x000D";
     private const string PolishProgrammersBarcode12 = "0104772985431594102;5wEY-\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string Polish214Baseline = "  ! ę % / ą ) = ( * , + . - 0 1 2 3 4 5 6 7 8 9 Ł ł ; ' : _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   # ¤ \" ż ó ś & \0˛ń ź ć \0·   \x001D    \x001C    \0    \0    \x000D";
+    private const string Polish214Baseline = "  ! ę % / ą ) = ( * , + . - 0 1 2 3 4 5 6 7 8 9 Ł ł ; ' : _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   # ¤ \" ż ó ś & \0˛ń ź ć \0·   \x001D    \x001C    \0    \0    \0    \x000D";
     private const string Polish214DeadKey1 = "\0˛!\0˛ę\0˛#\0˛¤\0˛%\0˛/\0˛ą\0˛)\0˛=\0˛(\0˛*\0˛,\0˛+\0˛.\0˛-\0˛0\0˛1\0˛2\0˛3\0˛4\0˛5\0˛6\0˛7\0˛8\0˛9\0˛Ł\0˛ł\0˛;\0˛'\0˛:\0˛_\0˛\"\0Ą\0˛B\0˛C\0˛D\0Ę\0˛F\0˛G\0˛H\0˛I\0˛J\0˛K\0˛L\0˛M\0˛N\0˛O\0˛P\0˛Q\0˛R\0˛S\0˛T\0˛U\0˛V\0˛W\0˛X\0˛Z\0˛Y\0˛ż\0˛ó\0˛ś\0˛&\0˛?\0˛˛\0ą\0˛b\0˛c\0˛d\0ę\0˛f\0˛g\0˛h\0˛i\0˛j\0˛k\0˛l\0˛m\0˛n\0˛o\0˛p\0˛q\0˛r\0˛s\0˛t\0˛u\0˛v\0˛w\0˛x\0˛z\0˛y\0˛ń\0˛ź\0˛ć\0˛·\x000D";
     private const string Polish214DeadKey2 = "\0·!\0·ę\0·#\0·¤\0·%\0·/\0·ą\0·)\0·=\0·(\0·*\0·,\0·+\0·.\0·-\0·0\0·1\0·2\0·3\0·4\0·5\0·6\0·7\0·8\0·9\0·Ł\0·ł\0·;\0·'\0·:\0·_\0·\"\0·A\0·B\0·C\0·D\0·E\0·F\0·G\0·H\0·I\0·J\0·K\0·L\0·M\0·N\0·O\0·P\0·Q\0·R\0·S\0·T\0·U\0·V\0·W\0·X\0Ż\0·Y\0·ż\0·ó\0·ś\0·&\0·?\0·˛\0·a\0·b\0·c\0·d\0·e\0·f\0·g\0·h\0·i\0·j\0·k\0·l\0·m\0·n\0·o\0·p\0·q\0·r\0·s\0·t\0·u\0·v\0·w\0·x\0ż\0·y\0·ń\0·ź\0·ć\0··\x000D";
     private const string Polish214Barcode1 = "010477298543159410DdVcX;t\x001D1723020721zCH(4ąh1Ab\x000D";
@@ -723,7 +723,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string Polish214Barcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P*e%ę\x000D";
     private const string Polish214Barcode11 = "010477298543159410/YJMay-\x001D1723112621ęjŁAugCyJt\x000D";
     private const string Polish214Barcode12 = "0104772985431594102ł5wEZ+\x001D1723040421HIrQ9QeTzQ\x000D";
-    private const string PortugueseBaseline = "  ! ª % / º ) = ( » , ' . - 0 1 2 3 4 5 6 7 8 9 Ç ç ; « : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ \" + \0~\0´& \\ * \0^\0`|    \0    \0    \0    \0    \x000D";
+    private const string PortugueseBaseline = "  ! ª % / º ) = ( » , ' . - 0 1 2 3 4 5 6 7 8 9 Ç ç ; « : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ \" + \0~\0´& \\ * \0^\0`|    \0    \0    \0    \0    \0    \x000D";
     private const string PortugueseDeadKey1 = "\0~!\0~ª\0~#\0~$\0~%\0~/\0~º\0~)\0~=\0~(\0~»\0~,\0~'\0~.\0~-\0~0\0~1\0~2\0~3\0~4\0~5\0~6\0~7\0~8\0~9\0~Ç\0~ç\0~;\0~«\0~:\0~_\0~\"\0Ã\0~B\0~C\0~D\0~E\0~F\0~G\0~H\0~I\0~J\0~K\0~L\0~M\0Ñ\0Õ\0~P\0~Q\0~R\0~S\0~T\0~U\0~V\0~W\0~X\0~Y\0~Z\0~+\0~~\0~´\0~&\0~?\0~\\\0ã\0~b\0~c\0~d\0~e\0~f\0~g\0~h\0~i\0~j\0~k\0~l\0~m\0ñ\0õ\0~p\0~q\0~r\0~s\0~t\0~u\0~v\0~w\0~x\0~y\0~z\0~*\0~^\0~`\0~|\x000D";
     private const string PortugueseDeadKey2 = "\0´!\0´ª\0´#\0´$\0´%\0´/\0´º\0´)\0´=\0´(\0´»\0´,\0´'\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ç\0´ç\0´;\0´«\0´:\0´_\0´\"\0Á\0´B\0´C\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0´L\0´M\0´N\0Ó\0´P\0´Q\0´R\0´S\0´T\0Ú\0´V\0´W\0´X\0Ý\0´Z\0´+\0´~\0´´\0´&\0´?\0´\\\0á\0´b\0´c\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0´l\0´m\0´n\0ó\0´p\0´q\0´r\0´s\0´t\0ú\0´v\0´w\0´x\0ý\0´z\0´*\0´^\0´`\0´|\x000D";
     private const string PortugueseDeadKey3 = "\0^!\0^ª\0^#\0^$\0^%\0^/\0^º\0^)\0^=\0^(\0^»\0^,\0^'\0^.\0^-\0^0\0^1\0^2\0^3\0^4\0^5\0^6\0^7\0^8\0^9\0^Ç\0^ç\0^;\0^«\0^:\0^_\0^\"\0Â\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^M\0^N\0Ô\0^P\0^Q\0^R\0^S\0^T\0Û\0^V\0^W\0^X\0^Y\0^Z\0^+\0^~\0^´\0^&\0^?\0^\\\0â\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^m\0^n\0ô\0^p\0^q\0^r\0^s\0^t\0û\0^v\0^w\0^x\0^y\0^z\0^*\0^^\0^`\0^|\x000D";
@@ -740,7 +740,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string PortugueseBarcode10 = "010477298543159410Qo0:7rU\01724070321=Wuk3P»e%ª\x000D";
     private const string PortugueseBarcode11 = "010477298543159410/ZJMaz-\01723112621ªjÇAugCzJt\x000D";
     private const string PortugueseBarcode12 = "0104772985431594102ç5wEY'\01723040421HIrQ9QeTyQ\x000D";
-    private const string RomanianStandardBaseline = "  ! Ț % & ț ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 Ș ș ; = : ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ ă â î ^ „ Ă Â Î ”    \0    \0    \0    \0    \x000D";
+    private const string RomanianStandardBaseline = "  ! Ț % & ț ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 Ș ș ; = : ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ ă â î ^ „ Ă Â Î ”    \0    \0    \0    \0    \0    \x000D";
     private const string RomanianStandardBarcode1 = "010477298543159410DdVcX;t\01723020721yCH*4țh1Ab\x000D";
     private const string RomanianStandardBarcode2 = "010477298543159410.GRs!qO\01723072921TgIv?,6BmK\x000D";
     private const string RomanianStandardBarcode3 = "010477298543159410(fpNxYi\01723040521Z&Ur7:0oQS\x000D";
@@ -753,7 +753,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string RomanianStandardBarcode10 = "010477298543159410Qo0:7rU\01724070321)Wuk3P+e%Ț\x000D";
     private const string RomanianStandardBarcode11 = "010477298543159410&ZJMaz/\01723112621ȚjȘAugCzJt\x000D";
     private const string RomanianStandardBarcode12 = "0104772985431594102ș5wEY-\01723040421HIrQ9QeTyQ\x000D";
-    private const string RomanianLegacyBaseline = "  ! Ţ % / ţ ) = ( * , + . - 0 1 2 3 4 5 6 7 8 9 Ş ş ; ' : _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   # ¤ \" ă â î & ] Ă Â Î [    \x001D    \x001C    \0    \0    \x000D";
+    private const string RomanianLegacyBaseline = "  ! Ţ % / ţ ) = ( * , + . - 0 1 2 3 4 5 6 7 8 9 Ş ş ; ' : _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   # ¤ \" ă â î & ] Ă Â Î [    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string RomanianLegacyBarcode1 = "010477298543159410DdVcX;t\x001D1723020721zCH(4ţh1Ab\x000D";
     private const string RomanianLegacyBarcode2 = "010477298543159410.GRs!qO\x001D1723072921TgIv_,6BmK\x000D";
     private const string RomanianLegacyBarcode3 = "010477298543159410)fpNxZi\x001D1723040521Y/Ur7:0oQS\x000D";
@@ -766,7 +766,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string RomanianLegacyBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P*e%Ţ\x000D";
     private const string RomanianLegacyBarcode11 = "010477298543159410/YJMay-\x001D1723112621ŢjŞAugCyJt\x000D";
     private const string RomanianLegacyBarcode12 = "0104772985431594102ş5wEZ+\x001D1723040421HIrQ9QeTzQ\x000D";
-    private const string RomanianProgrammersBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \0    \0    \0    \0    \x000D";
+    private const string RomanianProgrammersBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \0    \0    \0    \0    \0    \x000D";
     private const string RomanianProgrammersBarcode1 = "010477298543159410DdVcX<t\01723020721yCH*4'h1Ab\x000D";
     private const string RomanianProgrammersBarcode2 = "010477298543159410.GRs!qO\01723072921TgIv?,6BmK\x000D";
     private const string RomanianProgrammersBarcode3 = "010477298543159410(fpNxYi\01723040521Z&Ur7>0oQS\x000D";
@@ -779,7 +779,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string RomanianProgrammersBarcode10 = "010477298543159410Qo0>7rU\01724070321)Wuk3P+e%\"\x000D";
     private const string RomanianProgrammersBarcode11 = "010477298543159410&ZJMaz/\01723112621\"j:AugCzJt\x000D";
     private const string RomanianProgrammersBarcode12 = "0104772985431594102;5wEY-\01723040421HIrQ9QeTyQ\x000D";
-    private const string ScottishGaelicBaseline = "  ! @ % & \0'( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ \0`{ ~ } `    \x001D    \x001C    \0    \0    \x000D";
+    private const string ScottishGaelicBaseline = "  ! @ % & \0'( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ \0`{ ~ } `    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string ScottishGaelicDeadKey1 = "\0'!\0'@\0'£\0'$\0'%\0'&\0''\0'(\0')\0'*\0'+\0',\0'-\0'.\0'/\0'0\0'1\0'2\0'3\0'4\0'5\0'6\0'7\0'8\0'9\0':\0';\0'<\0'=\0'>\0'?\0'\"\0Á\0'B\0'C\0'D\0É\0'F\0'G\0'H\0Í\0'J\0'K\0'L\0'M\0'N\0Ó\0'P\0'Q\0'R\0'S\0'T\0Ú\0'V\0'W\0'X\0Ý\0'Z\0'[\0'#\0']\0'^\0'_\0'`\0á\0'b\0'c\0'd\0é\0'f\0'g\0'h\0í\0'j\0'k\0'l\0'm\0'n\0ó\0'p\0'q\0'r\0's\0't\0ú\0'v\0'w\0'x\0ý\0'z\0'{\0'~\0'}\0'`\x000D";
     private const string ScottishGaelicDeadKey2 = "\0`!\0`@\0`£\0`$\0`%\0`&\0`'\0`(\0`)\0`*\0`+\0`,\0`-\0`.\0`/\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`:\0`;\0`<\0`=\0`>\0`?\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Y\0`Z\0`[\0`#\0`]\0`^\0`_\0``\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`y\0`z\0`{\0`~\0`}\0``\x000D";
     private const string ScottishGaelicBarcode1 = "010477298543159410DdVcX<t\x001D1723020721yCH*4\0'h1Ab\x000D";
@@ -794,9 +794,9 @@ public class KeyboardCalibratorTestsStateless {
     private const string ScottishGaelicBarcode10 = "010477298543159410Qo0>7rU\x001D1724070321)Wuk3P+e%@\x000D";
     private const string ScottishGaelicBarcode11 = "010477298543159410&ZJMaz/\x001D1723112621@j:AugCzJt\x000D";
     private const string ScottishGaelicBarcode12 = "0104772985431594102;5wEY-\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string SlovakBaseline = "  1 ! 5 7 § 9 0 8 \0ˇ, = . - é + ľ š č ť ž ý á í \" ô ? \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y % a b c d e f g h i j k l m n o p q r s t u v w x z y   3 4 2 ú ň ä 6 ; / ) ( \0°   \0    \x001C    \x001E    \0    \x000D";
+    private const string SlovakBaseline = "  1 ! 5 7 § 9 0 8 \0ˇ, = . - é + ľ š č ť ž ý á í \" ô ? \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y % a b c d e f g h i j k l m n o p q r s t u v w x z y   3 4 2 ú ň ä 6 ; / ) ( \0°   \0    \x001C    \x001E    \0    \0    \x000D";
     private const string SlovakDeadKey1 = "\0ˇ1\0ˇ!\0ˇ3\0ˇ4\0ˇ5\0ˇ7\0ˇ§\0ˇ9\0ˇ0\0ˇ8\0ˇˇ\0ˇ,\0ˇ=\0ˇ.\0ˇ-\0ˇé\0ˇ+\0ˇľ\0ˇš\0ˇč\0ˇť\0ˇž\0ˇý\0ˇá\0ˇí\0ˇ\"\0ˇô\0ˇ?\0ˇ´\0ˇ:\0ˇ_\0ˇ2\0ˇA\0ˇB\0Č\0Ď\0Ě\0ˇF\0ˇG\0ˇH\0ˇI\0ˇJ\0ˇK\0Ľ\0ˇM\0Ň\0ˇO\0ˇP\0ˇQ\0Ř\0Š\0Ť\0ˇU\0ˇV\0ˇW\0ˇX\0Ž\0ˇY\0ˇú\0ˇň\0ˇä\0ˇ6\0ˇ%\0ˇ;\0ˇa\0ˇb\0č\0ď\0ě\0ˇf\0ˇg\0ˇh\0ˇi\0ˇj\0ˇk\0ľ\0ˇm\0ň\0ˇo\0ˇp\0ˇq\0ř\0š\0ť\0ˇu\0ˇv\0ˇw\0ˇx\0ž\0ˇy\0ˇ/\0ˇ)\0ˇ(\0ˇ°\x000D";
-    private const string SlovakQwertyBaseline = "  1 ! 5 7 § 9 0 8 \0ˇ, = . - é + ľ š č ť ž ý á í \" ô ? \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z % a b c d e f g h i j k l m n o p q r s t u v w x y z   3 4 2 ú ň ä 6 ; / ) ( \0°   \x001B    \x001C    \x001E    \0    \x000D";
+    private const string SlovakQwertyBaseline = "  1 ! 5 7 § 9 0 8 \0ˇ, = . - é + ľ š č ť ž ý á í \" ô ? \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z % a b c d e f g h i j k l m n o p q r s t u v w x y z   3 4 2 ú ň ä 6 ; / ) ( \0°   \x001B    \x001C    \x001E    \0    \0    \x000D";
     private const string SlovakQwertyDeadKey1 = "\0ˇ1\0ˇ!\0ˇ3\0ˇ4\0ˇ5\0ˇ7\0ˇ§\0ˇ9\0ˇ0\0ˇ8\0ˇˇ\0ˇ,\0ˇ=\0ˇ.\0ˇ-\0ˇé\0ˇ+\0ˇľ\0ˇš\0ˇč\0ˇť\0ˇž\0ˇý\0ˇá\0ˇí\0ˇ\"\0ˇô\0ˇ?\0ˇ´\0ˇ:\0ˇ_\0ˇ2\0ˇA\0ˇB\0Č\0Ď\0Ě\0ˇF\0ˇG\0ˇH\0ˇI\0ˇJ\0ˇK\0Ľ\0ˇM\0Ň\0ˇO\0ˇP\0ˇQ\0Ř\0Š\0Ť\0ˇU\0ˇV\0ˇW\0ˇX\0ˇY\0Ž\0ˇú\0ˇň\0ˇä\0ˇ6\0ˇ%\0ˇ;\0ˇa\0ˇb\0č\0ď\0ě\0ˇf\0ˇg\0ˇh\0ˇi\0ˇj\0ˇk\0ľ\0ˇm\0ň\0ˇo\0ˇp\0ˇq\0ř\0š\0ť\0ˇu\0ˇv\0ˇw\0ˇx\0ˇy\0ž\0ˇ/\0ˇ)\0ˇ(\0ˇ°\x000D";
     private const string SlovakQwertyDeadKey2 = "\0´1\0´!\0´3\0´4\0´5\0´7\0´§\0´9\0´0\0´8\0´ˇ\0´,\0´=\0´.\0´-\0´é\0´+\0´ľ\0´š\0´č\0´ť\0´ž\0´ý\0´á\0´í\0´\"\0´ô\0´?\0´´\0´:\0´_\0´2\0Á\0´B\0Ć\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0Ĺ\0´M\0Ń\0Ó\0´P\0´Q\0Ŕ\0Ś\0´T\0Ú\0´V\0´W\0´X\0Ý\0Ź\0´ú\0´ň\0´ä\0´6\0´%\0´;\0á\0´b\0ć\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0ĺ\0´m\0ń\0ó\0´p\0´q\0ŕ\0ś\0´t\0ú\0´v\0´w\0´x\0ý\0ź\0´/\0´)\0´(\0´°\x000D";
     private const string SlovakQwertyDeadKey3 = "\0°1\0°!\0°3\0°4\0°5\0°7\0°§\0°9\0°0\0°8\0°ˇ\0°,\0°=\0°.\0°-\0°é\0°+\0°ľ\0°š\0°č\0°ť\0°ž\0°ý\0°á\0°í\0°\"\0°ô\0°?\0°´\0°:\0°_\0°2\0°A\0°B\0°C\0°D\0°E\0°F\0°G\0°H\0°I\0°J\0°K\0°L\0°M\0°N\0°O\0°P\0°Q\0°R\0°S\0°T\0Ů\0°V\0°W\0°X\0°Y\0°Z\0°ú\0°ň\0°ä\0°6\0°%\0°;\0°a\0°b\0°c\0°d\0°e\0°f\0°g\0°h\0°i\0°j\0°k\0°l\0°m\0°n\0°o\0°p\0°q\0°r\0°s\0°t\0ů\0°v\0°w\0°x\0°y\0°z\0°/\0°)\0°(\0°°\x000D";
@@ -812,7 +812,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string SlovakQwertyBarcode10 = "é+éčýýľíáťčš+ťíč+éQoé:ýrU\x001B+ýľčéýéšľ+0WukšP\0ě5!\x000D";
     private const string SlovakQwertyBarcode11 = "é+éčýýľíáťčš+ťíč+é7ZJMaz-\x001B+ýľš++ľžľ+!j\"AugCzJt\x000D";
     private const string SlovakQwertyBarcode12 = "é+éčýýľíáťčš+ťíč+éľôťwEY=\x001B+ýľšéčéčľ+HIrQíQeTyQ\x000D";
-    private const string SlovenianBaseline = "  ! Ć % / ć ) = ( * , ' . - 0 1 2 3 4 5 6 7 8 9 Č č ; + : _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   # $ \" š ž đ & \0¸Š Ž Đ \0¨   \x001B    \x001C    \0    \0    \x000D";
+    private const string SlovenianBaseline = "  ! Ć % / ć ) = ( * , ' . - 0 1 2 3 4 5 6 7 8 9 Č č ; + : _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   # $ \" š ž đ & \0¸Š Ž Đ \0¨   \x001B    \x001C    \0    \0    \0    \x000D";
     private const string SlovenianDeadKey1 = "\0¸!\0¸Ć\0¸#\0¸$\0¸%\0¸/\0¸ć\0¸)\0¸=\0¸(\0¸*\0¸,\0¸'\0¸.\0¸-\0¸0\0¸1\0¸2\0¸3\0¸4\0¸5\0¸6\0¸7\0¸8\0¸9\0¸Č\0¸č\0¸;\0¸+\0¸:\0¸_\0¸\"\0¸A\0¸B\0Ç\0¸D\0¸E\0¸F\0¸G\0¸H\0¸I\0¸J\0¸K\0¸L\0¸M\0¸N\0¸O\0¸P\0¸Q\0¸R\0Ş\0¸T\0¸U\0¸V\0¸W\0¸X\0¸Z\0¸Y\0¸š\0¸ž\0¸đ\0¸&\0¸?\0¸¸\0¸a\0¸b\0ç\0¸d\0¸e\0¸f\0¸g\0¸h\0¸i\0¸j\0¸k\0¸l\0¸m\0¸n\0¸o\0¸p\0¸q\0¸r\0ş\0¸t\0¸u\0¸v\0¸w\0¸x\0¸z\0¸y\0¸Š\0¸Ž\0¸Đ\0¸¨\x000D";
     private const string SlovenianDeadKey2 = "\0¨!\0¨Ć\0¨#\0¨$\0¨%\0¨/\0¨ć\0¨)\0¨=\0¨(\0¨*\0¨,\0¨'\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨Č\0¨č\0¨;\0¨+\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0¨I\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0¨Z\0¨Y\0¨š\0¨ž\0¨đ\0¨&\0¨?\0¨¸\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0¨i\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0¨z\0¨y\0¨Š\0¨Ž\0¨Đ\0¨¨\x000D";
     private const string SlovenianBarcode1 = "010477298543159410DdVcX;t\x001B1723020721zCH(4ćh1Ab\x000D";
@@ -827,7 +827,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string SlovenianBarcode10 = "010477298543159410Qo0:7rU\x001B1724070321=Wuk3P*e%Ć\x000D";
     private const string SlovenianBarcode11 = "010477298543159410/YJMay-\x001B1723112621ĆjČAugCyJt\x000D";
     private const string SlovenianBarcode12 = "0104772985431594102č5wEZ'\x001B1723040421HIrQ9QeTzQ\x000D";
-    private const string SpanishBaseline = "  ! \0¨% / \0´) = ( ¿ , ' . - 0 1 2 3 4 5 6 7 8 9 Ñ ñ ; ¡ : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   · $ \" \0`ç + & º \0^Ç * ª    \x001D    \x001C    \0    \0    \x000D";
+    private const string SpanishBaseline = "  ! \0¨% / \0´) = ( ¿ , ' . - 0 1 2 3 4 5 6 7 8 9 Ñ ñ ; ¡ : _ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ? a b c d e f g h i j k l m n o p q r s t u v w x y z   · $ \" \0`ç + & º \0^Ç * ª    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string SpanishDeadKey1 = "\0¨!\0¨¨\0¨·\0¨$\0¨%\0¨/\0¨´\0¨)\0¨=\0¨(\0¨¿\0¨,\0¨'\0¨.\0¨-\0¨0\0¨1\0¨2\0¨3\0¨4\0¨5\0¨6\0¨7\0¨8\0¨9\0¨Ñ\0¨ñ\0¨;\0¨¡\0¨:\0¨_\0¨\"\0Ä\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨M\0¨N\0Ö\0¨P\0¨Q\0¨R\0¨S\0¨T\0Ü\0¨V\0¨W\0¨X\0¨Y\0¨Z\0¨`\0¨ç\0¨+\0¨&\0¨?\0¨º\0ä\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0ÿ\0¨z\0¨^\0¨Ç\0¨*\0¨ª\x000D";
     private const string SpanishDeadKey2 = "\0´!\0´¨\0´·\0´$\0´%\0´/\0´´\0´)\0´=\0´(\0´¿\0´,\0´'\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ñ\0´ñ\0´;\0´¡\0´:\0´_\0´\"\0Á\0´B\0´C\0´D\0É\0´F\0´G\0´H\0Í\0´J\0´K\0´L\0´M\0´N\0Ó\0´P\0´Q\0´R\0´S\0´T\0Ú\0´V\0´W\0´X\0Ý\0´Z\0´`\0´ç\0´+\0´&\0´?\0´º\0á\0´b\0´c\0´d\0é\0´f\0´g\0´h\0í\0´j\0´k\0´l\0´m\0´n\0ó\0´p\0´q\0´r\0´s\0´t\0ú\0´v\0´w\0´x\0ý\0´z\0´^\0´Ç\0´*\0´ª\x000D";
     private const string SpanishDeadKey3 = "\0`!\0`¨\0`·\0`$\0`%\0`/\0`´\0`)\0`=\0`(\0`¿\0`,\0`'\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ñ\0`ñ\0`;\0`¡\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Y\0`Z\0``\0`ç\0`+\0`&\0`?\0`º\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`y\0`z\0`^\0`Ç\0`*\0`ª\x000D";
@@ -844,7 +844,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string SpanishBarcode10 = "010477298543159410Qo0:7rU\x001D1724070321=Wuk3P¿e%\0¨";
     private const string SpanishBarcode11 = "010477298543159410/ZJMaz-\x001D1723112621\0¨jÑAugCzJt\x000D";
     private const string SpanishBarcode12 = "0104772985431594102ñ5wEY'\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string SpanishVariationBaseline = "  ª Ç ) ! ç ? ₧ ¿ \0¨, - . = 0 1 2 3 4 5 6 7 8 9 Ñ ñ ; \0¨: % A B C D E F G H I J K L M N O P Q R S T U V W X Y Z + a b c d e f g h i j k l m n o p q r s t u v w x y z   / ( \" ÷ \0´\0`¡ ' × \0´\0`·    \x001D    \x001C    \0    \0    \x000D";
+    private const string SpanishVariationBaseline = "  ª Ç ) ! ç ? ₧ ¿ \0¨, - . = 0 1 2 3 4 5 6 7 8 9 Ñ ñ ; \0¨: % A B C D E F G H I J K L M N O P Q R S T U V W X Y Z + a b c d e f g h i j k l m n o p q r s t u v w x y z   / ( \" ÷ \0´\0`¡ ' × \0´\0`·    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string SorbianStandardBaseline = "  ! Ä % / ä ) = ( \0`, ß . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   § $ \" ü # + & \0^Ü ' * °    \0    \0    \0    \0    \x000D";
     private const string SorbianStandardDeadKey1 = "\0`!\0`Ä\0`§\0`$\0`%\0`/\0`ä\0`)\0`=\0`(\0``\0`,\0`ß\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ö\0`ö\0`;\0`´\0`:\0`_\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0`W\0`X\0`Z\0`Y\0`ü\0`#\0`+\0`&\0`?\0`^\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0`w\0`x\0`z\0`y\0`Ü\0`'\0`*\0`°\x000D";
     private const string SorbianStandardDeadKey2 = "\0´!\0´Ä\0´§\0´$\0´%\0´/\0´ä\0´)\0´=\0´(\0´`\0´,\0´ß\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ö\0´ö\0´;\0´´\0´:\0´_\0´\"\0´A\0´B\0Ć\0´D\0´E\0´F\0´G\0´H\0´I\0´J\0´K\0Ł\0´M\0Ń\0Ó\0´P\0´Q\0Ŕ\0Ś\0´T\0´U\0´V\0´W\0´X\0Ź\0´Y\0´ü\0´#\0´+\0´&\0´?\0´^\0´a\0´b\0ć\0´d\0´e\0´f\0´g\0´h\0´i\0´j\0´k\0ł\0´m\0ń\0ó\0´p\0´q\0ŕ\0ś\0´t\0´u\0´v\0´w\0´x\0ź\0´y\0´Ü\0´'\0´*\0´°\x000D";
@@ -861,7 +861,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string SorbianStandardBarcode10 = "010477298543159410Qo0:7rU\01724070321=Wuk3P\0è%Ä\x000D";
     private const string SorbianStandardBarcode11 = "010477298543159410/YJMay-\01723112621ÄjÖAugCyJt\x000D";
     private const string SorbianStandardBarcode12 = "0104772985431594102ö5wEZß\01723040421HIrQ9QeTzQ\x000D";
-    private const string SorbianExtendedBaseline = "  ! Ä % / ä ) = ( \0', ß . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   § $ \" ü ł + & \0ˇÜ Ł * \0˙   \0    \0    \0    \0    \x000D";
+    private const string SorbianExtendedBaseline = "  ! Ä % / ä ) = ( \0', ß . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   § $ \" ü ł + & \0ˇÜ Ł * \0˙   \0    \0    \0    \0    \0    \x000D";
     private const string SorbianExtendedDeadKey1 = "\0`!\0`Ä\0`§\0`$\0`%\0`/\0`ä\0`)\0`=\0`(\0``\0`,\0`ß\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ö\0`ö\0`;\0`´\0`:\0`_\0`\"\0Ą\0`B\0Ç\0`D\0Ę\0`F\0`G\0`H\0`I\0`J\0`K\0`L\0`M\0`N\0Ő\0`P\0`Q\0`R\0Ş\0`T\0Ű\0`V\0`W\0`X\0`Z\0`Y\0`ü\0`ł\0`+\0`&\0`?\0`^\0ą\0`b\0ç\0`d\0ę\0`f\0`g\0`h\0`i\0`j\0`k\0`l\0`m\0`n\0ő\0`p\0`q\0`r\0ş\0`t\0ű\0`v\0`w\0`x\0`z\0`y\0`Ü\0`Ł\0`*\0`°\x000D";
     private const string SorbianExtendedDeadKey2 = "\0´!\0´Ä\0´§\0´$\0´%\0´/\0´ä\0´)\0´=\0´(\0´`\0´,\0´ß\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ö\0´ö\0´;\0´´\0´:\0´_\0´\"\0Á\0´B\0Ć\0Đ\0É\0´F\0´G\0´H\0Í\0´J\0´K\0Ĺ\0´M\0Ń\0Ó\0´P\0´Q\0Ŕ\0Ś\0´T\0Ú\0´V\0´W\0´X\0Ź\0Ý\0´ü\0´ł\0´+\0´&\0´?\0´^\0á\0´b\0ć\0đ\0é\0´f\0´g\0´h\0í\0´j\0´k\0ĺ\0´m\0ń\0ó\0´p\0´q\0ŕ\0ś\0´t\0ú\0´v\0´w\0´x\0ź\0ý\0´Ü\0´Ł\0´*\0´°\x000D";
     private const string SorbianExtendedDeadKey3 = "\0^!\0^Ä\0^§\0^$\0^%\0^/\0^ä\0^)\0^=\0^(\0^`\0^,\0^ß\0^.\0^-\0^0\0^1\0^2\0^3\0^4\0^5\0^6\0^7\0^8\0^9\0^Ö\0^ö\0^;\0^´\0^:\0^_\0^\"\0^A\0^B\0Č\0Ď\0Ě\0^F\0^G\0^H\0^I\0^J\0^K\0Ľ\0^M\0Ň\0Ô\0^P\0^Q\0Ř\0Š\0Ť\0^U\0^V\0^W\0^X\0Ž\0^Y\0^ü\0^ł\0^+\0^&\0^?\0^^\0^a\0^b\0č\0ď\0ě\0^f\0^g\0^h\0^i\0^j\0^k\0ľ\0^m\0ň\0ô\0^p\0^q\0ř\0š\0ť\0^u\0^v\0^w\0^x\0ž\0^y\0^Ü\0^Ł\0^*\0^°\x000D";
@@ -878,7 +878,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string SorbianExtendedBarcode10 = "010477298543159410Qo0:7rU\01724070321=Wuk3P\0ę%Ä\x000D";
     private const string SorbianExtendedBarcode11 = "010477298543159410/YJMay-\01723112621ÄjÖAugCyJt\x000D";
     private const string SorbianExtendedBarcode12 = "0104772985431594102ö5wEZß\01723040421HIrQ9QeTzQ\x000D";
-    private const string SorbianStandardLegacyBaseline = "  ! Ä % / ä ) = ( \0', ß . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   § $ \" ü ł + & \0^Ü Ł * \0̇   \0    \0    \0    \0    \x000D";
+    private const string SorbianStandardLegacyBaseline = "  ! Ä % / ä ) = ( \0', ß . - 0 1 2 3 4 5 6 7 8 9 Ö ö ; \0´: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   § $ \" ü ł + & \0^Ü Ł * \0̇   \0    \0    \0    \0    \0    \x000D";
     private const string SorbianStandardLegacyDeadKey1 = "\0`!\0`Ä\0`§\0`$\0`%\0`/\0`ä\0`)\0`=\0`(\0``\0`,\0`ß\0`.\0`-\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`Ö\0`ö\0`;\0`´\0`:\0`_\0`\"\0À\0`B\0Ç\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0Ş\0`T\0Ù\0`V\0`W\0`X\0`Z\0`Y\0`ü\0`ł\0`+\0`&\0`?\0`^\0à\0`b\0ç\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0ş\0`t\0ù\0`v\0`w\0`x\0`z\0`y\0`Ü\0`Ł\0`*\0`°\x000D";
     private const string SorbianStandardLegacyDeadKey2 = "\0´!\0´Ä\0´§\0´$\0´%\0´/\0´ä\0´)\0´=\0´(\0´`\0´,\0´ß\0´.\0´-\0´0\0´1\0´2\0´3\0´4\0´5\0´6\0´7\0´8\0´9\0´Ö\0´ö\0´;\0´´\0´:\0´_\0´\"\0Á\0´B\0Ć\0Đ\0É\0´F\0´G\0´H\0Í\0´J\0´K\0Ĺ\0´M\0Ń\0Ó\0´P\0´Q\0Ŕ\0Ś\0´T\0Ú\0´V\0´W\0´X\0Ź\0Ý\0´ü\0´ł\0´+\0´&\0´?\0´^\0á\0´b\0ć\0đ\0é\0´f\0´g\0´h\0í\0´j\0´k\0ĺ\0´m\0ń\0ó\0´p\0´q\0ŕ\0ś\0´t\0ú\0´v\0´w\0´x\0ź\0ý\0´Ü\0´Ł\0´*\0´°\x000D";
     private const string SorbianStandardLegacyDeadKey3 = "\0^!\0^Ä\0^§\0^$\0^%\0^/\0^ä\0^)\0^=\0^(\0^`\0^,\0^ß\0^.\0^-\0^0\0^1\0^2\0^3\0^4\0^5\0^6\0^7\0^8\0^9\0^Ö\0^ö\0^;\0^´\0^:\0^_\0^\"\0^A\0^B\0Č\0Ď\0Ě\0^F\0^G\0^H\0^I\0^J\0^K\0Ľ\0^M\0Ň\0ô\0^P\0^Q\0Ř\0Š\0Ť\0^U\0^V\0^W\0^X\0Ž\0^Y\0^ü\0^ł\0^+\0^&\0^?\0^^\0^a\0^b\0č\0ď\0ě\0^f\0^g\0^h\0^i\0^j\0^k\0ľ\0^m\0ň\0Ô\0^p\0^q\0ř\0š\0ť\0^u\0^v\0^w\0^x\0ž\0^y\0^Ü\0^Ł\0^*\0^°\x000D";
@@ -895,7 +895,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string SorbianStandardLegacyBarcode10 = "010477298543159410Qo0:7rU\01724070321=Wuk3P\0è%Ä\x000D";
     private const string SorbianStandardLegacyBarcode11 = "010477298543159410/YJMay-\01723112621ÄjÖAugCyJt\x000D";
     private const string SorbianStandardLegacyBarcode12 = "0104772985431594102ö5wEZß\01723040421HIrQ9QeTzQ\x000D";
-    private const string UnitedKingdomBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    \x001D    \x001C    \0    \0    \x000D";
+    private const string UnitedKingdomBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string UnitedKingdomBarcode1 = "010477298543159410DdVcX<t\x001D1723020721yCH*4'h1Ab\x000D";
     private const string UnitedKingdomBarcode2 = "010477298543159410.GRs!qO\x001D1723072921TgIv?,6BmK\x000D";
     private const string UnitedKingdomBarcode3 = "010477298543159410(fpNxYi\x001D1723040521Z&Ur7>0oQS\x000D";
@@ -908,7 +908,7 @@ public class KeyboardCalibratorTestsStateless {
     private const string UnitedKingdomBarcode10 = "010477298543159410Qo0>7rU\x001D1724070321)Wuk3P+e%@\x000D";
     private const string UnitedKingdomBarcode11 = "010477298543159410&ZJMaz/\x001D1723112621@j:AugCzJt\x000D";
     private const string UnitedKingdomBarcode12 = "0104772985431594102;5wEY-\x001D1723040421HIrQ9QeTyQ\x000D";
-    private const string UnitedKingdomExtendedBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ \0`{ ~ } ¬    \0    \0    \0    \0    \x000D";
+    private const string UnitedKingdomExtendedBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ \0`{ ~ } ¬    \0    \0    \0    \0    \0    \x000D";
     private const string UnitedKingdomExtendedDeadKey1 = "\0`!\0`@\0`£\0`$\0`%\0`&\0`'\0`(\0`)\0`*\0`+\0`,\0`-\0`.\0`/\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`:\0`;\0`<\0`=\0`>\0`?\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0Ẁ\0`X\0Ỳ\0`Z\0`[\0`#\0`]\0`^\0`_\0``\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0ẁ\0`x\0ỳ\0`z\0`{\0`~\0`}\0`¬\x000D";
     private const string UnitedKingdomExtendedBarcode1 = "010477298543159410DdVcX<t\01723020721yCH*4'h1Ab\x000D";
     private const string UnitedKingdomExtendedBarcode2 = "010477298543159410.GRs!qO\01723072921TgIv?,6BmK\x000D";
@@ -928,8 +928,8 @@ public class KeyboardCalibratorTestsStateless {
     private const string SwissFrench2424BaselineC = " E F G H I J K L M N O P Q R S T U";
     private const string SwissFrench2424BaselineD = " V W X Z Y ? a b c d e f g h i j k";
     private const string SwissFrench2424BaselineE = " l m n o p q r s t u v w x z y   *";
-    private const string SwissFrench2424BaselineF = " ç \" è $ \0\"& § ü £ ! °";
-    private const string SwissFrench2424BaselineG = "    \x001D    \x001C    \0    \0    ";
+    private const string SwissFrench2424BaselineF = " ç \" è $ \0\"& § ü £ ! °    \x001D";
+    private const string SwissFrench2424BaselineG = "    \x001C    \0    \0    \0    ";
     private const string SwissFrench2424DeadKey1A = "\0`+\0`ä\0`*\0`ç\0`%\0`/\0`à\0`)\0`=\0`(\0``\0`,\0`'\0`.\0`-\0`0\0`1";
     private const string SwissFrench2424DeadKey1B = "\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`ö\0`é\0`;\0`^\0`:\0`_\0`\"\0À\0`B";
     private const string SwissFrench2424DeadKey1C = "\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S";
@@ -1577,8 +1577,6 @@ public class KeyboardCalibratorTestsStateless {
             }
         }
 
-        ////System.Diagnostics.Debug.WriteLine(currentToken.CalibrationData);
-
         // Assert that the calibrator calculated the expected calibration.
         Assert.Equal(expectedCalibrations[layoutName], currentToken.CalibrationData?.ToJson() ?? string.Empty);
 
@@ -1664,7 +1662,6 @@ public class KeyboardCalibratorTestsStateless {
             }
         }
 
-        //// System.Diagnostics.Debug.WriteLine(calibrator.CalibrationData);
         return currentToken;
     }
 
@@ -3828,7 +3825,7 @@ public class KeyboardCalibratorTestsStateless {
         var testString =
             "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    "
           + (char)29;
-        return testString + "    \x001C    \x001E    \x001F    ";
+        return testString + "    \x001C    \x001E    \x001F    \0    ";
     }
 
     /// <summary>

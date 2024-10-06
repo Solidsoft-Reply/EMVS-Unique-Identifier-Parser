@@ -199,7 +199,22 @@
     <value>Se você escanear códigos de barras que contenham dados EDI e tiver dificuldades, tente configurar seu scanner de código de barras para emular um teclado numérico.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Se você escanear outros códigos de barras e tiver dificuldade, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras PPN, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras PPN, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Tente novamente, certificando-se de escanear o(s) código(s) de barras correto(s).</value>
@@ -364,7 +379,22 @@
     <value>Seu sistema não pode ler códigos de barras de forma confiável se contiverem dados para Intercâmbio Eletrônico de Dados (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Seu sistema não consegue distinguir entre certos caracteres normais e especiais.</value>
+    <value>O seu sistema pode não ler corretamente os caracteres de separador de ficheiros (ASCII 28).</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>O seu sistema não consegue ler os caracteres de separador de ficheiros (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>O seu sistema pode não ler corretamente os caracteres de separador de unidade (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>O seu sistema pode não ler corretamente os caracteres de separador de unidade (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>O seu sistema pode não ler corretamente os caracteres de fim de transmissão (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>O seu sistema não consegue ler os caracteres de fim de transmissão (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>O teste falhou.</value>
@@ -520,7 +550,22 @@
     <value>Alguns códigos de barras podem conter dados EDI.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Esses caracteres nunca devem aparecer juntos em um código de barras de identificador exclusivo.</value>
+    <value>É muito improvável que estes caracteres sejam usados em identificadores únicos.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>É muito improvável que estes caracteres sejam usados em identificadores únicos.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>É muito improvável que estes caracteres sejam usados em identificadores únicos.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>É muito improvável que estes caracteres sejam usados em identificadores únicos.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Este caractere marca o fim dos dados nos códigos de barras PPN. O seu software pode não ler corretamente qualquer sufixo adicionado pelo leitor de códigos de barras.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Este caractere marca o fim dos dados nos códigos de barras PPN. O seu software pode não ler corretamente qualquer sufixo adicionado pelo leitor de códigos de barras.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Você pode ter escaneado um código de barras errado ou inserido dados incorretos usando o teclado. Seu scanner de código de barras ou sistema pode estar lento, ou algum problema inesperado ou intermitente pode ter ocorrido.</value>

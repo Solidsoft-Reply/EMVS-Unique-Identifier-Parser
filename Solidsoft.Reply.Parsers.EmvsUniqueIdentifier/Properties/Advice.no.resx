@@ -199,7 +199,22 @@
     <value>Hvis du skanner strekkoder som inneholder EDI-data og opplever problemer, prøv å konfigurere strekkodeskanneren din til å etterligne et numerisk tastatur.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Hvis du skanner andre strekkoder og opplever problemer, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+    <value>Hvis du opplever problemer når du skanner strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Hvis du opplever problemer når du skanner strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Hvis du opplever problemer når du skanner strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Hvis du opplever problemer når du skanner strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Hvis du opplever problemer når du skanner PPN-strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Hvis du opplever problemer når du skanner PPN-strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Prøv igjen, og sørg for at du skanner de riktige strekkodene.</value>
@@ -364,7 +379,22 @@
     <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder data for elektronisk datautveksling (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Systemet ditt kan ikke skille mellom visse normale og spesialtegn.</value>
+    <value>Systemet ditt kan kanskje ikke lese filseparator-tegn (ASCII 28) korrekt.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Systemet ditt kan ikke lese filseparator-tegn (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Systemet ditt kan kanskje ikke lese enhetsseparator-tegn (ASCII 31) korrekt.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Systemet ditt kan kanskje ikke lese enhetsseparator-tegn (ASCII 31) korrekt.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Systemet ditt kan kanskje ikke lese overføringsslutt-tegn (ASCII 04) korrekt.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Systemet ditt kan ikke lese overføringsslutt-tegn (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testen feilet.</value>
@@ -520,7 +550,22 @@
     <value>Noen strekkoder kan inneholde EDI-data.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Disse tegnene skal aldri vises sammen i en unik identifikasjonsstrekkode.</value>
+    <value>Det er svært lite sannsynlig at disse tegnene brukes i unike identifikatorer.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Det er svært lite sannsynlig at disse tegnene brukes i unike identifikatorer.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Det er svært lite sannsynlig at disse tegnene brukes i unike identifikatorer.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Det er svært lite sannsynlig at disse tegnene brukes i unike identifikatorer.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Dette tegnet markerer slutten på data i PPN-strekkoder. Programvaren din kan kanskje ikke lese et eventuelt suffiks lagt til av strekkodeskanneren korrekt.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Dette tegnet markerer slutten på data i PPN-strekkoder. Programvaren din kan kanskje ikke lese et eventuelt suffiks lagt til av strekkodeskanneren korrekt.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Du kan ha skannet en feil strekkode eller angitt feil data ved hjelp av tastaturet. Strekkodeskanneren eller systemet ditt kan være tregt, eller det kan ha oppstått et uventet eller periodisk problem.</value>

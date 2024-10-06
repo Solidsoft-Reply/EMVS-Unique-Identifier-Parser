@@ -225,10 +225,6 @@
     <value>If you scan barcodes that contain EDI data, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
     <comment>High</comment>
   </data>
-  <data name="Advice_276" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Try again, making sure you scan the correct barcode(s).</value>
     <comment>Low</comment>
@@ -434,20 +430,16 @@
     <comment>High</comment>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI)</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)</value>
     <comment>High</comment>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI)</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)</value>
     <comment>High</comment>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI)</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)</value>
     <comment>High</comment>
-  </data>
-  <data name="Condition_276" xml:space="preserve">
-    <value>Your system cannot distinguish between certain normal and special characters.</value>
-    <comment>Medium</comment>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>The test failed.</value>
@@ -653,10 +645,6 @@
     <value>Some barcodes may contain EDI data.</value>
     <comment>High</comment>
   </data>
-  <data name="Description_276" xml:space="preserve">
-    <value>These characters should never appear together in a unique identifier barcode.</value>
-    <comment>Medium</comment>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
     <comment>Low</comment>
@@ -724,5 +712,62 @@
   <data name="Description_390" xml:space="preserve">
     <value>Your barcode scanner or system may be slow or it may be affected by anti-virus software or some other unexpected or intermittent issue.</value>
     <comment>High</comment>
+  </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>If you experience difficulty when scanning PPN barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>If you experience difficulty when scanning PPN barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Your system cannot read File Separator (ASCII 28) characters.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Your system may not read Unit Separator (ASCII 31) characters correctly.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Your system cannot read Unit Separator (ASCII 31) characters.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Your system may not read End-of-Transmission (ASCII 04) characters correctly.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Your system cannot read End-of-Transmission (ASCII 04) characters.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>These characters are very unlikely to be used in unique identifiers.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>These characters are very unlikely to be used in unique identifiers.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>These characters are very unlikely to be used in unique identifiers.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>This character marks the end of data in PPN barcodes. Your software may not correctly read any suffix added by the barcode scanner.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>This character marks the end of data in PPN barcodes. Your software may not correctly read any suffix added by the barcode scanner.</value>
+  </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Your system may not read File Separator (ASCII 28) characters correctly.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>These characters are very unlikely to be used in unique identifiers.</value>
+  </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
   </data>
 </root>

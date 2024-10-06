@@ -199,7 +199,22 @@
     <value>Dacă scanați coduri de bare care conțin date EDI și întâmpinați dificultăți, încercați să configurați scannerul dvs. de coduri de bare să emuleze o tastatură numerică.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Dacă scanați alte coduri de bare și întâmpinați dificultăți, încercați să configurați scanerul de coduri de bare pentru a emula un tastatură numerică.</value>
+    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare PPN, încercați să configurați scannerul de coduri de bare pentru a emula o tastatură numerică.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare PPN, încercați să configurați scannerul de coduri de bare pentru a emula o tastatură numerică.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Încercați din nou, asigurându-vă că scanați codul/codurile de bare corect(e).</value>
@@ -364,7 +379,22 @@
     <value>Sistemul dvs. nu poate citi fiabil codurile de bare dacă acestea conțin date pentru schimbul electronic de date (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Sistemul dvs. nu poate distinge între anumite caractere normale și speciale.</value>
+    <value>Sistemul dvs. este posibil să nu citească corect caracterele de separator de fișiere (ASCII 28).</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Sistemul dvs. nu poate citi caracterele de separator de fișiere (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Sistemul dvs. este posibil să nu citească corect caracterele de separator de unități (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Sistemul dvs. este posibil să nu citească corect caracterele de separator de unități (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Sistemul dvs. este posibil să nu citească corect caracterele de sfârșit de transmisie (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Sistemul dvs. nu poate citi caracterele de sfârșit de transmisie (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testul a eșuat.</value>
@@ -520,7 +550,22 @@
     <value>Unele coduri de bare pot conține date EDI.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Aceste caractere nu ar trebui să apară niciodată împreună într-un cod de bare unic de identificare.</value>
+    <value>Este foarte puțin probabil ca aceste caractere să fie folosite în identificatori unici.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Este foarte puțin probabil ca aceste caractere să fie folosite în identificatori unici.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Este foarte puțin probabil ca aceste caractere să fie folosite în identificatori unici.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Este foarte puțin probabil ca aceste caractere să fie folosite în identificatori unici.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Acest caracter marchează sfârșitul datelor în codurile de bare PPN. Software-ul dvs. este posibil să nu citească corect orice sufix adăugat de scannerul de coduri de bare.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Acest caracter marchează sfârșitul datelor în codurile de bare PPN. Software-ul dvs. este posibil să nu citească corect orice sufix adăugat de scannerul de coduri de bare.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Este posibil să fi scanat un cod de bare greșit sau să fi introdus date incorecte folosind tastatura. Scanerul de coduri de bare sau sistemul dvs. poate fi lent sau pot exista probleme neașteptate sau intermitente.</value>

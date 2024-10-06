@@ -29,7 +29,6 @@ public static class Program {
     /// <param name="args">Command line arguments.</param>
     // ReSharper disable once UnusedParameter.Local
     private static void Main(string[] args) {
-        ////System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("el-EL");
         Title = Resources.ConsoleTitle;
         CommandLineArguments.Initialise(args);
         Initialise();

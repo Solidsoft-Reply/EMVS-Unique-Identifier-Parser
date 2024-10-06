@@ -267,6 +267,9 @@
   <data name="Nothing" xml:space="preserve">
     <value>nada</value>
   </data>
+  <data name="Options" xml:space="preserve">
+    <value>OPCIONES</value>
+  </data>
   <data name="SaveError" xml:space="preserve">
     <value>La calibración no se guardó{0}</value>
   </data>

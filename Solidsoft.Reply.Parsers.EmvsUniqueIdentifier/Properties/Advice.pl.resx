@@ -199,7 +199,22 @@
     <value>Jeśli skanujesz kody kreskowe zawierające dane EDI i napotykasz trudności, spróbuj skonfigurować skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Jeśli skanujesz inne kody kreskowe i napotykasz trudności, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+    <value>Jeśli masz problemy podczas skanowania kodów kreskowych, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Jeśli masz problemy podczas skanowania kodów kreskowych, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Jeśli masz problemy podczas skanowania kodów kreskowych, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Jeśli masz problemy podczas skanowania kodów kreskowych, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Jeśli masz trudności podczas skanowania kodów kreskowych PPN, spróbuj skonfigurować swój skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Jeśli masz trudności podczas skanowania kodów kreskowych PPN, spróbuj skonfigurować swój skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Spróbuj ponownie, upewniając się, że skanujesz właściwy kod kreskowy(-e).</value>
@@ -364,7 +379,22 @@
     <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane do elektronicznej wymiany danych (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Twój system nie może rozróżniać niektórych normalnych i specjalnych znaków.</value>
+    <value>Twój system może nie odczytywać poprawnie znaków separatora plików (ASCII 28).</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Twój system nie może odczytać znaków separatora plików (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Twój system może nie odczytywać poprawnie znaków separatora jednostki (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Twój system może nie odczytywać poprawnie znaków separatora jednostki (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Twój system może nie odczytywać poprawnie znaków zakończenia transmisji (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Twój system nie może odczytać znaków zakończenia transmisji (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test nie powiódł się.</value>
@@ -520,7 +550,22 @@
     <value>Niektóre kody kreskowe mogą zawierać dane EDI.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Te znaki nigdy nie powinny pojawiać się razem w kodzie kreskowym identyfikatora unikalnego.</value>
+    <value>Te znaki są bardzo mało prawdopodobne, aby były używane w unikalnych identyfikatorach.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Te znaki są bardzo mało prawdopodobne, aby były używane w unikalnych identyfikatorach.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Te znaki są bardzo mało prawdopodobne, aby były używane w unikalnych identyfikatorach.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Te znaki są bardzo mało prawdopodobne, aby były używane w unikalnych identyfikatorach.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Ten znak oznacza koniec danych w kodach kreskowych PPN. Twoje oprogramowanie może nie odczytywać poprawnie żadnego sufiksu dodanego przez skaner kodów kreskowych.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Ten znak oznacza koniec danych w kodach kreskowych PPN. Twoje oprogramowanie może nie odczytywać poprawnie żadnego sufiksu dodanego przez skaner kodów kreskowych.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Możliwe, że zeskanowano niewłaściwy kod kreskowy lub wprowadzono błędne dane za pomocą klawiatury. Twój skaner kodów kreskowych lub system może być wolny lub mogą wystąpić nieoczekiwane lub przerywane problemy.</value>

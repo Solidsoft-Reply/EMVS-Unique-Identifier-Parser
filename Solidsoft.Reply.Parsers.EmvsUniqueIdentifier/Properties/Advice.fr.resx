@@ -226,7 +226,22 @@
     <comment>High</comment>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Si vous scannez d'autres codes-barres et rencontrez des difficultés, essayez de configurer votre scanner de codes-barres pour émuler un pavé numérique.</value>
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation des codes-barres PPN, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation des codes-barres PPN, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Réessayez, en vous assurant de scanner le(s) bon(s) code(s)-barres.</value>
@@ -444,7 +459,22 @@
     <comment>High</comment>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Votre système ne peut pas distinguer certains caractères normaux et des caractères spéciaux.</value>
+    <value>Votre système peut ne pas lire correctement les caractères de séparation de fichier (ASCII 28).</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Votre système ne peut pas lire les caractères de séparation de fichier (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Votre système peut ne pas lire correctement les caractères de séparation d'unité (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Votre système peut ne pas lire correctement les caractères de séparation d'unité (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Votre système peut ne pas lire correctement les caractères de fin de transmission (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Votre système ne peut pas lire les caractères de fin de transmission (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Le test a échoué.</value>
@@ -650,7 +680,22 @@
     <comment>High</comment>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Ces caractères ne doivent jamais apparaître ensemble dans un code-barres d'identification unique.</value>
+    <value>Ces caractères ont très peu de chances d'être utilisés dans des identifiants uniques.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Ces caractères ont très peu de chances d'être utilisés dans des identifiants uniques.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Ces caractères ont très peu de chances d'être utilisés dans des identifiants uniques.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Ces caractères ont très peu de chances d'être utilisés dans des identifiants uniques.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Ce caractère marque la fin des données dans les codes-barres PPN. Votre logiciel peut ne pas lire correctement tout suffixe ajouté par le lecteur de codes-barres.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Ce caractère marque la fin des données dans les codes-barres PPN. Votre logiciel peut ne pas lire correctement tout suffixe ajouté par le lecteur de codes-barres.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Vous avez peut-être scanné un code-barres erroné ou saisi des données incorrectes en utilisant le clavier. Votre scanner de code-barres ou système peut être lent, ou un problème inattendu ou intermittent peut être survenu.</value>

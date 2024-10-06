@@ -199,7 +199,22 @@
     <value>Če skenirate črtne kode, ki vsebujejo podatke EDI, in imate težave, poskusite nastaviti vaš skener črtne kode, da posnema numerično tipkovnico.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Če skenirate druge črtne kode in imate težave, poskusite konfigurirati čitalnik črtnih kod, da bo posnemal numerično tipkovnico.</value>
+    <value>Če imate težave pri skeniranju črtnih kod, poskusite konfigurirati čitalnik črtnih kod tako, da posnema numerično tipkovnico.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Če imate težave pri skeniranju črtnih kod, poskusite konfigurirati čitalnik črtnih kod tako, da posnema numerično tipkovnico.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Če imate težave pri skeniranju črtnih kod, poskusite konfigurirati čitalnik črtnih kod tako, da posnema numerično tipkovnico.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Če imate težave pri skeniranju črtnih kod, poskusite konfigurirati čitalnik črtnih kod tako, da posnema numerično tipkovnico.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Če imate težave pri skeniranju PPN črtnih kod, poskusite konfigurirati čitalnik črtnih kod tako, da posnema numerično tipkovnico.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Če imate težave pri skeniranju PPN črtnih kod, poskusite konfigurirati čitalnik črtnih kod tako, da posnema numerično tipkovnico.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Poskusite znova, prepričajte se, da skenirate pravilno črtno kodo(-e).</value>
@@ -364,7 +379,22 @@
     <value>Vaš sistem ne more zanesljivo brati črtnih kodov, če vsebujejo podatke za elektronsko izmenjavo podatkov (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Vaš sistem ne more razlikovati med nekaterimi običajnimi in posebnimi znaki.</value>
+    <value>Vaš sistem morda ne bo pravilno prebral znakov ločila datoteke (ASCII 28).</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Vaš sistem ne more prebrati znakov ločila datoteke (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Vaš sistem morda ne bo pravilno prebral znakov ločila enote (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Vaš sistem morda ne bo pravilno prebral znakov ločila enote (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Vaš sistem morda ne bo pravilno prebral znakov konca prenosa (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Vaš sistem ne more prebrati znakov konca prenosa (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test ni uspel.</value>
@@ -520,7 +550,22 @@
     <value>Nekatere črtne kode lahko vsebujejo podatke EDI.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Ti znaki se nikoli ne smejo pojaviti skupaj v enotni identifikacijski črtni kodi.</value>
+    <value>Zelo malo verjetno je, da bi bili ti znaki uporabljeni v edinstvenih identifikatorjih.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Zelo malo verjetno je, da bi bili ti znaki uporabljeni v edinstvenih identifikatorjih.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Zelo malo verjetno je, da bi bili ti znaki uporabljeni v edinstvenih identifikatorjih.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Zelo malo verjetno je, da bi bili ti znaki uporabljeni v edinstvenih identifikatorjih.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Ta znak označuje konec podatkov v PPN črtnih kodah. Vaša programska oprema morda ne bo pravilno prebrala nobene pripone, ki jo doda čitalnik črtnih kod.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Ta znak označuje konec podatkov v PPN črtnih kodah. Vaša programska oprema morda ne bo pravilno prebrala nobene pripone, ki jo doda čitalnik črtnih kod.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Morda ste skenirali napačno črtno kodo ali vnesli napačne podatke preko tipkovnice. Vaš skener črtne kode ali sistem je lahko počasen, ali pa se je pojavila neka nepričakovana ali občasna težava.</value>

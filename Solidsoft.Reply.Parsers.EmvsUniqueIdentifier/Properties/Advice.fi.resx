@@ -199,7 +199,22 @@
     <value>Jos skannaat viivakoodeja, jotka sisältävät EDI-dataa, ja kohtaat vaikeuksia, kokeile konfiguroida viivakoodinlukijasi toimimaan numeerisen näppäimistön emulaattorina.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Jos skannaat muita viivakoodeja ja kohtaat vaikeuksia, yritä määrittää viivakoodinlukijasi emuloimaan numeronäppäimistöä.</value>
+    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Jos kohtaat vaikeuksia PPN-viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi emuloimaan numeronäppäimistöä.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Jos kohtaat vaikeuksia PPN-viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi emuloimaan numeronäppäimistöä.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Yritä uudelleen varmistaen, että skannaat oikean viivakoodin tai viivakoodit.</value>
@@ -364,7 +379,22 @@
     <value>Järjestelmäsi ei voi luotettavasti lukea viivakoodeja, jos ne sisältävät tietoja sähköistä tiedonsiirtoa (EDI) varten.</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Järjestelmäsi ei pysty erottamaan tiettyjä normaaleja ja erikoismerkkejä toisistaan.</value>
+    <value>Järjestelmäsi ei välttämättä lue tiedoston erotinmerkkejä (ASCII 28) oikein.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Järjestelmäsi ei pysty lukemaan tiedoston erotinmerkkejä (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Järjestelmäsi ei välttämättä lue yksikön erotinmerkkejä (ASCII 31) oikein.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Järjestelmäsi ei välttämättä lue yksikön erotinmerkkejä (ASCII 31) oikein.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Järjestelmäsi ei välttämättä lue siirron lopetusmerkkejä (ASCII 04) oikein.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Järjestelmäsi ei pysty lukemaan siirron lopetusmerkkejä (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testi epäonnistui.</value>
@@ -520,7 +550,22 @@
     <value>Jotkut viivakoodit saattavat sisältää EDI-dataa.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Nämä merkit eivät saa koskaan esiintyä yhdessä yksilöllisessä tunnisteviivakoodissa.</value>
+    <value>On erittäin epätodennäköistä, että näitä merkkejä käytetään yksilöllisissä tunnisteissa.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>On erittäin epätodennäköistä, että näitä merkkejä käytetään yksilöllisissä tunnisteissa.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>On erittäin epätodennäköistä, että näitä merkkejä käytetään yksilöllisissä tunnisteissa.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>On erittäin epätodennäköistä, että näitä merkkejä käytetään yksilöllisissä tunnisteissa.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Tämä merkki osoittaa tiedon lopun PPN-viivakoodeissa. Ohjelmistosi ei välttämättä lue oikein viivakoodinlukijan lisäämää jälkiliitettä.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Tämä merkki osoittaa tiedon lopun PPN-viivakoodeissa. Ohjelmistosi ei välttämättä lue oikein viivakoodinlukijan lisäämää jälkiliitettä.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Saatat olla skannannut väärän viivakoodin tai syöttänyt virheellisiä tietoja näppäimistöllä. Viivakoodinlukijasi tai järjestelmäsi saattaa olla hidas, tai jokin odottamaton tai satunnainen ongelma saattaa olla ilmennyt.</value>

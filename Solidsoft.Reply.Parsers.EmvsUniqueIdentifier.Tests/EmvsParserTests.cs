@@ -25,13 +25,13 @@ using Xunit;
 
 [SuppressMessage("ReSharper", "StringLiteralTypo")]
 public class EmvsParserTests {
-    private const string BelgianFrenchBaseline = "  1 % 5 7 ù 9 0 8 _ ; ) : = à & é \" ' ( § è ! ç M m . - / + Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 \0^µ $ 6 ² \0¨£ * ³    \x001D    \x001C    \0    \0    \x000D";
+    private const string BelgianFrenchBaseline = "  1 % 5 7 ù 9 0 8 _ ; ) : = à & é \" ' ( § è ! ç M m . - / + Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 \0^µ $ 6 ² \0¨£ * ³    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string BelgianFrenchDeadKey1 = "\0^1\0^%\0^3\0^4\0^5\0^7\0^ù\0^9\0^0\0^8\0^_\0^;\0^)\0^:\0^=\0^à\0^&\0^é\0^\"\0^'\0^(\0^§\0^è\0^!\0^ç\0^M\0^m\0^.\0^-\0^/\0^+\0^2\0^Q\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^?\0^N\0Ô\0^P\0Â\0^R\0^S\0^T\0Û\0^V\0^Z\0^X\0^Y\0^W\0^^\0^µ\0^$\0^6\0^°\0^²\0^q\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^,\0^n\0ô\0^p\0â\0^r\0^s\0^t\0û\0^v\0^z\0^x\0^y\0^w\0^¨\0^£\0^*\0^³\x000D";
     private const string BelgianFrenchDeadKey2 = "\0¨1\0¨%\0¨3\0¨4\0¨5\0¨7\0¨ù\0¨9\0¨0\0¨8\0¨_\0¨;\0¨)\0¨:\0¨=\0¨à\0¨&\0¨é\0¨\"\0¨'\0¨(\0¨§\0¨è\0¨!\0¨ç\0¨M\0¨m\0¨.\0¨-\0¨/\0¨+\0¨2\0¨Q\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨?\0¨N\0Ö\0¨P\0Ä\0¨R\0¨S\0¨T\0Ü\0¨V\0¨Z\0¨X\0¨Y\0¨W\0¨^\0¨µ\0¨$\0¨6\0¨°\0¨²\0¨q\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨,\0¨n\0ö\0¨p\0ä\0¨r\0¨s\0¨t\0ü\0¨v\0¨z\0¨x\0ÿ\0¨w\0¨¨\0¨£\0¨*\0¨³\x000D";
     private const string BelgianFrenchCalibration = "{\"characterMap\":{\"1\":\"!\",\"%\":\"\\\"\",\"5\":\"%\",\"7\":\"&\",\"\\u00f9\":\"'\",\"9\":\"(\",\"0\":\")\",\"8\":\"*\",\"_\":\"+\",\";\":\",\",\")\":\"-\",\":\":\".\",\"=\":\"/\",\"\\u00e0\":\"0\",\"&\":\"1\",\"\\u00e9\":\"2\",\"\\\"\":\"3\",\"'\":\"4\",\"(\":\"5\",\"\\u00a7\":\"6\",\"\\u00e8\":\"7\",\"!\":\"8\",\"\\u00e7\":\"9\",\"M\":\":\",\"m\":\";\",\".\":\"<\",\"-\":\"=\",\"/\":\">\",\"+\":\"?\",\"Q\":\"A\",\"?\":\"M\",\"A\":\"Q\",\"Z\":\"W\",\"W\":\"Z\",\"\\u00b0\":\"_\",\"q\":\"a\",\",\":\"m\",\"a\":\"q\",\"z\":\"w\",\"w\":\"z\",\"3\":\"#\",\"4\":\"$\",\"2\":\"@\",\"\\u00b5\":\"\\\\\",\"6\":\"^\",\"\\u00b2\":\"`\",\"\\u00a3\":\"|\",\"*\":\"}\",\"\\u00b3\":\"~\",\"^\":\"[\",\"\\u00a8\":\"{\"},\"deadKeysMap\":{\"^\":\"[\",\"\\u00a8\":\"{\",\"\\u00ca\":\"[E\",\"\\u00ce\":\"[I\",\"\\u00d4\":\"[O\",\"\\u00c2\":\"[Q\",\"\\u00db\":\"[U\",\"\\u00ea\":\"[e\",\"\\u00ee\":\"[i\",\"\\u00f4\":\"[o\",\"\\u00e2\":\"[q\",\"\\u00fb\":\"[u\",\"\\u00cb\":\"{E\",\"\\u00cf\":\"{I\",\"\\u00d6\":\"{O\",\"\\u00c4\":\"{Q\",\"\\u00dc\":\"{U\",\"\\u00eb\":\"{e\",\"\\u00ef\":\"{i\",\"\\u00f6\":\"{o\",\"\\u00e4\":\"{q\",\"\\u00fc\":\"{u\",\"\\u00ff\":\"{y\"},\"deadKeyCharacterMap\":{\"^\":\"[\",\"\\u00a8\":\"{\"},\"reportedCharacters\":\"1%57\\u00f9908_;):=\\u00e0&\\u00e9\\\"'(\\u00a7\\u00e8!\\u00e7Mm.-/+QBCDEFGHIJKL?NOPARSTUVZXYW\\u00b0qbcdefghijkl,noparstuvzxyw342\\u00b5$6\\u00b2\\u00a3*\\u00b3\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"aimFlagCharacterSequence\":\"$\",\"keyboardScript\":\"Latin\"}";
     private const string BelgianFrenchCalibrationNoNull = "{\"characterMap\":{\"1\":\"!\",\"%\":\"\\\"\",\"5\":\"%\",\"7\":\"&\",\"\\u00f9\":\"'\",\"9\":\"(\",\"0\":\")\",\"8\":\"*\",\"_\":\"+\",\";\":\",\",\")\":\"-\",\":\":\".\",\"=\":\"/\",\"\\u00e0\":\"0\",\"&\":\"1\",\"\\u00e9\":\"2\",\"\\\"\":\"3\",\"'\":\"4\",\"(\":\"5\",\"\\u00a7\":\"6\",\"\\u00e8\":\"7\",\"!\":\"8\",\"\\u00e7\":\"9\",\"M\":\":\",\"m\":\";\",\".\":\"<\",\"-\":\"=\",\"/\":\">\",\"+\":\"?\",\"Q\":\"A\",\"?\":\"M\",\"A\":\"Q\",\"Z\":\"W\",\"W\":\"Z\",\"\\u00b0\":\"_\",\"q\":\"a\",\",\":\"m\",\"a\":\"q\",\"z\":\"w\",\"w\":\"z\",\"\\u0000\":\"\\u001f\"},\"ligatureMap\":{\"^\\u00b5\":\"[\",\"\\u00a8\\u00a3\":\"`\"},\"reportedCharacters\":\"1%57\\u00f9908_;):=\\u00e0&\\u00e9\\\"'(\\u00a7\\u00e8!\\u00e7Mm.-/+QBCDEFGHIJKL?NOPARSTUVZXYW\\u00b0qbcdefghijkl,noparstuvzxyw\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"aimFlagCharacterSequence\":\"]\",\"keyboardScript\":\"Latin\"}";
 
-    private const string GermanToGermanBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] \0^ \0` { | } ~    \u001d    \u001c    \0    \u001f    \x000D";
+    private const string GermanToGermanBaseline = "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] \0^ \0` { | } ~    \u001d    \u001c    \0    \u001f    \0    \x000D";
     private const string GermanToGermanCalibration = "{\"characterMap\":{\"\\u0000\":\"\\u001e\"},\"deadKeysMap\":{\"^\":\"^\",\"`\":\"`\"},\"scannerDeadKeysMap\":{\"^\":\"\\u0000^\",\"`\":\"\\u0000`\"},\"reportedCharacters\":\"!\\\"%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz#$@[\\\\]{|}~\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"aimFlagCharacterSequence\":\"]\",\"keyboardScript\":\"Latin\"}";
     private const string GermanToUkWithAimBaseline = "\u0000d1  ! \" % ^ ~ * ( } ] , / . \u0026 0 1 2 3 4 5 6 7 8 9 \u003e \u003c \\ ) | _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   # $ \u0000 \u0000 \u0000 \u0000 `  +  \u0000 \u0000 \u0000 \u0000    \u001d    \u0000    \u001e    \u001f    \r";
     private const string GermanToUkWithAimCalibration = "{\"characterMap\":{\"^\":\"&\",\"~\":\"'\",\"*\":\"(\",\"(\":\")\",\"}\":\"*\",\"]\":\"+\",\"/\":\"-\",\"&\":\"/\",\">\":\":\",\"<\":\";\",\"\\\\\":\"<\",\")\":\"=\",\"|\":\">\",\"_\":\"?\",\"Z\":\"Y\",\"Y\":\"Z\",\"?\":\"_\",\"z\":\"y\",\"y\":\"z\",\"\\u0000\":\"]\"},\"scannerDeadKeysMap\":{\"^\":\"` \",\"`\":\"+ \"},\"scannerUnassignedKeys\":[\"~\"],\"reportedCharacters\":\"!\\\"%^~*(}],/.&0123456789><\\\\)|_ABCDEFGHIJKLMNOPQRSTUVWXZY?abcdefghijklmnopqrstuvwxzy#$\\u0000\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"aimFlagCharacterSequence\":\"\\u0000\",\"keyboardScript\":\"Latin\"}";
@@ -49,8 +49,8 @@ public class EmvsParserTests {
     private const string SwissFrench2424BaselineC = " E F G H I J K L M N O P Q R S T U";
     private const string SwissFrench2424BaselineD = " V W X Z Y ? a b c d e f g h i j k";
     private const string SwissFrench2424BaselineE = " l m n o p q r s t u v w x z y   *";
-    private const string SwissFrench2424BaselineF = " ç \" è $ \0\"& § ü £ ! °";
-    private const string SwissFrench2424BaselineG = "    \x001D    \x001C    \0    \0    ";
+    private const string SwissFrench2424BaselineF = " ç \" è $ \0\"& § ü £ ! °    \x001D";
+    private const string SwissFrench2424BaselineG = "    \x001C    \0    \0    \0    ";
     private const string SwissFrench2424DeadKey1A = "\0`+\0`ä\0`*\0`ç\0`%\0`/\0`à\0`)\0`=\0`(\0``\0`,\0`'\0`.\0`-\0`0\0`1";
     private const string SwissFrench2424DeadKey1B = "\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`ö\0`é\0`;\0`^\0`:\0`_\0`\"\0À\0`B";
     private const string SwissFrench2424DeadKey1C = "\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S";
@@ -70,14 +70,14 @@ public class EmvsParserTests {
     private const string SwissFrench2424DeadKey3E = "\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨m\0¨n\0ö\0¨p\0¨q";
     private const string SwissFrench2424DeadKey3F = "\0¨r\0¨s\0¨t\0ü\0¨v\0¨w\0¨x\0¨z\0ÿ\0¨ü\0¨£\0¨!\0¨°";
 
-    private const string UnitedKingdomBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    \x001D    \x001C    \0    \0    \x000D";
+    private const string UnitedKingdomBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    \x001D    \x001C    \0    \0    \0    \x000D";
     private const string UnitedKingdomBaselinePartial = "r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    \x001D    \x001C    \0    \0    \x000D";
 
-    private const string BelgianFrenchBaselineNoNull = "  1 % 5 7 ù 9 0 8 _ ; ) : = à & é \" ' ( § è ! ç M m . - / + Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 ^µ $ 6 ² ¨£ * ³    \x001D    \x001C            \x000D";
+    private const string BelgianFrenchBaselineNoNull = "  1 % 5 7 ù 9 0 8 _ ; ) : = à & é \" ' ( § è ! ç M m . - / + Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 ^µ $ 6 ² ¨£ * ³    \x001D    \x001C            \0    \x000D";
     private const string BelgianFrenchDeadKey1NoNull = "^1^%^3^4^5^7^ù^9^0^8^_^;^)^:^=^à^&^é^\"^'^(^§^è^!^ç^M^m^.^-^/^+^2^Q^B^C^DÊ^F^G^HÎ^J^K^L^?^NÔ^PÂ^R^S^TÛ^V^Z^X^Y^W^^^µ^$^6^°^²^q^b^c^dê^f^g^hî^j^k^l^,^nô^pâ^r^s^tû^v^z^x^y^w^¨^£^*^³\x000D";
     private const string BelgianFrenchDeadKey2NoNull = "¨1¨%¨3¨4¨5¨7¨ù¨9¨0¨8¨_¨;¨)¨:¨=¨à¨&¨é¨\"¨'¨(¨§¨è¨!¨ç¨M¨m¨.¨-¨/¨+¨2¨Q¨B¨C¨DË¨F¨G¨HÏ¨J¨K¨L¨?¨NÖ¨PÄ¨R¨S¨TÜ¨V¨Z¨X¨Y¨W¨^¨µ¨$¨6¨°¨²¨q¨b¨c¨dë¨f¨g¨hï¨j¨k¨l¨,¨nö¨pä¨r¨s¨tü¨v¨z¨xÿ¨w¨¨¨£¨*¨³\x000D";
 
-    private const string SwissFrenchBaselineNoNull = "  + ä % / à ) = ( `, ' . - 0 1 2 3 4 5 6 7 8 9 ö é ; ^: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   * ç \" è $ \"& § ü £ ! °    \x001D    \x001C            \x000D";
+    private const string SwissFrenchBaselineNoNull = "  + ä % / à ) = ( `, ' . - 0 1 2 3 4 5 6 7 8 9 ö é ; ^: _ A B C D E F G H I J K L M N O P Q R S T U V W X Z Y ? a b c d e f g h i j k l m n o p q r s t u v w x z y   * ç \" è $ \"& § ü £ ! °    \x001D    \x001C            \0    \x000D";
     private const string SwissFrenchDeadKey1NoNull = "`+`ä`*`ç`%`/`à`)`=`(```,`'`.`-`0`1`2`3`4`5`6`7`8`9`ö`é`;`^`:`_`\"À`B`C`DÈ`F`G`HÌ`J`K`L`M`NÒ`P`Q`R`S`TÙ`V`W`X`Z`Y`è`$`¨`&`?`§à`b`c`dè`f`g`hì`j`k`l`m`nò`p`q`r`s`tù`v`w`x`z`y`ü`£`!`°\x000D";
     private const string SwissFrenchDeadKey2NoNull = "^+^ä^*^ç^%^/^à^)^=^(^`^,^'^.^-^0^1^2^3^4^5^6^7^8^9^ö^é^;^^^:^_^\"Â^B^C^DÊ^F^G^HÎ^J^K^L^M^NÔ^P^Q^R^S^TÛ^V^W^X^Z^Y^è^$^¨^&^?^§â^b^c^dê^f^g^hî^j^k^l^m^nô^p^q^r^s^tû^v^w^x^z^y^ü^£^!^°\x000D";
     private const string SwissFrenchDeadKey3NoNull = "¨+¨ä¨*¨ç¨%¨/¨à¨)¨=¨(¨`¨,¨'¨.¨-¨0¨1¨2¨3¨4¨5¨6¨7¨8¨9¨ö¨é¨;¨^¨:¨_¨\"Ä¨B¨C¨DË¨F¨G¨HÏ¨J¨K¨L¨M¨NÖ¨P¨Q¨R¨S¨TÜ¨V¨W¨X¨Z¨Y¨è¨$¨¨¨&¨?¨§ä¨b¨c¨dë¨f¨g¨hï¨j¨k¨l¨m¨nö¨p¨q¨r¨s¨tü¨v¨w¨x¨zÿ¨ü¨£¨!¨°\x000D";
@@ -302,7 +302,6 @@ public class EmvsParserTests {
     public void AimAsAsciiNull() {
         var token = PerformCalibrationTest("German to UK with AIM");
         Assert.Empty(token.Errors);
-        ////var emvsTestData = $"{(char)0}d201089028055000561716083110DL13010B{(char)29}21D6222N9424";
         var emvsTestData = $"01089028055000561716083110DL13010B{(char)29}21D6222N9424";
         var identifier = DoTestEmvsWithNoErrors(emvsTestData);
         Assert.Equal(Scheme.Gs1, identifier.Scheme);
@@ -999,8 +998,6 @@ public class EmvsParserTests {
 
         // Assert that the calibrator calculated the expected calibration.
         Assert.Equal(expectedCalibrations[layoutName], currentToken.CalibrationData?.ToJson() ?? string.Empty);
-
-        ////Assert.Equal(computerKeyboardLayout.Value[baseLine], loopCount);
 
         return currentToken;
     }

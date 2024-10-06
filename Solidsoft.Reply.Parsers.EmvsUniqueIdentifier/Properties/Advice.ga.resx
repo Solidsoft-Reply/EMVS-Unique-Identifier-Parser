@@ -199,7 +199,22 @@
     <value>Má scanann tú barachóid EDI, agus má bhíonn deacrachtaí agat, bain triail as do scanóir barachóid a chumrú chun méarchlár uimhriúil a aithris.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Má scanann tú cóid barra eile, agus má bhíonn deacrachtaí agat, déan iarracht do scanóir cóid barra a chumrú chun méarchlár uimhriúil a aithris.</value>
+    <value>Má bhíonn deacrachtaí agat agus tú ag scanadh cóid bharra, bain triail as an scanóir cóid bharra a chumrú chun aithris a dhéanamh ar mhéarchlár uimhriúil.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Má bhíonn deacrachtaí agat agus tú ag scanadh cóid bharra, bain triail as an scanóir cóid bharra a chumrú chun aithris a dhéanamh ar mhéarchlár uimhriúil.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Má bhíonn deacrachtaí agat agus tú ag scanadh cóid bharra, bain triail as an scanóir cóid bharra a chumrú chun aithris a dhéanamh ar mhéarchlár uimhriúil.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Má bhíonn deacrachtaí agat agus tú ag scanadh cóid bharra, bain triail as an scanóir cóid bharra a chumrú chun aithris a dhéanamh ar mhéarchlár uimhriúil.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Má bhíonn deacrachtaí agat agus tú ag scanadh cóid bharra PPN, bain triail as an scanóir cóid bharra a chumrú chun aithris a dhéanamh ar mhéarchlár uimhriúil.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Má bhíonn deacrachtaí agat agus tú ag scanadh cóid bharra PPN, bain triail as an scanóir cóid bharra a chumrú chun aithris a dhéanamh ar mhéarchlár uimhriúil.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Bain triail as arís, ag déanamh cinnte go scanann tú an bharachód(anna) ceart.</value>
@@ -364,7 +379,22 @@
     <value>Ní féidir le do chóras barrachóid a léamh go hiontaofa má tá sonraí le haghaidh Malartú Leictreonach Sonraí (EDI) iontu.</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Ní féidir le do chóras idirdhealú a dhéanamh idir gnáthcharachtair áirithe agus carachtair speisialta.</value>
+    <value>B’fhéidir nach léann do chóras carachtair File Separator (ASCII 28) i gceart.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Ní féidir le do chóras carachtair File Separator (ASCII 28) a léamh.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>B’fhéidir nach léann do chóras carachtair Unit Separator (ASCII 31) i gceart.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>B’fhéidir nach léann do chóras carachtair Unit Separator (ASCII 31) i gceart.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>B’fhéidir nach léann do chóras carachtair End-of-Transmission (ASCII 04) i gceart.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Ní féidir le do chóras carachtair End-of-Transmission (ASCII 04) a léamh.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Theip ar an tástáil.</value>
@@ -520,7 +550,22 @@
     <value>D'fhéadfadh roinnt barachóid sonraí EDI a áireamh.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Níor chóir na carachtair seo a fheiceáil le chéile i gcód barra aitheantais uathúil riamh.</value>
+    <value>Tá sé an-dóchúil nach n-úsáidtear na carachtair seo in aitheantóirí uathúla.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Tá sé an-dóchúil nach n-úsáidtear na carachtair seo in aitheantóirí uathúla.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Tá sé an-dóchúil nach n-úsáidtear na carachtair seo in aitheantóirí uathúla.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Tá sé an-dóchúil nach n-úsáidtear na carachtair seo in aitheantóirí uathúla.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Tugann an carachtar seo le fios go bhfuil deireadh leis na sonraí i gcóid bharra PPN. B’fhéidir nach léann do bhogearraí aon iarfhocal a chuirfidh an scanóir cóid bharra leis i gceart.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Tugann an carachtar seo le fios go bhfuil deireadh leis na sonraí i gcóid bharra PPN. B’fhéidir nach léann do bhogearraí aon iarfhocal a chuirfidh an scanóir cóid bharra leis i gceart.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>D'fhéadfá barachód mícheart a scanadh nó sonraí míchearta a iontráil ag baint úsáide as an méarchlár. D'fhéadfadh do scanóir barachóid nó do chóras a bheith mall, nó d'fhéadfadh fadhb gan choinne nó eatramhach tarlú.</value>

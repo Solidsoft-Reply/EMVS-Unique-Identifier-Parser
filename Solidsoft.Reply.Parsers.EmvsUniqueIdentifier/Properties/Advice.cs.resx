@@ -199,7 +199,22 @@
     <value>Pokud skenujete čárové kódy obsahující EDI data a máte potíže, zkuste nakonfigurovat skener čárových kódů tak, aby emuloval numerickou klávesnici.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Pokud skenujete jiné čárové kódy a narazíte na potíže, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+    <value>Pokud máte potíže při skenování čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Pokud máte potíže při skenování čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Pokud máte potíže při skenování čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Pokud máte potíže při skenování čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Pokud máte potíže při skenování PPN čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Pokud máte potíže při skenování PPN čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Zkuste to znovu a ujistěte se, že skenujete správný čárový kód(y).</value>
@@ -364,7 +379,22 @@
     <value>Váš systém nemůže spolehlivě číst čárové kódy, pokud obsahují data pro elektronickou výměnu dat (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Váš systém nedokáže rozlišit mezi určitými normálními a speciálními znaky.</value>
+    <value>Váš systém nemusí správně číst znaky oddělovače souborů (ASCII 28).</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Váš systém nemůže číst znaky oddělovače souborů (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Váš systém nemusí správně číst znaky oddělovače jednotek (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Váš systém nemusí správně číst znaky oddělovače jednotek (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Váš systém nemusí správně číst znaky konce přenosu (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Váš systém nemůže číst znaky konce přenosu (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test selhal.</value>
@@ -520,7 +550,22 @@
     <value>Některé čárové kódy mohou obsahovat data EDI.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Tyto znaky by se nikdy neměly vyskytovat společně v čárovém kódu jedinečného identifikátoru.</value>
+    <value>Tyto znaky se velmi pravděpodobně nepoužívají v unikátních identifikátorech.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Tyto znaky se velmi pravděpodobně nepoužívají v unikátních identifikátorech.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Tyto znaky se velmi pravděpodobně nepoužívají v unikátních identifikátorech.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Tyto znaky se velmi pravděpodobně nepoužívají v unikátních identifikátorech.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Tento znak označuje konec dat v PPN čárových kódech. Váš software nemusí správně přečíst jakýkoli příponu přidanou čtečkou čárových kódů.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Tento znak označuje konec dat v PPN čárových kódech. Váš software nemusí správně přečíst jakýkoli příponu přidanou čtečkou čárových kódů.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Možná jste naskenovali špatný čárový kód nebo jste pomocí klávesnice zadali nesprávná data. Váš skener čárových kódů nebo systém může být pomalý, nebo může nastat neočekávaný nebo přerušovaný problém.</value>

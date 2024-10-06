@@ -118,172 +118,202 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Advice_100" xml:space="preserve">
-    <value />
+    <value>Jūs varat pārbaudīt medicīnisko iepakojumu autentiskumu, noskenējot svītrkodu, kas ir izdrukāts uz ārējā iepakojuma.</value>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>Jūs varat pārbaudīt zāļu iepakojumu autentiskumu, skenējot svītrkodu, kas drukāts uz ārējā iepakojuma. Jums var nākties manuāli ievadīt datus savā programmatūrā svītrkodu gadījumos, kad tie satur datus, kas formatēti atbilstoši ISO/IEC 15434 rakstzīmēm.</value>
+    <value>Jūs varat pārbaudīt medicīnisko iepakojumu autentiskumu, noskenējot svītrkodu, kas ir izdrukāts uz ārējā iepakojuma. Jums, iespējams, būs manuāli jāievada dati savā programmatūrā, ja svītrkodi satur datus, kas formatēti saskaņā ar ISO/IEC 15434 rakstzīmēm.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>Jūs varat pārbaudīt vairuma zāļu iepakojumu autentiskumu, skenējot svītrkodu, kas drukāts uz ārējā iepakojuma. Ja rodas problēmas, skenējot svītrkodus, kas satur Formāta 05 vai Formāta 06 datus, ievadiet datus manuāli savā programmatūrā. Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Jūs varat pārbaudīt lielāko daļu medicīnisko iepakojumu autentiskumu, noskenējot svītrkodu, kas ir izdrukāts uz ārējā iepakojuma. Jūs varat pārbaudīt lielāko daļu medicīnisko iepakojumu autentiskumu, noskenējot svītrkodu, kas ir izdrukāts uz ārējā iepakojuma. Ja, skenējot svītrkodus, kas satur Formāta 05 vai Formāta 06 datus, rodas problēmas, ievadiet datus manuāli savā programmatūrā. Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Jūs varat pārbaudīt vairuma zāļu iepakojumu autentiskumu, skenējot svītrkodu, kas drukāts uz ārējā iepakojuma. Ievadiet datus manuāli jūsu programmatūrā svītrkodiem, kas satur Format 05 vai Format 06 datus. Ja nepieciešams, konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
+    <value>Jūs varat pārbaudīt lielāko daļu medicīnisko iepakojumu autentiskumu, noskenējot svītrkodu, kas ir izdrukāts uz ārējā iepakojuma. Jūs varat pārbaudīt lielāko daļu medicīnisko iepakojumu autentiskumu, noskenējot svītrkodu, kas ir izdrukāts uz ārējā iepakojuma. Ievadiet datus manuāli savā programmatūrā, ja svītrkodi satur Formāta 05 vai Formāta 06 datus. Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
-    <value>Konfigurējiet jūsu svītrkoda skeneri AIM identifikatoru pārraidīšanai. Ja rodas problēmas, pārraidot AIM identifikatorus, atgriezieties pie pašreizējās konfigurācijas.</value>
+    <value>Konfigurējiet savu svītrkodu skeneri, lai tas pārraidītu AIM identifikatorus. Ja rodas problēmas ar AIM identifikatoru pārraidīšanu, atgriezieties pie pašreizējās konfigurācijas.</value>
   </data>
   <data name="Advice_205" xml:space="preserve">
-    <value>Jums varētu gribēties izslēgt Caps Lock un mēģināt vēlreiz.</value>
+    <value>Iespējams, vēlaties izslēgt Caps Lock un mēģināt vēlreiz.</value>
   </data>
   <data name="Advice_206" xml:space="preserve">
-    <value>Pārbaudiet jūsu svītrkoda skeneri, tastatūru un datora konfigurācijas un, ja nepieciešams, konfigurējiet tos no jauna.;;Jūs varētu vēlēties izslēgt Caps Lock un veikt testēšanu vēlreiz.</value>
+    <value>Pārbaudiet savu svītrkodu skeneri, tastatūras un datora konfigurāciju un pārkonfigurējiet tās, ja nepieciešams.;;Iespējams, vēlaties izslēgt Caps Lock un mēģināt vēlreiz.</value>
   </data>
   <data name="Advice_210" xml:space="preserve">
-    <value>Jums varētu gribēties izslēgt Caps Lock.</value>
+    <value>Iespējams, vēlaties izslēgt Caps Lock.</value>
   </data>
   <data name="Advice_215" xml:space="preserve">
-    <value>Konfigurējiet jūsu svītrkoda skeneri, lai tas pārraidītu rindas beigu secības un veiciet testēšanu vēlreiz. Ja rodas problēmas, pārraidot rindas beigu secības, atgriezieties pie pašreizējās konfigurācijas.</value>
+    <value>Konfigurējiet savu svītrkodu skeneri, lai tas pārraidītu rindu beigu secības, un pārbaudiet vēlreiz. Ja rodas problēmas ar rindu beigu secību pārraidīšanu, atgriezieties pie pašreizējās konfigurācijas.</value>
   </data>
   <data name="Advice_220" xml:space="preserve">
-    <value>Ja rodas problēmas, skenējot svītrkodu datus, konfigurējiet savu svītrkodu skeneri tā, lai tas nepārraidītu prefiksu.</value>
+    <value>Ja rodas problēmas ar medicīnisko iepakojumu pārbaudi, konfigurējiet savu svītrkodu skeneri tā, lai tas nepārraidītu prefiksu.</value>
   </data>
   <data name="Advice_225" xml:space="preserve">
-    <value>Ja rodas problēmas, skenējot svītrkodu datus, konfigurējiet savu svītrkodu skeneri tā, lai tas nepārraidītu sufiksu.</value>
+    <value>Ja rodas problēmas ar medicīnisko iepakojumu pārbaudi, konfigurējiet savu svītrkodu skeneri tā, lai tas nepārraidītu sufiksu.</value>
   </data>
   <data name="Advice_230" xml:space="preserve">
-    <value>Pārliecinieties, vai jūsu tastatūras izkārtojumi sakrīt.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Pārliecinieties, ka tastatūras izkārtojumi atbilst.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_231" xml:space="preserve">
-    <value>Pārliecinieties, vai jūsu tastatūras izkārtojumi sakrīt.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Pārliecinieties, ka tastatūras izkārtojumi atbilst.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_232" xml:space="preserve">
-    <value>Pārbaudiet, vai jūsu svītrkoda skeneris ir konfigurēts AIM identifikatoru pārraidīšanai.</value>
+    <value>Pārliecinieties, ka jūsu svītrkodu skeneris ir konfigurēts AIM identifikatoru pārraidīšanai.</value>
   </data>
   <data name="Advice_235" xml:space="preserve">
-    <value>Pārliecinieties, vai jūsu tastatūras izkārtojumi sakrīt.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru un pārraidītu AIM identifikatorus.</value>
+    <value>Pārliecinieties, ka tastatūras izkārtojumi atbilst.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru un pārraidītu AIM identifikatorus.</value>
   </data>
   <data name="Advice_240" xml:space="preserve">
-    <value>Ja rodas problēmas, skenējot svītrkodus, kas satur Formāta 05 vai Formāta 06 datus, ievadiet datus manuāli savā programmatūrā. Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Ja rodas problēmas, skenējot vācu PPN svītrkodus, ievadiet datus manuāli savā verifikācijas programmatūrā.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_241" xml:space="preserve">
-    <value>Ievadiet datus manuāli jūsu programmatūrā svītrkodiem, kas satur Format 05 vai Format 06 datus. Ja nepieciešams, konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
+    <value>Ievadiet datus manuāli savā verifikācijas programmatūrā, lai pārbaudītu PPN unikālos identifikatorus.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_245" xml:space="preserve">
-    <value>Ievadiet datus manuāli jūsu programmatūrā svītrkodiem, kas satur Format 05 vai Format 06 datus. Ja nepieciešams, konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
+    <value>Ievadiet datus manuāli savā verifikācijas programmatūrā, lai pārbaudītu PPN unikālos identifikatorus.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_250" xml:space="preserve">
-    <value>Ja jūs plānojat skenēt svītrkodus, kas satur datus, formatētus atbilstoši ISO/IEC 15434, veiciet testu vēlreiz, šoreiz iekļaujot ISO/IEC 15434 datu savietojamības testu.</value>
+    <value>Ja jums ir jāverificē PPN svītrkodi, palaidiet pārbaudi vēlreiz, šoreiz iekļaujot vācu PPN saderības testu.</value>
   </data>
   <data name="Advice_255" xml:space="preserve">
-    <value>Ja problēma saglabājas, pārbaudiet savu svītrkodu skenera konfigurāciju. Meklējiet iestatījumus, kas uzlabos tastatūras ievades veiktspēju.</value>
+    <value>Ja problēma saglabājas, pārbaudiet sava svītrkodu skenera konfigurāciju. Meklējiet iestatījumus, kas uzlabo tastatūras ievades veiktspēju.</value>
   </data>
   <data name="Advice_256" xml:space="preserve">
-    <value>Ja problēma saglabājas, pārbaudiet savu svītrkodu skenera konfigurāciju. Meklējiet iestatījumus, kas uzlabos tastatūras ievades veiktspēju.</value>
+    <value>Ja problēma saglabājas, pārbaudiet sava svītrkodu skenera konfigurāciju. Meklējiet iestatījumus, kas uzlabo tastatūras ievades veiktspēju.</value>
   </data>
   <data name="Advice_260" xml:space="preserve">
-    <value>Ja skenējat citus svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Ja, skenējot citus svītrkodus, rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_261" xml:space="preserve">
-    <value>Ja skenējat citus svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Ja, skenējot citus svītrkodus, rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_265" xml:space="preserve">
-    <value>Ja skenējat citus svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Ja, skenējot citus svītrkodus, rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_270" xml:space="preserve">
-    <value>Ja skenējat EDI svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Ja, skenējot svītrkodus, kas satur EDI datus, rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_271" xml:space="preserve">
-    <value>Ja skenējat EDI svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Ja, skenējot svītrkodus, kas satur EDI datus, rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_275" xml:space="preserve">
-    <value>Ja skenējat EDI svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Ja, skenējot svītrkodus, kas satur EDI datus, rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Ja skenējat citus svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri, lai tas atdarinātu ciparu tastatūru.</value>
+    <value>Ja rodas grūtības, skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Ja rodas grūtības, skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Ja rodas grūtības, skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Ja rodas grūtības, skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Ja rodas grūtības, skenējot PPN svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Ja rodas grūtības, skenējot PPN svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
-    <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizos svītrkodus.</value>
+    <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizo svītrkodu.</value>
   </data>
   <data name="Advice_301" xml:space="preserve">
     <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizo svītrkodu.</value>
   </data>
   <data name="Advice_303" xml:space="preserve">
-    <value>Mēģiniet vēlreiz.;;Pārliecinieties, ka jūsu tastatūras izkārtojums sakrīt.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri, lai tas imitētu ciparu tastatūru.</value>
+    <value>Mēģiniet vēlreiz.;;Pārliecinieties, ka tastatūras izkārtojumi atbilst.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_304" xml:space="preserve">
-    <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizos svītrkodus.</value>
+    <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizo svītrkodu.</value>
   </data>
   <data name="Advice_305" xml:space="preserve">
-    <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizo svītrkodu.;;Ja tiek prasīts skenēt vairākus svītrkodus, pārliecinieties, ka skenējat tos pareizajā secībā.</value>
+    <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizo svītrkodu.;;Ja jums tiek lūgts skenēt vairākus svītrkodus, pārliecinieties, ka skenējat tos pareizā secībā.</value>
   </data>
   <data name="Advice_306" xml:space="preserve">
     <value>Mēģiniet vēlreiz.</value>
   </data>
   <data name="Advice_307" xml:space="preserve">
-    <value>Ja jūsu programmatūra nespēj kompensēt, konfigurējiet savu svītrkodu skeneri tā, lai tas atbilstu jūsu datora tastatūras izkārtojumam.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Ja jūsu verifikācijas programmatūra nevar kompensēt, konfigurējiet savu svītrkodu skeneri, lai tas atbilstu jūsu datora tastatūras izkārtojumam.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_308" xml:space="preserve">
-    <value>Konfigurējiet jūsu svītrkoda skeneri, lai tas atbilstu jūsu datora tastatūras izkārtojumam.;;Ja nepieciešams, konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
+    <value>Konfigurējiet savu svītrkodu skeneri tā, lai tas atbilstu jūsu datora tastatūras izkārtojumam.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_309" xml:space="preserve">
-    <value>Ja jūsu programmatūra nespēj kompensēt, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Ja jūsu verifikācijas programmatūra nevar kompensēt, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_310" xml:space="preserve">
-    <value>Konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
+    <value>Konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_311" xml:space="preserve">
+    <value>Ja jūsu verifikācijas programmatūra nevar kompensēt, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_312" xml:space="preserve">
+    <value>Konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_315" xml:space="preserve">
-    <value>Konfigurējiet jūsu svītrkoda skeneri, lai tas atbilstu jūsu datora tastatūras izkārtojumam.;;Ja nepieciešams, konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
+    <value>Konfigurējiet savu svītrkodu skeneri tā, lai tas atbilstu jūsu datora tastatūras izkārtojumam.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_316" xml:space="preserve">
-    <value>Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_320" xml:space="preserve">
-    <value>Ja jūsu programmatūra nespēj kompensēt, konfigurējiet savu svītrkodu skeneri tā, lai tas atbilstu jūsu datora tastatūras izkārtojumam.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Ja jūsu verifikācijas programmatūra nevar kompensēt, konfigurējiet savu svītrkodu skeneri, lai tas atbilstu jūsu datora tastatūras izkārtojumam.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_325" xml:space="preserve">
-    <value>Izslēdziet Caps Lock un mēģiniet vēlreiz.;;Ja jums ir nepieciešams atstāt ieslēgtu Caps Lock, skenējot svītrkodus, jūs varat konfigurēt savu svītrkodu skeneri, lai tas kompensētu.</value>
+    <value>Izslēdziet Caps Lock un mēģiniet vēlreiz.;;Ja verifikācijas laikā jums ir jāatstāj ieslēgts Caps Lock, iespējams, varat konfigurēt savu svītrkodu skeneri, lai tas kompensētu šo iestatījumu.</value>
   </data>
   <data name="Advice_326" xml:space="preserve">
     <value>Izslēdziet Caps Lock un mēģiniet vēlreiz.</value>
   </data>
   <data name="Advice_327" xml:space="preserve">
-    <value>Pārbaudiet jūsu svītrkoda skeneri, tastatūru un datora konfigurāciju un, ja nepieciešams, konfigurējiet tos no jauna.;;Izslēdziet Caps Lock un veiciet testēšanu vēlreiz.</value>
+    <value>Pārbaudiet savu svītrkodu skeneri, tastatūras un datora konfigurāciju un pārkonfigurējiet tās, ja nepieciešams.;;Izslēdziet Caps Lock un mēģiniet vēlreiz.</value>
   </data>
   <data name="Advice_328" xml:space="preserve">
-    <value>Pārbaudiet jūsu svītrkoda skeneri, tastatūru un datora konfigurāciju un, ja nepieciešams, konfigurējiet tos no jauna.;;Izslēdziet Caps Lock un veiciet testēšanu vēlreiz.</value>
+    <value>Pārbaudiet savu svītrkodu skeneri, tastatūras un datora konfigurāciju un pārkonfigurējiet tās, ja nepieciešams.;;Izslēdziet Caps Lock un mēģiniet vēlreiz.</value>
   </data>
   <data name="Advice_330" xml:space="preserve">
-    <value>Pārbaudiet jūsu skeneri, tastatūru un datora konfigurāciju un, ja nepieciešams, konfigurējiet tos no jauna.</value>
+    <value>Pārbaudiet savu skeneri, tastatūras un datora konfigurāciju un pārkonfigurējiet tās, ja nepieciešams.</value>
   </data>
   <data name="Advice_331" xml:space="preserve">
-    <value>Pārbaudiet jūsu svītrkoda skeneri, tastatūru un datora konfigurāciju un, ja nepieciešams, konfigurējiet tos no jauna.</value>
+    <value>Pārbaudiet savu svītrkodu skeneri, tastatūras un datora konfigurāciju un pārkonfigurējiet tās, ja nepieciešams.</value>
   </data>
   <data name="Advice_332" xml:space="preserve">
-    <value>Pārbaudiet jūsu svītrkoda skeneri, tastatūru un datora konfigurāciju un, ja nepieciešams, konfigurējiet tos no jauna.</value>
+    <value>Pārbaudiet savu svītrkodu skeneri, tastatūras un datora konfigurāciju un pārkonfigurējiet tās, ja nepieciešams.</value>
   </data>
   <data name="Advice_335" xml:space="preserve">
-    <value>Ja iespējams, konfigurējiet savu datoru, lai izmantotu citu tastatūras izkārtojumu.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
+    <value>Ja iespējams, konfigurējiet datoru, lai izmantotu citu tastatūras izkārtojumu.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_350" xml:space="preserve">
+    <value>Ievadiet datus manuāli savā verifikācijas programmatūrā, lai pārbaudītu PPN unikālos identifikatorus.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_351" xml:space="preserve">
+    <value>Ievadiet datus manuāli savā verifikācijas programmatūrā, lai pārbaudītu PPN unikālos identifikatorus.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_355" xml:space="preserve">
+    <value>Ievadiet datus manuāli savā verifikācijas programmatūrā, lai pārbaudītu PPN unikālos identifikatorus.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_390" xml:space="preserve">
     <value>Mēģiniet vēlreiz.</value>
   </data>
   <data name="Condition_100" xml:space="preserve">
-    <value>Jūsu sistēma uzticami lasa lielāko daļu svītrkodu.</value>
+    <value>Jūsu sistēma uzticami nolasa unikālos identifikatorus.</value>
   </data>
   <data name="Condition_105" xml:space="preserve">
-    <value>Jūsu sistēma uzticami lasa lielāko daļu svītrkodu.</value>
+    <value>Jūsu sistēma uzticami nolasa unikālos identifikatorus.</value>
   </data>
   <data name="Condition_110" xml:space="preserve">
-    <value>Jūsu sistēma uzticami lasa GS1 svītrkodus.</value>
+    <value>Jūsu sistēma uzticami nolasa unikālos identifikatorus.</value>
   </data>
   <data name="Condition_115" xml:space="preserve">
-    <value>Jūsu sistēma uzticami lasa GS1 svītrkodus.</value>
+    <value>Jūsu sistēma uzticami nolasa lielāko daļu unikālo identifikatoru.</value>
   </data>
   <data name="Condition_200" xml:space="preserve">
     <value>Jūsu svītrkodu skeneris nepārraida AIM identifikatorus.</value>
   </data>
   <data name="Condition_205" xml:space="preserve">
-    <value>Caps Lock ir ieslēgts, bet burtu lielums tiek atspoguļots pareizi.</value>
+    <value>Caps Lock ir ieslēgts, bet burtu lielums tiek ziņots pareizi.</value>
   </data>
   <data name="Condition_206" xml:space="preserve">
     <value>Caps Lock ir ieslēgts, bet burtu lielums tiek saglabāts.</value>
@@ -292,7 +322,7 @@
     <value>Caps Lock ir ieslēgts.</value>
   </data>
   <data name="Condition_215" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris nepārraida rindas beigu secību.</value>
+    <value>Jūsu svītrkodu skeneris nepārraida rindu beigu secību.</value>
   </data>
   <data name="Condition_220" xml:space="preserve">
     <value>Jūsu svītrkodu skeneris pārraida prefiksu.</value>
@@ -301,94 +331,115 @@
     <value>Jūsu svītrkodu skeneris pārraida sufiksu.</value>
   </data>
   <data name="Condition_230" xml:space="preserve">
-    <value>Jūsu sistēma var nelasīt AIM identifikatoru rakstzīmes.</value>
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa AIM identifikatoru rakstzīmes.</value>
   </data>
   <data name="Condition_231" xml:space="preserve">
-    <value>Jūsu sistēma nevar nolasīt AIM identifikatoru rakstzīmes.</value>
+    <value>Jūsu sistēma nevar nolasa AIM identifikatoru rakstzīmes.</value>
   </data>
   <data name="Condition_232" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris var nepārraidīt AIM identifikatorus.</value>
+    <value>Jūsu svītrkodu skeneris, iespējams, nepārraida AIM identifikatorus.</value>
   </data>
   <data name="Condition_235" xml:space="preserve">
-    <value>Jūsu sistēma nevar nolasīt svītrkoda tipa identifikatoru.</value>
+    <value>Jūsu sistēma nevar uzticami nolasa AIM identifikatoru rakstzīmes.</value>
   </data>
   <data name="Condition_240" xml:space="preserve">
-    <value>Jūsu sistēma var nebūt spējīga uzticami nolasīt Format 05 vai Format 06 svītrkodus.</value>
+    <value>Jūsu sistēma nevar uzticami nolasa vācu PPN svītrkodu rakstzīmes.</value>
   </data>
   <data name="Condition_241" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt Format 05 vai Format 06 svītrkodus.</value>
+    <value>Jūsu sistēma nevar nolasa vācu PPN svītrkodu rakstzīmes.</value>
   </data>
   <data name="Condition_245" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt Format 05 vai Format 06 svītrkodus.</value>
+    <value>Jūsu sistēma nevar nolasa vācu PPN svītrkodu rakstzīmes.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Jūs neesat pārbaudījis saderību ar ISO/IEC 15434.</value>
+    <value>Jūs nepārbaudījāt vācu PPN svītrkodu saderību.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
-    <value>Datu ievades veiktspēja ir lēnāka nekā gaidīts.</value>
+    <value>Datu ievades veiktspēja ir lēnāka, nekā gaidīts.</value>
   </data>
   <data name="Condition_256" xml:space="preserve">
-    <value>Datu ievades veiktspēja ir ļoti slikti.</value>
+    <value>Datu ievades veiktspēja ir ļoti slikta.</value>
   </data>
   <data name="Condition_260" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur neinvariantas rakstzīmes.</value>
+    <value>Jūsu sistēma nevar uzticami nolasa papildu rakstzīmes.</value>
   </data>
   <data name="Condition_261" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur neinvariantas rakstzīmes.</value>
+    <value>Jūsu sistēma nevar nolasa papildu rakstzīmes.</value>
   </data>
   <data name="Condition_265" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur neinvariantas rakstzīmes.</value>
+    <value>Jūsu sistēma, iespējams, neuzticami nolasa papildu datus.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tajos ir dati par Elektronisko Datu Apmaiņu (EDI).</value>
+    <value>Jūsu sistēma nevar uzticami nolasa svītrkodus, ja tajos ir dati par Elektronisko Datu Apmaiņu (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tajos ir dati par Elektronisko Datu Apmaiņu (EDI).</value>
+    <value>Jūsu sistēma nevar uzticami nolasa svītrkodus, ja tajos ir dati par Elektronisko Datu Apmaiņu (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tajos ir dati par Elektronisko Datu Apmaiņu (EDI).</value>
+    <value>Jūsu sistēma nevar uzticami nolasa svītrkodus, ja tajos ir dati par Elektronisko Datu Apmaiņu (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Jūsu sistēma nevar atšķirt noteiktus parastos un īpašos rakstzīmes.</value>
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa Faila Atdalītāja (ASCII 28) rakstzīmes.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Jūsu sistēma nevar nolasa Faila Atdalītāja (ASCII 28) rakstzīmes.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa Vienības Atdalītāja (ASCII 31) rakstzīmes.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa Vienības Atdalītāja (ASCII 31) rakstzīmes.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa Pārraides Beigu (ASCII 04) rakstzīmes.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Jūsu sistēma nevar nolasa Pārraides Beigu (ASCII 04) rakstzīmes.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
-    <value>Tests neizdevās.</value>
+    <value>Pārbaude neizdevās.</value>
   </data>
   <data name="Condition_301" xml:space="preserve">
-    <value>Par svītrkodu dati netika ziņoti.</value>
+    <value>Netika ziņoti dati par svītrkodu.</value>
   </data>
   <data name="Condition_303" xml:space="preserve">
-    <value>Skenējot svītrkodu, daži dati netika ziņoti.</value>
+    <value>Daži dati netika ziņoti, kad skenējāt svītrkodu.</value>
   </data>
   <data name="Condition_304" xml:space="preserve">
-    <value>Par vienu vai vairākiem svītrkodiem dati netika ziņoti.</value>
+    <value>Netika ziņoti dati par vienu vai vairākiem svītrkodiem.</value>
   </data>
   <data name="Condition_305" xml:space="preserve">
-    <value>Jūs esat nolasis svītrkodu nepareizā secībā.</value>
+    <value>Jūs noskenējāt svītrkodu nepareizā secībā.</value>
   </data>
   <data name="Condition_306" xml:space="preserve">
-    <value>Skenējot vienu vai vairākus svītrkodus, daži dati netika ziņoti.</value>
+    <value>Daži dati netika ziņoti, kad skenējāt vienu vai vairākus svītrkodus.</value>
   </data>
   <data name="Condition_307" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris un dators ir atšķirīgi tastatūras izkārtojumi.</value>
+    <value>Jūsu svītrkodu skenerim un datoram ir atšķirīgi tastatūras izkārtojumi.</value>
   </data>
   <data name="Condition_308" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris un dators ir atšķirīgi tastatūras izkārtojumi.</value>
+    <value>Jūsu svītrkodu skenerim un datoram ir atšķirīgi tastatūras izkārtojumi.</value>
   </data>
   <data name="Condition_309" xml:space="preserve">
-    <value>Slēptie rakstzīmes svītrkodos netiek atspoguļoti pareizi.</value>
+    <value>Slēptās rakstzīmes svītrkodos netiek pareizi ziņotas.</value>
   </data>
   <data name="Condition_310" xml:space="preserve">
-    <value>Slēptie rakstzīmes svītrkodos netiek atspoguļoti pareizi.</value>
+    <value>Slēptās rakstzīmes svītrkodos netiek pareizi ziņotas.</value>
+  </data>
+  <data name="Condition_311" xml:space="preserve">
+    <value>Slēptās rakstzīmes svītrkodos netiek pareizi ziņotas.</value>
+  </data>
+  <data name="Condition_312" xml:space="preserve">
+    <value>Slēptās rakstzīmes svītrkodos netiek pareizi ziņotas.</value>
   </data>
   <data name="Condition_315" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris un dators ir atšķirīgi tastatūras izkārtojumi.</value>
+    <value>Jūsu svītrkodu skenerim un datoram ir atšķirīgi tastatūras izkārtojumi.</value>
   </data>
   <data name="Condition_316" xml:space="preserve">
-    <value>Slēptie rakstzīmes svītrkodos netiek atspoguļoti pareizi.</value>
+    <value>Slēptās rakstzīmes svītrkodos netiek pareizi ziņotas.</value>
   </data>
   <data name="Condition_320" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodu rakstzīmes.</value>
+    <value>Jūsu sistēma nevar uzticami nolasīt unikālo identifikatoru rakstzīmes.</value>
   </data>
   <data name="Condition_325" xml:space="preserve">
     <value>Caps Lock ir ieslēgts.</value>
@@ -397,91 +448,100 @@
     <value>Caps Lock ir ieslēgts.</value>
   </data>
   <data name="Condition_327" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai pārveidotu rakstzīmes lielajos burtos.</value>
+    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai pārvērstu rakstzīmes par lielajiem burtiem.</value>
   </data>
   <data name="Condition_328" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai pārveidotu rakstzīmes mazajos burtos.</value>
+    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai pārvērstu rakstzīmes par mazajiem burtiem.</value>
   </data>
   <data name="Condition_330" xml:space="preserve">
     <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai simulētu Caps Lock.</value>
   </data>
   <data name="Condition_331" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai pārveidotu rakstzīmes lielajos burtos.</value>
+    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai pārvērstu rakstzīmes par lielajiem burtiem.</value>
   </data>
   <data name="Condition_332" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai pārveidotu rakstzīmes mazajos burtos.</value>
+    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai pārvērstu rakstzīmes par mazajiem burtiem.</value>
   </data>
   <data name="Condition_335" xml:space="preserve">
-    <value>Jūsu tastatūras izkārtojums atbalsta {0} rakstzīmes un nespēj uzticami nolasīt svītrkodus.</value>
+    <value>Jūsu tastatūras izkārtojums atbalsta {0} rakstzīmes un nevar uzticami nolasīt unikālos identifikatorus.</value>
+  </data>
+  <data name="Condition_350" xml:space="preserve">
+    <value>Jūsu sistēma nevar uzticami nolasīt PPN svītrkodu rakstzīmes.</value>
+  </data>
+  <data name="Condition_351" xml:space="preserve">
+    <value>Jūsu sistēma nevar nolasīt PPN svītrkodu rakstzīmes.</value>
+  </data>
+  <data name="Condition_355" xml:space="preserve">
+    <value>Jūsu sistēma nevar nolasīt PPN svītrkodu rakstzīmes.</value>
   </data>
   <data name="Condition_390" xml:space="preserve">
-    <value>Tests neveiksmīgi neizdevās.</value>
+    <value>Pārbaude negaidīti neizdevās.</value>
   </data>
   <data name="Description_105" xml:space="preserve">
-    <value>Tomēr jūs neesat pārbaudījis savietojamību ar ISO/IEC 15434. Jūsu sistēma var nespēt uzticami lasīt svītrkodus, ja tie satur datus, kas formatēti atbilstoši ISO/IEC 15434.</value>
+    <value>Tomēr jūs nepārbaudījāt vācu PPN svītrkodu saderību. Jūsu sistēma, iespējams, nespēs uzticami nolasīt vācu PPN svītrkodus.</value>
   </data>
   <data name="Description_110" xml:space="preserve">
-    <value>Tomēr jūsu pārbaudes programmatūra var nespēt uzticami lasīt svītrkodus, ja tie satur datus, kas formatēti atbilstoši ISO/IEC 15434.</value>
+    <value>Tomēr jūsu verifikācijas programmatūra, iespējams, nepareizi nolasīs vācu PPN svītrkodus.</value>
   </data>
   <data name="Description_115" xml:space="preserve">
-    <value>Tomēr tas nespēj uzticami lasīt svītrkodus, ja tie satur datus, kas formatēti atbilstoši ISO/IEC 15434 standartam.</value>
+    <value>Tomēr tā nevar uzticami nolasīt vācu PPN svītrkodus.</value>
   </data>
   <data name="Description_200" xml:space="preserve">
-    <value>AIM identifikatori norāda uz svītrkoda tipu. Jūsu programmatūra var tos izmantot, lai novērstu nevajadzīgus brīdinājumus.</value>
+    <value>AIM identifikatori attēlo svītrkoda veidu. Jūsu verifikācijas programmatūra, iespējams, tos izmantos, lai novērstu nevajadzīgus brīdinājumus.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris, iespējams, ir konfigurēts, lai automātiski kompensētu Caps Lock vai ievadītu datus, izmantojot ciparu tastatūru (ALT režīms).</value>
+    <value>Jūsu svītrkodu skeneris, iespējams, ir konfigurēts, lai automātiski kompensētu Caps Lock vai lai ievadītu datus, izmantojot ciparu tastatūru (ALT režīmā).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
-    <value>Jūsu Caps Lock taustiņš var būt atspējots vai pārkonfigurēts.</value>
+    <value>Jūsu Caps Lock taustiņš, iespējams, ir atspējots vai pārkonfigurēts.</value>
   </data>
   <data name="Description_210" xml:space="preserve">
-    <value>Tomēr jūsu datora tastatūras izkārtojums ir rakstzīmēm, kas neatbalsta lielos un mazos burtus.</value>
+    <value>Tomēr jūsu datora tastatūras izkārtojums ir paredzēts valodai, kas neatbalsta burtu lieluma maiņu.</value>
   </data>
   <data name="Description_215" xml:space="preserve">
-    <value>Tas var palēnināt jūsu skenēšanas veiktspēju. Tomēr jūsu programmatūra var neatbalstīt rindas beigu secības.</value>
+    <value>Tas var palēnināt jūsu skenēšanas veiktspēju. Tomēr jūsu verifikācijas programmatūra, iespējams, neatbalsta rindu beigu secības.</value>
   </data>
   <data name="Description_220" xml:space="preserve">
-    <value>Jūsu programmatūra var neatpazīt prefiksu.</value>
+    <value>Jūsu verifikācijas programmatūra, iespējams, neatpazīst prefiksu.</value>
   </data>
   <data name="Description_225" xml:space="preserve">
-    <value>Jūsu programmatūra var neatpazīt sufiksu.</value>
+    <value>Jūsu verifikācijas programmatūra, iespējams, neatpazīst sufiksu.</value>
   </data>
   <data name="Description_230" xml:space="preserve">
-    <value>AIM identifikatori norāda uz svītrkoda tipu. Jūsu programmatūra var tos izmantot, lai novērstu nevajadzīgus brīdinājumus. Tomēr, lai uzticami lasītu AIM identifikatorus, programmatūrai jāievieš rakstzīmju kartēšana.</value>
+    <value>AIM identifikatori attēlo svītrkoda veidu. Jūsu verifikācijas programmatūra, iespējams, tos izmantos, lai novērstu nevajadzīgus brīdinājumus. Tomēr programmatūrai ir jāievieš rakstzīmju kartēšana, lai uzticami nolasītu AIM identifikatorus.</value>
   </data>
   <data name="Description_231" xml:space="preserve">
-    <value>AIM identifikatori norāda uz svītrkoda tipu. Jūsu programmatūra var tos izmantot, lai novērstu nevajadzīgus brīdinājumus.</value>
+    <value>AIM identifikatori attēlo svītrkoda veidu. Jūsu verifikācijas programmatūra, iespējams, tos izmantos, lai novērstu nevajadzīgus brīdinājumus.</value>
   </data>
   <data name="Description_232" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris var pārraidīt AIM identifikatorus, bet tas nav droši. AIM identifikatori pārstāv svītrkoda tipu. Jūsu programmatūra tos var izmantot, lai novērstu nevajadzīgus brīdinājumus.</value>
+    <value>Jūsu svītrkodu skeneris, iespējams, pārraida AIM identifikatorus, taču tas nav droši zināms. AIM identifikatori attēlo svītrkoda veidu. Jūsu verifikācijas programmatūra, iespējams, tos izmantos, lai novērstu nevajadzīgus brīdinājumus.</value>
   </data>
   <data name="Description_235" xml:space="preserve">
-    <value>AIM identifikatori norāda uz svītrkoda tipu. Jūsu programmatūra var tos izmantot, lai novērstu nevajadzīgus brīdinājumus.</value>
+    <value>AIM identifikatori attēlo svītrkoda veidu. Jūsu verifikācijas programmatūra, iespējams, tos izmantos, lai novērstu nevajadzīgus brīdinājumus.</value>
   </data>
   <data name="Description_240" xml:space="preserve">
-    <value>Jūsu programmatūrai jāievieš rakstzīmju kartēšana, lai uzticami nolasītu svītrkodus, kuros ir neinvariantas rakstzīmes.</value>
+    <value>Jūsu programmatūrai ir jāievieš rakstzīmju kartēšana, lai uzticami nolasītu PPN svītrkodus.</value>
   </data>
   <data name="Description_245" xml:space="preserve">
-    <value>Dažas programmatūras var kompensēt to, analizējot taustiņu kodus, nevis rakstzīmes.</value>
+    <value>Dažas verifikācijas programmatūras, iespējams, spēs to kompensēt, analizējot taustiņu kodus, nevis rakstzīmes.</value>
   </data>
   <data name="Description_255" xml:space="preserve">
-    <value>Šī varētu būt pagaidu vai periodiska problēma. Jūsu dators var būt aizņemts, palaizot vīrusu pārbaudītāju vai prognozējošo teksta pakalpojumu. Jūsu svītrkodu skeneris var būt konfigurēts kā ciparu tastatūra.</value>
+    <value>Tā varētu būt īslaicīga vai periodiska problēma. Jūsu dators, iespējams, ir aizņemts, darbojoties ar vīrusu pārbaudītāju vai prognozēšanas teksta pakalpojumu. Jūsu svītrkodu skeneris, iespējams, ir konfigurēts kā ciparu tastatūra.</value>
   </data>
   <data name="Description_256" xml:space="preserve">
-    <value>Šī varētu būt pagaidu vai periodiska problēma. Jūsu dators var būt aizņemts, palaizot vīrusu pārbaudītāju vai prognozējošo teksta pakalpojumu. Jūsu svītrkodu skeneris var būt konfigurēts kā ciparu tastatūra.</value>
+    <value>Tā varētu būt īslaicīga vai periodiska problēma. Jūsu dators, iespējams, ir aizņemts, darbojoties ar vīrusu pārbaudītāju vai prognozēšanas teksta pakalpojumu. Jūsu svītrkodu skeneris, iespējams, ir konfigurēts kā ciparu tastatūra.</value>
   </data>
   <data name="Description_260" xml:space="preserve">
-    <value>Daži svītrkodi var saturēt nemainīgas rakstzīmes. Jūsu programmatūrai jārealizē rakstzīmju kartēšana, lai šos svītrkodus uzticami nolasītu.</value>
+    <value>Daži svītrkodi var saturēt papildu rakstzīmes, kas nekad neparādās unikālajos identifikatoros. Jūsu programmatūrai ir jāievieš rakstzīmju kartēšana, lai uzticami nolasītu šos svītrkodus.</value>
   </data>
   <data name="Description_261" xml:space="preserve">
-    <value>Daži svītrkodi var saturēt nemainīgas rakstzīmes.</value>
+    <value>Daži svītrkodi var saturēt papildu rakstzīmes, kas nekad neparādās unikālajos identifikatoros.</value>
   </data>
   <data name="Description_265" xml:space="preserve">
-    <value>Daži svītrkodi var saturēt nemainīgas rakstzīmes.</value>
+    <value>Daži svītrkodi var saturēt papildu rakstzīmes, kas nekad neparādās unikālajos identifikatoros.</value>
   </data>
   <data name="Description_270" xml:space="preserve">
-    <value>Daži svītrkodi var saturēt EDI datus. Jūsu programmatūrai jārealizē rakstzīmju kartēšana, lai šos svītrkodus uzticami nolasītu.</value>
+    <value>Daži svītrkodi var saturēt EDI datus. Jūsu programmatūrai ir jāievieš rakstzīmju kartēšana, lai uzticami nolasītu šos svītrkodus.</value>
   </data>
   <data name="Description_271" xml:space="preserve">
     <value>Daži svītrkodi var saturēt EDI datus.</value>
@@ -490,51 +550,72 @@
     <value>Daži svītrkodi var saturēt EDI datus.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Šīs rakstzīmes nekad nedrīkst parādīties kopā unikālā identifikatora svītrkodā.</value>
+    <value>Šie rakstzīmes ir ļoti maz ticams, ka tiks izmantotas unikālajos identifikatoros.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Šie rakstzīmes ir ļoti maz ticams, ka tiks izmantotas unikālajos identifikatoros.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Šie rakstzīmes ir ļoti maz ticams, ka tiks izmantotas unikālajos identifikatoros.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Šie rakstzīmes ir ļoti maz ticams, ka tiks izmantotas unikālajos identifikatoros.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Šis rakstzīme apzīmē datu beigas PPN svītrkodos. Jūsu programmatūra, iespējams, nepareizi nolasīs sufiksu, ko pievienoja svītrkodu skeneris.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Šis rakstzīme apzīmē datu beigas PPN svītrkodos. Jūsu programmatūra, iespējams, nepareizi nolasīs sufiksu, ko pievienoja svītrkodu skeneris.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
-    <value>Jūs varētu būt nolasis nepareizu svītrkodu vai ievadījis nepareizus datus, izmantojot tastatūru. Jūsu svītrkodu skeneris vai sistēma var būt lēna, vai var būt notikusi kāda negaidīta vai periodiska problēma.</value>
+    <value>Jūs, iespējams, noskenējāt nepareizu svītrkodu vai ievadījāt nepareizus datus, izmantojot tastatūru. Jūsu svītrkodu skeneris vai sistēma, iespējams, ir lēna, vai radās neparedzēta vai īslaicīga problēma.</value>
   </data>
   <data name="Description_303" xml:space="preserve">
-    <value>Svītrkodu skenera un datora tastatūras izkārtojums var nesakrist. Jūs varētu būt nolasis nepareizu svītrkodu vai ievadījis nepareizus datus, izmantojot tastatūru. Jūsu svītrkodu skeneris vai sistēma var būt lēna, vai var būt notikusi kāda negaidīta vai periodiska problēma.</value>
+    <value>Svītrkodu skenera un datora tastatūras izkārtojumi var nesakrist. Jūs, iespējams, noskenējāt nepareizu svītrkodu vai ievadījāt nepareizus datus, izmantojot tastatūru. Jūsu svītrkodu skeneris vai sistēma, iespējams, ir lēna, vai radās neparedzēta vai īslaicīga problēma.</value>
   </data>
   <data name="Description_306" xml:space="preserve">
-    <value>Jūs varētu būt nolasis nepareizu svītrkodu vai ievadījis nepareizus datus, izmantojot tastatūru. Jūsu svītrkodu skeneris vai sistēma var būt lēna, vai var būt notikusi kāda negaidīta vai periodiska problēma.</value>
+    <value>Jūs, iespējams, noskenējāt nepareizu svītrkodu vai ievadījāt nepareizus datus, izmantojot tastatūru. Jūsu svītrkodu skeneris vai sistēma, iespējams, ir lēna, vai radās neparedzēta vai īslaicīga problēma.</value>
   </data>
   <data name="Description_307" xml:space="preserve">
-    <value>Jūsu programmatūrai jāievieš rakstzīmju kartēšana, lai uzticami nolasītu svītrkodus.</value>
+    <value>Jūsu verifikācijas programmatūrai ir jāievieš rakstzīmju kartēšana, lai uzticami nolasītu unikālos identifikatorus.</value>
   </data>
   <data name="Description_309" xml:space="preserve">
-    <value>Jūsu programmatūra varētu kompensēt.</value>
+    <value>Jūsu verifikācijas programmatūra, iespējams, spēs kompensēt šo problēmu.</value>
+  </data>
+  <data name="Description_311" xml:space="preserve">
+    <value>Jūsu verifikācijas programmatūra, iespējams, spēs kompensēt šo problēmu.</value>
   </data>
   <data name="Description_315" xml:space="preserve">
-    <value>Jūsu programmatūra varētu kompensēt. Tomēr jūsu sistēma nevar pareizi nolasīt rakstzīmes svītrkodiem, kuros ir Format 05 vai Format 06 dati. Dažas programmatūras var kompensēt to, analizējot taustiņu kodus, nevis rakstzīmes.</value>
+    <value>Jūsu verifikācijas programmatūra, iespējams, spēs kompensēt šo problēmu. Tomēr jūsu sistēma nevar pareizi nolasīt vācu PPN svītrkodu rakstzīmes. Dažas verifikācijas programmatūras, iespējams, spēs kompensēt šo problēmu, analizējot taustiņu kodus, nevis rakstzīmes.</value>
   </data>
   <data name="Description_316" xml:space="preserve">
-    <value>Jūsu programmatūra varētu kompensēt. Tomēr jūsu sistēma nevar pareizi nolasīt svītrkodu rakstzīmes svītrkodiem, kuros ir Format 05 vai Format 06 dati. Dažas programmatūras var kompensēt to, analizējot taustiņu kodus, nevis rakstzīmes.</value>
+    <value>Jūsu verifikācijas programmatūra, iespējams, spēs kompensēt šo problēmu. Tomēr jūsu sistēma nevar pareizi nolasīt vācu PPN svītrkodu rakstzīmes. Dažas verifikācijas programmatūras, iespējams, spēs kompensēt šo problēmu, analizējot taustiņu kodus, nevis rakstzīmes.</value>
   </data>
   <data name="Description_320" xml:space="preserve">
-    <value>Dažas programmatūras var kompensēt to, analizējot taustiņu kodus, nevis rakstzīmes.</value>
+    <value>Dažas verifikācijas programmatūras, iespējams, spēs kompensēt šo problēmu, analizējot taustiņu kodus, nevis rakstzīmes.</value>
   </data>
   <data name="Description_326" xml:space="preserve">
-    <value>Kad ir ieslēgts Caps Lock, noklusējuma uzvedība ir ziņot visus rakstzīmes lielajos burtos.</value>
+    <value>Kad Caps Lock ir ieslēgts, noklusējuma uzvedība ir ziņot visas rakstzīmes ar lielajiem burtiem.</value>
   </data>
   <data name="Description_327" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodu rakstzīmes.</value>
+    <value>Jūsu sistēma nevar uzticami nolasīt unikālo identifikatoru rakstzīmes.</value>
   </data>
   <data name="Description_328" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodu rakstzīmes.</value>
+    <value>Jūsu sistēma nevar uzticami nolasīt unikālo identifikatoru rakstzīmes.</value>
   </data>
   <data name="Description_331" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodu rakstzīmes.</value>
+    <value>Jūsu sistēma nevar uzticami nolasīt unikālo identifikatoru rakstzīmes.</value>
   </data>
   <data name="Description_332" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodu rakstzīmes.</value>
+    <value>Jūsu sistēma nevar uzticami nolasīt unikālo identifikatoru rakstzīmes.</value>
+  </data>
+  <data name="Description_350" xml:space="preserve">
+    <value>Jūsu programmatūrai ir jāievieš rakstzīmju kartēšana, lai uzticami nolasītu PPN svītrkodus.</value>
+  </data>
+  <data name="Description_355" xml:space="preserve">
+    <value>Dažas verifikācijas programmatūras, iespējams, spēs kompensēt šo problēmu, analizējot taustiņu kodus, nevis rakstzīmes.</value>
   </data>
   <data name="Description_390" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris vai sistēma var būt lēna vai tā var būt ietekmēta no pretvīrusu programmatūras vai cita negaidīta vai periodiska traucējuma.</value>
-  </data>
-  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
-    <value>Kļūda, risinot tastatūras skriptus: {0}</value>
+    <value>Jūsu svītrkodu skeneris vai sistēma var būt lēna vai to, iespējams, ietekmē pretvīrusu programmatūra vai cita neparedzēta vai periodiska problēma.</value>
   </data>
 </root>

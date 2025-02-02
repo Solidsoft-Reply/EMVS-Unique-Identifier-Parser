@@ -128,5 +128,5 @@ public static class Extensions {
     /// <returns>A string containing Unicode Control Pictures for any ASCII control characters.</returns>
     [Pure]
     public static string ToControlPictures(this string originalString) =>
-        new(originalString.ToCharArray().Select(c => c.ToControlPicture()).ToArray());
+        new (originalString.ToCharArray().Select(c => c.ToControlPicture()).ToArray());
 }

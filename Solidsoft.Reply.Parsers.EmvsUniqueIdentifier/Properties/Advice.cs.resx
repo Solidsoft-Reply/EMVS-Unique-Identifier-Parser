@@ -198,24 +198,6 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Pokud skenujete čárové kódy obsahující EDI data a máte potíže, zkuste nakonfigurovat skener čárových kódů tak, aby emuloval numerickou klávesnici.</value>
   </data>
-  <data name="Advice_276" xml:space="preserve">
-    <value>Pokud máte potíže při skenování čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
-  </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Pokud máte potíže při skenování čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Pokud máte potíže při skenování čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Pokud máte potíže při skenování čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Pokud máte potíže při skenování PPN čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Pokud máte potíže při skenování PPN čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Zkuste to znovu a ujistěte se, že skenujete správný čárový kód(y).</value>
   </data>
@@ -378,24 +360,6 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Váš systém nemůže spolehlivě číst čárové kódy, pokud obsahují data pro elektronickou výměnu dat (EDI).</value>
   </data>
-  <data name="Condition_276" xml:space="preserve">
-    <value>Váš systém nemusí správně číst znaky oddělovače souborů (ASCII 28).</value>
-  </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Váš systém nemůže číst znaky oddělovače souborů (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Váš systém nemusí správně číst znaky oddělovače jednotek (ASCII 31).</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Váš systém nemusí správně číst znaky oddělovače jednotek (ASCII 31).</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Váš systém nemusí správně číst znaky konce přenosu (ASCII 04).</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Váš systém nemůže číst znaky konce přenosu (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test selhal.</value>
   </data>
@@ -549,24 +513,6 @@
   <data name="Description_275" xml:space="preserve">
     <value>Některé čárové kódy mohou obsahovat data EDI.</value>
   </data>
-  <data name="Description_276" xml:space="preserve">
-    <value>Tyto znaky se velmi pravděpodobně nepoužívají v unikátních identifikátorech.</value>
-  </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Tyto znaky se velmi pravděpodobně nepoužívají v unikátních identifikátorech.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Tyto znaky se velmi pravděpodobně nepoužívají v unikátních identifikátorech.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Tyto znaky se velmi pravděpodobně nepoužívají v unikátních identifikátorech.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Tento znak označuje konec dat v PPN čárových kódech. Váš software nemusí správně přečíst jakýkoli příponu přidanou čtečkou čárových kódů.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Tento znak označuje konec dat v PPN čárových kódech. Váš software nemusí správně přečíst jakýkoli příponu přidanou čtečkou čárových kódů.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Možná jste naskenovali špatný čárový kód nebo jste pomocí klávesnice zadali nesprávná data. Váš skener čárových kódů nebo systém může být pomalý, nebo může nastat neočekávaný nebo přerušovaný problém.</value>
   </data>
@@ -617,5 +563,86 @@
   </data>
   <data name="Description_390" xml:space="preserve">
     <value>Váš skener čárových kódů nebo systém může být pomalý, nebo může být ovlivněn antivirovým softwarem nebo nějakým jiným neočekávaným nebo přerušovaným problémem.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Pokud máte potíže při skenování čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Pokud máte potíže při skenování čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Pokud máte potíže při skenování čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Pokud máte potíže při skenování PPN čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Pokud máte potíže při skenování PPN čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Váš systém nemůže číst znaky oddělovače souborů (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Váš systém nemusí správně číst znaky oddělovače jednotek (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Váš systém nemusí správně číst znaky oddělovače jednotek (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Váš systém nemusí správně číst znaky konce přenosu (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Váš systém nemůže číst znaky konce přenosu (ASCII 04).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Tyto znaky se velmi pravděpodobně nepoužívají v unikátních identifikátorech.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Tyto znaky se velmi pravděpodobně nepoužívají v unikátních identifikátorech.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Tyto znaky se velmi pravděpodobně nepoužívají v unikátních identifikátorech.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Tento znak označuje konec dat v PPN čárových kódech. Váš software nemusí správně přečíst jakýkoli příponu přidanou čtečkou čárových kódů.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Tento znak označuje konec dat v PPN čárových kódech. Váš software nemusí správně přečíst jakýkoli příponu přidanou čtečkou čárových kódů.</value>
+  </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Váš systém nemusí správně číst znaky oddělovače souborů (ASCII 28).</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Tyto znaky se velmi pravděpodobně nepoužívají v unikátních identifikátorech.</value>
+  </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Pokud máte potíže při skenování čárových kódů, zkuste nakonfigurovat čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Advice_282" xml:space="preserve">
+    <value>Pokud narazíte na problémy při skenování německých čárových kódů PPN nebo jiných čárových kódů, zadejte data ručně do svého ověřovacího softwaru.;;Pokud je to nutné, nakonfigurujte čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Advice_283" xml:space="preserve">
+    <value>Pokud narazíte na problémy při skenování německých čárových kódů PPN, zadejte data ručně do ověřovacího softwaru.;;V případě potřeby nakonfigurujte čtečku čárových kódů tak, aby emulovala numerickou klávesnici.</value>
+  </data>
+  <data name="Condition_282" xml:space="preserve">
+    <value>Váš systém nemusí správně číst německé čárové kódy PPN.</value>
+  </data>
+  <data name="Condition_283" xml:space="preserve">
+    <value>Váš systém nemůže správně číst německé čárové kódy PPN.</value>
+  </data>
+  <data name="Description_282" xml:space="preserve">
+    <value>Váš software musí implementovat mapování znaků, aby spolehlivě četl čárové kódy PPN. Pokud tak učiní, nebude schopen číst určité znaky, které nejsou nikdy zahrnuty v unikátních identifikátorech.</value>
+  </data>
+  <data name="Description_283" xml:space="preserve">
+    <value>Váš software musí implementovat mapování znaků pro spolehlivé čtení čárových kódů PPN. V tomto případě však váš software nebude spolehlivě číst další data.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Ujistěte se, že rozložení klávesnic odpovídá.;;Pokud je to nutné, nakonfigurujte váš skener čárových kódů tak, aby emuloval numerickou klávesnici a přenášel identifikátory AIM.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Váš systém nemůže spolehlivě přečíst identifikátor typu čárového kódu.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Identifikátory AIM reprezentují typ čárového kódu. Váš software je může použít k eliminaci zbytečných upozornění.</value>
   </data>
 </root>

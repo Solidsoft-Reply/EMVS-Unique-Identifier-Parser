@@ -198,24 +198,6 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Ja, skenējot svītrkodus, kas satur EDI datus, rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
-  <data name="Advice_276" xml:space="preserve">
-    <value>Ja rodas grūtības, skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
-  </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Ja rodas grūtības, skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Ja rodas grūtības, skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Ja rodas grūtības, skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Ja rodas grūtības, skenējot PPN svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Ja rodas grūtības, skenējot PPN svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizo svītrkodu.</value>
   </data>
@@ -378,24 +360,6 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Jūsu sistēma nevar uzticami nolasa svītrkodus, ja tajos ir dati par Elektronisko Datu Apmaiņu (EDI).</value>
   </data>
-  <data name="Condition_276" xml:space="preserve">
-    <value>Jūsu sistēma, iespējams, nepareizi nolasa Faila Atdalītāja (ASCII 28) rakstzīmes.</value>
-  </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Jūsu sistēma nevar nolasa Faila Atdalītāja (ASCII 28) rakstzīmes.</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Jūsu sistēma, iespējams, nepareizi nolasa Vienības Atdalītāja (ASCII 31) rakstzīmes.</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Jūsu sistēma, iespējams, nepareizi nolasa Vienības Atdalītāja (ASCII 31) rakstzīmes.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Jūsu sistēma, iespējams, nepareizi nolasa Pārraides Beigu (ASCII 04) rakstzīmes.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Jūsu sistēma nevar nolasa Pārraides Beigu (ASCII 04) rakstzīmes.</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Pārbaude neizdevās.</value>
   </data>
@@ -549,24 +513,6 @@
   <data name="Description_275" xml:space="preserve">
     <value>Daži svītrkodi var saturēt EDI datus.</value>
   </data>
-  <data name="Description_276" xml:space="preserve">
-    <value>Šie rakstzīmes ir ļoti maz ticams, ka tiks izmantotas unikālajos identifikatoros.</value>
-  </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Šie rakstzīmes ir ļoti maz ticams, ka tiks izmantotas unikālajos identifikatoros.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Šie rakstzīmes ir ļoti maz ticams, ka tiks izmantotas unikālajos identifikatoros.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Šie rakstzīmes ir ļoti maz ticams, ka tiks izmantotas unikālajos identifikatoros.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Šis rakstzīme apzīmē datu beigas PPN svītrkodos. Jūsu programmatūra, iespējams, nepareizi nolasīs sufiksu, ko pievienoja svītrkodu skeneris.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Šis rakstzīme apzīmē datu beigas PPN svītrkodos. Jūsu programmatūra, iespējams, nepareizi nolasīs sufiksu, ko pievienoja svītrkodu skeneris.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Jūs, iespējams, noskenējāt nepareizu svītrkodu vai ievadījāt nepareizus datus, izmantojot tastatūru. Jūsu svītrkodu skeneris vai sistēma, iespējams, ir lēna, vai radās neparedzēta vai īslaicīga problēma.</value>
   </data>
@@ -617,5 +563,86 @@
   </data>
   <data name="Description_390" xml:space="preserve">
     <value>Jūsu svītrkodu skeneris vai sistēma var būt lēna vai to, iespējams, ietekmē pretvīrusu programmatūra vai cita neparedzēta vai periodiska problēma.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Ja rodas grūtības, skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Ja rodas grūtības, skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Ja rodas grūtības, skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Ja rodas grūtības, skenējot PPN svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Ja rodas grūtības, skenējot PPN svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Jūsu sistēma nevar nolasa Faila Atdalītāja (ASCII 28) rakstzīmes.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa Vienības Atdalītāja (ASCII 31) rakstzīmes.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa Vienības Atdalītāja (ASCII 31) rakstzīmes.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa Pārraides Beigu (ASCII 04) rakstzīmes.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Jūsu sistēma nevar nolasa Pārraides Beigu (ASCII 04) rakstzīmes.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Šie rakstzīmes ir ļoti maz ticams, ka tiks izmantotas unikālajos identifikatoros.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Šie rakstzīmes ir ļoti maz ticams, ka tiks izmantotas unikālajos identifikatoros.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Šie rakstzīmes ir ļoti maz ticams, ka tiks izmantotas unikālajos identifikatoros.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Šis rakstzīme apzīmē datu beigas PPN svītrkodos. Jūsu programmatūra, iespējams, nepareizi nolasīs sufiksu, ko pievienoja svītrkodu skeneris.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Šis rakstzīme apzīmē datu beigas PPN svītrkodos. Jūsu programmatūra, iespējams, nepareizi nolasīs sufiksu, ko pievienoja svītrkodu skeneris.</value>
+  </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa Faila Atdalītāja (ASCII 28) rakstzīmes.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Šie rakstzīmes ir ļoti maz ticams, ka tiks izmantotas unikālajos identifikatoros.</value>
+  </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Ja rodas grūtības, skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_282" xml:space="preserve">
+    <value>Ja rodas problēmas, skenējot Vācijas PPN vai citus svītrkodus, ievadiet datus manuāli savā pārbaudes programmatūrā.;;Ja nepieciešams, konfigurējiet savu svītrkodu lasītāju, lai tas atdarinātu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_283" xml:space="preserve">
+    <value>Ja rodas problēmas ar Vācijas PPN svītrkodu skenēšanu, manuāli ievadiet datus pārbaudes programmatūrā.;;Ja nepieciešams, konfigurējiet svītrkodu lasītāju, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Condition_282" xml:space="preserve">
+    <value>Jūsu sistēma, iespējams, nevarēs pareizi nolasīt Vācijas PPN svītrkodus.</value>
+  </data>
+  <data name="Condition_283" xml:space="preserve">
+    <value>Jūsu sistēma nevar pareizi nolasīt Vācijas PPN svītrkodus.</value>
+  </data>
+  <data name="Description_282" xml:space="preserve">
+    <value>Jūsu programmatūrai ir jāievieš rakstzīmju kartēšana, lai uzticami nolasītu PPN svītrkodus. Tomēr, ja tā to dara, tā nevarēs nolasīt dažas rakstzīmes, kas nekad nav iekļautas unikālajos identifikatoros.</value>
+  </data>
+  <data name="Description_283" xml:space="preserve">
+    <value>Jūsu programmatūrai ir jāievieš rakstzīmju kartēšana, lai uzticami nolasītu PPN svītrkodus. Tomēr šajā gadījumā jūsu programmatūra neuzticami nolasīs papildu datus.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Pārliecinieties, vai jūsu tastatūras izkārtojumi sakrīt.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru un pārraidītu AIM identifikatorus.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Jūsu sistēma nevar droši nolasīt svītrkoda veida identifikatoru.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>AIM identifikatori norāda uz svītrkoda tipu. Jūsu programmatūra var tos izmantot, lai novērstu nevajadzīgus brīdinājumus.</value>
   </data>
 </root>

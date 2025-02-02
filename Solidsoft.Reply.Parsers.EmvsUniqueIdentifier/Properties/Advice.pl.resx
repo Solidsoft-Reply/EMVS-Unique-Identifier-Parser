@@ -198,24 +198,6 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Jeśli skanujesz kody kreskowe zawierające dane EDI i napotykasz trudności, spróbuj skonfigurować skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
-  <data name="Advice_276" xml:space="preserve">
-    <value>Jeśli masz problemy podczas skanowania kodów kreskowych, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
-  </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Jeśli masz problemy podczas skanowania kodów kreskowych, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Jeśli masz problemy podczas skanowania kodów kreskowych, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Jeśli masz problemy podczas skanowania kodów kreskowych, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Jeśli masz trudności podczas skanowania kodów kreskowych PPN, spróbuj skonfigurować swój skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Jeśli masz trudności podczas skanowania kodów kreskowych PPN, spróbuj skonfigurować swój skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Spróbuj ponownie, upewniając się, że skanujesz właściwy kod kreskowy(-e).</value>
   </data>
@@ -378,24 +360,6 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane do elektronicznej wymiany danych (EDI).</value>
   </data>
-  <data name="Condition_276" xml:space="preserve">
-    <value>Twój system może nie odczytywać poprawnie znaków separatora plików (ASCII 28).</value>
-  </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Twój system nie może odczytać znaków separatora plików (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Twój system może nie odczytywać poprawnie znaków separatora jednostki (ASCII 31).</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Twój system może nie odczytywać poprawnie znaków separatora jednostki (ASCII 31).</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Twój system może nie odczytywać poprawnie znaków zakończenia transmisji (ASCII 04).</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Twój system nie może odczytać znaków zakończenia transmisji (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test nie powiódł się.</value>
   </data>
@@ -549,24 +513,6 @@
   <data name="Description_275" xml:space="preserve">
     <value>Niektóre kody kreskowe mogą zawierać dane EDI.</value>
   </data>
-  <data name="Description_276" xml:space="preserve">
-    <value>Te znaki są bardzo mało prawdopodobne, aby były używane w unikalnych identyfikatorach.</value>
-  </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Te znaki są bardzo mało prawdopodobne, aby były używane w unikalnych identyfikatorach.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Te znaki są bardzo mało prawdopodobne, aby były używane w unikalnych identyfikatorach.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Te znaki są bardzo mało prawdopodobne, aby były używane w unikalnych identyfikatorach.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Ten znak oznacza koniec danych w kodach kreskowych PPN. Twoje oprogramowanie może nie odczytywać poprawnie żadnego sufiksu dodanego przez skaner kodów kreskowych.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Ten znak oznacza koniec danych w kodach kreskowych PPN. Twoje oprogramowanie może nie odczytywać poprawnie żadnego sufiksu dodanego przez skaner kodów kreskowych.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Możliwe, że zeskanowano niewłaściwy kod kreskowy lub wprowadzono błędne dane za pomocą klawiatury. Twój skaner kodów kreskowych lub system może być wolny lub mogą wystąpić nieoczekiwane lub przerywane problemy.</value>
   </data>
@@ -617,5 +563,86 @@
   </data>
   <data name="Description_390" xml:space="preserve">
     <value>Twój skaner kodów kreskowych lub system może być wolny lub może być dotknięty przez oprogramowanie antywirusowe lub inne nieoczekiwane lub przerywane problemy.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Jeśli masz problemy podczas skanowania kodów kreskowych, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Jeśli masz problemy podczas skanowania kodów kreskowych, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Jeśli masz problemy podczas skanowania kodów kreskowych, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Jeśli masz trudności podczas skanowania kodów kreskowych PPN, spróbuj skonfigurować swój skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Jeśli masz trudności podczas skanowania kodów kreskowych PPN, spróbuj skonfigurować swój skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Twój system nie może odczytać znaków separatora plików (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Twój system może nie odczytywać poprawnie znaków separatora jednostki (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Twój system może nie odczytywać poprawnie znaków separatora jednostki (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Twój system może nie odczytywać poprawnie znaków zakończenia transmisji (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Twój system nie może odczytać znaków zakończenia transmisji (ASCII 04).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Te znaki są bardzo mało prawdopodobne, aby były używane w unikalnych identyfikatorach.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Te znaki są bardzo mało prawdopodobne, aby były używane w unikalnych identyfikatorach.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Te znaki są bardzo mało prawdopodobne, aby były używane w unikalnych identyfikatorach.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Ten znak oznacza koniec danych w kodach kreskowych PPN. Twoje oprogramowanie może nie odczytywać poprawnie żadnego sufiksu dodanego przez skaner kodów kreskowych.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Ten znak oznacza koniec danych w kodach kreskowych PPN. Twoje oprogramowanie może nie odczytywać poprawnie żadnego sufiksu dodanego przez skaner kodów kreskowych.</value>
+  </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Twój system może nie odczytywać poprawnie znaków separatora plików (ASCII 28).</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Te znaki są bardzo mało prawdopodobne, aby były używane w unikalnych identyfikatorach.</value>
+  </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Jeśli masz problemy podczas skanowania kodów kreskowych, spróbuj skonfigurować skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Advice_282" xml:space="preserve">
+    <value>Jeśli napotkasz problemy podczas skanowania niemieckich kodów kreskowych PPN lub innych kodów kreskowych, wprowadź dane ręcznie do swojego oprogramowania weryfikacyjnego.;;W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Advice_283" xml:space="preserve">
+    <value>Jeśli masz problemy z odczytywaniem niemieckich kodów kreskowych PPN, wprowadź dane ręcznie do swojego oprogramowania weryfikacyjnego.;;Jeśli to konieczne, skonfiguruj skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
+  </data>
+  <data name="Condition_282" xml:space="preserve">
+    <value>Twój system może nie odczytywać poprawnie niemieckich kodów kreskowych PPN.</value>
+  </data>
+  <data name="Condition_283" xml:space="preserve">
+    <value>Twój system nie może poprawnie odczytać niemieckich kodów kreskowych PPN.</value>
+  </data>
+  <data name="Description_282" xml:space="preserve">
+    <value>Twoje oprogramowanie musi implementować mapowanie znaków, aby niezawodnie odczytywać kody kreskowe PPN. Jednak jeśli to zrobi, nie będzie mogło odczytać niektórych znaków, które nigdy nie są zawarte w unikalnych identyfikatorach.</value>
+  </data>
+  <data name="Description_283" xml:space="preserve">
+    <value>Twoje oprogramowanie musi implementować mapowanie znaków, aby niezawodnie odczytywać kody kreskowe PPN. Jednak w takim przypadku twoje oprogramowanie nie będzie niezawodnie odczytywać dodatkowych danych.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Upewnij się, że układy klawiatury pasują do siebie.;;W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną i przesyłał identyfikatory AIM.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Twój system nie może wiarygodnie odczytać identyfikatora typu kodu kreskowego.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Identyfikatory AIM reprezentują typ kodu kreskowego. Twoje oprogramowanie może je wykorzystać, aby wyeliminować niepotrzebne alerty.</value>
   </data>
 </root>

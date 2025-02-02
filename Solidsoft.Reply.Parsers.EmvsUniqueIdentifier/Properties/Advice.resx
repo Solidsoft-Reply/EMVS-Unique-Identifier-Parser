@@ -770,4 +770,40 @@
   <data name="Advice_276" xml:space="preserve">
     <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
   </data>
+  <data name="Advice_282" xml:space="preserve">
+    <value>f you experience problems when scanning German PPN or any other barcodes, enter data manually into your verification software.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_283" xml:space="preserve">
+    <value>If you experience problems when scanning German PPN barcodes, enter data manually into your verification software.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_282" xml:space="preserve">
+    <value>Your system may not read German PPN barcodes reliably.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_283" xml:space="preserve">
+    <value>Your system cannot read German PPN barcodes correctly.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_282" xml:space="preserve">
+    <value>Your software must implement character mapping to read PPN barcodes reliably. However, if it does, it cannot read certain characters that are never included in unique identifiers.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_283" xml:space="preserve">
+    <value>Your software must implement character mapping to read PPN barcodes reliably. However, in this case, your software will not read additional data reliably.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad and transmit AIM identifiers.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Your system cannot read AIM identifier characters reliably.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>AIM identifiers represent the barcode type. Your verification software may use them to eliminate unnecessary alerts.</value>
+    <comment>Medium</comment>
+  </data>
 </root>

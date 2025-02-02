@@ -198,24 +198,6 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Ef þú skannar strikamerki sem innihalda EDI gögn, og lendir í vandræðum, reyndu að stilla strikamerkjalesarann þinn þannig að hann líki eftir númeralyklaborði.</value>
   </data>
-  <data name="Advice_276" xml:space="preserve">
-    <value>Ef þú lendir í erfiðleikum við að skanna strikamerki, reyndu að stilla strikamerkjalesarann þinn til að líkja eftir talnaborði.</value>
-  </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Ef þú lendir í erfiðleikum við að skanna strikamerki, reyndu að stilla strikamerkjalesarann þinn til að líkja eftir talnaborði.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Ef þú lendir í erfiðleikum við að skanna strikamerki, reyndu að stilla strikamerkjalesarann þinn til að líkja eftir talnaborði.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Ef þú lendir í erfiðleikum við að skanna strikamerki, reyndu að stilla strikamerkjalesarann þinn til að líkja eftir talnaborði.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Ef þú lendir í erfiðleikum við að skanna PPN-strikamerki, reyndu að stilla strikamerkjalesarann þinn til að líkja eftir talnaborði.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Ef þú lendir í erfiðleikum við að skanna PPN-strikamerki, reyndu að stilla strikamerkjalesarann þinn til að líkja eftir talnaborði.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Reyndu aftur og vertu viss um að þú skannir rétt strikamerki.</value>
   </data>
@@ -378,24 +360,6 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Kerfið þitt getur ekki lesið strikamerki á áreiðanlegan hátt ef þau innihalda gögn fyrir rafrænan gagnaflutning (EDI).</value>
   </data>
-  <data name="Condition_276" xml:space="preserve">
-    <value>Kerfið þitt gæti ekki lesið skráarskilmerki (ASCII 28) rétt.</value>
-  </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Kerfið þitt getur ekki lesið skráarskilmerki (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Kerfið þitt gæti ekki lesið einingaskilmerki (ASCII 31) rétt.</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Kerfið þitt gæti ekki lesið einingaskilmerki (ASCII 31) rétt.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Kerfið þitt gæti ekki lesið sendingarlokamerki (ASCII 04) rétt.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Kerfið þitt getur ekki lesið sendingarlokamerki (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Prófið mistókst.</value>
   </data>
@@ -549,24 +513,6 @@
   <data name="Description_275" xml:space="preserve">
     <value>Sum strikamerki gætu innihaldið EDI gögn.</value>
   </data>
-  <data name="Description_276" xml:space="preserve">
-    <value>Mjög ólíklegt er að þessi tákn séu notuð í einstökum auðkennum.</value>
-  </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Mjög ólíklegt er að þessi tákn séu notuð í einstökum auðkennum.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Mjög ólíklegt er að þessi tákn séu notuð í einstökum auðkennum.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Mjög ólíklegt er að þessi tákn séu notuð í einstökum auðkennum.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Þessi stafur táknar lok gagna í PPN-strikamerkjum. Hugbúnaðurinn þinn gæti ekki lesið rétt á hvaða viðskeyti sem er bætt við af strikamerkjalesaranum.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Þessi stafur táknar lok gagna í PPN-strikamerkjum. Hugbúnaðurinn þinn gæti ekki lesið rétt á hvaða viðskeyti sem er bætt við af strikamerkjalesaranum.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Þú gætir hafa skannað rangt strikamerki eða slegið inn rangar upplýsingar á lyklaborðinu. Strikamerkjalesarinn þinn eða kerfið gæti verið hægt, eða einhver óvænt eða tíð tímaúrfelling gæti hafa komið upp.</value>
   </data>
@@ -617,5 +563,86 @@
   </data>
   <data name="Description_390" xml:space="preserve">
     <value>Strikamerkjalesarinn þinn eða kerfið gæti verið hægt eða það gæti verið áhrif veiruvarnaforrita eða einhver annar óvænt eða tíð tímaúrfelling vandamál.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Ef þú lendir í erfiðleikum við að skanna strikamerki, reyndu að stilla strikamerkjalesarann þinn til að líkja eftir talnaborði.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Ef þú lendir í erfiðleikum við að skanna strikamerki, reyndu að stilla strikamerkjalesarann þinn til að líkja eftir talnaborði.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Ef þú lendir í erfiðleikum við að skanna strikamerki, reyndu að stilla strikamerkjalesarann þinn til að líkja eftir talnaborði.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Ef þú lendir í erfiðleikum við að skanna PPN-strikamerki, reyndu að stilla strikamerkjalesarann þinn til að líkja eftir talnaborði.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Ef þú lendir í erfiðleikum við að skanna PPN-strikamerki, reyndu að stilla strikamerkjalesarann þinn til að líkja eftir talnaborði.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Kerfið þitt getur ekki lesið skráarskilmerki (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Kerfið þitt gæti ekki lesið einingaskilmerki (ASCII 31) rétt.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Kerfið þitt gæti ekki lesið einingaskilmerki (ASCII 31) rétt.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Kerfið þitt gæti ekki lesið sendingarlokamerki (ASCII 04) rétt.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Kerfið þitt getur ekki lesið sendingarlokamerki (ASCII 04).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Mjög ólíklegt er að þessi tákn séu notuð í einstökum auðkennum.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Mjög ólíklegt er að þessi tákn séu notuð í einstökum auðkennum.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Mjög ólíklegt er að þessi tákn séu notuð í einstökum auðkennum.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Þessi stafur táknar lok gagna í PPN-strikamerkjum. Hugbúnaðurinn þinn gæti ekki lesið rétt á hvaða viðskeyti sem er bætt við af strikamerkjalesaranum.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Þessi stafur táknar lok gagna í PPN-strikamerkjum. Hugbúnaðurinn þinn gæti ekki lesið rétt á hvaða viðskeyti sem er bætt við af strikamerkjalesaranum.</value>
+  </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Kerfið þitt gæti ekki lesið skráarskilmerki (ASCII 28) rétt.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Mjög ólíklegt er að þessi tákn séu notuð í einstökum auðkennum.</value>
+  </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Ef þú lendir í erfiðleikum við að skanna strikamerki, reyndu að stilla strikamerkjalesarann þinn til að líkja eftir talnaborði.</value>
+  </data>
+  <data name="Advice_282" xml:space="preserve">
+    <value>Ef þú lendir í vandræðum við að skanna þýsk PPN eða önnur strikamerki skaltu slá inn gögn handvirkt í sannprófunarhugbúnaðinn þinn.;;Ef nauðsynlegt er, stilltu strikamerkjalesarann þinn til að líkja eftir talnalyklaborði.</value>
+  </data>
+  <data name="Advice_283" xml:space="preserve">
+    <value>Ef þú lendir í vandræðum með að skanna þýsk PPN strikamerki, sláðu gögnin inn handvirkt í staðfestingarhugbúnaðinn þinn.;;Ef nauðsyn krefur skaltu stilla strikamerkjalesarann til að líkja eftir talnaborði.</value>
+  </data>
+  <data name="Condition_282" xml:space="preserve">
+    <value>Kerfið þitt gæti ekki lesið þýska PPN strikamerki rétt.</value>
+  </data>
+  <data name="Condition_283" xml:space="preserve">
+    <value>Kerfið þitt getur ekki lesið þýsk PPN strikamerki rétt.</value>
+  </data>
+  <data name="Description_282" xml:space="preserve">
+    <value>Hugbúnaðurinn þinn þarf að innleiða stafakortlagningu til að lesa PPN strikamerki áreiðanlega. Hins vegar, ef það gerir það, getur það ekki lesið ákveðna stafi sem aldrei eru hluti af einstökum auðkennum.</value>
+  </data>
+  <data name="Description_283" xml:space="preserve">
+    <value>Hugbúnaðurinn þinn verður að innleiða stafakortlagningu til að lesa PPN strikamerki á áreiðanlegan hátt. Hins vegar mun hugbúnaðurinn þinn ekki lesa viðbótarupplýsingar á áreiðanlegan hátt í þessu tilfelli.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Gætið þess að lyklaborðsuppsetningar passi saman.;;Ef þörf krefur, stilltu strikamerkjalesarann þinn þannig að hann líki eftir númeralyklaborði og sendi AIM auðkennara.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Kerfið þitt getur ekki lesið auðkenni strikamerkjategundar á áreiðanlegan hátt.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>AIM auðkennarar tákna gerð strikamerkis. Hugbúnaðurinn þinn getur notað þá til að útiloka óþarfa viðvaranir.</value>
   </data>
 </root>

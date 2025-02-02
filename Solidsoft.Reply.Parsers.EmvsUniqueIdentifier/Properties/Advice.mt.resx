@@ -198,24 +198,6 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Jekk tiskennja barcodes li fihom data EDI, u tesperjenza diffikultà, ipprova tikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
-  <data name="Advice_276" xml:space="preserve">
-    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
-  </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-barcodes PPN, ipprova kkonfigura l-iskaner tal-barcode tiegħek biex jimitaw tastiera numerika.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-barcodes PPN, ipprova kkonfigura l-iskaner tal-barcode tiegħek biex jimitaw tastiera numerika.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Ipprova mill-ġdid, kun żgur li tiskennja l-barcode(s) korretta/i.</value>
   </data>
@@ -378,24 +360,6 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Is-sistema tiegħek ma tistax taqra l-kodiċijiet tal-bar b'mod affidabbli jekk fihom data għall-Iskambju Elettroniku tad-Data (EDI).</value>
   </data>
-  <data name="Condition_276" xml:space="preserve">
-    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Separator tal-Fajl (ASCII 28) b'mod korrett.</value>
-  </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Is-sistema tiegħek ma tistax taqra l-karattri ta' Separator tal-Fajl (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Separator tal-Unità (ASCII 31) b'mod korrett.</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Separator tal-Unità (ASCII 31) b'mod korrett.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Tmiem tat-Trasmissjoni (ASCII 04) b'mod korrett.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Is-sistema tiegħek ma tistax taqra l-karattri ta' Tmiem tat-Trasmissjoni (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>It-test falla.</value>
   </data>
@@ -549,24 +513,6 @@
   <data name="Description_275" xml:space="preserve">
     <value>Xi barcodes jistgħu jkun fihom data EDI.</value>
   </data>
-  <data name="Description_276" xml:space="preserve">
-    <value>Huwa improbabbli ħafna li dawn il-karattri jintużaw f'identifikaturi uniċi.</value>
-  </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Huwa improbabbli ħafna li dawn il-karattri jintużaw f'identifikaturi uniċi.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Huwa improbabbli ħafna li dawn il-karattri jintużaw f'identifikaturi uniċi.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Huwa improbabbli ħafna li dawn il-karattri jintużaw f'identifikaturi uniċi.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Dan il-karattru jimmarka t-tmiem tad-dejta fil-barcodes PPN. Is-software tiegħek jista' ma jaqrax b'mod korrett kull suffiss miżjud mill-iskaner tal-barcode.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Dan il-karattru jimmarka t-tmiem tad-dejta fil-barcodes PPN. Is-software tiegħek jista' ma jaqrax b'mod korrett kull suffiss miżjud mill-iskaner tal-barcode.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Jista' jkun li skannejt barcode ħażin jew daħħalt data żbaljata bl-użu tal-keyboard. L-iskanner tal-barcode tiegħek jew is-sistema jistgħu jkunu bil-mod, jew jista' jkun seħħ xi problema mhux mistennija jew intermittenti.</value>
   </data>
@@ -617,5 +563,86 @@
   </data>
   <data name="Description_390" xml:space="preserve">
     <value>L-iskanner tal-barcode tiegħek jew is-sistema jistgħu jkunu bil-mod jew affettwati minn software ta' anti-virus jew xi problema oħra mhux mistennija jew intermittenti.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-barcodes PPN, ipprova kkonfigura l-iskaner tal-barcode tiegħek biex jimitaw tastiera numerika.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-barcodes PPN, ipprova kkonfigura l-iskaner tal-barcode tiegħek biex jimitaw tastiera numerika.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Is-sistema tiegħek ma tistax taqra l-karattri ta' Separator tal-Fajl (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Separator tal-Unità (ASCII 31) b'mod korrett.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Separator tal-Unità (ASCII 31) b'mod korrett.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Tmiem tat-Trasmissjoni (ASCII 04) b'mod korrett.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Is-sistema tiegħek ma tistax taqra l-karattri ta' Tmiem tat-Trasmissjoni (ASCII 04).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Huwa improbabbli ħafna li dawn il-karattri jintużaw f'identifikaturi uniċi.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Huwa improbabbli ħafna li dawn il-karattri jintużaw f'identifikaturi uniċi.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Huwa improbabbli ħafna li dawn il-karattri jintużaw f'identifikaturi uniċi.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Dan il-karattru jimmarka t-tmiem tad-dejta fil-barcodes PPN. Is-software tiegħek jista' ma jaqrax b'mod korrett kull suffiss miżjud mill-iskaner tal-barcode.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Dan il-karattru jimmarka t-tmiem tad-dejta fil-barcodes PPN. Is-software tiegħek jista' ma jaqrax b'mod korrett kull suffiss miżjud mill-iskaner tal-barcode.</value>
+  </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Separator tal-Fajl (ASCII 28) b'mod korrett.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Huwa improbabbli ħafna li dawn il-karattri jintużaw f'identifikaturi uniċi.</value>
+  </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
+  </data>
+  <data name="Advice_282" xml:space="preserve">
+    <value>Jekk tesperjenza problemi meta tiskennja l-barcodes PPN Ġermaniżi jew xi barcodes oħra, daħħal id-dejta manwalment fis-softwer ta' verifika tiegħek.;;Jekk meħtieġ, ikkonfigura l-iskaner tal-barcodes tiegħek biex jivvalenjaw tastiera numerika.</value>
+  </data>
+  <data name="Advice_283" xml:space="preserve">
+    <value>Jekk tesperjenza problemi meta tiskennja barcodes PPN Ġermaniżi, daħħal id-dejta manwalment fis-softwer ta’ verifika tiegħek.;;Jekk meħtieġ, ikkonfigura l-iskaner tal-barcode tiegħek biex jemula tastiera numerika.</value>
+  </data>
+  <data name="Condition_282" xml:space="preserve">
+    <value>Is-sistema tiegħek tista' ma taqrax il-barcodes PPN Ġermaniżi kif suppost.</value>
+  </data>
+  <data name="Condition_283" xml:space="preserve">
+    <value>Is-sistema tiegħek ma tistax taqra barcodes PPN Ġermaniżi b’mod korrett.</value>
+  </data>
+  <data name="Description_282" xml:space="preserve">
+    <value>Is-softwer tiegħek irid jimplimenta mappjar tal-karattri biex jaqra l-barcodes PPN b'mod affidabbli. Madankollu, jekk jagħmel hekk, ma jistax jaqra ċerti karattri li qatt mhumiex inklużi f'identifikaturi uniċi.</value>
+  </data>
+  <data name="Description_283" xml:space="preserve">
+    <value>Is-softwer tiegħek irid jimplimenta mappjar tal-karattri biex jaqra barcodes PPN b’mod affidabbli. Madankollu, f’dan il-każ, is-softwer tiegħek ma jaqrax dejta addizzjonali b’mod affidabbli.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Kun żgur li l-layouts tal-keyboard tiegħek jaqblu.;;Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku u jittrasmetti identifikaturi AIM.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Is-sistema tiegħek ma tistax taqra b’mod affidabbli l-identifikatur tat-tip tal-kodiċi tal-linji.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Identifikaturi AIM jirrappreżentaw it-tip ta' barcode. Is-softwer tiegħek jista' jużahom biex jeħles minn twissijiet mhux meħtieġa.</value>
   </data>
 </root>

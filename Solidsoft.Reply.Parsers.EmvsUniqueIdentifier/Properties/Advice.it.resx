@@ -198,24 +198,6 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Se scansioni codici a barre che contengono dati EDI e incontri difficoltà, prova a configurare il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
-  <data name="Advice_276" xml:space="preserve">
-    <value>Se riscontri difficoltà durante la scansione dei codici a barre, prova a configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
-  </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Se riscontri difficoltà durante la scansione dei codici a barre, prova a configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Se riscontri difficoltà durante la scansione dei codici a barre, prova a configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Se riscontri difficoltà durante la scansione dei codici a barre, prova a configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Se riscontri difficoltà durante la scansione dei codici a barre PPN, prova a configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Se riscontri difficoltà durante la scansione dei codici a barre PPN, prova a configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Riprova, assicurandoti di scansionare il/i codice/i a barre corretto/i.</value>
   </data>
@@ -378,24 +360,6 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Il tuo sistema non può leggere i codici a barre in modo affidabile se contengono dati per lo scambio elettronico di dati (EDI).</value>
   </data>
-  <data name="Condition_276" xml:space="preserve">
-    <value>Il tuo sistema potrebbe non leggere correttamente i caratteri separatori di file (ASCII 28).</value>
-  </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Il tuo sistema non può leggere i caratteri separatori di file (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Il tuo sistema potrebbe non leggere correttamente i caratteri separatori di unità (ASCII 31).</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Il tuo sistema potrebbe non leggere correttamente i caratteri separatori di unità (ASCII 31).</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Il tuo sistema potrebbe non leggere correttamente i caratteri di fine trasmissione (ASCII 04).</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Il tuo sistema non può leggere i caratteri di fine trasmissione (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Il test è fallito.</value>
   </data>
@@ -549,24 +513,6 @@
   <data name="Description_275" xml:space="preserve">
     <value>Alcuni codici a barre potrebbero contenere dati EDI.</value>
   </data>
-  <data name="Description_276" xml:space="preserve">
-    <value>È molto improbabile che questi caratteri vengano utilizzati negli identificatori univoci.</value>
-  </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>È molto improbabile che questi caratteri vengano utilizzati negli identificatori univoci.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>È molto improbabile che questi caratteri vengano utilizzati negli identificatori univoci.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>È molto improbabile che questi caratteri vengano utilizzati negli identificatori univoci.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Questo carattere indica la fine dei dati nei codici a barre PPN. Il tuo software potrebbe non leggere correttamente alcun suffisso aggiunto dal lettore di codici a barre.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Questo carattere indica la fine dei dati nei codici a barre PPN. Il tuo software potrebbe non leggere correttamente alcun suffisso aggiunto dal lettore di codici a barre.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Potresti aver scansionato un codice a barre errato o inserito dati errati utilizzando la tastiera. Il tuo scanner di codici a barre o sistema potrebbe essere lento, oppure potrebbe essersi verificato un problema inaspettato o intermittente.</value>
   </data>
@@ -617,5 +563,86 @@
   </data>
   <data name="Description_390" xml:space="preserve">
     <value>Il tuo scanner di codici a barre o sistema potrebbe essere lento o potrebbe essere influenzato da un software antivirus o da qualche altro problema inaspettato o intermittente.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Se riscontri difficoltà durante la scansione dei codici a barre, prova a configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Se riscontri difficoltà durante la scansione dei codici a barre, prova a configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Se riscontri difficoltà durante la scansione dei codici a barre, prova a configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Se riscontri difficoltà durante la scansione dei codici a barre PPN, prova a configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Se riscontri difficoltà durante la scansione dei codici a barre PPN, prova a configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Il tuo sistema non può leggere i caratteri separatori di file (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Il tuo sistema potrebbe non leggere correttamente i caratteri separatori di unità (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Il tuo sistema potrebbe non leggere correttamente i caratteri separatori di unità (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Il tuo sistema potrebbe non leggere correttamente i caratteri di fine trasmissione (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Il tuo sistema non può leggere i caratteri di fine trasmissione (ASCII 04).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>È molto improbabile che questi caratteri vengano utilizzati negli identificatori univoci.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>È molto improbabile che questi caratteri vengano utilizzati negli identificatori univoci.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>È molto improbabile che questi caratteri vengano utilizzati negli identificatori univoci.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Questo carattere indica la fine dei dati nei codici a barre PPN. Il tuo software potrebbe non leggere correttamente alcun suffisso aggiunto dal lettore di codici a barre.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Questo carattere indica la fine dei dati nei codici a barre PPN. Il tuo software potrebbe non leggere correttamente alcun suffisso aggiunto dal lettore di codici a barre.</value>
+  </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Il tuo sistema potrebbe non leggere correttamente i caratteri separatori di file (ASCII 28).</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>È molto improbabile che questi caratteri vengano utilizzati negli identificatori univoci.</value>
+  </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Se riscontri difficoltà durante la scansione dei codici a barre, prova a configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_282" xml:space="preserve">
+    <value>Se riscontri problemi durante la scansione di codici a barre PPN tedeschi o di altri codici a barre, inserisci manualmente i dati nel tuo software di verifica.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_283" xml:space="preserve">
+    <value>Se riscontri problemi durante la scansione dei codici a barre PPN tedeschi, inserisci manualmente i dati nel software di verifica.;;Se necessario, configurare il lettore di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Condition_282" xml:space="preserve">
+    <value>Il tuo sistema potrebbe non leggere correttamente i codici a barre PPN tedeschi.</value>
+  </data>
+  <data name="Condition_283" xml:space="preserve">
+    <value>Il tuo sistema non è in grado di leggere correttamente i codici a barre PPN tedeschi.</value>
+  </data>
+  <data name="Description_282" xml:space="preserve">
+    <value>Il tuo software deve implementare una mappatura dei caratteri per leggere i codici a barre PPN in modo affidabile. Tuttavia, se lo fa, non può leggere alcuni caratteri che non sono mai inclusi negli identificatori univoci.</value>
+  </data>
+  <data name="Description_283" xml:space="preserve">
+    <value>Il tuo software deve implementare la mappatura dei caratteri per leggere correttamente i codici a barre PPN. Tuttavia, in questo caso, il tuo software non leggerà i dati aggiuntivi in modo affidabile.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Assicurati che le disposizioni della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico e trasmettere gli identificatori AIM.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile l'identificatore del tipo di codice a barre.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software può utilizzarli per eliminare allarmi non necessari.</value>
   </data>
 </root>

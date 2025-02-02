@@ -196,6 +196,15 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad and transmit AIM identifiers..
+        /// </summary>
+        public static string Advice_236 {
+            get {
+                return ResourceManager.GetString("Advice_236", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to If you experience problems when scanning German PPN barcodes, enter data manually into your verification software.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
         public static string Advice_240 {
@@ -354,6 +363,24 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         public static string Advice_281 {
             get {
                 return ResourceManager.GetString("Advice_281", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to f you experience problems when scanning German PPN or any other barcodes, enter data manually into your verification software.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        public static string Advice_282 {
+            get {
+                return ResourceManager.GetString("Advice_282", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you experience problems when scanning German PPN barcodes, enter data manually into your verification software.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        public static string Advice_283 {
+            get {
+                return ResourceManager.GetString("Advice_283", resourceCulture);
             }
         }
         
@@ -736,6 +763,15 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your system cannot read AIM identifier characters reliably..
+        /// </summary>
+        public static string Condition_236 {
+            get {
+                return ResourceManager.GetString("Condition_236", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your system cannot read German PPN barcode characters reliably..
         /// </summary>
         public static string Condition_240 {
@@ -894,6 +930,24 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         public static string Condition_281 {
             get {
                 return ResourceManager.GetString("Condition_281", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your system may not read German PPN barcodes reliably..
+        /// </summary>
+        public static string Condition_282 {
+            get {
+                return ResourceManager.GetString("Condition_282", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your system cannot read German PPN barcodes correctly..
+        /// </summary>
+        public static string Condition_283 {
+            get {
+                return ResourceManager.GetString("Condition_283", resourceCulture);
             }
         }
         
@@ -1267,6 +1321,15 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AIM identifiers represent the barcode type. Your verification software may use them to eliminate unnecessary alerts..
+        /// </summary>
+        public static string Description_236 {
+            get {
+                return ResourceManager.GetString("Description_236", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your software must implement character mapping to read PPN barcodes reliably..
         /// </summary>
         public static string Description_240 {
@@ -1407,6 +1470,24 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         public static string Description_281 {
             get {
                 return ResourceManager.GetString("Description_281", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your software must implement character mapping to read PPN barcodes reliably. However, if it does, it cannot read certain characters that are never included in unique identifiers..
+        /// </summary>
+        public static string Description_282 {
+            get {
+                return ResourceManager.GetString("Description_282", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your software must implement character mapping to read PPN barcodes reliably. However, in this case, your software will not read additional data reliably..
+        /// </summary>
+        public static string Description_283 {
+            get {
+                return ResourceManager.GetString("Description_283", resourceCulture);
             }
         }
         

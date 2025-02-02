@@ -198,24 +198,6 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Ako skenirate barkodove koji sadrže EDI podatke i imate poteškoća, pokušajte konfigurirati svoj skener barkoda tako da oponaša numeričku tipkovnicu.</value>
   </data>
-  <data name="Advice_276" xml:space="preserve">
-    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
-  </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Ako imate poteškoća pri skeniranju PPN barkodova, pokušajte konfigurirati svoj čitač barkodova da oponaša numeričku tipkovnicu.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Ako imate poteškoća pri skeniranju PPN barkodova, pokušajte konfigurirati svoj čitač barkodova da oponaša numeričku tipkovnicu.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Pokušajte ponovno, pobrinite se da skenirate ispravne barkod(ove).</value>
   </data>
@@ -378,24 +360,6 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Vaš sustav ne može pouzdano čitati barkodove ako sadrže podatke za Elektroničku Razmjenu Podataka (EDI).</value>
   </data>
-  <data name="Condition_276" xml:space="preserve">
-    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje datoteka (ASCII 28).</value>
-  </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Vaš sustav ne može čitati znakove za odjeljivanje datoteka (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje jedinica (ASCII 31).</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje jedinica (ASCII 31).</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Vaš sustav možda neće pravilno čitati znakove za kraj prijenosa (ASCII 04).</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Vaš sustav ne može čitati znakove za kraj prijenosa (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test je propao.</value>
   </data>
@@ -549,24 +513,6 @@
   <data name="Description_275" xml:space="preserve">
     <value>Neki barkodovi mogu sadržavati EDI podatke.</value>
   </data>
-  <data name="Description_276" xml:space="preserve">
-    <value>Vrlo je malo vjerojatno da će se ovi znakovi koristiti u jedinstvenim identifikatorima.</value>
-  </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Vrlo je malo vjerojatno da će se ovi znakovi koristiti u jedinstvenim identifikatorima.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Vrlo je malo vjerojatno da će se ovi znakovi koristiti u jedinstvenim identifikatorima.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Vrlo je malo vjerojatno da će se ovi znakovi koristiti u jedinstvenim identifikatorima.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Ovaj znak označava kraj podataka u PPN barkodovima. Vaš softver možda neće pravilno očitati bilo koji sufiks koji je dodao čitač barkodova.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Ovaj znak označava kraj podataka u PPN barkodovima. Vaš softver možda neće pravilno očitati bilo koji sufiks koji je dodao čitač barkodova.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Možda ste skenirali pogrešan barkod ili unijeli netočne podatke pomoću tipkovnice. Vaš skener barkodova ili sustav može biti spor, ili je mogao nastati neki neočekivani ili povremeni problem.</value>
   </data>
@@ -617,5 +563,86 @@
   </data>
   <data name="Description_390" xml:space="preserve">
     <value>Vaš skener barkodova ili sustav može biti spor ili može biti pod utjecajem antivirusnog softvera ili nekog drugog neočekivanog ili povremenog problema.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju PPN barkodova, pokušajte konfigurirati svoj čitač barkodova da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju PPN barkodova, pokušajte konfigurirati svoj čitač barkodova da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Vaš sustav ne može čitati znakove za odjeljivanje datoteka (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje jedinica (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje jedinica (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Vaš sustav možda neće pravilno čitati znakove za kraj prijenosa (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Vaš sustav ne može čitati znakove za kraj prijenosa (ASCII 04).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Vrlo je malo vjerojatno da će se ovi znakovi koristiti u jedinstvenim identifikatorima.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Vrlo je malo vjerojatno da će se ovi znakovi koristiti u jedinstvenim identifikatorima.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Vrlo je malo vjerojatno da će se ovi znakovi koristiti u jedinstvenim identifikatorima.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Ovaj znak označava kraj podataka u PPN barkodovima. Vaš softver možda neće pravilno očitati bilo koji sufiks koji je dodao čitač barkodova.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Ovaj znak označava kraj podataka u PPN barkodovima. Vaš softver možda neće pravilno očitati bilo koji sufiks koji je dodao čitač barkodova.</value>
+  </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje datoteka (ASCII 28).</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Vrlo je malo vjerojatno da će se ovi znakovi koristiti u jedinstvenim identifikatorima.</value>
+  </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_282" xml:space="preserve">
+    <value>Ako imate problema prilikom skeniranja njemačkih PPN ili drugih barkodova, unesite podatke ručno u svoj softver za provjeru.;;Ako je potrebno, konfigurirajte svoj skener barkodova da emulira numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_283" xml:space="preserve">
+    <value>Ako imate problema s očitavanjem njemačkih PPN barkodova, ručno unesite podatke u svoj softver za provjeru.;;Ako je potrebno, konfigurirajte čitač barkodova da emulira numeričku tipkovnicu.</value>
+  </data>
+  <data name="Condition_282" xml:space="preserve">
+    <value>Vaš sustav možda neće pravilno čitati njemačke PPN barkodove.</value>
+  </data>
+  <data name="Condition_283" xml:space="preserve">
+    <value>Vaš sustav ne može pravilno očitati njemačke PPN barkodove.</value>
+  </data>
+  <data name="Description_282" xml:space="preserve">
+    <value>Neki softveri za provjeru možda mogu kompenzirati to analizirajući šifre tipki umjesto znakova.</value>
+  </data>
+  <data name="Description_283" xml:space="preserve">
+    <value>Vaš softver mora implementirati mapiranje znakova kako bi pouzdano očitao PPN barkodove. Međutim, u ovom slučaju, vaš softver neće pouzdano očitavati dodatne podatke.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Provjerite da li se rasporedi tipki na vašoj tipkovnici i tipkovnici skenera bar kodova podudaraju.;;Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu i prenosi AIM identifikatore.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Vaš sustav ne može pouzdano pročitati identifikator vrste barkoda.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Identifikatori AIM predstavljaju tip bar koda. Vaš softver ih može koristiti za eliminaciju nepotrebnih upozorenja.</value>
   </data>
 </root>

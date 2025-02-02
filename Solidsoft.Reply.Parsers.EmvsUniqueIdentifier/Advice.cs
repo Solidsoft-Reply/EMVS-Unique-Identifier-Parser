@@ -31,7 +31,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
     /// <summary>
     ///   An ordered list of advice items.
     /// </summary>
-    private readonly List<AdviceItem> _adviceItems = new();
+    private readonly List<AdviceItem> _adviceItems = new ();
 
     /// <summary>
     ///   Initializes a new instance of the <see cref="Advice"/> class.
@@ -66,21 +66,24 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         var completeDataReported = systemCapabilities.CompleteDataReported;
         var keyboardLayoutsCorrespondForInvariantCharacters = systemCapabilities.KeyboardLayoutsCorrespondForInvariants;
         var keyboardLayoutsCorrespondForNonInvariantCharacters = systemCapabilities.KeyboardLayoutsCorrespondForNonInvariantCharacters;
-        var keyboardLayoutsCanRepresentGroupSeparatorWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentGroupSeparatorWithoutMapping;
-        var keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentRecordSeparatorWithoutMapping;
-        var keyboardLayoutsCanRepresentFileSeparatorWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentFileSeparatorWithoutMapping;
-        var keyboardLayoutsCanRepresentUnitSeparatorWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentUnitSeparatorWithoutMapping;
-        var keyboardLayoutsCanRepresentEotWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentEotWithoutMapping;
+        var keyboardLayoutsCanRepresentGroupSeparatorWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping;
+        var keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping;
+        var keyboardLayoutsCanRepresentFileSeparatorWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentFileSeparatorsWithoutMapping;
+        var keyboardLayoutsCanRepresentUnitSeparatorWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentUnitSeparatorsWithoutMapping;
+        var keyboardLayoutsCanRepresentEotWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentEotCharactersWithoutMapping;
         var keyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping;
         var keyboardLayoutsCorrespondForAimIdentifier = systemCapabilities.KeyboardLayoutsCorrespondForAimIdentifier;
         var canReadInvariantCharactersReliably = systemCapabilities.CanReadInvariantsReliably;
-        var canReadFormat05AndFormat06Reliably = systemCapabilities.CanReadFormat05AndFormat06Reliably;
+        var canReadFormat05AndFormat06Reliably = systemCapabilities.CanReadIsoIec15434EnvelopeReliably;
         var canReadEdiReliably = systemCapabilities.CanReadEdiReliably;
         var canReadAscii28Reliably = systemCapabilities.CanReadFileSeparatorsReliably;
         var canReadAscii31Reliably = systemCapabilities.CanReadUnitSeparatorsReliably;
-        var canReadAscii04Reliably = systemCapabilities.CanReadEotReliably;
+        var canReadAscii04Reliably = systemCapabilities.CanReadEotCharactersReliably;
+        var canReadAimIdentifiersWithoutMapping = systemCapabilities.CanReadAimIdentifiersWithoutMapping;
+        var aimIdentifierFlagCharacterNotMapped = string.IsNullOrWhiteSpace(systemCapabilities.AimIdentifier) || systemCapabilities.AimIdentifier[0] == ']';
+        var ambiguousInvariantForEotSeparator = systemCapabilities.AmbiguousInvariantForEotSeparator;
         var canReadAimIdentifiersReliably = systemCapabilities.CanReadAimIdentifiersReliably;
-        var canReadNonInvariantCharactersReliably = systemCapabilities.CanReadAdditionalAsciiCharactersReliably;
+        var canReadNonInvariantCharactersReliably = systemCapabilities.CanReadNonInvariantsReliably;
         var scannerTransmitsAimIdentifiers = systemCapabilities.ScannerTransmitsAimIdentifiers;
         var scannerTransmitsEndOfLineSequence = systemCapabilities.ScannerTransmitsEndOfLineSequence;
         var scannerTransmitsAdditionalPrefix = systemCapabilities.ScannerTransmitsAdditionalPrefix;
@@ -109,28 +112,26 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                         ? ReportThatUniqueIdentifiersAreReadReliablyButThePpnTestWasOmitted()                               // 105
                         : IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
                             ? IfWeCanReadFormat05AndFormat06Reliably()
-                                ? ReportThatInvariantCharactersAreReadReliably()                                            // 100
+                                ? ReportThatUniqueIdentifiersAreReadReliably()                                              // 100
                                 : ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesAreNotReadReliably()              // 115
-                            : null
-                    : IfWeCanReadFormat05AndFormat06Reliably()
-                        ? ReportThatInvariantCharactersAreReadReliably()                                                    // 100
-                        : null
+                            : ReportThatUniqueIdentifiersAreReadReliably()                                                  // 100
+                    : null
                 : null);
 
         // AdviceTypes: 100, 105, 110, 115 (Not Calibration)
         AddAdviceItemToList(
             IfTheTestSucceeded()
             && IfWeCanReadUniqueIdentifiersReliably()
+            && IfWeDoNotAssumeCalibration()
             && IfTheKeyboardLayoutsCorrespondForUniqueIdentifiers()
             && IfTheKeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping()
-            && IfWeDoNotAssumeCalibration()
                 ? IfAdviceIsNotProvidedSpecificallyForGermany()
                   && IfWeOmittedThePpnTest()
                     ? ReportThatUniqueIdentifiersAreReadReliablyButThePpnTestWasOmitted()                                   // 105
                     : IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
                         ? IfWeCanReadFormat05AndFormat06Reliably()
                             ? IfTheKeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping()
-                                ? ReportThatInvariantCharactersAreReadReliably()                                            // 100
+                                ? ReportThatUniqueIdentifiersAreReadReliably()                                            // 100
                                 : IfWeAssumeAgnosticism()
                                     ? IfAdviceIsNotProvidedSpecificallyForGermany()
                                         ? ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesMayNotBeReadReliably()    // 110
@@ -141,7 +142,18 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                             : IfAdviceIsNotProvidedSpecificallyForGermany()
                                 ? ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesAreNotReadReliably()              // 115
                                 : null
-                        : ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesMayNotBeReadReliably()                    // 110
+                        : IfWeAssumeAgnosticism()
+                            ? IfAdviceIsNotProvidedSpecificallyForGermany()
+                                ? ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesMayNotBeReadReliably()            // 110
+                                : null
+                            : IfTheKeyboardLayoutsCannotRepresentFileSeparatorsWithoutMapping()
+                              || IfTheKeyboardLayoutsCannotRepresentUnitSeparatorsWithoutMapping()
+                                ? IfAdviceIsNotProvidedSpecificallyForGermany()
+                                    ? ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesMayNotBeReadReliably()        // 110
+                                    : null
+                                : IfAdviceIsNotProvidedSpecificallyForGermany()
+                                    ? ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesAreNotReadReliably()          // 115
+                                    : null
                 : null);
 
         // AdviceType: 200
@@ -191,12 +203,15 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
             IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondForAimIdentifierFlagCharacter()
                 ? IfWeCannotReadAimIdentifiersReliably()
                     ? ReportThatWeCannotReadAimIdentifiers()                                                                // 235
-                    : IfWeAssumeAgnosticism()
+                    : IfWeCannotReadAimIdentifiersWithoutMapping()
+                        ? IfWeAssumeAgnosticism()
                             ? ReportThatWeMayNotReadAimIdentifiersAssumingAgnosticism()                                     // 230
                             : IfWeAssumeNoCalibration()
-                                ? ReportThatWeMayNotReadAimIdentifiersAssumingNoCalibration()                               // 231
+                                ? ReportThatWeCannotReadAimIdentifiersAssumingNoCalibration()                               // 231
                                 : null
+                        : null
                 : null);
+
 
         // AdviceTypes: 232
         AddAdviceItemToList(
@@ -208,13 +223,14 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         // AdviceTypes: 240, 241, 245
         AddAdviceItemToList(
             IfDataWasFullyReported()
+            && IfWeIncludedThePpnTest()
             && IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
                 ? IfWeCanReadFormat05AndFormat06Reliably()
                     ? (IfWeKnowIfTheKeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping() || IfWeKnowIfWeCanReadUniqueIdentifiersReliably())
                       && IfTheKeyboardLayoutsCannotRepresentRecordSeparatorsWithoutMapping()
                       && IfWeCanReadUniqueIdentifiersReliably()
                         ? IfWeAssumeAgnosticism()
-                            ? ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingAgnosticism()                         // 240
+                            ? ReportThatFormat05OrFormat06MayNotBeReadReliably()                                            // 240
                             : IfWeAssumeNoCalibration()
                                 ? ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingNoCalibration()                   // 241
                                 : null
@@ -232,23 +248,27 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         AddAdviceItemToList(
             IfDataWasFullyReported()
             && IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondsForAdditionalAsciiCharacters()
-                ? IfWeCannotReadAdditionalAsciiCharactersReliably()
-                    ? ReportThatTheSystemCannotReadAdditionalDataReliably()                                                 // 265
+                ? IfWeCannotReadAdditionalAsciiCharactersReliablyWithoutMapping()
+                    ? ReportThatTheSystemCannotReadAdditionalDataReliably()                                   // 265
                     : IfWeAssumeAgnosticism()
-                        ? ReportThatNonAdditionalDataMayNotBeReadReliablyAssumingAgnosticism()                              // 260
+                        ? ReportThatAdditionalDataMayNotBeReadReliablyAssumingAgnosticism()                              // 260
                         : IfWeAssumeNoCalibration()
-                            ? ReportThatNonAdditionalDataMayNotBeReadReliablyAssumingNoCalibration()                        // 261
+                            ? ReportThatAdditionalDataMayNotBeReadReliablyAssumingNoCalibration()                        // 261
                             : null
                 : null);
 
         // AdviceType: 270, 271, 275
         AddAdviceItemToList(
-            IfDataWasFullyReported()
-            && IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping()
+            IfDataWasFullyReported() 
+            && IfWeIncludedThePpnTest()
+             ? IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping()
                 ? IfWeCannotReadEdiCharactersReliably()
                     ? ReportThatTheSystemCannotReadEdiCharactersReliably()                                                  // 275
                     : IfWeAssumeAgnosticism()
-                        ? ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism()                                  // 270
+                        ? IfWeCannotReadAscii28CharactersReliably() 
+                          || IfWeCannotReadAscii31CharactersReliably() 
+                            ? ReportThatTheSystemCannotReadEdiCharactersReliably()                                          // 275
+                            : ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism()                              // 270
                         : IfWeAssumeNoCalibration()
                             ? IfTheKeyboardLayoutsCannotRepresentEdiSeparatorsWithoutMapping()
                                 ? ReportThatTheSystemCannotReadEdiCharactersReliably()                                      // 275
@@ -256,11 +276,13 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                             : null
                 : IfWeCannotReadEdiCharactersReliably()
                     ? ReportThatTheSystemCannotReadEdiCharactersReliably()                                                  // 275
-                    : null);
+                    : null
+             : null);
 
         // AdviceType: 276, 277
         AddAdviceItemToList(
             IfDataWasFullyReported()
+            && IfWeIncludedThePpnTest()
             && IfWeCannotReadAscii28CharactersReliably()
                 ? ReportThatTheSystemCannotReadAscii28CharactersReliably()                                                  // 277
                 : IfTheKeyboardLayoutsCannotRepresentFileSeparatorsWithoutMapping()
@@ -274,6 +296,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         // AdviceType: 278, 279
         AddAdviceItemToList(
             IfDataWasFullyReported()
+            && IfWeIncludedThePpnTest()
             && IfWeCannotReadAscii31CharactersReliably()
                 ? ReportThatTheSystemCannotReadAscii31CharactersReliably()                                                  // 279
                 : IfTheKeyboardLayoutsCannotRepresentUnitSeparatorsWithoutMapping()
@@ -287,13 +310,32 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         // AdviceType: 280, 281
         AddAdviceItemToList(
             IfDataWasFullyReported()
+            && IfWeIncludedThePpnTest()
             && IfWeCannotReadAscii04CharactersReliably()
                 ? ReportThatTheSystemCannotReadAscii04CharactersReliably()                                                  // 281
                 : IfTheKeyboardLayoutsCannotRepresentEotWithoutMapping()
-                    ? IfWeAssumeNoCalibration()
-                        ? ReportThatTheSystemCannotReadAscii04CharactersReliably()                                          // 281
-                        : IfWeAssumeAgnosticism()
-                            ? ReportThatTheSystemMayNotReadAscii04CharactersReliably()                                      // 280
+                    ? IfWeAssumeAgnosticism()
+                        ? ReportThatTheSystemMayNotReadAscii04CharactersReliably()                                          // 280
+                        : IfWeAssumeNoCalibration()
+                            ? ReportThatTheSystemCannotReadAscii04CharactersReliably()                                      // 281
+                            : null
+                    : null);
+
+        // AdviceType: 282, 283
+        AddAdviceItemToList(
+            IfDataWasFullyReported()
+            && IfWeIncludedThePpnTest()
+            && IfWeCannotReadAscii04CharactersReliably()
+                ? IfAdviceIsProvidedSpecificallyForGermany()
+                  ? ReportThatPpnBarcodesCannotBeReadReliablyInGermany()                                                     // 355
+                  : ReportThatPpnBarcodesCannotBeReadReliably()                                                              // 283
+                : IfTheKeyboardLayoutsCannotRepresentEotWithoutMapping()
+                    ? IfWeAssumeAgnosticism()
+                        ? ReportThatPpnBarcodesOrNonInvariantsMayNotBeReadReliably()                                         // 282
+                        : IfWeAssumeNoCalibration()
+                            ? IfAdviceIsProvidedSpecificallyForGermany()
+                              ? ReportThatPpnBarcodesCannotBeReadReliablyInGermany()                                         // 355
+                              : ReportThatPpnBarcodesCannotBeReadReliably()                                                  // 283
                             : null
                     : null);
 
@@ -350,21 +392,15 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         // AdviceTypes: 309, 310
         AddAdviceItemToList(
             IfDataWasFullyReported()
-            && IfAdviceIsNotProvidedSpecificallyForGermany()
-            && IfTheKeyboardLayoutsCorrespondForUniqueIdentifiers()
             && IfTheKeyboardLayoutsCannotRepresentGroupSeparatorsWithoutMapping()
+            && IfWeCanReadUniqueIdentifiersReliably()
                 ? IfWeAssumeAgnosticism()
-                    ? IfWeKnowIfWeCanReadUniqueIdentifiersReliably()
-                      || IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
-                        ? IfWeCanReadUniqueIdentifiersReliably()
-                          && IfWeCanReadFormat05AndFormat06Reliably()
-                            ? ReportThatHiddenCharactersAreNotRepresentedCorrectly()                                        // 309  // CHECK!
-                            : null
-                        : null
+                    ? ReportThatHiddenCharactersAreNotRepresentedCorrectly() // 309
                     : IfWeAssumeNoCalibration()
-                        ? ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibration()                       // 310
+                        ? ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibration() // 310
                         : null
                 : null);
+
 
         // AdviceTypes: 311, 312
         AddAdviceItemToList(
@@ -387,6 +423,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         // AdviceType: 315, 316
         AddAdviceItemToList(
             IfDataWasFullyReported()
+            && IfWeIncludedThePpnTest()
             && IfWeAssumeAgnosticism()
             && IfWeCanReadUniqueIdentifiersReliably()
             && IfWeCannotReadFormat05AndFormat06Reliably()
@@ -445,6 +482,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         // AdviceType: 350, 351, 355
         AddAdviceItemToList(
             IfDataWasFullyReported()
+            && IfWeIncludedThePpnTest()
             && IfAdviceIsProvidedSpecificallyForGermany()
             && IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
                 ? IfWeCanReadFormat05AndFormat06Reliably()
@@ -456,7 +494,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                                 ? ReportIncorrectRepresentationOfPpnRecordSeparatorsAssumingNoCalibration()                 // 351
                                 : null
                         : null
-                    : ReportThatPpnBarcodesCannotBeReadReliably()                                                           // 355
+                    : ReportThatPpnBarcodesCannotBeReadReliablyInGermany()                                                           // 355
                 : null);
 
         // AdviceType: 390
@@ -513,10 +551,27 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         // If the advice territory is Germany, there is no need to include 355 if 320 is already included.
         if (adviceTerritory == Territory.Germany) {
             var cannotReadPpnReliablyGermany = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadPpnReliablyGermany);
-            var cannotReadUniqueIdentifiersReliably = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadUniqueIdentifiersReliably);
+            var cannotReadUniqueIdsReliably = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadUniqueIdentifiersReliably);
 
-            if (cannotReadPpnReliablyGermany is not null && cannotReadUniqueIdentifiersReliably is not null) {
+            if (cannotReadPpnReliablyGermany is not null && cannotReadUniqueIdsReliably is not null) {
                 highSeverity.Remove(cannotReadPpnReliablyGermany);
+            }
+        }
+
+        var gs1ButNotPpn = lowSeverity.Find(a => a.AdviceType == AdviceType.ReadsUniqueIdentifiersReliablyMayNotReadPpn);
+        var gs1ButNoPpnTest = lowSeverity.Find(a => a.AdviceType == AdviceType.ReadsUniqueIdentifiersReliablyNoPpnTest);
+        var noGroupSeparator = highSeverity.Find(a => a.AdviceType == AdviceType.HiddenCharactersNotRepresentedCorrectly);
+        var cannotReadUniqueIdentifiersReliably = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadUniqueIdentifiersReliably);
+
+        if (gs1ButNotPpn is not null
+            || gs1ButNoPpnTest is not null
+            || noGroupSeparator is not null
+            || cannotReadUniqueIdentifiersReliably is not null)
+        {
+            var mayNotReadFormat0506 = mediumSeverity.Find(a => a.AdviceType == AdviceType.MayNotReadPpn);
+            if (mayNotReadFormat0506 is not null)
+            {
+                mediumSeverity.Remove(mayNotReadFormat0506);
             }
         }
 
@@ -534,9 +589,9 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                 mediumSeverity.Remove(capsLockCompensation);
             }
 
-            var cannotReadUniqueIdentifiersReliably = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadUniqueIdentifiersReliably);
-            if (cannotReadUniqueIdentifiersReliably is not null) {
-                highSeverity.Remove(cannotReadUniqueIdentifiersReliably);
+            var cannotReadUniqueIdsReliably = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadUniqueIdentifiersReliably);
+            if (cannotReadUniqueIdsReliably is not null) {
+                highSeverity.Remove(cannotReadUniqueIdsReliably);
             }
 
             var recordSeparatorIncorrectlyRepresentedGermany = highSeverity.Find(a => a.AdviceType == AdviceType.RecordSeparatorIncorrectlyRepresentedGermany);
@@ -584,7 +639,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                 mediumSeverity.Remove(mayNotReadAdditionalDataNoCalibration);
             }
 
-            var cannotReadAdditionalData = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAdditionalData);
+            var cannotReadAdditionalData = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAdditionalCharactersReliably);
             if (cannotReadAdditionalData is not null) {
                 mediumSeverity.Remove(cannotReadAdditionalData);
             }
@@ -701,6 +756,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         bool IfTheTestSucceeded() => testsSucceeded;
         bool IfTestDidNotSucceed() => !testsSucceeded;
         bool IfWeOmittedThePpnTest() => testGs1Only;
+        bool IfWeIncludedThePpnTest() => !testGs1Only;
         bool IfWeKnowIfWeCanReadFormat05AndFormat06Reliably() => canReadFormat05AndFormat06Reliably is not null;
         bool IfWeCanReadFormat05AndFormat06Reliably() => canReadFormat05AndFormat06Reliably ?? false;
         bool IfWeCannotReadFormat05AndFormat06Reliably() => !canReadFormat05AndFormat06Reliably ?? false;
@@ -716,6 +772,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         bool IfWeDoNotAssumeCalibration() => calibrationAssumption != Assumption.Calibration;
         bool IfWeAssumeNoCalibration() => calibrationAssumption == Assumption.NoCalibration;
         bool IfTheCurrentPlatformIsMacintosh() => platform == SupportedPlatform.Macintosh;
+        bool IfAimIdentifierFlagCharacterIsNotMapped() => aimIdentifierFlagCharacterNotMapped;
         bool IfTheKeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping() => keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping ?? false;
         bool IfTheKeyboardLayoutsCannotRepresentRecordSeparatorsWithoutMapping() => !keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping ?? false;
         bool IfWeKnowIfTheKeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping() => keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping is not null;
@@ -733,17 +790,19 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         bool IfScannerMayCompensateForCapsLock() => scannerMayCompensateForCapsLock;
         bool IfWeDoNotAscertainThatTheScannerTransmitsAimIdentifiers() => !(scannerTransmitsAimIdentifiers ?? false);
         bool IfWeDoNotAscertainThatTheScannerTransmitsAnEndOfLineSequence() => !(scannerTransmitsEndOfLineSequence ?? false);
-        bool IfScannerTransmitsAnAdditionalPrefix() => scannerTransmitsAdditionalPrefix;
-        bool IfScannerTransmitsAnAdditionalSuffix() => scannerTransmitsAdditionalSuffix;
+        bool IfScannerTransmitsAnAdditionalPrefix() => scannerTransmitsAdditionalPrefix ?? false;
+        bool IfScannerTransmitsAnAdditionalSuffix() => scannerTransmitsAdditionalSuffix ?? false;
         bool IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondForAimIdentifierFlagCharacter() => !(keyboardLayoutsCorrespondForAimIdentifier ?? false);
+        bool IfWeCannotReadAimIdentifiersWithoutMapping() => !canReadAimIdentifiersWithoutMapping ?? false;
         bool IfWeCannotReadAimIdentifiersReliably() => !canReadAimIdentifiersReliably ?? false;
-        bool IfThereIsUncertaintyAboutTheDetectedAimIdentifier() => aimIdentifierUncertain;
+        bool IfThereIsUncertaintyAboutTheDetectedAimIdentifier() => aimIdentifierUncertain ?? false;
         bool IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondsForAdditionalAsciiCharacters() => !(keyboardLayoutsCorrespondForNonInvariantCharacters ?? false);
-        bool IfWeCannotReadAdditionalAsciiCharactersReliably() => !canReadNonInvariantCharactersReliably ?? false;
+        bool IfWeCannotReadAdditionalAsciiCharactersReliablyWithoutMapping() => !canReadNonInvariantCharactersReliably ?? false;
         bool IfWeCannotReadEdiCharactersReliably() => !canReadEdiReliably ?? false;
         bool IfWeCannotReadAscii28CharactersReliably() => !canReadAscii28Reliably ?? false;
         bool IfWeCannotReadAscii31CharactersReliably() => !canReadAscii31Reliably ?? false;
         bool IfWeCannotReadAscii04CharactersReliably() => !canReadAscii04Reliably ?? false;
+        bool IfAnAmbiguousInvariantConflictsWithAscii04() => ambiguousInvariantForEotSeparator;
         bool IfUnexpectedErrorOccurred() => unexpectedError;
         bool IfNoUnexpectedErrorOccurred() => !unexpectedError;
         bool IfDataWasReported() => dataReported;
@@ -759,244 +818,252 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         bool IfAdviceIsNotProvidedSpecificallyForGermany() => adviceTerritory != Territory.Germany;
 
         // 100
-        AdviceItem ReportThatInvariantCharactersAreReadReliably() =>
-            new(AdviceType.ReadsUniqueIdentifiersReliably);
+        AdviceItem ReportThatUniqueIdentifiersAreReadReliably() =>
+            new (AdviceType.ReadsUniqueIdentifiersReliably);
 
         // 105
         AdviceItem ReportThatUniqueIdentifiersAreReadReliablyButThePpnTestWasOmitted() =>
-            new(AdviceType.ReadsUniqueIdentifiersReliablyNoPpnTest);
+            new (AdviceType.ReadsUniqueIdentifiersReliablyNoPpnTest);
 
         // 110
         AdviceItem ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesMayNotBeReadReliably() =>
-            new(AdviceType.ReadsUniqueIdentifiersReliablyMayNotReadPpn);
+            new (AdviceType.ReadsUniqueIdentifiersReliablyMayNotReadPpn);
 
         // 115
         AdviceItem ReportThatUniqueIdentifiersAreReadReliablyButPpnBarcodesAreNotReadReliably() =>
-            new(AdviceType.ReadsUniqueIdentifiersReliablyExceptPpn);
+            new (AdviceType.ReadsUniqueIdentifiersReliablyExceptPpn);
 
         // 200
         AdviceItem ReportThatTheBarcodeScannerDoesNotTransmitAimIdentifiers() =>
-            new(AdviceType.NotTransmittingAim);
+            new (AdviceType.NotTransmittingAim);
 
         // 205
         AdviceItem ReportThatCapsLockIsSwitchedOnButCaseIsReportedCorrectly() =>
-            new(AdviceType.CapsLockCompensation);
+            new (AdviceType.CapsLockCompensation);
 
         // 206
         AdviceItem ReportThatCapsLockIsSwitchedOnOnMacOsButCaseIsPreserved() =>
-            new(AdviceType.CapsLockOnPreservationMacintosh);
+            new (AdviceType.CapsLockOnPreservationMacintosh);
 
         // 210
         AdviceItem ReportThatCapsLockIsSwitchedOnButScriptDoesNotSupportCase() =>
-            new(AdviceType.CapsLockOnNoCase);
+            new (AdviceType.CapsLockOnNoCase);
 
         // 215
         AdviceItem ReportThatTheScannerDoesNotTransmitAnEndOfLineSequence() =>
-            new(AdviceType.NotTransmittingEndOfLine);
+            new (AdviceType.NotTransmittingEndOfLine);
 
         // 220
         AdviceItem ReportThatTheScannerTransmitsAPrefix() =>
-            new(AdviceType.TransmittingPrefix);
+            new (AdviceType.TransmittingPrefix);
 
         // 225
         AdviceItem ReportThatTheScannerTransmitsASuffix() =>
-            new(AdviceType.TransmittingSuffix);
+            new (AdviceType.TransmittingSuffix);
 
         // 230
         AdviceItem ReportThatWeMayNotReadAimIdentifiersAssumingAgnosticism() =>
-            new(AdviceType.MayNotReadAim);
+            new (AdviceType.MayNotReadAim);
 
         // 231
-        AdviceItem ReportThatWeMayNotReadAimIdentifiersAssumingNoCalibration() =>
-            new(AdviceType.CannotReadAimNoCalibration);
+        AdviceItem ReportThatWeCannotReadAimIdentifiersAssumingNoCalibration() =>
+            new (AdviceType.CannotReadAimNoCalibration);
 
         // 232
         AdviceItem ReportThatTheBarcodeScannerMayNotTransmitAimIdentifiers() =>
-            new(AdviceType.MayNotTransmitAim);
+            new (AdviceType.MayNotTransmitAim);
 
         // 235
         AdviceItem ReportThatWeCannotReadAimIdentifiers() =>
-            new(AdviceType.CannotReadAim);
+            new (AdviceType.CannotReadAim);
 
         // 240
-        AdviceItem ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingAgnosticism() =>
-            new(AdviceType.MayNotReadPpn);
+        AdviceItem ReportThatFormat05OrFormat06MayNotBeReadReliably() =>
+            new (AdviceType.MayNotReadPpn);
 
         // 241
         AdviceItem ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingNoCalibration() =>
-            new(AdviceType.MayNotReadPpnNoCalibration);
+            new (AdviceType.MayNotReadPpnNoCalibration);
 
         // 245
         AdviceItem ReportThatFormat05OrFormat06AreNotReadReliably() =>
-            new(AdviceType.CannotReadPpnReliably);
+            new (AdviceType.CannotReadPpnReliably);
 
         // 250
         AdviceItem ReportThatWeDidNotTestForIsoIec15434() =>
-            new(AdviceType.NoPpnTest);
+            new (AdviceType.NoPpnTest);
 
         // 255
         AdviceItem ReportThatTheDataInputPerformanceIsSlowerThanExpected() =>
-            new(AdviceType.SlowScannerPerformance);
+            new (AdviceType.SlowScannerPerformance);
 
         // 256
         AdviceItem ReportThatTheDataInputPerformanceIsVeryPoor() =>
-            new(AdviceType.VerySlowScannerPerformance);
+            new (AdviceType.VerySlowScannerPerformance);
 
         // 260
-        AdviceItem ReportThatNonAdditionalDataMayNotBeReadReliablyAssumingAgnosticism() =>
-            new(AdviceType.MayNotReadAdditionalDataReliably);
+        AdviceItem ReportThatAdditionalDataMayNotBeReadReliablyAssumingAgnosticism() =>
+            new (AdviceType.MayNotReadAdditionalDataReliably);
 
         // 261
-        AdviceItem ReportThatNonAdditionalDataMayNotBeReadReliablyAssumingNoCalibration() =>
-            new(AdviceType.MayNotReadAdditionalDataNoCalibration);
+        AdviceItem ReportThatAdditionalDataMayNotBeReadReliablyAssumingNoCalibration() =>
+            new (AdviceType.MayNotReadAdditionalDataNoCalibration);
 
         // 265
         AdviceItem ReportThatTheSystemCannotReadAdditionalDataReliably() =>
-            new(AdviceType.CannotReadAdditionalData);
+            new (AdviceType.CannotReadAdditionalCharactersReliably);
 
         // 270
         AdviceItem ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism() =>
-            new(AdviceType.MayNotReadEdiCharactersReliably);
+            new (AdviceType.MayNotReadEdiCharactersReliably);
 
         // 271
         AdviceItem ReportThatEdiCharactersMayNotBeReadReliablyAssumingNoCalibration() =>
-            new(AdviceType.MayNotReadEdiCharactersNoCalibration);
+            new (AdviceType.MayNotReadEdiCharactersNoCalibration);
 
         // 275
         AdviceItem ReportThatTheSystemCannotReadEdiCharactersReliably() =>
-            new(AdviceType.CannotReadEdiCharacters);
+            new (AdviceType.CannotReadEdiCharacters);
 
         // 276
         AdviceItem ReportThatTheSystemMayNotReadAscii28CharactersReliably() =>
-            new(AdviceType.MayNotReadAscii28Characters);
+            new (AdviceType.MayNotReadAscii28Characters);
 
         // 277
         AdviceItem ReportThatTheSystemCannotReadAscii28CharactersReliably() =>
-            new(AdviceType.CannotReadAscii28Characters);
+            new (AdviceType.CannotReadAscii28Characters);
 
         // 278
         AdviceItem ReportThatTheSystemMayNotReadAscii31CharactersReliably() =>
-            new(AdviceType.MayNotReadAscii31Characters);
+            new (AdviceType.MayNotReadAscii31Characters);
 
         // 279
         AdviceItem ReportThatTheSystemCannotReadAscii31CharactersReliably() =>
-            new(AdviceType.CannotReadAscii31Characters);
+            new (AdviceType.CannotReadAscii31Characters);
 
         // 280
         AdviceItem ReportThatTheSystemMayNotReadAscii04CharactersReliably() =>
-            new(AdviceType.MayNotReadAscii04Characters);
+            new (AdviceType.MayNotReadAscii04Characters);
 
         // 281
         AdviceItem ReportThatTheSystemCannotReadAscii04CharactersReliably() =>
-            new(AdviceType.CannotReadAscii04Characters);
+            new (AdviceType.CannotReadAscii04Characters);
+
+        // 282
+        AdviceItem ReportThatPpnBarcodesOrNonInvariantsMayNotBeReadReliably() =>
+            new (AdviceType.MayNotReadPpnBarcodesOrAdditionalData);
+
+        // 283
+        AdviceItem ReportThatPpnBarcodesCannotBeReadReliably() =>
+            new (AdviceType.CannotReadPpnBarcodes);
 
         // 300
         AdviceItem ReportThatTheTestFailed() =>
-            new(AdviceType.TestFailed);
+            new (AdviceType.TestFailed);
 
         // 301
         AdviceItem ReportThatNoScannedDataWasReportedForBaseLineBarcode() =>
-            new(AdviceType.NoDataReported);
+            new (AdviceType.NoDataReported);
 
         // 303
         AdviceItem ReportThatScannedDataWasPartiallyReportedForBaselineBarcode() =>
-            new(AdviceType.PartialDataReported);
+            new (AdviceType.PartialDataReported);
 
         // 304
         AdviceItem ReportThatNoScannedDataWasReportedForDeadKeyBarcodes() =>
-            new(AdviceType.NoDataReportedDeadKeys);
+            new (AdviceType.NoDataReportedDeadKeys);
 
         // 305
         AdviceItem ReportThatUserScannedADeadKeyBarcodeOutOfSequence() =>
-            new(AdviceType.IncorrectSequenceDeadKeys);
+            new (AdviceType.IncorrectSequenceDeadKeys);
 
         // 306
         AdviceItem ReportThatScannedDataWasPartiallyReportedForDeadKeyBarcodes() =>
-            new(AdviceType.PartialDataReportedDeadKeys);
+            new (AdviceType.PartialDataReportedDeadKeys);
 
         // 307
         AdviceItem ReportThatLayoutsDoNotMatch() =>
-            new(AdviceType.LayoutsDoNotMatch);
+            new (AdviceType.LayoutsDoNotMatch);
 
         // 308
         AdviceItem ReportThatLayoutsDoNotMatchForNoCalibrationAssumption() =>
-            new(AdviceType.LayoutsDoNotMatchNoCalibration);
+            new (AdviceType.LayoutsDoNotMatchNoCalibration);
 
         // 309
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectly() =>
-            new(AdviceType.HiddenCharactersNotRepresentedCorrectly);
+            new (AdviceType.HiddenCharactersNotRepresentedCorrectly);
 
         // 310
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibration() =>
-            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibration);
+            new (AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibration);
 
         // 311
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectlyForGermany() =>
-            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyGermany);
+            new (AdviceType.HiddenCharactersNotRepresentedCorrectlyGermany);
 
         // 312
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibrationForGermany() =>
-            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibrationGermany);
+            new (AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibrationGermany);
 
         // 315
         AdviceItem ReportThatLayoutsDoNotMatchAndPpnBarcodesCannotBeReadReliably() =>
-            new(AdviceType.LayoutsDoNotMatchNoPpn);
+            new (AdviceType.LayoutsDoNotMatchNoPpn);
 
         // 316
         AdviceItem ReportThatHiddenCharactersAreNotReportedCorrectlyAndPpnBarcodesCannotBeReadReliably() =>
-            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoPpn);
+            new (AdviceType.HiddenCharactersNotRepresentedCorrectlyNoPpn);
 
         // 320
         AdviceItem ReportThatSystemCannotReadUniqueIdentifiersReliably() =>
-            new(AdviceType.CannotReadUniqueIdentifiersReliably);
+            new (AdviceType.CannotReadUniqueIdentifiersReliably);
 
         // 325
         AdviceItem ReportThatCapsLockIsSwitchedOn() =>
-            new(AdviceType.CapsLockOn);
+            new (AdviceType.CapsLockOn);
 
         // 326
         AdviceItem ReportThatCapsLockIsSwitchedOnForMacintosh() =>
-            new(AdviceType.CapsLockOnMacintosh);
+            new (AdviceType.CapsLockOnMacintosh);
 
         // 327
         AdviceItem ReportThatCapsLockIsOnAndSystemConvertsToUpperCases() =>
-            new(AdviceType.CapsLockOnConvertsToUpperCase);
+            new (AdviceType.CapsLockOnConvertsToUpperCase);
 
         // 328
         AdviceItem ReportThatCapsLockIsOnAndSystemConvertsToLowerCases() =>
-            new(AdviceType.CapsLockOnConvertsToLowerCase);
+            new (AdviceType.CapsLockOnConvertsToLowerCase);
 
         // 330
         AdviceItem ReportThatSystemConvertsUpperAndLowerCases() =>
-            new(AdviceType.CaseIsSwitched);
+            new (AdviceType.CaseIsSwitched);
 
         // 331
         AdviceItem ReportThatSystemConvertsToUpperCase() =>
-            new(AdviceType.ConvertsToUpperCase);
+            new (AdviceType.ConvertsToUpperCase);
 
         // 332
         AdviceItem ReportThatSystemConvertsToLowerCase() =>
-            new(AdviceType.ConvertsToLowerCase);
+            new (AdviceType.ConvertsToLowerCase);
 
         // 335
         AdviceItem ReportBarcodesCannotBeReadReliablyForKeyboardScriptThatDoesNotSupportCase() =>
-            new(AdviceType.NoSupportForCase, systemCapabilities.KeyboardScript);
+            new (AdviceType.NoSupportForCase, systemCapabilities.KeyboardScript);
 
         // 350
         AdviceItem ReportIncorrectRepresentationOfPpnRecordSeparators() =>
-            new(AdviceType.RecordSeparatorIncorrectlyRepresentedGermany);
+            new (AdviceType.RecordSeparatorIncorrectlyRepresentedGermany);
 
         // 351
         AdviceItem ReportIncorrectRepresentationOfPpnRecordSeparatorsAssumingNoCalibration() =>
-            new(AdviceType.RecordSeparatorIncorrectlyRepresentedNoCalibrationGermany);
+            new (AdviceType.RecordSeparatorIncorrectlyRepresentedNoCalibrationGermany);
 
         // 355
-        AdviceItem ReportThatPpnBarcodesCannotBeReadReliably() =>
-            new(AdviceType.CannotReadPpnReliablyGermany);
+        AdviceItem ReportThatPpnBarcodesCannotBeReadReliablyInGermany() =>
+            new (AdviceType.CannotReadPpnReliablyGermany);
 
         // 390
         AdviceItem ReportThatAnUnexpectedErrorWasReported() =>
-            new(AdviceType.UnexpectedErrorReported);
+            new (AdviceType.UnexpectedErrorReported);
     }
 
     /// <summary>

@@ -359,7 +359,7 @@ public enum AdviceType {
     /// <p>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner
     ///   to emulate a numeric keypad.</p>
     /// </summary>
-    CannotReadAdditionalData = 265,
+    CannotReadAdditionalCharactersReliably = 265,
 
     /// <summary>
     /// <p>Your system cannot read EDI data reliably.</p>
@@ -426,6 +426,20 @@ public enum AdviceType {
     /// <p>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
     CannotReadAscii04Characters = 281,
+
+    /// <summary>
+    /// <p>Your system may not read German PPN barcodes correctly.</p>
+    /// <p>Your software must implement character mapping to read PPN barcodes reliably. However, if it does, it cannot read certain characters that are never included in unique identifiers.</p>
+    /// <p>If you experience problems when scanning German PPN or any other barcodes, enter data manually into your verification software.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</p>
+    /// </summary>
+    MayNotReadPpnBarcodesOrAdditionalData = 282,
+
+    /// <summary>
+    /// <p>Your system cannot read German PPN barcodes reliably.</p>
+    /// <p>Some verification software may be able to compensate for this by analysing key codes rather than characters.</p>
+    /// <p>Enter data manually into your verification software to verify PPN unique identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</p>
+    /// </summary>
+    CannotReadPpnBarcodes = 283,
 
     /// <summary>
     /// <p>Your system reads unique identifiers reliably.</p>

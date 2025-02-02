@@ -149,7 +149,7 @@ public class Calibrate : IController {
 #if STATELESS_MODEL
         _parser = new StatelessParser();
 #else
-        _parser = new Parser();
+        _parser = new Parser(assumption: Assumption.NoCalibration);
 #endif
 
         StartTimerBitmap();

@@ -198,24 +198,6 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Als u barcodes scant die EDI-gegevens bevatten en problemen ondervindt, probeer dan uw barcodescanner te configureren om een numeriek toetsenblok na te bootsen.</value>
   </data>
-  <data name="Advice_276" xml:space="preserve">
-    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
-  </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Als u problemen ondervindt bij het scannen van PPN-barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Als u problemen ondervindt bij het scannen van PPN-barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Probeer opnieuw, zorg ervoor dat u de juiste barcode(s) scant.</value>
   </data>
@@ -378,24 +360,6 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze gegevens voor elektronische gegevensuitwisseling (EDI) bevatten.</value>
   </data>
-  <data name="Condition_276" xml:space="preserve">
-    <value>Uw systeem kan mogelijk de bestandscheidingstekens (ASCII 28) niet correct lezen.</value>
-  </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Uw systeem kan de bestandscheidingstekens (ASCII 28) niet lezen.</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Uw systeem kan mogelijk de scheidingstekens van eenheid (ASCII 31) niet correct lezen.</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Uw systeem kan mogelijk de scheidingstekens van eenheid (ASCII 31) niet correct lezen.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Uw systeem kan mogelijk de einde-overdrachttekens (ASCII 04) niet correct lezen.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Uw systeem kan de einde-overdrachttekens (ASCII 04) niet lezen.</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>De test is mislukt.</value>
   </data>
@@ -549,24 +513,6 @@
   <data name="Description_275" xml:space="preserve">
     <value>Sommige barcodes kunnen EDI-gegevens bevatten.</value>
   </data>
-  <data name="Description_276" xml:space="preserve">
-    <value>Deze tekens worden zeer waarschijnlijk niet gebruikt in unieke identificatoren.</value>
-  </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Deze tekens worden zeer waarschijnlijk niet gebruikt in unieke identificatoren.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Deze tekens worden zeer waarschijnlijk niet gebruikt in unieke identificatoren.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Deze tekens worden zeer waarschijnlijk niet gebruikt in unieke identificatoren.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Dit teken markeert het einde van de gegevens in PPN-barcodes. Uw software leest mogelijk geen suffix correct dat door de barcodescanner is toegevoegd.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Dit teken markeert het einde van de gegevens in PPN-barcodes. Uw software leest mogelijk geen suffix correct dat door de barcodescanner is toegevoegd.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>U hebt mogelijk een verkeerde barcode gescand of onjuiste gegevens ingevoerd met het toetsenbord. Uw barcodescanner of systeem kan traag zijn, of er kan een onverwachte of intermitterende storing zijn opgetreden.</value>
   </data>
@@ -617,5 +563,86 @@
   </data>
   <data name="Description_390" xml:space="preserve">
     <value>Uw barcodescanner of systeem kan traag zijn of beïnvloed worden door antivirussoftware of een andere onverwachte of intermitterende storing.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van PPN-barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van PPN-barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Uw systeem kan de bestandscheidingstekens (ASCII 28) niet lezen.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Uw systeem kan mogelijk de scheidingstekens van eenheid (ASCII 31) niet correct lezen.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Uw systeem kan mogelijk de scheidingstekens van eenheid (ASCII 31) niet correct lezen.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Uw systeem kan mogelijk de einde-overdrachttekens (ASCII 04) niet correct lezen.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Uw systeem kan de einde-overdrachttekens (ASCII 04) niet lezen.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Deze tekens worden zeer waarschijnlijk niet gebruikt in unieke identificatoren.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Deze tekens worden zeer waarschijnlijk niet gebruikt in unieke identificatoren.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Deze tekens worden zeer waarschijnlijk niet gebruikt in unieke identificatoren.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Dit teken markeert het einde van de gegevens in PPN-barcodes. Uw software leest mogelijk geen suffix correct dat door de barcodescanner is toegevoegd.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Dit teken markeert het einde van de gegevens in PPN-barcodes. Uw software leest mogelijk geen suffix correct dat door de barcodescanner is toegevoegd.</value>
+  </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Uw systeem kan mogelijk de bestandscheidingstekens (ASCII 28) niet correct lezen.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Deze tekens worden zeer waarschijnlijk niet gebruikt in unieke identificatoren.</value>
+  </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
+  </data>
+  <data name="Advice_282" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van Duitse PPN- of andere barcodes, voer de gegevens handmatig in uw verificatiesoftware in.;;Configureer indien nodig uw barcodescanner om een numeriek toetsenblok te emuleren.</value>
+  </data>
+  <data name="Advice_283" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van Duitse PPN-barcodes, voer dan handmatig gegevens in uw verificatiesoftware in.;;Indien nodig configureert u uw barcodescanner om een numeriek toetsenbord te emuleren.</value>
+  </data>
+  <data name="Condition_282" xml:space="preserve">
+    <value>Uw systeem leest mogelijk Duitse PPN-barcodes niet correct.</value>
+  </data>
+  <data name="Condition_283" xml:space="preserve">
+    <value>Uw systeem kan Duitse PPN-barcodes niet correct lezen.</value>
+  </data>
+  <data name="Description_282" xml:space="preserve">
+    <value>Uw software moet tekentoewijzing implementeren om PPN-barcodes betrouwbaar te lezen. Als het dat echter doet, kan het bepaalde tekens niet lezen die nooit in unieke identificatoren voorkomen.</value>
+  </data>
+  <data name="Description_283" xml:space="preserve">
+    <value>Uw software moet tekenmapping implementeren om PPN-barcodes betrouwbaar te lezen. In dit geval zal uw software echter aanvullende gegevens niet betrouwbaar lezen.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Zorg ervoor dat uw toetsenbordindelingen overeenkomen.;;Indien nodig, configureer uw barcodescanner om een numeriek toetsenbord te emuleren en AIM-identifiers te verzenden.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Uw systeem kan het type-identificatie van de streepjescode niet betrouwbaar lezen.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>AIM-identifiers vertegenwoordigen het type barcode. Uw software kan ze gebruiken om onnodige meldingen te elimineren.</value>
   </data>
 </root>

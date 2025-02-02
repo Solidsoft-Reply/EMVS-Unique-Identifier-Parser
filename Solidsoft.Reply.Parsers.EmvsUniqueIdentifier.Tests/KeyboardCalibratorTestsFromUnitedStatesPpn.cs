@@ -9,7 +9,6 @@
 
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Tests;
 
-using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -1202,7 +1201,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesPpn {
     public void ToCzech() {
         var token = PerformCalibrationTest("Czech");
         // Check warning for German PPN packs not recognised.
-        Assert.Contains(token.Warnings, ci => ci.InformationType == InformationType.IsoIec15434SyntaxNotRecognised);
+        Assert.Contains(token.Warnings, ci => ci.InformationType == InformationType.IsoIec15434EdiNotReliablyReadable);
     }
 
     /// <summary>

@@ -131,6 +131,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                     : IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
                         ? IfWeCanReadFormat05AndFormat06Reliably()
                             ? IfTheKeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping()
+                              && IfTheKeyboardLayoutsCanRepresentEotWithoutMapping()
                                 ? ReportThatUniqueIdentifiersAreReadReliably()                                            // 100
                                 : IfWeAssumeAgnosticism()
                                     ? IfAdviceIsNotProvidedSpecificallyForGermany()
@@ -220,7 +221,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                 ? ReportThatTheBarcodeScannerMayNotTransmitAimIdentifiers()                                                 // 232
                 : null);
 
-        // AdviceTypes: 240, 241, 245
+        // AdviceTypes: 240, 241
         AddAdviceItemToList(
             IfDataWasFullyReported()
             && IfWeIncludedThePpnTest()
@@ -235,7 +236,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                                 ? ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingNoCalibration()                   // 241
                                 : null
                         : null
-                    : ReportThatFormat05OrFormat06AreNotReadReliably()                                                      // 245
+                    : null
                 : null);
 
         // AdviceType: 250
@@ -321,7 +322,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                             : null
                     : null);
 
-        // AdviceType: 282, 283
+        // AdviceType: 282, 283, 355
         AddAdviceItemToList(
             IfDataWasFullyReported()
             && IfWeIncludedThePpnTest()
@@ -337,7 +338,10 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                               ? ReportThatPpnBarcodesCannotBeReadReliablyInGermany()                                         // 355
                               : ReportThatPpnBarcodesCannotBeReadReliably()                                                  // 283
                             : null
-                    : null);
+                    : IfWeCannotReadFormat05AndFormat06Reliably() 
+                      && IfWeIncludedThePpnTest()
+                          ? ReportThatPpnBarcodesCannotBeReadReliably()                                                      // 283
+                          : null);
 
         // AdviceType: 300
         AddAdviceItemToList(
@@ -519,7 +523,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
              let isPpnWarning = (from ppnWarning in mediumSeverity
                                  where ppnWarning.AdviceType is AdviceType.MayNotReadPpn
                                                              or AdviceType.MayNotReadPpnNoCalibration
-                                                             or AdviceType.CannotReadPpnReliably
+                                                             ////////or AdviceType.CannotReadPpnReliably
+                                                             or AdviceType.CannotReadPpnBarcodes
                                  select ppnWarning).Any()
              let isPpnInfo = (from ppnInfo in lowSeverity
                               where ppnInfo.AdviceType is AdviceType.ReadsUniqueIdentifiersReliablyNoPpnTest
@@ -534,13 +539,18 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         // Some PPN-related warnings duplicate others. This redundancy should be removed.
         var layoutsDoNotMatchNoPpn = highSeverity.Find(a => a.AdviceType == AdviceType.LayoutsDoNotMatchNoPpn);
         var hiddenCharactersNotRepresentedCorrectlyNoPpn = highSeverity.Find(a => a.AdviceType == AdviceType.HiddenCharactersNotRepresentedCorrectlyNoPpn);
+        var readsUniqueIdentifiersReliablyMayNotReadPpn = highSeverity.Find(a =>
+            a.AdviceType == AdviceType.ReadsUniqueIdentifiersReliablyMayNotReadPpn);
 
-        if (layoutsDoNotMatchNoPpn is not null || hiddenCharactersNotRepresentedCorrectlyNoPpn is not null) {
-            var cannotReadPpnReliably = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadPpnReliably);
+        if (layoutsDoNotMatchNoPpn is not null 
+            || hiddenCharactersNotRepresentedCorrectlyNoPpn is not null
+            || readsUniqueIdentifiersReliablyMayNotReadPpn is not null) {
+            //////var cannotReadPpnBarcodes = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadPpnReliably);
+            var cannotReadPpnBarcodes = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadPpnBarcodes);
             var cannotReadPpnReliablyGermany = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadPpnReliablyGermany);
 
-            if (cannotReadPpnReliably is not null) {
-                mediumSeverity.Remove(cannotReadPpnReliably);
+            if (cannotReadPpnBarcodes is not null) {
+                mediumSeverity.Remove(cannotReadPpnBarcodes);
             }
 
             if (cannotReadPpnReliablyGermany is not null) {
@@ -569,9 +579,13 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
             || cannotReadUniqueIdentifiersReliably is not null)
         {
             var mayNotReadFormat0506 = mediumSeverity.Find(a => a.AdviceType == AdviceType.MayNotReadPpn);
-            if (mayNotReadFormat0506 is not null)
-            {
+            var mayNotReadPpnBarcodesOrAdditionalData = mediumSeverity.Find(a => a.AdviceType == AdviceType.MayNotReadPpnBarcodesOrAdditionalData);
+            if (mayNotReadFormat0506 is not null) {
                 mediumSeverity.Remove(mayNotReadFormat0506);
+            }
+
+            if (mayNotReadPpnBarcodesOrAdditionalData is not null) {
+                mediumSeverity.Remove(mayNotReadPpnBarcodesOrAdditionalData);
             }
         }
 
@@ -624,9 +638,14 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                 mediumSeverity.Remove(mayNotReadPpnNoCalibration);
             }
 
-            var cannotReadPpnReliably = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadPpnReliably);
-            if (cannotReadPpnReliably is not null) {
-                mediumSeverity.Remove(cannotReadPpnReliably);
+            ////////var cannotReadPpnBarcodes = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadPpnReliably);
+            ////////if (cannotReadPpnBarcodes is not null) {
+            ////////    mediumSeverity.Remove(cannotReadPpnBarcodes);
+            ////////}
+
+            var cannotReadPpnBarcodes = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadPpnBarcodes);
+            if (cannotReadPpnBarcodes is not null) {
+                mediumSeverity.Remove(cannotReadPpnBarcodes);
             }
 
             var mayNotReadAdditionalDataReliably = mediumSeverity.Find(a => a.AdviceType == AdviceType.MayNotReadAdditionalDataReliably);
@@ -780,6 +799,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         bool IfTheKeyboardLayoutsCannotRepresentGroupSeparatorsWithoutMapping() => !keyboardLayoutsCanRepresentGroupSeparatorWithoutMapping ?? false;
         bool IfTheKeyboardLayoutsCannotRepresentFileSeparatorsWithoutMapping() => !keyboardLayoutsCanRepresentFileSeparatorWithoutMapping ?? false;
         bool IfTheKeyboardLayoutsCannotRepresentUnitSeparatorsWithoutMapping() => !keyboardLayoutsCanRepresentUnitSeparatorWithoutMapping ?? false;
+        bool IfTheKeyboardLayoutsCanRepresentEotWithoutMapping() => keyboardLayoutsCanRepresentEotWithoutMapping ?? false;
         bool IfTheKeyboardLayoutsCannotRepresentEotWithoutMapping() => !keyboardLayoutsCanRepresentEotWithoutMapping ?? false;
         bool IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping() => !(keyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping ?? false);
         bool IfTheKeyboardLayoutsCannotRepresentEdiSeparatorsWithoutMapping() => keyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping is false;
@@ -885,9 +905,9 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         AdviceItem ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingNoCalibration() =>
             new (AdviceType.MayNotReadPpnNoCalibration);
 
-        // 245
-        AdviceItem ReportThatFormat05OrFormat06AreNotReadReliably() =>
-            new (AdviceType.CannotReadPpnReliably);
+        //////////// 245
+        //////////AdviceItem ReportThatFormat05OrFormat06AreNotReadReliably() =>
+        //////////    new (AdviceType.CannotReadPpnReliably);
 
         // 250
         AdviceItem ReportThatWeDidNotTestForIsoIec15434() =>

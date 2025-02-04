@@ -79,7 +79,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You can verify the authenticity of most medicinal packs by scanning the barcode printed on the outer packaging. You can verify the authenticity of most medicinal packs by scanning the barcode printed on the outer packaging. If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad..
+        ///   Looks up a localized string similar to You can verify the authenticity of most medicinal packs by scanning the barcode printed on the outer packaging. If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
         public static string Advice_110 {
             get {

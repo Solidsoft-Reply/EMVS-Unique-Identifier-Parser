@@ -309,12 +309,12 @@ public enum AdviceType {
     /// </summary>
     MayNotReadPpnNoCalibration = 241,
 
-    /// <summary>
-    /// <p>Your system cannot read German PPN barcodes reliably.</p>
-    /// <p>Use manual data entry to verify PPN unique identifiers or configure your barcode scanner
-    ///   to emulate a numeric keypad.</p>
-    /// </summary>
-    CannotReadPpnReliably = 245,
+    ///////////// <summary>
+    ///////////// <p>Your system cannot read German PPN barcodes reliably.</p>
+    ///////////// <p>Use manual data entry to verify PPN unique identifiers or configure your barcode scanner
+    /////////////   to emulate a numeric keypad.</p>
+    ///////////// </summary>
+    //////////CannotReadPpnReliably = 245,
 
     /// <summary>
     /// <p>You did not test compatibility for German PPN barcodes.</p>

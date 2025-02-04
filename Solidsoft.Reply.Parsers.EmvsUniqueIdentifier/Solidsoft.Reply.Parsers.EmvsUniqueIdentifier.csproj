@@ -42,7 +42,7 @@
   <PropertyGroup>
 		<AnalysisMode>AllEnabledByDefault</AnalysisMode>
 		<Copyright>© 2018-2024 Solidsoft Reply Limited</Copyright>
-		<Company>Solidoft Reply</Company>
+		<Company>Solidsoft Reply</Company>
 		<Authors>Charles Young</Authors>
 		<Product>EMVS Validating Parser for Unique Identifiers</Product>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>

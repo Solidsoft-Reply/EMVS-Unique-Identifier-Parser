@@ -66,7 +66,7 @@ Scenario: No EOT character reported
 	    And the advice should contain an advice item for CannotReadPpnBarcodes
 		And the advice should contain no other advice items
 
-	Scenario: Null GS character reported
+Scenario: Null GS character reported
     # Format tests are included
 	Given the baseline input is for The United States with null GS
 	When the baseline input is submitted to an agnostic calibrator
@@ -477,4 +477,20 @@ Scenario: EOT character reported as ligature
 	    And advice is generated from the calculated system capabilities
 	Then the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNotReadPpn
 		And the advice should contain an advice item for MayNotReadAscii04Characters
+		And the advice should contain no other advice items
+
+Scenario: Null GS character reported - No PPN
+    # Format tests are included
+	Given the baseline input is for The United States with null GS - No PPN
+	When the baseline input is submitted to an agnostic calibrator with no PPN test
+	    And advice is generated from the calculated system capabilities
+	Then the advice should contain an advice item for HiddenCharactersNotRepresentedCorrectly
+		And the advice should contain no other advice items
+
+Scenario: Dodgy Scanner - No PPN
+    # Format tests are included
+	Given the baseline input is for Dodgy Scanner - No PPN
+	When the baseline input is submitted to an agnostic calibrator with no PPN test
+	    And advice is generated from the calculated system capabilities
+	Then the advice should contain an advice item for HiddenCharactersNotRepresentedCorrectly
 		And the advice should contain no other advice items

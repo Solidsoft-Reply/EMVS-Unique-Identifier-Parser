@@ -380,9 +380,9 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
             && IfTheKeyboardLayoutsDoNotCorrespondForUniqueIdentifiers()
                 ? IfWeAssumeAgnosticism()
                     ? IfWeKnowIfWeCanReadUniqueIdentifiersReliably()
-                      || IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
+//////                      || IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
                         ? IfWeCanReadUniqueIdentifiersReliably()
-                          && IfWeCanReadFormat05AndFormat06Reliably()
+/////                          && IfWeCanReadFormat05AndFormat06Reliably()
                             ? ReportThatLayoutsDoNotMatch()                                                                 // 307
                             : IfWeAssumeNoCalibration()
                                 ? ReportThatLayoutsDoNotMatchForNoCalibrationAssumption()                                   // 308
@@ -791,7 +791,6 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         bool IfWeDoNotAssumeCalibration() => calibrationAssumption != Assumption.Calibration;
         bool IfWeAssumeNoCalibration() => calibrationAssumption == Assumption.NoCalibration;
         bool IfTheCurrentPlatformIsMacintosh() => platform == SupportedPlatform.Macintosh;
-        bool IfAimIdentifierFlagCharacterIsNotMapped() => aimIdentifierFlagCharacterNotMapped;
         bool IfTheKeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping() => keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping ?? false;
         bool IfTheKeyboardLayoutsCannotRepresentRecordSeparatorsWithoutMapping() => !keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping ?? false;
         bool IfWeKnowIfTheKeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping() => keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping is not null;
@@ -822,7 +821,6 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         bool IfWeCannotReadAscii28CharactersReliably() => !canReadAscii28Reliably ?? false;
         bool IfWeCannotReadAscii31CharactersReliably() => !canReadAscii31Reliably ?? false;
         bool IfWeCannotReadAscii04CharactersReliably() => !canReadAscii04Reliably ?? false;
-        bool IfAnAmbiguousInvariantConflictsWithAscii04() => ambiguousInvariantForEotSeparator;
         bool IfUnexpectedErrorOccurred() => unexpectedError;
         bool IfNoUnexpectedErrorOccurred() => !unexpectedError;
         bool IfDataWasReported() => dataReported;

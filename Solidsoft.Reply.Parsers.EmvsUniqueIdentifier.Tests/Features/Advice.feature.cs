@@ -385,7 +385,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Null GS character reported", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 69
- this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -2231,6 +2231,82 @@ this.ScenarioInitialize(scenarioInfo);
   await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii04Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 480
+  await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Null GS character reported - No PPN")]
+        [Xunit.TraitAttribute("FeatureTitle", "Advice")]
+        [Xunit.TraitAttribute("Description", "Null GS character reported - No PPN")]
+        public async System.Threading.Tasks.Task NullGSCharacterReported_NoPPN()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Null GS character reported - No PPN", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 482
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 484
+ await testRunner.GivenAsync("the baseline input is for The United States with null GS - No PPN", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 485
+ await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator with no PPN test", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 486
+     await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 487
+ await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
+                        "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 488
+  await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Dodgy Scanner - No PPN")]
+        [Xunit.TraitAttribute("FeatureTitle", "Advice")]
+        [Xunit.TraitAttribute("Description", "Dodgy Scanner - No PPN")]
+        public async System.Threading.Tasks.Task DodgyScanner_NoPPN()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Dodgy Scanner - No PPN", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 490
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 492
+ await testRunner.GivenAsync("the baseline input is for Dodgy Scanner - No PPN", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 493
+ await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator with no PPN test", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 494
+     await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 495
+ await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
+                        "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 496
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }

@@ -67,9 +67,14 @@ public sealed class AdviceStepDefinitions
             "The United States with FS as ligature" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    óé    \x001E   \x001F    \x0004    {lineTerminator}",
             "The United States with US as ligature" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    óé    \x0004    {lineTerminator}",
             "The United States with EOT as ligature" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \x001F    óé    {lineTerminator}",
+            "The United States with no GS - No PPN" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}        {lineTerminator}",
             "The United States with null GS - No PPN" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \0    {lineTerminator}",
-            "Dodgy Scanner - No PPN" => $"  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` {{ ~ }} ¬    \u0000    {lineTerminator}",
-           ////                             ! " % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    \0    {lineTerminator}
+            "The United States with GS as different character - NoPPN" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001B    {lineTerminator}",
+            "The United States with GS as ambiguous invariant character - NoPPN" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    Z    {lineTerminator}",
+            "The United States with GS as ambiguous non-invariant character - NoPPN" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    @    {lineTerminator}",
+            "The United States with GS as AIM flag character - NoPPN" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    ]    {lineTerminator}",
+            "The United States with GS as dead key character - NoPPN" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \0é    {lineTerminator}",
+            "The United States with GS as ligature - NoPPN" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    óé    {lineTerminator}",
             _ => throw new ArgumentException("Invalid baseline input", nameof(input))
         };
     }
@@ -117,6 +122,20 @@ public sealed class AdviceStepDefinitions
         _currentToken = _currentCalibrator.Calibrate(_baselineInput, _currentCalibrator.CalibrationTokens().FirstOrDefault());
     }
 
+    [When("the baseline input is submitted to a calibration calibrator with no PPN test")]
+    public void WhenTheBaselineInputIsSubmittedToTheCalibrationCalibratorWithNoPpnTest() {
+        _currentAssumption = Assumption.Calibration;
+        _currentCalibrator = new Calibrator(assumption: _currentAssumption);
+        _currentCalibrator.AssessFormatSupport = false;
+        try {
+            _currentToken = _currentCalibrator.Calibrate(_baselineInput, _currentCalibrator.CalibrationTokens().FirstOrDefault());
+        }
+        catch {
+            _currentCalibrator.AssessFormatSupport = true;
+            throw;
+        }
+    }
+
     [When("the baseline input is submitted to a no calibration calibrator")]
     public void WhenTheBaselineInputIsSubmittedToTheNoCalibrationCalibrator() {
         _currentAssumption = Assumption.NoCalibration;
@@ -124,6 +143,19 @@ public sealed class AdviceStepDefinitions
         _currentToken = _currentCalibrator.Calibrate(_baselineInput, _currentCalibrator.CalibrationTokens().FirstOrDefault());
     }
 
+    [When("the baseline input is submitted to a no calibration calibrator with no PPN test")]
+    public void WhenTheBaselineInputIsSubmittedToTheNoCalibrationCalibratorWithNoPpnTest() {
+        _currentAssumption = Assumption.NoCalibration;
+        _currentCalibrator = new Calibrator(assumption: _currentAssumption);
+        _currentCalibrator.AssessFormatSupport = false;
+        try {
+            _currentToken = _currentCalibrator.Calibrate(_baselineInput, _currentCalibrator.CalibrationTokens().FirstOrDefault());
+        }
+        catch {
+            _currentCalibrator.AssessFormatSupport = true;
+            throw;
+        }
+    }
 
     [When("advice is generated from the calculated system capabilities")]
     public void WhenAdviceIsGeneratedFromTheCalculatedSystemCapabilities()

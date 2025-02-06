@@ -12,7 +12,6 @@ Scenario: System reads Invariant Characters reliably
 		And the advice should contain no other advice items
 
 Scenario: System reads Invariant Characters reliably with no PPN assessment
-
 	Given the baseline input is for The United States with no PPN assessment
 	When the baseline input is submitted to an agnostic calibrator with no PPN assessment
 	    And advice is generated from the calculated system capabilities
@@ -83,7 +82,7 @@ Scenario: Null RS character reported
 		And the advice should contain no other advice items
 
 Scenario: Null FS character reported
-
+    # Format tests are included
 	Given the baseline input is for The United States with null FS
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
@@ -93,7 +92,7 @@ Scenario: Null FS character reported
 		And the advice should contain no other advice items
 
 Scenario: Null US character reported
-
+    # Format tests are included
 	Given the baseline input is for The United States with null US
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
@@ -103,7 +102,7 @@ Scenario: Null US character reported
 		And the advice should contain no other advice items
 
 Scenario: Null EOT character reported
-
+    # Format tests are included
 	Given the baseline input is for The United States with null EOT
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
@@ -359,7 +358,7 @@ Scenario: RS character reported as AIM flag character
 		And the advice should contain no other advice items
 
 Scenario: FS character reported as AIM flag character
-
+    # Format tests are included
 	Given the baseline input is for The United States with FS as AIM flag character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
@@ -369,7 +368,7 @@ Scenario: FS character reported as AIM flag character
 		And the advice should contain no other advice items
 
 Scenario: US character reported as AIM flag character
-
+    # Format tests are included
 	Given the baseline input is for The United States with US as AIM flag character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
@@ -379,7 +378,7 @@ Scenario: US character reported as AIM flag character
 		And the advice should contain no other advice items
 
 Scenario: EOT character reported as AIM flag character
-
+    # Format tests are included
 	Given the baseline input is for The United States with EOT as AIM flag character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
@@ -406,7 +405,7 @@ Scenario: RS character reported as dead key character
 		And the advice should contain no other advice items
 
 Scenario: FS character reported as dead key character
-
+    # Format tests are included
 	Given the baseline input is for The United States with FS as dead key character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
@@ -416,7 +415,7 @@ Scenario: FS character reported as dead key character
 		And the advice should contain no other advice items
 
 Scenario: US character reported as dead key character
-
+    # Format tests are included
 	Given the baseline input is for The United States with US as dead key character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
@@ -426,7 +425,7 @@ Scenario: US character reported as dead key character
 		And the advice should contain no other advice items
 
 Scenario: EOT character reported as dead key character
-
+    # Format tests are included
 	Given the baseline input is for The United States with EOT as dead key character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
@@ -451,7 +450,7 @@ Scenario: RS character reported as ligature
 		And the advice should contain no other advice items
 
 Scenario: FS character reported as ligature
-
+    # Format tests are included
 	Given the baseline input is for The United States with FS as ligature
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
@@ -461,7 +460,7 @@ Scenario: FS character reported as ligature
 		And the advice should contain no other advice items
 
 Scenario: US character reported as ligature
-
+    # Format tests are included
 	Given the baseline input is for The United States with US as ligature
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
@@ -471,7 +470,7 @@ Scenario: US character reported as ligature
 		And the advice should contain no other advice items
 
 Scenario: EOT character reported as ligature
-
+    # Format tests are included
 	Given the baseline input is for The United States with EOT as ligature
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
@@ -480,17 +479,75 @@ Scenario: EOT character reported as ligature
 		And the advice should contain no other advice items
 
 Scenario: Null GS character reported - No PPN
-    # Format tests are included
 	Given the baseline input is for The United States with null GS - No PPN
 	When the baseline input is submitted to an agnostic calibrator with no PPN test
 	    And advice is generated from the calculated system capabilities
 	Then the advice should contain an advice item for HiddenCharactersNotRepresentedCorrectly
+	    And the advice should contain an advice item for NoPpnTest
 		And the advice should contain no other advice items
 
-Scenario: Dodgy Scanner - No PPN
-    # Format tests are included
-	Given the baseline input is for Dodgy Scanner - No PPN
+Scenario: No GS character reported - No PPN
+	Given the baseline input is for The United States with no GS - No PPN
+	When the baseline input is submitted to an agnostic calibrator with no PPN test
+	    And advice is generated from the calculated system capabilities
+	Then the advice should contain an advice item for CannotReadUniqueIdentifiersReliably
+	    And the advice should contain an advice item for NoPpnTest
+		And the advice should contain no other advice items
+
+Scenario: GS character reported as different control character - agnostic - No PPN
+	Given the baseline input is for The United States with GS as different character - NoPPN
 	When the baseline input is submitted to an agnostic calibrator with no PPN test
 	    And advice is generated from the calculated system capabilities
 	Then the advice should contain an advice item for HiddenCharactersNotRepresentedCorrectly
+	    And the advice should contain an advice item for NoPpnTest
+		And the advice should contain no other advice items
+
+Scenario: GS character reported as different control character - calibration - No PPN
+	Given the baseline input is for The United States with GS as different character - NoPPN
+	When the baseline input is submitted to a calibration calibrator with no PPN test
+	    And advice is generated from the calculated system capabilities
+	Then the advice should contain an advice item for ReadsUniqueIdentifiersReliablyNoPpnTest
+		And the advice should contain no other advice items
+
+Scenario: GS character reported as different control character - no calibration - No PPN
+	Given the baseline input is for The United States with GS as different character - NoPPN
+	When the baseline input is submitted to a no calibration calibrator with no PPN test
+	    And advice is generated from the calculated system capabilities
+	Then the advice should contain an advice item for HiddenCharactersNotRepresentedCorrectlyNoCalibration
+	    And the advice should contain an advice item for NoPpnTest
+		And the advice should contain no other advice items
+
+Scenario: GS character reported as ambiguous non-invariant character - No PPN
+	Given the baseline input is for The United States with GS as ambiguous non-invariant character - NoPPN
+	When the baseline input is submitted to an agnostic calibrator with no PPN test
+	    And advice is generated from the calculated system capabilities
+	Then the advice should contain an advice item for HiddenCharactersNotRepresentedCorrectly
+	    And the advice should contain an advice item for NoPpnTest
+	    And the advice should contain an advice item for CannotReadAdditionalCharactersReliably
+		And the advice should contain no other advice items
+
+Scenario: GS character reported as AIM flag character - No PPN
+	Given the baseline input is for The United States with GS as AIM flag character - NoPPN
+	When the baseline input is submitted to an agnostic calibrator with no PPN test
+	    And advice is generated from the calculated system capabilities
+	Then the advice should contain an advice item for HiddenCharactersNotRepresentedCorrectly
+	    And the advice should contain an advice item for NoPpnTest
+	    And the advice should contain an advice item for CannotReadAim
+	    And the advice should contain an advice item for CannotReadAdditionalCharactersReliably
+		And the advice should contain no other advice items
+
+Scenario: GS character reported as dead key character - No PPN
+	Given the baseline input is for The United States with GS as dead key character - NoPPN
+	When the baseline input is submitted to an agnostic calibrator with no PPN test
+	    And advice is generated from the calculated system capabilities
+	Then the advice should contain an advice item for HiddenCharactersNotRepresentedCorrectly
+	    And the advice should contain an advice item for NoPpnTest
+		And the advice should contain no other advice items
+
+Scenario: GS character reported as ligature - No PPN
+	Given the baseline input is for The United States with GS as ligature - NoPPN
+	When the baseline input is submitted to an agnostic calibrator with no PPN test
+	    And advice is generated from the calculated system capabilities
+	Then the advice should contain an advice item for HiddenCharactersNotRepresentedCorrectly
+	    And the advice should contain an advice item for NoPpnTest
 		And the advice should contain no other advice items

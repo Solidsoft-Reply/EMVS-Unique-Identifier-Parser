@@ -16,10 +16,7 @@
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>emvs;medicine;verification;parser;gs1;ppn;</PackageTags>
 	<PackageReleaseNotes>
-		1) Updated to use the latest version of the Calibrator (2.2.14).
-		2) Updated to use the latest version of the GS1 Validating Parser (1.0.6).
-		3) Fixed issue with reporting Format 05/Format 06 reliability.
-		4) Improvements to advice reporting.
+		1) Further improvements to advice reporting.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -29,7 +26,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>1.1.15</Version>
+	<Version>1.1.16</Version>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>

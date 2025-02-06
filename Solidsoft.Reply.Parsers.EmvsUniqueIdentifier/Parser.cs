@@ -18,9 +18,9 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Diagnostics;
-
 namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier;
+
+using System.Diagnostics;
 
 using BarcodeScanner.Calibration;
 

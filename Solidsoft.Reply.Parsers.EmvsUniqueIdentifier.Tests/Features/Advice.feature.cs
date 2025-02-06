@@ -148,20 +148,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 16
+#line 15
  await testRunner.GivenAsync("the baseline input is for The United States with no PPN assessment", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 17
+#line 16
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator with no PPN assessment", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 18
+#line 17
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 19
+#line 18
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyNoPpnT" +
                         "est", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 20
+#line 19
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -176,7 +176,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("No GS character reported", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 22
+#line 21
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -186,19 +186,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 24
+#line 23
  await testRunner.GivenAsync("the baseline input is for The United States with no GS", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 25
+#line 24
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 26
+#line 25
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 27
+#line 26
  await testRunner.ThenAsync("the advice should contain an advice item for CannotReadUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 28
+#line 27
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -213,7 +213,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("No RS character reported", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 30
+#line 29
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -223,23 +223,23 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 32
+#line 31
  await testRunner.GivenAsync("the baseline input is for The United States with no RS", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 33
+#line 32
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 34
+#line 33
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 35
+#line 34
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyExcept" +
                         "Ppn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 36
+#line 35
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadPpnBarcodes", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 37
+#line 36
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -254,7 +254,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("No FS character reported", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 39
+#line 38
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -264,25 +264,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 41
+#line 40
  await testRunner.GivenAsync("the baseline input is for The United States with no FS", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 42
+#line 41
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 43
+#line 42
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 44
+#line 43
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 45
+#line 44
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadEdiCharacters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 46
+#line 45
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii28Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 47
+#line 46
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -297,7 +297,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("No US character reported", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 49
+#line 48
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -307,25 +307,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 51
+#line 50
  await testRunner.GivenAsync("the baseline input is for The United States with no US", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 52
+#line 51
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 53
+#line 52
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 54
+#line 53
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 55
+#line 54
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadEdiCharacters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 56
+#line 55
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii31Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 57
+#line 56
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -340,7 +340,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("No EOT character reported", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 59
+#line 58
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -350,26 +350,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 61
+#line 60
  await testRunner.GivenAsync("the baseline input is for The United States with no EOT", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 62
+#line 61
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 63
+#line 62
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 64
+#line 63
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyExcept" +
                         "Ppn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 65
+#line 64
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii04Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 66
+#line 65
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadPpnBarcodes", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 67
+#line 66
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -384,7 +384,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Null GS character reported", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 69
+#line 68
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -394,20 +394,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 71
+#line 70
  await testRunner.GivenAsync("the baseline input is for The United States with null GS", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 72
+#line 71
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 73
+#line 72
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 74
+#line 73
  await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
                         "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 75
+#line 74
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -422,7 +422,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Null RS character reported", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 77
+#line 76
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -432,20 +432,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 79
+#line 78
  await testRunner.GivenAsync("the baseline input is for The United States with null RS", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 80
+#line 79
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 81
+#line 80
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 82
+#line 81
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNot" +
                         "ReadPpn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 83
+#line 82
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -460,7 +460,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Null FS character reported", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 85
+#line 84
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -470,25 +470,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 87
+#line 86
  await testRunner.GivenAsync("the baseline input is for The United States with null FS", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 88
+#line 87
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 89
+#line 88
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 90
+#line 89
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 91
+#line 90
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadEdiCharactersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 92
+#line 91
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii28Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 93
+#line 92
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -503,7 +503,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Null US character reported", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 95
+#line 94
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -513,25 +513,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 97
+#line 96
  await testRunner.GivenAsync("the baseline input is for The United States with null US", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 98
+#line 97
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 99
+#line 98
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 100
+#line 99
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 101
+#line 100
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadEdiCharactersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 102
+#line 101
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii31Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 103
+#line 102
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -546,7 +546,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Null EOT character reported", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 105
+#line 104
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -556,23 +556,23 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 107
+#line 106
  await testRunner.GivenAsync("the baseline input is for The United States with null EOT", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 108
+#line 107
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 109
+#line 108
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 110
+#line 109
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNot" +
                         "ReadPpn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 111
+#line 110
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii04Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 112
+#line 111
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -587,7 +587,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as different control character - agnostic", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 114
+#line 113
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -597,20 +597,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 116
+#line 115
  await testRunner.GivenAsync("the baseline input is for The United States with GS as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 117
+#line 116
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 118
+#line 117
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 119
+#line 118
  await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
                         "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 120
+#line 119
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -625,7 +625,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("RS character reported as different control character - agnostic", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 122
+#line 121
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -635,20 +635,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 124
+#line 123
  await testRunner.GivenAsync("the baseline input is for The United States with RS as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 125
+#line 124
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 126
+#line 125
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 127
+#line 126
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNot" +
                         "ReadPpn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 128
+#line 127
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -663,7 +663,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("FS character reported as different control character - agnostic", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 130
+#line 129
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -673,25 +673,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 132
+#line 131
  await testRunner.GivenAsync("the baseline input is for The United States with FS as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 133
+#line 132
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 134
+#line 133
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 135
+#line 134
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 136
+#line 135
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadEdiCharactersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 137
+#line 136
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii28Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 138
+#line 137
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -706,7 +706,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("US character reported as different control character - agnostic", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 140
+#line 139
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -716,25 +716,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 142
+#line 141
  await testRunner.GivenAsync("the baseline input is for The United States with US as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 143
+#line 142
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 144
+#line 143
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 145
+#line 144
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 146
+#line 145
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadEdiCharactersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 147
+#line 146
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii31Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 148
+#line 147
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -749,7 +749,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("EOT character reported as different control character - agnostic", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 150
+#line 149
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -759,23 +759,23 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 152
+#line 151
  await testRunner.GivenAsync("the baseline input is for The United States with EOT as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 153
+#line 152
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 154
+#line 153
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 155
+#line 154
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNot" +
                         "ReadPpn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 156
+#line 155
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii04Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 157
+#line 156
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -790,7 +790,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as different control character - calibration", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 159
+#line 158
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -800,19 +800,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 161
+#line 160
  await testRunner.GivenAsync("the baseline input is for The United States with GS as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 162
+#line 161
  await testRunner.WhenAsync("the baseline input is submitted to a calibration calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 163
+#line 162
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 164
+#line 163
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 165
+#line 164
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -827,7 +827,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("RS character reported as different control character - calibration", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 167
+#line 166
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -837,19 +837,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 169
+#line 168
  await testRunner.GivenAsync("the baseline input is for The United States with RS as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 170
+#line 169
  await testRunner.WhenAsync("the baseline input is submitted to a calibration calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 171
+#line 170
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 172
+#line 171
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 173
+#line 172
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -864,7 +864,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("FS character reported as different control character - calibration", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 175
+#line 174
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -874,19 +874,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 177
+#line 176
  await testRunner.GivenAsync("the baseline input is for The United States with FS as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 178
+#line 177
  await testRunner.WhenAsync("the baseline input is submitted to a calibration calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 179
+#line 178
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 180
+#line 179
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 181
+#line 180
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -901,7 +901,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("US character reported as different control character - calibration", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 183
+#line 182
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -911,19 +911,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 185
+#line 184
  await testRunner.GivenAsync("the baseline input is for The United States with US as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 186
+#line 185
  await testRunner.WhenAsync("the baseline input is submitted to a calibration calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 187
+#line 186
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 188
+#line 187
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 189
+#line 188
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -938,7 +938,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("EOT character reported as different control character - calibration", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 191
+#line 190
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -948,19 +948,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 193
+#line 192
  await testRunner.GivenAsync("the baseline input is for The United States with EOT as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 194
+#line 193
  await testRunner.WhenAsync("the baseline input is submitted to a calibration calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 195
+#line 194
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 196
+#line 195
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 197
+#line 196
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -975,7 +975,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as different control character - no calibration", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 199
+#line 198
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -985,20 +985,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 201
+#line 200
  await testRunner.GivenAsync("the baseline input is for The United States with GS as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 202
+#line 201
  await testRunner.WhenAsync("the baseline input is submitted to a no calibration calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 203
+#line 202
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 204
+#line 203
  await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
                         "tlyNoCalibration", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 205
+#line 204
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1013,7 +1013,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("RS character reported as different control character - no calibration", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 207
+#line 206
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1023,23 +1023,23 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 209
+#line 208
  await testRunner.GivenAsync("the baseline input is for The United States with RS as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 210
+#line 209
  await testRunner.WhenAsync("the baseline input is submitted to a no calibration calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 211
+#line 210
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 212
+#line 211
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyExcept" +
                         "Ppn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 213
+#line 212
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadPpnNoCalibration", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 214
+#line 213
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1054,7 +1054,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("FS character reported as different control character - no calibration", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 216
+#line 215
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1064,25 +1064,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 218
+#line 217
  await testRunner.GivenAsync("the baseline input is for The United States with FS as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 219
+#line 218
  await testRunner.WhenAsync("the baseline input is submitted to a no calibration calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 220
+#line 219
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 221
+#line 220
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 222
+#line 221
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadEdiCharacters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 223
+#line 222
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii28Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 224
+#line 223
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1097,7 +1097,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("US character reported as different control character - no calibration", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 226
+#line 225
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1107,25 +1107,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 228
+#line 227
  await testRunner.GivenAsync("the baseline input is for The United States with US as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 229
+#line 228
  await testRunner.WhenAsync("the baseline input is submitted to a no calibration calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 230
+#line 229
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 231
+#line 230
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 232
+#line 231
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadEdiCharacters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 233
+#line 232
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii31Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 234
+#line 233
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1140,7 +1140,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("EOT character reported as different control character - no calibration", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 236
+#line 235
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1150,26 +1150,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 238
+#line 237
  await testRunner.GivenAsync("the baseline input is for The United States with EOT as different character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 239
+#line 238
  await testRunner.WhenAsync("the baseline input is submitted to a no calibration calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 240
+#line 239
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 241
+#line 240
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyExcept" +
                         "Ppn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 242
+#line 241
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii04Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 243
+#line 242
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadPpnBarcodes", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 244
+#line 243
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1184,7 +1184,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as ambiguous invariant character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 246
+#line 245
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1194,20 +1194,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 248
+#line 247
  await testRunner.GivenAsync("the baseline input is for The United States with GS as ambiguous invariant charac" +
                         "ter", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 249
+#line 248
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 250
+#line 249
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 251
+#line 250
  await testRunner.ThenAsync("the advice should contain an advice item for CannotReadUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 252
+#line 251
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1222,7 +1222,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("RS character reported as ambiguous invariant character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 254
+#line 253
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1232,23 +1232,23 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 256
+#line 255
  await testRunner.GivenAsync("the baseline input is for The United States with RS as ambiguous invariant charac" +
                         "ter", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 257
+#line 256
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 258
+#line 257
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 259
+#line 258
  await testRunner.ThenAsync("the advice should contain an advice item for CannotReadUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 260
+#line 259
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadPpnBarcodes", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 261
+#line 260
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1263,7 +1263,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("FS character reported as ambiguous invariant character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 263
+#line 262
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1273,26 +1273,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 265
+#line 264
  await testRunner.GivenAsync("the baseline input is for The United States with FS as ambiguous invariant charac" +
                         "ter", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 266
+#line 265
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 267
+#line 266
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 268
+#line 267
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 269
+#line 268
   await testRunner.AndAsync("the advice should contain an advice item for CannotReadEdiCharacters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 270
+#line 269
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii28Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 271
+#line 270
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1307,7 +1307,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("US character reported as ambiguous invariant character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 273
+#line 272
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1317,26 +1317,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 275
+#line 274
  await testRunner.GivenAsync("the baseline input is for The United States with US as ambiguous invariant charac" +
                         "ter", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 276
+#line 275
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 277
+#line 276
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 278
+#line 277
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 279
+#line 278
   await testRunner.AndAsync("the advice should contain an advice item for CannotReadEdiCharacters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 280
+#line 279
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii31Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 281
+#line 280
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1351,7 +1351,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("EOT character reported as ambiguous invariant character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 283
+#line 282
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1361,26 +1361,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 285
+#line 284
  await testRunner.GivenAsync("the baseline input is for The United States with EOT as ambiguous invariant chara" +
                         "cter", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 286
+#line 285
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 287
+#line 286
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 288
+#line 287
  await testRunner.ThenAsync("the advice should contain an advice item for CannotReadUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 289
+#line 288
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii04Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 290
+#line 289
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadPpnBarcodes", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 291
+#line 290
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1395,7 +1395,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as ambiguous non-invariant character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 293
+#line 292
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1405,25 +1405,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 295
+#line 294
  await testRunner.GivenAsync("the baseline input is for The United States with GS as ambiguous non-invariant ch" +
                         "aracter", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 296
+#line 295
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 297
+#line 296
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 298
+#line 297
  await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
                         "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 299
+#line 298
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAdditionalCharactersReliab" +
                         "ly", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 300
+#line 299
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1438,7 +1438,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("RS character reported as ambiguous non-invariant character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 302
+#line 301
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1448,25 +1448,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 304
+#line 303
  await testRunner.GivenAsync("the baseline input is for The United States with RS as ambiguous non-invariant ch" +
                         "aracter", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 305
+#line 304
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 306
+#line 305
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 307
+#line 306
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNot" +
                         "ReadPpn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 308
+#line 307
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAdditionalCharactersReliab" +
                         "ly", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 309
+#line 308
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1481,7 +1481,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("FS character reported as ambiguous non-invariant character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 311
+#line 310
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1491,26 +1491,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 313
+#line 312
  await testRunner.GivenAsync("the baseline input is for The United States with FS as ambiguous non-invariant ch" +
                         "aracter", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 314
+#line 313
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 315
+#line 314
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 316
+#line 315
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 317
+#line 316
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadEdiCharacters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 318
+#line 317
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii28Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 319
+#line 318
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1525,7 +1525,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("US character reported as ambiguous non-invariant character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 321
+#line 320
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1535,26 +1535,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 323
+#line 322
  await testRunner.GivenAsync("the baseline input is for The United States with US as ambiguous non-invariant ch" +
                         "aracter", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 324
+#line 323
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 325
+#line 324
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 326
+#line 325
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 327
+#line 326
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadEdiCharacters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 328
+#line 327
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii31Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 329
+#line 328
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1569,7 +1569,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("EOT character reported as ambiguous non-invariant character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 331
+#line 330
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1579,28 +1579,28 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 333
+#line 332
  await testRunner.GivenAsync("the baseline input is for The United States with EOT as ambiguous non-invariant c" +
                         "haracter", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 334
+#line 333
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 335
+#line 334
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 336
+#line 335
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNot" +
                         "ReadPpn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 337
+#line 336
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAdditionalCharactersReliab" +
                         "ly", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 338
+#line 337
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii04Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 339
+#line 338
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1615,7 +1615,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as AIM flag character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 341
+#line 340
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1625,27 +1625,27 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 343
+#line 342
  await testRunner.GivenAsync("the baseline input is for The United States with GS as AIM flag character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 344
+#line 343
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 345
+#line 344
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 346
+#line 345
  await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
                         "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 347
+#line 346
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAim", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 348
+#line 347
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAdditionalCharactersReliab" +
                         "ly", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 349
+#line 348
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1660,7 +1660,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("RS character reported as AIM flag character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 351
+#line 350
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1670,27 +1670,27 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 353
+#line 352
  await testRunner.GivenAsync("the baseline input is for The United States with RS as AIM flag character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 354
+#line 353
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 355
+#line 354
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 356
+#line 355
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNot" +
                         "ReadPpn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 357
+#line 356
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAim", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 358
+#line 357
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAdditionalCharactersReliab" +
                         "ly", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 359
+#line 358
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1705,7 +1705,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("FS character reported as AIM flag character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 361
+#line 360
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1715,25 +1715,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 363
+#line 362
  await testRunner.GivenAsync("the baseline input is for The United States with FS as AIM flag character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 364
+#line 363
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 365
+#line 364
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 366
+#line 365
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 367
+#line 366
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadEdiCharacters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 368
+#line 367
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii28Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 369
+#line 368
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1748,7 +1748,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("US character reported as AIM flag character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 371
+#line 370
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1758,25 +1758,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 373
+#line 372
  await testRunner.GivenAsync("the baseline input is for The United States with US as AIM flag character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 374
+#line 373
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 375
+#line 374
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 376
+#line 375
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 377
+#line 376
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadEdiCharacters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 378
+#line 377
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAscii31Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 379
+#line 378
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1791,7 +1791,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("EOT character reported as AIM flag character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 381
+#line 380
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1801,30 +1801,30 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 383
+#line 382
  await testRunner.GivenAsync("the baseline input is for The United States with EOT as AIM flag character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 384
+#line 383
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 385
+#line 384
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 386
+#line 385
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNot" +
                         "ReadPpn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 387
+#line 386
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAim", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 388
+#line 387
      await testRunner.AndAsync("the advice should contain an advice item for CannotReadAdditionalCharactersReliab" +
                         "ly", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 389
+#line 388
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii04Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 390
+#line 389
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1839,7 +1839,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as dead key character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 392
+#line 391
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1849,20 +1849,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 394
+#line 393
  await testRunner.GivenAsync("the baseline input is for The United States with GS as dead key character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 395
+#line 394
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 396
+#line 395
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 397
+#line 396
  await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
                         "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 398
+#line 397
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1877,7 +1877,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("RS character reported as dead key character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 400
+#line 399
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1887,20 +1887,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 402
+#line 401
  await testRunner.GivenAsync("the baseline input is for The United States with RS as dead key character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 403
+#line 402
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 404
+#line 403
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 405
+#line 404
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNot" +
                         "ReadPpn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 406
+#line 405
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1915,7 +1915,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("FS character reported as dead key character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 408
+#line 407
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1925,25 +1925,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 410
+#line 409
  await testRunner.GivenAsync("the baseline input is for The United States with FS as dead key character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 411
+#line 410
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 412
+#line 411
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 413
+#line 412
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 414
+#line 413
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadEdiCharactersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 415
+#line 414
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii28Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 416
+#line 415
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -1958,7 +1958,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("US character reported as dead key character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 418
+#line 417
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1968,25 +1968,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 420
+#line 419
  await testRunner.GivenAsync("the baseline input is for The United States with US as dead key character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 421
+#line 420
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 422
+#line 421
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 423
+#line 422
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 424
+#line 423
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadEdiCharactersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 425
+#line 424
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii31Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 426
+#line 425
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -2001,7 +2001,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("EOT character reported as dead key character", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 428
+#line 427
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2011,23 +2011,23 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 430
+#line 429
  await testRunner.GivenAsync("the baseline input is for The United States with EOT as dead key character", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 431
+#line 430
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 432
+#line 431
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 433
+#line 432
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNot" +
                         "ReadPpn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 434
+#line 433
      await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii04Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 435
+#line 434
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -2042,7 +2042,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as ligature", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 437
+#line 436
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2052,20 +2052,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 439
+#line 438
  await testRunner.GivenAsync("the baseline input is for The United States with GS as ligature", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 440
+#line 439
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 441
+#line 440
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 442
+#line 441
  await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
                         "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 443
+#line 442
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -2080,7 +2080,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("RS character reported as ligature", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 445
+#line 444
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2090,20 +2090,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 447
+#line 446
  await testRunner.GivenAsync("the baseline input is for The United States with RS as ligature", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 448
+#line 447
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 449
+#line 448
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 450
+#line 449
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNot" +
                         "ReadPpn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 451
+#line 450
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -2118,7 +2118,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("FS character reported as ligature", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 453
+#line 452
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2128,25 +2128,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 455
+#line 454
  await testRunner.GivenAsync("the baseline input is for The United States with FS as ligature", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 456
+#line 455
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 457
+#line 456
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 458
+#line 457
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 459
+#line 458
   await testRunner.AndAsync("the advice should contain an advice item for MayNotReadEdiCharactersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 460
+#line 459
   await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii28Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 461
+#line 460
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -2161,7 +2161,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("US character reported as ligature", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 463
+#line 462
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2171,25 +2171,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 465
+#line 464
  await testRunner.GivenAsync("the baseline input is for The United States with US as ligature", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 466
+#line 465
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 467
+#line 466
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 468
+#line 467
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 469
+#line 468
   await testRunner.AndAsync("the advice should contain an advice item for MayNotReadEdiCharactersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 470
+#line 469
   await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii31Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 471
+#line 470
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -2204,7 +2204,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("EOT character reported as ligature", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 473
+#line 472
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2214,23 +2214,23 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 475
+#line 474
  await testRunner.GivenAsync("the baseline input is for The United States with EOT as ligature", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 476
+#line 475
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 477
+#line 476
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 478
+#line 477
  await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyMayNot" +
                         "ReadPpn", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 479
+#line 478
   await testRunner.AndAsync("the advice should contain an advice item for MayNotReadAscii04Characters", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 480
+#line 479
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
@@ -2245,7 +2245,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Null GS character reported - No PPN", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 482
+#line 481
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2255,35 +2255,38 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 484
+#line 482
  await testRunner.GivenAsync("the baseline input is for The United States with null GS - No PPN", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 485
+#line 483
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator with no PPN test", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 486
+#line 484
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 487
+#line 485
  await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
                         "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 488
+#line 486
+     await testRunner.AndAsync("the advice should contain an advice item for NoPpnTest", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 487
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Dodgy Scanner - No PPN")]
+        [Xunit.SkippableFactAttribute(DisplayName="No GS character reported - No PPN")]
         [Xunit.TraitAttribute("FeatureTitle", "Advice")]
-        [Xunit.TraitAttribute("Description", "Dodgy Scanner - No PPN")]
-        public async System.Threading.Tasks.Task DodgyScanner_NoPPN()
+        [Xunit.TraitAttribute("Description", "No GS character reported - No PPN")]
+        public async System.Threading.Tasks.Task NoGSCharacterReported_NoPPN()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Dodgy Scanner - No PPN", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 490
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("No GS character reported - No PPN", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 489
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2293,20 +2296,323 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 492
- await testRunner.GivenAsync("the baseline input is for Dodgy Scanner - No PPN", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line 490
+ await testRunner.GivenAsync("the baseline input is for The United States with no GS - No PPN", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 493
+#line 491
  await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator with no PPN test", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 494
+#line 492
      await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
+#line 493
+ await testRunner.ThenAsync("the advice should contain an advice item for CannotReadUniqueIdentifiersReliably", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 494
+     await testRunner.AndAsync("the advice should contain an advice item for NoPpnTest", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
 #line 495
+  await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="GS character reported as different control character - agnostic - No PPN")]
+        [Xunit.TraitAttribute("FeatureTitle", "Advice")]
+        [Xunit.TraitAttribute("Description", "GS character reported as different control character - agnostic - No PPN")]
+        public async System.Threading.Tasks.Task GSCharacterReportedAsDifferentControlCharacter_Agnostic_NoPPN()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as different control character - agnostic - No PPN", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 497
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 498
+ await testRunner.GivenAsync("the baseline input is for The United States with GS as different character - NoPP" +
+                        "N", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 499
+ await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator with no PPN test", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 500
+     await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 501
  await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
                         "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
-#line 496
+#line 502
+     await testRunner.AndAsync("the advice should contain an advice item for NoPpnTest", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 503
+  await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="GS character reported as different control character - calibration - No PPN")]
+        [Xunit.TraitAttribute("FeatureTitle", "Advice")]
+        [Xunit.TraitAttribute("Description", "GS character reported as different control character - calibration - No PPN")]
+        public async System.Threading.Tasks.Task GSCharacterReportedAsDifferentControlCharacter_Calibration_NoPPN()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as different control character - calibration - No PPN", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 505
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 506
+ await testRunner.GivenAsync("the baseline input is for The United States with GS as different character - NoPP" +
+                        "N", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 507
+ await testRunner.WhenAsync("the baseline input is submitted to a calibration calibrator with no PPN test", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 508
+     await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 509
+ await testRunner.ThenAsync("the advice should contain an advice item for ReadsUniqueIdentifiersReliablyNoPpnT" +
+                        "est", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 510
+  await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="GS character reported as different control character - no calibration - No PPN")]
+        [Xunit.TraitAttribute("FeatureTitle", "Advice")]
+        [Xunit.TraitAttribute("Description", "GS character reported as different control character - no calibration - No PPN")]
+        public async System.Threading.Tasks.Task GSCharacterReportedAsDifferentControlCharacter_NoCalibration_NoPPN()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as different control character - no calibration - No PPN", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 512
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 513
+ await testRunner.GivenAsync("the baseline input is for The United States with GS as different character - NoPP" +
+                        "N", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 514
+ await testRunner.WhenAsync("the baseline input is submitted to a no calibration calibrator with no PPN test", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 515
+     await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 516
+ await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
+                        "tlyNoCalibration", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 517
+     await testRunner.AndAsync("the advice should contain an advice item for NoPpnTest", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 518
+  await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="GS character reported as ambiguous non-invariant character - No PPN")]
+        [Xunit.TraitAttribute("FeatureTitle", "Advice")]
+        [Xunit.TraitAttribute("Description", "GS character reported as ambiguous non-invariant character - No PPN")]
+        public async System.Threading.Tasks.Task GSCharacterReportedAsAmbiguousNon_InvariantCharacter_NoPPN()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as ambiguous non-invariant character - No PPN", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 520
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 521
+ await testRunner.GivenAsync("the baseline input is for The United States with GS as ambiguous non-invariant ch" +
+                        "aracter - NoPPN", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 522
+ await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator with no PPN test", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 523
+     await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 524
+ await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
+                        "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 525
+     await testRunner.AndAsync("the advice should contain an advice item for NoPpnTest", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 526
+     await testRunner.AndAsync("the advice should contain an advice item for CannotReadAdditionalCharactersReliab" +
+                        "ly", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 527
+  await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="GS character reported as AIM flag character - No PPN")]
+        [Xunit.TraitAttribute("FeatureTitle", "Advice")]
+        [Xunit.TraitAttribute("Description", "GS character reported as AIM flag character - No PPN")]
+        public async System.Threading.Tasks.Task GSCharacterReportedAsAIMFlagCharacter_NoPPN()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as AIM flag character - No PPN", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 529
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 530
+ await testRunner.GivenAsync("the baseline input is for The United States with GS as AIM flag character - NoPPN" +
+                        "", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 531
+ await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator with no PPN test", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 532
+     await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 533
+ await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
+                        "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 534
+     await testRunner.AndAsync("the advice should contain an advice item for NoPpnTest", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 535
+     await testRunner.AndAsync("the advice should contain an advice item for CannotReadAim", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 536
+     await testRunner.AndAsync("the advice should contain an advice item for CannotReadAdditionalCharactersReliab" +
+                        "ly", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 537
+  await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="GS character reported as dead key character - No PPN")]
+        [Xunit.TraitAttribute("FeatureTitle", "Advice")]
+        [Xunit.TraitAttribute("Description", "GS character reported as dead key character - No PPN")]
+        public async System.Threading.Tasks.Task GSCharacterReportedAsDeadKeyCharacter_NoPPN()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as dead key character - No PPN", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 539
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 540
+ await testRunner.GivenAsync("the baseline input is for The United States with GS as dead key character - NoPPN" +
+                        "", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 541
+ await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator with no PPN test", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 542
+     await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 543
+ await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
+                        "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 544
+     await testRunner.AndAsync("the advice should contain an advice item for NoPpnTest", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 545
+  await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="GS character reported as ligature - No PPN")]
+        [Xunit.TraitAttribute("FeatureTitle", "Advice")]
+        [Xunit.TraitAttribute("Description", "GS character reported as ligature - No PPN")]
+        public async System.Threading.Tasks.Task GSCharacterReportedAsLigature_NoPPN()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("GS character reported as ligature - No PPN", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 547
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 548
+ await testRunner.GivenAsync("the baseline input is for The United States with GS as ligature - NoPPN", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 549
+ await testRunner.WhenAsync("the baseline input is submitted to an agnostic calibrator with no PPN test", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 550
+     await testRunner.AndAsync("advice is generated from the calculated system capabilities", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 551
+ await testRunner.ThenAsync("the advice should contain an advice item for HiddenCharactersNotRepresentedCorrec" +
+                        "tly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 552
+     await testRunner.AndAsync("the advice should contain an advice item for NoPpnTest", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 553
   await testRunner.AndAsync("the advice should contain no other advice items", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }

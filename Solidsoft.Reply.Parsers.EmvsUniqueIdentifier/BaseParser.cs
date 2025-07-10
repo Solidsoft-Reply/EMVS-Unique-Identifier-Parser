@@ -528,6 +528,34 @@ internal static partial class BaseParser {
         return packIdentifier;
     }
 
+#if !NET7_0_OR_GREATER
+    /// <summary>
+    ///   Returns a regular expression to test that an IFA product code is composed of digits only.
+    /// </summary>
+    /// <returns>A regualar expression.</returns>
+    private static readonly Regex WellFormedIfaProductCodeRegex = new(@"^\d{12}$", RegexOptions.None);
+
+    /// <summary>
+    ///   Returns a regular expression to test that a GTIN/NTIN product code is composed of digits only.
+    /// </summary>
+    /// <returns>A regualar expression.</returns>
+    private static readonly Regex WellFormedGtinOrNtinRegex = new(@"^\d{14}$", RegexOptions.None);
+
+    /// <summary>
+    ///   Returns a regular expression for six-digit date representation - YYMMDD.
+    ///   If it is not necessary to specify the day, the day field can be filled with two zeros.
+    /// </summary>
+    /// <returns>A regualar expression.</returns>
+    private static readonly Regex DatePatternYyMmDdZerosRegex = new(@"(((\d{2})(0[13578]|1[02])(0[0-9]|[12]\d|3[01]))|((\d{2})(0[13456789]|1[012])(0[0-9]|[12]\d|30))|((\d{2})02(0[0-9]|1\d|2[0-8]))|(((0[048]|[2468][048]|[13579][26]))0229))", RegexOptions.None);
+
+    /// <summary>
+    ///   Returns a regular expression for Character Set 82 character strings of variable length.
+    /// </summary>
+    /// <returns>A regualar expression.</returns>
+    private static readonly Regex CharacterSet82Regex = new(@"^[-!""%&'()*+,./0-9:;<=>?A-Z_a-z]{1,20}$", RegexOptions.None);
+#endif
+
+#if NET7_0_OR_GREATER
     /// <summary>
     ///   Returns a regular expression to test that an IFA product code is composed of digits only.
     /// </summary>
@@ -556,6 +584,7 @@ internal static partial class BaseParser {
     /// <returns>A regualar expression.</returns>
     [GeneratedRegex(@"^[-!""%&'()*+,./0-9:;<=>?A-Z_a-z]{1,20}$", RegexOptions.None, "en-US")]
     private static partial Regex CharacterSet82Regex();
+#endif
 
     /// <summary>
     ///   Processes a record to assign pack identifier fields.
@@ -1300,7 +1329,11 @@ internal static partial class BaseParser {
         }
 
         // Rule 3: The batch identifier must be composed of invariant characters only.
+#if NET7_0_OR_GREATER
         if (CharacterSet82Regex().Match(batchIdentifier).Success) {
+#else
+        if (CharacterSet82Regex.Match(batchIdentifier).Success) {
+#endif
             return isValid;
         }
 
@@ -1346,7 +1379,11 @@ internal static partial class BaseParser {
         }
 
         // Rule 2: The expiry date must be correctly formatted as YYMMDD allowing DD to be 00.
+#if NET7_0_OR_GREATER
         if (DatePatternYyMmDdZerosRegex().Match(expiryDate).Success) {
+#else
+        if (DatePatternYyMmDdZerosRegex.Match(expiryDate).Success) {
+#endif
             return isValid;
         }
 
@@ -1426,7 +1463,11 @@ internal static partial class BaseParser {
         }
 
         // Rule 3: The GTIN/NTIN product code must be composed of digits only.
+#if NET7_0_OR_GREATER
         if (!WellFormedGtinOrNtinRegex().Match(gtin ?? string.Empty).Success) {
+#else
+        if (!WellFormedGtinOrNtinRegex.Match(gtin ?? string.Empty).Success) {
+#endif
             packIdentifier.AddException(
                 new PackIdentifierFieldException(
                     13,
@@ -1534,7 +1575,11 @@ internal static partial class BaseParser {
         }
 
         // Rule 3: The IFA product code must be composed of digits only.
+#if NET7_0_OR_GREATER
         if (!WellFormedIfaProductCodeRegex().Match(ppn ?? string.Empty).Success) {
+#else
+        if (!WellFormedIfaProductCodeRegex.Match(ppn ?? string.Empty).Success) {
+#endif
             packIdentifier.AddException(
                 new PackIdentifierFieldException(
                     23,
@@ -1672,7 +1717,11 @@ internal static partial class BaseParser {
         }
 
         // Rule 3: The serial number must be composed of invariant characters only.
+#if NET7_0_OR_GREATER
         if (CharacterSet82Regex().Match(serialNumber).Success) {
+#else
+        if (CharacterSet82Regex.Match(serialNumber).Success) {
+#endif
             return isValid;
         }
 

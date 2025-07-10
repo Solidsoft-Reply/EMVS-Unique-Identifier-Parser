@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0;net7.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net7.0;net6.0</TargetFrameworks>
     <LangVersion>11.0</LangVersion>
 	<ImplicitUsings>enable</ImplicitUsings>
 	<Nullable>enable</Nullable>
@@ -16,7 +16,11 @@
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>emvs;medicine;verification;parser;gs1;ppn;</PackageTags>
 	<PackageReleaseNotes>
-		1) Updated to use latest version of Calibration library (2.2.16).
+		The following changes were made in this release.
+
+		1) Updated to use latest version of Calibration library (2.2.17).
+
+		2) Extended to support .NET 6.0 as well as later versions of .NET.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -26,7 +30,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>1.1.20</Version>
+	<Version>1.1.21</Version>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>

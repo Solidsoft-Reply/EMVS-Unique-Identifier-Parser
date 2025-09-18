@@ -359,7 +359,7 @@ public class PackIdentifier : IPackIdentifier {
     /// <param name="market">The market that assigned the NHRN.</param>
     /// <param name="nationalNumber">The NHRN national number to be added.</param>
     public void AddNationalNumber(NhrnMarket market, string nationalNumber) {
-        ((Dictionary<NhrnMarket, string>)NationalNumbers).Add(market, nationalNumber);
+        _ = ((Dictionary<NhrnMarket, string>)NationalNumbers).TryAdd(market, nationalNumber);
     }
 
     /// <summary>

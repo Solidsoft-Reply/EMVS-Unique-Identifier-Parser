@@ -18,9 +18,7 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Updated to use latest version of Calibration library (2.2.17).
-
-		2) Extended to support .NET 6.0 as well as later versions of .NET.
+		1) Fixed a dictionary issue when processing national numbers in a unique identifier.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -30,7 +28,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>1.1.21</Version>
+	<Version>1.1.22</Version>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>

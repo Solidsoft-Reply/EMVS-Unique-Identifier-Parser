@@ -7,7 +7,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-#pragma warning disable S3358
 namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Components;
 
 using System;

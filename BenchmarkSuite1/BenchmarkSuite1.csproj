@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>net10.0</TargetFramework>
+	<LangVersion>preview</LangVersion>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);DISABLE_PROFILER_AGENT_CONFIG</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Properties\launchSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.15.2" />
+    <PackageReference Include="Microsoft.VisualStudio.DiagnosticsHub.BenchmarkDotNetDiagnosers" Version="18.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Solidsoft.Reply.Parsers.Gs1Ai\Solidsoft.Reply.Parsers.Gs1Ai\Solidsoft.Reply.Parsers.Gs1Ai.csproj" />
+    <ProjectReference Include="..\..\Solidsoft.Reply.Parsers.Common\Solidsoft.Reply.Parsers.Common\Solidsoft.Reply.Parsers.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+</Project>

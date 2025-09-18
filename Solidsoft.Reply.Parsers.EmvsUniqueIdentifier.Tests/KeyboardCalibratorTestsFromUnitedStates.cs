@@ -1715,7 +1715,6 @@ public class KeyboardCalibratorTestsFromUnitedStates {
     /// Test calibration for a United Kingdom computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
     public void ToUnitedKingdomVm() {
         PerformParserTest(
             PerformCalibrationTest("United Kingdom VM").CalibrationData,

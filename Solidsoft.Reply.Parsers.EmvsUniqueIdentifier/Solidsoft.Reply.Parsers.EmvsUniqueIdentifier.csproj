@@ -18,7 +18,7 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Fixed a dictionary issue when processing national numbers in a unique identifier.
+		1) Updated to use latest version of the High Capacity AIDC parser.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -28,7 +28,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>1.1.22</Version>
+	<Version>1.1.23</Version>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -66,6 +66,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+		<PackageReference Include="SixLabors.ImageSharp" Version="3.1.11" />
 		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

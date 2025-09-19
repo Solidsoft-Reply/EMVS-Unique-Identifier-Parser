@@ -53,7 +53,7 @@ public class ParserParseBenchmark {
         Parser.Parse(SampleGs1Data, ResolvedEntityDelegate);
 
     }
-    private void ResolvedEntityDelegate(IResolvedEntity entity) {
+    private void ResolvedEntityDelegate(Common.IResolvedEntity entity) {
         //_results.Add(entity);
     }
 }

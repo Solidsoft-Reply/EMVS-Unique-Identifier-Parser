@@ -28,10 +28,11 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>1.1.24</Version>
+	<Version>1.1.25</Version>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

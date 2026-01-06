@@ -124,7 +124,7 @@
     <value>Gögn verða ekki send inn sjálfkrafa.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Ýttu á RETURN til að senda inn gögn. Stilltu skannarann til að senda carriage returns.</value>
+    <value> Ýttu á RETURN til að senda inn gögn. Stilltu skannarann til að senda carriage returns.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>strikamerki enn til að skanna...</value>
@@ -172,10 +172,10 @@
     <value>Ýttu á einhvern takka til að halda áfram...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Skannaðu strikamerkið til að stilla prófarahugbúnaðinn.</value>
+    <value> * Skannaðu strikamerkið til að stilla prófarahugbúnaðinn.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Ýttu á Ctrl-O til að hætta í stillingarham.</value>
+    <value> * Ýttu á Ctrl-O til að hætta í stillingarham.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>SKÝRSLA UM STILLINGU</value>
@@ -187,28 +187,28 @@
     <value>Haltu áfram að skanna...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Skannaðu strikamerki.</value>
+    <value> * Skannaðu strikamerki.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Sláðu inn eða límdu inn gögn og ýttu á Enter.</value>
+    <value> * Sláðu inn eða límdu inn gögn og ýttu á Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Ýttu á Ctrl-R til að skipta á milli sjálfvirks og handvirks (carriage return) innsendingar gagna.</value>
+    <value> * Ýttu á Ctrl-R til að skipta á milli sjálfvirks og handvirks (carriage return) innsendingar gagna.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Ýttu á Ctrl-K til að stilla prófarann fyrir núverandi skannara og lyklaborðsuppsetningu.</value>
+    <value> * Ýttu á Ctrl-K til að stilla prófarann fyrir núverandi skannara og lyklaborðsuppsetningu.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Ýttu á Shift Ctrl-K til að stilla prófarann fyrir núverandi skannara og lyklaborðsuppsetningu fyrir aðeins GS1 FNC strikamerki.</value>
+    <value> * Ýttu á Shift Ctrl-K til að stilla prófarann fyrir núverandi skannara og lyklaborðsuppsetningu fyrir aðeins GS1 FNC strikamerki.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Ýttu á Ctrl-S til að hreinsa skjáinn.</value>
+    <value> * Ýttu á Ctrl-S til að hreinsa skjáinn.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Ýttu á Ctrl-T til að hætta í forritinu.</value>
+    <value> * Ýttu á Ctrl-T til að hætta í forritinu.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Notaðu upp og niður örvar til að velja og reyna aftur vistuð innsendingar.</value>
+    <value> * Notaðu upp og niður örvar til að velja og reyna aftur vistuð innsendingar.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Inntak inniheldur einn eða fleiri stafi sem ekki er hægt að kóða.</value>
@@ -241,7 +241,7 @@
     <value>ógilt</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ táknar ógildan staf</value>
+    <value> □ táknar ógildan staf </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Fyrirtæki eða þjóðlegur auðkennari úthlutað af útgefandi stofnun í {0}.</value>

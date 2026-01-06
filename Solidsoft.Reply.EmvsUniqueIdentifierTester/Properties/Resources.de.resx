@@ -241,7 +241,7 @@
     <value>ungültig</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value> □ stellt ein ungültiges Zeichen dar</value>
+    <value> □ stellt ein ungültiges Zeichen dar </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Von der ausstellenden Behörde in {0} zugewiesene Unternehmens- oder nationale Kennung.</value>

@@ -463,7 +463,7 @@
     <value>Mar sin féin, tá leagan amach méarchláir do ríomhaire don script nach dtacaíonn le litreacha uachtaracha agus íochtair.</value>
   </data>
   <data name="Description_215" xml:space="preserve">
-    <value>D'fhéadfadh sé seo feidhmíocht scanadh a mhoilliú. Mar sin féin, d'fhéadfadh nach dtacódh do bhogearra fíoraithe le seichimh deiridh líne</value>
+    <value>D'fhéadfadh sé seo feidhmíocht scanadh a mhoilliú. Mar sin féin, d'fhéadfadh nach dtacódh do bhogearra fíoraithe le seichimh deiridh líne.</value>
   </data>
   <data name="Description_220" xml:space="preserve">
     <value>D'fhéadfadh nach n-aithneodh do bhogearra fíoraithe an réamhíoc.</value>
@@ -644,5 +644,8 @@
   </data>
   <data name="Description_236" xml:space="preserve">
     <value>AIM-aithintitheoirí ionadaíonn an cineál barcode. D'fhéadfadh do bhogearraí iad a úsáid chun foláirimh neamhriachtanacha a sheachaint.</value>
+  </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
   </data>
 </root>

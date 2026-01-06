@@ -791,4 +791,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>Les identifiants AIM représentent le type de code-barres. Votre logiciel peut les utiliser pour éliminer les alertes inutiles.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

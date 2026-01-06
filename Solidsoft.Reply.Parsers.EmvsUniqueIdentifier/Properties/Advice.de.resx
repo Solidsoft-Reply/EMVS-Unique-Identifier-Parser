@@ -765,8 +765,7 @@
     <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass eC158:S161r eine numerische Tastatur emuliert.</value>
   </data>
   <data name="Advice_282" xml:space="preserve">
-    <value>Wenn Sie Probleme beim Scannen von deutschen PPN- oder anderen Barcodes haben, geben Sie die Daten manuell in Ihre Verifizierungssoftware ein.;;Wenn nötig, konfigurieren Sie Ihren Barcode-Scanner so, dass er eine numerische Tastatur emuliert.
-</value>
+    <value>Wenn Sie Probleme beim Scannen von deutschen PPN- oder anderen Barcodes haben, geben Sie die Daten manuell in Ihre Verifizierungssoftware ein.;;Wenn nötig, konfigurieren Sie Ihren Barcode-Scanner so, dass er eine numerische Tastatur emuliert.</value>
   </data>
   <data name="Advice_283" xml:space="preserve">
     <value>Wenn Sie Probleme beim Scannen deutscher PPN-Barcodes haben, geben Sie Daten manuell in Ihre Verifizierungssoftware ein.;;Falls erforderlich, konfigurieren Sie Ihren Barcode-Scanner so, dass er eine numerische Tastatur emuliert.</value>
@@ -791,5 +790,8 @@
   </data>
   <data name="Description_236" xml:space="preserve">
     <value>AIM-Identifikatoren repräsentieren den Barcode-Typ. Ihre Software kann sie verwenden, um unnötige Alarme zu eliminieren.</value>
+  </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
   </data>
 </root>

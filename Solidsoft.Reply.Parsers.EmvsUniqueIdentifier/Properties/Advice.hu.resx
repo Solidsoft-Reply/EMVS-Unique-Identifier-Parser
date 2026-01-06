@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>AIM azonosítók a vonalkód típusát jelölik. A szoftverük használhatja őket a felesleges riasztások kiküszöbölésére.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

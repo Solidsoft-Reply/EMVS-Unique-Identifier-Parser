@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>AIM-identifikatorer repræsenterer stregkodetypen. Din software kan bruge dem til at eliminere unødvendige alarmer.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

@@ -332,7 +332,7 @@ public class Calibrate : IController {
     /// <param name="calibration">The calibration to be saved.</param>
     /// <param name="errorMessage">The error message, if any.</param>
     /// <returns>True, if the calibration was saved; otherwise false.</returns>
-    [SuppressMessage("Design", "CA1031:Do not catch general exception types", Justification = "<Pending>")]
+    [SuppressMessage("Design", "CA1031:Do not catch general exception types", Justification = "<Approved>")]
     private static bool SaveCalibration(string calibration, out string errorMessage) {
         errorMessage = string.Empty;
 

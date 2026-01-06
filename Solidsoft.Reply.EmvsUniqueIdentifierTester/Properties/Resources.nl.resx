@@ -124,7 +124,7 @@
     <value>Gegevens worden niet automatisch ingediend.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Druk op RETURN om gegevens in te dienen. Configureer de scanner om carriage returns te verzenden.</value>
+    <value> Druk op RETURN om gegevens in te dienen. Configureer de scanner om carriage returns te verzenden.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>barcodes nog te scannen...</value>
@@ -172,10 +172,10 @@
     <value>Druk op een willekeurige toets om door te gaan...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Scan de barcode om de testapplicatie te kalibreren.</value>
+    <value> * Scan de barcode om de testapplicatie te kalibreren.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Druk op Ctrl-O om de kalibratiemodus te verlaten.</value>
+    <value> * Druk op Ctrl-O om de kalibratiemodus te verlaten.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>KALIBRATIERAPPORT</value>
@@ -187,28 +187,28 @@
     <value>Blijf scannen...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Scan een barcode.</value>
+    <value> * Scan een barcode.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Voer gegevens in of plak deze en druk op Enter.</value>
+    <value> * Voer gegevens in of plak deze en druk op Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Druk op Ctrl-R om te wisselen tussen automatische en handmatige (carriage return) gegevensinvoer.</value>
+    <value> * Druk op Ctrl-R om te wisselen tussen automatische en handmatige (carriage return) gegevensinvoer.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Druk op Ctrl-K om de tester te kalibreren voor de huidige scanner en toetsenbordindeling.</value>
+    <value> * Druk op Ctrl-K om de tester te kalibreren voor de huidige scanner en toetsenbordindeling.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Druk op Shift Ctrl-K om de tester alleen voor GS1 FNC-barcodes te kalibreren voor de huidige scanner en toetsenbordindeling.</value>
+    <value> * Druk op Shift Ctrl-K om de tester alleen voor GS1 FNC-barcodes te kalibreren voor de huidige scanner en toetsenbordindeling.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Druk op Ctrl-S om het scherm te wissen.</value>
+    <value> * Druk op Ctrl-S om het scherm te wissen.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Druk op Ctrl-T om het programma te verlaten.</value>
+    <value> * Druk op Ctrl-T om het programma te verlaten.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Gebruik de pijltjes omhoog en omlaag om gecachete invoeren te selecteren en opnieuw te proberen.</value>
+    <value> * Gebruik de pijltjes omhoog en omlaag om gecachete invoeren te selecteren en opnieuw te proberen.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Invoer bevat een of meer tekens die niet kunnen worden gecodeerd.</value>
@@ -241,7 +241,7 @@
     <value>ongeldig</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ vertegenwoordigt een ongeldig teken</value>
+    <value> □ vertegenwoordigt een ongeldig teken </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Bedrijfs- of nationale identificatie toegewezen door uitgevende instantie in {0}.</value>

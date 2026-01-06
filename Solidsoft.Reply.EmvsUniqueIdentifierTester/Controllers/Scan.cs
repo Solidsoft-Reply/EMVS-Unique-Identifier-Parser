@@ -199,7 +199,7 @@ public class Scan : IController {
     /// </summary>
     /// <param name="errorMessage">The error message, if any.</param>
     /// <returns>The calibration, if any; otherwise and empty string</returns>
-    [SuppressMessage("Design", "CA1031:Do not catch general exception types", Justification = "<Pending>")]
+    [SuppressMessage("Design", "CA1031:Do not catch general exception types", Justification = "<Approved>")]
     private static string ReadCalibration(out string errorMessage) {
         errorMessage = string.Empty;
 

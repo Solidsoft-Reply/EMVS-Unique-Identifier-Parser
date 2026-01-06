@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>Identyfikatory AIM reprezentują typ kodu kreskowego. Twoje oprogramowanie może je wykorzystać, aby wyeliminować niepotrzebne alerty.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

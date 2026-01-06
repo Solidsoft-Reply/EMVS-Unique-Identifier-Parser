@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>AIM-identifier representerar streckkodstypen. Din programvara kan använda dem för att eliminera onödiga varningar.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

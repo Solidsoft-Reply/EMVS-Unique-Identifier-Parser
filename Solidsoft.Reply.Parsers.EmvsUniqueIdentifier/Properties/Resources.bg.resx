@@ -199,6 +199,6 @@
     <value>Символът {0} не представлява цифра.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value>уникален</value>
+    <value> уникален</value>
   </data>
 </root>

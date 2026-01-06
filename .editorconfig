@@ -6,6 +6,8 @@
 # Code files
 [*.{cs,vb}]
 
+# Disable SA1502 temporarily due to analyzer crash
+dotnet_diagnostic.SA1502.severity = none
 
 dotnet_diagnostic.S3358.severity = none
 

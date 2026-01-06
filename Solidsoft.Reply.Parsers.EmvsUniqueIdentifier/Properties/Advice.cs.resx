@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>Identifikátory AIM reprezentují typ čárového kódu. Váš software je může použít k eliminaci zbytečných upozornění.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

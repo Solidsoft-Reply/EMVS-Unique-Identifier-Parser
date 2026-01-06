@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>Идентификаторите AIM представляват типа на баркода. Вашият софтуер може да ги използва, за да елиминира ненужни сигнали.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

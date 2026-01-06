@@ -124,7 +124,7 @@
     <value>Dati netiks iesniegti automātiski.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Nospiediet RETURN, lai iesniegtu datus. Konfigurējiet skeneri, lai tas nosūtītu enter taustiņa komandas.</value>
+    <value> Nospiediet RETURN, lai iesniegtu datus. Konfigurējiet skeneri, lai tas nosūtītu enter taustiņa komandas.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>vēl jāskenē svītrkodi...</value>
@@ -136,7 +136,7 @@
     <value>KalibrēšanasSkats - nelietojiet Render</value>
   </data>
   <data name="ClearConsoleBuffer" xml:space="preserve">
-    <value>--- Notīrīt konsoli ---</value>
+    <value>--- Notīrīt konsoli ----</value>
   </data>
   <data name="CodePageInitialiseError" xml:space="preserve">
     <value>Nevarēja inicializēt kodlapu {0}</value>
@@ -172,10 +172,10 @@
     <value>Nospiediet jebkuru taustiņu, lai turpinātu...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Skenējiet svītrkodu, lai kalibrētu testētāja lietotni.</value>
+    <value> * Skenējiet svītrkodu, lai kalibrētu testētāja lietotni.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Nospiediet Ctrl-O, lai izietu no kalibrēšanas režīma.</value>
+    <value> * Nospiediet Ctrl-O, lai izietu no kalibrēšanas režīma.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>KALIBRĒŠANAS ZIŅOJUMS</value>
@@ -187,28 +187,28 @@
     <value>Turpiniet skenēt...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Skenējiet svītrkodu.</value>
+    <value> * Skenējiet svītrkodu.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Ierakstiet vai ielīmējiet datus un nospiediet Enter.</value>
+    <value> * Ierakstiet vai ielīmējiet datus un nospiediet Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Nospiediet Ctrl-R, lai pārslēgtos starp automātisku un manuālu (enter taustiņa) datu iesniegšanu.</value>
+    <value> * Nospiediet Ctrl-R, lai pārslēgtos starp automātisku un manuālu (enter taustiņa) datu iesniegšanu.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Nospiediet Ctrl-K, lai kalibrētu testētāju pašreizējam skenerim un tastatūras izkārtojumam.</value>
+    <value> * Nospiediet Ctrl-K, lai kalibrētu testētāju pašreizējam skenerim un tastatūras izkārtojumam.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Nospiediet Shift Ctrl-K, lai kalibrētu testētāju pašreizējam skenerim un tastatūras izkārtojumam tikai GS1 FNC svītrkodiem.</value>
+    <value> * Nospiediet Shift Ctrl-K, lai kalibrētu testētāju pašreizējam skenerim un tastatūras izkārtojumam tikai GS1 FNC svītrkodiem.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Nospiediet Ctrl-S, lai notīrītu ekrānu.</value>
+    <value> * Nospiediet Ctrl-S, lai notīrītu ekrānu.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Nospiediet Ctrl-T, lai izietu no programmas.</value>
+    <value> * Nospiediet Ctrl-T, lai izietu no programmas.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Nospiediet Bultiņas Uz Augšu un Uz Leju, lai izvēlētos un atkārtoti mēģinātu kešotās ierakstus.</value>
+    <value> * Nospiediet Bultiņas Uz Augšu un Uz Leju, lai izvēlētos un atkārtoti mēģinātu kešotās ierakstus.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Ievade satur vienu vai vairākas rakstzīmes, kas nevar tikt kodētas.</value>
@@ -241,7 +241,7 @@
     <value>nederīgs</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ apzīmē nederīgu rakstzīmi</value>
+    <value> □ apzīmē nederīgu rakstzīmi </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Uzņēmuma vai nacionālais identifikators, ko izsniegusi izdošanas aģentūra {0}.</value>

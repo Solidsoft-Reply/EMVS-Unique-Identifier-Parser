@@ -57,7 +57,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Belgian (Comma) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBelgianComma() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BelgianCommaCalibration),
@@ -68,7 +68,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Belgian French computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBelgianFrench() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BelgianFrenchCalibration),
@@ -79,7 +79,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Belgian (Period) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBelgianPeriod() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BelgianPeriodCalibration),
@@ -90,7 +90,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Bulgarian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBulgarian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianCalibration),
@@ -101,7 +101,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Bulgarian (Latin) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBulgarianLatin() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianLatinCalibration),
@@ -112,7 +112,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Bulgarian (Phonetic) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBulgarianPhonetic() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianPhoneticCalibration),
@@ -123,7 +123,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Bulgarian (Phonetic Traditional) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBulgarianPhoneticTraditional() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianPhoneticTraditionalCalibration),
@@ -134,7 +134,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Bulgarian (Typewriter) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBulgarianTypewriter() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.BulgarianTypewriterCalibration),
@@ -145,7 +145,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Czech computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToCzech() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.CzechCalibration),
@@ -156,7 +156,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Czech Programmers computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToCzechProgrammers() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.CzechProgrammersCalibration),
@@ -167,7 +167,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Czech (QWERTY) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToCzechQwerty() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.CzechQwertyCalibration),
@@ -178,7 +178,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Danish computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToDanish() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.DanishCalibration),
@@ -189,7 +189,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Dutch computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToDutch() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.DutchCalibration),
@@ -200,7 +200,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for an Estonian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToEstonian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.EstonianCalibration),
@@ -211,7 +211,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Finnish computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToFinnish() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.FinnishCalibration),
@@ -222,7 +222,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Finnish with Sami computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToFinnishWithSami() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.FinnishWithSamiCalibration),
@@ -233,7 +233,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a French computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToFrench() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.FrenchCalibration),
@@ -244,7 +244,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Scottish Gaelic computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGaelic() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GaelicCalibration),
@@ -255,7 +255,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a German computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGerman() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GermanCalibration),
@@ -266,7 +266,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a German (IBM) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGermanIbm() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GermanIbmCalibration),
@@ -277,7 +277,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Greek (319) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGreek319() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Greek319Calibration),
@@ -288,7 +288,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Greek (319) Latin computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGreek319Latin() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Greek319LatinCalibration),
@@ -299,7 +299,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Greek computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGreek() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GreekCalibration),
@@ -310,7 +310,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Greek computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGreekLatin() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.GreekLatinCalibration),
@@ -321,7 +321,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Bulgarian (Phonetic) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToHungarian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.HungarianCalibration),
@@ -332,7 +332,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Hungarian 101-key computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToHungarian101Key() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Hungarian101KeyCalibration),
@@ -343,7 +343,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for an Icelandic computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToIcelandic() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.IcelandicCalibration),
@@ -354,7 +354,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for an Irish computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToIrish() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.IrishCalibration),
@@ -365,7 +365,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for an Italian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToItalian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.ItalianCalibration),
@@ -376,7 +376,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for an Italian (142) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToItalian142() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Italian142Calibration),
@@ -387,7 +387,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Latvian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToLatvian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LatvianCalibration),
@@ -398,7 +398,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Latvian (QWERTY) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToLatvianQwerty() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LatvianQwertyCalibration),
@@ -409,7 +409,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Lithuanian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToLithuanian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LithuanianCalibration),
@@ -420,7 +420,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Lithuanian (IBM) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToLithuanianIbm() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LithuanianIbmCalibration),
@@ -431,7 +431,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Lithuanian (Standard) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToLithuanianStandard() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LithuanianStandardCalibration),
@@ -442,7 +442,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Luxembourgish computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToLuxembourgish() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.LuxembourgishCalibration),
@@ -453,7 +453,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Maltese 47-key computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToMaltese47Key() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Maltese47KeyCalibration),
@@ -464,7 +464,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Maltese 48-key computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToMaltese48Key() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Maltese48KeyCalibration),
@@ -475,7 +475,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Norwegian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToNorwegian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.NorwegianCalibration),
@@ -486,7 +486,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Norwegian with Sami computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToNorwegianWithSami() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.NorwegianWithSamiCalibration),
@@ -497,7 +497,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Polish (214) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToPolish214() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.Polish214Calibration),
@@ -508,7 +508,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Polish (Programmers) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToPolishProgrammers() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.PolishProgrammersCalibration),
@@ -519,7 +519,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Portuguese computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToPortuguese() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.PortugueseCalibration),
@@ -530,7 +530,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Romanian (Legacy) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToRomanianLegacy() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.RomanianLegacyCalibration),
@@ -541,7 +541,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Romanian (Programmers) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToRomanianProgrammers() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.RomanianProgrammersCalibration),
@@ -552,7 +552,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Romanian (Standard) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToRomanianStandard() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.RomanianStandardCalibration),
@@ -563,7 +563,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Sami Extended Finland Sweden computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSamiExtendedFinlandSwedenCalibration() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SamiExtendedFinlandSwedenCalibration),
@@ -574,7 +574,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Sami Extended Norway computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSamiExtendedNorwayCalibration() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SamiExtendedNorwayCalibration),
@@ -585,7 +585,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Slovak (QWERTY) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSlovakQwerty() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SlovakQwertyCalibration),
@@ -596,7 +596,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Slovenian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSlovenian() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SlovenianCalibration),
@@ -607,7 +607,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Sorbian Extended computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSorbianExtended() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SorbianExtendedCalibration),
@@ -618,7 +618,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Sorbian Standard computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSorbianStandard() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SorbianStandardCalibration),
@@ -629,7 +629,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Sorbian Standard (Legacy) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSorbianStandardLegacy() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SorbianStandardLegacyCalibration),
@@ -640,7 +640,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Spanish computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSpanish() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SpanishCalibration),
@@ -651,7 +651,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Croatian Standard computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToStandard() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.StandardCalibration),
@@ -662,7 +662,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Swedish computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSwedish() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SwedishCalibration),
@@ -673,7 +673,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Swedish with Sami computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSwedishWithSami() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SwedishWithSamiCalibration),
@@ -684,7 +684,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Swiss French computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSwissFrench() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SwissFrenchCalibration),
@@ -695,7 +695,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a Swiss German computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSwissGerman() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.SwissGermanCalibration),
@@ -706,7 +706,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a United Kingdom computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToUnitedKingdom() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.UnitedKingdomCalibration),
@@ -717,7 +717,7 @@ public class UsToEuropeanGs1BarcodesWithAimParseTests {
     /// Test calibration for a United Kingdom Extended computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToUnitedKingdomExtended() {
         PerformParserTest(
             new BarcodeScanner.Calibration.Data(UsToEuropeanCalibrations.UnitedKingdomExtendedCalibration),

@@ -124,7 +124,7 @@
     <value>Dane nie zostaną przesłane automatycznie.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Naciśnij RETURN, aby przesłać dane. Skonfiguruj skaner do przesyłania znaków powrotu karetki.</value>
+    <value> Naciśnij RETURN, aby przesłać dane. Skonfiguruj skaner do przesyłania znaków powrotu karetki.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>kody kreskowe jeszcze do zeskanowania...</value>
@@ -163,7 +163,7 @@
     <value>Obecna kombinacja układów klawiatury kodu kreskowego i systemu operacyjnego nie może być skalibrowana.</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_2" xml:space="preserve">
-    <value>Sprawdź, czy zeskanowałeś odpowiedni kod kreskowy do kalibracji. Jeśli tak, przekonfiguruj skaner, aby </value>
+    <value>Sprawdź, czy zeskanowałeś odpowiedni kod kreskowy do kalibracji. Jeśli tak, przekonfiguruj skaner, aby</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_3" xml:space="preserve">
     <value>emulował inny układ klawiatury lub klawiaturę numeryczną.</value>
@@ -172,10 +172,10 @@
     <value>Naciśnij dowolny klawisz, aby kontynuować...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Zeskanuj kod kreskowy, aby skalibrować aplikację testera.</value>
+    <value> * Zeskanuj kod kreskowy, aby skalibrować aplikację testera.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Naciśnij Ctrl-O, aby wyjść z trybu kalibracji.</value>
+    <value> * Naciśnij Ctrl-O, aby wyjść z trybu kalibracji.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>RAPORT KALIBRACJI</value>
@@ -187,28 +187,28 @@
     <value>Kontynuuj skanowanie...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Zeskanuj kod kreskowy.</value>
+    <value> * Zeskanuj kod kreskowy.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Wpisz lub wklej dane i naciśnij Enter.</value>
+    <value> * Wpisz lub wklej dane i naciśnij Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Naciśnij Ctrl-R, aby przełączać między automatycznym i ręcznym (zwrotnym) przesyłaniem danych.</value>
+    <value> * Naciśnij Ctrl-R, aby przełączać między automatycznym i ręcznym (zwrotnym) przesyłaniem danych.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Naciśnij Ctrl-K, aby skalibrować testera dla bieżącego skanera i układu klawiatury.</value>
+    <value> * Naciśnij Ctrl-K, aby skalibrować testera dla bieżącego skanera i układu klawiatury.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Naciśnij Shift Ctrl-K, aby skalibrować testera dla bieżącego skanera i układu klawiatury tylko dla kodów kreskowych GS1 FNC.</value>
+    <value> * Naciśnij Shift Ctrl-K, aby skalibrować testera dla bieżącego skanera i układu klawiatury tylko dla kodów kreskowych GS1 FNC.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Naciśnij Ctrl-S, aby wyczyścić ekran.</value>
+    <value> * Naciśnij Ctrl-S, aby wyczyścić ekran.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Naciśnij Ctrl-T, aby wyjść z programu.</value>
+    <value> * Naciśnij Ctrl-T, aby wyjść z programu.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Naciśnij strzałki w górę i w dół, aby wybrać i ponowić próbę zapisanych wpisów.</value>
+    <value> * Naciśnij strzałki w górę i w dół, aby wybrać i ponowić próbę zapisanych wpisów.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Wejście zawiera jeden lub więcej znaków, które nie mogą być zakodowane.</value>
@@ -241,7 +241,7 @@
     <value>nieprawidłowy</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ reprezentuje nieprawidłowy znak</value>
+    <value> □ reprezentuje nieprawidłowy znak </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Identyfikator firmy lub krajowy przydzielony przez agencję wydającą w {0}.</value>

@@ -199,6 +199,6 @@
     <value>Tähemärk {0} ei esinda numbrit.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value>unikaaalne</value>
+    <value> unikaaalne</value>
   </data>
 </root>

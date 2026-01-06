@@ -46,7 +46,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Belgian (Comma) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBelgianComma() {
         PerformCalibrationTest("Belgian (Comma)");
     }
@@ -55,7 +55,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Belgian French computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBelgianFrench() {
         PerformCalibrationTest("Belgian French");
     }
@@ -64,7 +64,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Belgian (Period) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBelgianPeriod() {
         PerformCalibrationTest("Belgian (Period)");
     }
@@ -73,7 +73,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Bulgarian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBulgarian() {
         PerformCalibrationTest("Bulgarian");
     }
@@ -82,7 +82,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Bulgarian (Latin) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBulgarianLatin() {
         PerformCalibrationTest("Bulgarian (Latin)");
     }
@@ -91,7 +91,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Bulgarian (Phonetic) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBulgarianPhonetic() {
         PerformCalibrationTest("Bulgarian (Phonetic)");
     }
@@ -100,7 +100,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Bulgarian (Phonetic Traditional) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBulgarianPhoneticTraditional() {
         PerformCalibrationTest("Bulgarian (Phonetic Traditional)");
     }
@@ -109,7 +109,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Bulgarian (Typewriter) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToBulgarianTypewriter() {
         PerformCalibrationTest("Bulgarian (Typewriter)");
     }
@@ -118,7 +118,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Czech computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToCzech() {
         PerformCalibrationTest("Czech");
     }
@@ -127,7 +127,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Czech Programmers computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToCzechProgrammers() {
         PerformCalibrationTest("Czech Programmers");
     }
@@ -136,7 +136,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Czech (QWERTY) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToCzechQwerty() {
         PerformCalibrationTest("Czech (QWERTY)");
     }
@@ -145,7 +145,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Danish computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToDanish() {
         PerformCalibrationTest("Danish");
     }
@@ -154,7 +154,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Dutch computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToDutch() {
         PerformCalibrationTest("Dutch");
     }
@@ -163,7 +163,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for an Estonian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToEstonian() {
         PerformCalibrationTest("Estonian");
     }
@@ -172,7 +172,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Finnish computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToFinnish() {
         PerformCalibrationTest("Finnish");
     }
@@ -181,7 +181,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Finnish with Sami computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToFinnishWithSami() {
         PerformCalibrationTest("Finnish with Sami");
     }
@@ -190,7 +190,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a French computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToFrench() {
         PerformCalibrationTest("French");
     }
@@ -199,7 +199,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Scottish Gaelic computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGaelic() {
         PerformCalibrationTest("Gaelic");
     }
@@ -208,7 +208,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a German computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGerman() {
         PerformCalibrationTest("German");
     }
@@ -217,7 +217,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a German (IBM) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGermanIbm() {
         PerformCalibrationTest("German (IBM)");
     }
@@ -246,7 +246,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Greek (319) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGreek319() {
         PerformCalibrationTest("Greek (319)");
     }
@@ -255,7 +255,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Greek (319) Latin computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGreek319Latin() {
         PerformCalibrationTest("Greek (319) Latin");
     }
@@ -264,7 +264,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Greek computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGreek() {
         PerformCalibrationTest("Greek");
     }
@@ -273,7 +273,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Greek computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToGreekLatin() {
         PerformCalibrationTest("Greek Latin");
     }
@@ -292,7 +292,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Bulgarian (Phonetic) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToHungarian() {
         PerformCalibrationTest("Hungarian");
     }
@@ -301,7 +301,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Hungarian 101-key computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToHungarian101Key() {
         PerformCalibrationTest("Hungarian 101-key");
     }
@@ -310,7 +310,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for an Icelandic computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToIcelandic() {
         PerformCalibrationTest("Icelandic");
     }
@@ -319,7 +319,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for an Irish computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToIrish() {
         PerformCalibrationTest("Irish");
     }
@@ -328,7 +328,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for an Italian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToItalian() {
         PerformCalibrationTest("Italian");
     }
@@ -337,7 +337,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for an Italian (142) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToItalian142() {
         PerformCalibrationTest("Italian (142)");
     }
@@ -346,7 +346,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Latvian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToLatvian() {
         PerformCalibrationTest("Latvian");
     }
@@ -355,7 +355,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Latvian (QWERTY) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToLatvianQwerty() {
         PerformCalibrationTest("Latvian (QWERTY)");
     }
@@ -374,7 +374,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Lithuanian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToLithuanian() {
         PerformCalibrationTest("Lithuanian");
     }
@@ -383,7 +383,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Lithuanian (IBM) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToLithuanianIbm() {
         PerformCalibrationTest("Lithuanian (IBM)");
     }
@@ -392,7 +392,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Lithuanian (Standard) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToLithuanianStandard() {
         PerformCalibrationTest("Lithuanian (Standard)");
     }
@@ -401,7 +401,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Luxembourgish computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToLuxembourgish() {
         PerformCalibrationTest("Luxembourgish");
     }
@@ -410,7 +410,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Maltese 47-key computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToMaltese47Key() {
         PerformCalibrationTest("Maltese 47-key");
     }
@@ -419,7 +419,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Maltese 48-key computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToMaltese48Key() {
         PerformCalibrationTest("Maltese 48-key");
     }
@@ -428,7 +428,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Norwegian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToNorwegian() {
         PerformCalibrationTest("Norwegian");
     }
@@ -437,7 +437,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Norwegian with Sami computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToNorwegianWithSami() {
         PerformCalibrationTest("Norwegian with Sami");
     }
@@ -446,7 +446,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Polish (214) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToPolish214() {
         PerformCalibrationTest("Polish (214)");
     }
@@ -455,7 +455,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Polish (Programmers) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToPolishProgrammers() {
         PerformCalibrationTest("Polish (Programmers)");
     }
@@ -464,7 +464,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Portuguese computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToPortuguese() {
         PerformCalibrationTest("Portuguese");
     }
@@ -473,7 +473,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Romanian (Legacy) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToRomanianLegacy() {
         PerformCalibrationTest("Romanian (Legacy)");
     }
@@ -482,7 +482,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Romanian (Programmers) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToRomanianProgrammers() {
         PerformCalibrationTest("Romanian (Programmers)");
     }
@@ -491,7 +491,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Romanian (Standard) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToRomanianStandard() {
         PerformCalibrationTest("Romanian (Standard)");
     }
@@ -500,7 +500,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Sami Extended Finland Sweden computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void SamiExtendedFinlandSwedenCalibration() {
         PerformCalibrationTest("Sami Extended Finland-Sweden");
     }
@@ -509,7 +509,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Sami Extended Norway computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void SamiExtendedNorwayCalibration() {
         PerformCalibrationTest("Sami Extended Norway");
     }
@@ -528,7 +528,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Slovak (QWERTY) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSlovakQwerty() {
         PerformCalibrationTest("Slovak (QWERTY)");
     }
@@ -537,7 +537,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Slovenian computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSlovenian() {
         PerformCalibrationTest("Slovenian");
     }
@@ -546,7 +546,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Sorbian Extended computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSorbianExtended() {
         PerformCalibrationTest("Sorbian Extended");
     }
@@ -555,7 +555,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Sorbian Standard computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSorbianStandard() {
         PerformCalibrationTest("Sorbian Standard");
     }
@@ -564,7 +564,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Sorbian Standard (Legacy) computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSorbianStandardLegacy() {
         PerformCalibrationTest("Sorbian Standard (Legacy)");
     }
@@ -573,7 +573,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Spanish computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSpanish() {
         PerformCalibrationTest("Spanish");
     }
@@ -592,7 +592,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Croatian Standard computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToStandard() {
         PerformCalibrationTest("Standard");
     }
@@ -601,7 +601,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Swedish computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSwedish() {
         PerformCalibrationTest("Swedish");
     }
@@ -610,7 +610,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Swedish with Sami computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSwedishWithSami() {
         PerformCalibrationTest("Swedish with Sami");
     }
@@ -619,7 +619,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Swiss French computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSwissFrench() {
         PerformCalibrationTest("Swiss French");
     }
@@ -628,7 +628,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a Swiss German computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToSwissGerman() {
         PerformCalibrationTest("Swiss German");
     }
@@ -637,7 +637,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a United Kingdom computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToUnitedKingdom() {
         PerformCalibrationTest("United Kingdom");
     }
@@ -646,7 +646,7 @@ public class UsToEuropeanCalibrationTests {
     /// Test calibration for a United Kingdom Extended computer keyboard layout
     /// </summary>
     [Fact]
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Approved>")]
     public void ToUnitedKingdomExtended() {
         PerformCalibrationTest("United Kingdom Extended");
     }

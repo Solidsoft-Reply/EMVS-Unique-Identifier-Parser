@@ -256,7 +256,7 @@ public class ParserTests {
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
         var resolvedEntities = results ?? [.. results];
-        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
+        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
 
@@ -277,7 +277,7 @@ public class ParserTests {
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
         var resolvedEntities = results ?? [.. results];
-        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
+        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
 
@@ -298,7 +298,7 @@ public class ParserTests {
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
         var resolvedEntities = results ?? [.. results];
-        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
+        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
 
@@ -319,7 +319,7 @@ public class ParserTests {
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
         var resolvedEntities = results ?? [.. results];
-        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
+        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
 
@@ -340,7 +340,7 @@ public class ParserTests {
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
         var resolvedEntities = results ?? [.. results];
-        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
+        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
 
@@ -361,7 +361,7 @@ public class ParserTests {
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
         var resolvedEntities = results ?? [.. results];
-        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
+        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
 
@@ -382,7 +382,7 @@ public class ParserTests {
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
         var resolvedEntities = results ?? [.. results];
-        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
+        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
 
@@ -403,7 +403,7 @@ public class ParserTests {
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
         var resolvedEntities = results ?? [.. results];
-        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
+        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
 
@@ -424,7 +424,7 @@ public class ParserTests {
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
         var resolvedEntities = results ?? [.. results];
-        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
+        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
 
@@ -445,7 +445,7 @@ public class ParserTests {
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
         var resolvedEntities = results ?? [.. results];
-        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
+        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
 
@@ -462,7 +462,7 @@ public class ParserTests {
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        Assert.Contains(results, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2004));
+        Assert.Contains(results, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2007));
     }
 
     /// <summary>
@@ -479,7 +479,7 @@ public class ParserTests {
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
         var resolvedEntities = results ?? [.. results];
-        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
+        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2007));
 
         gs1TestData = "17459272";
 
@@ -490,7 +490,7 @@ public class ParserTests {
 
         results = DoTestGs1WithErrors(gs1TestData, expectedResults);
         resolvedEntities = results ?? [.. results];
-        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
+        Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2006));
         Assert.Contains(resolvedEntities, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2100));
     }
 
@@ -507,7 +507,7 @@ public class ParserTests {
                               };
 
         var results = DoTestGs1WithErrors(gs1TestData, expectedResults);
-        Assert.Contains(results, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2004));
+        Assert.Contains(results, r => r.IsError && r.Exceptions.Any(e => e.ErrorNumber == 2005));
     }
 
     /// <summary>

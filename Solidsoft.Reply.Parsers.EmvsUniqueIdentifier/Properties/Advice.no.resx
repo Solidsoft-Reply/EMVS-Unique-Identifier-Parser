@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>AIM-tunnisteet edustavat viivakoodityyppiä. Ohjelmistosi voi käyttää niitä tarpeettomien hälytysten poistamiseen.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

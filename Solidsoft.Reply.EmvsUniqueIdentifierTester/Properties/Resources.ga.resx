@@ -124,7 +124,7 @@
     <value>Ní chuirfear sonraí isteach go huathoibríoch.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Brúigh RETURN chun sonraí a chur isteach. Cumraigh an scanóir chun tuairisceáin carraige a chraoladh.</value>
+    <value> Brúigh RETURN chun sonraí a chur isteach. Cumraigh an scanóir chun tuairisceáin carraige a chraoladh.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>bharachóidí fós le scanáil...</value>
@@ -172,10 +172,10 @@
     <value>Brúigh aon eochair le leanúint ar aghaidh...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Scan an bharachód chun an t-iarratas tástálaí a chalabrú.</value>
+    <value> * Scan an bharachód chun an t-iarratas tástálaí a chalabrú.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Brúigh Ctrl-O chun modh calabrúcháin a fhágáil.</value>
+    <value> * Brúigh Ctrl-O chun modh calabrúcháin a fhágáil.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>TUAIRISC CALABRÚCHÁIN</value>
@@ -187,28 +187,28 @@
     <value>Coinnigh ort ag scanáil...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Scan bharachód.</value>
+    <value> * Scan bharachód.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Clóscríobh nó greamaigh sonraí agus brúigh Iontráil.</value>
+    <value> * Clóscríobh nó greamaigh sonraí agus brúigh Iontráil.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Brúigh Ctrl-R chun athrú idir uathoibriú agus láimhsiú (carraige tuairisceáin) sonraí a chur isteach.</value>
+    <value> * Brúigh Ctrl-R chun athrú idir uathoibriú agus láimhsiú (carraige tuairisceáin) sonraí a chur isteach.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Brúigh Ctrl-K chun an tástálaí a chalabrú don scanóir agus leagan amach méarchláir reatha.</value>
+    <value> * Brúigh Ctrl-K chun an tástálaí a chalabrú don scanóir agus leagan amach méarchláir reatha.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Brúigh Shift Ctrl-K chun an tástálaí a chalabrú don scanóir agus leagan amach méarchláir reatha le haghaidh bharachóidí GS1 FNC amháin.</value>
+    <value> * Brúigh Shift Ctrl-K chun an tástálaí a chalabrú don scanóir agus leagan amach méarchláir reatha le haghaidh bharachóidí GS1 FNC amháin.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Brúigh Ctrl-S chun an scáileán a ghlanadh.</value>
+    <value> * Brúigh Ctrl-S chun an scáileán a ghlanadh.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Brúigh Ctrl-T chun an clár a fhágáil.</value>
+    <value> * Brúigh Ctrl-T chun an clár a fhágáil.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Brúigh saigheada Suas agus Síos chun iontrálacha taiscthe a roghnú agus iarracht a dhéanamh arís.</value>
+    <value> * Brúigh saigheada Suas agus Síos chun iontrálacha taiscthe a roghnú agus iarracht a dhéanamh arís.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Tá carachtar amháin nó níos mó nach féidir a chódú san ionchur.</value>
@@ -241,7 +241,7 @@
     <value>neamhbhailí</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ léiríonn sé carachtar neamhbhailí</value>
+    <value> □ léiríonn sé carachtar neamhbhailí </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Aitheantóir cuideachta nó náisiúnta atá ainmnithe ag gníomhaireacht eisithe i {0}.</value>

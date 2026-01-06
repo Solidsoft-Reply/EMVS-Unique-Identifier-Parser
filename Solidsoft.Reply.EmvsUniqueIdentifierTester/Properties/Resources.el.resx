@@ -124,7 +124,7 @@
     <value>Τα δεδομένα δεν θα υποβληθούν αυτόματα.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Πατήστε RETURN για να υποβάλετε δεδομένα. Ρυθμίστε τον σαρωτή για να μεταδίδει carriage returns.</value>
+    <value> Πατήστε RETURN για να υποβάλετε δεδομένα. Ρυθμίστε τον σαρωτή για να μεταδίδει carriage returns.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>barcodes προς σάρωση...</value>
@@ -172,10 +172,10 @@
     <value>Πατήστε οποιοδήποτε πλήκτρο για να συνεχίσετε...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Σαρώστε το barcode για να βαθμονομήσετε την εφαρμογή δοκιμής.</value>
+    <value> * Σαρώστε το barcode για να βαθμονομήσετε την εφαρμογή δοκιμής.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Πατήστε Ctrl-O για να βγείτε από τη λειτουργία βαθμονόμησης.</value>
+    <value> * Πατήστε Ctrl-O για να βγείτε από τη λειτουργία βαθμονόμησης.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>ΑΝΑΦΟΡΑ ΒΑΘΜΟΝΟΜΗΣΗΣ</value>
@@ -187,28 +187,28 @@
     <value>Συνεχίστε τη σάρωση...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Σαρώστε ένα barcode.</value>
+    <value> * Σαρώστε ένα barcode.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Πληκτρολογήστε ή επικολλήστε δεδομένα και πατήστε Enter.</value>
+    <value> * Πληκτρολογήστε ή επικολλήστε δεδομένα και πατήστε Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Πατήστε Ctrl-R για εναλλαγή μεταξύ αυτόματης και χειροκίνητης (με το πάτημα του carriage return) υποβολής δεδομένων.</value>
+    <value> * Πατήστε Ctrl-R για εναλλαγή μεταξύ αυτόματης και χειροκίνητης (με το πάτημα του carriage return) υποβολής δεδομένων.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Πατήστε Ctrl-K για να βαθμονομήσετε τον δοκιμαστή για τον τρέχοντα σαρωτή και διάταξη πληκτρολογίου.</value>
+    <value> * Πατήστε Ctrl-K για να βαθμονομήσετε τον δοκιμαστή για τον τρέχοντα σαρωτή και διάταξη πληκτρολογίου.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Πατήστε Shift Ctrl-K για να βαθμονομήσετε τον δοκιμαστή για τον τρέχοντα σαρωτή και διάταξη πληκτρολογίου μόνο για τα GS1 FNC barcodes.</value>
+    <value> * Πατήστε Shift Ctrl-K για να βαθμονομήσετε τον δοκιμαστή για τον τρέχοντα σαρωτή και διάταξη πληκτρολογίου μόνο για τα GS1 FNC barcodes.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Πατήστε Ctrl-S για να καθαρίσετε την οθόνη.</value>
+    <value> * Πατήστε Ctrl-S για να καθαρίσετε την οθόνη.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Πατήστε Ctrl-T για να βγείτε από το πρόγραμμα.</value>
+    <value> * Πατήστε Ctrl-T για να βγείτε από το πρόγραμμα.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Πατήστε τα βέλη Πάνω και Κάτω για να επιλέξετε και να δοκιμάσετε εκ νέου τις αποθηκευμένες καταχωρήσεις.</value>
+    <value> * Πατήστε τα βέλη Πάνω και Κάτω για να επιλέξετε και να δοκιμάσετε εκ νέου τις αποθηκευμένες καταχωρήσεις.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Η είσοδος περιέχει έναν ή περισσότερους χαρακτήρες που δεν μπορούν να κωδικοποιηθούν.</value>
@@ -241,7 +241,7 @@
     <value>άκυρο</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ αντιπροσωπεύει έναν άκυρο χαρακτήρα</value>
+    <value> □ αντιπροσωπεύει έναν άκυρο χαρακτήρα </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Εταιρικός ή εθνικός αριθμός που έχει ανατεθεί από την αρμόδια αρχή στη χώρα {0}.</value>

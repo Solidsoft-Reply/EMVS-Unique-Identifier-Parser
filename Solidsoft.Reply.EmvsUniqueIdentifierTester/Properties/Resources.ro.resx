@@ -124,7 +124,7 @@
     <value>Datele nu vor fi trimise automat.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Apăsați RETURN pentru a trimite datele. Configurați scanerul pentru a transmite returnări la linie nouă.</value>
+    <value> Apăsați RETURN pentru a trimite datele. Configurați scanerul pentru a transmite returnări la linie nouă.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>coduri de bare încă de scanat...</value>
@@ -172,10 +172,10 @@
     <value>Apăsați orice tastă pentru a continua...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Scanează codul de bare pentru a calibra aplicația tester.</value>
+    <value> * Scanează codul de bare pentru a calibra aplicația tester.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Apasă Ctrl-O pentru a ieși din modul de calibrare.</value>
+    <value> * Apasă Ctrl-O pentru a ieși din modul de calibrare.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>RAPORT DE CALIBRARE</value>
@@ -187,28 +187,28 @@
     <value>Continuați scanarea...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Scanează un cod de bare.</value>
+    <value> * Scanează un cod de bare.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Introduceți sau lipiți date și apăsați Enter.</value>
+    <value> * Introduceți sau lipiți date și apăsați Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Apăsați Ctrl-R pentru a comuta între trimiterea automată și manuală (cu returnare la linie nouă) a datelor.</value>
+    <value> * Apăsați Ctrl-R pentru a comuta între trimiterea automată și manuală (cu returnare la linie nouă) a datelor.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Apăsați Ctrl-K pentru a calibra testerul pentru layout-ul actual de scaner și tastatură.</value>
+    <value> * Apăsați Ctrl-K pentru a calibra testerul pentru layout-ul actual de scaner și tastatură.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Apăsați Shift Ctrl-K pentru a calibra testerul pentru layout-ul actual de scaner și tastatură, doar pentru codurile de bare GS1 FNC.</value>
+    <value> * Apăsați Shift Ctrl-K pentru a calibra testerul pentru layout-ul actual de scaner și tastatură, doar pentru codurile de bare GS1 FNC.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Apăsați Ctrl-S pentru a goli ecranul.</value>
+    <value> * Apăsați Ctrl-S pentru a goli ecranul.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Apăsați Ctrl-T pentru a ieși din program.</value>
+    <value> * Apăsați Ctrl-T pentru a ieși din program.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Folosiți săgețile Sus și Jos pentru a selecta și a reîncerca intrările stocate.</value>
+    <value> * Folosiți săgețile Sus și Jos pentru a selecta și a reîncerca intrările stocate.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Intrarea conține unul sau mai multe caractere care nu pot fi codificate.</value>
@@ -241,7 +241,7 @@
     <value>invalid</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ reprezintă un caracter invalid</value>
+    <value> □ reprezintă un caracter invalid </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Identificator național sau de companie atribuit de agenția emitentă în {0}.</value>

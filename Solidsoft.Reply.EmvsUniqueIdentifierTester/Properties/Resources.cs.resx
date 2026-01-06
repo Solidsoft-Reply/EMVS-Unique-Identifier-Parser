@@ -124,7 +124,7 @@
     <value>Data nebudou odesílána automaticky.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Stiskněte RETURN pro odeslání dat. Nastavte skener tak, aby odesílal návraty vozíku.</value>
+    <value> Stiskněte RETURN pro odeslání dat. Nastavte skener tak, aby odesílal návraty vozíku.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>čárové kódy ještě ke skenování...</value>
@@ -172,10 +172,10 @@
     <value>Stiskněte libovolnou klávesu pro pokračování...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Naskenujte čárový kód pro kalibraci aplikace testeru.</value>
+    <value> * Naskenujte čárový kód pro kalibraci aplikace testeru.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Stiskněte Ctrl-O pro ukončení režimu kalibrace.</value>
+    <value> * Stiskněte Ctrl-O pro ukončení režimu kalibrace.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>ZPRÁVA O KALIBRACI</value>
@@ -187,28 +187,28 @@
     <value>Pokračujte ve skenování...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Naskenujte čárový kód.</value>
+    <value> * Naskenujte čárový kód.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Zadejte nebo vložte data a stiskněte Enter.</value>
+    <value> * Zadejte nebo vložte data a stiskněte Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Stiskněte Ctrl-R pro přepínání mezi automatickým a ručním (s návratem vozu) odesíláním dat.</value>
+    <value> * Stiskněte Ctrl-R pro přepínání mezi automatickým a ručním (s návratem vozu) odesíláním dat.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Stiskněte Ctrl-K pro kalibraci testeru pro aktuální skener a rozložení klávesnice.</value>
+    <value> * Stiskněte Ctrl-K pro kalibraci testeru pro aktuální skener a rozložení klávesnice.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Stiskněte Shift Ctrl-K pro kalibraci testeru pouze pro čárové kódy GS1 FNC.</value>
+    <value> * Stiskněte Shift Ctrl-K pro kalibraci testeru pouze pro čárové kódy GS1 FNC.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Stiskněte Ctrl-S pro vyčištění obrazovky.</value>
+    <value> * Stiskněte Ctrl-S pro vyčištění obrazovky.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Stiskněte Ctrl-T pro ukončení programu.</value>
+    <value> * Stiskněte Ctrl-T pro ukončení programu.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Stiskněte šipky nahoru a dolů pro výběr a opakování uložených záznamů.</value>
+    <value> * Stiskněte šipky nahoru a dolů pro výběr a opakování uložených záznamů.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Vstup obsahuje jeden nebo více znaků, které nelze zakódovat.</value>
@@ -241,7 +241,7 @@
     <value>neplatné</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ představuje neplatný znak</value>
+    <value> □ představuje neplatný znak </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Společnost nebo národní identifikátor přidělený vydávající agenturou v {0}.</value>

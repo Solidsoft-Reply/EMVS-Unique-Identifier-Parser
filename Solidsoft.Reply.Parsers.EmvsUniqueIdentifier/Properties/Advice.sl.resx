@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>AIM identifikatorji predstavljajo tip črtne kode. Vaša programska oprema jih lahko uporablja za odpravo nepotrebnih opozoril.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

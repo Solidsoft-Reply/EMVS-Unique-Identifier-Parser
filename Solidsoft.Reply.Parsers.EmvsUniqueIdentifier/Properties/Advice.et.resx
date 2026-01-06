@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>AIM-i identifikaatorid esindavad vöötkoodi tüüpi. Teie tarkvara võib neid kasutada mittevajalike hoiatuste kõrvaldamiseks.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

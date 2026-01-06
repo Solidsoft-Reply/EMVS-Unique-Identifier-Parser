@@ -19,7 +19,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Advice {
@@ -556,7 +556,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check your scanner, keyboard and computer configuration and reconfigure them if necessary. .
+        ///   Looks up a localized string similar to Check your scanner, keyboard and computer configuration and reconfigure them if necessary..
         /// </summary>
         public static string Advice_330 {
             get {
@@ -853,7 +853,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)..
         /// </summary>
         public static string Condition_270 {
             get {
@@ -862,7 +862,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)..
         /// </summary>
         public static string Condition_271 {
             get {
@@ -871,7 +871,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)..
         /// </summary>
         public static string Condition_275 {
             get {
@@ -1195,7 +1195,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to However, you did not test compatibility for German PPN barcodes. Your system may not be able to read German PPN barcodes reliably. .
+        ///   Looks up a localized string similar to However, you did not test compatibility for German PPN barcodes. Your system may not be able to read German PPN barcodes reliably..
         /// </summary>
         public static string Description_105 {
             get {
@@ -1240,7 +1240,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your Caps Lock key may be disabled or remapped. .
+        ///   Looks up a localized string similar to Your Caps Lock key may be disabled or remapped..
         /// </summary>
         public static string Description_206 {
             get {
@@ -1267,7 +1267,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your verification software may not recognise the prefix. .
+        ///   Looks up a localized string similar to Your verification software may not recognise the prefix..
         /// </summary>
         public static string Description_220 {
             get {
@@ -1276,7 +1276,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your verification software may not recognise the suffix. .
+        ///   Looks up a localized string similar to Your verification software may not recognise the suffix..
         /// </summary>
         public static string Description_225 {
             get {
@@ -1645,7 +1645,7 @@ namespace Solidsoft.Reply.Parsers.EmvsUniqueIdentifier.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to {0}.
         /// </summary>
         public static string ErrorWhileResolvingKeyboardScripts {
             get {

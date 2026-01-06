@@ -199,6 +199,6 @@
     <value>Tecken {0} representerar inte en siffra.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value>unik</value>
+    <value> unik</value>
   </data>
 </root>

@@ -172,10 +172,10 @@
     <value>Press any key to continue...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Scan the barcode to calibrate the tester application.</value>
+    <value> * Scan the barcode to calibrate the tester application.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Press Ctrl-O to exit the calibration mode.</value>
+    <value> * Press Ctrl-O to exit the calibration mode.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>CALIBRATION REPORT</value>

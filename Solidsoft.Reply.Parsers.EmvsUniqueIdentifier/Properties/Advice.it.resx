@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software può utilizzarli per eliminare allarmi non necessari.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

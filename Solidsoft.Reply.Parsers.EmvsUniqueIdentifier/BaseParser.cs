@@ -76,6 +76,33 @@ internal static partial class BaseParser {
     private static readonly CompositeFormat ParserError005 = CompositeFormat.Parse(Resources.Parser_Error_005);
 #endif
 
+#if !NET7_0_OR_GREATER
+    /// <summary>
+    ///   Returns a regular expression to test that an IFA product code is composed of digits only.
+    /// </summary>
+    /// <returns>A regualar expression.</returns>
+    private static readonly Regex WellFormedIfaProductCodeRegex = new (@"^\d{12}$", RegexOptions.None);
+
+    /// <summary>
+    ///   Returns a regular expression to test that a GTIN/NTIN product code is composed of digits only.
+    /// </summary>
+    /// <returns>A regualar expression.</returns>
+    private static readonly Regex WellFormedGtinOrNtinRegex = new (@"^\d{14}$", RegexOptions.None);
+
+    /// <summary>
+    ///   Returns a regular expression for six-digit date representation - YYMMDD.
+    ///   If it is not necessary to specify the day, the day field can be filled with two zeros.
+    /// </summary>
+    /// <returns>A regualar expression.</returns>
+    private static readonly Regex DatePatternYyMmDdZerosRegex = new (@"(((\d{2})(0[13578]|1[02])(0[0-9]|[12]\d|3[01]))|((\d{2})(0[13456789]|1[012])(0[0-9]|[12]\d|30))|((\d{2})02(0[0-9]|1\d|2[0-8]))|(((0[048]|[2468][048]|[13579][26]))0229))", RegexOptions.None);
+
+    /// <summary>
+    ///   Returns a regular expression for Character Set 82 character strings of variable length.
+    /// </summary>
+    /// <returns>A regualar expression.</returns>
+    private static readonly Regex CharacterSet82Regex = new (@"^[-!""%&'()*+,./0-9:;<=>?A-Z_a-z]{1,20}$", RegexOptions.None);
+#endif
+
     /// <summary>
     ///   Parse the raw barcode data.
     /// </summary>
@@ -528,33 +555,6 @@ internal static partial class BaseParser {
         return packIdentifier;
     }
 
-#if !NET7_0_OR_GREATER
-    /// <summary>
-    ///   Returns a regular expression to test that an IFA product code is composed of digits only.
-    /// </summary>
-    /// <returns>A regualar expression.</returns>
-    private static readonly Regex WellFormedIfaProductCodeRegex = new(@"^\d{12}$", RegexOptions.None);
-
-    /// <summary>
-    ///   Returns a regular expression to test that a GTIN/NTIN product code is composed of digits only.
-    /// </summary>
-    /// <returns>A regualar expression.</returns>
-    private static readonly Regex WellFormedGtinOrNtinRegex = new(@"^\d{14}$", RegexOptions.None);
-
-    /// <summary>
-    ///   Returns a regular expression for six-digit date representation - YYMMDD.
-    ///   If it is not necessary to specify the day, the day field can be filled with two zeros.
-    /// </summary>
-    /// <returns>A regualar expression.</returns>
-    private static readonly Regex DatePatternYyMmDdZerosRegex = new(@"(((\d{2})(0[13578]|1[02])(0[0-9]|[12]\d|3[01]))|((\d{2})(0[13456789]|1[012])(0[0-9]|[12]\d|30))|((\d{2})02(0[0-9]|1\d|2[0-8]))|(((0[048]|[2468][048]|[13579][26]))0229))", RegexOptions.None);
-
-    /// <summary>
-    ///   Returns a regular expression for Character Set 82 character strings of variable length.
-    /// </summary>
-    /// <returns>A regualar expression.</returns>
-    private static readonly Regex CharacterSet82Regex = new(@"^[-!""%&'()*+,./0-9:;<=>?A-Z_a-z]{1,20}$", RegexOptions.None);
-#endif
-
 #if NET7_0_OR_GREATER
     /// <summary>
     ///   Returns a regular expression to test that an IFA product code is composed of digits only.
@@ -599,7 +599,7 @@ internal static partial class BaseParser {
     private static bool AssignGs1PackIdentifierFields(
         IRecord record,
         PackIdentifier packIdentifier,
-        IReadOnlyDictionary<string, List<string>> crossRecordIdentifier) {
+        Dictionary<string, List<string>> crossRecordIdentifier) {
         // Select GS1 pack identifier fields. We will allow scenarios where the same field is duplicated
         // with the same value, as this does not compromise the uniqueness of the pack identifier.
         var nonUniquenessDetected = false;
@@ -941,7 +941,7 @@ internal static partial class BaseParser {
     private static bool AssignIfaPackIdentifierFields(
         IRecord record,
         PackIdentifier packIdentifier,
-        IReadOnlyDictionary<string, List<string>> crossRecordIdentifier) {
+        Dictionary<string, List<string>> crossRecordIdentifier) {
         // Select IFA pack identifier fields. We will allow scenarios where the same field is duplicated
         // with the same value, as this does not compromise the uniqueness of the pack identifier.
         var nonUniquenessDetected = false;
@@ -959,7 +959,7 @@ internal static partial class BaseParser {
             elementIndex++;
 
             // ReSharper disable once SwitchStatementMissingSomeCases
-            switch ((DataIdentifier)element.Data.Resolve(element.Identifier, 0).Entity) {
+            switch ((DataIdentifier)element.Data.AsSpan().Resolve(element.Identifier.AsSpan(), 0, false).Entity) {
                 case DataIdentifier.Ppn:
                     // For EMVS, PPNs are treated as fixed width numeric data in which the first two digits represent an issuing
                     // authority, the last two digits are a checksum based on the ASCII characters of the rest of the PPN and the
@@ -1743,7 +1743,7 @@ internal static partial class BaseParser {
     /// </summary>
     /// <param name="packIdentifier">The pack identifier.</param>
     /// <returns>The post-processed pack identifier.</returns>
-    private static IPackIdentifier PostProcessIdentifier(IPackIdentifier packIdentifier) {
+    private static PackIdentifier PostProcessIdentifier(PackIdentifier packIdentifier) {
         if (packIdentifier.Scheme != Scheme.Ifa) {
             return packIdentifier;
         }

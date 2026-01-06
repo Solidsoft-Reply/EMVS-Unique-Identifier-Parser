@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>AIM identifikatori norāda uz svītrkoda tipu. Jūsu programmatūra var tos izmantot, lai novērstu nevajadzīgus brīdinājumus.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

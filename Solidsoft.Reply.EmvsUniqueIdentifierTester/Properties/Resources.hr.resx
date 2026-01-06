@@ -124,7 +124,7 @@
     <value>Podaci se neće automatski slati.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Pritisnite RETURN za slanje podataka. Konfigurirajte skener za slanje povratka vozila.</value>
+    <value> Pritisnite RETURN za slanje podataka. Konfigurirajte skener za slanje povratka vozila.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>barkodovi još za skenirati...</value>
@@ -172,10 +172,10 @@
     <value>Pritisnite bilo koju tipku za nastavak...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Skenirajte barkod za kalibraciju aplikacije za testiranje.</value>
+    <value> * Skenirajte barkod za kalibraciju aplikacije za testiranje.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Pritisnite Ctrl-O za izlaz iz moda kalibracije.</value>
+    <value> * Pritisnite Ctrl-O za izlaz iz moda kalibracije.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>IZVJEŠTAJ O KALIBRACIJI</value>
@@ -187,28 +187,28 @@
     <value>Nastavite s skeniranjem...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Skenirajte barkod.</value>
+    <value> * Skenirajte barkod.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Unesite ili zalijepite podatke i pritisnite Enter.</value>
+    <value> * Unesite ili zalijepite podatke i pritisnite Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Pritisnite Ctrl-R za prebacivanje između automatskog i ručnog (sa znakom za povratak) slanja podataka.</value>
+    <value> * Pritisnite Ctrl-R za prebacivanje između automatskog i ručnog (sa znakom za povratak) slanja podataka.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Pritisnite Ctrl-K za kalibraciju testera za trenutni skener i raspored tipkovnice.</value>
+    <value> * Pritisnite Ctrl-K za kalibraciju testera za trenutni skener i raspored tipkovnice.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Pritisnite Shift Ctrl-K za kalibraciju testera za trenutni skener i raspored tipkovnice samo za GS1 FNC barkodove.</value>
+    <value> * Pritisnite Shift Ctrl-K za kalibraciju testera za trenutni skener i raspored tipkovnice samo za GS1 FNC barkodove.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Pritisnite Ctrl-S za čišćenje ekrana.</value>
+    <value> * Pritisnite Ctrl-S za čišćenje ekrana.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Pritisnite Ctrl-T za izlaz iz programa.</value>
+    <value> * Pritisnite Ctrl-T za izlaz iz programa.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Pritisnite strelice Gore i Dolje za odabir i ponovni pokušaj predmemoriranih unosa.</value>
+    <value> * Pritisnite strelice Gore i Dolje za odabir i ponovni pokušaj predmemoriranih unosa.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Ulaz sadrži jedan ili više znakova koji se ne mogu kodirati.</value>
@@ -241,7 +241,7 @@
     <value>nevažeći</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ predstavlja nevažeći znak</value>
+    <value> □ predstavlja nevažeći znak </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Tvrtka ili nacionalni identifikator dodijeljen od strane izdavateljske agencije u {0}.</value>

@@ -124,7 +124,7 @@
     <value>Andmeid ei esitata automaatselt.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Vajuta RETURN andmete esitamiseks. Seadista skanner kärusõidu tagastuste edastamiseks.</value>
+    <value> Vajuta RETURN andmete esitamiseks. Seadista skanner kärusõidu tagastuste edastamiseks.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>vöötkoode on veel skaneerida...</value>
@@ -172,10 +172,10 @@
     <value>Vajutage mis tahes klahvi jätkamiseks...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Skaneeri vöötkoodi testerirakenduse kalibreerimiseks.</value>
+    <value> * Skaneeri vöötkoodi testerirakenduse kalibreerimiseks.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Vajutage Ctrl-O kalibreerimisrežiimist väljumiseks.</value>
+    <value> * Vajutage Ctrl-O kalibreerimisrežiimist väljumiseks.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>KALIBREERIMISE ARUANNE</value>
@@ -187,28 +187,28 @@
     <value>Jätka skaneerimist...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Skaneeri vöötkoodi.</value>
+    <value> * Skaneeri vöötkoodi.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Sisesta või kleebi andmed ja vajuta Enter.</value>
+    <value> * Sisesta või kleebi andmed ja vajuta Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Vajuta Ctrl-R, et lülituda automaatse ja käsitsi (kärusõidu tagastuse) andmete esitamise vahel.</value>
+    <value> * Vajuta Ctrl-R, et lülituda automaatse ja käsitsi (kärusõidu tagastuse) andmete esitamise vahel.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Vajuta Ctrl-K, et kalibreerida tester praeguse skanneri ja klaviatuuri paigutuse jaoks.</value>
+    <value> * Vajuta Ctrl-K, et kalibreerida tester praeguse skanneri ja klaviatuuri paigutuse jaoks.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Vajuta Shift Ctrl-K, et kalibreerida tester ainult GS1 FNC vöötkoodide jaoks praeguse skanneri ja klaviatuuri paigutuse jaoks.</value>
+    <value> * Vajuta Shift Ctrl-K, et kalibreerida tester ainult GS1 FNC vöötkoodide jaoks praeguse skanneri ja klaviatuuri paigutuse jaoks.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Vajuta Ctrl-S ekraani puhastamiseks.</value>
+    <value> * Vajuta Ctrl-S ekraani puhastamiseks.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Vajuta Ctrl-T programmi sulgemiseks.</value>
+    <value> * Vajuta Ctrl-T programmi sulgemiseks.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Kasuta Üles ja Alla nooli valitud ja uuesti proovitud vahemällu salvestatud sissekannete valimiseks.</value>
+    <value> * Kasuta Üles ja Alla nooli valitud ja uuesti proovitud vahemällu salvestatud sissekannete valimiseks.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Sisend sisaldab üht või mitut kodeerimata tähemärki.</value>
@@ -241,7 +241,7 @@
     <value>kehtetu</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ tähistab kehtetut tähemärki</value>
+    <value> □ tähistab kehtetut tähemärki </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Ettevõtte või riiklik identifikaator, mille on määranud väljaandev agentuur {0}.</value>

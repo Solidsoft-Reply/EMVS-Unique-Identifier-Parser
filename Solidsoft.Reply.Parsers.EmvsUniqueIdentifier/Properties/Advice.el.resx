@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>Οι αναγνωριστικοί AIM αντιπροσωπεύουν τον τύπο του barcode. Το λογισμικό σας μπορεί να τα χρησιμοποιήσει για να εξαλείψει περιττές ειδοποιήσεις.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

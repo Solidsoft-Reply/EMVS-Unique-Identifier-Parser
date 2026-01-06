@@ -631,7 +631,7 @@
     <value>Su sistema no puede leer correctamente los códigos de barras PPN alemanes.</value>
   </data>
   <data name="Description_282" xml:space="preserve">
-    <value>Su software debe implementar un mapeo de caracteres para leer los códigos de barras PPN de manera confiable. Sin embargo, si lo hace, no podrá leer ciertos caracteres que nunca se incluyen en los identificadores únicos</value>
+    <value>Su software debe implementar un mapeo de caracteres para leer los códigos de barras PPN de manera confiable. Sin embargo, si lo hace, no podrá leer ciertos caracteres que nunca se incluyen en los identificadores únicos.</value>
   </data>
   <data name="Description_283" xml:space="preserve">
     <value>Su software debe implementar un mapeo de caracteres para leer códigos de barras PPN de manera fiable. Sin embargo, en este caso, su software no leerá datos adicionales de manera fiable.</value>
@@ -644,5 +644,8 @@
   </data>
   <data name="Description_236" xml:space="preserve">
     <value>Los identificadores AIM representan el tipo de código de barras. Su software puede usarlos para eliminar alertas innecesarias.</value>
+  </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
   </data>
 </root>

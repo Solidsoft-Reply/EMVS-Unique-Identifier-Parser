@@ -124,7 +124,7 @@
     <value>Данните няма да бъдат изпратени автоматично.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Натиснете RETURN за изпращане на данни. Конфигурирайте скенера да изпраща символи за нов ред.</value>
+    <value> Натиснете RETURN за изпращане на данни. Конфигурирайте скенера да изпраща символи за нов ред.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>баркоди все още за сканиране...</value>
@@ -172,10 +172,10 @@
     <value>Натиснете който и да е клавиш за продължаване...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Сканирайте баркода за калибриране на приложението за тестване.</value>
+    <value> * Сканирайте баркода за калибриране на приложението за тестване.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Натиснете Ctrl-O за изход от режима на калибриране.</value>
+    <value> * Натиснете Ctrl-O за изход от режима на калибриране.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>ОТЧЕТ ЗА КАЛИБРИРАНЕ</value>
@@ -187,28 +187,28 @@
     <value>Продължете да сканирате...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Сканирайте баркод.</value>
+    <value> * Сканирайте баркод.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Въведете или поставете данни и натиснете Enter.</value>
+    <value> * Въведете или поставете данни и натиснете Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Натиснете Ctrl-R за превключване между автоматично и ръчно (символ за нов ред) изпращане на данни.</value>
+    <value> * Натиснете Ctrl-R за превключване между автоматично и ръчно (символ за нов ред) изпращане на данни.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Натиснете Ctrl-K за калибриране на тестера за текущия скенер и клавиатурна подредба.</value>
+    <value> * Натиснете Ctrl-K за калибриране на тестера за текущия скенер и клавиатурна подредба.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Натиснете Shift Ctrl-K за калибриране на тестера за текущия скенер и клавиатурна подредба само за баркоди GS1 FNC.</value>
+    <value> * Натиснете Shift Ctrl-K за калибриране на тестера за текущия скенер и клавиатурна подредба само за баркоди GS1 FNC.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Натиснете Ctrl-S за изчистване на екрана.</value>
+    <value> * Натиснете Ctrl-S за изчистване на екрана.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Натиснете Ctrl-T за изход от програмата.</value>
+    <value> * Натиснете Ctrl-T за изход от програмата.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Натиснете стрелките нагоре и надолу за избор и повторен опит на кеширани записи.</value>
+    <value> * Натиснете стрелките нагоре и надолу за избор и повторен опит на кеширани записи.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Входът съдържа един или повече символи, които не могат да бъдат кодирани.</value>
@@ -241,7 +241,7 @@
     <value>невалиден</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ представя невалиден символ</value>
+    <value> □ представя невалиден символ </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Фирмен или национален идентификатор, присвоен от издаващата агенция в {0}.</value>

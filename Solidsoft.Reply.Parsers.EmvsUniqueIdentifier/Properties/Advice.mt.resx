@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>Identifikaturi AIM jirrappreżentaw it-tip ta' barcode. Is-softwer tiegħek jista' jużahom biex jeħles minn twissijiet mhux meħtieġa.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

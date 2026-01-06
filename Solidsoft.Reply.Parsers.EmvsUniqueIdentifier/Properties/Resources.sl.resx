@@ -199,6 +199,6 @@
     <value>Znak {0} ne predstavlja številke.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value>unikaten</value>
+    <value> unikaten</value>
   </data>
 </root>

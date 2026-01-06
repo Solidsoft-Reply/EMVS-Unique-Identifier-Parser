@@ -117,4 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Parser_Error_014" xml:space="preserve">
+    <value>Erätunnistetta (eränumeroa) ei ole.</value>
+  </data>
+  <data name="Packs_Error_001" xml:space="preserve">
+    <value>Viivakoodi ei sisällä tuotetunnusta{0}.</value>
+  </data>
+  <data name="Packs_Error_002" xml:space="preserve">
+    <value>Viivakoodi ei sisällä erätunnistetta {0}.</value>
+  </data>
+  <data name="Packs_Error_003" xml:space="preserve">
+    <value>Viivakoodi ei sisällä{0} viimeistä käyttöpäivää.</value>
+  </data>
+  <data name="Packs_Error_004" xml:space="preserve">
+    <value>Viivakoodi ei sisällä sarjanumeroa {0}.</value>
+  </data>
+  <data name="Parser_Error_001" xml:space="preserve">
+    <value>Tietoja ei ole annettu.</value>
+  </data>
+  <data name="Parser_Error_002" xml:space="preserve">
+    <value>Viivakoodisymbologiaa ei tueta pakkaustunnisteille.</value>
+  </data>
+  <data name="Parser_Error_003" xml:space="preserve">
+    <value>Viivakoodi ei sisällä yksilöllistä pakkauksen tunnistetta.</value>
+  </data>
+  <data name="Parser_Error_004" xml:space="preserve">
+    <value>Pakkauksen tunniste sisältää virheellisiä tai tunnistamattomia tietoja.</value>
+  </data>
+  <data name="Parser_Error_005" xml:space="preserve">
+    <value>Pakkauksen tunniste sisältää useita kansallisia numeroita kohteelle {0}.</value>
+  </data>
+  <data name="Parser_Error_006" xml:space="preserve">
+    <value>Tuotekoodi puuttuu.</value>
+  </data>
+  <data name="Parser_Error_007" xml:space="preserve">
+    <value>Tuotekoodi on virheellinen.</value>
+  </data>
+  <data name="Parser_Error_008" xml:space="preserve">
+    <value>Pituuden on oltava 14 merkkiä.</value>
+  </data>
+  <data name="Parser_Error_009" xml:space="preserve">
+    <value>Arvo sisältää muita kuin numeromerkkejä.</value>
+  </data>
+  <data name="Parser_Error_010" xml:space="preserve">
+    <value>Tarkistussumman arvo on virheellinen.</value>
+  </data>
+  <data name="Parser_Error_011" xml:space="preserve">
+    <value>Täytyy olla 12 merkkiä pitkä.</value>
+  </data>
+  <data name="Parser_Error_012" xml:space="preserve">
+    <value>PPN PRAC (tuotteen rekisteröintiviranomaisen koodi) on virheellinen.</value>
+  </data>
+  <data name="Parser_Error_013" xml:space="preserve">
+    <value>PZN-tarkistussumma on virheellinen, ja siksi PPN on virheellinen.</value>
+  </data>
+  <data name="Parser_Error_100" xml:space="preserve">
+    <value>Merkki {0} ei edusta numeroa.</value>
+  </data>
+  <data name="Parser_Error_015" xml:space="preserve">
+    <value>Erätunniste on virheellinen.</value>
+  </data>
+  <data name="Parser_Error_016" xml:space="preserve">
+    <value>Pituuden on oltava 1–20 merkkiä.</value>
+  </data>
+  <data name="Parser_Error_017" xml:space="preserve">
+    <value>Arvo sisältää kiellettyjä merkkejä.</value>
+  </data>
+  <data name="Parser_Error_018" xml:space="preserve">
+    <value>Viimeistä käyttöpäivää ei annettu.</value>
+  </data>
+  <data name="Parser_Error_019" xml:space="preserve">
+    <value>Viimeinen käyttöpäivä on virheellinen.</value>
+  </data>
+  <data name="Parser_Error_020" xml:space="preserve">
+    <value>Sarjanumeroa ei annettu.</value>
+  </data>
+  <data name="Parser_Error_021" xml:space="preserve">
+    <value>Sarjanumero on virheellinen.</value>
+  </data>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Virheellinen neuvontakohde.</value>
+  </data>
+  <data name="SubstituteUnique" xml:space="preserve">
+    <value> yksilöllinen</value>
+  </data>
 </root>

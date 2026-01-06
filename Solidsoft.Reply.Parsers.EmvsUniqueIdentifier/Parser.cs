@@ -67,6 +67,7 @@ public class Parser {
     /// <returns>A pack identifier.</returns>
     public IPackIdentifier Parse(string? data, out string preProcessedData, Preprocessor? preProcessors = null, bool trace = false) {
         if (trace) {
+#pragma warning disable CA1031 // Do not catch general exception types
             try {
                 Console.WriteLine(data?.ToControlPictures());
             }
@@ -80,6 +81,7 @@ public class Parser {
             catch {
                 // Do nothing here
             }
+#pragma warning restore CA1031 // Do not catch general exception types
         }
 
         var calibrationProcessor = Calibrator.IsProcessingRequired
@@ -93,6 +95,7 @@ public class Parser {
             || string.IsNullOrEmpty(data)
             || preProcessedData == data) return packIdentifier;
 
+#pragma warning disable CA1031 // Do not catch general exception types
         try {
             Console.WriteLine(preProcessedData.ToControlPictures());
         }
@@ -106,6 +109,7 @@ public class Parser {
         catch {
             // Do nothing here
         }
+#pragma warning restore CA1031 // Do not catch general exception types
 
         return packIdentifier;
     }

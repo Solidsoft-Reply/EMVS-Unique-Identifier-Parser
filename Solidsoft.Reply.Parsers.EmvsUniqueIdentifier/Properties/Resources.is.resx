@@ -199,6 +199,6 @@
     <value>Stafurinn {0} táknar ekki tölustaf.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value>einstakt</value>
+    <value> einstakt</value>
   </data>
 </root>

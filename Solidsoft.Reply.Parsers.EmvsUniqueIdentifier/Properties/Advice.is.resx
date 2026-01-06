@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>AIM auðkennarar tákna gerð strikamerkis. Hugbúnaðurinn þinn getur notað þá til að útiloka óþarfa viðvaranir.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

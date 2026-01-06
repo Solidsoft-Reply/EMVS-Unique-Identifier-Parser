@@ -199,6 +199,6 @@
     <value>Ο χαρακτήρας {0} δεν αντιπροσωπεύει ψηφίο.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value>μοναδικός</value>
+    <value> μοναδικός</value>
   </data>
 </root>

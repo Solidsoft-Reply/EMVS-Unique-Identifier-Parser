@@ -199,6 +199,6 @@
     <value>Caráter {0} não representa um dígito.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value>único</value>
+    <value> único</value>
   </data>
 </root>

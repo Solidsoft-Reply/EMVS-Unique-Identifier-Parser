@@ -199,6 +199,6 @@
     <value>A {0} karakter nem számjegyet reprezentál.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value>egyedi</value>
+    <value> egyedi</value>
   </data>
 </root>

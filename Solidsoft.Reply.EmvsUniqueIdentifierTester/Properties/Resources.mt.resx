@@ -124,7 +124,7 @@
     <value>Id-data ma tiġix sottomessa awtomatikament.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Agħfas RETURN biex tissottometti d-data. Kkonfigura l-iskanner biex jittrasmetti carriage returns.</value>
+    <value> Agħfas RETURN biex tissottometti d-data. Kkonfigura l-iskanner biex jittrasmetti carriage returns.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>barcodes għadhom x'jiskennjaw...</value>
@@ -172,10 +172,10 @@
     <value>Agħfas kwalunkwe ċavetta biex tkompli...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Skennja l-barcode biex tkallibra l-applikazzjoni tat-tester.</value>
+    <value> * Skennja l-barcode biex tkallibra l-applikazzjoni tat-tester.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Agħfas Ctrl-O biex toħroġ mill-modalità tal-kalibrazzjoni.</value>
+    <value> * Agħfas Ctrl-O biex toħroġ mill-modalità tal-kalibrazzjoni.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>RAPPORT TAL-KALIBRAZZJONI</value>
@@ -187,28 +187,28 @@
     <value>Kompli tiskennja...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Skennja barcode.</value>
+    <value> * Skennja barcode.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Ikteb jew iddaħħal data u agħfas Enter.</value>
+    <value> * Ikteb jew iddaħħal data u agħfas Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Agħfas Ctrl-R biex tbiddel bejn sottomissjoni awtomatika u manwali (carriage return) tad-data.</value>
+    <value> * Agħfas Ctrl-R biex tbiddel bejn sottomissjoni awtomatika u manwali (carriage return) tad-data.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Agħfas Ctrl-K biex tkallibra t-tester għall-iskanner attwali u l-layout tal-keyboard.</value>
+    <value> * Agħfas Ctrl-K biex tkallibra t-tester għall-iskanner attwali u l-layout tal-keyboard.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Agħfas Shift Ctrl-K biex tkallibra t-tester għall-iskanner attwali u l-layout tal-keyboard għal barcodes GS1 FNC biss.</value>
+    <value> * Agħfas Shift Ctrl-K biex tkallibra t-tester għall-iskanner attwali u l-layout tal-keyboard għal barcodes GS1 FNC biss.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Agħfas Ctrl-S biex tħassar l-iskrin.</value>
+    <value> * Agħfas Ctrl-S biex tħassar l-iskrin.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Agħfas Ctrl-T biex toħroġ mill-programm.</value>
+    <value> * Agħfas Ctrl-T biex toħroġ mill-programm.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Agħfas il-Vleġeġ 'il Fuq u 'l Isfel biex tagħżel u tipprova mill-ġdid dħul ikkaċċat.</value>
+    <value> * Agħfas il-Vleġeġ 'il Fuq u 'l Isfel biex tagħżel u tipprova mill-ġdid dħul ikkaċċat.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Id-dħul fih karattru jew aktar li ma jistgħux jiġu kkodifikati.</value>
@@ -241,7 +241,7 @@
     <value>invalidu</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ jirrappreżenta karattru invalidu</value>
+    <value> □ jirrappreżenta karattru invalidu </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Identifikatur tal-kumpanija jew nazzjonali maħtur mill-aġenzija li toħroġ f'{0}.</value>

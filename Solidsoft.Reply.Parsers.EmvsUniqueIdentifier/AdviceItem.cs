@@ -35,7 +35,7 @@ using BarcodeScanner.Calibration;
 /// <param name="Advice">The advice for the condition.</param>
 /// <param name="Severity">The severity of the condition.</param>
 
-[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "<Pending>")]
+[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "<Approved>")]
 public sealed record AdviceItem(
     [property: JsonProperty("adviceType", Order = 0)] AdviceType AdviceType,
     [property: JsonProperty("condition", Order = 1)] string Condition,

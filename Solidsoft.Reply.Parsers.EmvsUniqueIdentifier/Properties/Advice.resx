@@ -302,7 +302,7 @@
     <comment>High</comment>
   </data>
   <data name="Advice_330" xml:space="preserve">
-    <value>Check your scanner, keyboard and computer configuration and reconfigure them if necessary. </value>
+    <value>Check your scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
     <comment>High</comment>
   </data>
   <data name="Advice_331" xml:space="preserve">
@@ -430,15 +430,15 @@
     <comment>High</comment>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).</value>
     <comment>High</comment>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).</value>
     <comment>High</comment>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).</value>
     <comment>High</comment>
   </data>
   <data name="Condition_300" xml:space="preserve">
@@ -550,7 +550,7 @@
     <comment>High</comment>
   </data>
   <data name="Description_105" xml:space="preserve">
-    <value>However, you did not test compatibility for German PPN barcodes. Your system may not be able to read German PPN barcodes reliably. </value>
+    <value>However, you did not test compatibility for German PPN barcodes. Your system may not be able to read German PPN barcodes reliably.</value>
     <comment>Low</comment>
   </data>
   <data name="Description_110" xml:space="preserve">
@@ -570,7 +570,7 @@
     <comment>Medium</comment>
   </data>
   <data name="Description_206" xml:space="preserve">
-    <value>Your Caps Lock key may be disabled or remapped. </value>
+    <value>Your Caps Lock key may be disabled or remapped.</value>
     <comment>Medium</comment>
   </data>
   <data name="Description_210" xml:space="preserve">
@@ -582,11 +582,11 @@
     <comment>Medium</comment>
   </data>
   <data name="Description_220" xml:space="preserve">
-    <value>Your verification software may not recognise the prefix. </value>
+    <value>Your verification software may not recognise the prefix.</value>
     <comment>Medium</comment>
   </data>
   <data name="Description_225" xml:space="preserve">
-    <value>Your verification software may not recognise the suffix. </value>
+    <value>Your verification software may not recognise the suffix.</value>
     <comment>Medium</comment>
   </data>
   <data name="Description_230" xml:space="preserve">
@@ -714,7 +714,7 @@
     <comment>High</comment>
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
-    <value />
+    <value>{0}</value>
   </data>
   <data name="Advice_277" xml:space="preserve">
     <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>

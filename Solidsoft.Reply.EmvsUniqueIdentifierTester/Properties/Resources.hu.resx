@@ -124,7 +124,7 @@
     <value>Az adatok nem küldődnek be automatikusan.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Nyomja meg az ENTER-t az adatok beküldéséhez. Állítsa be a szkennert úgy, hogy sortörést küldjön.</value>
+    <value> Nyomja meg az ENTER-t az adatok beküldéséhez. Állítsa be a szkennert úgy, hogy sortörést küldjön.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>még beolvasandó vonalkódok...</value>
@@ -172,10 +172,10 @@
     <value>Nyomjon meg bármelyik gombot a folytatáshoz...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Olvassa be a vonalkódot a tesztelő alkalmazás kalibrálásához.</value>
+    <value> * Olvassa be a vonalkódot a tesztelő alkalmazás kalibrálásához.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Nyomja meg a Ctrl-O-t a kalibrálási mód kilépéséhez.</value>
+    <value> * Nyomja meg a Ctrl-O-t a kalibrálási mód kilépéséhez.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>KALIBRÁLÁSI JELÖLÉS</value>
@@ -187,28 +187,28 @@
     <value>Folytassa a beolvasást...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Olvassa be a vonalkódot.</value>
+    <value> * Olvassa be a vonalkódot.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Írjon be vagy illesszen be adatokat, majd nyomja meg az Enter gombot.</value>
+    <value> * Írjon be vagy illesszen be adatokat, majd nyomja meg az Enter gombot.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Nyomja meg a Ctrl-R-t az automatikus és a manuális (sortörés) adatbevitel közötti váltáshoz.</value>
+    <value> * Nyomja meg a Ctrl-R-t az automatikus és a manuális (sortörés) adatbevitel közötti váltáshoz.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Nyomja meg a Ctrl-K-t a tesztelő kalibrálásához az aktuális szkenner és billentyűzetkiosztás szerint.</value>
+    <value> * Nyomja meg a Ctrl-K-t a tesztelő kalibrálásához az aktuális szkenner és billentyűzetkiosztás szerint.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Nyomja meg a Shift Ctrl-K-t a tesztelő kalibrálásához az aktuális szkenner és billentyűzetkiosztás szerint, kizárólag GS1 FNC vonalkódokhoz.</value>
+    <value> * Nyomja meg a Shift Ctrl-K-t a tesztelő kalibrálásához az aktuális szkenner és billentyűzetkiosztás szerint, kizárólag GS1 FNC vonalkódokhoz.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Nyomja meg a Ctrl-S-t a képernyő törléséhez.</value>
+    <value> * Nyomja meg a Ctrl-S-t a képernyő törléséhez.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Nyomja meg a Ctrl-T-t a programból való kilépéshez.</value>
+    <value> * Nyomja meg a Ctrl-T-t a programból való kilépéshez.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Nyomja meg a Fel és Le nyilakat a gyorsítótárban lévő bejegyzések kiválasztásához és újrapróbálásához.</value>
+    <value> * Nyomja meg a Fel és Le nyilakat a gyorsítótárban lévő bejegyzések kiválasztásához és újrapróbálásához.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>A bevitel tartalmaz egy vagy több nem kódolható karaktert.</value>
@@ -241,7 +241,7 @@
     <value>érvénytelen</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ egy érvénytelen karaktert jelöl</value>
+    <value> □ egy érvénytelen karaktert jelöl </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Cég vagy nemzeti azonosító, amelyet az adó ügynökség bocsátott ki {0}-ban.</value>

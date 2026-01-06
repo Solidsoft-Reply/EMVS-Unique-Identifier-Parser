@@ -241,7 +241,7 @@
     <value>invalide</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value> □ représente un caractère invalide</value>
+    <value> □ représente un caractère invalide </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Identifiant national ou de société attribué par l'organisme émetteur dans {0}.</value>

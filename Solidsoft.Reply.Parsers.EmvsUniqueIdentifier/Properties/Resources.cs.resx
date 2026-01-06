@@ -199,6 +199,6 @@
     <value>Znak {0} není číslicí.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value>unikátní</value>
+    <value> unikátní</value>
   </data>
 </root>

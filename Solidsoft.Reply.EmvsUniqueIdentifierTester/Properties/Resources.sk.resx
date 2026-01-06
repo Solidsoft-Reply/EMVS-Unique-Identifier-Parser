@@ -124,7 +124,7 @@
     <value>Tietoja ei lähetetä automaattisesti.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Paina RETURN lähettääksesi tiedot. Määritä skanneri lähettämään rivinvaihtoja.</value>
+    <value> Paina RETURN lähettääksesi tiedot. Määritä skanneri lähettämään rivinvaihtoja.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>vielä skannattavia viivakoodeja...</value>
@@ -172,10 +172,10 @@
     <value>Paina mitä tahansa näppäintä jatkaaksesi...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Skannaa viivakoodi kalibroidaksesi testisovelluksen.</value>
+    <value> * Skannaa viivakoodi kalibroidaksesi testisovelluksen.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Paina Ctrl-O poistuaksesi kalibrointitilasta.</value>
+    <value> * Paina Ctrl-O poistuaksesi kalibrointitilasta.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>KALIBROINTIRAPORTTI</value>
@@ -187,28 +187,28 @@
     <value>Jatka skannausta...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Skannaa viivakoodi.</value>
+    <value> * Skannaa viivakoodi.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Kirjoita tai liitä tietoja ja paina Enter.</value>
+    <value> * Kirjoita tai liitä tietoja ja paina Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Paina Ctrl-R vaihtaaksesi automaattisen ja manuaalisen (rivinvaihto) datan lähettämisen välillä.</value>
+    <value> * Paina Ctrl-R vaihtaaksesi automaattisen ja manuaalisen (rivinvaihto) datan lähettämisen välillä.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Paina Ctrl-K kalibroidaksesi testaajan nykyiselle skannerille ja näppäimistöasettelulle.</value>
+    <value> * Paina Ctrl-K kalibroidaksesi testaajan nykyiselle skannerille ja näppäimistöasettelulle.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Paina Shift Ctrl-K kalibroidaksesi testaajan nykyiselle skannerille ja näppäimistöasettelulle vain GS1 FNC -viivakoodeille.</value>
+    <value> * Paina Shift Ctrl-K kalibroidaksesi testaajan nykyiselle skannerille ja näppäimistöasettelulle vain GS1 FNC -viivakoodeille.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Paina Ctrl-S tyhjentääksesi näytön.</value>
+    <value> * Paina Ctrl-S tyhjentääksesi näytön.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Paina Ctrl-T poistuaksesi ohjelmasta.</value>
+    <value> * Paina Ctrl-T poistuaksesi ohjelmasta.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Paina ylös- ja alasnuolia valitaksesi ja yrittääksesi uudelleen välimuistiin tallennettuja merkintöjä.</value>
+    <value> * Paina ylös- ja alasnuolia valitaksesi ja yrittääksesi uudelleen välimuistiin tallennettuja merkintöjä.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Syöte sisältää yhden tai useamman merkin, jota ei voida koodata.</value>
@@ -241,7 +241,7 @@
     <value>ei kelpaa</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ edustaa virheellistä merkkiä</value>
+    <value> □ edustaa virheellistä merkkiä </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Yrityksen tai kansallinen tunniste, jonka myöntäjävirasto on määrittänyt {0}.</value>

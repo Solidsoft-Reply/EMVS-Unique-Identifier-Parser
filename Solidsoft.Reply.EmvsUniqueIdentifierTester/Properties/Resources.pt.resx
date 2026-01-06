@@ -124,7 +124,7 @@
     <value>Os dados não serão enviados automaticamente.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Pressione RETURN para enviar dados. Configure o scanner para transmitir retornos de carro.</value>
+    <value> Pressione RETURN para enviar dados. Configure o scanner para transmitir retornos de carro.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>códigos de barras ainda para escanear...</value>
@@ -172,10 +172,10 @@
     <value>Pressione qualquer tecla para continuar...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Escanear o código de barras para calibrar o aplicativo de teste.</value>
+    <value> * Escanear o código de barras para calibrar o aplicativo de teste.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Pressione Ctrl-O para sair do modo de calibração.</value>
+    <value> * Pressione Ctrl-O para sair do modo de calibração.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>RELATÓRIO DE CALIBRAÇÃO</value>
@@ -187,28 +187,28 @@
     <value>Continue escaneando...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Escanear um código de barras.</value>
+    <value> * Escanear um código de barras.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Digite ou cole dados e pressione Enter.</value>
+    <value> * Digite ou cole dados e pressione Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Pressione Ctrl-R para alternar entre envio automático e manual (retorno de carro) de dados.</value>
+    <value> * Pressione Ctrl-R para alternar entre envio automático e manual (retorno de carro) de dados.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Pressione Ctrl-K para calibrar o teste para o layout atual de scanner e teclado.</value>
+    <value> * Pressione Ctrl-K para calibrar o teste para o layout atual de scanner e teclado.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Pressione Shift Ctrl-K para calibrar o teste para o layout atual de scanner e teclado apenas para códigos de barras GS1 FNC.</value>
+    <value> * Pressione Shift Ctrl-K para calibrar o teste para o layout atual de scanner e teclado apenas para códigos de barras GS1 FNC.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Pressione Ctrl-S para limpar a tela.</value>
+    <value> * Pressione Ctrl-S para limpar a tela.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Pressione Ctrl-T para sair do programa.</value>
+    <value> * Pressione Ctrl-T para sair do programa.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Use as setas para cima e para baixo para selecionar e tentar novamente entradas armazenadas.</value>
+    <value> * Use as setas para cima e para baixo para selecionar e tentar novamente entradas armazenadas.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>A entrada contém um ou mais caracteres que não podem ser codificados.</value>
@@ -241,7 +241,7 @@
     <value>inválido</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ representa um caractere inválido</value>
+    <value> □ representa um caractere inválido </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Identificador de empresa ou nacional atribuído pela agência emissora em {0}.</value>

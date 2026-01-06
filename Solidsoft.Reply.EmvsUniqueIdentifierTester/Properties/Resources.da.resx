@@ -124,7 +124,7 @@
     <value>Data vil ikke blive indsendt automatisk.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Tryk RETUR for at indsende data. Konfigurer scanneren til at transmittere linjeskift.</value>
+    <value> Tryk RETUR for at indsende data. Konfigurer scanneren til at transmittere linjeskift.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>stregkoder stadig til scanning...</value>
@@ -172,10 +172,10 @@
     <value>Tryk på en hvilken som helst tast for at fortsætte...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Scan stregkoden for at kalibrere testapplikationen.</value>
+    <value> * Scan stregkoden for at kalibrere testapplikationen.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Tryk på Ctrl-O for at afslutte kalibreringstilstand.</value>
+    <value> * Tryk på Ctrl-O for at afslutte kalibreringstilstand.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>KALIBRERINGSRAPPORT</value>
@@ -187,28 +187,28 @@
     <value>Fortsæt scanning...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Scan en stregkode.</value>
+    <value> * Scan en stregkode.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Indtast eller indsæt data og tryk Enter.</value>
+    <value> * Indtast eller indsæt data og tryk Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Tryk på Ctrl-R for at skifte mellem automatisk og manuel (linjeskift) indsendelse af data.</value>
+    <value> * Tryk på Ctrl-R for at skifte mellem automatisk og manuel (linjeskift) indsendelse af data.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Tryk på Ctrl-K for at kalibrere testeren for den aktuelle scanner og tastaturlayout.</value>
+    <value> * Tryk på Ctrl-K for at kalibrere testeren for den aktuelle scanner og tastaturlayout.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Tryk på Shift Ctrl-K for kun at kalibrere testeren for den aktuelle scanner og tastaturlayout for GS1 FNC stregkoder.</value>
+    <value> * Tryk på Shift Ctrl-K for kun at kalibrere testeren for den aktuelle scanner og tastaturlayout for GS1 FNC stregkoder.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Tryk på Ctrl-S for at rydde skærmen.</value>
+    <value> * Tryk på Ctrl-S for at rydde skærmen.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Tryk på Ctrl-T for at afslutte programmet.</value>
+    <value> * Tryk på Ctrl-T for at afslutte programmet.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Brug pil op og pil ned for at vælge og forsøge igen med cachelagrede indtastninger.</value>
+    <value> * Brug pil op og pil ned for at vælge og forsøge igen med cachelagrede indtastninger.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Input indeholder et eller flere tegn, der ikke kan kodes.</value>
@@ -241,7 +241,7 @@
     <value>ugyldig</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ repræsenterer et ugyldigt tegn</value>
+    <value> □ repræsenterer et ugyldigt tegn </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Virksomheds- eller national identifikator tildelt af udstedende agentur i {0}.</value>

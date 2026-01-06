@@ -199,6 +199,6 @@
     <value>Caracterul {0} nu reprezintă o cifră.</value>
   </data>
   <data name="SubstituteUnique" xml:space="preserve">
-    <value>unic</value>
+    <value> unic</value>
   </data>
 </root>

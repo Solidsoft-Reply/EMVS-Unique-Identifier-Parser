@@ -72,8 +72,8 @@ public class Record : IRecord {
                 case FormatIndicator.AscMh10Di:
                     packElements.Add(
                         new IfaDataElement(
-                            (DataIdentifier)element.Data.Resolve(
-                                ((DataElement)element).Identifier,
+                            (DataIdentifier)element.Data.AsSpan().Resolve(
+                                ((DataElement)element).Identifier.AsSpan(),
                                 0).Entity,
                             ((DataElement)element).Identifier,
                             element.Data,

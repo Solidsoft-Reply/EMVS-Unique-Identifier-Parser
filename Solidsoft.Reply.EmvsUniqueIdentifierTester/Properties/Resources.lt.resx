@@ -124,7 +124,7 @@
     <value>Duomenys nebus pateikti automatiškai.</value>
   </data>
   <data name="AutomaticEntryInstructions2" xml:space="preserve">
-    <value>Paspauskite RETURN, norėdami pateikti duomenis. Nustatykite skaitytuvą siųsti krepšelio grąžinimo komandas.</value>
+    <value> Paspauskite RETURN, norėdami pateikti duomenis. Nustatykite skaitytuvą siųsti krepšelio grąžinimo komandas.</value>
   </data>
   <data name="BarcodesStillToScan" xml:space="preserve">
     <value>dar brūkšniniai kodai nuskenuoti...</value>
@@ -172,10 +172,10 @@
     <value>Paspauskite bet kurį klavišą norėdami tęsti...</value>
   </data>
   <data name="DisplayCalibrationOptions_1" xml:space="preserve">
-    <value>* Nuskaitykite brūkšninį kodą testuotojo programos kalibravimui.</value>
+    <value> * Nuskaitykite brūkšninį kodą testuotojo programos kalibravimui.</value>
   </data>
   <data name="DisplayCalibrationOptions_2" xml:space="preserve">
-    <value>* Paspauskite Ctrl-O norėdami išeiti iš kalibravimo režimo.</value>
+    <value> * Paspauskite Ctrl-O norėdami išeiti iš kalibravimo režimo.</value>
   </data>
   <data name="DisplayCalibrationReport_1" xml:space="preserve">
     <value>KALIBRAVIMO ATASKAITA</value>
@@ -187,28 +187,28 @@
     <value>Toliau skenuokite...</value>
   </data>
   <data name="DisplayMainOptions_1" xml:space="preserve">
-    <value>* Nuskaitykite brūkšninį kodą.</value>
+    <value> * Nuskaitykite brūkšninį kodą.</value>
   </data>
   <data name="DisplayMainOptions_2" xml:space="preserve">
-    <value>* Įveskite arba įklijuokite duomenis ir paspauskite Enter.</value>
+    <value> * Įveskite arba įklijuokite duomenis ir paspauskite Enter.</value>
   </data>
   <data name="DisplayMainOptions_3" xml:space="preserve">
-    <value>* Paspauskite Ctrl-R norėdami perjungti tarp automatinio ir rankinio (krepšelio grąžinimo) duomenų pateikimo.</value>
+    <value> * Paspauskite Ctrl-R norėdami perjungti tarp automatinio ir rankinio (krepšelio grąžinimo) duomenų pateikimo.</value>
   </data>
   <data name="DisplayMainOptions_4" xml:space="preserve">
-    <value>* Paspauskite Ctrl-K norėdami sukalibruoti testuotoją dabartiniam skaitytuvui ir klaviatūros išdėstymui.</value>
+    <value> * Paspauskite Ctrl-K norėdami sukalibruoti testuotoją dabartiniam skaitytuvui ir klaviatūros išdėstymui.</value>
   </data>
   <data name="DisplayMainOptions_5" xml:space="preserve">
-    <value>* Paspauskite Shift Ctrl-K norėdami sukalibruoti testuotoją tik dabartiniam skaitytuvui ir klaviatūros išdėstymui GS1 FNC brūkšniniams kodams.</value>
+    <value> * Paspauskite Shift Ctrl-K norėdami sukalibruoti testuotoją tik dabartiniam skaitytuvui ir klaviatūros išdėstymui GS1 FNC brūkšniniams kodams.</value>
   </data>
   <data name="DisplayMainOptions_6" xml:space="preserve">
-    <value>* Paspauskite Ctrl-S norėdami išvalyti ekraną.</value>
+    <value> * Paspauskite Ctrl-S norėdami išvalyti ekraną.</value>
   </data>
   <data name="DisplayMainOptions_7" xml:space="preserve">
-    <value>* Paspauskite Ctrl-T norėdami išeiti iš programos.</value>
+    <value> * Paspauskite Ctrl-T norėdami išeiti iš programos.</value>
   </data>
   <data name="DisplayMainOptions_8" xml:space="preserve">
-    <value>* Paspauskite aukštyn ir žemyn rodyklių klavišus norėdami pasirinkti ir pakartoti buvusius įrašus.</value>
+    <value> * Paspauskite aukštyn ir žemyn rodyklių klavišus norėdami pasirinkti ir pakartoti buvusius įrašus.</value>
   </data>
   <data name="DisplayParserResults_1" xml:space="preserve">
     <value>Įvedimas apima vieną ar kelis simbolius, kurių negalima užkoduoti.</value>
@@ -241,7 +241,7 @@
     <value>negaliojantis</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value>□ reiškia neteisingą simbolį</value>
+    <value> □ rei škia neteisingą simbolį </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Įmonės arba nacionalinis identifikatorius, paskirtas išdavimo agentūros {0}.</value>

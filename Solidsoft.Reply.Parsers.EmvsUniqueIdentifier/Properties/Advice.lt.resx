@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>AIM identifikatoriai atspindi brūkšninio kodo tipą. Jūsų programinė įranga gali juos naudoti nereikalingų įspėjimų šalinimui.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

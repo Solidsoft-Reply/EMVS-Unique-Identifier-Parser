@@ -163,7 +163,7 @@
     <value>La combinación actual de código de barras y disposiciones de teclado del Sistema Operativo no se puede calibrar.</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_2" xml:space="preserve">
-    <value>Verifique que haya escaneado el código de barras correcto para la calibración. Si es así, reconfigure el escáner </value>
+    <value>Verifique que haya escaneado el código de barras correcto para la calibración. Si es así, reconfigure el escáner</value>
   </data>
   <data name="DisplayCalibrationFailedMessage_3" xml:space="preserve">
     <value>para emular una disposición de teclado diferente o un teclado numérico.</value>
@@ -241,7 +241,7 @@
     <value>inválido</value>
   </data>
   <data name="InvalidCharacterPlaceHolderMessage" xml:space="preserve">
-    <value> □ representa un carácter inválido</value>
+    <value> □ representa un carácter inválido </value>
   </data>
   <data name="IssuingAgencyCountry" xml:space="preserve">
     <value>Identificador de empresa o nacional asignado por la agencia emisora en {0}.</value>

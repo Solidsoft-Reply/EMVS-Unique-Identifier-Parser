@@ -645,4 +645,7 @@
   <data name="Description_236" xml:space="preserve">
     <value>AIM-identifiers vertegenwoordigen het type barcode. Uw software kan ze gebruiken om onnodige meldingen te elimineren.</value>
   </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

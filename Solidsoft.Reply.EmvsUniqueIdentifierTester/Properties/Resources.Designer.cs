@@ -19,7 +19,7 @@ namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -223,7 +223,7 @@ namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to * Scan the barcode to calibrate the tester application..
+        ///   Looks up a localized string similar to  * Scan the barcode to calibrate the tester application..
         /// </summary>
         internal static string DisplayCalibrationOptions_1 {
             get {
@@ -232,7 +232,7 @@ namespace Solidsoft.Reply.EmvsUniqueIdentifierTester.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to * Press Ctrl-O to exit the calibration mode..
+        ///   Looks up a localized string similar to  * Press Ctrl-O to exit the calibration mode..
         /// </summary>
         internal static string DisplayCalibrationOptions_2 {
             get {
